@@ -1,0 +1,53 @@
+--- a/src/display/sprite.cpp
++++ b/src/display/sprite.cpp
+@@ -721,6 +721,26 @@
+     p->updateSrcRectCon();
+ }
+ 
++// Candidate helper for a future SOURCE build of the emulator-only variant.
++// Do not enable this macro for the ordinary ARM phone build.
++
++#if defined(KIF_ANDROID_EMULATOR_GPR_CONVERSIONS)
++#if !defined(__ANDROID__) || !defined(__aarch64__)
++#error "The emulator coordinate workaround is only for Android AArch64"
++#endif
++static inline float kifEmulatorCoordinateIntegerRoundtrip(float input) {
++    int temporary;
++    float result;
++    __asm__ volatile(
++        "fcvtzs %w0, %s2\n\t"
++        "scvtf %s1, %w0"
++        : "=&r"(temporary), "=w"(result)
++        : "w"(input));
++    (void)temporary;
++    return result;
++}
++#endif
++
+ void Sprite::setX(int value)
+ {
+     guardDisposed();
+@@ -728,7 +748,11 @@
+     if (p->trans.getPosition().x == value)
+         return;
+     
++#if defined(KIF_ANDROID_EMULATOR_GPR_CONVERSIONS)
++    p->trans.setPosition(Vec2(value, kifEmulatorCoordinateIntegerRoundtrip(p->trans.getPosition().y)));
++#else
+     p->trans.setPosition(Vec2(value, getY()));
++#endif
+ }
+ 
+ void Sprite::setY(int value)
+@@ -738,7 +762,11 @@
+     if (p->trans.getPosition().y == value)
+         return;
+     
++#if defined(KIF_ANDROID_EMULATOR_GPR_CONVERSIONS)
++    p->trans.setPosition(Vec2(kifEmulatorCoordinateIntegerRoundtrip(p->trans.getPosition().x), value));
++#else
+     p->trans.setPosition(Vec2(getX(), value));
++#endif
+     
+     if (p->wave.active)
+         p->wave.dirty = true;

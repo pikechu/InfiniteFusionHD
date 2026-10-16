@@ -582,6 +582,7 @@ end
 
 
 def find_newer_available_version
+  return nil unless KIF::Platform.network_available?
   latest_Version = fetch_latest_game_version
   puts "check for new version..."
   return nil if !latest_Version

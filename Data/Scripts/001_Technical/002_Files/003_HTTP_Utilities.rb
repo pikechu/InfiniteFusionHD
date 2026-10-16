@@ -18,7 +18,7 @@ def pbPostData(url, postdata, filename=nil, depth=0)
       valueString.gsub!(/[^a-zA-Z0-9_\.\-]/n) { |s| sprintf('%%%02x', s[0]) }
       next "#{keyString}=#{valueString}"
     }.join('&')
-    ret = HTTPLite.post_body(
+    ret = KIF::Platform.http_post_body(
       url,
       body,
       "application/x-www-form-urlencoded",
@@ -33,7 +33,7 @@ def pbPostData(url, postdata, filename=nil, depth=0)
     return ret if !ret.is_a?(Hash)
     return "" if ret[:status] != 200
     return ret[:body] if !filename
-    File.open(filename, "wb"){|f|f.write(ret[:body])}
+    KIF::Platform.write_download(filename, ret[:body])
     return ""
   end
   return ""
@@ -48,11 +48,11 @@ def pbDownloadData(url, filename = nil, authorization = nil, depth = 0, &block)
     "User-Agent" => "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.14) Gecko/2009082707 Firefox/3.0.14"
   }
   headers["authorization"] = authorization if authorization
-  ret = HTTPLite.get(url, headers) rescue ""
+  ret = KIF::Platform.http_get(url, headers) rescue ""
   return ret if !ret.is_a?(Hash)
   return "" if ret[:status] != 200
   return ret[:body] if !filename
-  File.open(filename, "wb") { |f| f.write(ret[:body]) }
+  KIF::Platform.write_download(filename, ret[:body])
   return ""
 end
 
@@ -115,7 +115,7 @@ end
 
 
 def downloadAllowed?()
-  return $PokemonSystem.download_sprites==0
+  return KIF::Platform.network_available? && $PokemonSystem.download_sprites==0
 end
 
 def clean_json_string(str)

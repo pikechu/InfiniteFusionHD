@@ -387,7 +387,7 @@ class PokemonLoadScreen
     updateOnlineCustomSpritesFile
     newer_version = find_newer_available_version
     if newer_version
-      if File.file?('.\INSTALL_OR_UPDATE.bat')
+      if KIF::Platform.desktop_tools? && File.file?('.\INSTALL_OR_UPDATE.bat')
         update_answer = pbMessage(_INTL("Version {1} is now available! Update now?", newer_version), ["Yes","No"], 1)
         if update_answer == 0
           Process.spawn('.\INSTALL_OR_UPDATE.bat', "auto")

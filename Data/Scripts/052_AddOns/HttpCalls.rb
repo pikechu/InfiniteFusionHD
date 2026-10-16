@@ -27,7 +27,7 @@
 
 def test_http_get
   url = "http://localhost:8080"
-  response = HTTPLite.get(url)
+  response = KIF::Platform.http_get(url)
   if response[:status] == 200
     p response[:body]
   end
@@ -65,11 +65,9 @@ end
 
 def download_file(url, saveLocation)
   begin
-    response = HTTPLite.get(url)
+    response = KIF::Platform.http_get(url)
     if response[:status] == 200
-      File.open(saveLocation, "wb") do |file|
-        file.write(response[:body])
-      end
+      return nil unless KIF::Platform.write_download(saveLocation, response[:body])
       echoln _INTL("\nDownloaded file {1} to {2}", url, saveLocation)
       return saveLocation
     else
@@ -107,11 +105,9 @@ def download_sprite(base_path, head_id, body_id, saveLocation = "Graphics/temp",
       url = _INTL(base_path, head_id)
     end
 
-    response = HTTPLite.get(url)
+    response = KIF::Platform.http_get(url)
     if response[:status] == 200
-      File.open(downloaded_file_name, "wb") do |file|
-        file.write(response[:body])
-      end
+      return nil unless KIF::Platform.write_download(downloaded_file_name, response[:body])
       echoln _INTL("\nDownloaded file from {1} to {2}", base_path, saveLocation)
       return downloaded_file_name
     end

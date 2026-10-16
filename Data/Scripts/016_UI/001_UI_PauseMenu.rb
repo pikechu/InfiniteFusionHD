@@ -529,7 +529,7 @@ class PokemonPauseMenu
         }
       elsif cmdDebugDebug >= 0 && command == cmdDebugDebug
         pbPlayDecisionSE
-        system("start https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        openUrlInBrowser("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
       elsif cmdEndGame >= 0 && command == cmdEndGame
         @scene.pbHideMenu
         if pbConfirmMessage(_INTL("Are you sure you want to quit the game and return to the main menu?"))

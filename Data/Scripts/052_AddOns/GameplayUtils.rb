@@ -1136,6 +1136,13 @@ def stopWaterCausticsEffect()
 end
 
 def openUrlInBrowser(url="")
+  if KIF::Platform.android?
+    unless KIF::Platform.open_android_url(url)
+      Input.clipboard = url if Input.respond_to?(:clipboard=)
+      pbMessage(_INTL("Open this address in your Android browser:\n{1}", url))
+    end
+    return
+  end
   begin
   # Open the URL in the default web browser
   system("xdg-open", url) || system("open", url) || system("start", url)
