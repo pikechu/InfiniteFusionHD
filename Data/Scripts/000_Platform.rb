@@ -17,6 +17,19 @@ module KIF
         !android?
       end
 
+      # Android can commit the final IME text in the same frame as Return/Esc.
+      # Finish that single-line edit before pbFreeText returns or drops its window.
+      def finish_text_entry(window, accepted)
+        return unless android?
+        pending = Input.gets
+        return unless accepted
+        pending.each_char do |character|
+          # An IME Return can also commit a newline; it is the submit key here.
+          next if character == "\r" || character == "\n"
+          window.insert(character)
+        end
+      end
+
       # An imported/renamed slot can still name its original save target inside
       # Marshal data. Bind manual loads before Game.load can run map callbacks
       # or autosave. Auto slots keep their original manual save destination.
