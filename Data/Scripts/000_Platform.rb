@@ -17,6 +17,19 @@ module KIF
         !android?
       end
 
+      # An imported/renamed slot can still name its original save target inside
+      # Marshal data. Bind manual loads before Game.load can run map callbacks
+      # or autosave. Auto slots keep their original manual save destination.
+      def prepare_loaded_save(data, selected_slot)
+        return data unless android? && data.is_a?(Hash) && defined?(SaveData::MANUAL_SLOTS) &&
+          SaveData::MANUAL_SLOTS.include?(selected_slot)
+        [:player, :kuray_player].each do |key|
+          player = data[key]
+          player.save_slot = selected_slot if player && player.respond_to?(:save_slot=)
+        end
+        data
+      end
+
       # The desktop download survey's honest "Other" path quits the game.
       # Replace only this verified startup notice for the independent test APK;
       # leave the parent intro, story switches and all other events intact.

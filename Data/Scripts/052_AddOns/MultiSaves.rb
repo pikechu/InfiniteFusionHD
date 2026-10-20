@@ -494,7 +494,7 @@ class PokemonLoadScreen
         case command
         when cmd_continue
           @scene.pbEndScene
-          Game.load(@save_data)
+          Game.load(KIF::Platform.prepare_loaded_save(@save_data, @selected_file))
           $game_switches[SWITCH_V5_1] = true
           ensureCorrectDifficulty()
           setGameMode()

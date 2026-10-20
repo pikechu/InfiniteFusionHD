@@ -6,6 +6,16 @@ Close the game before importing or exporting. The launcher uses Android's Storag
 
 An existing path is never overwritten, including case-only variants. If any imported file conflicts, the entire import stops before activation. Rename the conflicting file inside the ZIP or export a backup and make an explicit save-management decision. Renaming a Windows slot file does not automatically make it an Android menu slot: the game recognizes `File A` through `File H`, `Auto 1`/`Auto 2`, and its legacy `Game` migration. To restore a named backup, copy it to an unused recognized slot name before preparing the import ZIP; keep the original backup.
 
+Android.3 binds a manual load to the actual selected `File A`–`File H` slot before
+map callbacks or autosave can run. Both the vanilla Player clone and the KIF
+Player are rebound in memory. Thus an E backup imported as `File D.rxdata` uses D
+for subsequent manual saves, rather than the E name embedded in its original
+Marshal data. The imported file's bytes are unchanged until the game saves.
+Loading an `Auto 1`/`Auto 2` file retains its original manual destination; Windows
+load behavior is preserved. A real-Marshal/filesystem regression passes 35
+assertions; renamed-import and backup-recovery GUI checks remain pending until
+recorded in the Android.3 device report.
+
 Limits are 4,096 files, 8,192 entries, 64 MiB per file, 512 MiB total expanded bytes, 256 MiB compressed input, 16 path segments and a 1,000:1 maximum compression ratio for files larger than 1 MiB. Absolute paths, backslashes, drive/stream colons, `.`/`..`, empty segments, control characters, duplicate/case-colliding names and symbolic links in the private save tree are rejected. At least the merged save size plus 16 MiB must be free when activation is prepared.
 
 Import first validates and extracts every entry into an owned private staging directory, then copies the existing saves and merges only new files. It activates the whole resulting directory using two same-filesystem atomic renames. A failed second rename restores the previous directory. The launcher must call `SaveTransfer.recoverIfNeeded(context)` before starting the game: if Android killed the process between the two renames, recovery restores the old directory; if activation finished, recovery keeps the full new directory and removes only the owned transfer workspace. Recovery never loads game save objects. This protects process-interruption recovery; sudden device power-loss durability still needs device tests.
