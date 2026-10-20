@@ -1,5 +1,14 @@
 # Native Ruby Probe
 
+Actual emulator execution passed on 2026-10-20 for APK SHA-256
+`436e448104b30f3d44a7cab5bdc65572ab30764e916560d23f1799fddce11c3f`
+(25,426,026 bytes): modules, strict native-binary and public-RGSS-UTF8 Marshal
+contracts, JNI, fonts and 120 frames. This is Android 11/API30 x86_64 with ARM
+translation, not a physical-device or game acceptance result. See the separate
+[device report](../../docs/android/native-device-report.md), which retains
+historical diagnostic failures and exact evidence. The builder's original
+static result is not retrospectively changed to claim execution.
+
 This fixture builds a separate, deliberately small Android application. Its
 application ID is **`org.kuray.kif.nativeprobe`**, label **Native Ruby Probe**.
 The Java package `org.kuray.kif` and fixed SDL Java are retained for JNI
@@ -39,6 +48,10 @@ a missing non-system dynamic dependency fails the build.
 
 # Host-only safety regression; deliberately rejects 11 unsafe application manifests.
 & $python ./android/native-probe/test_isolation.py
+& ./temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.exe `
+  --disable-gems ./android/native-probe/test_storage_guard.rb
+& ./temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.exe `
+  --disable-gems ./android/native-probe/test_marshal_diagnostics.rb
 
 # Final packaging requires deliberately supplied hashes for all three overrides.
 # These are the final verified no-RUNPATH source component hashes for this probe.
@@ -94,3 +107,48 @@ a previous successful result. A successful build does not set `deviceExecuted`, 
 `gameplayValidated` or `fullRuntimeSourceBuild` to true. Device execution and
 inspection must be performed separately against this exact application ID by
 the agent/user responsible for the device.
+
+The final device-tested builder sources are retained by SHA under
+`temp/native-full-probe/history/tested-builders`. A subsequent build-IO hardening
+change rejects junctions/reparse points at the dedicated output root, ancestors,
+work directories and reset subtrees before any write or removal. Eleven host
+regressions with eleven actual Windows junctions passed; neither tested APK nor
+its build record was regenerated or changed. This is a host build-safety fix,
+with no game/runtime/payload change. Run `python -B android/native-probe/test_output_guard.py`
+for the host check; a managed host may need scoped process execution for junction
+fixture creation/cleanup.
+
+The first mixed probe (`da1ff4909f7fe7fb571809e8777fe0220d64fb645cf342f298a4bea729178775`)
+actually reached Ruby on the root agent's device run (PID 18300), then failed
+the private path guard before module tests. Android used `/data/data` and
+`/data/user/0` aliases; `File.expand_path` did not resolve the alias. The guard
+now compares `File.realpath` for both paths and still requires output strictly
+below this application's `files/native-probe/` boundary. It logs canonical and
+expanded paths for the rerun. The original APK/build record and reported failure
+are retained under `temp/native-probe/history/<original-sha>/`. Host guard
+regressions model Android alias resolution and reject cross-app escapes;
+Android validation of this fix subsequently passed in the final device runs;
+their logs retain both expanded and canonical paths.
+
+The next mixed (`686a8a3ab1d1ccfcfb7eb83a705845b8f3e86047a2dbdf2f738c72e2acf44239`)
+and full-source (`de264e77e95c079abcfd77206c03e9d44bcebaf9d70f33ddd3238d0bc080e62a`)
+device runs passed module/function checks but failed strict public Marshal
+comparison of the binary string. The root agent independently decoded its own
+829-byte probe file with host Ruby, obtaining strict equality. The fixed
+engine's `binding/filesystem-binding.cpp` replaces public `Marshal.load` with a
+callback that changes ASCII-8BIT strings to UTF-8 without changing their bytes.
+Both observed failing APKs and records are preserved under their SHA history
+directories; the runtime is unchanged.
+
+The diagnostic now retains the original public-load mismatch as explicit
+evidence, including every hash key/value type, array item, equality result,
+string encoding/validity/byte count/SHA/hex prefix, and dump header/SHA. It then
+requires two separate strict contracts: `_mkxp_load_alias` must reproduce the
+original binary object exactly; public `load` must equal a separately constructed
+expected UTF-8 object and preserve all value types and string bytes. The alias
+must exist; no test is skipped and byte-only equality never replaces either
+strict assertion. Host tests reproduce the exact source callback and reject
+wrong native results, wrong public encoding and byte corruption. There are 561
+passed host-only assertions; both final APKs then actually passed the two
+contracts on Android. This does not change the runtime's Marshal implementation
+or establish arbitrary game-save compatibility.

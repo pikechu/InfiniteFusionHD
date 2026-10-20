@@ -10,6 +10,7 @@ import json
 import os
 import re
 import shutil
+import stat
 import struct
 import subprocess
 import sys
@@ -38,31 +39,96 @@ def run(args, **kwargs):
 
 
 def run_logged(args, log):
+    log = safe_output(log)
     result = subprocess.run([str(a) for a in args], capture_output=True, text=True, encoding="utf-8", errors="replace")
-    log.write_text(result.stdout + result.stderr, encoding="utf-8")
+    safe_output(log).write_text(result.stdout + result.stderr, encoding="utf-8")
     if result.returncode:
         raise RuntimeError(f"Build step failed ({result.returncode}); see {log}")
     return result
 
 
 def write_json(path, value):
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    safe_output(path).write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def safe_output(path):
-    path = path.resolve()
-    if not path.is_relative_to(OUTPUT.resolve()) or path == OUTPUT.resolve():
-        raise ValueError(f"Output must be inside dedicated temp/native-probe: {path}")
+def lexical_absolute(path):
+    # Normalize dot components without following junctions or symbolic links.
+    return Path(os.path.abspath(os.fspath(path)))
+
+
+def reject_reparse_ancestors(path):
+    path = lexical_absolute(path)
+    for ancestor in reversed((path, *path.parents)):
+        try:
+            info = ancestor.lstat()
+        except FileNotFoundError:
+            continue
+        if stat.S_ISLNK(info.st_mode) or getattr(info, "st_file_attributes", 0) & 0x400:
+            raise ValueError(f"Output path contains a reparse point or symbolic link: {ancestor}")
     return path
 
 
+def reject_output_tree_links(path):
+    """Inspect children before descending; Python 3.11 is_symlink misses junctions."""
+    pending = [reject_reparse_ancestors(path)]
+    while pending:
+        directory = pending.pop()
+        with os.scandir(directory) as children:
+            for child in children:
+                info = child.stat(follow_symlinks=False)
+                if stat.S_ISLNK(info.st_mode) or getattr(info, "st_file_attributes", 0) & 0x400:
+                    raise ValueError(f"Output tree contains a reparse point or symbolic link: {child.path}")
+                if stat.S_ISDIR(info.st_mode):
+                    pending.append(Path(child.path))
+
+
+def validate_output_root(*, scan_tree=False):
+    intended_temp = lexical_absolute(ROOT) / "temp"
+    output = lexical_absolute(OUTPUT)
+    if output.parent != intended_temp or output.name not in {"native-probe", "native-full-probe"}:
+        raise ValueError(f"Output root must be a dedicated directory directly below this checkout temp: {output}")
+    # Crucially inspect the lexical ancestors/root before deriving resolved roots.
+    reject_reparse_ancestors(output)
+    resolved_temp, resolved_output = intended_temp.resolve(), output.resolve()
+    if not resolved_output.is_relative_to(resolved_temp) or resolved_output == resolved_temp:
+        raise ValueError(f"Output root escaped the intended checkout temp: {output}")
+    if output.exists():
+        if not stat.S_ISDIR(output.lstat().st_mode):
+            raise ValueError(f"Output root must be a directory: {output}")
+        if scan_tree:
+            reject_output_tree_links(output)
+    return output
+
+
+def safe_output(path):
+    output = validate_output_root()
+    lexical = lexical_absolute(path)
+    if not lexical.is_relative_to(output) or lexical == output:
+        raise ValueError(f"Output must stay inside its dedicated probe directory: {lexical}")
+    reject_reparse_ancestors(lexical)
+    resolved = lexical.resolve()
+    intended_temp = (lexical_absolute(ROOT) / "temp").resolve()
+    if not resolved.is_relative_to(output.resolve()) or not resolved.is_relative_to(intended_temp):
+        raise ValueError(f"Output escaped its intended checkout temp: {lexical}")
+    return resolved
+
+
+def create_output_directory(path):
+    path = safe_output(path)
+    path.mkdir(parents=True, exist_ok=True)
+    return safe_output(path)
+
+
 def reset_directory(path):
+    # safe_output inspects the original lexical root/ancestors/target before resolve.
     path = safe_output(path)
     if path.exists():
-        if path.is_symlink():
-            raise ValueError(f"Refusing symlink build directory: {path}")
+        if not stat.S_ISDIR(path.lstat().st_mode):
+            raise ValueError(f"Build directory is not a regular directory: {path}")
+        reject_output_tree_links(path)
+        path = safe_output(path)
         shutil.rmtree(path)
-    path.mkdir(parents=True)
+    create_output_directory(path)
 
 
 def source_record(path, data=None):
@@ -161,7 +227,7 @@ def payload(work, prefix, font):
     files, origins = {}, {}
     assets = work / "assets"
     reset_directory(assets)
-    with zipfile.ZipFile(assets / "probe-payload.zip", "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+    with zipfile.ZipFile(safe_output(assets / "probe-payload.zip"), "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for name, path in sorted(sources.items()):
             if not path.is_file():
                 raise ValueError(f"Missing fixed probe payload input: {path}")
@@ -183,7 +249,7 @@ def payload(work, prefix, font):
               "customScript": "native-ruby-probe.rb"}
     # The engine reads this directly from its private content working directory.
     config_bytes = (json.dumps(config, indent=2) + "\n").encode()
-    with zipfile.ZipFile(assets / "probe-payload.zip", "a", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+    with zipfile.ZipFile(safe_output(assets / "probe-payload.zip"), "a", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         entry = zipfile.ZipInfo("mkxp.json", date_time=(2026, 10, 20, 0, 0, 0))
         entry.external_attr = 0o100644 << 16
         archive.writestr(entry, config_bytes, compress_type=zipfile.ZIP_DEFLATED, compresslevel=6)
@@ -214,19 +280,19 @@ def compile_shell(work, jdk, sdk):
         else:
             relative = Path("org/libsdl/app") / path.name
         dest = source_dir / relative
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes(data)
+        create_output_directory(dest.parent)
+        safe_output(dest).write_bytes(data)
         staged.append(dest)
         records[relative.as_posix()] = source_record(path, data)
     classes, dex = work / "classes", work / "dex"
     reset_directory(classes)
     reset_directory(dex)
     source_list = work / "sources.txt"
-    source_list.write_text("\n".join('"' + str(p).replace("\\", "/") + '"' for p in staged), encoding="utf-8")
+    safe_output(source_list).write_text("\n".join('"' + str(p).replace("\\", "/") + '"' for p in staged), encoding="utf-8")
     platform, tools = sdk / "platforms/android-35/android.jar", sdk / "build-tools/35.0.0"
     print("Compiling isolated Java probe shell and fixed SDL Java", flush=True)
     run_logged([jdk / "bin/javac.exe", "-J-Duser.language=en", "-encoding", "UTF-8", "--release", "8", "-classpath", platform, "-d", classes, "@" + str(source_list)], work / "javac.log")
-    jar = work / "classes.jar"
+    jar = safe_output(work / "classes.jar")
     run_logged([jdk / "bin/jar.exe", "cf", jar, "-C", classes, "."], work / "jar.log")
     run_logged([jdk / "bin/java.exe", "-cp", tools / "lib/d8.jar", "com.android.tools.r8.D8", "--min-api", "30", "--lib", platform, "--output", dex, jar], work / "d8.log")
     return records
@@ -299,7 +365,7 @@ def native_libraries(expected, emulator):
 
 def audit_apk(apk_path, work, tools, blobs, manifest):
     badging = subprocess.check_output([str(tools / "aapt2.exe"), "dump", "badging", str(apk_path)], text=True, encoding="utf-8")
-    (work / "apk-badging.txt").write_text(badging, encoding="utf-8")
+    safe_output(work / "apk-badging.txt").write_text(badging, encoding="utf-8")
     if not re.search(r"^package: name='org\.kuray\.kif\.nativeprobe' ", badging, re.M):
         raise ValueError("Signed APK has wrong applicationId")
     label_matches = (re.search(r"^application-label:'Native Ruby Probe'$", badging, re.M)
@@ -309,7 +375,7 @@ def audit_apk(apk_path, work, tools, blobs, manifest):
     if re.findall(r"^uses-permission: name='([^']+)'", badging, re.M) != ["android.permission.VIBRATE"]:
         raise ValueError("Signed APK has unexpected permissions")
     xmltree = subprocess.check_output([str(tools / "aapt2.exe"), "dump", "xmltree", str(apk_path), "--file", "AndroidManifest.xml"], text=True, encoding="utf-8")
-    (work / "apk-manifest-tree.txt").write_text(xmltree, encoding="utf-8")
+    safe_output(work / "apk-manifest-tree.txt").write_text(xmltree, encoding="utf-8")
     with zipfile.ZipFile(apk_path) as archive:
         names = archive.namelist()
         if len(names) != len(set(names)):
@@ -350,6 +416,7 @@ def main():
     parser.add_argument("--emulator-compatible", action="store_true", help="Explicitly select the separately pinned old ARM-translation mkxp workaround")
     parser.add_argument("--override-sha256", action="append", default=[], metavar="LIBRARY=SHA256", help="Required exact digest for each of libruby.so/libssl.so/libcrypto.so")
     args = parser.parse_args()
+    validate_output_root(scan_tree=True)
     isolation = manifest_safety()
     expected = {}
     for value in args.override_sha256:
@@ -370,7 +437,7 @@ def main():
     if not font.is_file() or sha(font.read_bytes()) != DEFAULT_FONT_SHA256:
         parser.error("Probe needs the fixed KIF Power Green font; pass its location with --font")
     work = OUTPUT / ("emulator" if args.emulator_compatible else "arm64")
-    work.mkdir(parents=True, exist_ok=True)
+    create_output_directory(work)
     manifest, origins = payload(work, args.prefix, font)
     java_sources = compile_shell(work, jdk, args.sdk)
     fixture_sources = {p.relative_to(FIXTURE).as_posix(): source_record(p) for p in sorted(FIXTURE.rglob("*")) if p.is_file()}
@@ -385,9 +452,9 @@ def main():
         return
     blobs, native_records, native_details = native_libraries(expected, args.emulator_compatible)
     tools, platform = args.sdk / "build-tools/35.0.0", args.sdk / "platforms/android-35/android.jar"
-    unsigned, aligned = work / "probe-unsigned.apk", work / "probe-aligned.apk"
+    unsigned, aligned = safe_output(work / "probe-unsigned.apk"), safe_output(work / "probe-aligned.apk")
     run([tools / "aapt2.exe", "link", "-I", platform, "--manifest", FIXTURE / "AndroidManifest.xml", "-A", work / "assets", "-0", "zip", "-o", unsigned])
-    with zipfile.ZipFile(unsigned, "a", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+    with zipfile.ZipFile(safe_output(unsigned), "a", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         archive.write(work / "dex/classes.dex", "classes.dex")
         for name, data in sorted(blobs.items()):
             archive.writestr("lib/arm64-v8a/" + name, data)
@@ -396,11 +463,11 @@ def main():
     if not key.is_file():
         raise ValueError("Existing local test signing key missing; no signing key is generated by this builder")
     env = dict(os.environ, KIF_TEST_KEY_PASSWORD="android")
-    final = OUTPUT / ("Native-Ruby-Probe-arm64" + ("-emulator" if args.emulator_compatible else "") + "-test.apk")
+    final = safe_output(OUTPUT / ("Native-Ruby-Probe-arm64" + ("-emulator" if args.emulator_compatible else "") + "-test.apk"))
     signer = [jdk / "bin/java.exe", "-jar", tools / "lib/apksigner.jar"]
     run(signer + ["sign", "--ks", key, "--ks-key-alias", "androiddebugkey", "--ks-pass", "env:KIF_TEST_KEY_PASSWORD", "--key-pass", "env:KIF_TEST_KEY_PASSWORD", "--out", final, aligned], env=env)
     verify = run(signer + ["verify", "--verbose", final], capture_output=True, text=True, encoding="utf-8")
-    (work / "signature-verification.txt").write_text(verify.stdout + verify.stderr, encoding="utf-8")
+    safe_output(work / "signature-verification.txt").write_text(verify.stdout + verify.stderr, encoding="utf-8")
     audit = audit_apk(final, work, tools, blobs, manifest)
     # Verify mutable input files again; an in-progress rebuild must not be silently mixed.
     for item in list(origins.values()) + list(java_sources.values()) + list(fixture_sources.values()) + list(native_records.values()):
@@ -413,7 +480,7 @@ def main():
               "sourceBuiltOverrides": sorted(OVERRIDES),
               "fullRuntimeSourceBuild": False, "gameplayValidated": False}
     write_json(OUTPUT / (final.stem + "-build-record.json"), record)
-    (OUTPUT / (final.name + ".sha256")).write_text(final_record["sha256"] + "  " + final.name + "\n", encoding="ascii")
+    safe_output(OUTPUT / (final.name + ".sha256")).write_text(final_record["sha256"] + "  " + final.name + "\n", encoding="ascii")
     print(f"Built isolated {final} ({final_record['bytes']} bytes), SHA256={final_record['sha256']}", flush=True)
 
 

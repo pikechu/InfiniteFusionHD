@@ -4,22 +4,27 @@ Status: **in progress**, 2026-10-20. This extends the actual libiconv result in
 [native-windows-build-feasibility.md](native-windows-build-feasibility.md).
 Current acceptance is:
 
-- **Compiled and inspected:** nineteen common-prefix dependency libraries plus Ruby
+- **Compiled and inspected:** twenty-one common-prefix dependency libraries plus Ruby
   with actual embedded OpenSSL/socket/zlib archives and initializer registration.
   The earlier libiconv proof is separate from this common prefix.
 - **Ruby cleanup passed:** formal `--disable-rpath` reconfiguration, single-job
   build/install, mandatory-extension and ELF gates passed at 12:43:02 China time.
   Final Ruby SHA-256 is `aa4a6a26739d453a3b29b49b579cfa7a708eef9ed04f133467072cf93ba9610a`.
   The earlier output with host RUNPATH is retained as superseded history.
-- **Independent probe built and audited:** `org.kuray.kif.nativeprobe`, with the
-  pinned historical engine/SDL and only Ruby/OpenSSL source-built overrides.
-  Signed APK is 25,421,930 bytes, SHA-256
-  `da1ff4909f7fe7fb571809e8777fe0220d64fb645cf342f298a4bea729178775`.
-  It has **not been installed or run**. No Android execution result is claimed.
-- **Full mkxp core source rebuild:** not yet performed; remaining dependency
-  source preparation and host-tool integration are separate next steps.
+- **Independent probes actually passed on emulator:** mixed APK is 25,426,026
+  bytes, SHA-256 `436e448104b30f3d44a7cab5bdc65572ab30764e916560d23f1799fddce11c3f`;
+  full-source APK is 26,642,468 bytes, SHA-256
+  `4185c549967455c5fdd1a531ecbbdfc7b71bcaed73dd80224d06b7329acf4952`.
+  Both passed modules, strict dual Marshal contracts, JNI, fonts and 120 frames
+  on Android 11/API30 x86_64 with ARM translation. No physical-device or full-game
+  acceptance is claimed; historical diagnostic failures are retained.
+- **Full mkxp core source rebuild:** compilation and packaging gates have passed;
+  final core SHA-256 is `fab5f32f2642d7ac58d552a3e3dd1f75fabc16e22f274e7ff70364d2a3d3a96c`.
+  Full-probe dependency closure and basic emulator execution have also passed;
+  full KIF game acceptance on this runtime remains separate.
 
-This work does not change the working game APK's libraries or operate an emulator.
+The build scripts do not change the working game APK's libraries or invoke an
+emulator. Root's separate device runs are recorded in [native-device-report.md](native-device-report.md).
 No WSL, system installation, global PATH change, proxy override or TLS bypass
 is used.
 
@@ -129,13 +134,14 @@ Actual SDL2 artifact:
 - DT_NEEDED: Android `libm`, `libOpenSLES`, `libdl`, `liblog`, `libandroid`,
   `libGLESv1_CM`, `libGLESv2`, `libc`, plus NDK `libc++_shared.so`.
 - Evidence: `SDL2-build-result.json`, `logs/SDL2-{configure,build,install}.log`,
-  and `logs/SDL2-elf.txt`. Device validation remains **not performed**.
+  and `logs/SDL2-elf.txt`. This component-build record did not perform device
+  validation; the same library later loaded in the full-source emulator probe.
 
 OpenSSL Configure, 1,793 object files, shared-library link and `install_dev`
 completed with exit code 0, from 09:47:41 to 10:18:15 (approximately 1,834.3 s).
 
-The common prefix now contains these **20 source-built libraries**. This is a
-component milestone; the full engine has not been rebuilt or replaced in the APK.
+The common prefix now contains these **22 source-built libraries**. This is a
+component milestone; the full engine's separate build and probe are described below.
 
 | Installed artifact | Bytes | SHA-256 |
 | --- | ---: | --- |
@@ -159,6 +165,8 @@ component milestone; the full engine has not been rebuilt or replaced in the APK
 | `libtheora.so` | 200,472 | `a568ee5186bca9a29776699edba85e2b13fd09b66b8306455039d6a093d3e64d` |
 | `libtheoradec.so` | 66,832 | `52f7919ee88e9b306192d81cc66bcd3b47da3905df2cccd4481f900c523a0f2c` |
 | `libtheoraenc.so` | 174,784 | `ea6d4cecb1ca0a4535ff0a5465d56b52af604be764e64668a132052adef8bae8` |
+| `libiconv.so` | 977,872 | `66d500c2a58be062e9fa01c43569b6c41c2f7ecb64a075b6823ec2efaf397f01` |
+| `libcharset.so` | 5,584 | `f16c393787e5571339f8971164302c6275bed4dd8c3fd44bb66681980e3d567e` |
 
 Ogg's first full invocation took 56.1 s. Vorbis's first 25-step build/install
 took 29.5 s; an artifact-manifest pipeline fix was then checked with a cached
@@ -223,13 +231,15 @@ OpenSSL's generated Makefile step take minutes here. Compiler thread snapshots
 showed `PageIn` waits with little CPU, so wall time is not a useful extrapolation
 from Linux build rates.
 
-Logs and eventual ELF/hashes are under `temp/windows-native/logs`,
-`*-build-result.json` and `prefix/arm64-v8a`. These libraries will remain separate
-from the APK until the full set is linked and the runtime/game probes are rerun.
+Logs and ELF/hashes are under `temp/windows-native/logs`,
+`*-build-result.json` and `prefix/arm64-v8a`. They are now packaged only in the
+separate full-source probe; the normal game's libraries remain a separate
+integration and game-regression decision.
 
-Still required: common-prefix libiconv,
-native engine link, export/DT_NEEDED comparison,
-and Android load/function/game regression. An OpenSSL compatibility-baseline
+Common-prefix libiconv, native engine link, full-probe export/DT_NEEDED closure
+and basic Android load/function/rendering checks have since passed. Full-game
+and physical-device regression remain separate.
+An OpenSSL compatibility-baseline
 build does not approve 3.0.12 for product TLS; Android's Java TLS bridge remains
 the chosen verified trust-provider route.
 
@@ -326,7 +336,8 @@ has actually passed twice against the real temporary source tree, including the
 already-applied case, with no MSYS/NDK/make process started.
 `ruby-source-preparation.json` records both independent patches and
 `compiled=false`. Ruby build defaults to one job. The later target rebuild and
-component checks passed as described below; Android execution remains pending.
+component checks passed as described below; later basic Android execution passed
+in the separately recorded probe, while game acceptance remains separate.
 
 ## Ruby target completion and host installation repairs
 
@@ -443,8 +454,8 @@ make/install actually loaded the new helper and passed bundled-gem copies.
 `scripts/android/build_native_probe.py` builds a separate minimal diagnostic
 application. Reproduction and exact three override hashes are in
 `android/native-probe/README.md`. Its actual signed output is
-`temp/native-probe/Native-Ruby-Probe-arm64-emulator-test.apk` (25,421,930 bytes),
-SHA-256 `da1ff4909f7fe7fb571809e8777fe0220d64fb645cf342f298a4bea729178775`.
+`temp/native-probe/Native-Ruby-Probe-arm64-emulator-test.apk` (25,426,026 bytes),
+latest SHA-256 `436e448104b30f3d44a7cab5bdc65572ab30764e916560d23f1799fddce11c3f`.
 The adjacent build-record JSON records every library/payload hash and origin.
 
 Actual host checks passed: javac/Dex, apksigner v3 verification, final aapt2
@@ -464,18 +475,39 @@ The tiny dedicated installer contains no game save-management code. Payload
 allowlists exclude game Data/Graphics/Audio/PBS and saves. The probe creates and
 then reads only its own freshly written private `probe.dat`.
 
-On later authorized launch the fixture will require OpenSSL/socket/zlib/Digest,
+On authorized launch the fixture requires OpenSSL/socket/zlib/Digest,
 exercise SHA-256, Addrinfo, Zlib and Marshal roundtrips, invoke the existing JNI
 input helper, render bundled-font pixels and run 120 frames. It writes a private
 JSON result, first clearing any old PASS to `native_start_pending` before native
-library loading. **These are implemented probe steps, not Android execution
-results yet.** No AVD install/start/stop occurred in this build task.
+library loading. These steps have now actually passed in both final packages;
+the evidence and scope are in [native-device-report.md](native-device-report.md).
+The initial mixed package (`da1ff490...`) was earlier launched by
+the root device task (PID 18300) and failed before these module steps: Java had
+canonicalized its output to one Android private-path alias while Ruby compared
+`File.expand_path` against the other `/data/data` versus `/data/user/0` spelling.
+The guard now compares `File.realpath` on both paths and retains the strict
+dedicated `files/native-probe/` child boundary. It logs canonical and expanded
+paths. Eight host-only regression checks passed, modeling both alias directions
+and rejecting cross-app, boundary and prefix-spoofing cases; actual Android
+resolution was confirmed by the final successful device logs. The original APK/record/hash and
+failure description remain under `temp/native-probe/history/da1ff...`.
+The native-build subtask itself did not install/start/stop an AVD.
 
-Only Ruby and OpenSSL are source-built overrides in this APK; the engine/SDL and
+Only Ruby and OpenSSL are source-built overrides in the mixed APK; the engine/SDL and
 other libraries remain pinned historical prebuilts. The explicit emulator build
 also applies the already-documented 16-byte translation workaround, with original
 and changed engine hashes recorded. This APK does not establish full-engine
 source-build success or whole-APK 16 KiB-device support.
+
+The separate `build_native_full_probe.py` uses the completed source core,
+dependencies and matching source SDL Java. Every component/core input SHA and
+3,727 strong imports, including GNU versions/providers, must match each actual
+reachable dependency closure. Its 21 selected libraries and 43 payload entries
+were independently audited, then actually ran on the emulator without the old
+16-byte engine translation patch. The sole standard toolchain exception is
+fixed NDK r25c `libc++_shared.so`, still 4 KiB; full APK 16 KiB compatibility is
+explicitly false. See [full reproduction](../../android/native-probe/full-runtime-README.md)
+and [actual device results](native-device-report.md).
 
 Host regression command (no NDK, make, Ninja, emulator or target execution):
 
@@ -501,7 +533,7 @@ On this managed host, the host Ruby/Git test needs scoped tool execution because
 default-sandbox Open3 pipe creation returns `EACCES`; no system setting changes
 are needed. This establishes the host gate regression. Actual ARM64 extension
 compilation has since passed the separate component checks above; Android
-module loading remains pending.
+module loading has since passed in the separate final diagnostic APK runs.
 
 A portable fallback host interpreter was found in official MSYS2 metadata:
 `ruby-3.4.10-1-x86_64.pkg.tar.zst`, SHA-256
@@ -599,8 +631,10 @@ The Pixman runner now consistently uses Python `-B` and a process-only
 Meson helpers also leave the fixed portable Meson source cache intact. The
 initial successful run's ordinary Python bytecode files were isolated by the
 root tool-bootstrap guard; these files were not unexplained source changes.
-The root agent is separately rebuilding fixed GNU libiconv into the common API-30
-prefix while preserving its earlier API-21 proof.
+The root agent completed fixed GNU libiconv into the common API-30 prefix at
+12:57:49, preserving its earlier API-21 proof and fresh-build logs separately.
+`libiconv-build-result.json` records both actual shared libraries, exact GNU
+archive hash, exports and ABI/SONAME/all-LOAD/no-RPATH checks.
 
 The engine is a **Meson shared-library project**, not a CMake project. Its
 `src/meson.build` resolves these native dependencies; `binding/meson.build` uses
@@ -617,8 +651,18 @@ for reference, but a core build should use its own exact detached runtime Git
 checkout. Top-level Meson runs `git rev-parse --short HEAD`; an export nested in
 the KIF checkout could otherwise accidentally embed the outer repository's hash.
 The root agent owns the separate [core/tool-bootstrap preparation](windows-native-core.md), while this
-pipeline owns Ruby and dependency compilation. Full core link, DT_NEEDED/export
-closure, Android loading and game regression remain explicit later gates.
+pipeline owns Ruby and dependency compilation. The root task subsequently
+completed the 112-step real core compile/link. The raw core carried a Meson-added
+host-prefix RUNPATH; a separate packaged copy uses fixed Meson 1.9.1's standard
+`depfixer.fix_elf` installation cleanup. The proof retains the original raw hash
+and confirms length, SONAME, dependencies, 16 KiB LOADs and every byte outside the
+768-byte `.dynamic` section are unchanged. The accepted packaged core is
+3,463,072 bytes, SHA-256
+`fab5f32f2642d7ac58d552a3e3dd1f75fabc16e22f274e7ff70364d2a3d3a96c`,
+under `temp/windows-native-core/packaged`. Its full build record still states
+`fullRuntimeBuilt=false` and `targetExecuted=false`, preserving its build-time
+status. The later full-probe build/closure audit and actual emulator run have
+separate records; full-game regression remains an explicit later gate.
 
 Primary references:
 
