@@ -6,7 +6,7 @@
 
 独立应用 `org.kuray.kif`，测试名称 `KIF Android Test`，当前开发版本 `0.20.7-android.3`（versionCode 3）。当前实验范围为 Android 11/API 30 以上、ARM64、4 KB 内存页；compile/target API 35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布。
 
-- 原生RGSS：固定warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。游戏APK当前使用固定SHA256上游预编译库；**完整core源码重建尚未验证**。Windows portable已有依赖及Ruby3.4.10真实产物、独立Ruby探针APK，另有Meson最小交叉编译通过，见[组件构建](windows-native-build.md)、[core准备](windows-native-core.md)。原运行时来源见[调查](runtime-research.md)和`android/runtime.lock.json`。
+- 原生RGSS：固定warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。游戏APK当前使用固定SHA256上游预编译库。Windows portable已实际编译固定依赖、Ruby3.4.10和完整core；独立源码运行时探针在API30模拟器通过模块、Marshal、JNI、字体和120帧验证，未使用旧二进制翻译补丁。尚未替换游戏APK，也不代表真机或游戏全功能通过，见[组件构建](windows-native-build.md)、[core构建](windows-native-core.md)。原运行时来源见[调查](runtime-research.md)和`android/runtime.lock.json`。
 - Android 壳：Java + SDL bootstrap，512×384、40 FPS 配置、横屏等比缩放。方向键和 C/X/Z/A/S/D/Q/W 虚拟键，侧边按键避免遮挡游戏；Android 返回映射 X。保留原 UI。默认用光标界面输入名字，软键盘入口需实机验证。
 - 字体：Android 配置 `fontHeightReporting=1`，保留原 TTF、字号与行距。真实运行时对照中，旧模式8/8字体裁切，新模式8/8完整像素与原生参考一致；见[字体报告](font-rendering-report.md)。实际菜单字体和新包回归另见[Android.2 GUI报告](gui-regression-report.md)。
 - 虚拟输入：小型源代码构建的 `libkif_android_bridge.so` 为每个 APK 的必要扩展。Java 按钮通过互斥队列提交 RGSS 逻辑键，Ruby 轮询 held/triggered/released 掩码；此路径不调用 SDL 按键回调。物理键盘保留原 SDL 路径。启动/暂停清空所有虚拟状态，避免粘键或恢复时误触发。该后端已实现并编译，实际游戏连通性以随后运行报告为准。
@@ -31,7 +31,7 @@
 ```
 
 工具脚本固定 portable JDK、SDK 平台和 build-tools，不修改全局环境。受限网络环境需要限定下载命令的授权，脚本保留调用者代理设置。无需安装 Android Studio；Java/D8/aapt2/zipalign/apksigner 直接构建 APK，无 Gradle 在线依赖解析。环境版本与实跑证据见 [工具链](toolchain.md)。
-当前游戏APK中本项目源码构建的原生部分是输入/HTTPS小型扩展；temp另有Windows portable依赖与Ruby源码产物，尚未替换进游戏APK或完成整个上游运行时重建。
+当前游戏APK中本项目源码构建的原生部分是输入/HTTPS小型扩展；temp已有Windows portable源码构建的完整运行时探针及模拟器运行证据。游戏APK的原生库升级与完整玩法回归仍单独推进。
 所有包均校验 helper 与当前 C 源码及 provenance 匹配，缺失或过期时提示先执行
 `build_bridge.ps1`。默认离线包也包含 helper，但仍没有 INTERNET 权限；
 `--with-network` 仅启用额外网络权限及 HTTPS 功能。
@@ -93,7 +93,7 @@ $ruby = (Resolve-Path 'temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.
 | 修复回归闭环 | Android.2 最终7279包已实际通过标题移动期单次确认、4种GUI字体、移动、野战/捕捉、普通融合/拆分、仓库存取、G槽保存、杀进程及相同位置/队伍/HP冷读；见[本轮GUI报告](gui-regression-report.md)。原Android.1新档/训练家结果单列[旧报告](gui-playtest-report.md)；闪光和SAF补测进行中 |
 | 产品适配 | 安全下载、存档 SAF、中断恢复、输入、安全区与生命周期需按实际测试完善 |
 | 性能 | 已记录模拟器 FPS、PSS、安装/配色耗时，见 GUI/集成报告；尚未测大量闪光仓库、峰值/长期增长，不能代表真机性能 |
-| 源码发布构建 | 原生依赖及二级依赖锁、POSIX 构建环境、16 KB 页重建、签名和干净重建是后续门槛 |
+| 源码发布构建 | Windows portable完整core/固定依赖编译及独立运行时探针通过；游戏包集成、整体16KiB、正式签名、干净环境重复构建仍待验收 |
 | 发布 | 用户确认先本地测试包；没有上传任何测试渠道或公开商店 |
 
 标题确认与字形裁切修复已在Android.2最终包通过上述实际回归；当前Android.3补充导入改槽的安全绑定，随后验证新档、闪光与存档覆盖。Windows portable原生构建并行推进。后续工期以补充回归、完整源码构建和设备矩阵的实际结果估算。体积构成与无损优化的真实实验见[APK体积](apk-size.md)。

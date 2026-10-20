@@ -28,6 +28,9 @@ if (!(Test-Path -LiteralPath $mesonModule)) {
 }
 $mesonEntry = Join-Path $mesonDirectory 'meson.py'
 [IO.File]::WriteAllText($mesonEntry, "from mesonbuild.mesonmain import main`nraise SystemExit(main())`n", [Text.UTF8Encoding]::new($false))
+$bytecodeQuarantine = Join-Path $output ('bytecode-quarantine/' + [Guid]::NewGuid().ToString('N'))
+& $PythonPath -B (Join-Path $PSScriptRoot 'windows_native_tool_cache.py') (Join-Path $output $lock.meson.filename) $mesonDirectory $lock.meson.sha256 --quarantine-bytecode $bytecodeQuarantine
+if ($LASTEXITCODE -ne 0) { throw 'Executed Meson cache does not match the fixed wheel.' }
 $pkgconfDirectory = Join-Path $output 'pkgconf'
 $pkgconf = Join-Path $pkgconfDirectory 'ucrt64/bin/pkgconf.exe'
 if (!(Test-Path -LiteralPath $pkgconf)) {
@@ -37,6 +40,9 @@ if (!(Test-Path -LiteralPath $pkgconf)) {
     if (!(Test-Path -LiteralPath $tar)) { throw 'Portable MSYS2 bsdtar missing.' }
     & $tar -xf (Join-Path $output $lock.pkgconf.filename) -C $pkgconfDirectory
     if ($LASTEXITCODE -ne 0) { throw 'Portable pkgconf extraction failed.' }
+}
+foreach ($binary in $lock.pkgconf.executables.PSObject.Properties) {
+    if ((Get-FileHash -LiteralPath (Join-Path $pkgconfDirectory $binary.Name) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $binary.Value) { throw "pkgconf cache differs from verified package: $($binary.Name)" }
 }
 $mesonVersion = (& $PythonPath -B $mesonEntry --version) -join ''
 if ($LASTEXITCODE -ne 0 -or $mesonVersion.Trim() -ne $lock.meson.version) { throw 'Meson version mismatch.' }

@@ -10,7 +10,11 @@ import json
 import os
 from pathlib import Path
 import re
+import stat
 import subprocess
+
+from windows_native_tool_cache import verify_meson
+from windows_native_elf import package_core
 
 ROOT = Path(__file__).resolve().parents[2]
 TEMP = ROOT / 'temp'
@@ -37,6 +41,8 @@ def read_json(path):
 
 
 def write_json(path, value):
+    if not Path(path).resolve().is_relative_to(TEMP.resolve()):
+        raise ValueError('JSON output link escaped task temp')
     Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
@@ -60,7 +66,28 @@ def output_path(path):
     return path
 
 
+def local_path(directory, name):
+    path = directory / name
+    if not path.resolve().is_relative_to(directory.resolve()):
+        raise ValueError(f'Output child link escaped its directory: {path}')
+    if path.exists() and getattr(path.lstat(), 'st_file_attributes', 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT:
+        raise ValueError(f'Output child is a Windows reparse point: {path}')
+    if path.is_symlink():
+        raise ValueError(f'Output child is a symbolic link: {path}')
+    return path
+
+
+def reject_build_links(directory):
+    for parent, directories, files in os.walk(directory, followlinks=False):
+        for name in directories + files:
+            path = Path(parent) / name
+            if path.is_symlink() or getattr(path.lstat(), 'st_file_attributes', 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT:
+                raise ValueError(f'Existing build tree contains a link: {path}')
+
+
 def run(command, log, *, env=None, cwd=None):
+    if not Path(log).resolve().is_relative_to(TEMP.resolve()):
+        raise ValueError('Log output link escaped task temp')
     with Path(log).open('w', encoding='utf-8', newline='\n') as stream:
         result = subprocess.run([str(value) for value in command], stdout=stream, stderr=subprocess.STDOUT,
                                 env=env, cwd=cwd, text=True)
@@ -87,10 +114,11 @@ def prepare(args):
     prefix = args.prefix.resolve()
     toolchain = ndk / 'toolchains/llvm/prebuilt/windows-x86_64'
     output = output_path(args.output)
-    build = output / 'build'
+    build = local_path(output, 'build')
     build.mkdir(exist_ok=True)
-    native = output / 'native-windows.ini'
-    cross = output / 'android-arm64-api30.ini'
+    reject_build_links(build)
+    native = local_path(output, 'native-windows.ini')
+    cross = local_path(output, 'android-arm64-api30.ini')
     codegen = SCRIPT.with_name('windows_native_codegen.py')
     python = Path(tools['python'])
     cmake = TEMP / 'tools' / dependency_lock['hostTools']['cmake']['directory'] / 'bin/cmake.exe'
@@ -101,6 +129,16 @@ def prepare(args):
             raise ValueError(f'Missing portable tool: {program}')
     if sha(pkgconf) != tools['pkgconfExecutableSha256']:
         raise ValueError('pkgconf executable differs from prepared environment')
+    expected_meson = TEMP / 'core-tools' / ('meson-' + lock['meson']['version'])
+    if Path(tools['mesonEntry']).resolve() != (expected_meson / 'meson.py').resolve():
+        raise ValueError('Meson entry is outside the fixed extracted tool cache')
+    verify_meson(TEMP / 'core-tools' / lock['meson']['filename'], expected_meson, lock['meson']['sha256'])
+    expected_pkgconf = TEMP / 'core-tools/pkgconf'
+    if pkgconf.resolve() != (expected_pkgconf / 'ucrt64/bin/pkgconf.exe').resolve():
+        raise ValueError('pkgconf is outside the fixed extracted tool cache')
+    for relative, digest in lock['pkgconf']['executables'].items():
+        if sha(expected_pkgconf / relative) != digest:
+            raise ValueError(f'Executed pkgconf component differs from fixed package: {relative}')
     native.write_text('[binaries]\n' +
                       'xxd = ' + array([python, '-B', codegen, '--xxd']) + '\n' +
                       'xxd-include.sh = ' + array([python, '-B', codegen, '--include']) + '\n' +
@@ -125,7 +163,10 @@ def prepare(args):
     contents += "CMAKE_FIND_ROOT_PATH_MODE_LIBRARY = 'ONLY'\nCMAKE_FIND_ROOT_PATH_MODE_INCLUDE = 'ONLY'\nCMAKE_FIND_ROOT_PATH_MODE_PACKAGE = 'ONLY'\n"
     cross.write_text(contents, encoding='utf-8', newline='\n')
     env = dict(os.environ)
-    for name in ('CC', 'CXX', 'CFLAGS', 'CXXFLAGS', 'CPPFLAGS', 'LDFLAGS', 'PKG_CONFIG_SYSROOT_DIR', 'PKG_CONFIG_PATH'):
+    for name in ('CC', 'CXX', 'CFLAGS', 'CXXFLAGS', 'CPPFLAGS', 'LDFLAGS', 'CPATH', 'C_INCLUDE_PATH',
+                 'CPLUS_INCLUDE_PATH', 'OBJC_INCLUDE_PATH', 'LIBRARY_PATH', 'COMPILER_PATH',
+                 'GCC_EXEC_PREFIX', 'INCLUDE', 'LIB', 'LIBPATH', 'CMAKE_PREFIX_PATH',
+                 'CMAKE_TOOLCHAIN_FILE', 'PKG_CONFIG_SYSROOT_DIR', 'PKG_CONFIG_PATH'):
         env.pop(name, None)
     env.update(PKG_CONFIG_LIBDIR=str(prefix / 'lib/pkgconfig'), PKG_CONFIG_PATH='',
                PYTHONDONTWRITEBYTECODE='1', ANDROID_NDK_HOME=str(ndk), ANDROID_NDK_ROOT=str(ndk),
@@ -145,7 +186,7 @@ def prepare(args):
                             ndk=dependency_lock['ndkRevision'], meson=tools['mesonArchiveSha256'],
                             pkgconf=tools['pkgconfArchiveSha256'])
     fingerprint = hashlib.sha256(json.dumps(fingerprint_data, sort_keys=True).encode()).hexdigest()
-    stamp = build / '.kif-core-machine.json'
+    stamp = local_path(build, '.kif-core-machine.json')
     if stamp.exists() and read_json(stamp)['fingerprint'] != fingerprint:
         raise ValueError('Machine configuration changed; select a new --output below temp rather than reusing a different toolchain')
     write_json(stamp, dict(fingerprint=fingerprint, inputs=fingerprint_data))
@@ -154,7 +195,7 @@ def prepare(args):
                   fingerprint=fingerprint, packages=packages, missingDependencies=missing,
                   abi='arm64-v8a', api=30, targetExecuted=False, coreBuilt=False, fullRuntimeBuilt=False,
                   tools=tools, inputSources={str(path.relative_to(ROOT)): sha(path) for path in
-                      (SCRIPT, codegen, SCRIPT.with_name('windows-native-core.lock.json'))})
+                      (SCRIPT, codegen, SCRIPT.with_name('windows_native_tool_cache.py'), SCRIPT.with_name('windows_native_elf.py'), SCRIPT.with_name('windows-native-core.lock.json'))})
     write_json(output / 'preparation.json', record)
     return source, output, build, prefix, tools, env, record
 
@@ -187,19 +228,23 @@ def main():
                        '-Dmri_version=3.4', '-Dshared_fluid=false', '-Dgfx_backend=gles',
                        '-Dstatic_executable=false', '-Duse_miniffi=true', '-Denable-https=true']
     if (build / 'meson-private/coredata.dat').exists():
-        setup.append('--reconfigure')
-    run(setup, output / 'configure.log', env=env, cwd=source)
+        setup.extend(['--reconfigure', '--clearcache'])
+    run(setup, local_path(output, 'configure.log'), env=env, cwd=source)
     record['status'] = 'configured; core compilation pending'
     write_json(output / 'build-result.json', record)
     if args.stage == 'configure':
         return
-    run(command + ['compile', '-C', str(build), '-j', str(args.jobs)], output / 'compile.log', env=env, cwd=source)
-    core = build / 'libmkxp-z.so'
-    if not core.is_file():
+    run(command + ['compile', '-C', str(build), '-j', str(args.jobs)], local_path(output, 'compile.log'), env=env, cwd=source)
+    raw_core = local_path(build, 'libmkxp-z.so')
+    if not raw_core.is_file():
         raise RuntimeError('Meson completed without the expected core library')
+    packaged = local_path(output, 'packaged')
+    packaged.mkdir(exist_ok=True)
+    core = local_path(packaged, 'libmkxp-z.so')
+    packaging = package_core(raw_core, core, Path(tools['mesonEntry']).parent)
     readelf = args.ndk.resolve() / 'toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-readelf.exe'
     metadata = subprocess.check_output([str(readelf), '-h', '-lW', '-d', str(core)], text=True)
-    (output / 'core-elf.txt').write_text(metadata, encoding='utf-8')
+    local_path(output, 'core-elf.txt').write_text(metadata, encoding='utf-8')
     if 'AArch64' not in metadata or 'Library soname: [libmkxp-z.so]' not in metadata:
         raise RuntimeError('Unexpected core architecture/SONAME')
     loads = [line for line in metadata.splitlines() if line.strip().startswith('LOAD')]
@@ -220,6 +265,7 @@ def main():
             raise RuntimeError(f'Core build helper changed during build: {relative}')
     record.update(status='core compiled; dependency-closure audit and Android execution pending', coreBuilt=True, fullRuntimeBuilt=False,
                   core=dict(path=str(core), bytes=core.stat().st_size, sha256=sha(core)),
+                  packaging=packaging,
                   allDependenciesFromSourceNotYetAudited=True, targetExecuted=False)
     write_json(output / 'build-result.json', record)
     print(f'Built {core}; device and full dependency-closure validation remain separate', flush=True)

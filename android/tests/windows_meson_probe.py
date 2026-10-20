@@ -6,6 +6,7 @@ import sys
 from types import SimpleNamespace
 
 root = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(root / 'scripts/android'))
 spec = importlib.util.spec_from_file_location('native_core', root / 'scripts/android/windows_native_core.py')
 core = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(core)
