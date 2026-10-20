@@ -11,7 +11,7 @@ module KIFAndroidFontSmoke
     files, folders = names.partition { |name| !File.directory?(File.join(path, name)) }
     files.each do |name|
       file = File.join(path, name)
-      eval(File.read(file), nil, file)
+      eval(File.read(file), TOPLEVEL_BINDING, file)
     end
     folders.each do |name|
       next if path == "Data/Scripts" && name == "999_Main"
@@ -38,7 +38,7 @@ module KIFAndroidFontSmoke
     load "kif_android_preload.rb"
     load_scripts("Data/Scripts")
     config = HTTPLite::JSON.parse(File.read("mkxp.json"))
-    mode = config.fetch("fontHeightReporting")
+    mode = config.fetch("fontHeightReporting").to_i
     puts "KIF_FONT_BEGIN mode=#{mode} ruby=#{RUBY_VERSION} final_draw=#{Bitmap.instance_method(:draw_text).source_location.inspect}"
     fonts = [["Power Green", 29], ["Power Green Small", 25],
       ["Power Green Narrow", 29], ["Power Red and Green", 26],
@@ -53,7 +53,7 @@ module KIFAndroidFontSmoke
         bitmap.font.name = name
         bitmap.font.size = size
         bitmap.font.color = Color.new(248, 248, 248)
-        bitmap.font.shadow = false
+        bitmap.font.shadow = false if bitmap.font.respond_to?(:shadow=)
         bitmap.font.outline = false if bitmap.font.respond_to?(:outline=)
       end
       text = "Agjpqy\u00e9"

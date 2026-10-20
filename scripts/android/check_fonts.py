@@ -12,12 +12,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--serial", required=True)
     parser.add_argument("--output", type=Path, default=ROOT / "temp/evidence/font-metrics-android2")
+    parser.add_argument("--timeout", type=float, default=900, help="Per-mode deadline including first content installation")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     adb = [str(ROOT / "temp/tools/android-sdk/platform-tools/adb.exe"), "-s", args.serial]
 
     def command(*parts):
-        return subprocess.check_output(adb + list(parts), stderr=subprocess.STDOUT)
+        return subprocess.check_output(adb + list(parts), stderr=subprocess.STDOUT, timeout=30)
 
     reports = {}
     for mode in (0, 1):
@@ -26,7 +27,9 @@ def main():
         result = command("shell", "am", "start", "-W", "-n", "org.kuray.kif/.LauncherActivity",
                          "--ez", "fontSmoke", "true", "--ei", "fontMetricsMode", str(mode))
         (args.output / f"mode-{mode}-launch.txt").write_bytes(result)
-        deadline = time.monotonic() + 360
+        if b"Error type" in result or b"Error:" in result:
+            raise RuntimeError(f"Android rejected mode {mode} launch; see launch output")
+        deadline = time.monotonic() + args.timeout
         while True:
             log = command("logcat", "-d", "-v", "threadtime")
             text = log.decode("utf-8", errors="replace")
@@ -43,7 +46,10 @@ def main():
         for suffix in ("json", "png"):
             data = command("exec-out", "run-as", "org.kuray.kif", "cat", f"files/font-probe-mode-{mode}.{suffix}")
             (args.output / f"mode-{mode}.{suffix}").write_bytes(data)
-        (args.output / f"mode-{mode}-screen.png").write_bytes(command("exec-out", "screencap", "-p"))
+        try:
+            (args.output / f"mode-{mode}-screen.png").write_bytes(command("exec-out", "screencap", "-p"))
+        except subprocess.TimeoutExpired:
+            (args.output / f"mode-{mode}-screen-timeout.txt").write_text("Optional physical screencap timed out; native bitmap PNG and pixel checks retained.\n")
         reports[mode] = json.loads((args.output / f"mode-{mode}.json").read_text(encoding="utf-8"))
         print(f"Font mode {mode}: " + json.dumps(reports[mode], ensure_ascii=True), flush=True)
     if all(row["complete"] for row in reports[0]["fonts"]):

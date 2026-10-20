@@ -8,8 +8,10 @@
 
 - 原生 RGSS：固定 warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。当前使用固定 SHA256 的上游预编译原生库；**原生源码重建尚未验证**。确切 Ruby 版本见运行时证据；二进制版本串为 3.4.10。见 [运行时调查](runtime-research.md) 和 `android/runtime.lock.json`。
 - Android 壳：Java + SDL bootstrap，512×384、40 FPS 配置、横屏等比缩放。方向键和 C/X/Z/A/S/D/Q/W 虚拟键，侧边按键避免遮挡游戏；Android 返回映射 X。保留原 UI。默认用光标界面输入名字，软键盘入口需实机验证。
+- 字体：Android 配置 `fontHeightReporting=1`，保留原 TTF、字号与行距。真实运行时对照中，旧模式8/8字体裁切，新模式8/8完整像素与原生参考一致；见[字体报告](font-rendering-report.md)。实际菜单字体和新包回归另见[Android.2 GUI报告](gui-regression-report.md)。
 - 虚拟输入：小型源代码构建的 `libkif_android_bridge.so` 为每个 APK 的必要扩展。Java 按钮通过互斥队列提交 RGSS 逻辑键，Ruby 轮询 held/triggered/released 掩码；此路径不调用 SDL 按键回调。物理键盘保留原 SDL 路径。启动/暂停清空所有虚拟状态，避免粘键或恢复时误触发。该后端已实现并编译，实际游戏连通性以随后运行报告为准。
 - 安装：白名单收集 Audio/Data/Graphics/Fonts 和 Android preload，不收集 temp、Windows 可执行程序、存档、导出宝可梦。每文件 SHA256、总数和总字节校验；后台安装有进度，失败不启动半套素材；重复打开用同一进程互斥。
+- 无损体积：全部资源DEFLATE6并按内容去重，安装时恢复所有原路径为独立文件。APK由800.14降至708.35 MiB；备用模拟器已实际验证23,128条路径SHA与2,300个别名独立inode，见[资源设备报告](payload-device-report.md)。这不会同比缩小约934 MiB的解包资源。
 - 素材：`files/content/<payload-id>` 保存版本化基础素材；`files/writable/Graphics-<id>` 是该版本可写图片树，通过私有符号链接接入游戏。升级完成后迁移上一版本下载或修改的图片，旧版本仍保留供恢复，安装失败不改旧版本图片。Cache/ExportedPokemons/Mods 各有独立可写目录。后续需要容量治理。
 - 存档：`files/saves` 独立于素材版本，preload 在 SaveData 定义前重定向 `System.data_directory`。保留原 Marshal 格式、多存档和备份实现。Android 卸载会删除私有数据，迁移前应导出。
 - 网络：所有有效请求集中到 `KIF::Platform`。默认构建无 INTERNET 权限且保持离线；可选 Java TLS 桥使用 Android 平台证书/主机名验证，Ruby 适配器仅在显式开启且桥加载成功后安装，不回退到原生不验证证书的 HTTPLite。GET 有限重定向/重试，POST 不跟随重定向、不自动重放。精灵落盘使用同目录临时文件、fsync 和原子替换，失败保留旧缓存；PNG/GIF 检查 magic。真实 TLS、超时、离线和下载仍以设备测试报告为准，不能凭本地契约测试宣称已验收。

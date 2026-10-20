@@ -21,6 +21,36 @@ EMULATOR_RUNTIME_SHA256 = "90bee3c7406d62ca903ffb64798bca3f6da009e4b94402a580cb3
 def run(args, **kwargs):
     subprocess.run([str(a) for a in args], check=True, **kwargs)
 
+def source_snapshot():
+    paths = set((ROOT / "android/app/src/main").rglob("*.java"))
+    paths.update((ROOT / "android/ruby").glob("*.rb"))
+    paths.update((ROOT / "Data/Scripts").rglob("*.rb"))
+    paths.update((ROOT / "temp/android-generated/java").rglob("*.java"))
+    for name in ("Game.ini", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
+                 "android/native/kif_android_bridge.c", "scripts/android/build_bridge.ps1",
+                 "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py"):
+        path = ROOT / name
+        if path.is_file():
+            paths.add(path)
+    return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+
+def assert_sources_unchanged(expected):
+    current = source_snapshot()
+    changed = sorted(name for name in set(expected) | set(current) if expected.get(name) != current.get(name))
+    if changed:
+        raise SystemExit("Source files changed during build; finish edits and rebuild: " + ", ".join(changed[:8]))
+
+def validate_staged_scripts(manifest):
+    for name, expected in manifest["files"].items():
+        if name == "Game.ini" or name.startswith("Data/Scripts/"):
+            path = ROOT / name
+        elif "/" not in name and name.endswith(".rb"):
+            path = ROOT / "android/ruby" / name
+        else:
+            continue
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected["sha256"]:
+            raise SystemExit("Staged game script differs from current source; use --refresh-ruby: " + name)
+
 def validate_apk_assets(assets, with_network, require_payload=True):
     """Reject stale partials/unknown paths instead of silently bundling or deleting them."""
     required = {"payload.zip", "payload-manifest.json", "mkxp-base.json"}
@@ -134,6 +164,7 @@ def main():
     parser.add_argument("--with-network", action="store_true", help="Enable the helper's optional Android TLS transport and INTERNET permission")
     parser.add_argument("--emulator-compatible", action="store_true", help="Opt into the separately SHA-pinned old ARM translator workaround; never use this variant for phone acceptance")
     args = parser.parse_args()
+    source_hashes = source_snapshot()
     jdk = args.jdk or next((ROOT / "temp/tools").glob("jdk-17*"), None)
     if jdk is None or not (jdk / "bin/javac.exe").is_file():
         raise SystemExit("Portable JDK17 missing; run bootstrap-tools.ps1 or pass --jdk")
@@ -172,6 +203,8 @@ def main():
     if args.skip_payload:
         print("Verifying staged payload canonical hashes and alias inventory", flush=True)
     validate_payload(assets / "payload.zip", manifest, verify_hashes=args.skip_payload)
+    validate_staged_scripts(manifest)
+    assert_sources_unchanged(source_hashes)
     sources = sorted((ROOT / "android/app/src/main/java").rglob("*.java")) + sorted((generated / "java").rglob("*.java"))
     source_list = work / "sources.txt"
     source_list.write_text("\n".join('"' + str(f).replace("\\", "/") + '"' for f in sources), encoding="utf-8")
@@ -208,6 +241,7 @@ def main():
     output.mkdir(exist_ok=True)
     final = output / output_name(args.runtime_only, args.with_network, args.emulator_compatible)
     signer = [jdk / "bin/java.exe", "-jar", tools / "lib/apksigner.jar"]
+    assert_sources_unchanged(source_hashes)
     run(signer + ["sign", "--ks", key, "--ks-key-alias", "androiddebugkey", "--ks-pass", "env:KIF_TEST_KEY_PASSWORD", "--key-pass", "env:KIF_TEST_KEY_PASSWORD", "--out", final, aligned], env=env)
     run(signer + ["verify", "--verbose", final])
     with zipfile.ZipFile(final) as apk:
@@ -224,10 +258,10 @@ def main():
     run([tools / "aapt2.exe", "dump", "badging", final], stdout=(work / "apk-badging.txt").open("w", encoding="utf-8"))
     sha = hashlib.file_digest(final.open("rb"), "sha256").hexdigest()
     (output / (final.name + ".sha256")).write_text(sha + "  " + final.name + "\n", encoding="utf-8")
-    source_paths = sorted((ROOT / "android").rglob("*.java")) + sorted((ROOT / "android").rglob("*.rb")) + sorted((ROOT / "scripts/android").glob("*.py")) + [ROOT / "android/native/kif_android_bridge.c", ROOT / "scripts/android/build_bridge.ps1"]
-    source_hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in source_paths}
+    assert_sources_unchanged(source_hashes)
     record = {"apk": final.name, "sha256": sha, "bytes": final.stat().st_size, "runtime": json.loads((ROOT / "android/runtime.lock.json").read_text()), "payload": manifest["id"], "runtimeOnly": manifest.get("runtimeOnly", False), "networkBridge": args.with_network, "sources": source_hashes, "compileSdk": 35, "buildTools": "35.0.0", "status": "built; gameplay validation pending"}
-    record.update({"emulatorOnly": args.emulator_compatible, "inputBridge": True, "helperBridge": input_bridge_record,
+    record.update({"sourceSnapshotVerified": True, "stagedScriptHashesVerified": True,
+                   "emulatorOnly": args.emulator_compatible, "inputBridge": True, "helperBridge": input_bridge_record,
                    "runtimeLibrary": {"path": runtime_entry, "originalSha256": original_runtime_sha,
                                       "packagedSha256": packaged_runtime_sha, "nativeRuntimeRebuiltFromSource": False},
                    "emulatorCompatibility": emulator_record})

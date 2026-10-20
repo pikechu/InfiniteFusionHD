@@ -133,6 +133,37 @@ class PayloadPackageTest(unittest.TestCase):
             (assets / name).write_bytes(b"fixture; content validation is tested separately")
         return assets
 
+    def test_build_source_snapshot_detects_concurrent_edits(self):
+        fixture = self.base / "source-snapshot"
+        script = fixture / "android/ruby/probe.rb"
+        script.parent.mkdir(parents=True)
+        script.write_bytes(b"first version\n")
+        with mock.patch.object(build_apk, "ROOT", fixture):
+            snapshot = build_apk.source_snapshot()
+            build_apk.assert_sources_unchanged(snapshot)
+            script.write_bytes(b"edited during compilation\n")
+            with self.assertRaisesRegex(SystemExit, "probe.rb"):
+                build_apk.assert_sources_unchanged(snapshot)
+            script.unlink()
+            with self.assertRaisesRegex(SystemExit, "probe.rb"):
+                build_apk.assert_sources_unchanged(snapshot)
+
+    def test_skip_payload_rejects_stale_game_script(self):
+        fixture = self.base / "script-snapshot"
+        script = fixture / "Data/Scripts/000_Platform.rb"
+        script.parent.mkdir(parents=True)
+        script.write_bytes(b"current platform\n")
+        manifest = {"files": {"Data/Scripts/000_Platform.rb": {
+            "sha256": hashlib.sha256(script.read_bytes()).hexdigest()}}}
+        # Legacy .rb assets outside the ordered source tree come from --asset-root,
+        # not android/ruby; a sparse source checkout need not contain these.
+        manifest["files"]["Data/compiler.rb"] = {"sha256": "0" * 64}
+        with mock.patch.object(build_apk, "ROOT", fixture):
+            build_apk.validate_staged_scripts(manifest)
+            script.write_bytes(b"changed platform\n")
+            with self.assertRaisesRegex(SystemExit, "refresh-ruby"):
+                build_apk.validate_staged_scripts(manifest)
+
     def test_reject_leftover_partial_before_aapt_collection(self):
         # Real aapt2 reproduction in temp/evidence/payload-review proved this exact
         # filename is packaged by -A. The build must refuse it and preserve evidence.

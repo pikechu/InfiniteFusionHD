@@ -14,7 +14,7 @@ Push-Location -LiteralPath $repository
 try {
     & $RubyPath --disable-gems android/tests/platform_contract_test.rb
     if ($LASTEXITCODE -ne 0) { throw 'Ruby platform contract checks failed' }
-    foreach ($testName in @('bitmap_path_contract_test', 'http_adapter_test', 'download_write_test', 'input_bridge_test', 'keybinding_bootstrap_test', 'intro_notice_test', 'title_input_test')) {
+    foreach ($testName in @('bitmap_path_contract_test', 'http_adapter_test', 'download_write_test', 'input_bridge_test', 'keybinding_bootstrap_test', 'intro_notice_test', 'title_input_test', 'font_probe_loader_test')) {
         & $RubyPath --disable-gems "android/tests/$testName.rb"
         if ($LASTEXITCODE -ne 0) { throw "Failed: $testName" }
     }

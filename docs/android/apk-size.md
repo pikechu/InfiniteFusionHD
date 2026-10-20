@@ -84,6 +84,13 @@ Android.2 的首个实际优化签名 APK 为 **742,762,733 B（708.35 MiB）**�
 随后构建脚本增加严格 assets 白名单，防止中断刷新残留的 `payload.zip.pending` 被 aapt2 收入 APK；
 最终重签的 SHA-256 以交付目录对应 `.sha256` 和 `-build-record.json` 为准。
 
+格式 2 已在 API 30 的独立 5556 AVD 做真实全新资源代安装：23,128 个路径设备 SHA 全部匹配，
+2,300 个别名全部恢复，3,987 个 canonical/alias 路径具有独立 inode；重复启动实际资源准备 1,407 ms，
+并已自然显示标题。该次输入是 b8 SHA / commit `2975f43a`（字体诊断 loader 单行修正前），
+不能代替后续新 SHA 的验收。2 GiB 模拟器有严重系统压力，首次解包实际 805,278 ms，
+首次自动 `:game` 因系统 attach timeout 失败，重复启动后进入标题。
+完整输入、失败记录、设备范围和证据见 [设备资源验收](payload-device-report.md)。
+
 ## 进一步缩小的选择
 
 | 方式 | 体积潜力 | 代价与验证要求 |
