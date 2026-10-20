@@ -4,9 +4,9 @@
 
 ## 架构
 
-独立应用 `org.kuray.kif`，测试名称 `KIF Android Test`，当前开发版本 `0.20.7-android.2`（versionCode 2）。当前实验范围为 Android 11/API 30 以上、ARM64、4 KB 内存页；compile/target API 35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布。
+独立应用 `org.kuray.kif`，测试名称 `KIF Android Test`，当前开发版本 `0.20.7-android.3`（versionCode 3）。当前实验范围为 Android 11/API 30 以上、ARM64、4 KB 内存页；compile/target API 35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布。
 
-- 原生 RGSS：固定 warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。当前使用固定 SHA256 的上游预编译原生库；**原生源码重建尚未验证**。确切 Ruby 版本见运行时证据；二进制版本串为 3.4.10。见 [运行时调查](runtime-research.md) 和 `android/runtime.lock.json`。
+- 原生RGSS：固定warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。游戏APK当前使用固定SHA256上游预编译库；**完整core源码重建尚未验证**。Windows portable已有依赖及Ruby3.4.10真实产物、独立Ruby探针APK，另有Meson最小交叉编译通过，见[组件构建](windows-native-build.md)、[core准备](windows-native-core.md)。原运行时来源见[调查](runtime-research.md)和`android/runtime.lock.json`。
 - Android 壳：Java + SDL bootstrap，512×384、40 FPS 配置、横屏等比缩放。方向键和 C/X/Z/A/S/D/Q/W 虚拟键，侧边按键避免遮挡游戏；Android 返回映射 X。保留原 UI。默认用光标界面输入名字，软键盘入口需实机验证。
 - 字体：Android 配置 `fontHeightReporting=1`，保留原 TTF、字号与行距。真实运行时对照中，旧模式8/8字体裁切，新模式8/8完整像素与原生参考一致；见[字体报告](font-rendering-report.md)。实际菜单字体和新包回归另见[Android.2 GUI报告](gui-regression-report.md)。
 - 虚拟输入：小型源代码构建的 `libkif_android_bridge.so` 为每个 APK 的必要扩展。Java 按钮通过互斥队列提交 RGSS 逻辑键，Ruby 轮询 held/triggered/released 掩码；此路径不调用 SDL 按键回调。物理键盘保留原 SDL 路径。启动/暂停清空所有虚拟状态，避免粘键或恢复时误触发。该后端已实现并编译，实际游戏连通性以随后运行报告为准。
@@ -31,14 +31,14 @@
 ```
 
 工具脚本固定 portable JDK、SDK 平台和 build-tools，不修改全局环境。受限网络环境需要限定下载命令的授权，脚本保留调用者代理设置。无需安装 Android Studio；Java/D8/aapt2/zipalign/apksigner 直接构建 APK，无 Gradle 在线依赖解析。环境版本与实跑证据见 [工具链](toolchain.md)。
-NDK 只用于构建必要的小型输入/可选 HTTPS 扩展，尚未用于完整重建上游运行时。
+当前游戏APK中本项目源码构建的原生部分是输入/HTTPS小型扩展；temp另有Windows portable依赖与Ruby源码产物，尚未替换进游戏APK或完成整个上游运行时重建。
 所有包均校验 helper 与当前 C 源码及 provenance 匹配，缺失或过期时提示先执行
 `build_bridge.ps1`。默认离线包也包含 helper，但仍没有 INTERNET 权限；
 `--with-network` 仅启用额外网络权限及 HTTPS 功能。
 
 离线重建已有输入：`bootstrap-tools.ps1 -SkipDownload`、`prepare-runtime.ps1 -Offline`。更改游戏代码或 preload 后必须重打 payload；仅修改 Java 时可用 `build_apk.py --skip-payload`，运行前需核实 staged 游戏源码与当前代码匹配。
 
-输出：`temp/artifacts/KIF-0.20.7-android.2-arm64-test.apk`、SHA256 文件、构建记录。启用网络时文件名增加 `-network`。开发签名只在 `temp/android-signing`；不能用于正式发行。不得提交密钥。重新生成测试密钥后，已有安装不能原地升级，需先导出存档。
+输出：`temp/artifacts/KIF-0.20.7-android.3-arm64-test.apk`、SHA256 文件、构建记录。启用网络时文件名增加 `-network`。开发签名只在 `temp/android-signing`；不能用于正式发行。不得提交密钥。重新生成测试密钥后，已有安装不能原地升级，需先导出存档。
 
 Android 11 x86_64 AVD 的旧版 ARM 翻译器不能执行上游库中两处合法的 AArch64
 标量转换指令。需要该特定兼容路径时，先生成独立、严格哈希固定的库，再显式选择模拟器变体：
@@ -50,8 +50,8 @@ Android 11 x86_64 AVD 的旧版 ARM 翻译器不能执行上游库中两处合�
 & '<Python>' scripts/android/build_apk.py --emulator-compatible --with-network
 ```
 
-对应输出为 `KIF-0.20.7-android.2-arm64-emulator-test.apk` 和
-`KIF-0.20.7-android.2-arm64-emulator-network-test.apk`；其构建目录与普通包分开，
+对应输出为 `KIF-0.20.7-android.3-arm64-emulator-test.apk` 和
+`KIF-0.20.7-android.3-arm64-emulator-network-test.apk`；其构建目录与普通包分开，
 不会覆盖普通手机 APK 或共享的原版原生库。首次生成某一变体必须先打完整 payload，
 之后才能对该变体使用 `--skip-payload` 或 `--refresh-ruby`。
 库或 provenance 缺失、输入/输出 SHA256 不符时立即失败，不回退为普通包。
@@ -89,11 +89,11 @@ $ruby = (Resolve-Path 'temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.
 | --- | --- |
 | 环境和静态核实 | 已完成仓库检查、分支、依赖固定、官方源码接口核实；见各报告 |
 | 最小工程和平台适配 | 已实现；平台契约 38 项通过，Ruby 语法检查通过；不等于 Android 运行通过 |
-| 独立 APK | Android.1 已成功构建、模拟器安装和正常游戏启动；Android.2 修复回归进行中 |
-| 首个运行闭环 | Android.1 正常 GUI 已完成新档、移动、训练家/野外战斗、捕捉、普通融合/拆分、仓库存取、正式槽保存、杀进程重启读档；[GUI 报告](gui-playtest-report.md)。闪光 GUI 与更广测试未完成 |
+| 独立 APK | Android.3 手机/模拟器变体已构建并校验签名；模拟器升级及补充回归进行中，手机包尚无真机运行证据 |
+| 修复回归闭环 | Android.2 最终7279包已实际通过标题移动期单次确认、4种GUI字体、移动、野战/捕捉、普通融合/拆分、仓库存取、G槽保存、杀进程及相同位置/队伍/HP冷读；见[本轮GUI报告](gui-regression-report.md)。原Android.1新档/训练家结果单列[旧报告](gui-playtest-report.md)；闪光和SAF补测进行中 |
 | 产品适配 | 安全下载、存档 SAF、中断恢复、输入、安全区与生命周期需按实际测试完善 |
 | 性能 | 已记录模拟器 FPS、PSS、安装/配色耗时，见 GUI/集成报告；尚未测大量闪光仓库、峰值/长期增长，不能代表真机性能 |
 | 源码发布构建 | 原生依赖及二级依赖锁、POSIX 构建环境、16 KB 页重建、签名和干净重建是后续门槛 |
 | 发布 | 用户确认先本地测试包；没有上传任何测试渠道或公开商店 |
 
-当前优先修复标题确认与字形裁切、验证 Android.2 核心闭环、补闪光与存档覆盖；Windows portable 原生构建并行推进。首次 GUI 闭环已证明主线架构可用，但不能按“成功打包”推算发布日期。后续工期将以修复回归、完整源码构建和设备矩阵的实际结果再估算。体积构成与无损优化的真实实验见 [APK 体积](apk-size.md)。
+标题确认与字形裁切修复已在Android.2最终包通过上述实际回归；当前Android.3补充导入改槽的安全绑定，随后验证新档、闪光与存档覆盖。Windows portable原生构建并行推进。后续工期以补充回归、完整源码构建和设备矩阵的实际结果估算。体积构成与无损优化的真实实验见[APK体积](apk-size.md)。

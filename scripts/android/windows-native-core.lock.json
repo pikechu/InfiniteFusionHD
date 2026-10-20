@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runtime": {
+    "url": "https://codeberg.org/warmwinter/mkxp-z.git",
+    "commit": "68653811c3c396f2d4c12225c52c407746285a3d"
+  },
+  "meson": {
+    "version": "1.9.1",
+    "url": "https://files.pythonhosted.org/packages/9c/07/b48592d325cb86682829f05216e4efb2dc881762b8f1bafb48b57442307a/meson-1.9.1-py3-none-any.whl",
+    "filename": "meson-1.9.1-py3-none-any.whl",
+    "sha256": "f824ab770c041a202f532f69e114c971918ed2daff7ea56583d80642564598d0",
+    "checksumSource": "https://pypi.org/pypi/meson/1.9.1/json"
+  },
+  "pkgconf": {
+    "version": "1~3.0.9-1",
+    "reportedVersion": "3.0.8",
+    "url": "https://mirror.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pkgconf-1~3.0.9-1-any.pkg.tar.zst",
+    "filename": "mingw-w64-ucrt-x86_64-pkgconf-1~3.0.9-1-any.pkg.tar.zst",
+    "sha256": "4ea9bdd77df366333b973771c2ec377e77a4354e60c16a4556af7d849494366f",
+    "checksumSource": "https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-pkgconf",
+    "versionNote": "The official pkgconf-3.0.9 tag's meson.build declares project version 3.0.8; verified package metadata and archive SHA remain 1~3.0.9-1.",
+    "versionSource": "https://raw.githubusercontent.com/pkgconf/pkgconf/pkgconf-3.0.9/meson.build"
+  }
+}
