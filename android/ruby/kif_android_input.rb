@@ -113,6 +113,7 @@ module KIF
         end
         @last_error = error.class
       end
+      process_text_input_request
       result
     end
 
@@ -149,6 +150,25 @@ module KIF
     end
 
     private
+
+    def process_text_input_request
+      return unless @bridge.respond_to?(:text_input_request_poll)
+      # Consume even outside a text session and after a failed key poll. A UI
+      # request must never wait in the queue until a later dialog opens.
+      requested = @bridge.text_input_request_poll
+      unless requested.is_a?(Integer) && (requested == 0 || requested == 1)
+        raise ArgumentError, "Invalid Android text input request"
+      end
+      if requested == 1 && @requested_text_mode == true && @native.key?(:text_input=)
+        @native.fetch(:text_input=).call(true)
+      end
+      @last_text_request_error = nil
+    rescue StandardError => error
+      if @last_text_request_error != error.class && defined?(System) && System.respond_to?(:puts)
+        System.puts("KIF Android text input request unavailable (#{error.class}); input remains active")
+      end
+      @last_text_request_error = error.class
+    end
 
     def clear_virtual_state
       @pressed = @triggered = @released = @repeated = 0

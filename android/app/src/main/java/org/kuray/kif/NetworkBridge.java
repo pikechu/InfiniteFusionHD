@@ -49,6 +49,8 @@ public final class NetworkBridge {
     /** RGSS virtual buttons use a native queue independent of SDL's Android key callbacks. */
     public static native void setVirtualKey(int rgssCode, boolean down);
     public static native void clearVirtualKeys();
+    /** Request a Ruby-thread text-mode restart independently of game buttons. */
+    public static native void requestTextInput();
     static boolean enabled(Context context) {
         try (InputStream in = context.getAssets().open("network-enabled")) { return in.read() == '1'; }
         catch (IOException unavailable) { return false; }

@@ -42,6 +42,7 @@ static pthread_mutex_t input_mutex = PTHREAD_MUTEX_INITIALIZER;
 static uint32_t input_pressed;
 static uint32_t input_triggered;
 static uint32_t input_released;
+static uint32_t text_input_requested;
 
 static void throw_configuration_error(JNIEnv *env, const char *message) {
     if ((*env)->ExceptionCheck(env)) return;
@@ -80,6 +81,17 @@ Java_org_kuray_kif_NetworkBridge_setVirtualKey(JNIEnv *env, jclass java_class,
 }
 
 KIF_EXPORT JNIEXPORT void JNICALL
+Java_org_kuray_kif_NetworkBridge_requestTextInput(JNIEnv *env, jclass java_class) {
+    (void)java_class;
+    if (pthread_mutex_lock(&input_mutex) != 0) {
+        throw_configuration_error(env, "Cannot request Android text input");
+        return;
+    }
+    text_input_requested = 1;
+    (void)pthread_mutex_unlock(&input_mutex);
+}
+
+KIF_EXPORT JNIEXPORT void JNICALL
 Java_org_kuray_kif_NetworkBridge_clearVirtualKeys(JNIEnv *env, jclass java_class) {
     (void)java_class;
     if (pthread_mutex_lock(&input_mutex) != 0) {
@@ -90,7 +102,20 @@ Java_org_kuray_kif_NetworkBridge_clearVirtualKeys(JNIEnv *env, jclass java_class
     input_pressed = 0;
     input_triggered = 0;
     input_released = 0;
+    text_input_requested = 0;
     (void)pthread_mutex_unlock(&input_mutex);
+}
+
+static VALUE text_input_request_poll(VALUE receiver) {
+    (void)receiver;
+    uint32_t requested;
+    if (pthread_mutex_lock(&input_mutex) != 0)
+        rb_raise(rb_eRuntimeError, "Cannot poll Android text input request");
+    requested = text_input_requested;
+    text_input_requested = 0;
+    (void)pthread_mutex_unlock(&input_mutex);
+    /* Keep MRI allocation outside the mutex, including this small integer. */
+    return rb_ull2inum((unsigned long long)requested);
 }
 
 static VALUE input_poll(VALUE receiver) {
@@ -287,6 +312,7 @@ KIF_EXPORT void Init_libkif_android_bridge(void) {
     VALUE module = rb_define_module("KIFAndroidBridge");
     rb_define_module_function(module, "request", (KifRubyMethod)request_json, 1);
     rb_define_module_function(module, "input_poll", (KifRubyMethod)input_poll, 0);
+    rb_define_module_function(module, "text_input_request_poll", (KifRubyMethod)text_input_request_poll, 0);
 }
 
 KIF_EXPORT void Init_kif_android_bridge(void) {

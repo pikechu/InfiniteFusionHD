@@ -68,6 +68,7 @@ $exportsText | Set-Content -LiteralPath (Join-Path $BuildDirectory 'bridge-expor
 $elfText | Set-Content -LiteralPath (Join-Path $BuildDirectory 'bridge-elf.log') -Encoding utf8
 $requiredExports = @('Java_org_kuray_kif_NetworkBridge_configure',
     'Java_org_kuray_kif_NetworkBridge_setVirtualKey','Java_org_kuray_kif_NetworkBridge_clearVirtualKeys',
+    'Java_org_kuray_kif_NetworkBridge_requestTextInput',
     'Init_libkif_android_bridge','Init_kif_android_bridge')
 foreach ($symbol in $requiredExports) {
     if ($exportsText -notmatch ('(?m)\s' + [regex]::Escape($symbol) + '$')) {
@@ -94,6 +95,8 @@ $provenance = [ordered]@{
     virtualInput=[ordered]@{mask='1U << RGSS logical button code';poll='[pressed,triggered,released]';
         acceptedCodes=@(2,4,6,8,11,12,13,14,15,16,17,18);pause='clear all held and edge masks';
         sdlCallbacksUsed=$false;networkPermissionRequired=$false}
+    textInputRequest=[ordered]@{poll='text_input_request_poll: 0 or 1; consume once';
+        transport='separate flag; input_poll triple unchanged';pause='discard pending request'}
     abi='arm64-v8a'
     minimumApi=30
     ndkRevision='25.2.9519653'

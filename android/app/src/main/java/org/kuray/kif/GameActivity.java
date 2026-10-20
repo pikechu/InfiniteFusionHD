@@ -135,7 +135,11 @@ public final class GameActivity extends SDLActivity {
         int[] codes = {KeyEvent.KEYCODE_C, KeyEvent.KEYCODE_X, KeyEvent.KEYCODE_Z, KeyEvent.KEYCODE_A, KeyEvent.KEYCODE_S, KeyEvent.KEYCODE_D, KeyEvent.KEYCODE_Q, KeyEvent.KEYCODE_W};
         for (int i = 0; i < codes.length; i++) right.addView(button(labels[i], codes[i]), new ViewGroup.LayoutParams(dp(56), dp(48)));
         Button keyboard = new Button(this); keyboard.setText("Keyboard"); keyboard.setTextSize(10); keyboard.setPadding(0,0,0,0);
-        keyboard.setOnClickListener(view -> SDLActivity.showTextInput(rail, 0, 1, 1));
+        keyboard.setOnClickListener(view -> {
+            if (!bridgeReady) throw new IllegalStateException("KIF virtual input bridge is not ready");
+            NetworkBridge.requestTextInput();
+            SDLActivity.showTextInput(rail, 0, 1, 1);
+        });
         GridLayout.LayoutParams keyboardLayout = new GridLayout.LayoutParams(GridLayout.spec(4), GridLayout.spec(0, 2));
         keyboardLayout.width = dp(112); keyboardLayout.height = dp(40); right.addView(keyboard, keyboardLayout);
         Button saves = new Button(this); saves.setText("Saves / Exit"); saves.setTextSize(10); saves.setPadding(0,0,0,0);

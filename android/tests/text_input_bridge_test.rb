@@ -44,7 +44,9 @@ module Input
         when :physical_down then native_down(value)
         when :physical_up then native_up(value)
         when :text then @pending_text << value
+        when :ime_text then @pending_text << value if @text_input == true
         when :native_mode then @text_input = value
+        when :text_request then KIFAndroidBridge.request_text_input
         else raise "Unknown host event #{action.inspect}"
         end
       end
@@ -95,7 +97,16 @@ end
 
 module KIFAndroidBridge
   class << self
-    def clear; @pressed = @triggered = @released = 0; end
+    def clear
+      @pressed = @triggered = @released = 0
+      @text_request = false
+    end
+    def request_text_input; @text_request = true; end
+    def text_input_request_poll
+      requested = @text_request ? 1 : 0
+      @text_request = false
+      requested
+    end
     def down(code)
       bit = 1 << code
       @triggered |= bit if (@pressed & bit) == 0
@@ -180,8 +191,11 @@ begin
   desktop_methods = (extended + [:update, :press?, :trigger?, :repeat?, :release?, :dir4, :dir8, :text_input, :text_input=]).map { |name| [name, Input.method(name)] }.to_h
   assert.call(KIF::Platform.install_input_bridge == false, "Windows installed Android input bridge")
   assert.call(desktop_methods.all? { |name, method| Input.method(name) == method }, "Windows Input methods changed")
+  KIFAndroidBridge.request_text_input
   Input.update
   assert.call(Input.order == [:native_update], "Windows polled the Android bridge")
+  assert.call(KIFAndroidBridge.text_input_request_poll == 1 && Input.text_sets.empty?, "Windows consumed a Keyboard request or changed native text mode")
+  KIFAndroidBridge.clear
 
   System.android_host = true
   backend = KIF::AndroidInputBackend.install(Input, KIFAndroidBridge)
@@ -461,8 +475,106 @@ begin
     System.android_host = true
   end
 
+  # The native transport drops IME characters while SDL text input is stopped.
+  # Only the independent UI request may re-enable it inside an existing Ruby
+  # dialog; showing a keyboard or touching game C/X does not do so by itself.
+  reset.call({ 1 => [[:ime_text, "R5"]], 2 => [[:native_mode, false]],
+               3 => [[:text_request, nil], [:text_request, nil]],
+               4 => [[:ime_text, "Z"]], 5 => [[:tap, Input::C]] })
+  reopened_result = pbFreeText(nil, "", false, 32)
+  assert.call(reopened_result == "R5Z", "reopened IME did not resume native text delivery; got #{reopened_result.inspect}")
+  assert.call(Input.text_sets == [true, true, false], "duplicate Keyboard requests did not collapse to one native rearm")
+  assert.call(KIFAndroidBridge.text_input_request_poll == 0, "Keyboard request remained queued after rearm")
+
+  reset.call({ 1 => [[:ime_text, "R5"]], 2 => [[:native_mode, false]],
+               3 => [[:ime_text, "Z"]], 4 => [[:tap, Input::C]] })
+  assert.call(pbFreeText(nil, "", false, 32) == "R5" && Input.text_sets == [true, false], "no-request path automatically restarted native text mode")
+
+  reset.call
+  KIFAndroidBridge.request_text_input
+  assert.call(Input.update == :native_update_result && Input.text_sets.empty?, "request outside a Ruby text session called native setter or changed update return")
+  assert.call(KIFAndroidBridge.text_input_request_poll == 0, "inactive-session request was left for the next text dialog")
+  Input.text_input = true
+  Input.native_text_mode = false
+  Input.update
+  assert.call(Input.text_sets == [true] && Input.text_input == false, "discarded inactive request contaminated a later text session")
+  Input.text_input = :native_accepted
+  KIFAndroidBridge.request_text_input; Input.update
+  assert.call(Input.text_sets == [true, :native_accepted] && Input.text_input == :native_accepted, "unknown request mode rearmed a text session")
+
+  reset.call
+  Input.text_input = true
+  Input.native_text_mode = false
+  KIFAndroidBridge.request_text_input; KIFAndroidBridge.clear
+  Input.update
+  assert.call(Input.text_sets == [true] && Input.text_input == false, "pause/clear retained a pending text request")
+
+  reset.call
+  Input.text_input = true
+  Input.native_text_mode = false
+  Input.setter_error = IOError.new("rearm native setter failed")
+  KIFAndroidBridge.request_text_input
+  KIFAndroidBridge.down(Input::C); KIFAndroidBridge.up(Input::C)
+  assert.call(Input.update == :native_update_result && Input.trigger?(Input::C) && Input.triggerex?(:RETURN), "rearm failure escaped update or erased ordinary/virtual keys")
+  assert.call(Input.text_sets == [true, true] && Input.text_input == false, "failed rearm changed the native getter or retried without a request")
+  Input.setter_error = nil
+  Input.update
+  assert.call(Input.text_sets == [true, true] && !Input.trigger?(Input::C), "failed request replayed on the next update")
+  KIFAndroidBridge.request_text_input; Input.update
+  assert.call(Input.text_sets == [true, true, true] && Input.text_input == true, "new request could not recover after native setter failure")
+
+  reset.call
+  Input.text_input = true
+  Input.native_text_mode = false
+  key_poll = KIFAndroidBridge.method(:input_poll)
+  begin
+    KIFAndroidBridge.define_singleton_method(:input_poll) { raise IOError, "failed key poll" }
+    KIFAndroidBridge.request_text_input
+    assert.call(Input.update == :native_update_result, "key poll failure changed update return")
+    assert.call(Input.text_sets == [true, true] && KIFAndroidBridge.text_input_request_poll == 0, "key poll failure prevented consuming the independent text request")
+  ensure
+    KIFAndroidBridge.define_singleton_method(:input_poll, key_poll)
+  end
+
+  request_poll = KIFAndroidBridge.method(:text_input_request_poll)
+  [IOError.new("request poll failed"), :invalid_result].each do |failure|
+    reset.call
+    Input.text_input = true
+    Input.native_text_mode = false
+    begin
+      KIFAndroidBridge.define_singleton_method(:text_input_request_poll) do
+        request_poll.call # The native allocation can fail after consuming the flag.
+        raise failure if failure.is_a?(Exception)
+        2
+      end
+      KIFAndroidBridge.request_text_input
+      KIFAndroidBridge.down(Input::C); KIFAndroidBridge.up(Input::C)
+      assert.call(Input.update == :native_update_result && Input.trigger?(Input::C) && Input.triggerex?(:RETURN), "request poll error/invalid value broke unrelated keys")
+      assert.call(Input.text_sets == [true] && Input.text_input == false, "bad request poll result rearmed native mode")
+    ensure
+      KIFAndroidBridge.define_singleton_method(:text_input_request_poll, request_poll)
+    end
+    Input.update
+    assert.call(Input.text_sets == [true], "request poll error was replayed after recovery")
+  end
+
+  reset.call
+  Input.text_input = true
+  Input.native_text_mode = false
+  begin
+    KIFAndroidBridge.singleton_class.send(:remove_method, :text_input_request_poll)
+    KIFAndroidBridge.request_text_input
+    Input.native_down(:RETURN)
+    assert.call(Input.update == :native_update_result && Input.triggerex?(:RETURN) && Input.text_sets == [true], "legacy bridge lost physical keys or required the new API")
+    assert.call(!KIFAndroidBridge.respond_to?(:text_input_request_poll), "adapter added the absent native request API")
+  ensure
+    KIFAndroidBridge.singleton_class.send(:define_method, :text_input_request_poll, request_poll)
+    KIFAndroidBridge.clear
+  end
+
   # Later Mods can alias extended methods and either mode accessor. Captured
   # Methods keep the bridge rooted in the originals rather than these aliases.
+  reset.call
   class << Input
     alias_method :later_triggerex, :triggerex?
     alias_method :later_text_input, :text_input

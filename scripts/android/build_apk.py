@@ -120,7 +120,7 @@ def output_name(runtime_only, with_network, emulator_compatible):
     if runtime_only:
         stem = "KIF-network-probe-arm64" if with_network else "KIF-runtime-probe-arm64"
         return stem + ("-emulator" if emulator_compatible else "") + "-test.apk"
-    stem = "KIF-0.20.7-android.5-arm64"
+    stem = "KIF-0.20.7-android.6-arm64"
     if emulator_compatible:
         stem += "-emulator"
     if with_network:
