@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "resolvedDate": "2026-10-20",
+  "runtimeCommit": "68653811c3c396f2d4c12225c52c407746285a3d",
+  "abi": "arm64-v8a",
+  "api": 30,
+  "ndkRevision": "25.2.9519653",
+  "dependencies": {
+    "libogg": {
+      "url": "https://github.com/xiph/ogg.git",
+      "ref": "v1.3.6",
+      "commit": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822"
+    },
+    "libvorbis": {
+      "url": "https://github.com/xiph/vorbis.git",
+      "ref": "v1.3.7",
+      "commit": "0657aee69dec8508a0011f47f3b69d7538e9d262"
+    },
+    "libpng": {
+      "url": "https://github.com/pnggroup/libpng.git",
+      "ref": "v1.6.50",
+      "commit": "2b978915d82377df13fcbb1fb56660195ded868a"
+    },
+    "physfs": {
+      "url": "https://github.com/icculus/physfs.git",
+      "ref": "release-3.2.0",
+      "commit": "eb3383b532c5f74bfeb42ec306ba2cf80eed988c"
+    },
+    "freetype": {
+      "url": "https://github.com/mkxp-z/freetype2.git",
+      "ref": "locked-runtime-candidate",
+      "commit": "4d8db130ea4342317581bab65fc96365ce806b77",
+      "nestedDependencies": [
+        {
+          "path": "subprojects/dlg",
+          "url": "https://github.com/nyorain/dlg.git",
+          "commit": "d142e646e263c89f93663e027c2f0d03739ab42d"
+        }
+      ]
+    },
+    "ruby": {
+      "version": "3.4.10",
+      "ref": "v3_4_10",
+      "commit": "2b0b7728dc7f0561c35c3d8c4489945c94b783ad",
+      "url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.10.tar.gz",
+      "sha256": "ecee2d072a14f2d14347dd56dfd8fe5c3130abf5117bfaacbda0f4ef9cc429ec",
+      "checksumSource": "https://www.ruby-lang.org/en/news/2026/06/30/ruby-3-4-10-released/",
+      "patchSha256": "f0d01a48c3135e8840aac242b766f485dde179d3db52340ef5efec4ee890639d",
+      "patchLfSha256": "8897ba591db7e158c216e94990f510243359d6a1528a1e12fd817e578bdacd0b",
+      "hostPatch": {
+        "path": "patches/ruby-3.4.10-mkmf-windows-cross.patch",
+        "sha256": "35bbbd7d8ba347bc4d6c9dc4887f8f5eba4c1bbc9ebe5caa679b9e8794e67877",
+        "sourceFile": "lib/mkmf.rb",
+        "beforeSha256": "e67c3ef2f1f1cafd596aba005625e7b6f75c756ffe1b6ba79b1fe10ce84ee55e",
+        "afterSha256": "21cb127b857296a49eae1d550d5e11ca2152496f3163009ddd73fae2eb75d11e",
+        "purpose": "Allow successful Android ELF link probes on a preserved Windows cross-build host; native and non-Windows executable checks stay unchanged."
+      }
+    },
+    "SDL2": {
+      "url": "https://github.com/mkxp-z/SDL.git",
+      "ref": "mkxp-z-2.28.1",
+      "commit": "d3ac4c3742a405e719071fc4f5a7ba8a125c76a1"
+    },
+    "openssl": {
+      "url": "https://github.com/openssl/openssl.git",
+      "ref": "openssl-3.0.12",
+      "commit": "c3cc0f1386b0544383a61244a4beeb762b67498f",
+      "purpose": "Reproduce the selected runtime baseline; not an approved current TLS provider."
+    }
+  },
+  "hostTools": {
+    "cmake": {
+      "version": "3.31.6",
+      "directory": "cmake-3.31.6-windows-x86_64",
+      "url": "https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-windows-x86_64.zip",
+      "sha256": "d163cd3ab4959b0a53fa8988f2ddbd2e6c501658201e6a154386bad9dbe4f836",
+      "checksumSource": "https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-SHA-256.txt"
+    },
+    "ninja": {
+      "version": "1.12.1",
+      "directory": "ninja-1.12.1",
+      "url": "https://github.com/ninja-build/ninja/releases/download/v1.12.1/ninja-win.zip",
+      "sha256": "f550fec705b6d6ff58f2db3c374c2277a37691678d6aba463adcbb129108467a",
+      "checksumSource": "Downloaded official GitHub release asset; locally recorded SHA256 (upstream asset has no digest)."
+    }
+  },
+  "hostPackages": [
+    {
+      "name": "perl",
+      "version": "5.42.3-2",
+      "url": "https://repo.msys2.org/msys/x86_64/perl-5.42.3-2-x86_64.pkg.tar.zst",
+      "sha256": "d89eaa2b8d661fd2040b54092d718f57aa1c066ea2d63735989ee47cfa7c9ef2",
+      "source": "https://packages.msys2.org/packages/perl?repo=msys&variant=x86_64"
+    }
+  ]
+}
