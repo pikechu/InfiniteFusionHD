@@ -2722,6 +2722,12 @@ class KurayOptSc_4 < PokemonOption_Scene
     #                   ["Some options stays per-save file",
     #                   "All options are applied globally"]
     # )
+    if defined?(KIF::Analytics) && KIF::Analytics.configured?
+      options << EnumOption.new(_INTL("Usage Statistics"), [_INTL("Off"), _INTL("On")],
+                                proc { KIF::Analytics.enabled? ? 1 : 0 },
+                                proc { |value| KIF::Analytics.enabled = (value == 1) },
+                                "Share a random install ID, game version and device type. Region is estimated from IP. No saves or player names.")
+    end
     options << EnumOption.new(_INTL("Debug Exclusive"), [_INTL("Off"), _INTL("On")],
                       proc { $PokemonSystem.debugfeature },
                       proc { |value| $PokemonSystem.debugfeature = value },
