@@ -1,10 +1,10 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('SDL2','libogg','libvorbis','libpng','physfs','freetype')][string]$Dependency = 'SDL2',
+    [ValidateSet('SDL2','libogg','libvorbis','libpng','physfs','freetype','openal','SDL2_ttf','SDL2_sound','SDL2_image','uchardet')][string]$Dependency = 'SDL2',
     [string]$NdkRoot,
     [string]$SourceDirectory,
     [string]$OutputDirectory,
-    [ValidateRange(1,16)][int]$Jobs = 4,
+    [ValidateRange(1,16)][int]$Jobs = 1,
     [switch]$Fetch
 )
 $ErrorActionPreference = 'Stop'
@@ -50,6 +50,10 @@ if (!(Test-Path -LiteralPath (Join-Path $source '.git'))) {
 }
 $head = (& git -C $source rev-parse HEAD).Trim()
 if ($LASTEXITCODE -ne 0 -or $head -ne $dependencyLock.commit) { throw "$Dependency source commit differs from lock." }
+foreach ($unused in $dependencyLock.unusedGitlinks) {
+    $gitlink = (& git -C $source ls-tree HEAD $unused.path) -join ''
+    if ($LASTEXITCODE -ne 0 -or $gitlink -notmatch ('^160000 commit ' + [regex]::Escape($unused.commit) + '\s')) { throw 'Unused codec gitlink differs from lock.' }
+}
 foreach ($nested in $dependencyLock.nestedDependencies) {
     $gitlink = (& git -C $source ls-tree HEAD $nested.path) -join ''
     if ($LASTEXITCODE -ne 0 -or $gitlink -notmatch ('^160000 commit ' + [regex]::Escape($nested.commit) + '\s')) { throw 'Nested dependency gitlink differs from lock.' }
@@ -111,10 +115,47 @@ switch ($Dependency) {
         foreach ($header in @('output.h','dlg.h')) { Copy-Item -LiteralPath (Join-Path $dlgSource "include/dlg/$header") -Destination (Join-Path $source "include/dlg/$header") }
         Get-ChildItem -LiteralPath (Join-Path $dlgSource 'src/dlg') -File | Copy-Item -Destination (Join-Path $source 'src/dlg')
     }
+    'openal' {
+        # Android's NDK supplies OpenSL ES. Oboe is a separate unprovided
+        # optional dependency, so require the former and disable the latter.
+        $arguments += @('-DLIBTYPE=SHARED','-DALSOFT_REQUIRE_OPENSL=ON','-DALSOFT_BACKEND_OBOE=OFF','-DALSOFT_EXAMPLES=OFF','-DALSOFT_UTILS=OFF','-DALSOFT_TESTS=OFF','-DALSOFT_INSTALL_CONFIG=OFF','-DALSOFT_INSTALL_HRTF_DATA=OFF','-DALSOFT_INSTALL_AMBDEC_PRESETS=OFF')
+        $libraryNames=@('libopenal.so')
+    }
+    'SDL2_ttf' {
+        foreach ($required in @('libSDL2.so','libfreetype.so')) {
+            if (!(Test-Path -LiteralPath (Join-Path $prefix "lib/$required"))) { throw "Build locked $required first in this prefix." }
+        }
+        # Its two external gitlinks are unused: use the checked common-prefix
+        # FreeType and explicitly disable optional HarfBuzz/vendoring.
+        $arguments += @('-DBUILD_SHARED_LIBS=ON','-DSDL2TTF_VENDORED=OFF','-DSDL2TTF_HARFBUZZ=OFF','-DSDL2TTF_SAMPLES=OFF',"-DFREETYPE_LIBRARY=$prefix/lib/libfreetype.so","-DFREETYPE_INCLUDE_DIR_freetype2=$prefix/include/freetype2","-DFREETYPE_INCLUDE_DIR_ft2build=$prefix/include/freetype2")
+        $libraryNames=@('libSDL2_ttf.so')
+    }
+    'SDL2_sound' {
+        foreach ($required in @('libSDL2.so','libogg.so','libvorbis.so')) {
+            if (!(Test-Path -LiteralPath (Join-Path $prefix "lib/$required"))) { throw "Build locked $required first in this prefix." }
+        }
+        $arguments += @('-DSDLSOUND_BUILD_SHARED=ON','-DSDLSOUND_BUILD_STATIC=OFF','-DSDLSOUND_BUILD_TEST=OFF','-DCMAKE_PLATFORM_NO_VERSIONED_SONAME=ON')
+        $libraryNames=@('libSDL2_sound.so')
+    }
+    'SDL2_image' {
+        if (!(Test-Path -LiteralPath (Join-Path $prefix 'lib/libSDL2.so'))) { throw 'Build locked SDL2 first in this prefix.' }
+        # This fork's default STB backend loads PNG/JPEG without external
+        # codecs. Its committed GIF/BMP/etc loaders remain enabled. Explicitly
+        # disable the optional formats whose external sources are not used.
+        $arguments += @('-DBUILD_SHARED_LIBS=ON','-DSDL2IMAGE_VENDORED=OFF','-DSDL2IMAGE_BACKEND_STB=ON','-DSDL2IMAGE_AVIF=OFF','-DSDL2IMAGE_JXL=OFF','-DSDL2IMAGE_TIF=OFF','-DSDL2IMAGE_WEBP=OFF','-DSDL2IMAGE_SAMPLES=OFF','-DSDL2IMAGE_TESTS=OFF')
+        $libraryNames=@('libSDL2_image.so')
+    }
+    'uchardet' {
+        $arguments += @('-DBUILD_SHARED_LIBS=ON','-DBUILD_STATIC=OFF','-DBUILD_BINARY=OFF')
+        $libraryNames=@('libuchardet.so')
+    }
 }
 Invoke-Checked $cmake $arguments (Join-Path $logs "$Dependency-configure.log")
 Invoke-Checked $cmake @('--build',$build,'--parallel',"$Jobs") (Join-Path $logs "$Dependency-build.log")
 Invoke-Checked $cmake @('--install',$build) (Join-Path $logs "$Dependency-install.log")
+if ($Dependency -eq 'openal') {
+    if ((Get-Content -LiteralPath (Join-Path $build 'config_backends.h') -Raw) -notmatch '(?m)^#define HAVE_OPENSL\s+1\s*$') { throw 'OpenAL lacks required OpenSL ES backend.' }
+}
 if ($Dependency -eq 'libpng') {
     # Upstream generates Android .pc files but suppresses their installation
     # solely because CMAKE_HOST_WIN32 is true. Install the generated metadata
@@ -128,6 +169,14 @@ if ($Dependency -eq 'libpng') {
     }
 }
 $readelf = Join-Path $NdkRoot 'toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-readelf.exe'
+$nm = Join-Path $NdkRoot 'toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-nm.exe'
+$requiredExports = @{
+    'libopenal.so'=@('alcOpenDevice','alcCreateContext','alGenSources','alBufferData')
+    'libSDL2_ttf.so'=@('TTF_Init','TTF_OpenFontRW','TTF_SizeUTF8','TTF_RenderUTF8_Blended')
+    'libSDL2_sound.so'=@('Sound_Init','Sound_NewSample','Sound_Decode','Sound_Seek')
+    'libSDL2_image.so'=@('IMG_Init','IMG_Load','IMG_Load_RW','IMG_SavePNG_RW')
+    'libuchardet.so'=@('uchardet_new','uchardet_handle_data','uchardet_data_end','uchardet_get_charset')
+}
 $artifacts = foreach ($libraryName in $libraryNames) {
     $library = Join-Path $prefix "lib/$libraryName"
     if (!(Test-Path -LiteralPath $library)) { throw "Expected $Dependency shared library is missing: $libraryName" }
@@ -138,6 +187,15 @@ $artifacts = foreach ($libraryName in $libraryNames) {
     $loads = @($elf | Where-Object { $_ -match '^\s+LOAD\s' })
     if (!$loads.Count -or @($loads | Where-Object { $_ -notmatch '0x4000\s*$' }).Count) { throw 'Expected 16 KiB PT_LOAD alignment on every segment.' }
     if (($elf -join "`n") -notmatch ('Library soname: \[' + [regex]::Escape($libraryName) + '\]')) { throw "Unexpected $Dependency SONAME." }
+    if (($elf -join "`n") -match '\((?:RPATH|RUNPATH)\)') { throw "$Dependency contains an unwanted ELF runtime search path." }
+    if ($requiredExports.ContainsKey($libraryName)) {
+        $symbols = & $nm --dynamic --defined-only $library
+        if ($LASTEXITCODE -ne 0) { throw "Cannot inspect $Dependency dynamic exports." }
+        $symbols | Set-Content -LiteralPath (Join-Path $logs "$Dependency-exports.txt")
+        foreach ($symbol in $requiredExports[$libraryName]) {
+            if (($symbols -join "`n") -notmatch ('(?m)\b' + [regex]::Escape($symbol) + '\s*$')) { throw "$Dependency lacks required dynamic export: $symbol" }
+        }
+    }
     @{path=$library;sha256=(Get-FileHash -LiteralPath $library -Algorithm SHA256).Hash.ToLowerInvariant()}
 }
 @{dependency=$Dependency;sourceCommit=$head;ndkRevision=$lock.ndkRevision;abi='arm64-v8a';api=30;started=$started.ToString('o');finished=(Get-Date).ToString('o');artifacts=@($artifacts);deviceValidated=$false} |

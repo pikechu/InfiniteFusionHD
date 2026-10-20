@@ -66,6 +66,52 @@
       "ref": "openssl-3.0.12",
       "commit": "c3cc0f1386b0544383a61244a4beeb762b67498f",
       "purpose": "Reproduce the selected runtime baseline; not an approved current TLS provider."
+    },
+    "openal": {
+      "url": "https://github.com/kcat/openal-soft.git",
+      "ref": "1.24.3",
+      "commit": "dc7d7054a5b4f3bec1dc23a42fd616a0847af948"
+    },
+    "SDL2_ttf": {
+      "url": "https://github.com/libsdl-org/SDL_ttf.git",
+      "ref": "release-2.20.2",
+      "commit": "89d1692fd8fe91a679bb943d377bfbd709b52c23"
+    },
+    "SDL2_sound": {
+      "url": "https://github.com/mkxp-z/SDL_sound.git",
+      "ref": "git",
+      "commit": "cfb2533eb3bac3700015cbd87cc623bea1467239"
+    },
+    "SDL2_image": {
+      "url": "https://github.com/mkxp-z/SDL_image.git",
+      "ref": "mkxp-z",
+      "commit": "d3c6d5963dbe438bcae0e2b6f3d7cfea23d02829",
+      "nestedLockStatus": "recorded;unused-by-STB-and-disabled-optional-codecs",
+      "unusedGitlinks": [
+        {"path":"external/dav1d","url":"https://github.com/libsdl-org/dav1d.git","commit":"52d0c1f44eff76c3773636a9805f69ec26633037"},
+        {"path":"external/jpeg","url":"https://github.com/libsdl-org/jpeg.git","commit":"bc27d050625f126dcba73ae5b731272de1a89dc1"},
+        {"path":"external/libavif","url":"https://github.com/libsdl-org/libavif.git","commit":"a3e9315474deb60e39b6e3aad88798eee26dadea"},
+        {"path":"external/libjxl","url":"https://github.com/libsdl-org/libjxl.git","commit":"d456eedef27d3587191f35f918c3ca2821c5a6c4"},
+        {"path":"external/libpng","url":"https://github.com/libsdl-org/libpng.git","commit":"999173059e2651fab2a0102eeba18748c4bd9827"},
+        {"path":"external/libtiff","url":"https://github.com/libsdl-org/libtiff.git","commit":"dad25b3f71cfd7f4fcb089a5881a31e65ae92c0a"},
+        {"path":"external/libwebp","url":"https://github.com/libsdl-org/libwebp.git","commit":"12cf7b315fb7a9df56fa6b8ee30e36312659d63c"},
+        {"path":"external/zlib","url":"https://github.com/libsdl-org/zlib.git","commit":"aeb146673f65fe6755d9aae05579c944d6572d20"}
+      ]
+    },
+    "uchardet": {
+      "url": "https://gitlab.freedesktop.org/uchardet/uchardet.git",
+      "ref": "v0.0.8",
+      "commit": "ae6302a016088ad07177f86d417b20010053632b"
+    },
+    "pixman": {
+      "url": "https://gitlab.freedesktop.org/pixman/pixman.git",
+      "ref": "pixman-0.42.2",
+      "commit": "37216a32839f59e8dcaa4c3951b3fcfc3f07852c"
+    },
+    "libtheora": {
+      "url": "https://github.com/xiph/theora.git",
+      "ref": "resolved-runtime-candidate-2026-10-16",
+      "commit": "28fd5ec77f0ad0e07a371cef1047828116f6bd8a"
     }
   },
   "hostTools": {
@@ -91,6 +137,36 @@
       "url": "https://repo.msys2.org/msys/x86_64/perl-5.42.3-2-x86_64.pkg.tar.zst",
       "sha256": "d89eaa2b8d661fd2040b54092d718f57aa1c066ea2d63735989ee47cfa7c9ef2",
       "source": "https://packages.msys2.org/packages/perl?repo=msys&variant=x86_64"
+    },
+    {
+      "name":"m4","version":"1.4.21-1",
+      "url":"https://repo.msys2.org/msys/x86_64/m4-1.4.21-1-x86_64.pkg.tar.zst",
+      "sha256":"b561e8871c7599502d9fae7196ee965b3fed3d7af09154eb8d2f5e4d9e5e5106",
+      "source":"https://packages.msys2.org/packages/m4"
+    },
+    {
+      "name":"autoconf2.72","version":"2.72-4",
+      "url":"https://repo.msys2.org/msys/x86_64/autoconf2.72-2.72-4-any.pkg.tar.zst",
+      "sha256":"65b3a37edf8bb4221d38db910ce1acc1ed879c7bcba33faa058066d06d35e7b0",
+      "source":"https://packages.msys2.org/packages/autoconf2.72?variant=x86_64"
+    },
+    {
+      "name":"automake1.18","version":"1.18.1-2",
+      "url":"https://repo.msys2.org/msys/x86_64/automake1.18-1.18.1-2-any.pkg.tar.zst",
+      "sha256":"6f6934ae6749771f627d0ca2170c87fb8c5c22658d8f2a8963154be8601d81ce",
+      "source":"https://packages.msys2.org/packages/automake1.18?variant=x86_64"
+    },
+    {
+      "name":"libtool","version":"2.6.2-1",
+      "url":"https://repo.msys2.org/msys/x86_64/libtool-2.6.2-1-x86_64.pkg.tar.zst",
+      "sha256":"ed51a0790d6cd59d24f2f76c826ed0e8d85f81bc1ac2807736400ea5e178fc5a",
+      "source":"https://packages.msys2.org/packages/libtool"
+    },
+    {
+      "name":"libltdl","version":"2.6.2-1",
+      "url":"https://repo.msys2.org/msys/x86_64/libltdl-2.6.2-1-x86_64.pkg.tar.zst",
+      "sha256":"bc17673d87573f997c2aad6680edb57a54a7ab837fd58a95dcd6030aac1f63e4",
+      "source":"https://packages.msys2.org/packages/libltdl?variant=x86_64"
     }
   ]
 }

@@ -113,7 +113,7 @@ if ($Stage -eq 'ResumeBuild') {
     $makefile = Get-Content -LiteralPath (Join-Path $OutputDirectory 'build/ruby/Makefile') -Raw
     $expectedPrefix = (Join-Path $OutputDirectory 'prefix/arm64-v8a').Replace('\','/')
     $expectedCompiler = ([IO.Path]::GetFullPath($NdkRoot)).Replace('\','/') + '/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-linux-android30'
-    foreach ($expected in @("prefix = $expectedPrefix","CC = $expectedCompiler",'--with-ext=openssl,socket,zlib,+','--with-static-linked-ext','--disable-yjit','--disable-rjit')) {
+    foreach ($expected in @("prefix = $expectedPrefix","CC = $expectedCompiler",'--with-ext=openssl,socket,zlib,+','--with-static-linked-ext','--disable-yjit','--disable-rjit','--disable-rpath')) {
         if (!$makefile.Contains($expected)) { throw "Existing Ruby configuration does not match the locked build: $expected" }
     }
 }
@@ -121,9 +121,35 @@ $snapshotDirectory = Join-Path $OutputDirectory 'scripts'
 [IO.Directory]::CreateDirectory($snapshotDirectory) | Out-Null
 $snapshot = Join-Path $snapshotDirectory ("ruby-" + [Guid]::NewGuid().ToString('N') + '.sh')
 [IO.File]::WriteAllText($snapshot,[IO.File]::ReadAllText($shell).Replace("`r`n","`n"),[Text.UTF8Encoding]::new($false))
-& $bash --noprofile --norc $snapshot.Replace('\','/') $source.Replace('\','/') ([IO.Path]::GetFullPath($NdkRoot)).Replace('\','/') $OutputDirectory.Replace('\','/') ([IO.Path]::GetFullPath($HostRuby)).Replace('\','/') $Stage $Jobs *>&1 | Tee-Object -FilePath (Join-Path $logs 'ruby-host.log')
+$linksContent = [IO.File]::ReadAllText((Join-Path $PSScriptRoot 'windows-native-ruby-host-links.rb')).Replace("`r`n","`n")
+$linksBytes = [Text.UTF8Encoding]::new($false).GetBytes($linksContent)
+$linksHash = -join ([Security.Cryptography.SHA256]::Create().ComputeHash($linksBytes) | ForEach-Object { $_.ToString('x2') })
+$linksSnapshot = Join-Path $snapshotDirectory ("ruby-host-links-" + $linksHash + '.rb')
+if (Test-Path -LiteralPath $linksSnapshot) {
+    if ((Get-FileHash -LiteralPath $linksSnapshot -Algorithm SHA256).Hash.ToLowerInvariant() -ne $linksHash) { throw 'Immutable host helper snapshot differs from its content hash.' }
+} else { [IO.File]::WriteAllBytes($linksSnapshot,$linksBytes) }
+# mkmf embeds the full host interpreter command in extension Makefiles. A
+# cached Makefile can otherwise keep loading an older immutable helper after
+# a host-only repair. Refresh only this task's generated helper path before
+# make starts; source files, compiler flags and the old snapshots stay intact.
+$generatedRoot = Join-Path $OutputDirectory 'build/ruby'
+$helperPattern = [regex]::new([regex]::Escape($OutputDirectory.Replace('\','/') + '/scripts/ruby-host-links-') + '[a-f0-9]{32,64}\.rb',[Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$refreshed = @()
+foreach ($generated in (Get-ChildItem -LiteralPath $generatedRoot -Filter 'Makefile' -Recurse -File)) {
+    if ($generated.Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'Unexpected reparse point in generated Ruby Makefiles.' }
+    $original = [IO.File]::ReadAllText($generated.FullName)
+    $replacement = $helperPattern.Replace($original,[Text.RegularExpressions.MatchEvaluator]{ param($match) $linksSnapshot.Replace('\','/') })
+    if ($original -ne $replacement) {
+        [IO.File]::WriteAllText($generated.FullName,$replacement,[Text.UTF8Encoding]::new($false))
+        $refreshed += $generated.FullName
+    }
+}
+@{helperSha256=$linksHash;helper=$linksSnapshot;refreshedMakefiles=$refreshed;sourceFilesModified=$false;refreshedAt=(Get-Date).ToString('o')} |
+    ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $logs 'ruby-host-helper-refresh.json') -Encoding utf8
+& $bash --noprofile --norc $snapshot.Replace('\','/') $source.Replace('\','/') ([IO.Path]::GetFullPath($NdkRoot)).Replace('\','/') $OutputDirectory.Replace('\','/') ([IO.Path]::GetFullPath($HostRuby)).Replace('\','/') $Stage $Jobs $linksSnapshot.Replace('\','/') *>&1 | Tee-Object -FilePath (Join-Path $logs 'ruby-host.log')
 if ($LASTEXITCODE -ne 0) { throw "Ruby $Stage failed; see $logs/ruby-configure.log and ruby-build.log." }
 if ($Stage -in @('Build','ResumeBuild')) {
+    & (Join-Path $PSScriptRoot 'windows-native-verify-ruby.ps1') -OutputDirectory $OutputDirectory -NdkRoot $NdkRoot
     $library = Join-Path $OutputDirectory 'prefix/arm64-v8a/lib/libruby.so'
     if (!(Test-Path -LiteralPath $library)) { throw 'Expected libruby.so artifact missing.' }
     $readelf = Join-Path $NdkRoot 'toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-readelf.exe'
@@ -141,7 +167,7 @@ if ($Stage -in @('Build','ResumeBuild')) {
     foreach ($symbol in @('ruby_init','Init_openssl','Init_socket','Init_zlib')) {
         if (($symbols -join "`n") -notmatch ('\b' + [regex]::Escape($symbol) + '\s*(?:\r?\n|$)')) { throw "Required Ruby symbol missing: $symbol" }
     }
-    @{dependency='ruby';version=$rubyLock.version;sourceArchiveSha256=$rubyLock.sha256;patchSha256=$rubyLock.patchSha256;hostPatchSha256=$hostPatchLock.sha256;mkmfSha256=$hostSourceHash;mandatoryExtensions=@('openssl','socket','zlib');ndkRevision=$lock.ndkRevision;abi='arm64-v8a';api=30;started=$started.ToString('o');finished=(Get-Date).ToString('o');artifact=$library;sha256=(Get-FileHash -LiteralPath $library -Algorithm SHA256).Hash.ToLowerInvariant();deviceValidated=$false} |
+    @{dependency='ruby';version=$rubyLock.version;sourceArchiveSha256=$rubyLock.sha256;patchSha256=$rubyLock.patchSha256;hostPatchSha256=$hostPatchLock.sha256;mkmfSha256=$hostSourceHash;hostLinksHelperSha256=(Get-FileHash -LiteralPath $linksSnapshot -Algorithm SHA256).Hash.ToLowerInvariant();mandatoryExtensions=@('openssl','socket','zlib');ndkRevision=$lock.ndkRevision;abi='arm64-v8a';api=30;started=$started.ToString('o');finished=(Get-Date).ToString('o');artifact=$library;sha256=(Get-FileHash -LiteralPath $library -Algorithm SHA256).Hash.ToLowerInvariant();deviceValidated=$false} |
       ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $OutputDirectory 'ruby-build-result.json') -Encoding utf8
 }
 Write-Host "Ruby $Stage completed; evidence: $OutputDirectory"

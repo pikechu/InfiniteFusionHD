@@ -2,7 +2,24 @@
 
 Status: **in progress**, 2026-10-20. This extends the actual libiconv result in
 [native-windows-build-feasibility.md](native-windows-build-feasibility.md).
-It does not change the working APK's libraries or operate any emulator.
+Current acceptance is:
+
+- **Compiled and inspected:** nineteen common-prefix dependency libraries plus Ruby
+  with actual embedded OpenSSL/socket/zlib archives and initializer registration.
+  The earlier libiconv proof is separate from this common prefix.
+- **Ruby cleanup passed:** formal `--disable-rpath` reconfiguration, single-job
+  build/install, mandatory-extension and ELF gates passed at 12:43:02 China time.
+  Final Ruby SHA-256 is `aa4a6a26739d453a3b29b49b579cfa7a708eef9ed04f133467072cf93ba9610a`.
+  The earlier output with host RUNPATH is retained as superseded history.
+- **Independent probe built and audited:** `org.kuray.kif.nativeprobe`, with the
+  pinned historical engine/SDL and only Ruby/OpenSSL source-built overrides.
+  Signed APK is 25,421,930 bytes, SHA-256
+  `da1ff4909f7fe7fb571809e8777fe0220d64fb645cf342f298a4bea729178775`.
+  It has **not been installed or run**. No Android execution result is claimed.
+- **Full mkxp core source rebuild:** not yet performed; remaining dependency
+  source preparation and host-tool integration are separate next steps.
+
+This work does not change the working game APK's libraries or operate an emulator.
 No WSL, system installation, global PATH change, proxy override or TLS bypass
 is used.
 
@@ -117,7 +134,7 @@ Actual SDL2 artifact:
 OpenSSL Configure, 1,793 object files, shared-library link and `install_dev`
 completed with exit code 0, from 09:47:41 to 10:18:15 (approximately 1,834.3 s).
 
-The common prefix now contains these **10 source-built libraries**. This is a
+The common prefix now contains these **20 source-built libraries**. This is a
 component milestone; the full engine has not been rebuilt or replaced in the APK.
 
 | Installed artifact | Bytes | SHA-256 |
@@ -132,6 +149,16 @@ component milestone; the full engine has not been rebuilt or replaced in the APK
 | `libpng16.so` | 1,020,568 | `d95435aee0de7f6c58ffd619984ccc789ae8e41265b6c75a98bc8ad448022f84` |
 | `libphysfs.so` | 754,712 | `8f2002e7b58ae23761768d312f3a9859f0484dcb568553622cacfd69ccf38318` |
 | `libfreetype.so` | 3,948,816 | `0b8e90ea534fb861edcbc9ba2ebb6655ad5303bb690cf3b2a36b586b6d5c94bf` |
+| `libruby.so` | 16,709,096 | `aa4a6a26739d453a3b29b49b579cfa7a708eef9ed04f133467072cf93ba9610a` |
+| `libopenal.so` | 15,684,528 | `92d27ebe6079bc5ab22ed59c8817c66dbbe2ba72c4a53c723fba690878c125ff` |
+| `libSDL2_ttf.so` | 291,824 | `514be022ac7612224f72a5c4323927a90444de54d7f86ed3fb4fc982503012cf` |
+| `libSDL2_sound.so` | 1,962,360 | `60cf008bdc91bf6b42858779761e78323d9010f3a986f76f622868f9d607e836` |
+| `libSDL2_image.so` | 872,432 | `9cbe397144abd6714037d1c20d5478535e727196e4c340dbab8e121c2339b75f` |
+| `libuchardet.so` | 479,800 | `0290c1c140a2293f5a68f5a1a7f8202b1dd502c91007fa28e3aee0b3e9ae8633` |
+| `libpixman-1.so` | 493,960 | `bef895aaa2094b17fb38a404a6b55fbd7f8eb9ac23b38669cd80c19a5b6ca488` |
+| `libtheora.so` | 200,472 | `a568ee5186bca9a29776699edba85e2b13fd09b66b8306455039d6a093d3e64d` |
+| `libtheoradec.so` | 66,832 | `52f7919ee88e9b306192d81cc66bcd3b47da3905df2cccd4481f900c523a0f2c` |
+| `libtheoraenc.so` | 174,784 | `ea6d4cecb1ca0a4535ff0a5465d56b52af604be764e64668a132052adef8bae8` |
 
 Ogg's first full invocation took 56.1 s. Vorbis's first 25-step build/install
 took 29.5 s; an artifact-manifest pipeline fix was then checked with a cached
@@ -180,14 +207,17 @@ sources as upstream autogen.sh, and uses native CMake instead of Autoconf.
 Its source may be reused with `-SourceDirectory` when it is inside task temp;
 the exact commit and clean working tree are still required.
 
-Ruby library build results remain pending.
-At the root agent's request, further make/Ninja starts are paused while the
-emulator GUI loop recovers; existing writes are allowed to finish naturally.
-OpenAL 1.24.3 source is fetched at
+Ruby's selected target build/install and complete mandatory-extension component
+gate passed at **2026-10-20 12:10:32 China time**, after the host repairs below.
+The final successful single-job invocation ran from 12:06:58 to 12:10:32
+(approximately 213.2 s), using cached objects from the earlier actual compilation.
+Other dependency make/Ninja starts were initially paused for the emulator GUI
+loop, then resumed at one job after authorization. OpenAL 1.24.3 source at
 `dc7d7054a5b4f3bec1dc23a42fd616a0847af948` under
-`temp/windows-native-openal/source`, with no gitlinks, but no OpenAL CMake or
-compilation has been started. Its next build must require OpenSL, disable the
-unprovided optional Oboe dependency, and verify backend config and al/alc exports.
+`temp/windows-native-openal/source` has no gitlinks. Its later 98-step CMake
+build/install completed from 12:43:39 to 12:47:08, with required OpenSL enabled,
+Oboe disabled, al/alc exports and ELF gates passed. SDL_ttf, SDL_sound, SDL_image,
+uchardet and Pixman subsequently passed their own actual builds and gates.
 The host has noticeable process-start and file/page-in delays: MSYS2 startup and
 OpenSSL's generated Makefile step take minutes here. Compiler thread snapshots
 showed `PageIn` waits with little CPU, so wall time is not a useful extrapolation
@@ -197,8 +227,8 @@ Logs and eventual ELF/hashes are under `temp/windows-native/logs`,
 `*-build-result.json` and `prefix/arm64-v8a`. These libraries will remain separate
 from the APK until the full set is linked and the runtime/game probes are rerun.
 
-Still required: Ruby library, remaining media/font/pixman dependencies,
-nested codec/submodule locks, native engine link, export/DT_NEEDED comparison,
+Still required: common-prefix libiconv,
+native engine link, export/DT_NEEDED comparison,
 and Android load/function/game regression. An OpenSSL compatibility-baseline
 build does not approve 3.0.12 for product TLS; Android's Java TLS bridge remains
 the chosen verified trust-provider route.
@@ -248,14 +278,14 @@ outside the source, and patch verification uses explicit `--git-dir` and
 The generated Makefile's `LIBRUBY_SONAME` is also set to `libruby.so`: Ruby appends
 its own SONAME flag after user `DLDFLAGS`, so the user flag alone is insufficient.
 
-The resumed actual make passed that revision step and linked a core
-`build/ruby/libruby.so.3.4.10`. It is **not an accepted complete Ruby artifact**:
+An earlier resumed make passed that revision step and linked only a core
+`build/ruby/libruby.so.3.4.10`. That intermediate library was not accepted:
 the necessary OpenSSL/socket/zlib `mkmf` link probes were rejected and their
-extension Makefiles are marked DUMMY. The logs contain native `D:/...`
+extension Makefiles were marked DUMMY. The logs contain native `D:/...`
 compiler/header/library paths, but no Clang diagnostic. Evidence:
 `build/ruby/ext/{openssl,socket,zlib}/mkmf.log`, `logs/ruby-build.log`.
 Mandatory-extension and final-symbol gates remain in place, so this incomplete
-core library cannot pass the script's final acceptance.
+core library could not pass the script's final acceptance.
 
 At 10:32:43 China time, the root agent authorized stopping only the three
 identified non-compiling Ruby/make waiters after the failed mandatory probes.
@@ -295,8 +325,157 @@ bytes on every invocation; altered sources/patches fail closed. `PrepareOnly`
 has actually passed twice against the real temporary source tree, including the
 already-applied case, with no MSYS/NDK/make process started.
 `ruby-source-preparation.json` records both independent patches and
-`compiled=false`. Ruby build now defaults to one job; target extension rebuild
-and Android runtime checks remain pending while the IO hold is active.
+`compiled=false`. Ruby build defaults to one job. The later target rebuild and
+component checks passed as described below; Android execution remains pending.
+
+## Ruby target completion and host installation repairs
+
+The fixed mkmf gate allowed actual NDK probes to complete. OpenSSL, socket and
+zlib all generated non-DUMMY Makefiles and real ARM64 archives. The next make
+failed linking an internal Ruby test module because `libruby.so` was absent:
+Ruby's Makefile hard-codes `File.symlink` for build aliases and ignores its
+permission failure, even though Configure had selected `LN_S=cp -pR` on this
+host. An initial existing versioned core alias is copied before make; subsequent
+build/install aliases use an opt-in host helper loaded by `MINIRUBYOPT`.
+
+`windows-native-ruby-host-links.rb` keeps ordinary symlinks when permitted.
+On Windows permission failure, its copy fallback accepts only regular files
+whose resolved source and destination parent are inside this task's explicit
+build output root. It refuses directories, escaped paths and replacement of
+existing files, and logs copies in `logs/ruby-host-link-copies.log`. It is loaded
+only by host build tools and is never part of game payloads. Immutable snapshots
+also prevent edits from affecting an active helper. The initial successful helper
+hash was `d08b84c4629900c6bb54be1bed4d26ad904d871fc6cfbacd16374b4436566d7b`.
+The later host error-preservation repair described below has final normalized
+snapshot hash `348ff47fdfe7c5b7e680f2a29185c0888886f50086f134ebbe594fe8f631a853`.
+
+The next installation attempt exposed RubyInstaller's Windows-specific
+`rubygems/defaults/operating_system.rb` on the host load path; it rejected the
+faked Android platform. The same opt-in helper isolates that host OS integration
+feature while leaving target RubyGems and rbinstall active. No system privilege
+or installed host file was changed. The initial **12 host assertions passed**, including
+copy permission fallback, root boundaries, existing-file preservation and this
+OS-feature isolation:
+
+```powershell
+& ./temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.exe `
+  --disable-gems ./android/tests/windows_native_host_links_test.rb
+```
+
+The successful build follows the original `--with-static-linked-ext` model:
+`openssl.a`, `socket.a` and `zlib.a` are embedded into the installed shared
+`libruby.so`; separate extension `.so` files are not required for these three.
+`windows-native-verify-ruby.ps1` actually checked:
+
+- Real, non-DUMMY extension Makefiles; 34/15/1 ARM64 ELF archive members for
+  OpenSSL/socket/zlib; their initializer definitions.
+- All three archives in `EXTOBJS`, names in `EXTINITS`, and `init(...)`
+  registration calls in `ext/extinit.c`.
+- Installed `libruby.so`: AArch64, SONAME `libruby.so`, four LOAD segments all
+  aligned to `0x4000`; full symbol table definitions of `ruby_init`, `Init_ext`,
+  `Init_openssl`, `Init_socket` and `Init_zlib`.
+- Dynamic dependencies include `libssl.so`, `libcrypto.so`, `libz.so`, `libdl.so`,
+  `libm.so` and Bionic `libc.so`. Ruby's `.pc` has a native host prefix and empty
+  `DLDFLAGS`, preserving the later engine's own SONAME.
+- Runtime compatibility/host patch hashes were rechecked before every retry;
+  final mkmf bytes still match the locked patched hash.
+
+Evidence: `ruby-build-result.json`, `ruby-module-validation.json`,
+`logs/ruby-complete.{elf,symbols}.txt`, each `ruby-*-archive.*` log, the actual
+make/install logs and archived failed attempts under `logs/previous`.
+The optional Psych extension was skipped because this dependency baseline has
+no `yaml.h`; no extra dependency was built to conceal that limitation.
+
+This is a successful selected Ruby component build, not whole-runtime or Android
+execution acceptance. `deviceValidated=false` and `targetExecuted=false` remain
+in the evidence. No game APK library was replaced and no AVD was operated. The
+first complete Ruby ELF recorded upstream's host-prefix RUNPATH. That output's
+hash and ELF/symbol evidence are retained under
+`temp/windows-native/history/ruby-with-host-runpath`; it is not an accepted APK
+override. Android library search/loading, including the three embedded module
+`require` calls and functions, still needs execution validation. The full engine
+and remaining dependencies are outstanding.
+
+### Remove host RUNPATH through Configure
+
+The pinned official Ruby source's `configure.ac:661` defines `enable_rpath` with
+`AC_ARG_ENABLE`, so `--disable-rpath` is a supported Configure option.
+`configure.ac:666` controls `RPATHFLAG`; lines 3702–3712 add
+`LIBRUBY_RPATHFLAGS` to shared/static link arguments only when the option is
+enabled. The Windows recipe now passes `--disable-rpath` at configuration time,
+and `ResumeBuild` refuses a Makefile without that exact option. This does not
+edit ELF bytes or substitute a different source version.
+
+An actual single-job `-Stage Build -Jobs 1` reconfiguration passed on
+2026-10-20. `windows-native-verify-ruby.ps1` rejects any `DT_RPATH` or
+`DT_RUNPATH` in the installed ELF and any `-rpath` in installed Ruby pkg-config
+metadata, as well as requiring the Configure option. Its existing ARM64,
+16 KiB alignment, SONAME and mandatory-module gates remain active. Final accepted
+`ResumeBuild -Jobs 1` ran from 12:39:09 to 12:43:02 (233.4 seconds after prior
+configuration/link work). Installed Ruby is 16,709,096 bytes, SHA-256
+`aa4a6a26739d453a3b29b49b579cfa7a708eef9ed04f133467072cf93ba9610a`.
+Both shared/static `.pc` arguments now have no rpath; all three mandatory
+archives retained their hashes and initializer registrations. The installed
+ELF passed the complete gates, with `runtimeSearchPath=none` and target/device
+execution still false in `ruby-module-validation.json`.
+
+The clean reconfiguration exposed one additional host-only bundled-gem issue:
+Android `fake.rb` makes FileUtils classify a native `D:/...` source argument as
+relative in `tool/ln_sr.rb`. After the expected Windows symlink denial, the host
+helper's `realpath` raised `EINVAL`, which blocked the tool's own `cp_r` fallback.
+The helper now preserves the original permission exception when path resolution
+fails with EINVAL/ENOENT/ENOTDIR; it still does not copy directories itself.
+**14 host assertions now pass**, including this actual malformed drive-path case
+and original-error identity. No target source or installed host interpreter was
+patched. The subsequent first Resume attempt was still using a cached old
+immutable helper path in generated extension Makefiles and failed again; this
+failure is retained as history, not reported as new-helper success.
+
+Helpers are now named by their normalized content SHA-256. Before make starts,
+the wrapper refreshes only the old helper path with this task's exact temporary
+prefix in generated `build/ruby/**/Makefile` files. It refuses file reparse points,
+does not alter source/compiler arguments or old helper snapshots, and records
+the refreshed files in `logs/ruby-host-helper-refresh.json`. The final successful
+make/install actually loaded the new helper and passed bundled-gem copies.
+
+### Independent component integration probe
+
+`scripts/android/build_native_probe.py` builds a separate minimal diagnostic
+application. Reproduction and exact three override hashes are in
+`android/native-probe/README.md`. Its actual signed output is
+`temp/native-probe/Native-Ruby-Probe-arm64-emulator-test.apk` (25,421,930 bytes),
+SHA-256 `da1ff4909f7fe7fb571809e8777fe0220d64fb645cf342f298a4bea729178775`.
+The adjacent build-record JSON records every library/payload hash and origin.
+
+Actual host checks passed: javac/Dex, apksigner v3 verification, final aapt2
+package/label/activity/permission audit, exact ZIP content/hashes for 22 native
+libraries and 29 payload files, and Ruby/SSL/crypto overrides with no missing
+consumer-import symbols (133/104/1044 imports respectively). Each override has
+the required ARM64 ABI, SONAME, all-LOAD `0x4000` and no RPATH/RUNPATH.
+Eleven manifest-isolation negative cases were also actually rejected by
+`android/native-probe/test_isolation.py` on the host.
+
+The package is `org.kuray.kif.nativeprobe`, visibly labelled `Native Ruby Probe`.
+It retains fully qualified `org.kuray.kif.*` Java classes for the pinned JNI
+contract, but has its own Android UID and private files. Its GameActivity is
+non-exported in a separate `:probe` process. Only VIBRATE permission is present;
+no network, shared UID, provider or external-storage permission is included.
+The tiny dedicated installer contains no game save-management code. Payload
+allowlists exclude game Data/Graphics/Audio/PBS and saves. The probe creates and
+then reads only its own freshly written private `probe.dat`.
+
+On later authorized launch the fixture will require OpenSSL/socket/zlib/Digest,
+exercise SHA-256, Addrinfo, Zlib and Marshal roundtrips, invoke the existing JNI
+input helper, render bundled-font pixels and run 120 frames. It writes a private
+JSON result, first clearing any old PASS to `native_start_pending` before native
+library loading. **These are implemented probe steps, not Android execution
+results yet.** No AVD install/start/stop occurred in this build task.
+
+Only Ruby and OpenSSL are source-built overrides in this APK; the engine/SDL and
+other libraries remain pinned historical prebuilts. The explicit emulator build
+also applies the already-documented 16-byte translation workaround, with original
+and changed engine hashes recorded. This APK does not establish full-engine
+source-build success or whole-APK 16 KiB-device support.
 
 Host regression command (no NDK, make, Ninja, emulator or target execution):
 
@@ -320,8 +499,9 @@ unchanged. Latest evidence: `temp/host-checks/windows-native-mkmf/latest.json`;
 both state-specific runs are retained in its timestamped sibling directories.
 On this managed host, the host Ruby/Git test needs scoped tool execution because
 default-sandbox Open3 pipe creation returns `EACCES`; no system setting changes
-are needed. This establishes the host gate regression, while actual ARM64
-extension compilation and Android module loading remain pending.
+are needed. This establishes the host gate regression. Actual ARM64 extension
+compilation has since passed the separate component checks above; Android
+module loading remains pending.
 
 A portable fallback host interpreter was found in official MSYS2 metadata:
 `ruby-3.4.10-1-x86_64.pkg.tar.zst`, SHA-256
@@ -331,6 +511,114 @@ process/path boundary. This is **research only**, neither downloaded nor tested.
 Its missing host dependencies `libgdbm` and `libyaml` would also need fixed
 official package hashes; the remaining listed dependencies are in the portable
 MSYS2 base. Do not conflate this host interpreter with the target ARM64 Ruby.
+
+## Next native dependencies and engine route
+
+`windows-native-sources.ps1` is an executable preparation stage, independent of
+compilation. On 2026-10-20 it actually fetched/verified SDL_ttf, SDL_sound,
+SDL_image, uchardet, Pixman and Theora at the exact commits in
+`windows-native-lock.json`; OpenAL reused its already-verified dedicated source
+checkout. Each `<dependency>-source-preparation.json` records the exact commit,
+all gitlinks and `.gitmodules`, with `compiled=false`. It refuses a modified
+checkout, an unexpected commit, and a pre-existing source directory without its
+own Git metadata. No recursive floating submodule download is performed.
+
+```powershell
+& ./scripts/android/windows-native-sources.ps1 -Dependency SDL2_image -Fetch
+& ./scripts/android/windows-native-sources.ps1 -Dependency openal `
+  -SourceDirectory ./temp/windows-native-openal/source
+# Once the Ruby/probe build has finished, keep actual compiles at one job:
+& ./scripts/android/windows-native-cmake.ps1 -Dependency openal `
+  -SourceDirectory ./temp/windows-native-openal/source -Jobs 1
+& ./scripts/android/windows-native-cmake.ps1 -Dependency SDL2_ttf -Jobs 1
+& ./scripts/android/windows-native-cmake.ps1 -Dependency SDL2_sound -Jobs 1
+& ./scripts/android/windows-native-cmake.ps1 -Dependency SDL2_image -Jobs 1
+& ./scripts/android/windows-native-cmake.ps1 -Dependency uchardet -Jobs 1
+& ./scripts/android/windows-native-pixman.ps1 -Jobs 1
+& ./scripts/android/windows-native-autotools.ps1 -Fetch
+& ./scripts/android/windows-native-theora.ps1 -Stage Prepare
+& ./scripts/android/windows-native-theora.ps1 -Stage Build -Jobs 1
+```
+
+The common CMake script's five new recipes have all actually passed. They check
+ARM64, SONAME, all LOAD alignment, absence of runtime search paths and
+necessary exported interfaces. OpenAL requires its OpenSL ES backend and disables
+unprovided Oboe. SDL_ttf uses the common-prefix FreeType, with vendoring and
+HarfBuzz disabled; its two unused external gitlinks remain recorded in evidence.
+SDL_sound explicitly retains Android's no-versioned-SONAME setting. SDL_image
+uses its committed STB PNG/JPEG backend and committed GIF/BMP/etc loaders; optional
+AVIF/JXL/TIFF/WebP codecs are disabled. Its eight unused codec gitlink revisions
+are locked and checked, without downloading or building unused codec projects.
+This matches the fork's default enabled format choices; functionality still
+needs runtime tests.
+
+Pixman 0.42.2 passed an actual 31-step Meson/Ninja build/install in 26.7 seconds.
+`windows-native-pixman.ps1` reuses the fixed portable Meson/pkgconf bootstrap,
+explicit native Windows Clang argv and a generated Android cross definition.
+Its fixed recipe disables ARM/NEON assembler backends and tests/demos, sets
+`needs_exe_wrapper=true` and `--wrap-mode=nodownload`, and verifies four exports,
+ARM64/SONAME/all-LOAD `0x4000`/no runtime search path. Only its selected target
+library was built; no Android code or Pixman tests were executed on Windows.
+The selected Theora Git source has only `configure.ac`/`autogen.sh`, not a
+generated Configure or CMake project; its `autogen.sh` calls `autoreconf -isf`.
+The initially missing Autoconf, Automake, libtool and m4 are now provided by
+`windows-native-autotools.ps1`. Five official MSYS2 package archives have fixed
+published hashes in the lock and were actually downloaded/verified/extracted
+under portable MSYS2; no pacman, install hooks or system package installation was
+used. Existing base GCC/iconv runtime DLLs and Perl satisfy their host needs.
+Actual `--version` checks passed for m4 1.4.21, Autoconf/autoreconf 2.72,
+Automake 1.18.1 and libtoolize 2.6.2. Wrapper packages requiring many unused tool
+versions were avoided by explicit versioned environment commands.
+
+`windows-native-theora.ps1 -Stage Prepare` has actually passed the official
+`autoreconf -isf` flow in a dedicated export, preserving the clean original Git
+checkout. Every original exported file has a retained SHA-256 and is checked
+before reuse. An initial failure was diagnosed as 711 CRLF lines in exported
+`configure.ac`, while the committed blob had zero CRLF lines: Git archive was
+applying this host's checkout line-ending policy. The export now uses the scoped
+`git -c core.autocrlf=false archive` option, leaving global Git settings intact.
+The failed export/log/manifest are retained under
+`history/theora-crlf-export-failure`; the successful LF export archive hash is
+`877a1d6307abea54295959252f48fd39fb44d8f096212720bc46f0ef0692d7e5`.
+Theora's actual single-job target configuration, compilation and install all
+completed successfully. The first post-build gate incorrectly rejected valid
+GNU versioned exports such as `th_decode_alloc@@libtheoradec_1.0`; its exact-name
+check now accepts a conventional GNU symbol version suffix and retains the
+full dynamic-symbol evidence. A cached `ResumeBuild -Jobs 1` passed the full
+recipe and all three library gates at 12:56:43, taking 9.0 seconds after the
+earlier actual compilation. The earlier compile/install logs are retained in
+`logs/previous/libtheora-20261020-125634-210`; the final result is
+`libtheora-ResumeBuild-result.json`. All three libraries have ARM64/API-30,
+plain `.so` SONAMEs, all LOAD `0x4000`, no runtime search paths and their required
+legacy decode/modern decode/modern encode exports. No `make check` or target
+executable was run. Exported-source verification does not modify the clean Git
+checkout; generated Autotools files stay in the separate temporary export.
+
+The Pixman runner now consistently uses Python `-B` and a process-only
+`PYTHONDONTWRITEBYTECODE=1`, restoring the caller's value afterward, so Ninja's
+Meson helpers also leave the fixed portable Meson source cache intact. The
+initial successful run's ordinary Python bytecode files were isolated by the
+root tool-bootstrap guard; these files were not unexplained source changes.
+The root agent is separately rebuilding fixed GNU libiconv into the common API-30
+prefix while preserving its earlier API-21 proof.
+
+The engine is a **Meson shared-library project**, not a CMake project. Its
+`src/meson.build` resolves these native dependencies; `binding/meson.build` uses
+`ruby-3.4.pc`. The historical Android cross file uses extensionless NDK shell
+wrappers. For native Windows Python/Meson, the reproducible cross file should
+use explicit `clang.exe`/`clang++.exe` argv with Android API-30 targets, native
+Windows pkg-config and only the selected prefix's `.pc` files. Generated asset
+headers invoke `xxd-include.sh` plus xxd/sed; this is a concrete host shell-tool
+boundary, separate from target C/C++ compilation. Meson itself supports Windows
+and explicit cross definitions; this boundary is not proof that WSL is required.
+
+The engine's source export at `temp/runtime-research/warmwinter-release` is safe
+for reference, but a core build should use its own exact detached runtime Git
+checkout. Top-level Meson runs `git rev-parse --short HEAD`; an export nested in
+the KIF checkout could otherwise accidentally embed the outer repository's hash.
+The root agent owns the separate [core/tool-bootstrap preparation](windows-native-core.md), while this
+pipeline owns Ruby and dependency compilation. Full core link, DT_NEEDED/export
+closure, Android loading and game regression remain explicit later gates.
 
 Primary references:
 
@@ -342,3 +630,6 @@ Primary references:
 - [Ninja 1.12.1 release](https://github.com/ninja-build/ninja/releases/tag/v1.12.1)
 - [Official MSYS2 Ruby package](https://packages.msys2.org/packages/ruby?variant=x86_64)
 - [Ruby cross-extension configuration discussion](https://bugs.ruby-lang.org/issues/20345)
+- [Meson cross definitions](https://mesonbuild.com/Cross-compilation.html)
+- [Meson Windows installation and portable entry points](https://mesonbuild.com/Getting-meson.html)
+- [Native Windows pkgconf portable package](https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-pkgconf)

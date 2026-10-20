@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.kuray.kif.nativeprobe" android:versionCode="1" android:versionName="native-ruby-probe.1">
+    <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="35" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application android:label="Native Ruby Probe" android:theme="@android:style/Theme.Material.NoActionBar" android:debuggable="true" android:allowBackup="false" android:extractNativeLibs="true" android:usesCleartextTraffic="false">
+        <!-- FQCNs intentionally preserve the pinned engine/JNI contract independently of applicationId. -->
+        <activity android:name="org.kuray.kif.NativeProbeLauncherActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="sensorLandscape" android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <activity android:name="org.kuray.kif.GameActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="sensorLandscape" android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|density|keyboard|keyboardHidden|navigation" android:process=":probe" />
+    </application>
+</manifest>
