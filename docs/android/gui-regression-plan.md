@@ -1,6 +1,6 @@
 # Android.2 GUI 回归准备
 
-计划建立于 2026-10-20；此文件是待执行路线，不是通过报告。版本目标为 `0.20.7-android.2` / code 2；APK SHA、实际安装版本与步骤时间在设备交接后记录。当前不得操作 emulator-5554，先由主任务完成字体 A/B 探针。
+计划建立于2026-10-20；此文件是路线，不是通过报告。Android.2/code2的字体与普通闭环已实际执行，见[报告](gui-regression-report.md)。后续F/E/SAF升级到Android.3/code3执行；模拟器由GUI回归代理独占，其他任务不得同时操作。
 
 ## 存档隔离
 
@@ -33,7 +33,7 @@
 - G/E/F 各有独立 card/名字/位置，正常标题切槽逐个读回；H 仅核基线不变。G 用“Name the next backup”给一次备份命名，普通保存生成后记录新文件哈希。
 - Launcher 的 **SAVES / EXIT** → 确认 **Close game** 后，必须确认 `:game` PID 消失。菜单实际按钮为 **Start game**、**Export saves to ZIP**、**Import saves from ZIP**、**Verify / repair bundled assets**。
 - 点击 Export，经系统 SAF 选择 AVD Downloads 中唯一新 ZIP 名；读取 ZIP 条目/哈希与 app 私有目录对照。转移只处理文件字节，不执行 Marshal。
-- 原封不动导入刚导出的 ZIP 应被冲突保护拒绝，所有既有文件哈希不变。另制作只包含专用空槽 **File D.rxdata** 的 ZIP（来自 E 的已保存备份字节，记录来源与哈希），经 SAF 导入；正常标题读 D 后立即用“Save to another file”改存 D，不让其内部旧槽号导致写 E。不得导入同名 H。
+- 原封不动导入刚导出的ZIP应被冲突保护拒绝，所有既有文件哈希不变。另制作只包含专用空槽 **File D.rxdata** 的ZIP（来自E的已保存备份字节，记录来源与哈希），经SAF导入。Android.3已在加载前自动绑定实际手动槽；正常标题读D后须用普通Save确认显示D并实际保存，核两份Player均为D、E及其他槽字节未变，不能用立即“Save to another file”绕过这项验证。不得导入同名H。
 - 备份恢复用 E 的明确命名备份，通过 SAF 导入到空 D；测试恢复的物种/闪光状态与旧备份一致，并与之后修改的 E 区分。只验证已执行的恢复路径，不假称自动损坏检测/断电恢复都通过。
 - 测取消 SAF、无支持存档 ZIP、同名冲突和危险路径 ZIP时先备份 AVD 测试目录，确认报错后私有哈希不变。构造的 ZIP 都存 worktree temp，不触及主工作区存档。
 

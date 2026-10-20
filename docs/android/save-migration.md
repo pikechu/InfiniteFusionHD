@@ -2,7 +2,7 @@
 
 The standalone application stores saves in its private `files/saves` directory. Windows files are copied into Android; their Windows originals are never modified. The transfer implementation copies bytes and checks ZIP integrity/path limits. It does not deserialize Ruby Marshal objects or establish that a particular game save is compatible. Import saves from a source you trust; actual Windows-to-Android load and continued play remain runtime acceptance tests.
 
-Close the game before importing or exporting. The launcher uses Android's Storage Access Framework to choose the source/destination ZIP. Import a ZIP whose top level contains saves such as `Game.rxdata`, `File A.rxdata`, `Auto 1.rxdata`, `Backup000.rxdata` and named `.rxdata` backups. Relative backup subdirectories are supported. `.rxdata.bak` and root `keybindings.mkxp1` are also supported. Export includes these save/backup/keybinding files and skips runtime diagnostic/probe files. This first version excludes JSON settings and other file formats from export and rejects them during import.
+Close the game before importing or exporting. The launcher uses Android's Storage Access Framework to choose the source/destination ZIP. Import a ZIP whose top level contains saves such as `Game.rxdata`, `File A.rxdata`, `Auto 1.rxdata`, `Backup000.rxdata` and named `.rxdata` backups. Relative backup subdirectories are supported. `.rxdata.bak` and root `keybindings.mkxp1` are also supported. Export filters by the production `SaveTransfer.supported` filename rules, not by deserializing contents: a `.dat` diagnostic is excluded, while a supported `.rxdata` probe can be included. Android.6 actually exported `android-integration-probe.rxdata`. JSON settings and other unsupported formats are excluded and rejected during import.
 
 An existing path is never overwritten, including case-only variants. If any imported file conflicts, the entire import stops before activation. Rename the conflicting file inside the ZIP or export a backup and make an explicit save-management decision. Renaming a Windows slot file does not automatically make it an Android menu slot: the game recognizes `File A` through `File H`, `Auto 1`/`Auto 2`, and its legacy `Game` migration. To restore a named backup, copy it to an unused recognized slot name before preparing the import ZIP; keep the original backup.
 
@@ -13,8 +13,12 @@ for subsequent manual saves, rather than the E name embedded in its original
 Marshal data. The imported file's bytes are unchanged until the game saves.
 Loading an `Auto 1`/`Auto 2` file retains its original manual destination; Windows
 load behavior is preserved. A real-Marshal/filesystem regression passes 35
-assertions; renamed-import and backup-recovery GUI checks remain pending until
-recorded in the Android.3 device report.
+assertions. Android.6 actually imported the trusted early E1 backup as the unused
+File D through the system picker, loaded it normally and used ordinary Save to
+File D. Both saved Player objects name D, and the later E file plus all older
+files remained unchanged. Conflict, picker cancellation, traversal and unsupported
+ZIP checks also preserved every file. See the [Android.6 device report](android6-device-report.md).
+These are task-owned Android QA saves; actual Windows-player migration remains untested.
 
 Limits are 4,096 files, 8,192 entries, 64 MiB per file, 512 MiB total expanded bytes, 256 MiB compressed input, 16 path segments and a 1,000:1 maximum compression ratio for files larger than 1 MiB. Absolute paths, backslashes, drive/stream colons, `.`/`..`, empty segments, control characters, duplicate/case-colliding names and symbolic links in the private save tree are rejected. At least the merged save size plus 16 MiB must be free when activation is prepared.
 
