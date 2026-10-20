@@ -13,7 +13,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("action", choices=["capture", "launch", "runtime-smoke", "game-smoke", "network-smoke", "stop", "install"])
     parser.add_argument("--serial")
-    parser.add_argument("--apk", type=Path, default=ROOT / "temp/artifacts/KIF-0.20.7-android.1-arm64-test.apk")
+    parser.add_argument("--apk", type=Path, default=ROOT / "temp/artifacts/KIF-0.20.7-android.2-arm64-test.apk")
     parser.add_argument("--label", default="device")
     args = parser.parse_args()
     adb = [str(ROOT / "temp/tools/android-sdk/platform-tools/adb.exe")]
@@ -26,7 +26,7 @@ def main():
             result.check_returncode()
         return result.stdout if binary else result.stdout.decode("utf-8", errors="replace")
     if args.action == "install":
-        print(command("install", "-r", str(args.apk))); return
+        print(command("install", "--no-incremental", "-r", str(args.apk))); return
     if args.action == "stop":
         print(command("shell", "am", "force-stop", APP)); return
     if args.action != "capture":

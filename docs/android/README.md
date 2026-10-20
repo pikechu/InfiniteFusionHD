@@ -4,7 +4,7 @@
 
 ## 架构
 
-独立应用 `org.kuray.kif`，测试名称 `KIF Android Test`，版本 `0.20.7-android.1`。当前实验范围为 Android 11/API 30 以上、ARM64、4 KB 内存页；compile/target API 35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布。
+独立应用 `org.kuray.kif`，测试名称 `KIF Android Test`，当前开发版本 `0.20.7-android.2`（versionCode 2）。当前实验范围为 Android 11/API 30 以上、ARM64、4 KB 内存页；compile/target API 35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布。
 
 - 原生 RGSS：固定 warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。当前使用固定 SHA256 的上游预编译原生库；**原生源码重建尚未验证**。确切 Ruby 版本见运行时证据；二进制版本串为 3.4.10。见 [运行时调查](runtime-research.md) 和 `android/runtime.lock.json`。
 - Android 壳：Java + SDL bootstrap，512×384、40 FPS 配置、横屏等比缩放。方向键和 C/X/Z/A/S/D/Q/W 虚拟键，侧边按键避免遮挡游戏；Android 返回映射 X。保留原 UI。默认用光标界面输入名字，软键盘入口需实机验证。
@@ -36,7 +36,7 @@ NDK 只用于构建必要的小型输入/可选 HTTPS 扩展，尚未用于完�
 
 离线重建已有输入：`bootstrap-tools.ps1 -SkipDownload`、`prepare-runtime.ps1 -Offline`。更改游戏代码或 preload 后必须重打 payload；仅修改 Java 时可用 `build_apk.py --skip-payload`，运行前需核实 staged 游戏源码与当前代码匹配。
 
-输出：`temp/artifacts/KIF-0.20.7-android.1-arm64-test.apk`、SHA256 文件、构建记录。开发签名只在 `temp/android-signing`；不能用于正式发行。不得提交密钥。重新生成测试密钥后，已有安装不能原地升级，需先导出存档。
+输出：`temp/artifacts/KIF-0.20.7-android.2-arm64-test.apk`、SHA256 文件、构建记录。启用网络时文件名增加 `-network`。开发签名只在 `temp/android-signing`；不能用于正式发行。不得提交密钥。重新生成测试密钥后，已有安装不能原地升级，需先导出存档。
 
 Android 11 x86_64 AVD 的旧版 ARM 翻译器不能执行上游库中两处合法的 AArch64
 标量转换指令。需要该特定兼容路径时，先生成独立、严格哈希固定的库，再显式选择模拟器变体：
@@ -48,8 +48,8 @@ Android 11 x86_64 AVD 的旧版 ARM 翻译器不能执行上游库中两处合�
 & '<Python>' scripts/android/build_apk.py --emulator-compatible --with-network
 ```
 
-对应输出为 `KIF-0.20.7-android.1-arm64-emulator-test.apk` 和
-`KIF-0.20.7-android.1-arm64-emulator-network-test.apk`；其构建目录与普通包分开，
+对应输出为 `KIF-0.20.7-android.2-arm64-emulator-test.apk` 和
+`KIF-0.20.7-android.2-arm64-emulator-network-test.apk`；其构建目录与普通包分开，
 不会覆盖普通手机 APK 或共享的原版原生库。首次生成某一变体必须先打完整 payload，
 之后才能对该变体使用 `--skip-payload` 或 `--refresh-ruby`。
 库或 provenance 缺失、输入/输出 SHA256 不符时立即失败，不回退为普通包。
@@ -79,7 +79,7 @@ $ruby = (Resolve-Path 'temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.
 & $ruby --disable-gems android/tests/download_write_test.rb
 ```
 
-本轮分别通过 38、11、52、38 项断言，共 139 项。网络桥使用 mock，本地落盘使用临时真实文件及断写/fsync/rename 故障注入，不连接网络或读取玩家存档。Windows 分支保留原 HTTP 参数透传、直接 `File.open(..., "wb")` 行为，且不安装 Bitmap hook；这些已有契约覆盖，真实 Windows 游戏回归仍需执行。见 [测试策略](platform-test-strategy.md)。
+`run_host_checks.ps1` 还执行输入桥、桌面按键配置、独立启动说明和标题丢键回归，随后编译 Ruby 脚本并执行真实本地存档 ZIP/文件事务测试。主机测试不构成设备游玩验收。网络桥的主机测试使用 mock；落盘使用临时真实文件及断写/fsync/rename 故障注入。Windows 分支保留原 HTTP 参数透传和直接写文件行为，且不安装 Bitmap hook；真实 Windows 游戏回归仍需执行。见 [测试策略](platform-test-strategy.md)。
 
 ## 当前里程碑与后续门槛
 
@@ -87,11 +87,11 @@ $ruby = (Resolve-Path 'temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.
 | --- | --- |
 | 环境和静态核实 | 已完成仓库检查、分支、依赖固定、官方源码接口核实；见各报告 |
 | 最小工程和平台适配 | 已实现；平台契约 38 项通过，Ruby 语法检查通过；不等于 Android 运行通过 |
-| 独立 APK | 已成功编译、打包和验证测试签名；设备安装与启动待记录 |
-| 首个运行闭环 | 待实际执行：启动、新开档、移动、战斗捕捉、融合拆分、闪光、仓库、保存、杀进程读档 |
+| 独立 APK | Android.1 已成功构建、模拟器安装和正常游戏启动；Android.2 修复回归进行中 |
+| 首个运行闭环 | Android.1 正常 GUI 已完成新档、移动、训练家/野外战斗、捕捉、普通融合/拆分、仓库存取、正式槽保存、杀进程重启读档；[GUI 报告](gui-playtest-report.md)。闪光 GUI 与更广测试未完成 |
 | 产品适配 | 安全下载、存档 SAF、中断恢复、输入、安全区与生命周期需按实际测试完善 |
-| 性能 | 待记录设备、帧率、PSS、首次安装/启动/配色耗时；模拟器数据不能代表真机性能 |
+| 性能 | 已记录模拟器 FPS、PSS、安装/配色耗时，见 GUI/集成报告；尚未测大量闪光仓库、峰值/长期增长，不能代表真机性能 |
 | 源码发布构建 | 原生依赖及二级依赖锁、POSIX 构建环境、16 KB 页重建、签名和干净重建是后续门槛 |
 | 发布 | 用户确认先本地测试包；没有上传任何测试渠道或公开商店 |
 
-工期重新估算必须等首次 Android 启动和核心路径验证后进行。目前给出带前提的工程预算，而不是承诺：运行闭环及兼容修复约 3–10 工程日；安全网络/存储/生命周期和输入完善约 5–15 日；真机矩阵、性能和发布加固约 5–10 日。合计约 13–35 工程日，若 GLES/地图渲染或 Ruby 数据存在深层不兼容会超出该范围。首次闭环失败时先按具体日志修复或切换已调查备用运行时，随后重估。
+当前优先修复标题确认与字形裁切、验证 Android.2 核心闭环、补闪光与存档覆盖；Windows portable 原生构建并行推进。首次 GUI 闭环已证明主线架构可用，但不能按“成功打包”推算发布日期。后续工期将以修复回归、完整源码构建和设备矩阵的实际结果再估算。体积构成与无损优化的真实实验见 [APK 体积](apk-size.md)。

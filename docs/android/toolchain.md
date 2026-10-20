@@ -48,6 +48,7 @@ $env:JAVA_HOME = $toolEnv.JAVA_HOME
 $env:ANDROID_HOME = $toolEnv.ANDROID_HOME
 $env:ANDROID_SDK_ROOT = $toolEnv.ANDROID_SDK_ROOT
 $env:ANDROID_USER_HOME = $toolEnv.ANDROID_USER_HOME
+$env:ANDROID_EMULATOR_HOME = $toolEnv.ANDROID_USER_HOME
 $env:ANDROID_AVD_HOME = $toolEnv.ANDROID_AVD_HOME
 $env:GRADLE_USER_HOME = $toolEnv.GRADLE_USER_HOME
 & "$env:JAVA_HOME/bin/java.exe" -version
@@ -69,6 +70,14 @@ workspace sandbox because this directory did not exist. A scoped execution of
 started the daemon at localhost:5037; subsequent sandboxed `adb version` worked.
 This is tool configuration, not a game save or build output. No device was
 connected during the initial inventory.
+
+Set `ANDROID_EMULATOR_HOME` as well as `ANDROID_USER_HOME` for emulator launches.
+The installed emulator's `-help-environment` confirms that it replaces the
+default `.android` configuration path. During the Android.2 rerun, omitting it
+caused repeated permission errors opening the profile's feature-flags lock;
+the project-local setting avoids those writes. This does not redirect the
+existing adb daemon's authentication configuration. Cold restarts preserve
+the AVD userdata; do not use `-wipe-data` for upgrade or save tests.
 
 ## Host and emulator verification
 

@@ -60,6 +60,7 @@ $environment = [ordered]@{
     ANDROID_HOME = $sdk
     ANDROID_SDK_ROOT = $sdk
     ANDROID_USER_HOME = Join-Path $temporary 'android-user'
+    ANDROID_EMULATOR_HOME = Join-Path $temporary 'android-user'
     ANDROID_AVD_HOME = Join-Path $temporary 'android-avd'
     GRADLE_USER_HOME = Join-Path $temporary 'gradle-user'
 }

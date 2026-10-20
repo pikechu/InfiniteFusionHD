@@ -48,7 +48,8 @@ public final class GameActivity extends SDLActivity {
         try {
             Os.setenv("KIF_SAVE_DIR", new File(getFilesDir(), "saves").getAbsolutePath(), true);
             Os.setenv("KIF_ANDROID_FILES", getFilesDir().getAbsolutePath(), true);
-            if (getIntent().getBooleanExtra("networkSmoke", false)) writeConfig("android-network-smoke.rb");
+            if (getIntent().getBooleanExtra("fontSmoke", false)) writeConfig("android-font-smoke.rb");
+            else if (getIntent().getBooleanExtra("networkSmoke", false)) writeConfig("android-network-smoke.rb");
             else if (getIntent().getBooleanExtra("runtimeSmoke", false)) {
                 // Config is a per-content copy and is restored at every normal launch.
                 writeConfig("android-runtime-smoke.rb");
@@ -69,6 +70,11 @@ public final class GameActivity extends SDLActivity {
         String config = AssetInstaller.read(getAssets().open("mkxp-base.json"));
         org.json.JSONObject json = new org.json.JSONObject(config);
         if (script != null) json.put("customScript", script);
+        if ("android-font-smoke.rb".equals(script)) {
+            int mode = getIntent().getIntExtra("fontMetricsMode", 1);
+            if (mode != 0 && mode != 1) throw new IllegalArgumentException("Invalid font probe metrics mode");
+            json.put("fontHeightReporting", mode);
+        }
         File file = new File(GAME_PATH, "mkxp.json");
         try (FileOutputStream out = new FileOutputStream(file)) { out.write(json.toString(2).getBytes("UTF-8")); }
     }

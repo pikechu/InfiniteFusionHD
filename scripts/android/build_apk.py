@@ -13,13 +13,36 @@ import subprocess
 import zipfile
 import sys
 sys.dont_write_bytecode = True
-from package_game import ROOT, write_payload, refresh_ruby_payload
+from package_game import ROOT, write_payload, refresh_ruby_payload, validate_payload
 
 ORIGINAL_RUNTIME_SHA256 = "6f90fabcb227eafa2a5b3a8967dbe34368cec06efab5cd3e709f538003186232"
 EMULATOR_RUNTIME_SHA256 = "90bee3c7406d62ca903ffb64798bca3f6da009e4b94402a580cb37a8f7ae0d23"
 
 def run(args, **kwargs):
     subprocess.run([str(a) for a in args], check=True, **kwargs)
+
+def validate_apk_assets(assets, with_network, require_payload=True):
+    """Reject stale partials/unknown paths instead of silently bundling or deleting them."""
+    required = {"payload.zip", "payload-manifest.json", "mkxp-base.json"}
+    allowed = required | ({"network-enabled"} if with_network else set())
+    if not assets.exists():
+        if require_payload:
+            raise ValueError(f"No staged assets: {assets}")
+        return
+    if not assets.is_dir() or assets.is_symlink():
+        raise ValueError(f"APK assets must be a regular staging directory: {assets}")
+    entries = {item.name: item for item in assets.iterdir()}
+    unexpected = sorted(name for name, item in entries.items()
+                        if name not in allowed or not item.is_file() or item.is_symlink())
+    if unexpected:
+        raise ValueError("Unexpected APK asset paths (preserved for inspection): " + ", ".join(unexpected))
+    marker = entries.get("network-enabled")
+    if marker is not None and marker.read_bytes() != b"1":
+        raise ValueError("Invalid network-enabled marker; preserved for inspection")
+    if require_payload:
+        missing = sorted((required | ({"network-enabled"} if with_network else set())) - set(entries))
+        if missing:
+            raise ValueError("Missing staged APK assets: " + ", ".join(missing))
 
 def select_runtime(generated, emulator_compatible):
     original = generated / "jniLibs/arm64-v8a/libmkxp-z.so"
@@ -67,9 +90,11 @@ def output_name(runtime_only, with_network, emulator_compatible):
     if runtime_only:
         stem = "KIF-network-probe-arm64" if with_network else "KIF-runtime-probe-arm64"
         return stem + ("-emulator" if emulator_compatible else "") + "-test.apk"
-    stem = "KIF-0.20.7-android.1-arm64"
+    stem = "KIF-0.20.7-android.2-arm64"
     if emulator_compatible:
-        stem += "-emulator" + ("-network" if with_network else "")
+        stem += "-emulator"
+    if with_network:
+        stem += "-network"
     return stem + "-test.apk"
 
 def require_input_bridge(generated):
@@ -122,6 +147,9 @@ def main():
     if args.emulator_compatible:
         work = work.with_name(work.name + "-emulator" + ("-network" if args.with_network and not args.runtime_only else ""))
     work.mkdir(parents=True, exist_ok=True)
+    assets = work / "assets"
+    # Check before reading/rebuilding a large payload or starting Java/D8 work.
+    validate_apk_assets(assets, args.with_network, require_payload=False)
     classes, dex = work / "classes", work / "dex"
     for directory in (classes, dex):
         # Delete only the verified, dedicated build directory.
@@ -129,7 +157,6 @@ def main():
             assert directory.resolve().parent == work.resolve()
             shutil.rmtree(directory)
         directory.mkdir()
-    assets = work / "assets"
     if args.refresh_ruby:
         refresh_ruby_payload(assets)
     elif not args.skip_payload:
@@ -140,22 +167,11 @@ def main():
     network_marker = assets / "network-enabled"
     if args.with_network:
         network_marker.write_text("1", encoding="ascii")
-    elif network_marker.exists():
-        network_marker.unlink()
+    validate_apk_assets(assets, args.with_network)
     # Refuse a mixed payload/manifest pair left by an interrupted packaging pass.
-    with zipfile.ZipFile(assets / "payload.zip") as payload:
-        members = payload.infolist()
-        if len(members) != len(manifest["files"]) or len(set(item.filename for item in members)) != len(members):
-            raise SystemExit("Payload ZIP has duplicate/missing members; repackage")
-        for item in members:
-            expected = manifest["files"].get(item.filename)
-            if expected is None or item.file_size != expected["size"]:
-                raise SystemExit(f"Payload manifest mismatch: {item.filename}")
-        if args.skip_payload:
-            print("Verifying staged payload hashes", flush=True)
-            for item in members:
-                if hashlib.sha256(payload.read(item)).hexdigest() != manifest["files"][item.filename]["sha256"]:
-                    raise SystemExit(f"Payload hash mismatch: {item.filename}")
+    if args.skip_payload:
+        print("Verifying staged payload canonical hashes and alias inventory", flush=True)
+    validate_payload(assets / "payload.zip", manifest, verify_hashes=args.skip_payload)
     sources = sorted((ROOT / "android/app/src/main/java").rglob("*.java")) + sorted((generated / "java").rglob("*.java"))
     source_list = work / "sources.txt"
     source_list.write_text("\n".join('"' + str(f).replace("\\", "/") + '"' for f in sources), encoding="utf-8")
@@ -170,6 +186,8 @@ def main():
     if args.with_network:
         app_xml = app_xml.replace("    <uses-sdk", '    <uses-permission android:name="android.permission.INTERNET" />\n    <uses-sdk', 1)
     app_manifest.write_text(app_xml, encoding="utf-8")
+    # Recheck immediately before aapt2's directory-wide asset collection as well.
+    validate_apk_assets(assets, args.with_network)
     run([tools / "aapt2.exe", "link", "-I", platform, "--manifest", app_manifest, "-A", assets, "-0", "zip", "-o", unsigned])
     with zipfile.ZipFile(unsigned, "a", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as apk:
         apk.write(dex / "classes.dex", "classes.dex")

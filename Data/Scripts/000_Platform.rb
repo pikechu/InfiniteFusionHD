@@ -11,6 +11,45 @@ module KIF
         !android?
       end
 
+      # Android's virtual keys are owned by the input bridge. Ruby's save root
+      # is also separate from SDL's native preferences/keybinding directory.
+      def desktop_keybinding_bootstrap?
+        !android?
+      end
+
+      # The desktop download survey's honest "Other" path quits the game.
+      # Replace only this verified startup notice for the independent test APK;
+      # leave the parent intro, story switches and all other events intact.
+      def common_event_commands(id, event)
+        list = event.list
+        return list unless android? && id == 108 && event.name == "gameDownload Warning" &&
+          event.trigger == 0 && list.length == 91
+        signature = {
+          4 => [355, 0, ['options=["The game\'s official Discord",']],
+          8 => [655, 0, ['"Other"]']],
+          9 => [655, 0, ['selected= optionsMenu(options,nil,4)']],
+          10 => [655, 0, ['pbSet(5,selected)']],
+          50 => [115, 0, []],
+          82 => [355, 2, ['openUrlInBrowser(Settings::DISCORD_URL)']],
+          83 => [355, 2, ['#Quit game']],
+          84 => [655, 2, ['$scene = nil']],
+          90 => [0, 0, []]
+        }
+        return list unless signature.all? do |index, expected|
+          command = list[index]
+          [command.code, command.indent, command.parameters] == expected
+        end
+        [
+          RPG::EventCommand.new(101, 0, ["KIF Android Test is an independent test port."]),
+          RPG::EventCommand.new(401, 0, ["This APK is not an official upstream release."]),
+          RPG::EventCommand.new(101, 0, ["Obtain builds from a source you trust."]),
+          RPG::EventCommand.new(401, 0, ["Your adventure will now continue."]),
+          RPG::EventCommand.new(355, 0, ["pbSet(5,4)"]),
+          RPG::EventCommand.new(115, 0, []),
+          RPG::EventCommand.new(0, 0, [])
+        ]
+      end
+
       # Runtime releases disagree on System.delta's units. Use Ruby's monotonic
       # seconds for host-independent UI timeouts without changing native delta.
       def monotonic_seconds

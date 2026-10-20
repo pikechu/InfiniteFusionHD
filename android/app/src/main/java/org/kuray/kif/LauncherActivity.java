@@ -59,6 +59,10 @@ public final class LauncherActivity extends Activity {
         if (getIntent().getBooleanExtra("runtimeSmoke", false)) game.putExtra("runtimeSmoke", true);
         if (getIntent().getBooleanExtra("gameSmoke", false)) game.putExtra("gameSmoke", true);
         if (getIntent().getBooleanExtra("networkSmoke", false)) game.putExtra("networkSmoke", true);
+        if (getIntent().getBooleanExtra("fontSmoke", false)) {
+            game.putExtra("fontSmoke", true);
+            game.putExtra("fontMetricsMode", getIntent().getIntExtra("fontMetricsMode", 1));
+        }
         startActivity(game); finish();
     }
     private void showSaveMenu() {
