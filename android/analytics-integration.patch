@@ -1,0 +1,101 @@
+diff --git a/android/app/src/main/java/org/kuray/kif/GameActivity.java b/android/app/src/main/java/org/kuray/kif/GameActivity.java
+--- a/android/app/src/main/java/org/kuray/kif/GameActivity.java
++++ b/android/app/src/main/java/org/kuray/kif/GameActivity.java
+@@ -108,8 +108,15 @@
+         RelativeLayout.LayoutParams fp = new RelativeLayout.LayoutParams(-2, -2); fp.leftMargin = rail; controls.addView(fps, fp);
+     }
+     private void releaseKeys() { for (int code : new ArrayList<>(held)) key(code, false); }
+-    @Override protected void onResume() { super.onResume(); resumed = true; if (GAME_PATH != null && !mBrokenLibraries) resumeNativeThread(); }
+-    @Override protected void onPause() { if (!mBrokenLibraries) { releaseKeys(); pauseNativeThread(); } resumed = false; super.onPause(); }
++    @Override protected void onResume() {
++        super.onResume(); resumed = true;
++        if (GAME_PATH != null && !mBrokenLibraries) {
++            resumeNativeThread();
++            if (mLayout != null && !getIntent().getBooleanExtra("runtimeSmoke", false)
++                && !getIntent().getBooleanExtra("gameSmoke", false)) Analytics.onGameResume(this);
++        }
++    }
++    @Override protected void onPause() { Analytics.onGamePause(); if (!mBrokenLibraries) { releaseKeys(); pauseNativeThread(); } resumed = false; super.onPause(); }
+     @Override public boolean dispatchKeyEvent(KeyEvent event) {
+         if (event.getKeyCode() == KeyEvent.KEYCODE_BACK && !mBrokenLibraries) {
+             if (mScreenKeyboardShown) {
+@@ -125,7 +132,7 @@
+         return super.dispatchKeyEvent(event);
+     }
+     @Override protected void onDestroy() {
+-        if (!mBrokenLibraries) releaseKeys(); super.onDestroy();
++        Analytics.onGamePause(); if (!mBrokenLibraries) releaseKeys(); super.onDestroy();
+         // MRI cannot be initialized twice in one process. The launcher remains in its own process.
+         android.os.Process.killProcess(android.os.Process.myPid());
+     }
+diff --git a/android/app/src/main/java/org/kuray/kif/LauncherActivity.java b/android/app/src/main/java/org/kuray/kif/LauncherActivity.java
+--- a/android/app/src/main/java/org/kuray/kif/LauncherActivity.java
++++ b/android/app/src/main/java/org/kuray/kif/LauncherActivity.java
+@@ -73,7 +73,17 @@
+             working = false; setContentView(installLayout);
+             install();
+         }); menu.addView(repair);
+-        setContentView(menu);
++        if (Analytics.isConfigured(this)) {
++            CheckBox statistics = new CheckBox(this); statistics.setText("Anonymous usage statistics");
++            statistics.setChecked(Analytics.isUsageEnabled(this));
++            statistics.setOnCheckedChangeListener((button, enabled) -> Analytics.setUsageEnabled(this, enabled));
++            menu.addView(statistics);
++            TextView explanation = new TextView(this); explanation.setTextSize(12);
++            explanation.setText("Shares a random install ID, app version, phone model / manufacturer and distribution channel. Region is estimated from IP by the statistics server. No saves, player names or GPS. Turning this off erases the random ID.");
++            menu.addView(explanation);
++        }
++        ScrollView scroll = new ScrollView(this); scroll.setFillViewport(true); scroll.addView(menu);
++        setContentView(scroll);
+     }
+     @Override protected void onActivityResult(int request, int result, Intent data) {
+         super.onActivityResult(request, result, data);
+diff --git a/android/app/src/main/AndroidManifest.xml b/android/app/src/main/AndroidManifest.xml
+--- a/android/app/src/main/AndroidManifest.xml
++++ b/android/app/src/main/AndroidManifest.xml
+@@ -4,7 +4,8 @@
+     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+     <uses-permission android:name="android.permission.VIBRATE" />
+-    <!-- Network permission is intentionally absent until the pinned native TLS implementation is replaced. -->
++    <!-- The optional analytics collector uses the verified Android HTTPS stack. No location permission. -->
++    <uses-permission android:name="android.permission.INTERNET" />
+     <application android:label="KIF Android Test" android:theme="@android:style/Theme.Material.NoActionBar" android:debuggable="true" android:allowBackup="false" android:extractNativeLibs="true" android:largeHeap="true" android:usesCleartextTraffic="false">
+         <activity android:name=".LauncherActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="sensorLandscape" android:configChanges="orientation|screenSize|keyboardHidden">
+             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+diff --git a/scripts/android/build_apk.py b/scripts/android/build_apk.py
+--- a/scripts/android/build_apk.py
++++ b/scripts/android/build_apk.py
+@@ -49,6 +49,15 @@
+     if not all((assets / name).is_file() for name in ("payload.zip", "payload-manifest.json", "mkxp-base.json")):
+         raise SystemExit("No staged payload")
+     manifest = json.loads((assets / "payload-manifest.json").read_text())
++    # Refresh the public collector settings even when reusing a large payload.
++    # Never place Matomo reporting/download-server tokens in this client file.
++    analytics_path = ROOT / "Data/analytics.json"
++    analytics = json.loads(analytics_path.read_text(encoding="utf-8"))
++    if set(analytics) - {"enabled", "endpoint", "site_id", "app_url", "channel", "heartbeat_seconds", "dimensions"}:
++        raise SystemExit("Analytics config contains unsupported fields; never bundle server tokens")
++    if manifest.get("runtimeOnly", False):
++        analytics["enabled"] = False
++    (assets / "analytics.json").write_text(json.dumps(analytics, indent=2), encoding="utf-8")
+     # Refuse a mixed payload/manifest pair left by an interrupted packaging pass.
+     with zipfile.ZipFile(assets / "payload.zip") as payload:
+         members = payload.infolist()
+diff --git a/scripts/android/run_host_checks.ps1 b/scripts/android/run_host_checks.ps1
+--- a/scripts/android/run_host_checks.ps1
++++ b/scripts/android/run_host_checks.ps1
+@@ -20,10 +20,13 @@
+     [IO.Directory]::CreateDirectory($classes) | Out-Null
+     $sources = @(Get-ChildItem -LiteralPath android/tests/java -Recurse -File -Filter '*.java' | ForEach-Object FullName)
+     $sources += Join-Path $repository 'android/app/src/main/java/org/kuray/kif/SaveTransfer.java'
++    $sources += Join-Path $repository 'android/app/src/main/java/org/kuray/kif/AnalyticsProtocol.java'
+     & (Join-Path $jdk 'bin/javac.exe') '-J-Duser.language=en' --release 8 -encoding UTF-8 -d $classes $sources
+     if ($LASTEXITCODE -ne 0) { throw 'Save transfer host test compilation failed' }
+     & (Join-Path $jdk 'bin/java.exe') -cp $classes SaveTransferHostTest $output
+     if ($LASTEXITCODE -ne 0) { throw 'Save transfer filesystem checks failed' }
++    & (Join-Path $jdk 'bin/java.exe') -cp $classes org.kuray.kif.AnalyticsProtocolHostTest
++    if ($LASTEXITCODE -ne 0) { throw 'Analytics protocol host checks failed' }
+     git diff --check
+     if ($LASTEXITCODE -ne 0) { throw 'Git whitespace checks failed' }
+ } finally { Pop-Location }

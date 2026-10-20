@@ -155,6 +155,7 @@ def mainFunctionDebug
     Compiler.main
     Game.initialize
     Game.set_up_system
+    KIF::Analytics.start if defined?(KIF::Analytics)
     Graphics.update
     Graphics.freeze
     #clearTempFolder()

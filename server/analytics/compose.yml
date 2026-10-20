@@ -1,0 +1,57 @@
+services:
+  db:
+    image: mariadb:lts
+    restart: unless-stopped
+    command: --max-allowed-packet=64MB
+    environment:
+      MARIADB_DATABASE: matomo
+      MARIADB_USER: matomo
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD:?Set MARIADB_PASSWORD in .env}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?Set MARIADB_ROOT_PASSWORD in .env}
+      MARIADB_AUTO_UPGRADE: "1"
+      MARIADB_INITDB_SKIP_TZINFO: "1"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  matomo:
+    image: matomo:apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      MATOMO_DATABASE_ADAPTER: mysql
+      MATOMO_DATABASE_HOST: db
+      MATOMO_DATABASE_DBNAME: matomo
+      MATOMO_DATABASE_USERNAME: matomo
+      MATOMO_DATABASE_PASSWORD: ${MARIADB_PASSWORD:?Set MARIADB_PASSWORD in .env}
+      MATOMO_DATABASE_TABLES_PREFIX: matomo_
+    volumes:
+      - matomo:/var/www/html
+    ports:
+      - "127.0.0.1:${MATOMO_PORT:-8081}:80"
+  downloads:
+    profiles: ["downloads"]
+    build: .
+    restart: unless-stopped
+    environment:
+      MATOMO_TRACKER_URL: ${MATOMO_TRACKER_URL:-http://matomo/matomo.php}
+      MATOMO_ALLOW_INTERNAL_HTTP: ${MATOMO_ALLOW_INTERNAL_HTTP:-1}
+      MATOMO_DOWNLOAD_SITE_ID: ${MATOMO_DOWNLOAD_SITE_ID:-}
+      MATOMO_DOWNLOAD_TOKEN_AUTH: ${MATOMO_DOWNLOAD_TOKEN_AUTH:-}
+      TRUSTED_PROXY_IPS: ${TRUSTED_PROXY_IPS:-}
+      DOWNLOAD_LINKS_FILE: /config/downloads.json
+    volumes:
+      - ./downloads.json:/config/downloads.json:ro
+    ports:
+      - "127.0.0.1:${DOWNLOAD_PORT:-8082}:8080"
+    read_only: true
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+volumes:
+  db:
+  matomo:
