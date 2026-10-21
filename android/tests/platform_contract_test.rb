@@ -38,6 +38,31 @@ load File.join(ROOT, "Data/Scripts/000_Platform.rb")
 load File.join(ROOT, "Data/Scripts/001_Technical/002_RubyUtilities.rb")
 load File.join(ROOT, "Data/Scripts/001_Technical/002_Files/001_FileTests.rb")
 
+# Load the actual resize hook, without SDL, scenes, assets or player settings.
+class Font; end
+class Bitmap
+  def draw_text(*_args); end
+end
+module Settings
+  SCREEN_WIDTH = 512
+  SCREEN_HEIGHT = 384
+end
+module Graphics
+  class << self
+    attr_accessor :frame_rate
+    attr_reader :calls, :fullscreen
+    def reset_display(fullscreen)
+      @fullscreen = fullscreen
+      @calls = []
+    end
+    def resize_screen(*size); @calls << [:resize, size]; end
+    def fullscreen=(value); @fullscreen = value; @calls << [:fullscreen, value]; end
+    def scale=(value); @calls << [:scale, value]; end
+    def center; @calls << [:center]; end
+  end
+end
+load File.join(ROOT, "Data/Scripts/001_Technical/001_MKXP_Compatibility.rb")
+
 checks = 0
 assert = lambda do |condition, message|
   raise message unless condition
@@ -46,6 +71,31 @@ end
 
 original_save_dir = ENV["KIF_SAVE_DIR"]
 begin
+  # Exercise both real branches with every supported desktop window setting,
+  # including a fresh Android launch and an already-fullscreen second request.
+  [false, true].each do |android_host|
+    System.android_host = android_host
+    [-1, 0, 1, 2, 3, 4].each do |requested_factor|
+      $ResizeInitialized = false
+      Graphics.reset_display(!android_host)
+      pbSetResizeFactor(requested_factor)
+      expected = [[:resize, [512, 384]]]
+      if android_host
+        expected << [:fullscreen, true]
+      elsif requested_factor >= 0 && requested_factor != 4
+        expected += [[:fullscreen, false], [:scale, (requested_factor + 1) * 0.5], [:center]]
+      end
+      assert.call(Graphics.calls == expected,
+        "#{android_host ? 'Android' : 'Windows'} resize factor #{requested_factor} changed display behavior")
+      before = Graphics.calls.dup
+      pbSetResizeFactor(requested_factor)
+      expected_repeat = (!android_host && requested_factor >= 0 && requested_factor != 4) ?
+        [[:scale, (requested_factor + 1) * 0.5], [:center]] : []
+      assert.call(Graphics.calls == before + expected_repeat,
+        "#{android_host ? 'Android' : 'Windows'} repeated resize factor #{requested_factor} resized/recentered unexpectedly")
+    end
+  end
+
   System.android_host = false
   ENV.delete("KIF_SAVE_DIR")
   load PRELOAD

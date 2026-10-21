@@ -17,6 +17,13 @@ module KIF
         !android?
       end
 
+      # Desktop save settings can request a small window after startup. Android
+      # always uses the full surface; mkxp's fixedAspectRatio preserves 4:3.
+      # Do not rewrite the saved desktop preference or apply a window scale.
+      def screen_resize_factor(requested_factor)
+        android? ? 4 : requested_factor
+      end
+
       # Android can commit the final IME text in the same frame as Return/Esc.
       # Finish that single-line edit before pbFreeText returns or drops its window.
       def finish_text_entry(window, accepted)

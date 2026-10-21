@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.kuray.kif.touchchecks" android:versionCode="1" android:versionName="1">
+    <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="35" />
+    <application android:label="KIF touch regression" android:debuggable="true" android:allowBackup="false" />
+    <instrumentation android:name="org.kuray.kif.touchchecks.TouchControlsInstrumentation"
+        android:targetPackage="org.kuray.kif" android:targetProcesses="org.kuray.kif"
+        android:functionalTest="true" />
+</manifest>
