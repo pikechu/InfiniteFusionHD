@@ -36,6 +36,15 @@ def main():
         raise SystemExit("Pinned runtime missing; run scripts/android/prepare-runtime.ps1")
     if not (generated / "jniLibs/arm64-v8a/libkif_android_bridge.so").is_file():
         raise SystemExit("Verified Android HTTPS bridge missing; run scripts/android/build_bridge.ps1")
+    bridge_dir = generated / "jniLibs/arm64-v8a"
+    record_path = bridge_dir / "kif_android_bridge.provenance.json"
+    if not record_path.is_file():
+        raise SystemExit("Async HTTPS bridge provenance missing; run scripts/android/build_bridge.ps1")
+    bridge_record = json.loads(record_path.read_text(encoding="utf-8-sig"))
+    if (bridge_record.get("httpAsync", {}).get("version") != 1 or
+        bridge_record.get("sourceSha256") != hashlib.sha256((ROOT / "android/native/kif_android_bridge.c").read_bytes()).hexdigest() or
+        bridge_record.get("outputSha256") != hashlib.sha256((bridge_dir / "libkif_android_bridge.so").read_bytes()).hexdigest()):
+        raise SystemExit("Async HTTPS bridge is stale; rebuild it before packaging")
     work = ROOT / ("temp/android-smoke-build" if args.runtime_only else "temp/android-build")
     work.mkdir(parents=True, exist_ok=True)
     classes, dex = work / "classes", work / "dex"
@@ -115,9 +124,9 @@ def main():
     run([tools / "aapt2.exe", "dump", "badging", final], stdout=(work / "apk-badging.txt").open("w", encoding="utf-8"))
     sha = hashlib.file_digest(final.open("rb"), "sha256").hexdigest()
     (output / (final.name + ".sha256")).write_text(sha + "  " + final.name + "\n", encoding="utf-8")
-    source_paths = sorted((ROOT / "android").rglob("*.java")) + sorted((ROOT / "android").rglob("*.rb")) + sorted((ROOT / "scripts/android").glob("*.py"))
+    source_paths = sorted((ROOT / "android").rglob("*.java")) + sorted((ROOT / "android").rglob("*.rb")) + sorted((ROOT / "scripts/android").glob("*.py")) + sorted((ROOT / "android/native").glob("*.c"))
     source_hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in source_paths}
-    record = {"apk": final.name, "sha256": sha, "bytes": final.stat().st_size, "runtime": json.loads((ROOT / "android/runtime.lock.json").read_text()), "payload": manifest["id"], "runtimeOnly": manifest.get("runtimeOnly", False), "sources": source_hashes, "compileSdk": 35, "buildTools": "35.0.0", "status": "built; gameplay validation pending"}
+    record = {"apk": final.name, "sha256": sha, "bytes": final.stat().st_size, "runtime": json.loads((ROOT / "android/runtime.lock.json").read_text()), "networkBridge": bridge_record, "payload": manifest["id"], "runtimeOnly": manifest.get("runtimeOnly", False), "sources": source_hashes, "compileSdk": 35, "buildTools": "35.0.0", "status": "built; gameplay validation pending"}
     (output / (final.stem + "-build-record.json")).write_text(json.dumps(record, indent=2), encoding="utf-8")
     print(f"Built {final} ({final.stat().st_size} bytes), SHA256={sha}", flush=True)
 

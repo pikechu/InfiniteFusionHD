@@ -44,7 +44,7 @@ function Get-Sha256([string]$path) {
 }
 
 $rubyExports = (Invoke-Checked $nm @('-D','--defined-only',$ruby)) -join "`n"
-$requiredRuby = @('rb_define_module','rb_define_module_function','rb_string_value_cstr','rb_ary_new_from_args','rb_ull2inum',
+$requiredRuby = @('rb_define_module','rb_define_module_function','rb_string_value_cstr','rb_ary_new_from_args','rb_ary_entry','rb_ull2inum','rb_num2ull',
     'rb_utf8_str_new','rb_protect','rb_jump_tag','rb_raise','rb_eRuntimeError')
 foreach ($symbol in $requiredRuby) {
     if ($rubyExports -notmatch ('(?m)\s' + [regex]::Escape($symbol) + '$')) {
@@ -70,7 +70,7 @@ $requiredExports = @('Java_org_kuray_kif_NetworkBridge_configure',
     'Java_org_kuray_kif_NetworkBridge_setVirtualKey','Java_org_kuray_kif_NetworkBridge_clearVirtualKeys',
     'Java_org_kuray_kif_NetworkBridge_requestTextInput',
     'Java_org_kuray_kif_NetworkBridge_setDisplayStretch',
-    'Init_libkif_android_bridge','Init_kif_android_bridge')
+    'Init_libkif_android_bridge','Init_kif_android_bridge','kif_android_http_async_version')
 foreach ($symbol in $requiredExports) {
     if ($exportsText -notmatch ('(?m)\s' + [regex]::Escape($symbol) + '$')) {
         throw "Bridge export missing: $symbol. No bridge was installed."
@@ -93,6 +93,7 @@ $provenance = [ordered]@{
     schemaVersion=1
     artifactKind='kif-android-source-built-jni-bridge'
     inputBridge=$true
+    httpAsync=[ordered]@{version=1;start='request_start';poll='request_poll';cancel='request_cancel';maxPending=4;workers=2;retentionMilliseconds=30000}
     virtualInput=[ordered]@{mask='1U << RGSS logical button code';poll='[pressed,triggered,released]';
         acceptedCodes=@(2,4,6,8,11,12,13,14,15,16,17,18);pause='clear all held and edge masks';
         sdlCallbacksUsed=$false;networkPermissionRequired=$false}
@@ -118,6 +119,7 @@ $provenance | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $Bui
 [IO.Directory]::CreateDirectory($RuntimeDirectory) | Out-Null
 $installed = Join-Path $RuntimeDirectory $name
 Copy-Item -LiteralPath $builtLibrary -Destination $installed -Force
+$provenance | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $RuntimeDirectory 'kif_android_bridge.provenance.json') -Encoding utf8
 Write-Host "Built and verified: $installed"
 Write-Host "Bridge provenance: $(Join-Path $BuildDirectory 'provenance.json')"
 Write-Host 'This builds only the JNI bridge; the publisher runtime libraries are unchanged.'

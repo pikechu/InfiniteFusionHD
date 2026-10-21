@@ -124,7 +124,7 @@ public final class GameActivity extends SDLActivity {
                 && !getIntent().getBooleanExtra("gameSmoke", false)) Analytics.onGameResume(this);
         }
     }
-    @Override protected void onPause() { Analytics.onGamePause(); if (!mBrokenLibraries) { releaseKeys(); pauseNativeThread(); } resumed = false; super.onPause(); }
+    @Override protected void onPause() { Analytics.onGamePause(); NetworkBridge.cancelPendingRequests(); if (!mBrokenLibraries) { releaseKeys(); pauseNativeThread(); } resumed = false; super.onPause(); }
     @Override public boolean dispatchKeyEvent(KeyEvent event) {
         if (event.getKeyCode() == KeyEvent.KEYCODE_BACK && !mBrokenLibraries) {
             if (mScreenKeyboardShown) {

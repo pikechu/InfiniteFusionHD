@@ -22,6 +22,10 @@ public final class NetworkBridge {
     private static final ExecutorService WORKERS = new ThreadPoolExecutor(0, 2, 30, TimeUnit.SECONDS,
         new SynchronousQueue<>(), runnable -> { Thread thread = new Thread(runnable, "KIF-HTTPS"); thread.setDaemon(true); return thread; },
         new ThreadPoolExecutor.AbortPolicy());
+    private static final ExecutorService DISCONNECTORS = new ThreadPoolExecutor(0, 2, 30, TimeUnit.SECONDS,
+        new ArrayBlockingQueue<>(2), runnable -> { Thread thread = new Thread(runnable, "KIF-HTTPS-Cancel"); thread.setDaemon(true); return thread; },
+        new ThreadPoolExecutor.AbortPolicy());
+    private static final AsyncHttpQueue ASYNC = new AsyncHttpQueue(SystemClock::elapsedRealtime, NetworkBridge::failure);
     private static final class Exchange {
         private final AtomicBoolean cancelled = new AtomicBoolean();
         private final AtomicReference<HttpsURLConnection> active = new AtomicReference<>();
@@ -41,7 +45,10 @@ public final class NetworkBridge {
         void cancel() {
             cancelled.set(true);
             HttpsURLConnection connection = active.getAndSet(null);
-            if (connection != null) connection.disconnect();
+            if (connection != null) {
+                try { DISCONNECTORS.execute(connection::disconnect); }
+                catch (RejectedExecutionException occupied) { /* Worker read/connect deadline remains bounded. */ }
+            }
         }
     }
     private NetworkBridge() { }
@@ -150,6 +157,47 @@ public final class NetworkBridge {
         }
         throw new ProtocolException("HTTP redirect limit");
     }
+    private static JSONObject executeWithRetries(JSONObject request, long end, Exchange exchange) throws Exception {
+        for (int attempt = 0; ; attempt++) {
+            try { return execute(request, end, exchange); }
+            catch (SSLException | ProtocolException fatal) { throw fatal; }
+            catch (IOException error) {
+                if (attempt > 0 || !request.optString("method", "GET").equals("GET")) throw error;
+                exchange.check(end);
+                Thread.sleep(250);
+            }
+        }
+    }
+    private static byte[] failure(Exception error) {
+        try {
+            return new JSONObject().put("status", 0).put("headers", new JSONObject()).put("body", "")
+                .put("error", error.getClass().getSimpleName()).toString().getBytes(StandardCharsets.UTF_8);
+        } catch (Exception unavailable) {
+            return "{\"status\":0,\"headers\":{},\"body\":\"\",\"error\":\"IOException\"}".getBytes(StandardCharsets.UTF_8);
+        }
+    }
+
+    /** JNI only copies the bounded envelope here; all parsing, DNS and TLS runs in Java workers. */
+    public static long startHttp(byte[] bytes, int timeoutMillis) {
+        if (bytes == null || bytes.length > MAX_REQUEST) throw new IllegalArgumentException("Request limit");
+        final byte[] request = Arrays.copyOf(bytes, bytes.length);
+        final Exchange exchange = new Exchange();
+        return ASYNC.start(new AsyncHttpQueue.Operation() {
+            @Override public byte[] execute(long end) throws Exception {
+                JSONObject parsed = new JSONObject(new String(request, StandardCharsets.UTF_8));
+                return executeWithRetries(parsed, end, exchange).toString().getBytes(StandardCharsets.UTF_8);
+            }
+            @Override public void cancel() { exchange.cancel(); }
+        }, timeoutMillis);
+    }
+    /** Null means pending. A completed response is consumed once and immediately released. */
+    public static byte[] pollHttp(long id) {
+        try { return ASYNC.poll(id); }
+        catch (IllegalStateException expired) { return failure(expired); }
+    }
+    public static void cancelHttp(long id) { ASYNC.cancel(id); }
+    public static void cancelPendingRequests() { ASYNC.cancelAll(); }
+
     public static byte[] performHttp(byte[] bytes) {
         JSONObject result = new JSONObject();
         Future<JSONObject> job = null;
@@ -159,17 +207,7 @@ public final class NetworkBridge {
             if (bytes.length > MAX_REQUEST) throw new IOException("Request limit");
             JSONObject request = new JSONObject(new String(bytes, StandardCharsets.UTF_8));
             long end = SystemClock.elapsedRealtime() + 20000;
-            job = WORKERS.submit(() -> {
-                for (int attempt = 0; ; attempt++) {
-                    try { return execute(request, end, exchange); }
-                    catch (SSLException | ProtocolException fatal) { throw fatal; }
-                    catch (IOException failure) {
-                        // POST must never be replayed automatically. GET retries share one deadline.
-                        if (attempt > 0 || !request.optString("method", "GET").equals("GET")) throw failure;
-                        exchange.check(end); Thread.sleep(250);
-                    }
-                }
-            });
+            job = WORKERS.submit(() -> executeWithRetries(request, end, exchange));
             result = job.get(20, TimeUnit.SECONDS);
         } catch (Exception failure) {
             exchange.cancel();
