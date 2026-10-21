@@ -17,9 +17,18 @@ module KIFMultiplayer
       map = $game_map
       unless @fingerprint_map.equal?(map)
         require "digest/sha2"
-        # Table bytes come only from the installed/local generated map. This
-        # distinguishes independently generated dungeons with the same map ID.
-        @map_hash = Digest::SHA256.hexdigest(Marshal.dump([map.map_id, map.data, map.tileset_name]))
+        # Canonical JSON plus explicit little-endian tile integers avoids
+        # depending on a Ruby version's Marshal or native Table serialization.
+        digest = Digest::SHA256.new
+        data = map.data
+        digest.update(WireJSON.dump({"map_id" => map.map_id, "width" => map.width, "height" => map.height, "layers" => data.zsize, "tileset" => map.tileset_name}))
+        data.zsize.times do |z|
+          map.height.times do |y|
+            row = Array.new(map.width) { |x| data[x, y, z] }
+            digest.update(row.pack("S<*"))
+          end
+        end
+        @map_hash = digest.hexdigest
         @fingerprint_map = map
       end
       {"map_id" => map.map_id, "map_hash" => @map_hash, "width" => map.width, "height" => map.height,
