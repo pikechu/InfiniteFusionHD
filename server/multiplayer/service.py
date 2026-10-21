@@ -1424,12 +1424,16 @@ class Handler(BaseHTTPRequestHandler):
             require(not parsed.query and not parsed.fragment, "invalid_path", "Query strings are not supported")
             body = {}
             if method == "POST":
-                require(self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower() == "application/json", "content_type", "Use application/json", 415)
                 length = int(self.headers.get("Content-Length", "0"))
                 limit = MAX_CLOUD_BODY if parsed.path == "/v1/cloud/upload" else MAX_BODY
                 require(0 < length <= limit, "body_too_large", "Invalid request body length", 413)
                 require(not self.headers.get("Transfer-Encoding"), "invalid_encoding", "Chunked requests are not supported")
-                body = json.loads(self.rfile.read(length).decode("utf-8"), parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+                # Drain bounded bodies before a media-type rejection. Closing
+                # a Windows socket with unread input can reset the connection
+                # before the peer receives our structured 415 response.
+                raw = self.rfile.read(length)
+                require(self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower() == "application/json", "content_type", "Use application/json", 415)
+                body = json.loads(raw.decode("utf-8"), parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
             header = self.headers.get("Authorization", "")
             token = header[7:] if header.startswith("Bearer ") else None
             status, response = self.server.store.request(method, parsed.path, body, token, self.client_address[0])

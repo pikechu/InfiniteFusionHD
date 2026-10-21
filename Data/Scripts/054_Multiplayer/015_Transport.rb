@@ -93,6 +93,16 @@ module KIFMultiplayer
     end
 
     def wait(io, direction, deadline, connect_error = false)
+      if Thread.current[:kif_cooperative_network]
+        loop do
+          remaining(deadline)
+          ready = IO.select(direction == :read ? [io] : nil,
+                            direction == :write ? [io] : nil,
+                            connect_error ? [io] : nil, 0)
+          return ready if ready
+          Fiber.yield
+        end
+      end
       ready = IO.select(direction == :read ? [io] : nil,
                         direction == :write ? [io] : nil,
                         connect_error ? [io] : nil, remaining(deadline))
@@ -152,6 +162,27 @@ module KIFMultiplayer
     def tls_context
       context = OpenSSL::SSL::SSLContext.new
       context.set_params(:verify_mode => OpenSSL::SSL::VERIFY_PEER)
+      if defined?(KIF::Platform) && KIF::Platform.android?
+        # Android's system trust roots are not necessarily at OpenSSL's build
+        # time default paths. Load only the OS-owned certificate directories.
+        @android_cert_store ||= begin
+          store = OpenSSL::X509::Store.new
+          store.set_default_paths
+          %w[/apex/com.android.conscrypt/cacerts /system/etc/security/cacerts].each do |directory|
+            next unless File.directory?(directory)
+            Dir.entries(directory).sort.each do |name|
+              next unless name =~ /\A[0-9a-f]{8}\.[0-9]+\z/
+              begin
+                store.add_file(File.join(directory, name))
+              rescue OpenSSL::X509::StoreError
+                next
+              end
+            end
+          end
+          store
+        end
+        context.cert_store = @android_cert_store
+      end
       context
     end
 
@@ -267,7 +298,7 @@ module KIFMultiplayer
       [key.downcase, value.strip]
     end
 
-    def read_response(stream, deadline)
+    def read_response(stream, deadline, binary = false)
       reader = Reader.new(self, stream, deadline)
       first = reader.line(MAX_HEADER_LINE)
       match = /\AHTTP\/1\.[01] ([2-5][0-9]{2})(?: [\x20-\x7e]*)?\z/.match(first)
@@ -293,10 +324,10 @@ module KIFMultiplayer
       protocol_error("Conflicting HTTP body framing") if length && transfer
       protocol_error("Unsupported HTTP content encoding") if values["content-encoding"] && values["content-encoding"][0].downcase != "identity"
       media = values.dig("content-type", 0).to_s
-      unless media =~ /\Aapplication\/(?:json|[A-Za-z0-9!#$&^_.+-]+\+json)(?:\s*;\s*charset\s*=\s*(?:utf-8|"utf-8"))?\z/i
+      unless binary || media =~ /\Aapplication\/(?:json|[A-Za-z0-9!#$&^_.+-]+\+json)(?:\s*;\s*charset\s*=\s*(?:utf-8|"utf-8"))?\z/i
         protocol_error("HTTP response must contain UTF-8 JSON")
       end
-      if [204, 205].include?(status)
+      if !binary && [204, 205].include?(status)
         protocol_error("JSON response cannot use a bodyless HTTP status")
       end
       if transfer
@@ -332,12 +363,12 @@ module KIFMultiplayer
         body = reader.until_eof
       end
       protocol_error("Unexpected bytes after HTTP response") unless reader.buffer.empty?
-      body.force_encoding(Encoding::UTF_8)
-      protocol_error("Invalid UTF-8 HTTP body") unless body.valid_encoding?
+      body.force_encoding(binary ? Encoding::ASCII_8BIT : Encoding::UTF_8)
+      protocol_error("Invalid UTF-8 HTTP body") unless binary || body.valid_encoding?
       {:status => status, :body => body, :headers => values.transform_values { |items| items.join(", ") }}
     end
 
-    def call(method, url, body, token, timeout)
+    def call(method, url, body, token, timeout, raw_payload: nil, content_type: "application/json", headers: {}, binary: false)
       endpoint = validate_url(url)
       raise Error.new("Unsupported HTTP method", "invalid_request") unless %w[GET POST].include?(method)
       unless timeout.is_a?(Numeric) && timeout.to_f.finite? && timeout > 0 && timeout <= 120
@@ -351,11 +382,21 @@ module KIFMultiplayer
       deadline = KIFMultiplayer.monotonic + timeout.to_f
       socket = connect(endpoint, deadline)
       stream = endpoint[:scheme] == "https" ? secure(socket, endpoint, deadline) : socket
-      payload = method == "GET" ? "" : WireJSON.dump(body)
-      request = ["#{method} #{endpoint[:path]} HTTP/1.1", "Host: #{endpoint[:authority]}", "Connection: close", "Accept: application/json", "Accept-Encoding: identity", "Content-Type: application/json", "Content-Length: #{payload.bytesize}"]
+      payload = method == "GET" ? "" : (raw_payload || WireJSON.dump(body))
+      raise Error.new("HTTP payload is too large", "invalid_request") unless payload.is_a?(String) && payload.bytesize <= MAX_RESPONSE_BYTES
+      request = ["#{method} #{endpoint[:path]} HTTP/1.1", "Host: #{endpoint[:authority]}", "Connection: close", "Accept: application/json", "Accept-Encoding: identity", "Content-Type: #{content_type}", "Content-Length: #{payload.bytesize}"]
+      raise Error.new("Invalid HTTP media type", "invalid_request") unless content_type.is_a?(String) && content_type =~ /\A[\x20-\x7e]{1,200}\z/
+      raise Error.new("Invalid HTTP headers", "invalid_request") unless headers.is_a?(Hash) && headers.length <= 32
+      headers.each do |key, value|
+        unless key.is_a?(String) && key =~ TOKEN && value.is_a?(String) && value.bytesize <= 4096 && value =~ /\A[\x20-\x7e]*\z/ && !%w[host connection content-length transfer-encoding accept-encoding].include?(key.downcase)
+          raise Error.new("Invalid HTTP header", "invalid_request")
+        end
+        request.reject! { |line| line.split(":", 2)[0].casecmp?(key) }
+        request << "#{key}: #{value}"
+      end
       request << "Authorization: Bearer #{token}" if token
       write_all(stream, (request.join("\r\n") + "\r\n\r\n" + payload).b, deadline)
-      read_response(stream, deadline)
+      read_response(stream, deadline, binary)
     ensure
       stream.close if defined?(stream) && stream && !stream.closed?
       socket.close if defined?(socket) && socket && !socket.closed?
@@ -372,18 +413,39 @@ module KIFMultiplayer
       end
     end
 
+    # Online mode explicitly opts into the same verified Ruby Socket path as
+    # desktop when Android has no installed platform adapter. Missing Socket
+    # or verified TLS remains a visible capability error, never native HTTP.
+    def enable_online_network
+      if defined?(KIF::Platform) && KIF::Platform.android? && KIFMultiplayer.respond_to?(:install_android_network)
+        unless KIFMultiplayer.install_android_network
+          raise Error.new("Android runtime requires the verified Socket network module for online play", "network_unavailable")
+        end
+      end
+      if @backend == :platform && !KIF::Platform.network_available?
+        @socket_http = SocketHTTP.new
+        @backend = :core_socket
+      end
+      self
+    end
+
     def validate_url(url)
       return @socket_http.validate_url(url) if @socket_http
       endpoint = SocketHTTP.parse_url(url)
       unless KIF::Platform.network_available?
         raise Error.new("Android network adapter is unavailable", "network_unavailable")
       end
+      KIF::Platform.validate_http_url(url) if KIF::Platform.respond_to?(:validate_http_url)
       endpoint
     end
 
     def call(method, url, body, token, timeout)
       return @socket_http.call(method, url, body, token, timeout) if @socket_http
       validate_url(url)
+      if KIF::Platform.respond_to?(:http_request)
+        response = KIF::Platform.http_request(method, url, body, token, timeout)
+        return response if response
+      end
       headers = {"Accept" => "application/json", "Content-Type" => "application/json"}
       raise Error.new("Invalid HTTP authorization", "invalid_request") if token && (!token.is_a?(String) || token =~ /[^\x21-\x7e]/ || token.bytesize > 512)
       headers["Authorization"] = "Bearer #{token}" if token

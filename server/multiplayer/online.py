@@ -10,7 +10,7 @@ import json
 import re
 import secrets
 
-MAX_CLOUD_BODY = 8 * 1024 * 1024
+MAX_CLOUD_BODY = 2 * 1024 * 1024
 CLOUD_SLOTS = {"file-" + c for c in "abcdefgh"} | {"auto-1", "auto-2"}
 
 
@@ -27,6 +27,8 @@ class OnlineFeatures:
             CREATE TABLE IF NOT EXISTS cloud_leases(owner TEXT PRIMARY KEY,session_id TEXT NOT NULL,compatibility TEXT NOT NULL,expires REAL NOT NULL);
             CREATE TABLE IF NOT EXISTS cloud_saves(owner TEXT NOT NULL,slot TEXT NOT NULL,revision INTEGER NOT NULL,document TEXT NOT NULL,updated REAL NOT NULL,PRIMARY KEY(owner,slot));
             CREATE TABLE IF NOT EXISTS cloud_uploads(owner TEXT NOT NULL,upload_id TEXT NOT NULL,fingerprint TEXT NOT NULL,slot TEXT NOT NULL,revision INTEGER NOT NULL,PRIMARY KEY(owner,upload_id));
+            CREATE TABLE IF NOT EXISTS cloud_chunks(owner TEXT NOT NULL,upload_id TEXT NOT NULL,part INTEGER NOT NULL,total INTEGER NOT NULL,sha TEXT NOT NULL,payload BLOB NOT NULL,created REAL NOT NULL,PRIMARY KEY(owner,upload_id,part));
+            CREATE TABLE IF NOT EXISTS cloud_chunk_receipts(owner TEXT NOT NULL,upload_id TEXT NOT NULL,sha TEXT NOT NULL,response TEXT NOT NULL,PRIMARY KEY(owner,upload_id));
             CREATE TABLE IF NOT EXISTS world_presence(owner TEXT PRIMARY KEY,session_id TEXT NOT NULL,compatibility TEXT NOT NULL,map_key TEXT,document TEXT NOT NULL,seq INTEGER NOT NULL,updated REAL NOT NULL);
             CREATE INDEX IF NOT EXISTS world_presence_map ON world_presence(map_key,updated);
             CREATE TABLE IF NOT EXISTS chat_messages(id INTEGER PRIMARY KEY AUTOINCREMENT,owner TEXT NOT NULL,client_id TEXT NOT NULL,fingerprint TEXT NOT NULL,channel TEXT NOT NULL,map_key TEXT,document TEXT NOT NULL,created REAL NOT NULL,UNIQUE(owner,client_id));
@@ -99,6 +101,8 @@ class OnlineFeatures:
             saves = [{"slot": row["slot"], "revision": row["revision"], "updated_at": row["updated"]} for row in db.execute("SELECT slot,revision,updated FROM cloud_saves WHERE owner=? ORDER BY slot", (owner,))]
             return 200, {"ok": True, "saves": saves, "lease_seconds": 120}
         self.cloud_lease(db, owner, session)
+        if action == "chunk":
+            return self.cloud_chunk(db, identity, body)
         if action in ("heartbeat", "close"):
             obj(body, {"session_id"}, {"session_id"})
             if action == "close":
@@ -119,7 +123,7 @@ class OnlineFeatures:
         document = obj(body["save"], {"format", "game_version", "payload", "sha256"}, {"format", "game_version", "payload", "sha256"})
         require(document["format"] == "kif-save-json-v1", "save_format", "Unsupported cloud save format")
         string(document["game_version"], 1, 128, "game_version")
-        payload = string(document["payload"], 4, 6 * 1024 * 1024, "payload", r"[A-Za-z0-9+/]*={0,2}")
+        payload = string(document["payload"], 4, 1400000, "payload", r"[A-Za-z0-9+/]*={0,2}")
         string(document["sha256"], 64, 64, "sha256", r"[a-f0-9]{64}")
         try:
             raw = base64.b64decode(payload, validate=True)
@@ -137,6 +141,52 @@ class OnlineFeatures:
         db.execute("INSERT OR REPLACE INTO cloud_saves VALUES(?,?,?,?,?)", (owner, slot, current + 1, dumps(document), self.clock()))
         db.execute("INSERT INTO cloud_uploads VALUES(?,?,?,?,?)", (owner, upload_id, fingerprint, slot, current + 1))
         return 200, {"ok": True, "slot": slot, "revision": current + 1, "upload_id": upload_id}
+
+    def cloud_chunk(self, db, identity, body):
+        obj(body, {"session_id", "upload_id", "index", "total", "sha256", "data"}, {"session_id", "upload_id", "index", "total", "sha256", "data"})
+        owner, now = identity["id"], self.clock()
+        upload_id = string(body["upload_id"], 16, 80, "upload_id", r"[A-Za-z0-9_-]+")
+        total = integer(body["total"], 1, 128, "total")
+        index = integer(body["index"], 0, total - 1, "index")
+        sha = string(body["sha256"], 64, 64, "sha256", r"[a-f0-9]{64}")
+        encoded = string(body["data"], 4, 24000, "data", r"[A-Za-z0-9+/]*={0,2}")
+        try:
+            payload = base64.b64decode(encoded, validate=True)
+        except ValueError:
+            require(False, "invalid_chunk", "Invalid chunk encoding")
+        require(0 < len(payload) <= 16384, "invalid_chunk", "Chunk is too large")
+        old = db.execute("SELECT sha,response FROM cloud_chunk_receipts WHERE owner=? AND upload_id=?", (owner, upload_id)).fetchone()
+        if old:
+            require(old["sha"] == sha, "upload_conflict", "Chunk upload ID reused for different data", 409)
+            return 200, json.loads(old["response"])
+        db.execute("DELETE FROM cloud_chunks WHERE created<?", (now - 300,))
+        first = db.execute("SELECT total,sha FROM cloud_chunks WHERE owner=? AND upload_id=? LIMIT 1", (owner, upload_id)).fetchone()
+        if first:
+            require(first["total"] == total and first["sha"] == sha, "upload_conflict", "Chunk metadata changed", 409)
+        else:
+            count = db.execute("SELECT COUNT(DISTINCT upload_id) FROM cloud_chunks WHERE owner=?", (owner,)).fetchone()[0]
+            require(count < 2, "cloud_chunk_busy", "Finish the current upload first", 409)
+        previous = db.execute("SELECT payload FROM cloud_chunks WHERE owner=? AND upload_id=? AND part=?", (owner, upload_id, index)).fetchone()
+        require(previous is None or previous["payload"] == payload, "upload_conflict", "Chunk data changed", 409)
+        db.execute("INSERT OR REPLACE INTO cloud_chunks VALUES(?,?,?,?,?,?,?)", (owner, upload_id, index, total, sha, payload, now))
+        chunks = db.execute("SELECT part,payload FROM cloud_chunks WHERE owner=? AND upload_id=? ORDER BY part", (owner, upload_id)).fetchall()
+        require(sum(len(row["payload"]) for row in chunks) <= MAX_CLOUD_BODY, "body_too_large", "Cloud upload exceeds size limit", 413)
+        if len(chunks) != total:
+            next_index = 0
+            for row in chunks:
+                if row["part"] != next_index:
+                    break
+                next_index += 1
+            return 200, {"ok": True, "upload_id": upload_id, "next_index": next_index}
+        raw = b"".join(row["payload"] for row in chunks)
+        require(hashlib.sha256(raw).hexdigest() == sha, "save_checksum", "Chunk upload checksum mismatch")
+        original = json.loads(raw.decode("utf-8"))
+        obj(original)
+        require(original.get("session_id") == body["session_id"] and original.get("upload_id") == upload_id, "upload_conflict", "Chunk owner session or upload ID changed", 409)
+        status, response = self.cloud_request(db, identity, "POST", ["v1", "cloud", "upload"], original)
+        db.execute("INSERT INTO cloud_chunk_receipts VALUES(?,?,?,?)", (owner, upload_id, sha, dumps(response)))
+        db.execute("DELETE FROM cloud_chunks WHERE owner=? AND upload_id=?", (owner, upload_id))
+        return status, response
 
     def world_member(self, db, owner, session):
         row = db.execute("SELECT * FROM world_presence WHERE owner=?", (owner,)).fetchone()

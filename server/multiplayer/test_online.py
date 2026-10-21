@@ -176,6 +176,31 @@ class OnlineTests(unittest.TestCase):
         self.call(self.alice, "/v1/world/leave", {"session_id": self.other}, 409)
         self.assertEqual(self.store.request("POST", "/v1/world/join", {"session_id": self.session, "compatibility": self.compat}, "bad")[0], 401)
 
+    def test_chunked_cloud_upload_resumes_and_commits_exactly_once(self):
+        self.open_cloud()
+        body = self.upload()
+        raw_bytes = b"cloud json fixture" * 6000
+        body["save"]["payload"] = base64.b64encode(raw_bytes).decode()
+        body["save"]["sha256"] = hashlib.sha256(raw_bytes).hexdigest()
+        raw = json.dumps(body, ensure_ascii=False).encode()
+        parts = [raw[i:i + 16384] for i in range(0, len(raw), 16384)]
+        checksum = hashlib.sha256(raw).hexdigest()
+        chunks = [{"session_id": self.session, "upload_id": body["upload_id"], "index": i, "total": len(parts), "sha256": checksum, "data": base64.b64encode(part).decode()} for i, part in enumerate(parts)]
+        first = self.call(self.alice, "/v1/cloud/chunk", chunks[0])
+        self.assertEqual(first["next_index"], 1)
+        self.call(self.alice, "/v1/cloud/chunk", chunks[1])
+        self.assertEqual(self.call(self.alice, "/v1/cloud/chunk", chunks[0])["next_index"], 2)
+        for chunk in chunks[2:]:
+            result = self.call(self.alice, "/v1/cloud/chunk", chunk)
+        self.assertEqual(result["revision"], 1)
+        self.assertEqual(self.call(self.alice, "/v1/cloud/chunk", chunks[0]), result)
+        bad = dict(chunks[0], sha256="0" * 64)
+        self.call(self.alice, "/v1/cloud/chunk", bad, 409)
+        received = self.call(self.alice, "/v1/cloud/download", {"session_id": self.session, "slot": "file-a"})
+        self.assertEqual(received["save"], body["save"])
+        with self.store.connect() as db:
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM cloud_chunks").fetchone()[0], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
