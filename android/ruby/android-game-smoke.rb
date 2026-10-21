@@ -167,9 +167,29 @@ module KIFAndroidGameSmoke
 
       phase("native_bitmap_and_real_shiny_processing") do
         @body.kuraycustomfile = "Graphics/BaseSprites/1.png"
+        $PokemonSystem.kurayindividcustomsprite = 0 # Honor the explicit test sprite instead of choosing a random alt.
+        @body.sprite_scale = 1
         check(File.file?(@body.kuraycustomfile), "required bundled Bulbasaur sprite is a real file")
+        png_header = File.open(@body.kuraycustomfile, "rb") { |file| file.read(24) }
+        raise "Probe sprite is not a PNG" unless png_header && png_header.start_with?("\x89PNG\r\n\x1a\n".b)
+        source_width, source_height = png_header[16, 8].unpack("N2")
+        puts "KIF_GAME_SMOKE_SPRITE_SOURCE path=#{@body.kuraycustomfile} realpath=#{File.realpath(@body.kuraycustomfile)} png=#{source_width}x#{source_height} sprite_scale=#{@body.sprite_scale} resolved=#{pbResolveBitmap(@body.kuraycustomfile)}"
+        raw = nil
+        begin
+          # Do not let GifBitmap's rescue turn a native read/decoder failure into
+          # an apparently valid empty 32x32 sprite during this diagnostic.
+          raw = Bitmap.new(@body.kuraycustomfile)
+          puts "KIF_GAME_SMOKE_RAW_BITMAP width=#{raw.width} height=#{raw.height}"
+          check(raw.width == source_width && raw.height == source_height, "native Bitmap decodes the real bundled PNG dimensions")
+        rescue Exception => error
+          puts "KIF_GAME_SMOKE_RAW_BITMAP_FAIL #{error.class}: #{error.message}"
+          raise
+        ensure
+          raw.dispose if raw && !raw.disposed?
+        end
         normal = GameData::Species.sprite_bitmap_from_pokemon(@body)
         @normal_bitmap = normal.bitmap.copy
+        puts "KIF_GAME_SMOKE_NORMAL_BITMAP path=#{normal.path} filename=#{normal.filename} width=#{@normal_bitmap.width} height=#{@normal_bitmap.height} sprite_scale=#{@body.sprite_scale}"
         normal.dispose
         @body.shiny = true
         @body.shinyValue = 90
@@ -179,8 +199,11 @@ module KIFAndroidGameSmoke
         @body.shinyKRS = [0] * 9
         shiny = GameData::Species.sprite_bitmap_from_pokemon(@body)
         @shiny_bitmap = shiny.bitmap.copy
+        puts "KIF_GAME_SMOKE_SHINY_BITMAP path=#{shiny.path} filename=#{shiny.filename} width=#{@shiny_bitmap.width} height=#{@shiny_bitmap.height} sprite_scale=#{@body.sprite_scale}"
         shiny.dispose
-        check(@normal_bitmap.width >= 96 && @normal_bitmap.height >= 96, "ordinary sprite is not the 1x1/32x32 fallback")
+        expected_width = source_width == 96 && source_height == 96 ? source_width * 3 : source_width
+        expected_height = source_width == 96 && source_height == 96 ? source_height * 3 : source_height
+        check(@normal_bitmap.width == expected_width && @normal_bitmap.height == expected_height, "ordinary sprite preserves the deterministic bundled source dimensions")
         check(@normal_bitmap.width == @shiny_bitmap.width && @normal_bitmap.height == @shiny_bitmap.height, "shiny preserves sprite dimensions")
         normal_pixels = sample(@normal_bitmap)
         shiny_pixels = sample(@shiny_bitmap)

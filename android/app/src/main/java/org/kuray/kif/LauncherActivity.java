@@ -58,6 +58,11 @@ public final class LauncherActivity extends Activity {
         Intent game = new Intent(this, GameActivity.class).putExtra("gamePath", installedRoot.getAbsolutePath());
         if (getIntent().getBooleanExtra("runtimeSmoke", false)) game.putExtra("runtimeSmoke", true);
         if (getIntent().getBooleanExtra("gameSmoke", false)) game.putExtra("gameSmoke", true);
+        if (getIntent().getBooleanExtra("networkSmoke", false)) game.putExtra("networkSmoke", true);
+        if (getIntent().getBooleanExtra("fontSmoke", false)) {
+            game.putExtra("fontSmoke", true);
+            game.putExtra("fontMetricsMode", getIntent().getIntExtra("fontMetricsMode", 1));
+        }
         startActivity(game); finish();
     }
     private void showSaveMenu() {
@@ -73,17 +78,7 @@ public final class LauncherActivity extends Activity {
             working = false; setContentView(installLayout);
             install();
         }); menu.addView(repair);
-        if (Analytics.isConfigured(this)) {
-            CheckBox statistics = new CheckBox(this); statistics.setText("Anonymous usage statistics");
-            statistics.setChecked(Analytics.isUsageEnabled(this));
-            statistics.setOnCheckedChangeListener((button, enabled) -> Analytics.setUsageEnabled(this, enabled));
-            menu.addView(statistics);
-            TextView explanation = new TextView(this); explanation.setTextSize(12);
-            explanation.setText("Shares a random install ID, app version, phone model / manufacturer and distribution channel. Region is estimated from IP by the statistics server. No saves, player names or GPS. Turning this off erases the random ID.");
-            menu.addView(explanation);
-        }
-        ScrollView scroll = new ScrollView(this); scroll.setFillViewport(true); scroll.addView(menu);
-        setContentView(scroll);
+        setContentView(menu);
     }
     @Override protected void onActivityResult(int request, int result, Intent data) {
         super.onActivityResult(request, result, data);

@@ -277,6 +277,9 @@ class PokemonLoadScreen
 
   #todo
   def copyKeybindings
+    # Desktop profiles and their restart prompt do not configure Android's
+    # independent virtual-key queue or its native SDL preferences directory.
+    return unless KIF::Platform.desktop_keybinding_bootstrap?
     #return
     keybinding_path = "Data/"
     keybinding_fileName="keybindings.mkxp1"

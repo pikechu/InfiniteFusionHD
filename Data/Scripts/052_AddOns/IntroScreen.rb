@@ -60,6 +60,9 @@ class Scene_Intro
     ret = 0
     loop do
       @screen.update
+      # The animation's wait updates Input and may already have consumed C.
+      # Preserve that edge before the outer update clears it for the next frame.
+      confirmed_during_animation = Input.trigger?(Input::C)
       Graphics.update
       Input.update
       if Input.press?(Input::DOWN) &&
@@ -68,7 +71,7 @@ class Scene_Intro
         ret = 1
         break
       end
-      if Input.trigger?(Input::C)
+      if confirmed_during_animation || Input.trigger?(Input::C)
         ret = 2
         break
       end

@@ -426,7 +426,7 @@ class Interpreter
     common_event = $data_common_events[@parameters[0]]
     if common_event
       @child_interpreter = Interpreter.new(@depth + 1)
-      @child_interpreter.setup(common_event.list, @event_id)
+      @child_interpreter.setup(KIF::Platform.common_event_commands(@parameters[0], common_event), @event_id)
     end
     return true
   end

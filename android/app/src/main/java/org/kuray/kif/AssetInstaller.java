@@ -6,8 +6,6 @@ import org.json.JSONObject;
 import java.io.*;
 import java.security.MessageDigest;
 import java.util.Iterator;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 /** Versioned base content plus persistent writable overlays. Never stores saves in a content version. */
 final class AssetInstaller {
@@ -94,6 +92,23 @@ final class AssetInstaller {
         JSONObject manifest = new JSONObject(read(context.getAssets().open("payload-manifest.json")));
         String id = manifest.getString("id");
         if (!id.matches("[a-f0-9]{24}")) throw new IOException("Invalid content identity");
+        int archiveFormat = manifest.optInt("archiveFormat", 1);
+        if (archiveFormat != 1 && archiveFormat != 2) throw new IOException("Unsupported payload archive format");
+        JSONObject entries = manifest.getJSONObject("files");
+        java.util.LinkedHashMap<String, PayloadArchive.Entry> inventory = new java.util.LinkedHashMap<>();
+        int archiveFiles = 0; long archiveBytes = 0;
+        for (Iterator<String> it = entries.keys(); it.hasNext();) {
+            String name = it.next(); JSONObject item = entries.getJSONObject(name);
+            String source = item.has("source") ? item.getString("source") : null;
+            if (archiveFormat == 1 && source != null) throw new IOException("Legacy payload cannot contain aliases");
+            PayloadArchive.Entry entry = new PayloadArchive.Entry(item.getLong("size"), item.getString("sha256"), source);
+            inventory.put(name, entry);
+            if (source == null) { archiveFiles++; archiveBytes += entry.size; }
+        }
+        long total = PayloadArchive.validate(inventory);
+        if (total != manifest.getLong("bytes") || (archiveFormat == 2 &&
+            (archiveFiles != manifest.getInt("archiveFiles") || archiveBytes != manifest.getLong("archiveBytes"))))
+            throw new IOException("Payload inventory totals mismatch");
         File files = context.getFilesDir();
         File root = new File(files, "content/" + id);
         File overlay = new File(files, "writable");
@@ -111,8 +126,6 @@ final class AssetInstaller {
             atomicText(new File(files, "active-content"), id);
             return root;
         }
-        JSONObject entries = manifest.getJSONObject("files");
-        long total = manifest.getLong("bytes"), completed = 0;
         // Existing verified files can be reused after interruption; do not demand another full copy.
         long remaining = total;
         for (Iterator<String> it = entries.keys(); it.hasNext();) {
@@ -121,43 +134,9 @@ final class AssetInstaller {
             if (dest.isFile() && dest.length() == entries.getJSONObject(name).getLong("size")) remaining -= dest.length();
         }
         if (files.getUsableSpace() < remaining + 128L * 1024 * 1024) throw new IOException("Need at least " + ((remaining + 134217728) / 1048576) + " MiB free to finish installation");
-        int count = 0;
-        try (ZipInputStream zip = new ZipInputStream(context.getAssets().open("payload.zip"))) {
-            ZipEntry entry;
-            byte[] buffer = new byte[262144];
-            while ((entry = zip.getNextEntry()) != null) {
-                String name = entry.getName();
-                if (entry.isDirectory() || !entries.has(name)) throw new IOException("Unexpected archive entry " + name);
-                JSONObject expected = entries.getJSONObject(name);
-                File dest = name.startsWith("Graphics/") ? safeChild(graphics, name.substring(9)) : safeChild(root, name);
-                mkdir(dest.getParentFile());
-                if (dest.isFile() && dest.length() == expected.getLong("size") && fileHash(dest).equals(expected.getString("sha256"))) {
-                    completed += dest.length(); count++; zip.closeEntry();
-                    if (count % 32 == 0) progress.update(completed, total, name);
-                    continue;
-                }
-                File pending = new File(dest.getPath() + ".installing");
-                MessageDigest digest = MessageDigest.getInstance("SHA-256");
-                long size = 0;
-                try (FileOutputStream out = new FileOutputStream(pending)) {
-                    int n;
-                    while ((n = zip.read(buffer)) != -1) {
-                        size += n;
-                        if (size > expected.getLong("size")) throw new IOException("Oversized entry " + name);
-                        out.write(buffer, 0, n); digest.update(buffer, 0, n);
-                    }
-                    out.getFD().sync();
-                }
-                if (size != expected.getLong("size") || !hex(digest.digest()).equals(expected.getString("sha256"))) {
-                    pending.delete(); throw new IOException("Checksum mismatch " + name);
-                }
-                if (!pending.renameTo(dest)) throw new IOException("Cannot install " + name);
-                completed += size; count++;
-                if (count % 32 == 0) progress.update(completed, total, name);
-                zip.closeEntry();
-            }
-        }
-        if (count != entries.length() || completed != total) throw new IOException("Incomplete content archive");
+        PayloadArchive.restore(context.getAssets().open("payload.zip"), inventory,
+            name -> name.startsWith("Graphics/") ? safeChild(graphics, name.substring(9)) : safeChild(root, name),
+            (done, expectedTotal, name) -> progress.update(done, expectedTotal, name));
         File active = new File(files, "active-content");
         if (active.isFile()) {
             String previous = read(new FileInputStream(active)).trim();

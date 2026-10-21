@@ -42,15 +42,42 @@ if defined?(System) && System.respond_to?(:is_android?) && System.is_android?
     end
   end
 
-  # HTTPS is supplied by Android's verified Java TLS stack through the pinned
-  # JNI bridge. The multiplayer source loader installs its JSON adapter later.
-  if ENV["KIF_ANDROID_NETWORK"] == "1"
+  if defined?(Bitmap)
+    module KIF
+      module AndroidBitmapPathInitialization
+        def initialize(*args, &block)
+          if args[0].is_a?(String) && KIF::Platform.respond_to?(:read_bitmap_path)
+            args[0] = KIF::Platform.read_bitmap_path(args[0])
+          end
+          super(*args, &block)
+        end
+      end
+    end
+    Bitmap.prepend(KIF::AndroidBitmapPathInitialization) unless Bitmap.ancestors.include?(KIF::AndroidBitmapPathInitialization)
+  end
+
+  # Input and verified networking are independent capabilities of the same helper.
+  # A missing helper must not restore the runtime's unverified HTTP client.
+  KIF::Platform.instance_variable_set(:@android_native_bridge_loaded, false)
+  KIF::Platform.instance_variable_set(:@android_network_bridge_loaded, false)
+  KIF::Platform.instance_variable_set(:@android_input_bridge_loaded, false)
+  if ENV["KIF_ANDROID_NETWORK"] == "1" || ENV["KIF_ANDROID_INPUT"] == "1"
     begin
       native_dir = ENV["KIF_NATIVE_LIB_DIR"]
-      raise LoadError, "Native library directory is unavailable" unless native_dir && native_dir.start_with?("/")
-      require File.join(native_dir, "libkif_android_bridge.so")
+      unless native_dir.is_a?(String) && (native_dir.start_with?("/") || native_dir.match?(/\A[A-Za-z]:[\\\/]/))
+        raise LoadError, "Native library directory unavailable"
+      end
+      bridge_library = File.join(native_dir, "libkif_android_bridge.so")
+      raise LoadError, "Native Android bridge unavailable" unless File.file?(bridge_library)
+      require bridge_library
+      raise LoadError, "Native Android bridge module unavailable" unless defined?(KIFAndroidBridge)
+      KIF::Platform.instance_variable_set(:@android_native_bridge_loaded, true)
+      KIF::Platform.instance_variable_set(:@android_network_bridge_loaded,
+        ENV["KIF_ANDROID_NETWORK"] == "1" && KIFAndroidBridge.respond_to?(:request))
+      KIF::Platform.instance_variable_set(:@android_input_bridge_loaded,
+        ENV["KIF_ANDROID_INPUT"] == "1" && KIFAndroidBridge.respond_to?(:input_poll))
     rescue LoadError, StandardError => error
-      System.puts("KIF verified network bridge unavailable (#{error.class})") if System.respond_to?(:puts)
+      System.puts("KIF Android native bridge unavailable (#{error.class}); continuing offline with native input") if System.respond_to?(:puts)
     end
   end
 end

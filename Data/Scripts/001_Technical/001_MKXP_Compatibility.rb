@@ -534,6 +534,7 @@ module Graphics
 end
 
 def pbSetResizeFactor(factor)
+  factor = KIF::Platform.screen_resize_factor(factor)
   if !$ResizeInitialized
     Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)
     $ResizeInitialized = true
