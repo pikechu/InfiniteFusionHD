@@ -1,0 +1,8 @@
+# Preserve source/catalog hashes and archived evidence on every checkout.
+/Data/Scripts/**/*.rb text eol=lf
+/Mods/*.rb text eol=lf
+/Data/*.dat -text
+/Data/*.rxdata -text
+/server/multiplayer/*.json text eol=lf
+/Fonts/*.otf -text
+/docs/multiplayer-functional-spec.zh-CN.md whitespace=-blank-at-eol,-blank-at-eof
