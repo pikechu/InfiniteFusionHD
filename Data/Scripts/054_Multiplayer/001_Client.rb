@@ -5,7 +5,7 @@ module KIFMultiplayer
   RULES_VERSION = "friendly-singles-v1"
   CLIENT_BUILD = "multiplayer-0.3.0-dev"
   MAX_RESPONSE_BYTES = 2 * 1024 * 1024
-  NON_JOURNALED_POST = /\A\/v1\/(?:replays\/[A-Za-z0-9_-]+\/download|battles\/[A-Za-z0-9_-]+\/heartbeat)\z/
+  NON_JOURNALED_POST = /\A\/v1\/(?:replays\/[A-Za-z0-9_-]+\/download|battles\/[A-Za-z0-9_-]+\/heartbeat|(?:auth|cloud|world|chat)\/[a-z]+)\z/
 
   class Error < StandardError
     attr_reader :code, :details
@@ -19,6 +19,46 @@ module KIFMultiplayer
   # A failed operation query or a gateway error says nothing about an earlier
   # submission with the same operation ID.
   class HTTPRejected < Error; end
+
+  # Android's translated MRI can crash while a secondary Ruby thread performs
+  # socket IO. A cooperative Fiber keeps IO on the game thread and yields at
+  # nonblocking socket waits, allowing Graphics/Input to continue between polls.
+  class FiberWorker
+    def initialize(&block)
+      @fiber = Fiber.new do
+        Thread.current[:kif_cooperative_network] = true
+        begin
+          @value = block.call
+        rescue Exception => error
+          @failure = error
+        ensure
+          Thread.current[:kif_cooperative_network] = false
+        end
+      end
+    end
+    def alive?; @fiber.alive?; end
+    def poll; @fiber.resume if alive?; self; end
+    def join
+      while alive?
+        poll
+        KIFMultiplayer.pump if alive?
+      end
+      self
+    end
+    def value
+      join
+      raise @failure if @failure
+      @value
+    end
+  end
+
+  def self.network_worker(&block)
+    if defined?(KIF::Platform) && KIF::Platform.android?
+      FiberWorker.new(&block)
+    else
+      Thread.new(&block)
+    end
+  end
 
   class << self
     attr_accessor :identity_change_guard
@@ -82,9 +122,9 @@ module KIFMultiplayer
     # mkxp's native JSON encoder truncates/rejects unsigned 32-bit Pokemon IDs.
     # Keep wire integers as Ruby Integers and parse only the JSON grammar; no
     # object hooks, class lookup, eval, or Marshal are involved.
-    def self.parse(text)
-      raise Error.new("Response is too large", "invalid_response") if text.bytesize > MAX_RESPONSE_BYTES
-      Parser.new(text).parse
+    def self.parse(text, max_bytes = MAX_RESPONSE_BYTES, max_nodes = MAX_NODES)
+      raise Error.new("Response is too large", "invalid_response") if text.bytesize > max_bytes
+      Parser.new(text, max_nodes).parse
     rescue Error
       raise
     rescue StandardError => e
@@ -137,7 +177,8 @@ module KIFMultiplayer
     end
 
     class Parser
-      def initialize(text)
+      def initialize(text, node_limit = MAX_NODES)
+        @node_limit = node_limit
         @text = text.dup.force_encoding(Encoding::UTF_8)
         raise Error.new("Invalid UTF-8 JSON", "invalid_response") unless @text.valid_encoding?
         # Indices are bytes, including when strings contain Chinese characters.
@@ -159,7 +200,7 @@ module KIFMultiplayer
       def value(depth)
         failure("nesting limit exceeded") if depth > MAX_DEPTH
         @nodes += 1
-        failure("node limit exceeded") if @nodes > MAX_NODES
+        failure("node limit exceeded") if @nodes > @node_limit
         whitespace
         case @text.getbyte(@index)
         when 123 then object(depth)
@@ -503,7 +544,7 @@ module KIFMultiplayer
       body = body ? WireJSON.parse(WireJSON.dump(body)) : {}
       # Downloads and presence updates must neither overwrite nor replay an
       # economic journal. Heartbeats remain usable while resolve is uncertain.
-      body["request_id"] ||= KIFMultiplayer.operation_id if read_post
+      body["request_id"] ||= KIFMultiplayer.operation_id if read_post && path !~ /\A\/v1\/(?:auth|cloud|world|chat)\//
       if mutation
         pending = @profile.account["pending"]
         if pending && !recovering
@@ -527,12 +568,13 @@ module KIFMultiplayer
 
     def raw_request(method, path, body = {}, timeout = 8.0)
       @transport.validate_url(server + path) if @transport.respond_to?(:validate_url)
+      @inflight_worker.poll if @inflight_worker && @inflight_worker.respond_to?(:poll)
       if @inflight_worker && @inflight_worker.alive?
         raise UncertainRequest.new("The previous network request is still stopping. Recover its operation after it finishes.", "network_busy")
       end
       endpoint, authorization = server + path, token
       result, failure, completed = nil, nil, false
-      worker = Thread.new do
+      worker = KIFMultiplayer.network_worker do
         begin
           result = @transport.call(method, endpoint, body, authorization, timeout)
         rescue StandardError => e
@@ -545,6 +587,8 @@ module KIFMultiplayer
       KIFMultiplayer.register_worker(worker) if KIFMultiplayer.respond_to?(:register_worker)
       deadline = KIFMultiplayer.monotonic + timeout
       until completed
+        worker.poll if worker.respond_to?(:poll)
+        break if completed
         pump
         if KIFMultiplayer.monotonic >= deadline
           raise UncertainRequest.new("Network timeout. Query the saved operation before retrying.", "network_timeout")
@@ -555,7 +599,10 @@ module KIFMultiplayer
       # Asynchronous Thread#kill can interrupt native bindings/IO cleanup. Keep
       # the inflight guard until natural completion instead of killing it.
       worker.join
-      raise UncertainRequest.new("Server unreachable: #{failure.class}", "unreachable") if failure
+      if failure
+        details = {"transport_code" => failure.respond_to?(:code) ? failure.code : failure.class.to_s}
+        raise UncertainRequest.new("Server unreachable: #{failure.class}", "unreachable", details)
+      end
       unless result.is_a?(Hash)
         raise UncertainRequest.new("Invalid HTTP response", "invalid_response")
       end
