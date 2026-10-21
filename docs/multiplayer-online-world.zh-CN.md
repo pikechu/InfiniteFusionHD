@@ -29,7 +29,11 @@
 
 本特性新增 `020_AndroidNetwork.rb`。Android HTTPS复用系统证书/主机名验证的Java桥接，拒绝不可信证书；联机JSON使用自有WireJSON，避免原生JSON整数转换。开发HTTP仅接受数字IP，使用安全Socket。Socket通过主线程Fiber和非阻塞IO轮询，避免当前模拟器在Ruby IO线程及原生域名/TLS路径上的崩溃。已有素材下载适配器可保留，联机独立传输支持大云存档及分片。
 
-Java HTTPS桥接单次调用由原有20秒总期限控制，客户端在返回后检查更短的请求期限。同步JNI在慢公网HTTPS下可能造成短时画面停顿；数字IP非阻塞测试不构成所有HTTPS情况下的帧率保证。
+HTTPS现使用异步JNI接口 `request_start/request_poll/request_cancel`：Java工作线程执行DNS、TLS和读写，游戏线程按帧查询结果；客户端的更短期限也会传给Java。取消和断开连接由后台处理，不在游戏线程等待网络。最多保留四个请求、两个网络工作线程；未取走的结果到期清理。暂停应用或退出会取消在途请求。TLS证书和主机名校验保持启用。
+
+旧APK没有异步接口时会明确提示升级，不会退回同步HTTPS。需要重新编译JNI桥接和Java壳并更新APK，仅替换Ruby脚本无法启用这项修复。打包会校验桥接来源、版本和源码/二进制哈希，拒绝混用旧库。
+
+独立Android测试包制造4秒HTTPS延迟，实测约4.57秒内完成168次绘图和Input更新，0.4秒期限、主动取消和两条并行请求通过。此结果针对网络等待引起的阻塞，不代表资源加载和大存档序列化没有其他性能开销。
 
 旧壳补充桥接加载、native源码构建和打包缺项检查。更新已安装Android.8时，应使用最新Android壳与本特性合并后的构建，不能把当前旧壳版本号当成Android.8升级包。未在本轮重装/发布完整APK。
 
@@ -50,8 +54,9 @@ Java HTTPS桥接单次调用由原有20秒总期限控制，客户端在返回�
 & scripts/multiplayer/test-all.ps1
 & scripts/multiplayer/run-world-online-test.ps1
 & '<Python>' scripts/multiplayer/run-android-network-test.py --serial emulator-5554
+& '<Python>' scripts/multiplayer/run-android-https-async-test.py --serial <测试模拟器>
 ```
 
 Windows真实三个独立Game进程验证了启动门禁、注册/登录、角色互见、移动朝向、原生渲染、两个频道、切图隔离、手动/定时远端保存、新进程恢复和新角色空槽保存。PNG位于各独立测试profile。输入由测试脚本控制，不代替人工键盘/触控验收。
 
-Android在已安装Android.8运行时内完成10项真实网络检查，包括大于64KiB的云存档、登录、地图/聊天接口、可信HTTPS、不可信证书拒绝和超时。诊断不读玩家存档，临时诊断脚本和配置已恢复。这不是新APK安装或Windows/Android完整游戏混合同地图验收；后者仍需两端最终相同源码/数据构建实测。
+前一阶段在Android.8运行时内完成10项网络检查；异步修复另用独立应用ID的测试包完成8项设备检查，详见验证记录。旧Android.8须更新APK后才能运行新异步HTTPS接口。完整Windows/Android游戏混合同地图仍需两端最终相同源码/数据构建实测。
