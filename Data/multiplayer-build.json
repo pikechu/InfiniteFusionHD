@@ -1,0 +1,2055 @@
+{
+  "version": 1,
+  "protocol": 2,
+  "rules_version": "friendly-singles-v1",
+  "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
+  "data_hash": "1e598a79b293f94e9490293259d4fec7ca516234b9aaea7be395168cb4536431",
+  "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
+  "files": {
+    "Data/Actors.rxdata": {
+      "sha256": "fc5bc3d7fd6b2fa0804fb277079acb03763bb8a5e5354e954043144d53926e7c",
+      "size": 1574
+    },
+    "Data/Armors.rxdata": {
+      "sha256": "ed7f4914251ad7203e59a91de34c01cf83067e8197ebfa5ec85d3fdcf31d28fc",
+      "size": 222
+    },
+    "Data/Classes.rxdata": {
+      "sha256": "ae99c3ca6a52cd6aad9ad56732eb5d299e4cb2f5dc5fd630e782f6e1c8be9b1c",
+      "size": 182
+    },
+    "Data/CommonEvents.rxdata": {
+      "sha256": "2fb8eba98687cef7787a9296b850879321b658de59af8160bca69970151a08c0",
+      "size": 157955
+    },
+    "Data/Constants.rxdata": {
+      "sha256": "fc1ac6c776103f7ec1f6cce765b1deb80ed54c314ed338adc69b625fbf9689f5",
+      "size": 825525
+    },
+    "Data/Enemies.rxdata": {
+      "sha256": "560dabb3fc1d924245bbbd71fd46a99d75f72175a7db65215c6c683015052341",
+      "size": 541
+    },
+    "Data/Items.rxdata": {
+      "sha256": "6cc33b147ecf9473a5c92480b6db9e056c42d326f1148771b3f356f3d01cbad0",
+      "size": 428
+    },
+    "Data/PluginScripts.rxdata": {
+      "sha256": "9140c85f1b09e03f67249bac40beb16b5b512b8915f702f44937b9011ff7205d",
+      "size": 4
+    },
+    "Data/Scripts.rxdata": {
+      "sha256": "e3c3711093ba707267f5c046e0229ce23e71eeaff97a420bd93820c3b85e4f1b",
+      "size": 758
+    },
+    "Data/Scripts/000_Platform.rb": {
+      "sha256": "fc24b5b03abedd86f18b5ed0d4233f8c2e0fcd87ec98259f4ccba3a9f96d9630",
+      "size": 3460
+    },
+    "Data/Scripts/001_Settings.rb": {
+      "sha256": "b6efb3365864b755107356cf27961bbc8acca19e3d7bceea7fd110594b81b273",
+      "size": 28329
+    },
+    "Data/Scripts/001_Technical/001_Debugging/001_PBDebug.rb": {
+      "sha256": "60712924d92384cf7f6c2a8e52c509b233b61f81a80743d6711c0da2502e4680",
+      "size": 812
+    },
+    "Data/Scripts/001_Technical/001_Debugging/002_DebugConsole.rb": {
+      "sha256": "0412665a7dae21fc3caaeff7e4e3804ca2bdeca9b8569e78571c2c8891f37bd9",
+      "size": 1519
+    },
+    "Data/Scripts/001_Technical/001_Debugging/003_Errors.rb": {
+      "sha256": "49993838c7d62a8143d42a2ad694937e55b24c2193531e7c0f5060994eccce53",
+      "size": 3390
+    },
+    "Data/Scripts/001_Technical/001_Debugging/004_Validation.rb": {
+      "sha256": "37676f176a9dfe47b989d354a0858bbdf1dc2d420430289211739b80c43aab20",
+      "size": 1528
+    },
+    "Data/Scripts/001_Technical/001_Debugging/005_Deprecation.rb": {
+      "sha256": "a4471c73f917e35e86c03c2c9e631bb5d383903be2256af6a3fe5c8dcc1636a6",
+      "size": 2174
+    },
+    "Data/Scripts/001_Technical/001_MKXP_Compatibility.rb": {
+      "sha256": "47fe0dad174578b9bc32f93a25891875a83a54c431784c4cd47a488995f529af",
+      "size": 21308
+    },
+    "Data/Scripts/001_Technical/002_Files/001_FileTests.rb": {
+      "sha256": "729aaeb75cfbcee3baca922ea1f30b03295eef68180e7c1be2644c39a86cb29d",
+      "size": 13351
+    },
+    "Data/Scripts/001_Technical/002_Files/002_FileMixins.rb": {
+      "sha256": "f0655ce544e2f98777807a1226035537dbf0815ce056434e301e0644afae43ee",
+      "size": 2393
+    },
+    "Data/Scripts/001_Technical/002_Files/003_HTTP_Utilities.rb": {
+      "sha256": "2228fb81f98918cd72f9e6feb2808fa780c410bdc6a0bf323d7b53fa977515cd",
+      "size": 3860
+    },
+    "Data/Scripts/001_Technical/002_RubyUtilities.rb": {
+      "sha256": "8c5b45f37b1767f483c3d084fe25eece5971093bf6488094570819b8ef1d07f4",
+      "size": 4001
+    },
+    "Data/Scripts/001_Technical/003_Intl_Messages.rb": {
+      "sha256": "007bfb47682255e53ef37d2bdc70ba85b3b423191c869a20e0de6d0745e69a54",
+      "size": 20508
+    },
+    "Data/Scripts/001_Technical/004_Input.rb": {
+      "sha256": "b96c79ac4436afdf0e040cbae528a3929252a26bff961ef39fc71cda59643284",
+      "size": 657
+    },
+    "Data/Scripts/001_Technical/005_PluginManager.rb": {
+      "sha256": "930199bdcfa0986719adddf2c87a736b7500ac3b4dcd26a53725612bc1de8c8d",
+      "size": 37248
+    },
+    "Data/Scripts/001_Technical/006_RPG_Sprite.rb": {
+      "sha256": "157870fa33483f2682b419b7b192b5262078684c020e0c1c2f1fefd073004355",
+      "size": 14678
+    },
+    "Data/Scripts/002_BattleSettings.rb": {
+      "sha256": "3af657787a1ec5cfd159e68458041de1f3e2a8d0ef590b490bdd0fe3513450c8",
+      "size": 4632
+    },
+    "Data/Scripts/002_Save data/001_SaveData.rb": {
+      "sha256": "2ca00181f4fc9bde61a53c21167729c33f0c9c52a0a27eac58aefc289265ee62",
+      "size": 3654
+    },
+    "Data/Scripts/002_Save data/002_SaveData_Value.rb": {
+      "sha256": "d7000a1102b46a48a9ccdc5673f66e3ee8df58faef94fde4cd18c3295ea19bd9",
+      "size": 11131
+    },
+    "Data/Scripts/002_Save data/003_SaveData_Conversion.rb": {
+      "sha256": "532734a108f692d6d3f6c4035f808d91caa039089c38eb44eeb853372fb149a1",
+      "size": 7991
+    },
+    "Data/Scripts/002_Save data/004_Game_SaveValues.rb": {
+      "sha256": "65a4f79d369190d786cdd09bb723752cf2e4977a31d984fab7648b0954676434",
+      "size": 5464
+    },
+    "Data/Scripts/002_Save data/005_Game_SaveConversions.rb": {
+      "sha256": "c2d5fb1c55cae9bf6af0082f68ed08a678bccca7e43ebedf652514614a4bee5c",
+      "size": 8622
+    },
+    "Data/Scripts/003_Game processing/001_StartGame.rb": {
+      "sha256": "653598dcc11d17ae119ee54ebbc25ca9b83e6f25bb3e444f3825239a26d47ba4",
+      "size": 6737
+    },
+    "Data/Scripts/003_Game processing/002_Scene_Map.rb": {
+      "sha256": "ffdc6632169f4efbf9317081b83fe730cda1038448404e74f69c7a68bcac117c",
+      "size": 8117
+    },
+    "Data/Scripts/003_Game processing/003_Interpreter.rb": {
+      "sha256": "95815ec15cd663ec846dfd187690827e024310c7aceff1c176c52c03ca7df0f2",
+      "size": 15091
+    },
+    "Data/Scripts/003_Game processing/004_Interpreter_Commands.rb": {
+      "sha256": "dd21a0e468f657de873363ad0fb5f6394bff993b605b110a5fbac8104dfcaf92",
+      "size": 42839
+    },
+    "Data/Scripts/003_Game processing/005_Event_Handlers.rb": {
+      "sha256": "263bf90ddccbb5877b79ca66334edc5ec47dcb9ca1e58f0dee12ea7d346f322e",
+      "size": 8122
+    },
+    "Data/Scripts/003_Game processing/006_Event_OverworldEvents.rb": {
+      "sha256": "14ef5c7b5951195af9e26cf53e7e6833055facf4be0aa50e3878fe2255a71f72",
+      "size": 7290
+    },
+    "Data/Scripts/004_Game classes/001_Game_Screen.rb": {
+      "sha256": "f6f0580ebd5267d5baa94bf52e74702ce7c9f273222a5f1b1e5c237d42da7bb3",
+      "size": 5767
+    },
+    "Data/Scripts/004_Game classes/001_Switches and Variables/001_Game_Temp.rb": {
+      "sha256": "cf8fd9c37d0444cebe9f14daf4a9d6c78c1bc933eddcfc1341571ce9e8971852",
+      "size": 2946
+    },
+    "Data/Scripts/004_Game classes/001_Switches and Variables/002_Game_Switches.rb": {
+      "sha256": "03a49cf4adaae6f655abf8117ecac1334138210d2c3cefaac1e09432a035986c",
+      "size": 1368
+    },
+    "Data/Scripts/004_Game classes/001_Switches and Variables/003_Game_Variables.rb": {
+      "sha256": "b546bd5432d577ec813ea38e7d708390e7a1a9c7e41319b049c2a4ef12d0ffcb",
+      "size": 1373
+    },
+    "Data/Scripts/004_Game classes/001_Switches and Variables/004_Game_SelfSwitches.rb": {
+      "sha256": "767c194a1f3bbeb07fc29f2d0145f5f81fe29a1e31cf41d49a15c321b97a2dd6",
+      "size": 1262
+    },
+    "Data/Scripts/004_Game classes/002_Game_System.rb": {
+      "sha256": "cb136e2b4bbf0860b45049a47be1cdf912adff95359d688d066e89e5eb3d80e3",
+      "size": 7837
+    },
+    "Data/Scripts/004_Game classes/003_Game_Picture.rb": {
+      "sha256": "3ba4be0fe01ebbaddb990e44c7d819d4e518212c62b35b09459f314cb80ea25b",
+      "size": 5867
+    },
+    "Data/Scripts/004_Game classes/004_Game_Map.rb": {
+      "sha256": "8754aee023cf4f4e9566ef12e2b22dfede22c04a9316918663b0e4545dba535d",
+      "size": 17302
+    },
+    "Data/Scripts/004_Game classes/005_Game_Map_Autoscroll.rb": {
+      "sha256": "03e9b2d7287757c3f1df6d16301bca5103547a45157db0eed99093e0eaedeb11",
+      "size": 6727
+    },
+    "Data/Scripts/004_Game classes/006_Game_MapFactory.rb": {
+      "sha256": "b9ed74935c4274fcbb13e698058fea4f70dcc66e582a7909d19f7b8d6e7d7899",
+      "size": 16277
+    },
+    "Data/Scripts/004_Game classes/007_Game_Character.rb": {
+      "sha256": "3f6ede834e970ad0daebf1f1c61aedd3e09cd3b1b85c21312f3534d737dd6209",
+      "size": 33052
+    },
+    "Data/Scripts/004_Game classes/008_Game_Event.rb": {
+      "sha256": "2285c86d5f1181b75d41b792852a9f6929d50ffa0b450aeed67085c5085e9c6c",
+      "size": 7718
+    },
+    "Data/Scripts/004_Game classes/009_Game_Player.rb": {
+      "sha256": "4a0fe7f86b18ef70b577e8e79c8205de1ae983e5f94260b4d58db0cf4ac27a2b",
+      "size": 16184
+    },
+    "Data/Scripts/004_Game classes/010_Game_Player_Visuals.rb": {
+      "sha256": "53c154fe8241259fccfc0f69d2eda8b7c4fbe8805336782878c3d200d6fbc36b",
+      "size": 3749
+    },
+    "Data/Scripts/004_Game classes/011_Game_CommonEvent.rb": {
+      "sha256": "68930463ee692458d01d5d440c0cb47b6a99d3721818298d3c4a0f240bc5c5eb",
+      "size": 3201
+    },
+    "Data/Scripts/004_Game classes/012_Game_DependentEvents.rb": {
+      "sha256": "276fa38ceb1c2255f95ebb3c7ca7a4f125258cd9c9f608924c24de5780f3f451",
+      "size": 17956
+    },
+    "Data/Scripts/005_Map renderer/001_Tilemap_XP.rb": {
+      "sha256": "03cbb8b013d7e5ed6f7946247e32df8962e3221eaddf990ecd45810a331c50ab",
+      "size": 29319
+    },
+    "Data/Scripts/005_Sprites/001_Sprite_Picture.rb": {
+      "sha256": "887ad936cd46fab1997eb429bcfcf9f4e62a9a71acdfe294735b0302c3b4b674",
+      "size": 1620
+    },
+    "Data/Scripts/005_Sprites/002_Sprite_Timer.rb": {
+      "sha256": "e4578d59e30d78a981e106f46481fcc1004aff221f9878dae647070f0e556ec1",
+      "size": 1119
+    },
+    "Data/Scripts/005_Sprites/003_Sprite_Character.rb": {
+      "sha256": "fd143252765e4b218e40596b028121dc654b6f5464f4c7a8b0f33cc07e67315c",
+      "size": 8236
+    },
+    "Data/Scripts/005_Sprites/004_Sprite_Reflection.rb": {
+      "sha256": "c9bbaf6b7a9cdb1efed1b30e680f140f4b885ede940fbb0e9d9365e224ba5e8e",
+      "size": 2587
+    },
+    "Data/Scripts/005_Sprites/005_Sprite_SurfBase.rb": {
+      "sha256": "a6bd115d1df550eb25cdd0aac988e5b9c05ca74aad33c40463d94d6572738818",
+      "size": 7287
+    },
+    "Data/Scripts/005_Sprites/006_Spriteset_Global.rb": {
+      "sha256": "be813e96e1b0678482434f1eea38572ac883b4adf9f78257bb68290f6f0e14eb",
+      "size": 805
+    },
+    "Data/Scripts/005_Sprites/007_Spriteset_Map.rb": {
+      "sha256": "1102df64c4cd31792f75ace87683709979b463b2efab3ae3401c3b32600d24d1",
+      "size": 5136
+    },
+    "Data/Scripts/005_Sprites/008_Sprite_AnimationSprite.rb": {
+      "sha256": "1a730da4a3b76a70319346e08ad4f90f2c9711f71acb26d31e691f16598e82c5",
+      "size": 2260
+    },
+    "Data/Scripts/005_Sprites/009_Sprite_DynamicShadows.rb": {
+      "sha256": "5a4a1c01cd450932880fb8c461a02fb5aa73833979f84333d3577958e8601b62",
+      "size": 8333
+    },
+    "Data/Scripts/005_Sprites/010_ParticleEngine.rb": {
+      "sha256": "797faf3f645cfd959fe9a96f15dce5d6169a3d418519ceba6977e54e592e4730",
+      "size": 15955
+    },
+    "Data/Scripts/005_Sprites/011_PictureEx.rb": {
+      "sha256": "01d92573ef447ac6c76bd8cda2c18632777e8e1736274d65b261e03ea6c5fee8",
+      "size": 16906
+    },
+    "Data/Scripts/005_Sprites/012_Interpolators.rb": {
+      "sha256": "3c232c267b822d733dee9ec3a68582ffb42078389489cc9004660f8e25067a1d",
+      "size": 3823
+    },
+    "Data/Scripts/005_Sprites/013_ScreenPosHelper.rb": {
+      "sha256": "eee3ab6ef9909a70c60ac4bac87bc879761db2bdcfe6457e312355b72355d8ce",
+      "size": 812
+    },
+    "Data/Scripts/005_Sprites/013_Sprite_Player_Offsets.rb": {
+      "sha256": "829f3d728412818173324817d9bd7fcf39ac50bab180cb42d5b55edad28da62a",
+      "size": 1505
+    },
+    "Data/Scripts/005_Sprites/013_Sprite_Wearable.rb": {
+      "sha256": "b72cae03fe10ef04d7cefb6990eed03025b70fc36a54289c25300ce99cd711dc",
+      "size": 7978
+    },
+    "Data/Scripts/005_Sprites/014_Sprite_Hair.rb": {
+      "sha256": "e578da44409fd018a2df21fd3408b49a2e4428dcb0b758ddf8eaa8374a840f45",
+      "size": 181
+    },
+    "Data/Scripts/005_Sprites/014_Sprite_Hat.rb": {
+      "sha256": "df5c232b3fe0d75fc1e719955cc026a5b5543810d68fbd04f934475512417292",
+      "size": 7587
+    },
+    "Data/Scripts/005_Sprites/016_Sprite_Player.rb": {
+      "sha256": "ed36ed910e21d8aaf0af12542b575884a7130c2a17efbef00e77a4305cbb697b",
+      "size": 3218
+    },
+    "Data/Scripts/006_Map renderer/001_TilemapRenderer.rb": {
+      "sha256": "ce8988735379adb6b7080f2c0db7bc6209de0cccbf5620f098736c923935cb90",
+      "size": 19261
+    },
+    "Data/Scripts/006_Map renderer/002_TilesetWrapper.rb": {
+      "sha256": "4c2702abf504a959c76adda3a8fd3e6655eec8fc3cab7b7c813c5b539543d559",
+      "size": 4146
+    },
+    "Data/Scripts/006_Map renderer/003_AutotileExpander.rb": {
+      "sha256": "3e4afdfdee49f00c3478c64a88b2f4d9f4084011c8ea90859f0d29a0aa66aa57",
+      "size": 3488
+    },
+    "Data/Scripts/006_Map renderer/004_TileDrawingHelper.rb": {
+      "sha256": "acd96f7e259427608b76e6f63cc770352c80f66e85b1d18244495bb56604085b",
+      "size": 8028
+    },
+    "Data/Scripts/007_Objects and windows/001_RPG_Cache.rb": {
+      "sha256": "8fe90e740d1275a2c6a5be0fd7b8f14f26a6182352cf62afa1c874013a18172e",
+      "size": 4373
+    },
+    "Data/Scripts/007_Objects and windows/002_MessageConfig.rb": {
+      "sha256": "32918ec7eea617982e6ebd32c53b1e8aec9421339facb3d176aa11f6988895bc",
+      "size": 25790
+    },
+    "Data/Scripts/007_Objects and windows/003_Window.rb": {
+      "sha256": "266f953ba8bd3936c767f6bce042e2d3550dce0587820d7817145636822428b7",
+      "size": 16990
+    },
+    "Data/Scripts/007_Objects and windows/004_SpriteWindow.rb": {
+      "sha256": "8e7536def4b76bcb8e263afaa2c3a97fb4cec1e7f7a52b464d83d6f38d8ca597",
+      "size": 27752
+    },
+    "Data/Scripts/007_Objects and windows/005_SpriteWindow_text.rb": {
+      "sha256": "cd285c4870c4549a0355468328f53972356d2586475cb2c3d8fce9bfded2e9da",
+      "size": 37217
+    },
+    "Data/Scripts/007_Objects and windows/006_SpriteWindow_pictures.rb": {
+      "sha256": "580a6a1fa3e52a60b0cc6e295772b0bd4dd988c8b87bf692db5106b2cb60cc90",
+      "size": 3337
+    },
+    "Data/Scripts/007_Objects and windows/007_SpriteWrapper.rb": {
+      "sha256": "56afdfd159b638d08347b96dfc541f78972a5a185b5262d46a931fcd8fefbc8c",
+      "size": 11167
+    },
+    "Data/Scripts/007_Objects and windows/008_AnimatedBitmap.rb": {
+      "sha256": "6df2719541c1cef152daac752d49f1776c0c96c68567c20b8bde50a7a6d3594c",
+      "size": 53891
+    },
+    "Data/Scripts/007_Objects and windows/009_Planes.rb": {
+      "sha256": "091bd62704d0cc3fff307734e788e11aec39d0658903a00060b677b73b7a1f41",
+      "size": 5863
+    },
+    "Data/Scripts/007_Objects and windows/010_DrawText.rb": {
+      "sha256": "20cc865a5b95d618cecfad45e8fbbf2fc60581775ce334336e08d567c170dfc0",
+      "size": 41344
+    },
+    "Data/Scripts/007_Objects and windows/011_Messages.rb": {
+      "sha256": "8ddf3425fdb178739ef1b57b2c7ee11ca590dadeb1ed616be349e4610193445d",
+      "size": 32369
+    },
+    "Data/Scripts/007_Objects and windows/012_TextEntry.rb": {
+      "sha256": "dd5aa73303ffcaf13b10fc986aaedbdfce5235430c829c3093a26a42b371fa58",
+      "size": 15120
+    },
+    "Data/Scripts/008_Audio/001_Audio.rb": {
+      "sha256": "d29d1fb4d01d29363c32cefd8bc93a8188dc539e43141e664bf7529485b938c5",
+      "size": 4930
+    },
+    "Data/Scripts/008_Audio/002_Audio_Play.rb": {
+      "sha256": "0303ad548049046f74015b158713d893199cc30c461166374ab0e161600552db",
+      "size": 10334
+    },
+    "Data/Scripts/009_Scenes/001_Transitions.rb": {
+      "sha256": "cbb01f5899b59220d54eb64d6bfb32dc8e86e8b7622737ce42ec36defdf6fa50",
+      "size": 52741
+    },
+    "Data/Scripts/009_Scenes/002_EventScene.rb": {
+      "sha256": "ef2fe2ee2631540cb334f6266f9ee3b93ed112c879c98ffe5e4debc4a0e5d8a3",
+      "size": 4960
+    },
+    "Data/Scripts/010_Data/001_GameData.rb": {
+      "sha256": "c732c01f1dc51217493d4c7075a9c9022255c4f5501d07d0368e3d4cc2fec1f5",
+      "size": 10663
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/001_GrowthRate.rb": {
+      "sha256": "a7ac1b6664f4971555c74f87de45c4a5637d085a61f9f020cbe7b2bfc0124312",
+      "size": 9713
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/002_GenderRatio.rb": {
+      "sha256": "72ae847ead19d4f5ef9b9b2733f46048b85f870bb86dd012efc95c30e02c363b",
+      "size": 2045
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/003_EggGroup.rb": {
+      "sha256": "bd973e79cdbb456e8dc16a62f015ce6faf0c370d1c5298fd54eb914f96394cef",
+      "size": 3260
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/004_BodyShape.rb": {
+      "sha256": "4decab0343201f007d5eacdbb750c9d204c9e178f67a41fffd7c7d43b1baad6e",
+      "size": 2623
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/005_BodyColor.rb": {
+      "sha256": "bac8a885a89f2e70227d813d19ae9b55d5e1830818097ecf9d9e9d8796120b34",
+      "size": 1883
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/006_Habitat.rb": {
+      "sha256": "bca068375b979bd7743e386df48370d05611d1f8689cf653de941138999e52e4",
+      "size": 1401
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/007_Evolution.rb": {
+      "sha256": "849ee34a7f94d0c300518200b226b418d9bfbf8e7c08abef839dea83d5f3f58f",
+      "size": 17837
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/008_Stat.rb": {
+      "sha256": "8e6c81683c35d04278a009f117ca4f61e7a2de9b54e78a7b1cde39c2c6ba372d",
+      "size": 3523
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/009_Nature.rb": {
+      "sha256": "3bce75613ff2f59be28b9289923e2196353e01708fa297de9e5515ef59d17dc5",
+      "size": 4960
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/010_Status.rb": {
+      "sha256": "1c5ebb152697a35b7e7810f70813ffcdfe206a364110c316179eefa81e88b40f",
+      "size": 2051
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/011_TerrainTag.rb": {
+      "sha256": "101e0604d38c827cc2093594e0f95f9c5c1f45caba209413713b3dd6b608699d",
+      "size": 11510
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/012_Weather.rb": {
+      "sha256": "b9c2914cf29b57176a2a54549f60c659a2acbf42379d0277d4e5cbbf0a29b527",
+      "size": 5905
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/013_EncounterType.rb": {
+      "sha256": "bc6aff36932e5d9eeced459e88d5c6f58c86f25fb22441eb2bed0483347f4be6",
+      "size": 10559
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/014_Environment.rb": {
+      "sha256": "10ca0660aec52003d55ea6af51fa3a803d606591c5864dc4a82c93b359a4b930",
+      "size": 2676
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/015_BattleWeather.rb": {
+      "sha256": "6fa6d2ba045e1171bd2e90ab1ccf132b6814289616a6b6ba4dde51a9422ea6af",
+      "size": 1758
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/016_BattleTerrain.rb": {
+      "sha256": "a7e99d198028cc71200d41da058b9ca8ebce5c8f7b6fc9c0b5047a2e44829006",
+      "size": 1327
+    },
+    "Data/Scripts/010_Data/001_Hardcoded data/017_Target.rb": {
+      "sha256": "5c2dd6af9726a62967e875c3953105234017013077532076b9892aaaa8e8a672",
+      "size": 5381
+    },
+    "Data/Scripts/010_Data/002_PBS data/001_MiscPBSData.rb": {
+      "sha256": "da3d7341f202d9b734a0040177cb58d5ba8a4e6eb02d24cd0d32f1ac7a386cff",
+      "size": 3923
+    },
+    "Data/Scripts/010_Data/002_PBS data/002_PhoneDatabase.rb": {
+      "sha256": "166b3e3da3428431a4008c2ce210a453ba2470bbad8daf0d7230d32aac26ef8c",
+      "size": 804
+    },
+    "Data/Scripts/010_Data/002_PBS data/003_Type.rb": {
+      "sha256": "b83e668edead94168a65217324f73b988caaa4a6aa7a54b74f32b09e05331b72",
+      "size": 4859
+    },
+    "Data/Scripts/010_Data/002_PBS data/004_Ability.rb": {
+      "sha256": "5a4166faaa1f8f22966ce9f498b9f97d66edc876db0b8130ecbac6a03b93e469",
+      "size": 823
+    },
+    "Data/Scripts/010_Data/002_PBS data/005_Move.rb": {
+      "sha256": "3322b28e7b1232a05784c9a1b82f10a8ca95e94d0ab8d8e6858fe08a208be5f7",
+      "size": 2690
+    },
+    "Data/Scripts/010_Data/002_PBS data/006_Item.rb": {
+      "sha256": "0a93d5c53c78edd87afb149c0a663cd58e78965826bad523f5c0dd8f2afc4447",
+      "size": 12366
+    },
+    "Data/Scripts/010_Data/002_PBS data/007_BerryPlant.rb": {
+      "sha256": "65bb248e0685e77912bf9bf66b9b3bb080a7bf4dbe4de6da0898d7667a69c204",
+      "size": 1124
+    },
+    "Data/Scripts/010_Data/002_PBS data/008_Species.rb": {
+      "sha256": "e3287aac65fee67aec281bd6793c96d1070c787b84b552a8f35bc202656f14aa",
+      "size": 17239
+    },
+    "Data/Scripts/010_Data/002_PBS data/009_Species_Files.rb": {
+      "sha256": "016fe24d9c68ca87abb5038206d055519911c49a5bae676fde1a5f16f44dd86a",
+      "size": 18028
+    },
+    "Data/Scripts/010_Data/002_PBS data/010_Ribbon.rb": {
+      "sha256": "4627aca306b29e2dea98a89c0066086117675fbd17975bc18a54d20938de0871",
+      "size": 826
+    },
+    "Data/Scripts/010_Data/002_PBS data/011_Encounter.rb": {
+      "sha256": "a19537d3da32b2d7512d6325788bcb965926e9d7590ee017b02de4a62d79fa7e",
+      "size": 2579
+    },
+    "Data/Scripts/010_Data/002_PBS data/011_EncounterModern.rb": {
+      "sha256": "2109a8962c174a780a9ce36c08d69834693d3ae462764cb4561734b758911c9b",
+      "size": 2589
+    },
+    "Data/Scripts/010_Data/002_PBS data/011_Encounter_random.rb": {
+      "sha256": "9834f461881c7029e840c46ba0cf156247f4e5faab60d67ae93dcfd246ef52cf",
+      "size": 2594
+    },
+    "Data/Scripts/010_Data/002_PBS data/012_TrainerType.rb": {
+      "sha256": "7e0167d2741c6666a7a0b4777adb3f72c3ec49cd371002015b7b879900502d2a",
+      "size": 6069
+    },
+    "Data/Scripts/010_Data/002_PBS data/013_Trainer.rb": {
+      "sha256": "2aa0d080f26bfa01c02df488ffb1d112ee6f56608d6fecad80fe6d59a8f20c8d",
+      "size": 15168
+    },
+    "Data/Scripts/010_Data/002_PBS data/013_TrainerExpert.rb": {
+      "sha256": "437d7a7f17846b8c2b44fa48c56b859419c2eff67031f5edc033faad89a1448d",
+      "size": 583
+    },
+    "Data/Scripts/010_Data/002_PBS data/013_TrainerModern.rb": {
+      "sha256": "0e968f6a361e462f96e51c7482eb367a62137184df9cbbe557ac0b5429a75d70",
+      "size": 14351
+    },
+    "Data/Scripts/010_Data/002_PBS data/014_Metadata.rb": {
+      "sha256": "c1430df16eb8a71a2fb4bb5c1f47bdf62e5a030f12ba073eac6ed8ef9439b46a",
+      "size": 6307
+    },
+    "Data/Scripts/010_Data/002_PBS data/015_MapMetadata.rb": {
+      "sha256": "d13eae0fae9266a53596ab0f90acd6816ba5849f9371d01409e95ef055af4820",
+      "size": 7289
+    },
+    "Data/Scripts/011_Battle/001_Battler/001_PokeBattle_Battler.rb": {
+      "sha256": "a78cd2da90d9804f4a20db6f404c49338dff388e90bb3a39a9b0436a3c81cace",
+      "size": 25207
+    },
+    "Data/Scripts/011_Battle/001_Battler/002_Battler_Initialize.rb": {
+      "sha256": "25d5f4c05c6100c0573c46e61e708a39f8f0e68ecfe7601e04bbae8d2e01f950",
+      "size": 13518
+    },
+    "Data/Scripts/011_Battle/001_Battler/003_Battler_ChangeSelf.rb": {
+      "sha256": "3be375dcfd6e6eb57a4d3a93117e34849613ed22b80dd3023c09de94e5f5c42b",
+      "size": 11527
+    },
+    "Data/Scripts/011_Battle/001_Battler/004_Battler_Statuses.rb": {
+      "sha256": "7b7c3f843a0085e954818d4b829a1551bf404e6f4fa43d0fbeff1c310586c3d2",
+      "size": 24321
+    },
+    "Data/Scripts/011_Battle/001_Battler/005_Battler_StatStages.rb": {
+      "sha256": "ea44e435b6198604ee0dc5470835b9d6f1af5297cf70c1bea52734918c0dcf33",
+      "size": 13007
+    },
+    "Data/Scripts/011_Battle/001_Battler/006_Battler_AbilityAndItem.rb": {
+      "sha256": "7d244d8d501bbf867e3ff202ac1dee7d7949790079809eadaf0cf9974acbf569",
+      "size": 12483
+    },
+    "Data/Scripts/011_Battle/001_Battler/007_Battler_UseMove.rb": {
+      "sha256": "1160c03a5d5ffb4a8529b20237a5e958927d6107c6965f561147566b0475c31b",
+      "size": 35874
+    },
+    "Data/Scripts/011_Battle/001_Battler/008_Battler_UseMove_Targeting.rb": {
+      "sha256": "7de1a218a9edbd26841be6ea53a8091b779d8211aef3447ea267c6bd58a2445b",
+      "size": 7824
+    },
+    "Data/Scripts/011_Battle/001_Battler/009_Battler_UseMove_SuccessChecks.rb": {
+      "sha256": "64d01b8c146be9f2912155f47f0549a708e51ece72651350a3647228dfcf1dfa",
+      "size": 24028
+    },
+    "Data/Scripts/011_Battle/001_Battler/010_Battler_UseMove_TriggerEffects.rb": {
+      "sha256": "caf52192180fd3191a3b726c2d3ebdc4ce868fad0839513b00677f0f9cd30396",
+      "size": 8796
+    },
+    "Data/Scripts/011_Battle/001_PBEffects.rb": {
+      "sha256": "40d8102b6a97bf837221dc440b0113b0cbc8651395af0b4a57d45574f331bbdc",
+      "size": 5745
+    },
+    "Data/Scripts/011_Battle/002_BattleHandlers.rb": {
+      "sha256": "c2f6538d955be24a1a6b9e3cf2e66bd81ed018ecc74cb92872bd957fba0bb12a",
+      "size": 24879
+    },
+    "Data/Scripts/011_Battle/002_Move/001_PokeBattle_Move.rb": {
+      "sha256": "90d68682400f33511f4f3d5c97c4af88b6f69d6b35588762a1d4b1038647d867",
+      "size": 5564
+    },
+    "Data/Scripts/011_Battle/002_Move/002_Move_Usage.rb": {
+      "sha256": "76177840d2feff71c35ff3227aa7b14e89d73fc84407cec7247fd3442555af33",
+      "size": 14302
+    },
+    "Data/Scripts/011_Battle/002_Move/003_Move_Usage_Calculations.rb": {
+      "sha256": "65882cce0a45c9ee29da4bb407c1465fbf4e39bed3003ed4ff6d29b3b5315317",
+      "size": 20639
+    },
+    "Data/Scripts/011_Battle/002_Move/004_Move_Effects_Generic.rb": {
+      "sha256": "34a685d7441ad0f40349eac626f5c694141e0d4ce87c7518a95e09dc175f288f",
+      "size": 21910
+    },
+    "Data/Scripts/011_Battle/002_Move/005_Move_Effects_000-07F.rb": {
+      "sha256": "4a5b77d265c0562ae31095a6e9a50051cfe67430b7831175e7d9ad1f10b44476",
+      "size": 93542
+    },
+    "Data/Scripts/011_Battle/002_Move/006_Move_Effects_080-0FF.rb": {
+      "sha256": "61a77903c41453c562dff6f7abf0a4e6a351ae88509f0ad4360ad84b32816daa",
+      "size": 133874
+    },
+    "Data/Scripts/011_Battle/002_Move/007_Move_Effects_100-17F.rb": {
+      "sha256": "8f7b093005824791537f569e426688add59ec2b0b80da05c69b6644da1aca97f",
+      "size": 92976
+    },
+    "Data/Scripts/011_Battle/003_Battle/001_PokeBattle_BattleCommon.rb": {
+      "sha256": "d5a5058958d1ab9eb5d79f612dd60c4f2c4f191129c6220e3979483166e5beac",
+      "size": 11178
+    },
+    "Data/Scripts/011_Battle/003_Battle/002_PokeBattle_Battle.rb": {
+      "sha256": "f46a3f113571e2eecc73b9550bdb7f5d50a9976bb7e9b8868feb678b96d88ffa",
+      "size": 32046
+    },
+    "Data/Scripts/011_Battle/003_Battle/003_Battle_StartAndEnd.rb": {
+      "sha256": "1f9184cdec85db4f848d6db5657b8e5eba03b3299e9ee9eacf1add60ce0b09f2",
+      "size": 26015
+    },
+    "Data/Scripts/011_Battle/003_Battle/004_Battle_ExpAndMoveLearning.rb": {
+      "sha256": "07ec0d1754d847dc912fc50d9cc949420c946149c4cd9230c0e3e53c8682d711",
+      "size": 14932
+    },
+    "Data/Scripts/011_Battle/003_Battle/005_Battle_Action_AttacksPriority.rb": {
+      "sha256": "69c38dffc889b3d6ede58cf5823f838f17f9731673ca70e6d430d1cbbbacfc56",
+      "size": 9869
+    },
+    "Data/Scripts/011_Battle/003_Battle/006_Battle_Action_Switching.rb": {
+      "sha256": "ae1fde7ab579b1a55ff6f3f4f5c1691b809b3693ff6bf5a242152cb9da541f36",
+      "size": 18252
+    },
+    "Data/Scripts/011_Battle/003_Battle/007_Battle_Action_UseItem.rb": {
+      "sha256": "7f41f9be1ba34a2a618040a0221fb66ee899b9d2ea1bc1f6257e823dddc4dd21",
+      "size": 5744
+    },
+    "Data/Scripts/011_Battle/003_Battle/008_Battle_Action_Running.rb": {
+      "sha256": "2f6ad71958d5082afcff6411347af926191f7053c46c475f7c5954027b44e912",
+      "size": 5909
+    },
+    "Data/Scripts/011_Battle/003_Battle/009_Battle_Action_Other.rb": {
+      "sha256": "4748b0dd628b70a3cbcfdbc6c250915c0cbfedfc4589210e4c93d314d4f54f31",
+      "size": 7420
+    },
+    "Data/Scripts/011_Battle/003_Battle/010_Battle_Phase_Command.rb": {
+      "sha256": "fa266e3bd14c0e5a3d9b509e0dceff43af13ff2ff9d434a4d814c81eb18aa3ee",
+      "size": 9523
+    },
+    "Data/Scripts/011_Battle/003_Battle/011_Battle_Phase_Attack.rb": {
+      "sha256": "7c040ec0c0733bc5bb0285110036e4e08cfbccbc36481c959111b9785e0f8590",
+      "size": 7131
+    },
+    "Data/Scripts/011_Battle/003_Battle/012_Battle_Phase_EndOfRound.rb": {
+      "sha256": "75dae7e6cea673859c3f500406c6c838fcfd91d99de0f829f2dde60272688785",
+      "size": 31096
+    },
+    "Data/Scripts/011_Battle/003_BattleHandlers_Abilities.rb": {
+      "sha256": "502307d3cdac8d4a8c2a8487ea4f4890c3c56f49e64cee8b2171f339bd4a3e1a",
+      "size": 87197
+    },
+    "Data/Scripts/011_Battle/004_AI/001_PokeBattle_AI.rb": {
+      "sha256": "780a2e1ed28d39794e63fb46955e5dccf4130a16d4386d40487d896f749890c2",
+      "size": 2329
+    },
+    "Data/Scripts/011_Battle/004_AI/002_AI_Item.rb": {
+      "sha256": "3f9a61876e9d748e5ffc7ec1c4e0570eacee5595a716d5f65794537485633897",
+      "size": 6829
+    },
+    "Data/Scripts/011_Battle/004_AI/003_AI_Switch.rb": {
+      "sha256": "fee4427b881278ea7929b38f0307f75fc2261dde68a56fddf37e93ce41494bdf",
+      "size": 7337
+    },
+    "Data/Scripts/011_Battle/004_AI/004_AI_Move.rb": {
+      "sha256": "1e47eea3423017871ce3c05128e214b4e87d50e14bed9465b7d803fa8e6ee64b",
+      "size": 12222
+    },
+    "Data/Scripts/011_Battle/004_AI/005_AI_Move_EffectScores.rb": {
+      "sha256": "6c6c4070f26c4688c51b3f3d9713c225fa94891d843d61fc02f37837b106d97c",
+      "size": 114937
+    },
+    "Data/Scripts/011_Battle/004_AI/006_AI_Move_Utilities.rb": {
+      "sha256": "a45ceb850a2f731e88f6a81bc2610452e59254b998fe13bf663296369c6e1d4c",
+      "size": 28179
+    },
+    "Data/Scripts/011_Battle/004_BattleHandlers_Items.rb": {
+      "sha256": "3c8ec45a44770de9b565b9eba158e3ee0c5c49ddec7ad6728b96433757471cb5",
+      "size": 55049
+    },
+    "Data/Scripts/011_Battle/005_BallHandlers_PokeBallEffects.rb": {
+      "sha256": "c20629624720bbe9d2caa4447deec5a38d22775d2ee9363a39c48c7eba4b329a",
+      "size": 7778
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/001_PokeBattle_Animation.rb": {
+      "sha256": "863a14d143cec16cc2232a9d55f51a54800bc33648f42825ef047f76e0af277f",
+      "size": 10270
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/002_PokeBattle_SceneAnimations.rb": {
+      "sha256": "8f7bcf3ca99e50a0de8f6179d86e6ee1807300754e502ef28303462fd04a7df5",
+      "size": 33595
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/003_PokeBattle_SceneConstants.rb": {
+      "sha256": "9c8256b08ffe99dbcb507554711920936214718fa53d837ee32fb151c8c41092",
+      "size": 2528
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/004_PokeBattle_SceneElements.rb": {
+      "sha256": "45af3619716637ba137e1a719b8acf0f549fb2897cd04a2487d5ee23cb1a0632",
+      "size": 33660
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/005_PokeBattle_SceneMenus.rb": {
+      "sha256": "34e7103026c54c18b587479bfb76d9090d9ccf44a47e67bbf9bae96cece4da4e",
+      "size": 19845
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/006_PokeBattle_Scene.rb": {
+      "sha256": "18c2134d3fd1449f5ff28d7b30f71cdc98816fb626c6c4b85c45a6a8fdd3c0e9",
+      "size": 13633
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/007_Scene_Initialize.rb": {
+      "sha256": "bd0e6b1fe367a186d33901c34f9bc3fe984022299501460bd9a3eea0c4d556f9",
+      "size": 9980
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/008_Scene_Commands.rb": {
+      "sha256": "1652e2a7a1cd96ba8553f7dabf50a3203f469a5efd10efee844e9ebdb7c69007",
+      "size": 19052
+    },
+    "Data/Scripts/011_Battle/005_Battle scene/009_Scene_Animations.rb": {
+      "sha256": "d9b79df4c01c690dc7471d572711c0cd3a725014b24d5ffffd28d162f43db5aa",
+      "size": 24738
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/001_PokeBattle_AnimationPlayer.rb": {
+      "sha256": "ed204caf94b3d04a1ad5cf150c50831dad54bcca3fec921f0e9720c9a40e6bff",
+      "size": 29916
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/002_PokeBattle_SafariZone.rb": {
+      "sha256": "9cc8f0f14da22d88c1a4bb38d771cd0e1501a73feb7bb1d0dceef584784c1f2f",
+      "size": 18432
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/003_PokeBattle_BugContest.rb": {
+      "sha256": "cf08ed4a8b98e85f6effda92ebed79d0ad222de8d0f132539d655f7279f27149",
+      "size": 2801
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/004_PokeBattle_BattlePalace.rb": {
+      "sha256": "9a22627800d03d171a861b626e602d2f2a531b53fd56d18ca22edaacb2666c1d",
+      "size": 8265
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/005_PokeBattle_BattleArena.rb": {
+      "sha256": "35b7233d5f21b92f1ea385ab7c3339007c636ce7013996800e4334623629b0d3",
+      "size": 11883
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/006_PokeBattle_BattleRecord.rb": {
+      "sha256": "c35626cbd05aa81dd352c6f6c14b9c97713899ed3c260c55652864bf48a54015",
+      "size": 8800
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/007_PokeBattle_DebugScene.rb": {
+      "sha256": "edee2ee0942a9c4f20a455fac6e893dbf299b6bf446a70e5a043396952b819b7",
+      "size": 2826
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/008_PokeBattle_BattlePeer.rb": {
+      "sha256": "b6ce2f071eac8425ae7a433bfd2899f917e4f90d2d139eee34c6de2a9e752d6b",
+      "size": 2662
+    },
+    "Data/Scripts/011_Battle/006_Other battle types/009_PokeBattle_Clauses.rb": {
+      "sha256": "978f32063323d915ff1bc4ae3b434afdffac1bf8de994d3ecd12d1abfedbe31c",
+      "size": 7368
+    },
+    "Data/Scripts/011_Battle/006_PokeBattle_ActiveField.rb": {
+      "sha256": "57ad4947d3d7d3face56c4589538a2ff028aa5a9eb9979113ddb3dfbde057974",
+      "size": 3193
+    },
+    "Data/Scripts/011_Battle/007_PokeBattle_DamageState.rb": {
+      "sha256": "522ada9576be5c8150040e646572dab67a968c8ddf5e232a715f1244d7e3122e",
+      "size": 1764
+    },
+    "Data/Scripts/012_Overworld/001_Overworld visuals/001_Overworld_Weather.rb": {
+      "sha256": "a7cfdedb8d9ee3c1daf308839671674a4f9004ce47b9f7497a9eaabf5c27ea05",
+      "size": 21598
+    },
+    "Data/Scripts/012_Overworld/001_Overworld visuals/002_Overworld_Overlays.rb": {
+      "sha256": "afbb6a41be128bc7d648b695a733f8a708ef3ec38de5b5bedf6826fbc492c274",
+      "size": 8344
+    },
+    "Data/Scripts/012_Overworld/001_Overworld visuals/003_Overworld_MapTransitionAnims.rb": {
+      "sha256": "a169a5890a9337f48eee2b8594a0832fa9c3f1423bd4d35e16d1343317b4e891",
+      "size": 5178
+    },
+    "Data/Scripts/012_Overworld/001_Overworld.rb": {
+      "sha256": "f52c09c4e4f05cf09732b38d8bc75cf7ab79a1038cdcc7a76cfb747faec53001",
+      "size": 34027
+    },
+    "Data/Scripts/012_Overworld/002_Battle triggering/001_Overworld_BattleStarting.rb": {
+      "sha256": "2654c0600aed59ec081ad24635191b0faa9b634434627400621c484039dc2148",
+      "size": 33220
+    },
+    "Data/Scripts/012_Overworld/002_Battle triggering/002_Overworld_BattleIntroAnim.rb": {
+      "sha256": "5e4623691c219d2da44a60f62761c2b14a50b7b41f96e60cd18fdd4d3851e86d",
+      "size": 13929
+    },
+    "Data/Scripts/012_Overworld/002_Battle triggering/003_Overworld_WildEncounters.rb": {
+      "sha256": "d683e60b59f444b2ccf1b764ab78557aec45bbf2d23005a45da8f3b9006cc7f5",
+      "size": 19394
+    },
+    "Data/Scripts/012_Overworld/002_Battle triggering/004_Overworld_EncounterModifiers.rb": {
+      "sha256": "ab9943b9d80d1038e44037e88ee48d45013714731aeca585620d9bba8564bc31",
+      "size": 3360
+    },
+    "Data/Scripts/012_Overworld/002_Battle triggering/005_Overworld_RoamingPokemon.rb": {
+      "sha256": "d42674ff2d1d75144c0ba503e35f33ca6cfcf9ace1c1045b196773f28f9d98ba",
+      "size": 9995
+    },
+    "Data/Scripts/012_Overworld/002_Overworld_Metadata.rb": {
+      "sha256": "1c685e12296a11412b7d2825d1d822ada703535edc6640ba958f607a5182a671",
+      "size": 10389
+    },
+    "Data/Scripts/012_Overworld/003_Overworld_Time.rb": {
+      "sha256": "e4fc40b98b753b7d1d38e2e24783931ca256324e8ae41dd168b93e8e8dd5d6db",
+      "size": 9843
+    },
+    "Data/Scripts/012_Overworld/004_Overworld_FieldMoves.rb": {
+      "sha256": "a1806aec6d8691014a2a607baac600c616d31931ac4e0bf9fcad6c4fdbd14419",
+      "size": 41505
+    },
+    "Data/Scripts/012_Overworld/005_Overworld_Fishing.rb": {
+      "sha256": "7a935bfcb64f1f333692c15cb4f21c649a36f882958d5ef472bccdec546be653",
+      "size": 5487
+    },
+    "Data/Scripts/012_Overworld/006_Overworld_BerryPlants.rb": {
+      "sha256": "af74c607bad4daa03f8c0bc5b6ae17f1df40805948d3ae82dbd844c3b0f3e540",
+      "size": 20267
+    },
+    "Data/Scripts/012_Overworld/007_Overworld_DayCare.rb": {
+      "sha256": "a140f4b14f79507c4a3d20381008e3ef6d94a99bb7f10ef733e99b4105e3a629",
+      "size": 14358
+    },
+    "Data/Scripts/012_Overworld/008_Overworld_RandomDungeons.rb": {
+      "sha256": "f8eb96c7444aaa18c5d264529d6153dfff172da292772e1579254f9ab7f727f8",
+      "size": 21444
+    },
+    "Data/Scripts/013_Items/001_Item_Utilities.rb": {
+      "sha256": "d6372afe207d757096f1c9a017d561a7206ac7cc20a81c443bab3873fb030092",
+      "size": 28066
+    },
+    "Data/Scripts/013_Items/002_Item_Effects.rb": {
+      "sha256": "5b26ee0fc893fddfa6af99d8332f80ce328a30c27a41c02889d9ff3feea4a629",
+      "size": 36191
+    },
+    "Data/Scripts/013_Items/003_Item_BattleEffects.rb": {
+      "sha256": "e53fb64379834c1ef7871d3452ff1b90be034d549ac76534c6481fd9347271f6",
+      "size": 27367
+    },
+    "Data/Scripts/013_Items/004_1_PokeradarUI.rb": {
+      "sha256": "3c4e6121778256a6c5135afb90eec6a192167b497886b7246ac73f91b34da05f",
+      "size": 6532
+    },
+    "Data/Scripts/013_Items/004_Item_Phone.rb": {
+      "sha256": "50332bb68688433ee6e0b2596896d8e0b15da278388c8161c0b82f5468720f19",
+      "size": 11715
+    },
+    "Data/Scripts/013_Items/005_Item_PokeRadar.rb": {
+      "sha256": "ba583f5e6dbeaab2732a2f42cf86bef81d672553cb59b9d94f8749dcf5ff5bd6",
+      "size": 12723
+    },
+    "Data/Scripts/013_Items/006_Item_Mail.rb": {
+      "sha256": "7418a83c959fcdfed588b40e01b3517174eef531d7896bead327c14dcbcbc189",
+      "size": 5182
+    },
+    "Data/Scripts/013_Items/007_Item_Sprites.rb": {
+      "sha256": "51e18e3e55c8f0bc996934c8affcc722287e05d42a8c70210ae1e6b70e146155",
+      "size": 4294
+    },
+    "Data/Scripts/013_Items/008_PokemonBag.rb": {
+      "sha256": "8f7a94c85636594f7aca349f89ba9233db4d8ccb040cac25af0d900e23f1d936",
+      "size": 11927
+    },
+    "Data/Scripts/014_Pokemon/001_Pokemon-related/001_FormHandlers.rb": {
+      "sha256": "2791e2762a9b6dd99ad9a2190db342ffa1cd137c4169fe7f0131afcef16b914f",
+      "size": 17190
+    },
+    "Data/Scripts/014_Pokemon/001_Pokemon-related/002_ShadowPokemon_Other.rb": {
+      "sha256": "d944d3b32852d1fc7c0ee79e7eb20354818ad10a96d06f10bbfbc7cc044b8bfa",
+      "size": 16677
+    },
+    "Data/Scripts/014_Pokemon/001_Pokemon-related/003_Pokemon_Sprites.rb": {
+      "sha256": "4688112a5db7d27e3b9ca32442c9ec287ffcb5171c41e02333d388bcdd69f847",
+      "size": 19634
+    },
+    "Data/Scripts/014_Pokemon/001_Pokemon-related/004_PokemonStorage.rb": {
+      "sha256": "1524931c2d979f4cd10a67bd1fd732b388ba80469a02d1e7faee033645419e58",
+      "size": 15517
+    },
+    "Data/Scripts/014_Pokemon/001_Pokemon.rb": {
+      "sha256": "e587d7e535c579e0d2c680d6d328c7115e73a5b9871e6466e051b178aa0f1fc3",
+      "size": 83148
+    },
+    "Data/Scripts/014_Pokemon/002_Pokemon_MegaEvolution.rb": {
+      "sha256": "a056aa7be9f8dfadab0fe8c1c2116cc29ec01e5f5335fa182ede441813becfcc",
+      "size": 2307
+    },
+    "Data/Scripts/014_Pokemon/003_Pokemon_ShadowPokemon.rb": {
+      "sha256": "b32e6f2ec776d8472419e59d88c590d814a8bb18e528bbb524b689cc76dc639b",
+      "size": 5139
+    },
+    "Data/Scripts/014_Pokemon/004_Pokemon_Move.rb": {
+      "sha256": "86409df447cabd7f30b041488333b0b1fd967927907beee416a84e44c296ad35",
+      "size": 3245
+    },
+    "Data/Scripts/014_Pokemon/005_Pokemon_Owner.rb": {
+      "sha256": "26fd61ff1df2af78a1c98b1c6e855eb70b969f532861a0c9fb9a1094aa0f79d2",
+      "size": 3119
+    },
+    "Data/Scripts/014_Pokemon/006_Pokemon_Deprecated.rb": {
+      "sha256": "2c8190638c6bf8c4f94a7f1fe684ccc92a0557fd31887c9bcc3e6f80cc000bfc",
+      "size": 9407
+    },
+    "Data/Scripts/015_Trainers and player/001_Trainer.rb": {
+      "sha256": "5d789097012dc47012d2685feed5862957d3f546dfb58b052ab51cf130a41bed",
+      "size": 6871
+    },
+    "Data/Scripts/015_Trainers and player/002_Trainer_LoadAndNew.rb": {
+      "sha256": "f0369384f560222b160457beb99e3c4ba4d61497d5fecc7be64de01f730674a3",
+      "size": 5163
+    },
+    "Data/Scripts/015_Trainers and player/003_Trainer_Sprites.rb": {
+      "sha256": "9557c3612b049517afc2c6c7f0522745da7709d30653c290efd3a0a5ec2aeb12",
+      "size": 2708
+    },
+    "Data/Scripts/015_Trainers and player/004_Player.rb": {
+      "sha256": "369caffa7badc00a1f952c50aebed65f496044acaad6b134b336d9f2b3888122",
+      "size": 8581
+    },
+    "Data/Scripts/015_Trainers and player/005_Player_Pokedex.rb": {
+      "sha256": "8c3dc3e3094b90f71c2d5fe7dea2c90781c5cd047c752353a71539cab779dc25",
+      "size": 16259
+    },
+    "Data/Scripts/015_Trainers and player/006_Player_Deprecated.rb": {
+      "sha256": "967c06ea866d629f8620f690438e1d445d089bebf4e4ca9b92bc155864e28a26",
+      "size": 9423
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/001_UI_SplashesAndTitleScreen.rb": {
+      "sha256": "d8be70d6c826ccae134818434c9121791448abf5cb09c4d38db90bb176fb78cf",
+      "size": 3942
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/002_UI_Controls.rb": {
+      "sha256": "0dec5ddec05275c7dd4537272109f0ab151f368ff98271f205c20cba6dfe81d4",
+      "size": 3670
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/003_UI_EggHatching.rb": {
+      "sha256": "f18ba49b635d9cbe4b3f7d5e4b1d03242c5baa6d84f31f5e55d6a18d6d16eeba",
+      "size": 10292
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/004_UI_Evolution.rb": {
+      "sha256": "d6651ed35a01255fb312cca0d4a662a2bddc453cd266741a2c020f5e97ee2706",
+      "size": 20369
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/005_UI_Trading.rb": {
+      "sha256": "ebfffa96cff2370acb9c3e4f05a7381a264fcc5245e331c1d06600ee7d0200e3",
+      "size": 9937
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/006_UI_HallOfFame.rb": {
+      "sha256": "78fe5fafb325607710bd1038ec52cb963af01984ea4faf3a6e83680ca90f8702",
+      "size": 20070
+    },
+    "Data/Scripts/016_UI/001_Non-interactive UI/007_UI_Credits.rb": {
+      "sha256": "db53b205800d6b882a565cfbd33c9265072621d7d09e496b1177d65323316a2c",
+      "size": 13426
+    },
+    "Data/Scripts/016_UI/001_UI_PauseMenu.rb": {
+      "sha256": "68d50d48baa4051d840b2c115416308ca42e545857b3fe2116c05445223c0bfe",
+      "size": 21125
+    },
+    "Data/Scripts/016_UI/002_UI_Pokedex_Menu.rb": {
+      "sha256": "3cc204a85ce6b3884aff84fb612d9097397fca965d630322c1681c9545e28c2b",
+      "size": 4486
+    },
+    "Data/Scripts/016_UI/003_UI_Pokedex_Main.rb": {
+      "sha256": "e12daaf35009f322f42157b5d490742cc23af33d7c872a3789c00c95ce110d95",
+      "size": 46476
+    },
+    "Data/Scripts/016_UI/004_UI_Pokedex_Entry.rb": {
+      "sha256": "037a36b3cd09c79124d4240d3ef1521d3e19df7c72e478d71340b37cf534eafc",
+      "size": 31732
+    },
+    "Data/Scripts/016_UI/005_UI_Party.rb": {
+      "sha256": "e4ea4670ef27095986c83195c16606b1296b0026e47135018b4ad677c88baeca",
+      "size": 52355
+    },
+    "Data/Scripts/016_UI/006_UI_Summary.rb": {
+      "sha256": "b9dbff4a57dd24361b2419d6b486e5a1a3a5fa32ae9c2218bbecac3cf680fbf6",
+      "size": 61664
+    },
+    "Data/Scripts/016_UI/007_UI_Bag.rb": {
+      "sha256": "7e32f5ed84cb5a93bfd709f9d3166c7df08964b434d19ac451f47582a16c439e",
+      "size": 26140
+    },
+    "Data/Scripts/016_UI/008_UI_Pokegear.rb": {
+      "sha256": "1817de37e0f4efc267420357b1ef85bff690b238bc7ebacf28f6a62a054bd00f",
+      "size": 4598
+    },
+    "Data/Scripts/016_UI/009_UI_RegionMap.rb": {
+      "sha256": "12cb77fef8959c576191b95a2a71635c03723665e54b17c3c184540ccdf53c76",
+      "size": 11895
+    },
+    "Data/Scripts/016_UI/010_UI_Phone.rb": {
+      "sha256": "28b60dea5ecf73c4ed02f7df1ad0675dfecf2d49b64629ee7eab593e51883e9e",
+      "size": 5801
+    },
+    "Data/Scripts/016_UI/011_UI_Jukebox.rb": {
+      "sha256": "76dd235db4b57b3baa36c4f6ace445c4d7e3552435ed68c004d01cc2d3c25b0f",
+      "size": 4605
+    },
+    "Data/Scripts/016_UI/012_UI_TrainerCard.rb": {
+      "sha256": "5cab24ff72d74b0ef5e779574b4450ca4d4a52ed46a31e1e929939cdad1ea237",
+      "size": 5630
+    },
+    "Data/Scripts/016_UI/013_UI_Load.rb": {
+      "sha256": "1295c45ff8f8198a9038f9b05b001b1fae56633636cbc1a3e919b4d5e00149f3",
+      "size": 13430
+    },
+    "Data/Scripts/016_UI/014_UI_Save.rb": {
+      "sha256": "e3eaef04e457265eea32d18c7cb786cf87cdacfdae1d3ddf7f86d320812c4f31",
+      "size": 4254
+    },
+    "Data/Scripts/016_UI/015_UI_Options.rb": {
+      "sha256": "96bdc5f311be3dc1d776a6ad5fab5b12315fb84334d4f94367823b547996db31",
+      "size": 127141
+    },
+    "Data/Scripts/016_UI/016_UI_ReadyMenu.rb": {
+      "sha256": "3f0ed8fd2adbb2cc445b115e438570f42a18069007d4e3d5d582fdbdc2cbedf0",
+      "size": 10053
+    },
+    "Data/Scripts/016_UI/017_UI_PokemonStorage.rb": {
+      "sha256": "4328a9b63bb43817a32ecdfdc6171050f45a54af79f1edb04f75a12cb5e0d11b",
+      "size": 197537
+    },
+    "Data/Scripts/016_UI/018_UI_ItemStorage.rb": {
+      "sha256": "904db19489a18c75c2dced324836d37290f5095b0d93e7b68b1cbf53ea402292",
+      "size": 11755
+    },
+    "Data/Scripts/016_UI/019_UI_PC.rb": {
+      "sha256": "0c70ef1e30c791fd50b0b0a152bfbe837e2884f74e7d3a525bf055e624c8d51a",
+      "size": 7908
+    },
+    "Data/Scripts/016_UI/020_UI_PokeMart.rb": {
+      "sha256": "fec38a4e489b47c5fd42815e139ac97b98a08ffbd9a332c30eca194ad1ecc687",
+      "size": 26842
+    },
+    "Data/Scripts/016_UI/021_UI_MoveRelearner.rb": {
+      "sha256": "07a85828ee1d1a687af20c679dcc1b11e5d0b975b93e92705d73734c1c3c0e8f",
+      "size": 7817
+    },
+    "Data/Scripts/016_UI/022_UI_PurifyChamber.rb": {
+      "sha256": "bcb21b268c831c741ff7cc8e46b030629a47984e176124ea3bd0bcdcaea0a95d",
+      "size": 39091
+    },
+    "Data/Scripts/016_UI/023_UI_MysteryGift.rb": {
+      "sha256": "ee60ff55ab1bbf6c389ed29ab546d66820672e2507df221335a91618c2b13192",
+      "size": 15774
+    },
+    "Data/Scripts/016_UI/024_UI_TextEntry.rb": {
+      "sha256": "0c7ca177402378aa3400bcc34848832053ff13596beeb98bc5c8cb581886e7b2",
+      "size": 30479
+    },
+    "Data/Scripts/017_Minigames/001_Minigame_Duel.rb": {
+      "sha256": "ae6bf41c576c99c43b89e176a14cdfe1d13abb5e56720302954e19c6c11d92d3",
+      "size": 14218
+    },
+    "Data/Scripts/017_Minigames/002_Minigame_TripleTriad.rb": {
+      "sha256": "3244a4b732410c854f3fdf0a99a3c97d27371173d3a23ae72d74b1197489f755",
+      "size": 44034
+    },
+    "Data/Scripts/017_Minigames/003_Minigame_SlotMachine.rb": {
+      "sha256": "05e8359dc5f295e7b635322ae741cc6af1930046d2ef358632f7fa4cbf20e6ca",
+      "size": 13294
+    },
+    "Data/Scripts/017_Minigames/004_Minigame_VoltorbFlip.rb": {
+      "sha256": "0feb0abd6517493542adcae3f1c7b12a72a7c0b2b12747c3bd2d3648bd31ebda",
+      "size": 21705
+    },
+    "Data/Scripts/017_Minigames/005_Minigame_Lottery.rb": {
+      "sha256": "e04fed5427b5812d35e25201f5a835baffc8ef18bb01b06d77837da0f171f5f4",
+      "size": 1464
+    },
+    "Data/Scripts/017_Minigames/006_Minigame_Mining.rb": {
+      "sha256": "f31d9e9b6ca91c19c4131d2f2c6f007662e5c26e6076548272c4b4e60b48578b",
+      "size": 21017
+    },
+    "Data/Scripts/017_Minigames/007_Minigame_TilePuzzles.rb": {
+      "sha256": "ab95c65403b62d843fc5d1cecf40df6720ada598b936a09b1a47912cb7f485a1",
+      "size": 19133
+    },
+    "Data/Scripts/018_Alternate battle modes/001_Battle Frontier/001_Challenge_BattleChallenge.rb": {
+      "sha256": "eabb8faa0a9914e20ccc10bea30d1a67cf7c5272ebccc80855542bf89c0e90de",
+      "size": 11819
+    },
+    "Data/Scripts/018_Alternate battle modes/001_Battle Frontier/002_Challenge_Data.rb": {
+      "sha256": "0703a931da10fdfe1c72ad70795c074b714af17e9f01aeb695b9828899710d64",
+      "size": 10827
+    },
+    "Data/Scripts/018_Alternate battle modes/001_Battle Frontier/003_Challenge_ChooseFoes.rb": {
+      "sha256": "3124a04a1d5751a6c029e57f832d51dbd5816492ae2d0679470c9e8190e1213c",
+      "size": 7871
+    },
+    "Data/Scripts/018_Alternate battle modes/001_Battle Frontier/004_Challenge_Battles.rb": {
+      "sha256": "98cbdf515638e50f5a4f82a929877f013cbd88c50bcbcd7c35ee93d7bb5fc7a2",
+      "size": 5341
+    },
+    "Data/Scripts/018_Alternate battle modes/001_Battle Frontier/005_UI_BattleSwap.rb": {
+      "sha256": "ee97029485593718ac0a91360caaf5f310b86b406a1bc78957d98d134de187f2",
+      "size": 7452
+    },
+    "Data/Scripts/018_Alternate battle modes/001_SafariZone.rb": {
+      "sha256": "a8a12f42240b752a7659dd8e4c71c072d184f886c9f942952e247d49e1fb8ceb",
+      "size": 4252
+    },
+    "Data/Scripts/018_Alternate battle modes/002_Battle Frontier rules/001_Challenge_ChallengeRules.rb": {
+      "sha256": "8f8a22f8153b3b5015eb2b09145fa6e1382f3db009d05f06b02f5434e6b258dd",
+      "size": 11878
+    },
+    "Data/Scripts/018_Alternate battle modes/002_Battle Frontier rules/002_Challenge_Rulesets.rb": {
+      "sha256": "82c9519b937d6444b1b7d55c423939d2b11f53864f71d167fef0c2f8068cd150",
+      "size": 9776
+    },
+    "Data/Scripts/018_Alternate battle modes/002_Battle Frontier rules/003_Challenge_EntryRestrictions.rb": {
+      "sha256": "c9d4126e3b5474d3b6854fcbf58ce905496404b42c82f4374833757fad49adaa",
+      "size": 11750
+    },
+    "Data/Scripts/018_Alternate battle modes/002_Battle Frontier rules/004_Challenge_LevelAdjustment.rb": {
+      "sha256": "34cefa3f04ba47b6331319b0d467e7b18ac63fe698c969831d557f758e8aaaa7",
+      "size": 6744
+    },
+    "Data/Scripts/018_Alternate battle modes/002_Battle Frontier rules/005_Challenge_BattleRules.rb": {
+      "sha256": "2d706e7a8f42ca9d65103cc06c9a60cee6d9d6e515f6df11eee939632cbaad6a",
+      "size": 3788
+    },
+    "Data/Scripts/018_Alternate battle modes/002_BugContest.rb": {
+      "sha256": "53a0cfd9895a4e83609e6ae5313725af3a7b6bc76b2e036f329110dfdfdff72c",
+      "size": 10801
+    },
+    "Data/Scripts/018_Alternate battle modes/003_Battle Frontier generator/001_ChallengeGenerator_Data.rb": {
+      "sha256": "1718023cf83271448f9957898b299daa84fb7c6b5ad07aa1443ac10cf6a5cfa6",
+      "size": 10247
+    },
+    "Data/Scripts/018_Alternate battle modes/003_Battle Frontier generator/002_ChallengeGenerator_Pokemon.rb": {
+      "sha256": "237f37a43167194df853229abb860260917d23444ea6365c73a9ce20d614c76d",
+      "size": 13871
+    },
+    "Data/Scripts/018_Alternate battle modes/003_Battle Frontier generator/003_ChallengeGenerator_Trainers.rb": {
+      "sha256": "bca12da7534336d8fbd91de714c3cd6f4907df807471fa7cd02d5e9ce843df95",
+      "size": 8871
+    },
+    "Data/Scripts/018_Alternate battle modes/003_Battle Frontier generator/004_ChallengeGenerator_BattleSim.rb": {
+      "sha256": "6090b5d04d05ff10f943c95c5de1345481c45eae0d304c886569fd6250a37cfd",
+      "size": 12204
+    },
+    "Data/Scripts/019_Utilities/001_Utilities.rb": {
+      "sha256": "418f5a3f10e3062f6610c8d793a18355f6b7170e8009f28695b94cf73cb85c77",
+      "size": 18256
+    },
+    "Data/Scripts/019_Utilities/002_Utilities_Pokemon.rb": {
+      "sha256": "0049a85b135b638ad40b415a5f9b059713b94fd4e929f2655b11f016262bb4db",
+      "size": 11002
+    },
+    "Data/Scripts/019_Utilities/003_Utilities_BattleAudio.rb": {
+      "sha256": "c714cc8ec6dc7c415cc36acf58861fd0547b641cc593ed7c32d0efcd1e10e497",
+      "size": 5078
+    },
+    "Data/Scripts/020_Debug/001_Editor screens/001_EditorScreens.rb": {
+      "sha256": "f57efcb13bc90ee9ea92ce0938fcb62a6366e7ca8476b576793eb0d789866cd4",
+      "size": 61738
+    },
+    "Data/Scripts/020_Debug/001_Editor screens/002_EditorScreens_TerrainTags.rb": {
+      "sha256": "484878bc80a0fa7c6337ecd2988e49a226448cbf6a03293f162869be9beb5daa",
+      "size": 8868
+    },
+    "Data/Scripts/020_Debug/001_Editor screens/003_EditorScreens_MapConnections.rb": {
+      "sha256": "398ec435966f4318fa33c7696126fda06d2e9dd1e8fa9b76f78c68bb2f4c849a",
+      "size": 16422
+    },
+    "Data/Scripts/020_Debug/001_Editor screens/004_EditorScreens_SpritePositioning.rb": {
+      "sha256": "ac100841d020c9165c78c44ca8722d881f1739d93102a408eeaf73268f43f89a",
+      "size": 14360
+    },
+    "Data/Scripts/020_Debug/001_Editor_Utilities.rb": {
+      "sha256": "320c107779f34d78c05f5dd430239694ca02ba3706d19d51e8f403a1b9ea29a1",
+      "size": 12973
+    },
+    "Data/Scripts/020_Debug/002_Animation editor/001_AnimEditor_SceneElements.rb": {
+      "sha256": "ac23d1f2d380e0f300904e5a75a2ed145018de29075da64874a78f702c5f41d6",
+      "size": 29284
+    },
+    "Data/Scripts/020_Debug/002_Animation editor/002_AnimEditor_ControlsButtons.rb": {
+      "sha256": "dec1cb1d96ab46f4d78ecf2664a27f40bd85f5ea0cbbc186111fe4c194e557f6",
+      "size": 21009
+    },
+    "Data/Scripts/020_Debug/002_Animation editor/003_AnimEditor_Interpolation.rb": {
+      "sha256": "cc48a643f0a530100798c488335663fdc44609868a25f2cc433686c5ca33badc",
+      "size": 11800
+    },
+    "Data/Scripts/020_Debug/002_Animation editor/004_AnimEditor_ExportImport.rb": {
+      "sha256": "d0fcbe15d4a49c10630f00075dac68fcfbee82eef313b07aa8bad65808ce3566",
+      "size": 4695
+    },
+    "Data/Scripts/020_Debug/002_Animation editor/005_AnimEditor_Functions.rb": {
+      "sha256": "f68e1039d90c4afc161863e8891b84c8ae5fcf81373cfe6318e436fa8fe35356",
+      "size": 43943
+    },
+    "Data/Scripts/020_Debug/002_Editor_DataTypes.rb": {
+      "sha256": "c38c0f7f94ef5bda9856ce4b57bf07463dc99ec17ae2fb8676078e10bdf08295",
+      "size": 43357
+    },
+    "Data/Scripts/020_Debug/003_Debug menus/001_Debug_Menus.rb": {
+      "sha256": "76472d7efc470c9eb0fdf8073a2821c4a1f0f5defe728cff4bf00ba87de7f685",
+      "size": 5208
+    },
+    "Data/Scripts/020_Debug/003_Debug menus/002_Debug_MenuCommands.rb": {
+      "sha256": "7767aa95d76d7f946f310fb56bc15ad8476295c4a7ce7eb065aa63848eeba8c4",
+      "size": 41061
+    },
+    "Data/Scripts/020_Debug/003_Debug menus/003_Debug_MenuExtraCode.rb": {
+      "sha256": "40042cfd971db4802329ffaa208f55b725792107fb1a91ace67e5672f523690c",
+      "size": 30877
+    },
+    "Data/Scripts/020_Debug/003_Debug menus/004_Debug_MenuSpriteRenamer.rb": {
+      "sha256": "eef55b35964141a8f384fee4c50f6976bfe1e56a5f4362d8e5827e7000d6864e",
+      "size": 12531
+    },
+    "Data/Scripts/020_Debug/003_Debug menus/005_Debug_PokemonCommands.rb": {
+      "sha256": "4e2505fd7db7a878d27aaa4209e57d15bac24581ecc53364c50909f555639f3b",
+      "size": 43010
+    },
+    "Data/Scripts/020_Debug/003_Editor_Listers.rb": {
+      "sha256": "66d0067edf8c3db1d7cc48910a9d396a12bb9bcc2a31b1a9fc99b7081a732af3",
+      "size": 16341
+    },
+    "Data/Scripts/021_Compiler/001_Compiler.rb": {
+      "sha256": "fecd11705423ff2bf547fd958e09079be519e6ec8080a83a581841baa0ba4187",
+      "size": 29053
+    },
+    "Data/Scripts/021_Compiler/002_Compiler_CompilePBS.rb": {
+      "sha256": "d25dc5cc9968798e54a4893835c4ca07dd5107913cac70e6337d28fbccf2ec43",
+      "size": 74478
+    },
+    "Data/Scripts/021_Compiler/003_Compiler_WritePBS.rb": {
+      "sha256": "9d8a2519df026aee8f1b6258b3459bb8f957d090795837a47614c598c9635ce9",
+      "size": 35525
+    },
+    "Data/Scripts/021_Compiler/004_Compiler_MapsAndEvents.rb": {
+      "sha256": "acc4f5b98a3219e721c197516d247ad2d4793e1e799922dce6f001a89eaeeb30",
+      "size": 61632
+    },
+    "Data/Scripts/025-Randomizer/Random Pokemon.rb": {
+      "sha256": "a3144abdd3ac5b13ab60a8c23fae5e351220767a455ef9135c8404dbcc7284a4",
+      "size": 7305
+    },
+    "Data/Scripts/025-Randomizer/RandomizerSettings.rb": {
+      "sha256": "d8564407f59d7555082d4a62d68823a7ccec69053bccad3a8b34b37db665a2c8",
+      "size": 23717
+    },
+    "Data/Scripts/025-Randomizer/RandomizerUtils.rb": {
+      "sha256": "457902b7ff2addf55b917256c84907dc828122a74cb06f4115fea4196f960b34",
+      "size": 5400
+    },
+    "Data/Scripts/025-Randomizer/randomizer - encounters.rb": {
+      "sha256": "52867e450209fb75a5fe6748adf029505e435dfa2a54a9ab1448aea75d7fb23c",
+      "size": 6629
+    },
+    "Data/Scripts/025-Randomizer/randomizer gym leader edit.rb": {
+      "sha256": "365440ae7fac9b1c374a8d35bc53424b87dd240b84e74af665a5d68f928b68f0",
+      "size": 26627
+    },
+    "Data/Scripts/025-Randomizer/randomizer.rb": {
+      "sha256": "7c29d055c483f12704dbf4491578554951c8b86b42096a0a9fc5c60e83754b17",
+      "size": 11982
+    },
+    "Data/Scripts/048_Fusion/DoublePreviewScreen.rb": {
+      "sha256": "09ce148f7d09e051232a65d6587562e89f333e5b04fc6a53699d56d24134806a",
+      "size": 6834
+    },
+    "Data/Scripts/048_Fusion/FusedSpecies.rb": {
+      "sha256": "8cac12405949811590a20a2323f26336b406a36bae656e63a9553da47f5f509c",
+      "size": 17684
+    },
+    "Data/Scripts/048_Fusion/FusionAnim.rb": {
+      "sha256": "205b5eab0950a351ca9f0b429d8fb2570c1aeff67c391d2e433efa82e4973a9e",
+      "size": 1212
+    },
+    "Data/Scripts/048_Fusion/FusionMenu.rb": {
+      "sha256": "e3aefb808cf382f3c8a57f8e32588111288b6cd247fc5419df2c64942113dab1",
+      "size": 3605
+    },
+    "Data/Scripts/048_Fusion/FusionMovesMenu.rb": {
+      "sha256": "bf7ae3a606956517e53dda1f25e85d16e81f838588df4b6061bab2cf1311c9a1",
+      "size": 7989
+    },
+    "Data/Scripts/048_Fusion/FusionPreviewScreen.rb": {
+      "sha256": "57f47af4d204a787de04dcdb0ce67199541f24361990e975e6233ab79a8e7965",
+      "size": 1806
+    },
+    "Data/Scripts/048_Fusion/PIFSprite.rb": {
+      "sha256": "e03a67f89099842467cfd7d7bca2479348a6f3c743271c9fad2b798ef5ed2a86",
+      "size": 1827
+    },
+    "Data/Scripts/048_Fusion/PokemonFusion.rb": {
+      "sha256": "8eb1a43099079735c3ceb42ecb50eeb8ef09edd198b49db8f8b9bd69f83ec77e",
+      "size": 39031
+    },
+    "Data/Scripts/048_Fusion/SplitNames.rb": {
+      "sha256": "2c8553f0b8e332b3141c1f59662b887178acd900bdd369f934ed3da86a31839c",
+      "size": 25257
+    },
+    "Data/Scripts/049_Compatibility/Constants.rb": {
+      "sha256": "b446f19eceb36b92f1159359cf75479807fe864ec2e8291d5a964e28b4ae05ac",
+      "size": 10424
+    },
+    "Data/Scripts/049_Compatibility/DeprecatedClasses.rb": {
+      "sha256": "3bafbdd85a5e8590cfa08ceeea86b5bd65411f18a60d18b1208e0fb21e0da167",
+      "size": 26
+    },
+    "Data/Scripts/049_Compatibility/EggGroups.rb": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "Data/Scripts/049_Compatibility/EventMoves.rb": {
+      "sha256": "f4ed39047937306e5d84e97daff48885581dd78f64974a823f9d1090494280ee",
+      "size": 6400
+    },
+    "Data/Scripts/049_Compatibility/MarinUtilities.rb": {
+      "sha256": "d3beac312383d70083d6713b046591d9b1bd434fe8465298901308608f99fe61",
+      "size": 38864
+    },
+    "Data/Scripts/049_Compatibility/PBItems.rb": {
+      "sha256": "06186dac3d46bfd1a8e4e983413967fa86b6d8026040dddd0228d48063ec8db1",
+      "size": 12255
+    },
+    "Data/Scripts/049_Compatibility/PBMoves.rb": {
+      "sha256": "9a9c1a24cb8af89f3a5b8fab6c06ed3cb50c55533b2055fdcbda427d4a457085",
+      "size": 17663
+    },
+    "Data/Scripts/049_Compatibility/PBSpecies.rb": {
+      "sha256": "7d0522f40982cc8b610942751b2166593c181adcb6490d2913caebbd201bf058",
+      "size": 885
+    },
+    "Data/Scripts/049_Compatibility/PBTrainers.rb": {
+      "sha256": "9f002f183792dc1fe5c316ff0ac23be8eec6ad29a9f580cf7122368b5af21b5c",
+      "size": 2484
+    },
+    "Data/Scripts/049_Compatibility/UtilityMethods.rb": {
+      "sha256": "9e2561be154be901cef7f8ef447cab70bea1df275a2514fa0b6a9c24b7fb5652",
+      "size": 4944
+    },
+    "Data/Scripts/049_Compatibility/pb_types.rb": {
+      "sha256": "b7eaf9cf7849fff474f8278c9ef5c98360c050a9b3ca06c0e8535259a5533190",
+      "size": 189
+    },
+    "Data/Scripts/050_Outfits/001_OutfitsMain/LayeredClothes.rb": {
+      "sha256": "55fa9133c9bb0f622f0b0faed802a6112dd68954092054c97b1dda6f609cd243",
+      "size": 14040
+    },
+    "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitSelector.rb": {
+      "sha256": "cc0d9bbe7a2680c9c36524bb7aaa1f797b35ed19944bd4eaddece79551c3b1b2",
+      "size": 5804
+    },
+    "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitsGlobal.rb": {
+      "sha256": "dc42a457213dc8796de1b1e90fa2ac7e5e924fe0cd3050a0eb959140bd2f74b2",
+      "size": 1920
+    },
+    "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitsSearch.rb": {
+      "sha256": "b73435aa89c05b56ec7a1ffe96ebb9d54cf374529e06c74eec5819249a14e0e2",
+      "size": 5670
+    },
+    "Data/Scripts/050_Outfits/ItemSets.rb": {
+      "sha256": "21e3578aa30f4568779564b144bcc8ff55bb5bd8eaefc66cae4aba4583df33e1",
+      "size": 5039
+    },
+    "Data/Scripts/050_Outfits/OutfitIds.rb": {
+      "sha256": "32af3d96667bef6be66c196a9ba60b690b4c6f7906e306531f04dc1f09914811",
+      "size": 2994
+    },
+    "Data/Scripts/050_Outfits/UI/CharacterSelectMenu.rb": {
+      "sha256": "d41552af893da92ee5959ef401c3282c7be5380ab7ac8bf55efabd50c0f5efc3",
+      "size": 4681
+    },
+    "Data/Scripts/050_Outfits/UI/CharacterSelectMenuPresenter.rb": {
+      "sha256": "32007587cfdd33b03361bad25216f7cb60cd34c656bc73e0f1a1a0bea3001add",
+      "size": 7700
+    },
+    "Data/Scripts/050_Outfits/UI/LayeredClothes_Menus.rb": {
+      "sha256": "6e3fefd9b56488fdbf178b0ed499ff481962b0ea7780fd77a1f08db523b4edd9",
+      "size": 6710
+    },
+    "Data/Scripts/050_Outfits/UI/PokemonHatScreenPresenter.rb": {
+      "sha256": "dc1be7e8b23730cdb20d66eff0367cd838194e21bdf75663e64f825106c908ca",
+      "size": 3532
+    },
+    "Data/Scripts/050_Outfits/UI/PokemonHatScreenView.rb": {
+      "sha256": "de84227208ddce84fef8d6486e9e4772ac66bfa03c3640bec9f1fa66279852c9",
+      "size": 3848
+    },
+    "Data/Scripts/050_Outfits/UI/TrainerClothesPreview.rb": {
+      "sha256": "873101dbe606208f9cc765a51a3239fa8a0ae320e5990fb6e3ec62e9eea2484c",
+      "size": 1449
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/0_OutfitsMartAdapter.rb": {
+      "sha256": "22c4621454c382405e166504de9843bc002c744c342bb929394641241872b74b",
+      "size": 1765
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/ClothesMartAdapter.rb": {
+      "sha256": "56bbf4fcb1eb421871c331f7250b511440f7bece231018454f6804fca5a04068",
+      "size": 2446
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/ClothesShop.rb": {
+      "sha256": "f1a9834f573d5dc3c7aa57c90c7489079774b2e77371f2f7cbfedd9f76971bcf",
+      "size": 3435
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/ClothesShopPresenter.rb": {
+      "sha256": "b3bd48287b3175d7093a480efb81a34c3775f36f3b03841899f9396f8afc9072",
+      "size": 3710
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/ClothesShopView.rb": {
+      "sha256": "5c290ddea8ff653a6ee00ff2af842f4535343d5359a2e06fc4f6e8ab5456b65d",
+      "size": 4893
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/HairMartAdapter.rb": {
+      "sha256": "89e2064c259b86a05f1a9d8085777636d3474d973653543019e4885aa20184e8",
+      "size": 4439
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/HairShopPresenter.rb": {
+      "sha256": "470408848bea8311c09f6a1345e02e46c77adeaaf8f8847d5b79a9a8465143be",
+      "size": 1632
+    },
+    "Data/Scripts/050_Outfits/UI/clothesShop/HatsMartAdapter.rb": {
+      "sha256": "c05cf21e3e9234a2c73f13ecfa5e633217914dc830a876220dfe1a0837946855",
+      "size": 3582
+    },
+    "Data/Scripts/050_Outfits/UI/hairMenu/HairStyleSelectionMenuView.rb": {
+      "sha256": "c77f9f11eac8a7d830a799c50c5183cbe58dff052a1caf7686e321b02c4c1597",
+      "size": 4153
+    },
+    "Data/Scripts/050_Outfits/UI/hairMenu/HairstyleSelectionMenuPresenter.rb": {
+      "sha256": "a540121f7d5f13e1a9a6326f1fe28eb1cae4dc8752e765afdeffa4c9f64295ff",
+      "size": 5263
+    },
+    "Data/Scripts/050_Outfits/utils/OutfitFilenameUtils.rb": {
+      "sha256": "da3d90b257fed61782f522a04ed31e0cec0c5de94476c48df95cd3bfd07a049c",
+      "size": 4123
+    },
+    "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb": {
+      "sha256": "f96a8915df499a5475b2f3f7d1e2eff0c32f3bcb16c2cb7619f5554093ab2e2f",
+      "size": 9960
+    },
+    "Data/Scripts/050_Outfits/wrappers/001_Outfit.rb": {
+      "sha256": "85e8bea64e0942dae2487b38878d901d576fcbd74aaa024ced0867fedf8c0539",
+      "size": 368
+    },
+    "Data/Scripts/050_Outfits/wrappers/Clothes.rb": {
+      "sha256": "ceda96cd88f887f4770e98b143c86eafc25afb4249c55acee7a77b476adb607b",
+      "size": 245
+    },
+    "Data/Scripts/050_Outfits/wrappers/Hairstyle.rb": {
+      "sha256": "9ff4672551ead09dc74e293d555499f76e07f7501afdde7b7a462a6356fbd8db",
+      "size": 244
+    },
+    "Data/Scripts/050_Outfits/wrappers/Hat.rb": {
+      "sha256": "78a6a8b2c4def235f5d90b3d87168c91d08987254d1e32a5398f3bf0ed662802",
+      "size": 227
+    },
+    "Data/Scripts/051_Wrappers/quest_reward.rb": {
+      "sha256": "346d6fb7540a30d023fc694cf1848dc7a097a3b94a3b4a0d9e751568f1df642e",
+      "size": 398
+    },
+    "Data/Scripts/051_Wrappers/type_expert.rb": {
+      "sha256": "ce911ae7cd2b09c593da125209f35919009f959c58a34aef59d639c46f05ea52",
+      "size": 7240
+    },
+    "Data/Scripts/052_AddOns/AttributeReader.rb": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "Data/Scripts/052_AddOns/Autosave.rb": {
+      "sha256": "74123828e4e2dbec4814502a0711db02c848a3b346ce26f572359b23eb7ab9ea",
+      "size": 4301
+    },
+    "Data/Scripts/052_AddOns/BattleLounge.rb": {
+      "sha256": "f2f49e44d0614b5a69dfb92df97c09c04ac6c71b8385149a43ae8e6d3399f88e",
+      "size": 6976
+    },
+    "Data/Scripts/052_AddOns/BetterRegionMap.rb": {
+      "sha256": "0781d961ed7703efd041bc994adf023d9d4710aeeb170d8ca98442189cefbb91",
+      "size": 34972
+    },
+    "Data/Scripts/052_AddOns/CustomTrainers.rb": {
+      "sha256": "c121f6c3aafef484941622dfa26a9086f4b534163b63c0ed019f324f1fa14e69",
+      "size": 10176
+    },
+    "Data/Scripts/052_AddOns/DevUtils.rb": {
+      "sha256": "3800367043eb36ad5481fc09067ffa2677913ea41020c7ec11b222eb2e562524",
+      "size": 4444
+    },
+    "Data/Scripts/052_AddOns/DisplayText.rb": {
+      "sha256": "6f0fceb5b9d289b9f80be89337cdcdcf78e21e036b6e43ed3f2b1eeae9109125",
+      "size": 1356
+    },
+    "Data/Scripts/052_AddOns/DoubleAbilities.rb": {
+      "sha256": "7c472710cdb1fd002653482719281e7dee7f91b636f7e6c3260bf9b5fee31c1c",
+      "size": 8742
+    },
+    "Data/Scripts/052_AddOns/DoubleAbilitiesHandlersOverrides.rb": {
+      "sha256": "ea05a327222131d1814a3fb4c313f31763e1261daeaa2c61ba5988bf7608cf46",
+      "size": 15969
+    },
+    "Data/Scripts/052_AddOns/DoubleAbilities_UI.rb": {
+      "sha256": "57b59d5a8b3cb410e184eb55af18b3fd8c435952e315261bbf9146d0d0eb9b4f",
+      "size": 4582
+    },
+    "Data/Scripts/052_AddOns/EggMoveTutor.rb": {
+      "sha256": "01302eb228eb0c028773625eda61788ac0c29113b2b7229d763b402f9149f94e",
+      "size": 935
+    },
+    "Data/Scripts/052_AddOns/ExperimentalOptions.rb": {
+      "sha256": "5a207529ad701f8454cd68de5ad21f53d7b0058e69baee9ebe9392e4cfa1fa14",
+      "size": 2547
+    },
+    "Data/Scripts/052_AddOns/ExportScripts.rb": {
+      "sha256": "c50519bff83f4ca9f45a100ae79732f881b1631daab2ac11f8ffa6b5ac3da5e0",
+      "size": 1011
+    },
+    "Data/Scripts/052_AddOns/Footprints.rb": {
+      "sha256": "1b343a83ffadd7107b55263f67866dd0f57654138776992518f999a11d74d837",
+      "size": 6435
+    },
+    "Data/Scripts/052_AddOns/FusionMoveTutor.rb": {
+      "sha256": "ee00f554a4a02b54c30c9f2fada617acfb96b6641371ec929220e27e5dd25826",
+      "size": 13227
+    },
+    "Data/Scripts/052_AddOns/FusionSprites.rb": {
+      "sha256": "5bebb6e27307373629c84da939b7ec15a2429cb15d3fa867d8bfa15f57f6afc6",
+      "size": 20140
+    },
+    "Data/Scripts/052_AddOns/FusionUtils.rb": {
+      "sha256": "ced96d3a2499a7e78a0122666e7ae535ec008e7e7c7f826b1dc8d2a64ff5d5c6",
+      "size": 12174
+    },
+    "Data/Scripts/052_AddOns/GameplayUtils.rb": {
+      "sha256": "c147ae9f6fc5d753e60b32a87078ff04f15f9a4fcaaaff7ee11789de36f9bc82",
+      "size": 51204
+    },
+    "Data/Scripts/052_AddOns/Gen 2.rb": {
+      "sha256": "43aabbdcb0e52fe63551e1f169074a816127462aa14dd408fcd70b41358c0d14",
+      "size": 9099
+    },
+    "Data/Scripts/052_AddOns/GeneralUtils.rb": {
+      "sha256": "3753a78b16e04efb761fd8669444ba11999b2675164b74df7972401847e4504e",
+      "size": 23086
+    },
+    "Data/Scripts/052_AddOns/GuessPokemonQuiz.rb": {
+      "sha256": "a0f64b63605272e6f684ccc6f2954b7825c3ddc3b23fcc286e5186c0a471b1e6",
+      "size": 10627
+    },
+    "Data/Scripts/052_AddOns/HiddenAbilityMaps.rb": {
+      "sha256": "486653a9bf16cf9506bfe28ddddd308e0407fe1124683241de83e7aab7fb3ab8",
+      "size": 1821
+    },
+    "Data/Scripts/052_AddOns/HttpCalls.rb": {
+      "sha256": "ec7cbb521ed9aa980cd8d573efc3bbea2e29c15e71104543d40ffa56bbcd0593",
+      "size": 11307
+    },
+    "Data/Scripts/052_AddOns/IntroScreen.rb": {
+      "sha256": "928f71268ca6b841e0ec6851b10d0c037c30e0fb3e158ba094a38c924e723eb0",
+      "size": 20267
+    },
+    "Data/Scripts/052_AddOns/MapExporter.rb": {
+      "sha256": "ceaf1a50dcf91680d9bef93a21ec68cfa769dfb9f4eb27037ff7796720ff2850",
+      "size": 7616
+    },
+    "Data/Scripts/052_AddOns/Movie.rb": {
+      "sha256": "254890cc1236a2bc12228b4327fa33cac17304c97f1827ba3ca617c5689589d6",
+      "size": 2167
+    },
+    "Data/Scripts/052_AddOns/MultiSaves.rb": {
+      "sha256": "656f0196af989ea596c10428fedaf48bf8bcf33a15b602770c74f3a52d442a59",
+      "size": 32081
+    },
+    "Data/Scripts/052_AddOns/MultiSaves_Infinite Save Backups.rb": {
+      "sha256": "6ead3592019ad657940932e413d22081b1d99cefca23379167aa7d1fad80fad3",
+      "size": 4241
+    },
+    "Data/Scripts/052_AddOns/New Balls.rb": {
+      "sha256": "8038c3af3e28dc9962ea65d6d504ff842e326a369c601eebaa07b036f909ccf8",
+      "size": 3963
+    },
+    "Data/Scripts/052_AddOns/New HMs.rb": {
+      "sha256": "c458625f02f00ee2bfc19cb2bfbaa151761c2aa109463354e927a1c78315684e",
+      "size": 3922
+    },
+    "Data/Scripts/052_AddOns/New Items effects.rb": {
+      "sha256": "b76eb3ada68dd0d4ace81f5de0280b872ce19be21c327f3caae796ff283c4299",
+      "size": 74379
+    },
+    "Data/Scripts/052_AddOns/NonMoneyShop.rb": {
+      "sha256": "19a24defd4d85b58ef61daabba1c99fa2955b814451b1ad86333ad4ff7adf78c",
+      "size": 1677
+    },
+    "Data/Scripts/052_AddOns/OnlineWondertrade.rb": {
+      "sha256": "f8b690ea8f4316bf9ed7e9c0368665ade716356b381cddf6eeabc6049cfbbd33",
+      "size": 3372
+    },
+    "Data/Scripts/052_AddOns/Overrides.rb": {
+      "sha256": "1c8c91e1b723ad5f6cad71f119ea0ad17d668026399de66dd9cf5331dc3b0dee",
+      "size": 62
+    },
+    "Data/Scripts/052_AddOns/OverworldShadows.rb": {
+      "sha256": "8d3f289d507f3de0e91f83f39f0a621b6817d876fb4ce82e3491f86543c264de",
+      "size": 10796
+    },
+    "Data/Scripts/052_AddOns/Pathfinding.rb": {
+      "sha256": "3f9065add42725279b9985039257e3cb618c43619f70df3f64082b0424214534",
+      "size": 3323
+    },
+    "Data/Scripts/052_AddOns/PokedexUtils.rb": {
+      "sha256": "eadd47799156fe6c9fd0753cc384be15a5e9240a73831efe6cc6c8cac1f6f88f",
+      "size": 2817
+    },
+    "Data/Scripts/052_AddOns/PokemonSelection.rb": {
+      "sha256": "758982adc66dde4bd39959e86b08f97a03bd75bc0c64200a9e842e2f21eac91f",
+      "size": 5370
+    },
+    "Data/Scripts/052_AddOns/PoliceQuest.rb": {
+      "sha256": "77a7fda61a9a4bc0965f0caba925565a1951e084ddc0e8d0e5406c06d0d2cbce",
+      "size": 200
+    },
+    "Data/Scripts/052_AddOns/QuestLogScript.rb": {
+      "sha256": "c322791fd791993f67b4369e6e0d5460718a7ca8f136dc7dc69e8b2053eb87bc",
+      "size": 53610
+    },
+    "Data/Scripts/052_AddOns/Quicksave.rb": {
+      "sha256": "426e7532c967ae37316d60402237bd458b07cc81261bbdb6616672e5dce1a8de",
+      "size": 1616
+    },
+    "Data/Scripts/052_AddOns/RandomAddOns.rb": {
+      "sha256": "672b81ef9a6ff5dabde29022e0747f9d48b5dcda30389b8e00a0f11e8c3f444f",
+      "size": 515
+    },
+    "Data/Scripts/052_AddOns/ShinyColorOffsets.rb": {
+      "sha256": "84012d4aaf542ee42a4177dc611177d59e8c714af96f807caceca164c848f305",
+      "size": 8467
+    },
+    "Data/Scripts/052_AddOns/Silhouette.rb": {
+      "sha256": "3c309c6d60c5c39f158e2a99984894001699977ed238184862f1b661ddde85b0",
+      "size": 4648
+    },
+    "Data/Scripts/052_AddOns/SpeechBubbles.rb": {
+      "sha256": "5727ae46347f085428334cf0ff7e35524c5159d71b14d2bba944f1406cd0d1a5",
+      "size": 7588
+    },
+    "Data/Scripts/052_AddOns/Spped Up.rb": {
+      "sha256": "ae44c7b6f38f1a023a38cf3bda45700ef3e36daf1abb23ed70f502829eab61d1",
+      "size": 5511
+    },
+    "Data/Scripts/052_AddOns/SpriteCreditsUtils.rb": {
+      "sha256": "00735a93b3393ee477cfaeb2964b7b2a47922b6ec8128877efc9084660fdbf71",
+      "size": 16617
+    },
+    "Data/Scripts/052_AddOns/TRQuests.rb": {
+      "sha256": "57a614581dcf872854dd4aad472a2b072bf46d3bbf8fee24ab5693a38b6a1843",
+      "size": 14998
+    },
+    "Data/Scripts/052_AddOns/TeamFlags.rb": {
+      "sha256": "c7f5fb0d263536ed0c83e52a05e3fb56e5c4a190453277cc1a438cae3956644d",
+      "size": 331
+    },
+    "Data/Scripts/052_AddOns/TempEvents.rb": {
+      "sha256": "2f41a7d2dc02864a6713fa3538adc1f98d2ad5342c6b405168aef818b84ea177",
+      "size": 681
+    },
+    "Data/Scripts/052_AddOns/TrainerCardBackgrounds.rb": {
+      "sha256": "ad4ad7558a623bfc17a6cf78debd540ed0657f09758c37574bd129f634904f11",
+      "size": 5883
+    },
+    "Data/Scripts/052_AddOns/TrainerGeneratorUtils.rb": {
+      "sha256": "5b8a5e80d9a3831e49923d2f9532785011c7d3c305a3318096f8732ac6136cb2",
+      "size": 1000
+    },
+    "Data/Scripts/052_AddOns/Trainers Rebattle.rb": {
+      "sha256": "9cd395d51c9fe514b176cd9d8c4d1682a6aaf2fbaa8c7b0c5bbc0f51de01a7a3",
+      "size": 8825
+    },
+    "Data/Scripts/052_AddOns/TripleFusion.rb": {
+      "sha256": "b77c39f05bc1be81282c29b189ce0522d46baddeba6fc56f5d9f3b9c2075a6e6",
+      "size": 2547
+    },
+    "Data/Scripts/052_AddOns/UI_Pokedex_SpritesPage.rb": {
+      "sha256": "cc610cf2f26109f774cb714785cf8c792eaac6d2572805b939ac745a864e002a",
+      "size": 15222
+    },
+    "Data/Scripts/052_AddOns/UnrealTime.rb": {
+      "sha256": "878a279b7f3cd32cd0125d10ece88907dc22c6e258942c6afe41e8916318b502",
+      "size": 10656
+    },
+    "Data/Scripts/052_AddOns/WaterEffect.rb": {
+      "sha256": "4df0c9837966887e28c5a7861651d2e5dd3e84039a414537b3fe45985d580011",
+      "size": 897
+    },
+    "Data/Scripts/052_AddOns/WonderTrade_names.rb": {
+      "sha256": "8753a1eb570d6502858623fd0428088b65d19f68891a16470fb4582fcc76227b",
+      "size": 14936
+    },
+    "Data/Scripts/052_AddOns/Wondertrade.rb": {
+      "sha256": "11662f4803f47f57230285e7211b8148080ddd32af56043ae1ea5eb89c2c993d",
+      "size": 8361
+    },
+    "Data/Scripts/052_AddOns/k_scriptsUtils.rb": {
+      "sha256": "cf587ce80d86c62f5faccb1f15b1300ea5bbf1ceef46234923041c3099c368b5",
+      "size": 31397
+    },
+    "Data/Scripts/052_AddOns/mapExporter2.rb": {
+      "sha256": "531fcd320b893e79b5565ba88a5cbe56fdf822803f41015f4e748bc8ad6bcd5f",
+      "size": 20014
+    },
+    "Data/Scripts/052_AddOns/mapExporter2_ui.rb": {
+      "sha256": "02cb8555d70cfd55866a6844394be1f67810e69e219b601d08fa7b71fcbf2997",
+      "size": 2424
+    },
+    "Data/Scripts/052_AddOns/platform.rb": {
+      "sha256": "76ba782a02b12b64051e3619bf675f68dbd4449da876ff7fa161cac094c87c28",
+      "size": 7469
+    },
+    "Data/Scripts/052_Tests/FusionUtilsTests.rb": {
+      "sha256": "86390beac595c3d5ff017c58978c180d2f46ec3386d993824b3369f84ca99494",
+      "size": 779
+    },
+    "Data/Scripts/054_Multiplayer/001_Client.rb": {
+      "sha256": "3741d97bb480b91a48a30a18ffb29442d5c33fc313bb023cde8c602930170241",
+      "size": 44375
+    },
+    "Data/Scripts/054_Multiplayer/002_UI.rb": {
+      "sha256": "3c2b31a590d96ed12dd916ecd9c80199091a4ba4a07af1a7e2acb4f9cc13b3bf",
+      "size": 26107
+    },
+    "Data/Scripts/054_Multiplayer/003_Battle.rb": {
+      "sha256": "6b421f64e2d91d2c92b5cdb999e8e410fb0ed4f7d43f753d2c3972b68e636232",
+      "size": 46550
+    },
+    "Data/Scripts/054_Multiplayer/004_Boss.rb": {
+      "sha256": "18b64ecd5dea94b90be6ac14bcdf5535a4ada6927d28860910f7963564e43cc7",
+      "size": 20908
+    },
+    "Data/Scripts/054_Multiplayer/005_Gym.rb": {
+      "sha256": "29b9106f13b575ad4d5fa751afd1f28a06572b83a1407b265f81b40db9b1b866",
+      "size": 14810
+    },
+    "Data/Scripts/054_Multiplayer/006_Trade.rb": {
+      "sha256": "27e0d4a08e3c8fb309a9ca71728ba5711830154075c5971ebdbfed4de3571573",
+      "size": 37632
+    },
+    "Data/Scripts/054_Multiplayer/007_Rental.rb": {
+      "sha256": "225adf70eda9be134b06042da86acab1ca139ec8b3450d90c0ebb97bf8d415d0",
+      "size": 13860
+    },
+    "Data/Scripts/054_Multiplayer/008_Hall.rb": {
+      "sha256": "c4178a8b4d166018afc00343587b46eb8b701bc66da04edfd4f7cf0a6cb49ef9",
+      "size": 21098
+    },
+    "Data/Scripts/054_Multiplayer/009_Pool.rb": {
+      "sha256": "46a0e9e1929543f3af5cdb1b4474d08f84899fbf12005c14d11801668534d4ef",
+      "size": 14799
+    },
+    "Data/Scripts/054_Multiplayer/010_Collections.rb": {
+      "sha256": "835a0529ef931823e120641073c9f617fff4a8f9134f7cd12a430b103a30d71c",
+      "size": 18775
+    },
+    "Data/Scripts/054_Multiplayer/011_Dungeon.rb": {
+      "sha256": "ec8859876237c418bbe8a17dbb693b8f86ff8daaf7603049a869f6a2cb577d99",
+      "size": 6921
+    },
+    "Data/Scripts/054_Multiplayer/012_Replay.rb": {
+      "sha256": "4f46af89247f805bb52f2264a1b4fc12ca8aa3998dcb989bf797f693a170b9e2",
+      "size": 8187
+    },
+    "Data/Scripts/054_Multiplayer/013_Cards.rb": {
+      "sha256": "70aed8894cba25dddf55485d09116bf1f48d384b1b17a33effe1e8b880a70c27",
+      "size": 19665
+    },
+    "Data/Scripts/054_Multiplayer/014_GuestScene.rb": {
+      "sha256": "77c09acdf64e4d3c94df3c1e1d85e8e36d6825ff559b513a2a76b49fe6df671e",
+      "size": 23075
+    },
+    "Data/Scripts/054_Multiplayer/015_Transport.rb": {
+      "sha256": "5fba199aba7d993f1da460e38adf18a5a7ddfbca4e3291b547e7e1181ff7deaa",
+      "size": 20497
+    },
+    "Data/Scripts/054_Multiplayer/016_CloudCodec.rb": {
+      "sha256": "1a3f46290a52a484bab5d3e25435831469041265c2a696f6edf327fadd650150",
+      "size": 10658
+    },
+    "Data/Scripts/054_Multiplayer/017_OnlineClient.rb": {
+      "sha256": "f5632e4b520e8c9dd44abb03e5b78bc3da0a6f16d1bdd49bd408797575707579",
+      "size": 14270
+    },
+    "Data/Scripts/054_Multiplayer/018_World.rb": {
+      "sha256": "a62421273909446bfe408b9172478a4544cc7dac6dcc559de443900e7ab02cc1",
+      "size": 19055
+    },
+    "Data/Scripts/054_Multiplayer/019_OnlineMode.rb": {
+      "sha256": "800fada101d232292a0f2b0e7e87c222e0a55f22f3880664bf3c0ed6a56fe026",
+      "size": 10306
+    },
+    "Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb": {
+      "sha256": "f82d808054c2cca515ca119f52d58ffd82c6edd2205d7d3b532d861dfa4301da",
+      "size": 7147
+    },
+    "Data/Scripts/055_Analytics/001_Analytics.rb": {
+      "sha256": "f778bed0d7b3c9fd0fd21be5ec41ef03c7462506a627e6849a5fe73650e737b2",
+      "size": 10646
+    },
+    "Data/Scripts/100_DemICE's AI/AI Move EffectScores.rb": {
+      "sha256": "c44d777b7c6beeb56c6a24a308d835b62299ad213ed7cf86fb7b2fa41fef98ee",
+      "size": 144591
+    },
+    "Data/Scripts/100_DemICE's AI/AI Move.rb": {
+      "sha256": "cfa04f7fc5862b533cc4e46527a214df3f9d6b665826f47d11a70fdc1e72d515",
+      "size": 93335
+    },
+    "Data/Scripts/100_DemICE's AI/AI Switch.rb": {
+      "sha256": "0df42a9837b3fc91aa89421c3e6d2360bb6c9a07adb5c16e8c5e3c490c1914fd",
+      "size": 29949
+    },
+    "Data/Scripts/101_DemICE's Endgame Challenge/ChallengeMode.rb": {
+      "sha256": "38a7388b3402b05c62d0bd2f705a8c360f9ffd75d41ac7ed51282445d10222af",
+      "size": 85635
+    },
+    "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb": {
+      "sha256": "2fdb60c8875d3e0434e17115862dcd3c7c3484f62914facf4135c4bc19467c4a",
+      "size": 40990
+    },
+    "Data/Scripts/200_PIFStuff/AnthonyImprovShinies/SHINY_COLOR_OFFSETS.rb": {
+      "sha256": "f6a8ddda08388048317317478ff31169e0f34d21f067b89a3b4378c9db604696",
+      "size": 695158
+    },
+    "Data/Scripts/200_PIFStuff/AnthonyImprovShinies/Shinies_Bitmap.rb": {
+      "sha256": "9e522e9318c4ae6e5bc239ea9ce528c9f84aeec3c0624a4d025f5f39e8a5694d",
+      "size": 1945
+    },
+    "Data/Scripts/200_PIFStuff/AnthonyImprovShinies/Shinies_Species.rb": {
+      "sha256": "c6ee50be3359388cf8d1293609ff9ed88af3ea3ed0d6d3d726c7ae7ce770e4b5",
+      "size": 1742
+    },
+    "Data/Scripts/201_Kuray/000_KurayGlobals.rb": {
+      "sha256": "3e34935a4e3ef2ca007d6234f9a416f4a330cb9de53c41e9fc97abaed283468a",
+      "size": 624
+    },
+    "Data/Scripts/201_Kuray/001_KurayEggs.rb": {
+      "sha256": "6d07506779697d3eb27b665bcf935150df9f99cc6c3fca4edcba8d94e1fd9df2",
+      "size": 54776
+    },
+    "Data/Scripts/201_Kuray/002_KurayJson.rb": {
+      "sha256": "52a2644753d67ba5214a74f6f1d8dbad3f97ef63b56d8fa6686ecada05794ca1",
+      "size": 1606
+    },
+    "Data/Scripts/201_Kuray/003_KurayPokemonRevamp.rb": {
+      "sha256": "3215740c693e95bdad03258b9fd583598692e1ac74640c215b46d8ff3dca9787",
+      "size": 1399746
+    },
+    "Data/Scripts/201_Kuray/004_KurayTripleRevamp.rb": {
+      "sha256": "50611efaeb58af5db582a391e42cf19c13be850017f8e57f1bbf61adb7ae3f44",
+      "size": 342344
+    },
+    "Data/Scripts/201_Kuray/005_KurayFakemonRevamp.rb": {
+      "sha256": "eba5a2bbdd23db810537736369090b4e4033ab79a94c97ebc45b502e654fc5a3",
+      "size": 121
+    },
+    "Data/Scripts/201_Kuray/006_KurayChests.rb": {
+      "sha256": "eca5b98a4d6481a7b37f4e8f558f66067c8428d95a1acf40b186f04a646ae490",
+      "size": 2634
+    },
+    "Data/Scripts/201_Kuray/007_KurayRogue.rb": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "Data/Scripts/999_Main/999_Main.rb": {
+      "sha256": "1def503c719cf6c582598e172085f3364471764daf5a25873c81cf822b523e52",
+      "size": 5635
+    },
+    "Data/Scripts/RemoteUrls.rb": {
+      "sha256": "d37dbf23d643f5449948bd1e947045c7f947e7d1d6082b4218d0afd123d5bd07",
+      "size": 3034
+    },
+    "Data/Skills.rxdata": {
+      "sha256": "d87c907444a534558ee146ef466991f97b563ac339973cc9f29df13c58f933fa",
+      "size": 377
+    },
+    "Data/States.rxdata": {
+      "sha256": "c4258f405fb28847658b676fbab0b05febc307b11ab880d07df3bca37b8305ae",
+      "size": 431
+    },
+    "Data/System.rxdata": {
+      "sha256": "4936027efe4d7fa02064eb4857c22b74dab97763422e603056fd69d2d64766c5",
+      "size": 31659
+    },
+    "Data/Troops.rxdata": {
+      "sha256": "a04e8246166931d4ae7cf1b3bf77c9278afb7b0046b43628431a5440134ed349",
+      "size": 345
+    },
+    "Data/Weapons.rxdata": {
+      "sha256": "3113f23a00742cf76e898f7bb936ba14ab61edf3f0f96671c8ea89b9e1aa3075",
+      "size": 245
+    },
+    "Data/abilities.dat": {
+      "sha256": "cf81bd63a6ab83adbae1e1cfdbb521b0c5a501049a5d528f240c995965e00ce6",
+      "size": 21823
+    },
+    "Data/attacksRS.dat": {
+      "sha256": "a52084d12cbf4e602b9b9c7ac8ea9dd5c387e34e3c62700ce091cd439d6a294b",
+      "size": 22509076
+    },
+    "Data/berry_plants.dat": {
+      "sha256": "781366fcf12da0fc9c251112d848e4ee53b022de2664166e91d403d3a07256e2",
+      "size": 3190
+    },
+    "Data/connections.dat": {
+      "sha256": "9d30d9a4e48e1446eb9e0564277f4c469762a8a0cd0f12cce8e87fe277a31d3f",
+      "size": 1526
+    },
+    "Data/dexdata.rxdata": {
+      "sha256": "4053eb4b70b13f5690c5c714e9c3c482fbce7c40aa97d367d66e4c5c221e037c",
+      "size": 16334041
+    },
+    "Data/eggEmerald.dat": {
+      "sha256": "9252761445797448537ba6da12916aa608c43b1f2b5adf6c3431cfac26035f81",
+      "size": 4457440
+    },
+    "Data/encounters - Copie.dat": {
+      "sha256": "d65ea9df838b2280c605955f4723b5e4e7b783339d51ba74ff65eac16902d259",
+      "size": 36380
+    },
+    "Data/encounters - Copy.dat": {
+      "sha256": "f424f04ace8db90a87756ffb05cf044a827985aca9af3fe91c9086e3eaf9ae92",
+      "size": 431910
+    },
+    "Data/encounters.dat": {
+      "sha256": "fe9df059406de24d58f57cf9e848e87e7297b929c351f604e0414de55542be14",
+      "size": 38834
+    },
+    "Data/encounters_randomized.dat": {
+      "sha256": "ffbb5722f1d2c857a4f78ad10989a50ec6aa28a19431f412b587fcceed8b48a9",
+      "size": 41956
+    },
+    "Data/encounters_remix.dat": {
+      "sha256": "798ca94b84bb488eadbdab072db5a8d75e0bd5c30a2b77dea07969ae65631b4b",
+      "size": 47410
+    },
+    "Data/evolutions.dat": {
+      "sha256": "222038e022ff822b04decce4fc025a0356877885231a982e94a7a4b095adb522",
+      "size": 3016646
+    },
+    "Data/items.dat": {
+      "sha256": "336ee241ea996bfb29e060a178f87197ea95dd881e7055c6ad0a5b7534467f80",
+      "size": 124688
+    },
+    "Data/map_connections.dat": {
+      "sha256": "014a55b5c0e9f12b1e7842b74d1e32e10530b7489dbb700bc712216751ab1ed8",
+      "size": 2365
+    },
+    "Data/map_metadata.dat": {
+      "sha256": "3785e4fcf5cfd8f4a50c0437a7cc9b4b5c11d565a28f8f6b9414dfdc62cf3217",
+      "size": 31224
+    },
+    "Data/messages.dat": {
+      "sha256": "d67e72260456ba075eaf948cb48950a9ee184d8aa6053d3539590cd2c8313a4c",
+      "size": 30287381
+    },
+    "Data/messages_fr.dat": {
+      "sha256": "00b906c784391463b81a159825ff8eab48b4f72ec2cbcc78fc87e6a6e5efe96c",
+      "size": 30150186
+    },
+    "Data/metadata.dat": {
+      "sha256": "3dfdc2055f5c90ba338bea5f827ffd98b7d995e765b54c17d243fe87272acc7d",
+      "size": 1332
+    },
+    "Data/metrics.dat": {
+      "sha256": "55b530eb6060fca3b6b0204bfbcc28232b904a222429c575181d187b989a87ec",
+      "size": 1061038
+    },
+    "Data/move2anim.dat": {
+      "sha256": "6bfcd89a21aee4465a6b1e20b6840a5cb52b4b71828445d92daa474c02645b7b",
+      "size": 3885
+    },
+    "Data/moves.dat": {
+      "sha256": "f0bb127232bb5a9fafcc8de8c0f76af3925c206b4917ed9fed18d31a6784aa56",
+      "size": 131648
+    },
+    "Data/phone.dat": {
+      "sha256": "4ae2254b9268ac8d2f74dbb2cdce18b7d898e8b0046baad752472154ef70ba25",
+      "size": 1632
+    },
+    "Data/regional_dexes.dat": {
+      "sha256": "becf1e7dae53bc558864df439ff5e79590a35f8a546794b06418147cd4b4883e",
+      "size": 2724
+    },
+    "Data/regionals.dat": {
+      "sha256": "f1d61582d85dd4c4d2882069d5f862263dc9435e73c84fbad69a40c2e09d2eee",
+      "size": 353670
+    },
+    "Data/ribbons.dat": {
+      "sha256": "861422050f0eeee3dabc9440a096b3d18575302ac595cbd0d1c9db46a686dd8f",
+      "size": 8679
+    },
+    "Data/shadow_movesets.dat": {
+      "sha256": "c5bc4c41ac7b4627483446a853d2bbaa2b33b1cebbb54a56dfa2a0615079b4ea",
+      "size": 4
+    },
+    "Data/shadowmoves.dat": {
+      "sha256": "9140c85f1b09e03f67249bac40beb16b5b512b8915f702f44937b9011ff7205d",
+      "size": 4
+    },
+    "Data/species.dat": {
+      "sha256": "cf09b8c7d066a4305ae52eb6ce61c13d40dd4144b84966ec9e065ec0d5c31596",
+      "size": 416885
+    },
+    "Data/town_map.dat": {
+      "sha256": "73b31c083ea69001dafbc13eaa2e5b7e3507000839f3efb9606c6ff4fbf561f5",
+      "size": 8696
+    },
+    "Data/townmap.dat": {
+      "sha256": "2f91774212b7839fecc4c5b67a8b1f97bc77950cf0d3db124e993c6d19d5fc99",
+      "size": 4691
+    },
+    "Data/trainer_lists.dat": {
+      "sha256": "06b18dcbff20a26700412d214dbb635dfa9456bc4262345742f41c05bbf26a4d",
+      "size": 78755
+    },
+    "Data/trainer_types.dat": {
+      "sha256": "45ab5e4509612003afaec1aa7243b4595483643dd171d0096eb57942e4b55413",
+      "size": 9928
+    },
+    "Data/trainerlists.dat": {
+      "sha256": "7db2b102b478ab838129f0e111d609e23c68557db15a81b795d35e69c41afe47",
+      "size": 78426
+    },
+    "Data/trainers.dat": {
+      "sha256": "95e1a12b097c796ade88d86ee7d678dd7f3519f95bd90bb762b47a4cbb655ee8",
+      "size": 88097
+    },
+    "Data/trainers_challenge.dat": {
+      "sha256": "309f072faef6e96798d0f67f2150724bc630122ebf7438df8bcc397b34a52193",
+      "size": 21721
+    },
+    "Data/trainers_expert.dat": {
+      "sha256": "0a5437605a8b23b76402c881fc9a394bd750530c0c3f93330817e1933fb454f0",
+      "size": 212802
+    },
+    "Data/trainers_remix.dat": {
+      "sha256": "985478bf96d3dbe51dc373ff632731432a2679ac27f43ff3a8fef9da4843c4a3",
+      "size": 104119
+    },
+    "Data/trainertypes.dat": {
+      "sha256": "16858195d12526c86c1fa3226dc7099004cf5a343dddbf73d8394c1aec6fd226",
+      "size": 4472
+    },
+    "Data/types.dat": {
+      "sha256": "23d5c5e03e493e9a8c80c4338467c3d4f898925ae76e8dbf02bc63c3ec2e9fd8",
+      "size": 2089
+    }
+  },
+  "built_at": "2026-10-21T08:24:58Z"
+}

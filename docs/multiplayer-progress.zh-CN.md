@@ -1,5 +1,7 @@
 # 联机开发进度
 
+2026-10-21：`codex/overworld-chat` 新增启动在线/离线、注册登录、账号隔离云存档、主线地图玩家互见、地图/世界聊天。三Windows Game进程验证保存、恢复及地图交互；Android.8实际运行时网络诊断10项通过，补充安全传输、非阻塞IO及大云存档分片。详情及发布边界见 `multiplayer-online-world.zh-CN.md`；下文跨平台描述保留历史记录。
+
 2026-10-20复审：已直接修复操作日志原子性/不确定响应、单引擎权威与累计重连额度、交易恢复/SaveAs/仅ack、原地图隔离、原设置被完整SaveData污染等问题，并继续交叉CR。协议2最终feef构建：服务148/148、24组Ruby、三Game综合117/117且三个自然exit0；真实磁盘SHA/六个globals/原世界保护和只读SQLite审计通过。跨平台现状已核实：Windows本机多实例具备开发验证，Android当前不可联机，macOS/Linux与跨机器LAN/公网未验收。完整问题、失败记录与证据见 `multiplayer-code-review-2026-10-20.zh-CN.md` 和 `multiplayer-cross-platform.zh-CN.md`。
 
 新增真实池交易hard-exit/restart：18项业务断言通过；首次客机按计划在持久领取后exit1，新Game用同一隔离存档恢复、只ack，最终房主与重启客机均exit0。唯一transaction、双方各3只/1marker、原设置0/1、无pending/escrow均通过；前三次启动器/准备时序失败单列保留。修后交叉CR未发现新的P1/P2，仍保留人工和跨平台发布门槛。

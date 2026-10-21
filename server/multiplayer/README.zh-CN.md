@@ -1,4 +1,22 @@
-# 本地联机协调服务（协议 1）
+# 本地联机协调服务（协议 2）
+
+2026-10-21新增账号、云存档、主线地图同步与聊天，完整使用/验证说明见 `../../docs/multiplayer-online-world.zh-CN.md`。新端点使用Bearer身份，其中auth/register、auth/login无需身份；本节POST不使用经济操作日志，上传和聊天分别以upload_id/client_id去重。
+
+| POST路径 | 请求要点 |
+| --- | --- |
+| `/v1/auth/register`、`/v1/auth/login` | `username,password,protocol:2`，注册可带nickname；返回identity、token、username、expires_at |
+| `/v1/auth/logout` | 撤销当前账号会话凭据；游戏退出先关闭云写入会话 |
+| `/v1/cloud/open` | `session_id,compatibility`；单账号单写入租约，返回云槽位版本列表 |
+| `/v1/cloud/heartbeat`、`/close` | `session_id`；续期或关闭 |
+| `/v1/cloud/download` | `session_id,slot`；返回当前槽位save和revision |
+| `/v1/cloud/upload` | `session_id,slot,revision,upload_id,save:{format,game_version,payload,sha256}`；版本CAS、幂等提交 |
+| `/v1/cloud/chunk` | `session_id,upload_id,index,total,sha256,data`；16KiB分片、返回next_index或最终上传回执 |
+| `/v1/world/join` | `session_id,compatibility` |
+| `/v1/world/sync` | `session_id,seq,after,position`；position可null隐藏，或含map_id/map_hash/width/height/x/y/direction/character_id/moving；返回world玩家与消息增量 |
+| `/v1/world/leave` | `session_id` |
+| `/v1/chat/send` | `session_id,client_id,channel:map或world,text`；服务器填入真实发送者、昵称、地图范围 |
+
+云端与账号记录保存在同一SQLite事务体系中；服务器不解释游戏对象、不执行上传数据。重启清空地图在线状态，保留账号、存档及上传回执。云数据应与身份数据库一起私密备份。
 
 第三版和后续独立玩法服务状态机位于 `backend_v3.py`，由同一 `Store` 和 SQLite 写事务协调；客户端实现与原生游戏验收见根 `docs`，不能仅因服务测试通过就宣称游戏验收通过。
 
