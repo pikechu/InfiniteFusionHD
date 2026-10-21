@@ -33,7 +33,7 @@ def pbPostData(url, postdata, filename=nil, depth=0)
     return ret if !ret.is_a?(Hash)
     return "" if ret[:status] != 200
     return ret[:body] if !filename
-    File.open(filename, "wb"){|f|f.write(ret[:body])}
+    KIF::Platform.write_download(filename, ret[:body])
     return ""
   end
   return ""
@@ -52,7 +52,7 @@ def pbDownloadData(url, filename = nil, authorization = nil, depth = 0, &block)
   return ret if !ret.is_a?(Hash)
   return "" if ret[:status] != 200
   return ret[:body] if !filename
-  File.open(filename, "wb") { |f| f.write(ret[:body]) }
+  KIF::Platform.write_download(filename, ret[:body])
   return ""
 end
 

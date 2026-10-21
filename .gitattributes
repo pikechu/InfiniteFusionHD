@@ -6,3 +6,5 @@
 /server/multiplayer/*.json text eol=lf
 /Fonts/*.otf -text
 /docs/multiplayer-functional-spec.zh-CN.md whitespace=-blank-at-eol,-blank-at-eof
+# Preserve whitespace in the pinned upstream patch's context lines.
+/android/native/emulator-coordinate-source.patch whitespace=-blank-at-eol

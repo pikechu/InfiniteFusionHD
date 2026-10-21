@@ -1,0 +1,790 @@
+{
+  "id": 108,
+  "name": "gameDownload Warning",
+  "trigger": 0,
+  "switch_id": 1,
+  "commands": [
+    {
+      "index": 0,
+      "code": 101,
+      "indent": 0,
+      "parameters": [
+        "Welcome to Pokémon Infinite Fusion! "
+      ]
+    },
+    {
+      "index": 1,
+      "code": 101,
+      "indent": 0,
+      "parameters": [
+        "Before we get started, could you tell us where you "
+      ]
+    },
+    {
+      "index": 2,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "downloaded the game from? (This data will not be "
+      ]
+    },
+    {
+      "index": 3,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "collected)."
+      ]
+    },
+    {
+      "index": 4,
+      "code": 355,
+      "indent": 0,
+      "parameters": [
+        "options=[\"The game's official Discord\","
+      ]
+    },
+    {
+      "index": 5,
+      "code": 655,
+      "indent": 0,
+      "parameters": [
+        "\"The game's subreddit\","
+      ]
+    },
+    {
+      "index": 6,
+      "code": 655,
+      "indent": 0,
+      "parameters": [
+        "\"The game's Pokecommunity thread\","
+      ]
+    },
+    {
+      "index": 7,
+      "code": 655,
+      "indent": 0,
+      "parameters": [
+        "\"A Pokémon Infinite Fusion website\","
+      ]
+    },
+    {
+      "index": 8,
+      "code": 655,
+      "indent": 0,
+      "parameters": [
+        "\"Other\"]"
+      ]
+    },
+    {
+      "index": 9,
+      "code": 655,
+      "indent": 0,
+      "parameters": [
+        "selected= optionsMenu(options,nil,4)"
+      ]
+    },
+    {
+      "index": 10,
+      "code": 655,
+      "indent": 0,
+      "parameters": [
+        "pbSet(5,selected)"
+      ]
+    },
+    {
+      "index": 11,
+      "code": 111,
+      "indent": 0,
+      "parameters": [
+        1,
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "code": 108,
+      "indent": 1,
+      "parameters": [
+        "Discord"
+      ]
+    },
+    {
+      "index": 13,
+      "code": 119,
+      "indent": 1,
+      "parameters": [
+        "good"
+      ]
+    },
+    {
+      "index": 14,
+      "code": 0,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 15,
+      "code": 412,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 16,
+      "code": 111,
+      "indent": 0,
+      "parameters": [
+        1,
+        5,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "code": 108,
+      "indent": 1,
+      "parameters": [
+        "Reddit"
+      ]
+    },
+    {
+      "index": 18,
+      "code": 119,
+      "indent": 1,
+      "parameters": [
+        "good"
+      ]
+    },
+    {
+      "index": 19,
+      "code": 0,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 20,
+      "code": 412,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 21,
+      "code": 111,
+      "indent": 0,
+      "parameters": [
+        1,
+        5,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "code": 108,
+      "indent": 1,
+      "parameters": [
+        "Pokecommunity"
+      ]
+    },
+    {
+      "index": 23,
+      "code": 119,
+      "indent": 1,
+      "parameters": [
+        "good"
+      ]
+    },
+    {
+      "index": 24,
+      "code": 0,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 25,
+      "code": 412,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 26,
+      "code": 111,
+      "indent": 0,
+      "parameters": [
+        1,
+        5,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "code": 108,
+      "indent": 1,
+      "parameters": [
+        "website"
+      ]
+    },
+    {
+      "index": 28,
+      "code": 119,
+      "indent": 1,
+      "parameters": [
+        "bad"
+      ]
+    },
+    {
+      "index": 29,
+      "code": 0,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 30,
+      "code": 412,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 31,
+      "code": 111,
+      "indent": 0,
+      "parameters": [
+        1,
+        5,
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "index": 32,
+      "code": 108,
+      "indent": 1,
+      "parameters": [
+        "other"
+      ]
+    },
+    {
+      "index": 33,
+      "code": 119,
+      "indent": 1,
+      "parameters": [
+        "bad"
+      ]
+    },
+    {
+      "index": 34,
+      "code": 0,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 35,
+      "code": 412,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 36,
+      "code": 118,
+      "indent": 0,
+      "parameters": [
+        "good"
+      ]
+    },
+    {
+      "index": 37,
+      "code": 250,
+      "indent": 0,
+      "parameters": [
+        {
+          "class": "RPG::AudioFile",
+          "fields": {
+            "@volume": 80,
+            "@name": "GUI naming confirm",
+            "@pitch": 100
+          }
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "code": 101,
+      "indent": 0,
+      "parameters": [
+        "Perfect! The game's official \\C[3]Discord\\C[0], the game's "
+      ]
+    },
+    {
+      "index": 39,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "official \\C[3]subreddit\\C[0]  and the game's \\C[3]"
+      ]
+    },
+    {
+      "index": 40,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "Pokecommunity\\C[0] thread are the <b>only</b> safe "
+      ]
+    },
+    {
+      "index": 41,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "places to download the game."
+      ]
+    },
+    {
+      "index": 42,
+      "code": 101,
+      "indent": 0,
+      "parameters": [
+        "Pokémon Infinite Fusion does NOT currently have an "
+      ]
+    },
+    {
+      "index": 43,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "official website, though this may change in the future."
+      ]
+    },
+    {
+      "index": 44,
+      "code": 101,
+      "indent": 0,
+      "parameters": [
+        "There have been multiple websites that reupload "
+      ]
+    },
+    {
+      "index": 45,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "the game and pretend to be official websites to steal users "
+      ]
+    },
+    {
+      "index": 46,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "information and we feel that it's important to inform the "
+      ]
+    },
+    {
+      "index": 47,
+      "code": 401,
+      "indent": 0,
+      "parameters": [
+        "players."
+      ]
+    },
+    {
+      "index": 48,
+      "code": 106,
+      "indent": 0,
+      "parameters": [
+        8
+      ]
+    },
+    {
+      "index": 49,
+      "code": 101,
+      "indent": 0,
+      "parameters": [
+        "Let's get started!"
+      ]
+    },
+    {
+      "index": 50,
+      "code": 115,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 51,
+      "code": 108,
+      "indent": 0,
+      "parameters": [
+        "Response if the player said that they downloaded the game from "
+      ]
+    },
+    {
+      "index": 52,
+      "code": 408,
+      "indent": 0,
+      "parameters": [
+        "another website"
+      ]
+    },
+    {
+      "index": 53,
+      "code": 118,
+      "indent": 0,
+      "parameters": [
+        "bad"
+      ]
+    },
+    {
+      "index": 54,
+      "code": 112,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 55,
+      "code": 250,
+      "indent": 1,
+      "parameters": [
+        {
+          "class": "RPG::AudioFile",
+          "fields": {
+            "@volume": 100,
+            "@name": "Pika",
+            "@pitch": 100
+          }
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "\\C[2]<b>IMPORTANT !!!</b>"
+      ]
+    },
+    {
+      "index": 57,
+      "code": 250,
+      "indent": 1,
+      "parameters": [
+        {
+          "class": "RPG::AudioFile",
+          "fields": {
+            "@volume": 80,
+            "@name": "whistle",
+            "@pitch": 100
+          }
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "\\C[2]Pokémon Infinite Fusion does NOT currently "
+      ]
+    },
+    {
+      "index": 59,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "have an official website, though this may change in the "
+      ]
+    },
+    {
+      "index": 60,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "future."
+      ]
+    },
+    {
+      "index": 61,
+      "code": 250,
+      "indent": 1,
+      "parameters": [
+        {
+          "class": "RPG::AudioFile",
+          "fields": {
+            "@volume": 40,
+            "@name": "whistle",
+            "@pitch": 100
+          }
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "\\C[2]There are multiple websites that reupload the game "
+      ]
+    },
+    {
+      "index": 63,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "and pretend to be official websites to <b>steal your data "
+      ]
+    },
+    {
+      "index": 64,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "and infect your computer</b>."
+      ]
+    },
+    {
+      "index": 65,
+      "code": 106,
+      "indent": 1,
+      "parameters": [
+        8
+      ]
+    },
+    {
+      "index": 66,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "Here are the steps you need to take if you want to be safe:"
+      ]
+    },
+    {
+      "index": 67,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "1. Uninstall the game from your computer, as well as "
+      ]
+    },
+    {
+      "index": 68,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "anything else you might have downloaded from the fake "
+      ]
+    },
+    {
+      "index": 69,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "website."
+      ]
+    },
+    {
+      "index": 70,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "2. Run a full virus scan of your computer."
+      ]
+    },
+    {
+      "index": 71,
+      "code": 101,
+      "indent": 1,
+      "parameters": [
+        "3. Join the game's Discord and redownload the game from "
+      ]
+    },
+    {
+      "index": 72,
+      "code": 401,
+      "indent": 1,
+      "parameters": [
+        "there."
+      ]
+    },
+    {
+      "index": 73,
+      "code": 102,
+      "indent": 1,
+      "parameters": [
+        [
+          "Repeat",
+          "Understood!"
+        ],
+        2
+      ]
+    },
+    {
+      "index": 74,
+      "code": 402,
+      "indent": 1,
+      "parameters": [
+        0,
+        "Repeat"
+      ]
+    },
+    {
+      "index": 75,
+      "code": 0,
+      "indent": 2,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 76,
+      "code": 402,
+      "indent": 1,
+      "parameters": [
+        1,
+        "Understood!"
+      ]
+    },
+    {
+      "index": 77,
+      "code": 101,
+      "indent": 2,
+      "parameters": [
+        "Please also consider reporting the fake website to Google "
+      ]
+    },
+    {
+      "index": 78,
+      "code": 401,
+      "indent": 2,
+      "parameters": [
+        "to help us combat scammers and keep the community "
+      ]
+    },
+    {
+      "index": 79,
+      "code": 401,
+      "indent": 2,
+      "parameters": [
+        "safe."
+      ]
+    },
+    {
+      "index": 80,
+      "code": 101,
+      "indent": 2,
+      "parameters": [
+        "A link to the game's official Discord will now open in your "
+      ]
+    },
+    {
+      "index": 81,
+      "code": 401,
+      "indent": 2,
+      "parameters": [
+        "browser."
+      ]
+    },
+    {
+      "index": 82,
+      "code": 355,
+      "indent": 2,
+      "parameters": [
+        "openUrlInBrowser(Settings::DISCORD_URL)"
+      ]
+    },
+    {
+      "index": 83,
+      "code": 355,
+      "indent": 2,
+      "parameters": [
+        "#Quit game"
+      ]
+    },
+    {
+      "index": 84,
+      "code": 655,
+      "indent": 2,
+      "parameters": [
+        "$scene = nil"
+      ]
+    },
+    {
+      "index": 85,
+      "code": 106,
+      "indent": 2,
+      "parameters": [
+        8
+      ]
+    },
+    {
+      "index": 86,
+      "code": 0,
+      "indent": 2,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 87,
+      "code": 404,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 88,
+      "code": 0,
+      "indent": 1,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 89,
+      "code": 413,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    },
+    {
+      "index": 90,
+      "code": 0,
+      "indent": 0,
+      "parameters": [
+
+      ]
+    }
+  ]
+}

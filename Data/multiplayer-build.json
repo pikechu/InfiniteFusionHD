@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "17354e77172faf618be0d2fea20338b80d878eb9912a7b9f78437c845ffcdead",
+  "data_hash": "592e5b0868296282e125e497b7fb43afd6d19a6e84d8e463bd42ee4f84775886",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -43,8 +43,8 @@
       "size": 758
     },
     "Data/Scripts/000_Platform.rb": {
-      "sha256": "fc24b5b03abedd86f18b5ed0d4233f8c2e0fcd87ec98259f4ccba3a9f96d9630",
-      "size": 3460
+      "sha256": "58777ade05b78d552cb2621103b5e40cc49200b06f132d445706517ee6d3228b",
+      "size": 14468
     },
     "Data/Scripts/001_Settings.rb": {
       "sha256": "2339cb322750466bcb05f6c7854ecca39f5b51399c086ea705af2e92eb8e1aef",
@@ -59,8 +59,8 @@
       "size": 1465
     },
     "Data/Scripts/001_Technical/001_Debugging/003_Errors.rb": {
-      "sha256": "30f75a9e2247e2ae9ab4776bd6554693813cb2a06d840573ce1909d4d32f0e43",
-      "size": 3262
+      "sha256": "e2cdc023b044d764502423ebad27baf319bf197e454081510bff30c681b804dd",
+      "size": 3297
     },
     "Data/Scripts/001_Technical/001_Debugging/004_Validation.rb": {
       "sha256": "8c5eaa8b413d3edfcd097e7731b3e3639f992e7f2ce0803e4c8a8472e4a4f238",
@@ -71,20 +71,20 @@
       "size": 2121
     },
     "Data/Scripts/001_Technical/001_MKXP_Compatibility.rb": {
-      "sha256": "e13944206b81607f3a13249734213154154354a04d311023c1d62c8120824a76",
-      "size": 20760
+      "sha256": "fdaeb553485d79218c4de9a2784435f24b58dbb9276e725922daaa9523ba73fc",
+      "size": 20814
     },
     "Data/Scripts/001_Technical/002_Files/001_FileTests.rb": {
-      "sha256": "22b9d28af2d626dea4a52ca06a262b80e6d5d220f2ef9ce3c7c6f9e25a485c1f",
-      "size": 12749
+      "sha256": "f0648ba7841e5d6ada3c697335c0e418ab62f5eac97be0a0d352f246a52a58e8",
+      "size": 12856
     },
     "Data/Scripts/001_Technical/002_Files/002_FileMixins.rb": {
       "sha256": "9b93f8570239aa7777b88af9c79f3408b2331fe31b122af06968d644828cf8f5",
       "size": 2243
     },
     "Data/Scripts/001_Technical/002_Files/003_HTTP_Utilities.rb": {
-      "sha256": "52311b855b2c24d3c56d2d43f8438b267a283a99c4bfc892bdb5b952894af70c",
-      "size": 3710
+      "sha256": "9eefb03a1a227a67e297d6909c122f96e0067cb04d2a2eaf45072b97783705c6",
+      "size": 3708
     },
     "Data/Scripts/001_Technical/002_RubyUtilities.rb": {
       "sha256": "a3ce03fdcc6949e7629c3b1926682ba869c17c472c07d8bb048bcb9a5187df17",
@@ -95,12 +95,12 @@
       "size": 19713
     },
     "Data/Scripts/001_Technical/004_Input.rb": {
-      "sha256": "a72efbe57037ef729c1ce25b16c78cab1c088d5a8e2e59ff61267cb62b1c5baa",
-      "size": 624
+      "sha256": "f593099d227734bde35325a099708cc7ab260f9fe67e2a6a61c18fdf99ce0c11",
+      "size": 823
     },
     "Data/Scripts/001_Technical/005_PluginManager.rb": {
-      "sha256": "e2dc067097af86a80d4fa34b0801f769aa45179f3ca6bf53e6f85c6541e4cbfc",
-      "size": 36501
+      "sha256": "ea07359e5c796b6f5b5abd20fe55bde30932de0803177ea00ffb87a843c56587",
+      "size": 36536
     },
     "Data/Scripts/001_Technical/006_RPG_Sprite.rb": {
       "sha256": "13ec85633c466f669478b243ebe0597a19b2eaa9292d3fc33c3a573acaeebfb3",
@@ -143,8 +143,8 @@
       "size": 14631
     },
     "Data/Scripts/003_Game processing/004_Interpreter_Commands.rb": {
-      "sha256": "7de9c693a35e784c0f6d57121db1a3f4fe95347bd64d4daa576c173f175db318",
-      "size": 41812
+      "sha256": "b0e15883c083ab22f9d9b1cd720cb8b96afd39df10683ec4cd550dd5d7c0a1d3",
+      "size": 41860
     },
     "Data/Scripts/003_Game processing/005_Event_Handlers.rb": {
       "sha256": "a425f4d6dd3b8b85323237e5da739c11bed63990361f92aa1cffd3ddfd29f57c",
@@ -351,8 +351,8 @@
       "size": 40068
     },
     "Data/Scripts/007_Objects and windows/011_Messages.rb": {
-      "sha256": "6b624aba2d0fa3c16a8ca281b2aa151508359ad322eaa78c622d020624d59911",
-      "size": 31311
+      "sha256": "ba2ffa13bd1122dc30ebb6cfec9795aa2fbfbcffeac27e55e89d59affc54ac79",
+      "size": 31416
     },
     "Data/Scripts/007_Objects and windows/012_TextEntry.rb": {
       "sha256": "08b0e6e36a1b8a3a80f99c004ea8920b204204fe9a53ed83338652b47de3b5ff",
@@ -955,8 +955,8 @@
       "size": 13012
     },
     "Data/Scripts/016_UI/001_UI_PauseMenu.rb": {
-      "sha256": "8c06470afee6e7325a7c839d846b89c6368e9126423c109de53dbce9da00a329",
-      "size": 20570
+      "sha256": "a89c381c708170fa337628c8aab9c10acbb8153afe06afdc5cf16c1566c19a03",
+      "size": 20574
     },
     "Data/Scripts/016_UI/002_UI_Pokedex_Menu.rb": {
       "sha256": "13f2d8fa55b6ead66f1ed6b47f2332c5ec1d858ce37c0da9bac0d091b5cca8c5",
@@ -1003,24 +1003,24 @@
       "size": 5469
     },
     "Data/Scripts/016_UI/013_UI_Load.rb": {
-      "sha256": "8f27fbc722b86f30ebc95f6e8c48e4373b2907c63cd4f3d4ccc94bfe4e766d72",
-      "size": 13045
+      "sha256": "6e629c1d7bba21cc22a9b459e93ac1a183ab3f5a7dcde9de90cae63631a4f16a",
+      "size": 13259
     },
     "Data/Scripts/016_UI/014_UI_Save.rb": {
       "sha256": "f8ba1d13a5023436fd798d7fb2fff36c689c04511767cca18df5cb2147191ef2",
       "size": 4125
     },
     "Data/Scripts/016_UI/015_UI_Options.rb": {
-      "sha256": "562b44fcf6dccfd6d739359214285c1aeec46aee36cc5b3686f9c0dc18cbf16b",
-      "size": 124055
+      "sha256": "406793dba0c5ef43996091d60384a88a87982cab952626edb560c6936229219c",
+      "size": 124122
     },
     "Data/Scripts/016_UI/016_UI_ReadyMenu.rb": {
       "sha256": "b93c893dfbfa1841a47f9ac4f170d325eaa32c9df28f4d91b4c7d7a4e016bdc3",
       "size": 9726
     },
     "Data/Scripts/016_UI/017_UI_PokemonStorage.rb": {
-      "sha256": "2262baaa9b4d842165cfce14634da81955956b72e6da3d5e252990efe8d68f5c",
-      "size": 191487
+      "sha256": "36aa106f8cdc2299819d556aefe5f31da471f98d5e1963067700c0e356854175",
+      "size": 191646
     },
     "Data/Scripts/016_UI/018_UI_ItemStorage.rb": {
       "sha256": "3d446c74f7884c9f2f429971f88bd99fe868a5d541483e316275cf66655dce59",
@@ -1531,16 +1531,16 @@
       "size": 11774
     },
     "Data/Scripts/052_AddOns/GameplayUtils.rb": {
-      "sha256": "4f9c645c03fe2a0bb78e557746216379867af588e2faff487be3592ee1d34601",
-      "size": 49293
+      "sha256": "8d07d9cb04bf96a8d3b1098fe8c250e93e7a5d6d1dc90c7e7561d0a62f55ca6e",
+      "size": 49534
     },
     "Data/Scripts/052_AddOns/Gen 2.rb": {
       "sha256": "03c0456502efda86696286d54c546cacc98e2365fe21e84f083b0f01aed88564",
       "size": 8794
     },
     "Data/Scripts/052_AddOns/GeneralUtils.rb": {
-      "sha256": "f27300ddb243f83be00c6622f38732a042dbe5c43de24a7a2f2bb5d1b914af3b",
-      "size": 22340
+      "sha256": "0cb07c12436bec1dc45a21a7ea7a3b3733a3a0951459948bed3348c12d2f805c",
+      "size": 22394
     },
     "Data/Scripts/052_AddOns/GuessPokemonQuiz.rb": {
       "sha256": "7ec2589f8512e9e7e72e13d21bac69d80e42ac13e41c0b99c524dda755e6ef2f",
@@ -1551,12 +1551,12 @@
       "size": 1775
     },
     "Data/Scripts/052_AddOns/HttpCalls.rb": {
-      "sha256": "33c477f5ce7a0e8008961e46d59591138c33c7bdcf01ec7209733e36cc0bb311",
-      "size": 10994
+      "sha256": "a75825be49d6a6adb1ffcb25ff85224baa32424059d3e61a5626ad79259fd283",
+      "size": 10978
     },
     "Data/Scripts/052_AddOns/IntroScreen.rb": {
-      "sha256": "5d0972727642f50c8c6a31016c485bbf2c427ea64fa0056eb0d71c6a0a2a17e4",
-      "size": 19605
+      "sha256": "7a6af71be0d184f76d7d97e9038b75e69ce251874cce909a34229dc86560753a",
+      "size": 19852
     },
     "Data/Scripts/052_AddOns/MapExporter.rb": {
       "sha256": "8ba5cb745f170dd7d53103c5dfdf1b8ca25057775b2fa73bedeb3ab6b92bc673",
@@ -1567,12 +1567,12 @@
       "size": 2088
     },
     "Data/Scripts/052_AddOns/MultiSaves.rb": {
-      "sha256": "55bea05794ab23746a27a7b15548e1b3f94d96488f1de2c88c6b48a62e4d7213",
-      "size": 31176
+      "sha256": "b3ed0a23982f6be16563672c94cded8d923848cb10930a44096b8916303b4f79",
+      "size": 31259
     },
     "Data/Scripts/052_AddOns/MultiSaves_Infinite Save Backups.rb": {
-      "sha256": "3568bfd229fba1e95bea890296370aae61869ae27caf7754face97400a98b3db",
-      "size": 3918
+      "sha256": "28d18ef37b327eb8e0c8c45420fe91cb5d1f44c35180110aeb4a2fbeb1bd1968",
+      "size": 4117
     },
     "Data/Scripts/052_AddOns/New Balls.rb": {
       "sha256": "02c619108be4e77e02706aec32b0cc8830a9d8f7619910e6d41a78f722463977",
@@ -2031,5 +2031,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-21T01:36:23Z"
+  "built_at": "2026-10-21T06:24:05Z"
 }

@@ -1861,7 +1861,7 @@ class PokemonStorageScene
     commands[cmdDefSprite = commands.length] = _INTL("Use Default Sprite") if (!$PokemonSystem.kurayindividcustomsprite || $PokemonSystem.kurayindividcustomsprite == 0)
     commands[cmdShowSprite = commands.length] = _INTL("Show Spritename") if (!$PokemonSystem.kurayindividcustomsprite || $PokemonSystem.kurayindividcustomsprite == 0)
     commands[cmdBlacklist = commands.length] = _INTL("Blacklist Sprite") if (!$PokemonSystem.kurayindividcustomsprite || $PokemonSystem.kurayindividcustomsprite == 0)
-    commands[cmdOpenShinyFinder = commands.length] = _INTL("Start Shiny Finder") if (!$PokemonSystem.kurayindividcustomsprite || $PokemonSystem.kurayindividcustomsprite == 0)
+    commands[cmdOpenShinyFinder = commands.length] = _INTL("Start Shiny Finder") if KIF::Platform.desktop_tools? && (!$PokemonSystem.kurayindividcustomsprite || $PokemonSystem.kurayindividcustomsprite == 0)
     # commands[cmdImportJson = commands.length] = _INTL("Import") if $DEBUG
     commands[cmdExport = commands.length] = _INTL("Export") if $DEBUG || canExportImport
     commands[cmdExportAll = commands.length] = _INTL("Export All Pokemons") if $DEBUG || canExportImport
@@ -2092,6 +2092,10 @@ class PokemonStorageScene
   end
 
   def pbShinyFinder(selected, heldpoke)
+    unless KIF::Platform.desktop_tools?
+      pbDisplay(_INTL("Shiny Finder is unavailable on Android."))
+      return
+    end
     pokemon = heldpoke
     if heldpoke
       pokemon = heldpoke

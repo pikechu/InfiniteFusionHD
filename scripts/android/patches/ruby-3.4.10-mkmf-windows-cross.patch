@@ -1,0 +1,17 @@
+diff --git a/lib/mkmf.rb b/lib/mkmf.rb
+--- a/lib/mkmf.rb
++++ b/lib/mkmf.rb
+@@ -625,7 +625,12 @@
+       end
+     else
+       try_do(src, cmd, **opts, &b)
+-    end and File.executable?(exe) or return nil
++    end and (File.executable?(exe) ||
++      # fake.rb preserves the original host platform in CROSS_COMPILING.
++      # Windows tests suffixes, so an Android ELF named conftest fails its
++      # executable? check. The successful cross-link still must create a file.
++      (defined?(CROSS_COMPILING) && CROSS_COMPILING.is_a?(String) &&
++       /(?:\A|-)(?:mswin|mingw)/.match?(CROSS_COMPILING) && File.file?(exe))) or return nil
+     exe
+   ensure
+     MakeMakefile.rm_rf(*Dir["#{CONFTEST}*"]-[exe])

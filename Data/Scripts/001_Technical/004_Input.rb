@@ -31,3 +31,7 @@ module Mouse
     return Input.mouse_x, Input.mouse_y
   end
 end
+
+# Keep this after the Input definitions/aliases, so the Android adapter captures
+# the completed game wrapper without changing desktop or subsequent Mods aliases.
+KIF::Platform.install_input_bridge

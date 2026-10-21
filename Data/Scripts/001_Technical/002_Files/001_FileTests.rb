@@ -55,6 +55,7 @@ class File
   #  Checks for existing file, gets around accents
   #-----------------------------------------------------------------------------
   def self.safe?(file)
+    file = KIF::Platform.read_path(file)
     ret = false
     self.open(file, 'rb') { ret = true } rescue nil
     return ret
@@ -76,6 +77,7 @@ end
 
 # Works around a problem with FileTest.exist if path contains accent marks
 def safeExists?(f)
+  f = KIF::Platform.read_path(f)
   return FileTest.exist?(f) if f[/\A[\x20-\x7E]*\z/]
   ret = false
   begin
@@ -337,6 +339,7 @@ def pbGetFileChar(file)
 end
 
 def pbTryString(x)
+  x = KIF::Platform.read_path(x)
   ret = pbGetFileChar(x)
   return (ret!=nil && ret!="") ? x : nil
 end

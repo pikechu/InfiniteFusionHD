@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "resolvedDate": "2026-10-16",
+  "runtimeCommit": "68653811c3c396f2d4c12225c52c407746285a3d",
+  "status": "future-source-build-candidates;not-proven-prebuilt-inputs",
+  "dependencies": [
+    {
+      "name": "libogg",
+      "url": "https://github.com/xiph/ogg",
+      "selectedRef": "refs/tags/v1.3.6",
+      "commit": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "libvorbis",
+      "url": "https://github.com/xiph/vorbis",
+      "selectedRef": "refs/tags/v1.3.7",
+      "commit": "0657aee69dec8508a0011f47f3b69d7538e9d262",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "libtheora",
+      "url": "https://github.com/xiph/theora",
+      "selectedRef": "HEAD",
+      "commit": "28fd5ec77f0ad0e07a371cef1047828116f6bd8a",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "uchardet",
+      "url": "https://gitlab.freedesktop.org/uchardet/uchardet",
+      "selectedRef": "refs/tags/v0.0.8",
+      "commit": "ae6302a016088ad07177f86d417b20010053632b",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "pixman",
+      "url": "https://gitlab.freedesktop.org/pixman/pixman",
+      "selectedRef": "refs/tags/pixman-0.42.2",
+      "commit": "37216a32839f59e8dcaa4c3951b3fcfc3f07852c",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "physfs",
+      "url": "https://github.com/icculus/physfs",
+      "selectedRef": "refs/tags/release-3.2.0",
+      "commit": "eb3383b532c5f74bfeb42ec306ba2cf80eed988c",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "openal",
+      "url": "https://github.com/kcat/openal-soft",
+      "selectedRef": "refs/tags/1.24.3",
+      "commit": "dc7d7054a5b4f3bec1dc23a42fd616a0847af948",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "SDL2",
+      "url": "https://github.com/mkxp-z/SDL",
+      "selectedRef": "refs/heads/mkxp-z-2.28.1",
+      "commit": "d3ac4c3742a405e719071fc4f5a7ba8a125c76a1",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "SDL2_image",
+      "url": "https://github.com/mkxp-z/SDL_image",
+      "selectedRef": "refs/heads/mkxp-z",
+      "commit": "d3c6d5963dbe438bcae0e2b6f3d7cfea23d02829",
+      "resolved": true,
+      "requiresNestedDependencyLock": true,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "SDL2_ttf",
+      "url": "https://github.com/libsdl-org/SDL_ttf",
+      "selectedRef": "refs/tags/release-2.20.2",
+      "commit": "89d1692fd8fe91a679bb943d377bfbd709b52c23",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "SDL2_sound",
+      "url": "https://github.com/mkxp-z/SDL_sound",
+      "selectedRef": "refs/heads/git",
+      "commit": "cfb2533eb3bac3700015cbd87cc623bea1467239",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "freetype",
+      "url": "https://github.com/mkxp-z/freetype2",
+      "selectedRef": "HEAD",
+      "commit": "4d8db130ea4342317581bab65fc96365ce806b77",
+      "resolved": true,
+      "requiresNestedDependencyLock": true,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "libpng",
+      "url": "https://github.com/pnggroup/libpng",
+      "selectedRef": "refs/tags/v1.6.50",
+      "commit": "2b978915d82377df13fcbb1fb56660195ded868a",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "openssl",
+      "url": "https://github.com/openssl/openssl",
+      "selectedRef": "refs/tags/openssl-3.0.12",
+      "commit": "c3cc0f1386b0544383a61244a4beeb762b67498f",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    },
+    {
+      "name": "ruby",
+      "url": "https://github.com/ruby/ruby",
+      "selectedRef": "refs/tags/v3_4_10",
+      "commit": "2b0b7728dc7f0561c35c3d8c4489945c94b783ad",
+      "resolved": true,
+      "requiresNestedDependencyLock": false,
+      "status": "candidate-not-built",
+      "error": null
+    }
+  ],
+  "nonGitDependency": {
+    "status": "archive-downloaded-and-sha256-matches-official-published-checksum",
+    "version": "1.18",
+    "name": "libiconv",
+    "url": "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+    "sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8",
+    "checksumSource": "https://lists.gnu.org/archive/html/info-gnu/2024-12/msg00004.html"
+  },
+  "rubyPatch": {
+    "path": "patches/ruby-3.4.10-mkxp-z.patch",
+    "runtimeCommit": "68653811c3c396f2d4c12225c52c407746285a3d",
+    "sha256": "f0d01a48c3135e8840aac242b766f485dde179d3db52340ef5efec4ee890639d",
+    "verified": true
+  }
+}

@@ -70,7 +70,7 @@ class PokemonSaveScreen
         _INTL("Save to #{$Trainer.save_slot}"),
         _INTL("Save to another file"),
         _INTL("Name the next backup"),
-        _INTL("Open the save folder"),
+        KIF::Platform.desktop_tools? ? _INTL("Open the save folder") : _INTL("Save folder information"),
         exiting ? _INTL("Quit without saving") : _INTL("Cancel")
       ]
       opt = pbMessage(_INTL('Would you like to save the game?'),choices,5)
@@ -100,7 +100,9 @@ class PokemonSaveScreen
           pbPlayCancelSE
         end
       elsif opt == 3
-        if System.platform[/Windows/]
+        if KIF::Platform.android?
+          pbMessage(_INTL("Saves and backups are kept in this Android app's private storage."))
+        elsif System.platform[/Windows/]
           folderpath = RTP.getSaveFolder
           folderpath.gsub!('\\','\\\\')
           folderpath.gsub!('/','\\\\')

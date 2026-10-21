@@ -181,11 +181,11 @@ class PokemonSystem
     @runstyle = 0 # Default movement speed (0=walk, 1=run)
     @bgmvolume = 100 # Volume of background music and ME
     @sevolume = 100 # Volume of sound effects
-    @textinput = 1 # Text input mode (0=cursor, 1=keyboard)
+    @textinput = KIF::Platform.android? ? 0 : 1 # Android cursor entry also works without a hardware keyboard
     @quicksurf = 0
     @download_sprites = 0
     @max_nb_sprites_download = 5
-    @on_mobile = false
+    @on_mobile = KIF::Platform.android?
     @type_icons = true
     @use_generated_dex_entries = true
     @quicksave = 1

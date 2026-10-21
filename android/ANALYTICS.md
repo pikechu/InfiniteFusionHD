@@ -1,8 +1,8 @@
 # Android 统计适配
 
-本目录的 `Analytics.java`、`AnalyticsProtocol.java` 与协议测试属于独立统计模块。当前主分支尚未包含 Android 游戏外壳和构建工具；统计提交不携带整个 Android 移植。Windows 统计和 Matomo/下载网关可独立使用，见 [统计部署说明](../server/analytics/README.zh-CN.md)。
+本目录的 `Analytics.java`、`AnalyticsProtocol.java` 与协议测试属于独立统计模块。Android 游戏外壳和构建工具现已合入 main，合并后的 Java 编译和协议检查已通过；生命周期、玩家开关和配置资产接线仍需单独完成，当前没有因源码合并而启用 Android 统计。Windows 统计和 Matomo/下载网关可独立使用，见 [统计部署说明](../server/analytics/README.zh-CN.md)。
 
-Android 移植代码合入后，在仓库根目录应用本提交附带的补丁：
+需要接入 Android 统计时，先在仓库根目录检查早期外壳对应的参考补丁；新版外壳上下文已变化，应按下列接线要求合并并另做设备验收：
 
 ```powershell
 git apply --check android/analytics-integration.patch

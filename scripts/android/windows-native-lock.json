@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "resolvedDate": "2026-10-20",
+  "runtimeCommit": "68653811c3c396f2d4c12225c52c407746285a3d",
+  "abi": "arm64-v8a",
+  "api": 30,
+  "ndkRevision": "25.2.9519653",
+  "dependencies": {
+    "libogg": {
+      "url": "https://github.com/xiph/ogg.git",
+      "ref": "v1.3.6",
+      "commit": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822"
+    },
+    "libvorbis": {
+      "url": "https://github.com/xiph/vorbis.git",
+      "ref": "v1.3.7",
+      "commit": "0657aee69dec8508a0011f47f3b69d7538e9d262"
+    },
+    "libpng": {
+      "url": "https://github.com/pnggroup/libpng.git",
+      "ref": "v1.6.50",
+      "commit": "2b978915d82377df13fcbb1fb56660195ded868a"
+    },
+    "physfs": {
+      "url": "https://github.com/icculus/physfs.git",
+      "ref": "release-3.2.0",
+      "commit": "eb3383b532c5f74bfeb42ec306ba2cf80eed988c"
+    },
+    "freetype": {
+      "url": "https://github.com/mkxp-z/freetype2.git",
+      "ref": "locked-runtime-candidate",
+      "commit": "4d8db130ea4342317581bab65fc96365ce806b77",
+      "nestedDependencies": [
+        {
+          "path": "subprojects/dlg",
+          "url": "https://github.com/nyorain/dlg.git",
+          "commit": "d142e646e263c89f93663e027c2f0d03739ab42d"
+        }
+      ]
+    },
+    "ruby": {
+      "version": "3.4.10",
+      "ref": "v3_4_10",
+      "commit": "2b0b7728dc7f0561c35c3d8c4489945c94b783ad",
+      "url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.10.tar.gz",
+      "sha256": "ecee2d072a14f2d14347dd56dfd8fe5c3130abf5117bfaacbda0f4ef9cc429ec",
+      "checksumSource": "https://www.ruby-lang.org/en/news/2026/06/30/ruby-3-4-10-released/",
+      "patchSha256": "f0d01a48c3135e8840aac242b766f485dde179d3db52340ef5efec4ee890639d",
+      "patchLfSha256": "8897ba591db7e158c216e94990f510243359d6a1528a1e12fd817e578bdacd0b",
+      "hostPatch": {
+        "path": "patches/ruby-3.4.10-mkmf-windows-cross.patch",
+        "sha256": "35bbbd7d8ba347bc4d6c9dc4887f8f5eba4c1bbc9ebe5caa679b9e8794e67877",
+        "sourceFile": "lib/mkmf.rb",
+        "beforeSha256": "e67c3ef2f1f1cafd596aba005625e7b6f75c756ffe1b6ba79b1fe10ce84ee55e",
+        "afterSha256": "21cb127b857296a49eae1d550d5e11ca2152496f3163009ddd73fae2eb75d11e",
+        "purpose": "Allow successful Android ELF link probes on a preserved Windows cross-build host; native and non-Windows executable checks stay unchanged."
+      }
+    },
+    "SDL2": {
+      "url": "https://github.com/mkxp-z/SDL.git",
+      "ref": "mkxp-z-2.28.1",
+      "commit": "d3ac4c3742a405e719071fc4f5a7ba8a125c76a1"
+    },
+    "openssl": {
+      "url": "https://github.com/openssl/openssl.git",
+      "ref": "openssl-3.0.12",
+      "commit": "c3cc0f1386b0544383a61244a4beeb762b67498f",
+      "purpose": "Reproduce the selected runtime baseline; not an approved current TLS provider."
+    },
+    "openal": {
+      "url": "https://github.com/kcat/openal-soft.git",
+      "ref": "1.24.3",
+      "commit": "dc7d7054a5b4f3bec1dc23a42fd616a0847af948"
+    },
+    "SDL2_ttf": {
+      "url": "https://github.com/libsdl-org/SDL_ttf.git",
+      "ref": "release-2.20.2",
+      "commit": "89d1692fd8fe91a679bb943d377bfbd709b52c23"
+    },
+    "SDL2_sound": {
+      "url": "https://github.com/mkxp-z/SDL_sound.git",
+      "ref": "git",
+      "commit": "cfb2533eb3bac3700015cbd87cc623bea1467239"
+    },
+    "SDL2_image": {
+      "url": "https://github.com/mkxp-z/SDL_image.git",
+      "ref": "mkxp-z",
+      "commit": "d3c6d5963dbe438bcae0e2b6f3d7cfea23d02829",
+      "nestedLockStatus": "recorded;unused-by-STB-and-disabled-optional-codecs",
+      "unusedGitlinks": [
+        {"path":"external/dav1d","url":"https://github.com/libsdl-org/dav1d.git","commit":"52d0c1f44eff76c3773636a9805f69ec26633037"},
+        {"path":"external/jpeg","url":"https://github.com/libsdl-org/jpeg.git","commit":"bc27d050625f126dcba73ae5b731272de1a89dc1"},
+        {"path":"external/libavif","url":"https://github.com/libsdl-org/libavif.git","commit":"a3e9315474deb60e39b6e3aad88798eee26dadea"},
+        {"path":"external/libjxl","url":"https://github.com/libsdl-org/libjxl.git","commit":"d456eedef27d3587191f35f918c3ca2821c5a6c4"},
+        {"path":"external/libpng","url":"https://github.com/libsdl-org/libpng.git","commit":"999173059e2651fab2a0102eeba18748c4bd9827"},
+        {"path":"external/libtiff","url":"https://github.com/libsdl-org/libtiff.git","commit":"dad25b3f71cfd7f4fcb089a5881a31e65ae92c0a"},
+        {"path":"external/libwebp","url":"https://github.com/libsdl-org/libwebp.git","commit":"12cf7b315fb7a9df56fa6b8ee30e36312659d63c"},
+        {"path":"external/zlib","url":"https://github.com/libsdl-org/zlib.git","commit":"aeb146673f65fe6755d9aae05579c944d6572d20"}
+      ]
+    },
+    "uchardet": {
+      "url": "https://gitlab.freedesktop.org/uchardet/uchardet.git",
+      "ref": "v0.0.8",
+      "commit": "ae6302a016088ad07177f86d417b20010053632b"
+    },
+    "pixman": {
+      "url": "https://gitlab.freedesktop.org/pixman/pixman.git",
+      "ref": "pixman-0.42.2",
+      "commit": "37216a32839f59e8dcaa4c3951b3fcfc3f07852c"
+    },
+    "libtheora": {
+      "url": "https://github.com/xiph/theora.git",
+      "ref": "resolved-runtime-candidate-2026-10-16",
+      "commit": "28fd5ec77f0ad0e07a371cef1047828116f6bd8a"
+    }
+  },
+  "hostTools": {
+    "cmake": {
+      "version": "3.31.6",
+      "directory": "cmake-3.31.6-windows-x86_64",
+      "url": "https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-windows-x86_64.zip",
+      "sha256": "d163cd3ab4959b0a53fa8988f2ddbd2e6c501658201e6a154386bad9dbe4f836",
+      "checksumSource": "https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-SHA-256.txt"
+    },
+    "ninja": {
+      "version": "1.12.1",
+      "directory": "ninja-1.12.1",
+      "url": "https://github.com/ninja-build/ninja/releases/download/v1.12.1/ninja-win.zip",
+      "sha256": "f550fec705b6d6ff58f2db3c374c2277a37691678d6aba463adcbb129108467a",
+      "checksumSource": "Downloaded official GitHub release asset; locally recorded SHA256 (upstream asset has no digest)."
+    }
+  },
+  "hostPackages": [
+    {
+      "name": "perl",
+      "version": "5.42.3-2",
+      "url": "https://repo.msys2.org/msys/x86_64/perl-5.42.3-2-x86_64.pkg.tar.zst",
+      "sha256": "d89eaa2b8d661fd2040b54092d718f57aa1c066ea2d63735989ee47cfa7c9ef2",
+      "source": "https://packages.msys2.org/packages/perl?repo=msys&variant=x86_64"
+    },
+    {
+      "name":"m4","version":"1.4.21-1",
+      "url":"https://repo.msys2.org/msys/x86_64/m4-1.4.21-1-x86_64.pkg.tar.zst",
+      "sha256":"b561e8871c7599502d9fae7196ee965b3fed3d7af09154eb8d2f5e4d9e5e5106",
+      "source":"https://packages.msys2.org/packages/m4"
+    },
+    {
+      "name":"autoconf2.72","version":"2.72-4",
+      "url":"https://repo.msys2.org/msys/x86_64/autoconf2.72-2.72-4-any.pkg.tar.zst",
+      "sha256":"65b3a37edf8bb4221d38db910ce1acc1ed879c7bcba33faa058066d06d35e7b0",
+      "source":"https://packages.msys2.org/packages/autoconf2.72?variant=x86_64"
+    },
+    {
+      "name":"automake1.18","version":"1.18.1-2",
+      "url":"https://repo.msys2.org/msys/x86_64/automake1.18-1.18.1-2-any.pkg.tar.zst",
+      "sha256":"6f6934ae6749771f627d0ca2170c87fb8c5c22658d8f2a8963154be8601d81ce",
+      "source":"https://packages.msys2.org/packages/automake1.18?variant=x86_64"
+    },
+    {
+      "name":"libtool","version":"2.6.2-1",
+      "url":"https://repo.msys2.org/msys/x86_64/libtool-2.6.2-1-x86_64.pkg.tar.zst",
+      "sha256":"ed51a0790d6cd59d24f2f76c826ed0e8d85f81bc1ac2807736400ea5e178fc5a",
+      "source":"https://packages.msys2.org/packages/libtool"
+    },
+    {
+      "name":"libltdl","version":"2.6.2-1",
+      "url":"https://repo.msys2.org/msys/x86_64/libltdl-2.6.2-1-x86_64.pkg.tar.zst",
+      "sha256":"bc17673d87573f997c2aad6680edb57a54a7ab837fd58a95dcd6030aac1f63e4",
+      "source":"https://packages.msys2.org/packages/libltdl?variant=x86_64"
+    }
+  ]
+}

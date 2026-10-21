@@ -1031,9 +1031,11 @@ def pbFreeText(msgwindow, currenttext, passwordbox, maxlength, width = 240)
     Graphics.update
     Input.update
     if Input.triggerex?(:ESCAPE)
+      KIF::Platform.finish_text_entry(window, false)
       ret = currenttext
       break
     elsif Input.triggerex?(:RETURN)
+      KIF::Platform.finish_text_entry(window, true)
       ret = window.text
       break
     end
