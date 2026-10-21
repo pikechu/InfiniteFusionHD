@@ -114,6 +114,7 @@ module KIF
         @last_error = error.class
       end
       process_text_input_request
+      process_display_mode
       result
     end
 
@@ -150,6 +151,18 @@ module KIF
     end
 
     private
+
+    def process_display_mode
+      return unless @bridge.respond_to?(:display_mode_poll)
+      mode = @bridge.display_mode_poll
+      raise ArgumentError, "Invalid Android display mode" unless mode == 0 || mode == 1
+      return if @display_mode == mode
+      # mkxp owns the viewport and mouse transform. Change both on its Ruby
+      # thread; the Android touch controls keep their independent screen bounds.
+      Graphics.fixed_aspect_ratio = (mode == 0)
+      @display_mode = mode
+      System.puts("KIF Android display mode: #{mode == 0 ? 'aspect' : 'stretch'}") if defined?(System) && System.respond_to?(:puts)
+    end
 
     def process_text_input_request
       return unless @bridge.respond_to?(:text_input_request_poll)

@@ -4,10 +4,10 @@
 
 ## 架构
 
-独立应用`org.kuray.kif`，测试名称`KIF Android Test`，当前本地测试版本`0.20.7-android.7`（versionCode7）。手机/模拟器包已构建签名；新增半透明按键及大小设置，本版实际运行状态见[设备报告](android7-device-report.md)，上一版键盘、SAF及无Mod冷读证据保留在[Android.6报告](android6-device-report.md)。实验范围为Android11/API30以上、ARM64、4KB内存页；compile/target API35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布，最新状态见[发布说明](release-notes.md)和[滚动进度](progress.md)。
+独立应用`org.kuray.kif`，测试名称`KIF Android Test`，当前本地测试版本`0.20.7-android.8`（versionCode8）。手机/模拟器包已构建签名；新增默认保持比例 / 拉伸填满、即时切换和选择持久化，实际运行状态见[Android.8设备报告](android8-device-report.md)。半透明按键及大小设置历史验收见[Android.7](android7-device-report.md)，键盘、SAF及无Mod冷读见[Android.6](android6-device-report.md)。实验范围为Android11/API30以上、ARM64、4KB内存页；compile/target API35。范围是构建配置，实际兼容性以测试报告为准。尚未公开发布，最新状态见[发布说明](release-notes.md)和[滚动进度](progress.md)。
 
 - 原生RGSS：固定warmwinter/mkxp-z `68653811c3c396f2d4c12225c52c407746285a3d`。游戏APK当前使用固定SHA256上游预编译库。Windows portable已实际编译固定依赖、Ruby3.4.10和完整core；独立源码运行时探针在API30模拟器通过模块、Marshal、JNI、字体和120帧验证，未使用旧二进制翻译补丁。尚未替换游戏APK，也不代表真机或游戏全功能通过，见[组件构建](windows-native-build.md)、[core构建](windows-native-core.md)。原运行时来源见[调查](runtime-research.md)和`android/runtime.lock.json`。
-- Android 壳：Java + SDL bootstrap，512×384、40 FPS 配置、横屏等比缩放。半透明方向键、确认和返回悬浮于最大化的游戏画面；其他键、键盘、存档及按键大小设置收进「⋯」。支持65%–150%预览/保存/取消/默认，Android 返回映射 X。保留原 UI，Windows 保持原缩放行为。见[按键使用说明](touch-controls.md)。
+- Android 壳：Java + SDL bootstrap，512×384、40 FPS 配置、横屏默认保持比例，可在「⋯ → 显示模式」切换拉伸填满并记住选择，见[显示模式](display-modes.md)。半透明方向键、确认和返回悬浮于最大化的游戏画面；其他键、键盘、存档及按键大小设置收进「⋯」。支持65%–150%预览/保存/取消/默认，Android 返回映射 X。保留原 UI，Windows 保持原缩放行为。见[按键使用说明](touch-controls.md)。
 - 字体：Android 配置 `fontHeightReporting=1`，保留原 TTF、字号与行距。真实运行时对照中，旧模式8/8字体裁切，新模式8/8完整像素与原生参考一致；见[字体报告](font-rendering-report.md)。实际菜单字体和新包回归另见[Android.2 GUI报告](gui-regression-report.md)。
 - 虚拟输入：小型源代码构建的 `libkif_android_bridge.so` 为每个 APK 的必要扩展。Java 按钮通过互斥队列提交 RGSS 逻辑键，Ruby 轮询 held/triggered/released 掩码；此路径不调用 SDL 按键回调。物理键盘保留原 SDL 路径。启动/暂停清空所有虚拟状态，避免粘键或恢复时误触发。该后端已实现并编译，实际游戏连通性以随后运行报告为准。
 - 安装：白名单收集 Audio/Data/Graphics/Fonts 和 Android preload，不收集 temp、Windows 可执行程序、存档、导出宝可梦。每文件 SHA256、总数和总字节校验；后台安装有进度，失败不启动半套素材；重复打开用同一进程互斥。
@@ -38,7 +38,7 @@
 
 离线重建已有输入：`bootstrap-tools.ps1 -SkipDownload`、`prepare-runtime.ps1 -Offline`。更改游戏代码或 preload 后必须重打 payload；仅修改 Java 时可用 `build_apk.py --skip-payload`，运行前需核实 staged 游戏源码与当前代码匹配。
 
-输出：`temp/artifacts/KIF-0.20.7-android.7-arm64-test.apk`、SHA256 文件、构建记录。启用网络时文件名增加 `-network`。开发签名只在 `temp/android-signing`；不能用于正式发行。不得提交密钥。重新生成测试密钥后，已有安装不能原地升级，需先导出存档。
+输出：`temp/artifacts/KIF-0.20.7-android.8-arm64-test.apk`、SHA256 文件、构建记录。启用网络时文件名增加 `-network`。开发签名只在 `temp/android-signing`；不能用于正式发行。不得提交密钥。重新生成测试密钥后，已有安装不能原地升级，需先导出存档。
 
 Android 11 x86_64 AVD 的旧版 ARM 翻译器不能执行上游库中两处合法的 AArch64
 标量转换指令。需要该特定兼容路径时，先生成独立、严格哈希固定的库，再显式选择模拟器变体：
@@ -50,8 +50,8 @@ Android 11 x86_64 AVD 的旧版 ARM 翻译器不能执行上游库中两处合�
 & '<Python>' scripts/android/build_apk.py --emulator-compatible --with-network
 ```
 
-对应输出为 `KIF-0.20.7-android.7-arm64-emulator-test.apk` 和
-`KIF-0.20.7-android.7-arm64-emulator-network-test.apk`；其构建目录与普通包分开，
+对应输出为 `KIF-0.20.7-android.8-arm64-emulator-test.apk` 和
+`KIF-0.20.7-android.8-arm64-emulator-network-test.apk`；其构建目录与普通包分开，
 不会覆盖普通手机 APK 或共享的原版原生库。首次生成某一变体必须先打完整 payload，
 之后才能对该变体使用 `--skip-payload` 或 `--refresh-ruby`。
 库或 provenance 缺失、输入/输出 SHA256 不符时立即失败，不回退为普通包。
@@ -88,7 +88,7 @@ $ruby = (Resolve-Path 'temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.
 | --- | --- |
 | 环境和静态核实 | 已完成仓库检查、分支、依赖固定、官方源码接口核实；见各报告 |
 | 最小工程和平台适配 | 已实现；平台契约62项、444 Ruby文件编译通过，实际结果按版本分开记录 |
-| 独立 APK | Android.7手机/模拟器包已构建签名；原6GiB AVD原地安装、20案例197触控断言及本版UI/保存冷读回归通过，无真机证据 |
+| 独立 APK | Android.8手机/模拟器包已构建签名；原6GiB AVD保留数据重装，20案例197触控断言及两种显示模式/按键/选择持久化通过，31存档SHA不变，无真机证据 |
 | 修复回归闭环 | Android.2 最终7279包已实际通过标题移动期单次确认、4种GUI字体、移动、野战/捕捉、普通融合/拆分、仓库存取、G槽保存、杀进程及相同位置/队伍/HP冷读；见[本轮GUI报告](gui-regression-report.md)。原Android.1新档/训练家结果单列[旧报告](gui-playtest-report.md)；.4/.5闪光与.6实际SAF/无Mod冷读已通过，见本版设备报告 |
 | 产品适配 | 历史SAF导入/恢复/拒绝、资源中断恢复、空档说明已有实测；.7新增半透明控件、大小持久化、折叠IME、SAF后首次960×720通过，其他系统/生命周期/网络矩阵待补 |
 | 性能 | 已记录模拟器 FPS、PSS、安装/配色耗时，见 GUI/集成报告；尚未测大量闪光仓库、峰值/长期增长，不能代表真机性能 |

@@ -24,6 +24,8 @@ public final class GameActivity extends SDLActivity {
     private android.app.AlertDialog controlsDialog;
     private static final String CONTROL_PREFS = "touch_controls";
     private static final String CONTROL_SCALE = "button_scale";
+    private static final String DISPLAY_PREFS = "display";
+    private static final String DISPLAY_STRETCH = "stretch_to_fill";
 
     @Override public void loadLibraries() {
         super.loadLibraries();
@@ -34,6 +36,7 @@ public final class GameActivity extends SDLActivity {
             org.libsdl.app.SDL.loadLibrary("kif_android_bridge");
             NetworkBridge.configure();
             NetworkBridge.clearVirtualKeys();
+            NetworkBridge.setDisplayStretch(savedDisplayStretch());
             bridgeReady = true;
         } catch (LinkageError | RuntimeException failure) {
             android.util.Log.e("KIF-Input", "Required virtual input bridge unavailable", failure);
@@ -81,6 +84,7 @@ public final class GameActivity extends SDLActivity {
     private void writeConfig(String script) throws Exception {
         String config = AssetInstaller.read(getAssets().open("mkxp-base.json"));
         org.json.JSONObject json = new org.json.JSONObject(config);
+        json.put("fixedAspectRatio", !savedDisplayStretch());
         if (script != null) json.put("customScript", script);
         if ("android-font-smoke.rb".equals(script)) {
             int mode = getIntent().getIntExtra("fontMetricsMode", 1);
@@ -151,6 +155,7 @@ public final class GameActivity extends SDLActivity {
         android.graphics.drawable.GradientDrawable panel = new android.graphics.drawable.GradientDrawable();
         panel.setColor(0xe622262a); panel.setCornerRadius(dp(12)); extraControls.setBackground(panel);
         extraControls.setVisibility(View.GONE);
+        extraControls.addView(actionButton("显示模式", () -> { hideExtraControls(); showDisplaySettings(); }), new LinearLayout.LayoutParams(-1, dp(44)));
         extraControls.addView(actionButton("按键设置", () -> { hideExtraControls(); showControlSettings(); }), new LinearLayout.LayoutParams(-1, dp(44)));
         GridLayout shortcuts = new GridLayout(this); shortcuts.setColumnCount(3);
         String[] labels = {"跑步 Z", "A", "S", "快捷 D", "Q", "W"};
@@ -179,6 +184,24 @@ public final class GameActivity extends SDLActivity {
         float value = getSharedPreferences(CONTROL_PREFS, MODE_PRIVATE).getFloat(CONTROL_SCALE, 1f);
         if (Float.isNaN(value) || Float.isInfinite(value)) return 1f;
         return Math.max(TouchControlsView.MIN_SCALE, Math.min(TouchControlsView.MAX_SCALE, value));
+    }
+    private boolean savedDisplayStretch() {
+        return getSharedPreferences(DISPLAY_PREFS, MODE_PRIVATE).getBoolean(DISPLAY_STRETCH, false);
+    }
+    private void showDisplaySettings() {
+        releaseKeys();
+        android.app.AlertDialog dialog = new android.app.AlertDialog.Builder(this)
+            .setTitle("显示模式")
+            .setSingleChoiceItems(new String[] {"保持比例（默认）", "拉伸填满"}, savedDisplayStretch() ? 1 : 0,
+                (choice, which) -> {
+                    boolean stretch = which == 1;
+                    NetworkBridge.setDisplayStretch(stretch);
+                    getSharedPreferences(DISPLAY_PREFS, MODE_PRIVATE).edit().putBoolean(DISPLAY_STRETCH, stretch).apply();
+                    choice.dismiss();
+                })
+            .setNegativeButton("取消", null).create();
+        dialog.setOnDismissListener(closed -> { mSurface.requestFocus(); enterImmersiveMode(); });
+        dialog.show();
     }
     private void toggleExtraControls() {
         boolean show = extraControls.getVisibility() != View.VISIBLE;

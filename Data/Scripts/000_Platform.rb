@@ -18,7 +18,8 @@ module KIF
       end
 
       # Desktop save settings can request a small window after startup. Android
-      # always uses the full surface; mkxp's fixedAspectRatio preserves 4:3.
+      # always uses the full surface; Android's display preference controls
+      # whether mkxp preserves 4:3 or stretches to fill that surface.
       # Do not rewrite the saved desktop preference or apply a window scale.
       def screen_resize_factor(requested_factor)
         android? ? 4 : requested_factor

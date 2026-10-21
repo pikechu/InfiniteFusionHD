@@ -120,7 +120,7 @@ def output_name(runtime_only, with_network, emulator_compatible):
     if runtime_only:
         stem = "KIF-network-probe-arm64" if with_network else "KIF-runtime-probe-arm64"
         return stem + ("-emulator" if emulator_compatible else "") + "-test.apk"
-    stem = "KIF-0.20.7-android.7-arm64"
+    stem = "KIF-0.20.7-android.8-arm64"
     if emulator_compatible:
         stem += "-emulator"
     if with_network:
@@ -142,6 +142,7 @@ def require_input_bridge(generated):
     required_exports = {"Java_org_kuray_kif_NetworkBridge_configure",
                         "Java_org_kuray_kif_NetworkBridge_setVirtualKey",
                         "Java_org_kuray_kif_NetworkBridge_clearVirtualKeys",
+                        "Java_org_kuray_kif_NetworkBridge_setDisplayStretch",
                         "Init_libkif_android_bridge", "Init_kif_android_bridge"}
     if (not isinstance(provenance, dict) or provenance.get("inputBridge") is not True
             or provenance.get("outputSha256") != sha

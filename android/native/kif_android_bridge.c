@@ -43,6 +43,8 @@ static uint32_t input_pressed;
 static uint32_t input_triggered;
 static uint32_t input_released;
 static uint32_t text_input_requested;
+/* Retained independently of key resets, including activity pause/focus changes. */
+static uint32_t display_stretch;
 
 static void throw_configuration_error(JNIEnv *env, const char *message) {
     if ((*env)->ExceptionCheck(env)) return;
@@ -116,6 +118,28 @@ static VALUE text_input_request_poll(VALUE receiver) {
     (void)pthread_mutex_unlock(&input_mutex);
     /* Keep MRI allocation outside the mutex, including this small integer. */
     return rb_ull2inum((unsigned long long)requested);
+}
+
+KIF_EXPORT JNIEXPORT void JNICALL
+Java_org_kuray_kif_NetworkBridge_setDisplayStretch(JNIEnv *env, jclass java_class,
+                                                 jboolean stretch) {
+    (void)java_class;
+    if (pthread_mutex_lock(&input_mutex) != 0) {
+        throw_configuration_error(env, "Cannot set Android display mode");
+        return;
+    }
+    display_stretch = stretch != JNI_FALSE ? 1U : 0U;
+    (void)pthread_mutex_unlock(&input_mutex);
+}
+
+static VALUE display_mode_poll(VALUE receiver) {
+    (void)receiver;
+    uint32_t stretch;
+    if (pthread_mutex_lock(&input_mutex) != 0)
+        rb_raise(rb_eRuntimeError, "Cannot poll Android display mode");
+    stretch = display_stretch;
+    (void)pthread_mutex_unlock(&input_mutex);
+    return rb_ull2inum((unsigned long long)stretch);
 }
 
 static VALUE input_poll(VALUE receiver) {
@@ -313,6 +337,7 @@ KIF_EXPORT void Init_libkif_android_bridge(void) {
     rb_define_module_function(module, "request", (KifRubyMethod)request_json, 1);
     rb_define_module_function(module, "input_poll", (KifRubyMethod)input_poll, 0);
     rb_define_module_function(module, "text_input_request_poll", (KifRubyMethod)text_input_request_poll, 0);
+    rb_define_module_function(module, "display_mode_poll", (KifRubyMethod)display_mode_poll, 0);
 }
 
 KIF_EXPORT void Init_kif_android_bridge(void) {

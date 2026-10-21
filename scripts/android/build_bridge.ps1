@@ -69,6 +69,7 @@ $elfText | Set-Content -LiteralPath (Join-Path $BuildDirectory 'bridge-elf.log')
 $requiredExports = @('Java_org_kuray_kif_NetworkBridge_configure',
     'Java_org_kuray_kif_NetworkBridge_setVirtualKey','Java_org_kuray_kif_NetworkBridge_clearVirtualKeys',
     'Java_org_kuray_kif_NetworkBridge_requestTextInput',
+    'Java_org_kuray_kif_NetworkBridge_setDisplayStretch',
     'Init_libkif_android_bridge','Init_kif_android_bridge')
 foreach ($symbol in $requiredExports) {
     if ($exportsText -notmatch ('(?m)\s' + [regex]::Escape($symbol) + '$')) {

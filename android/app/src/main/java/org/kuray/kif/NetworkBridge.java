@@ -51,6 +51,8 @@ public final class NetworkBridge {
     public static native void clearVirtualKeys();
     /** Request a Ruby-thread text-mode restart independently of game buttons. */
     public static native void requestTextInput();
+    /** Retained display preference; Ruby applies it on the game thread. */
+    public static native void setDisplayStretch(boolean stretch);
     static boolean enabled(Context context) {
         try (InputStream in = context.getAssets().open("network-enabled")) { return in.read() == '1'; }
         catch (IOException unavailable) { return false; }
