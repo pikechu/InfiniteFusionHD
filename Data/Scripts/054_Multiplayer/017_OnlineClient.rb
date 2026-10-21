@@ -8,6 +8,12 @@ module KIFMultiplayer
       @worker && @worker.alive?
     end
     def pending?; !!@worker; end
+    def cancel
+      return unless @worker && @worker.respond_to?(:cancel)
+      @worker.cancel
+      KIFMultiplayer.unregister_worker(@worker)
+      @worker = nil
+    end
     def start(path, body, timeout = 5.0)
       raise Error.new("网络请求仍在执行。", "network_busy") if @worker
       transport, token, url = @client.transport, @client.token, @client.server + path
@@ -302,6 +308,7 @@ module KIFMultiplayer
     end
     def close
       @closed = true
+      @io.cancel
       @client.request("POST", "/v1/cloud/close", {"session_id" => @session_id}, 3.0) unless @io.busy?
     rescue Error
       nil

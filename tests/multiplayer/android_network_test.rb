@@ -72,27 +72,75 @@ end
 
 module KIFAndroidBridge
   class << self
-    attr_reader :calls
-    def request(raw)
+    attr_reader :calls, :cancelled
+    attr_accessor :held, :async_version
+    def http_async_version; @async_version || 1; end
+    def request(*); raise "Synchronous JNI HTTPS must never be called"; end
+    def request_start(raw, timeout)
       raise "bridge envelope exceeded native limit" if raw.bytesize > 65536
+      raise "bad deadline" unless timeout.is_a?(Integer) && timeout.between?(1, 20000)
       (@calls ||= []) << raw
+      @next = (@next || 0) + 1
+      (@jobs ||= {})[@next] = [raw, 0]
+      @next
+    end
+    def pending_count; (@jobs || {}).length; end
+    def request_poll(id)
+      raw, polls = @jobs.fetch(id)
+      @jobs[id][1] = polls + 1
+      return nil if @held || polls == 0
+      @jobs.delete(id)
       envelope = KIFMultiplayer::WireJSON.parse(raw)
-      chunk = KIFMultiplayer::WireJSON.parse(envelope["body"].unpack1("m0"))
-      @parts ||= {}
-      @parts[chunk["index"]] = chunk["data"].unpack1("m0")
-      result = {"ok" => true, "next_index" => chunk["index"] + 1, "upload_id" => chunk["upload_id"]}
-      if @parts.length == chunk["total"]
-        original = KIFMultiplayer::WireJSON.parse(@parts.sort.map(&:last).join)
-        raise "chunk payload altered" unless Digest::SHA256.hexdigest(@parts.sort.map(&:last).join) == chunk["sha256"]
-        result = {"ok" => true, "revision" => original["revision"] + 1, "slot" => original["slot"], "upload_id" => original["upload_id"]}
+      result = {"ok" => true}
+      if envelope["url"].end_with?("/chunk")
+        chunk = KIFMultiplayer::WireJSON.parse(envelope["body"].unpack1("m0"))
+        @parts ||= {}
+        @parts[chunk["index"]] = chunk["data"].unpack1("m0")
+        result = {"ok" => true, "next_index" => chunk["index"] + 1, "upload_id" => chunk["upload_id"]}
+        if @parts.length == chunk["total"]
+          original = KIFMultiplayer::WireJSON.parse(@parts.sort.map(&:last).join)
+          raise "chunk payload altered" unless Digest::SHA256.hexdigest(@parts.sort.map(&:last).join) == chunk["sha256"]
+          result = {"ok" => true, "revision" => original["revision"] + 1, "slot" => original["slot"], "upload_id" => original["upload_id"]}
+        end
       end
       KIFMultiplayer::WireJSON.dump({"status" => 200, "headers" => {}, "body" => [KIFMultiplayer::WireJSON.dump(result)].pack("m0")})
+    end
+    def request_cancel(id)
+      (@cancelled ||= []) << id
+      @jobs.delete(id)
     end
   end
 end
 body = {"session_id" => "a" * 32, "upload_id" => "b" * 32, "slot" => "file-a", "revision" => 0, "save" => {"payload" => "a" * 120000}}
 response = transport.call("POST", "https://fixture.invalid/v1/cloud/upload", body, "fixture_token", 5)
 verify.call(KIFMultiplayer::WireJSON.parse(response[:body])["revision"] == 1 && KIFAndroidBridge.calls.length > 3, "large HTTPS cloud saves use resumable chunks within native bridge limit")
+KIFAndroidBridge.held = true
+slow_https = KIFMultiplayer.network_worker { transport.call("GET", "https://fixture.invalid/slow", {}, nil, 2) }
+100.times { slow_https.poll }
+verify.call(slow_https.alive? && KIFAndroidBridge.pending_count == 1, "pending HTTPS yields across game frames without synchronous JNI")
+KIFAndroidBridge.held = false
+verify.call(KIFMultiplayer::WireJSON.parse(slow_https.value[:body])["ok"] && KIFAndroidBridge.pending_count == 0, "asynchronous HTTPS consumes and releases its response")
+KIFAndroidBridge.held = true
+begin
+  expiring = KIFMultiplayer.network_worker { transport.call("GET", "https://fixture.invalid/slow", {}, nil, 0.02) }
+  expiring.value
+  raise "HTTPS timeout was ignored"
+rescue KIFMultiplayer::Error => error
+  verify.call(error.code == "network_timeout" && KIFAndroidBridge.pending_count == 0, "HTTPS deadline cancels native job instead of blocking the game")
+end
+abandoned = KIFMultiplayer.network_worker { transport.call("GET", "https://fixture.invalid/slow", {}, nil, 2) }
+abandoned.poll
+abandoned.cancel
+verify.call(!abandoned.alive? && KIFAndroidBridge.pending_count == 0, "closing a cooperative HTTPS task runs native cancellation ensure")
+KIFAndroidBridge.held = false
+KIFAndroidBridge.async_version = 0
+begin
+  transport.validate_url("https://fixture.invalid/")
+  raise "old blocking bridge was accepted"
+rescue KIFMultiplayer::Error => error
+  verify.call(error.code == "network_unavailable", "old APK cannot silently fall back to blocking HTTPS")
+end
+KIFAndroidBridge.async_version = 1
 
 delayed = TCPServer.new("127.0.0.1", 0)
 delayed_port = delayed.addr[1]

@@ -36,8 +36,27 @@ module KIFMultiplayer
         end
       end
     end
-    def alive?; @fiber.alive?; end
-    def poll; @fiber.resume if alive?; self; end
+    def alive?; !@cancelled && @fiber.alive?; end
+    def poll
+      if alive?
+        @started = true
+        @fiber.resume
+      end
+      self
+    end
+    def cancel
+      return self unless alive?
+      error = Error.new("Network request cancelled", "network_cancelled")
+      if @started
+        # The Fiber is suspended at an explicit IO yield on this same thread.
+        # Its ensure blocks close the socket/cancel Java; no native Ruby thread
+        # is asynchronously interrupted.
+        @fiber.raise(error)
+      else
+        @cancelled, @failure = true, error
+      end
+      self
+    end
     def join
       while alive?
         poll
@@ -627,6 +646,7 @@ module KIFMultiplayer
       end
       parsed
     ensure
+      worker.cancel if worker && worker.respond_to?(:cancel) && worker.alive?
       if worker && !worker.alive? && KIFMultiplayer.respond_to?(:unregister_worker)
         KIFMultiplayer.unregister_worker(worker)
       end

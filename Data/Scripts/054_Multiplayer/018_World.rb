@@ -156,6 +156,7 @@ module KIFMultiplayer
     def close
       @closed = true
       @players = []
+      @io.cancel
       # Do not race an in-flight sync with leave. TTL cleans up if IO is busy.
       @client.request("POST", "/v1/world/leave", {"session_id" => @session_id}, 2.0) if @joined && !@io.busy?
     rescue Error
