@@ -71,6 +71,9 @@ module KIFMultiplayer
     end
     def upload_chunks(url, original, raw, headers, deadline)
       require "digest/sha2"
+      # A recovered game has a new lease/session but must replay the exact
+      # durable upload ID and contents. Keep the lease out of the chunk hash.
+      raw = WireJSON.dump(original.reject { |key, _value| key == "session_id" })
       checksum = Digest::SHA256.hexdigest(raw)
       total, index = (raw.bytesize + 16383) / 16384, 0
       while index < total

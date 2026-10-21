@@ -182,7 +182,8 @@ class OnlineFeatures:
         require(hashlib.sha256(raw).hexdigest() == sha, "save_checksum", "Chunk upload checksum mismatch")
         original = json.loads(raw.decode("utf-8"))
         obj(original)
-        require(original.get("session_id") == body["session_id"] and original.get("upload_id") == upload_id, "upload_conflict", "Chunk owner session or upload ID changed", 409)
+        require(original.get("session_id") in (None, body["session_id"]) and original.get("upload_id") == upload_id, "upload_conflict", "Chunk owner session or upload ID changed", 409)
+        original["session_id"] = body["session_id"]
         status, response = self.cloud_request(db, identity, "POST", ["v1", "cloud", "upload"], original)
         db.execute("INSERT INTO cloud_chunk_receipts VALUES(?,?,?,?)", (owner, upload_id, sha, dumps(response)))
         db.execute("DELETE FROM cloud_chunks WHERE owner=? AND upload_id=?", (owner, upload_id))
