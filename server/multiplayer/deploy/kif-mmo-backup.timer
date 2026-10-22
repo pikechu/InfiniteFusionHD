@@ -1,0 +1,11 @@
+[Unit]
+Description=Back up KIF accounts and cloud saves every 15 minutes
+
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+AccuracySec=10s
+Unit=kif-mmo-backup.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,13 @@
+{
+  "domain": "if.pikastairs.cc",
+  "data_dir": "/var/lib/kif-mmo",
+  "data_id_file": "/etc/kif-mmo/data-id",
+  "backup_dir": "/var/lib/kif-mmo/backup-staging",
+  "restic_repository_file": "/etc/kif-mmo/restic-repository",
+  "restic_password_file": "/etc/kif-mmo/restic-password",
+  "backup_credentials_file": "/etc/kif-mmo/backup-credentials.json",
+  "restic_executable": "/opt/kif-mmo/tools/restic",
+  "release_dir": "/opt/kif-mmo/current",
+  "required_mount": null,
+  "allow_local_repository": false
+}

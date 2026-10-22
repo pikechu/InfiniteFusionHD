@@ -1,0 +1,10 @@
+[Unit]
+Description=Check KIF service and backup freshness every five minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+Unit=kif-mmo-monitor.service
+
+[Install]
+WantedBy=timers.target

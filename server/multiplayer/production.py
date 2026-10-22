@@ -154,4 +154,10 @@ class Application:
 
 def create_app():
     config = Config.load(os.environ.get("KIF_CONFIG", "/etc/kif-mmo/production.json"))
+    if not LOG.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+        LOG.addHandler(handler)
+    LOG.setLevel(logging.INFO)
+    LOG.propagate = False
     return Application(config)
