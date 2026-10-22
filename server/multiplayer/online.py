@@ -43,39 +43,60 @@ class OnlineFeatures:
             WHERE s.token_hash=? AND s.expires>?""", (digest(token or ""), self.clock())).fetchone()
         return dict(row) if row else None
 
-    def auth_request(self, db, path, body, peer):
+    def auth_request(self, path, body, peer):
         obj(body, {"username", "password", "nickname", "protocol"}, {"username", "password", "protocol"})
         require(type(body["protocol"]) is int and body["protocol"] == PROTOCOL, "protocol_mismatch", "Protocol version is incompatible", 409)
         username = string(body["username"], 3, 32, "username", r"[A-Za-z0-9_]+(?:[.-][A-Za-z0-9_]+)*").lower()
         password = string(body["password"], 8, 128, "password")
         # Limit both address and account guessing, and bound the in-memory keys.
         now = self.clock()
-        self.auth_attempts = {key: [t for t in times if t > now - 300] for key, times in self.auth_attempts.items() if times and times[-1] > now - 300}
-        require(len(self.auth_attempts) < 10000, "auth_rate_limited", "Please retry login later", 429)
-        for key in ("peer:" + peer, "user:" + username):
-            attempts = self.auth_attempts.setdefault(key, [])
-            require(len(attempts) < (60 if key.startswith("peer:") else 12), "auth_rate_limited", "Too many attempts; retry in five minutes", 429)
-            attempts.append(now)
-        row = db.execute("SELECT * FROM accounts WHERE username=?", (username,)).fetchone()
-        if path == "/v1/auth/register":
-            require(row is None, "username_taken", "Username is already registered", 409)
-            nickname = string(body.get("nickname", body["username"]), 1, 32, "nickname")
-            owner, salt = "p_" + secrets.token_hex(12), secrets.token_hex(16)
-            password_hash = hashlib.scrypt(password.encode("utf-8"), salt=bytes.fromhex(salt), n=16384, r=8, p=1).hex()
-            db.execute("INSERT INTO identities VALUES(?,?,?,?,?,?)", (owner, nickname, secrets.token_hex(4).upper(), digest(secrets.token_urlsafe(32)), digest(secrets.token_urlsafe(32)), now))
-            db.execute("INSERT INTO accounts VALUES(?,?,?,?)", (username, owner, salt, password_hash))
-        else:
-            # Use the same KDF for an unknown username to avoid a fast oracle.
-            salt = row["salt"] if row else "00" * 16
-            check = hashlib.scrypt(password.encode("utf-8"), salt=bytes.fromhex(salt), n=16384, r=8, p=1).hex()
-            require(row is not None and hmac.compare_digest(check, row["password_hash"]), "login_invalid", "Incorrect username or password", 401)
-            owner = row["owner"]
-        token = secrets.token_urlsafe(32)
-        expires = now + 7 * 86400
-        db.execute("DELETE FROM account_sessions WHERE expires<=?", (now,))
-        db.execute("INSERT INTO account_sessions VALUES(?,?,?)", (digest(token), owner, expires))
-        identity = dict(db.execute("SELECT id,nickname,friend_code FROM identities WHERE id=?", (owner,)).fetchone())
-        return (201 if path.endswith("register") else 200), {"ok": True, "identity": identity, "username": username, "token": token, "expires_at": expires}
+        with self.auth_lock:
+            self.auth_attempts = {key: [t for t in times if t > now - 300] for key, times in self.auth_attempts.items() if times and times[-1] > now - 300}
+            require(len(self.auth_attempts) < 10000, "auth_rate_limited", "Please retry login later", 429)
+            for key in ("peer:" + peer, "user:" + username):
+                attempts = self.auth_attempts.setdefault(key, [])
+                require(len(attempts) < (60 if key.startswith("peer:") else 12), "auth_rate_limited", "Too many attempts; retry in five minutes", 429)
+                attempts.append(now)
+        require(self.auth_slots.acquire(blocking=False), "auth_busy", "Authentication is busy; retry shortly", 429)
+        try:
+            with self.connect() as db:
+                found = db.execute("SELECT * FROM accounts WHERE username=?", (username,)).fetchone()
+                row = dict(found) if found else None
+            registering = path == "/v1/auth/register"
+            nickname = string(body.get("nickname", body["username"]), 1, 32, "nickname") if registering else None
+            if registering:
+                require(row is None, "username_taken", "Username is already registered", 409)
+            salt = secrets.token_hex(16) if registering else row["salt"] if row else "00" * 16
+            # The expensive KDF holds neither the SQLite transaction nor the
+            # game's shared request lock. At most auth_concurrency KDFs run.
+            computed = hashlib.scrypt(password.encode("utf-8"), salt=bytes.fromhex(salt), n=16384, r=8, p=1).hex()
+            if not registering:
+                require(row is not None and hmac.compare_digest(computed, row["password_hash"]), "login_invalid", "Incorrect username or password", 401)
+            with self.connect() as db:
+                db.execute("BEGIN IMMEDIATE")
+                current = db.execute("SELECT * FROM accounts WHERE username=?", (username,)).fetchone()
+                if registering:
+                    require(current is None, "username_taken", "Username is already registered", 409)
+                    owner = "p_" + secrets.token_hex(12)
+                    friend = secrets.token_hex(4).upper()
+                    while db.execute("SELECT 1 FROM identities WHERE friend_code=?", (friend,)).fetchone():
+                        friend = secrets.token_hex(4).upper()
+                    db.execute("INSERT INTO identities VALUES(?,?,?,?,?,?)", (owner, nickname, friend, digest(secrets.token_urlsafe(32)), digest(secrets.token_urlsafe(32)), now))
+                    db.execute("INSERT INTO accounts VALUES(?,?,?,?)", (username, owner, salt, computed))
+                else:
+                    # A concurrent password reset/account change must invalidate
+                    # the result computed from the old credentials.
+                    require(current is not None and dict(current) == row, "login_invalid", "Account credentials changed; log in again", 401)
+                    owner = row["owner"]
+                token = secrets.token_urlsafe(32)
+                issued = self.clock()
+                expires = issued + 7 * 86400
+                db.execute("DELETE FROM account_sessions WHERE expires<=?", (issued,))
+                db.execute("INSERT INTO account_sessions VALUES(?,?,?)", (digest(token), owner, expires))
+                identity = dict(db.execute("SELECT id,nickname,friend_code FROM identities WHERE id=?", (owner,)).fetchone())
+                return (201 if registering else 200), {"ok": True, "identity": identity, "username": username, "token": token, "expires_at": expires}
+        finally:
+            self.auth_slots.release()
 
     def online_session_id(self, body):
         return string(body.get("session_id"), 16, 80, "session_id", r"[A-Za-z0-9_-]+")

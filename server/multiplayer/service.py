@@ -432,20 +432,29 @@ bind_online_api(globals())
 
 
 class Store(V3Features, OnlineFeatures):
-    def __init__(self, database, clock=time.time, heartbeat_seconds=8, reconnect_seconds=60, room_ttl=86400):
+    def __init__(self, database, clock=time.time, heartbeat_seconds=8, reconnect_seconds=60, room_ttl=86400,
+                 synchronous="NORMAL", create=True, auth_concurrency=2):
+        if synchronous not in ("NORMAL", "FULL"):
+            raise ValueError("Unsupported SQLite synchronous mode")
+        if not isinstance(auth_concurrency, int) or not 1 <= auth_concurrency <= 4:
+            raise ValueError("Authentication concurrency must be 1..4")
         self.database = str(database)
         self.clock = clock
         self.heartbeat_seconds = heartbeat_seconds
         self.reconnect_seconds = reconnect_seconds
         self.room_ttl = room_ttl
         self.lock = threading.RLock()
-        Path(self.database).parent.mkdir(parents=True, exist_ok=True)
-        self._db = sqlite3.connect(self.database, timeout=10, check_same_thread=False)
+        self.auth_lock = threading.Lock()
+        self.auth_slots = threading.BoundedSemaphore(auth_concurrency)
+        if create:
+            Path(self.database).parent.mkdir(parents=True, exist_ok=True)
+        target = self.database if create else Path(self.database).resolve().as_uri() + "?mode=rw"
+        self._db = sqlite3.connect(target, uri=not create, timeout=10, check_same_thread=False)
         self._db.row_factory = sqlite3.Row
         with self.connect() as db:
+            db.execute("PRAGMA synchronous=" + synchronous)
             db.executescript("""
                 PRAGMA journal_mode=WAL;
-                PRAGMA synchronous=NORMAL;
                 CREATE TABLE IF NOT EXISTS identities(id TEXT PRIMARY KEY,nickname TEXT NOT NULL,friend_code TEXT UNIQUE NOT NULL,token_hash TEXT UNIQUE NOT NULL,recovery_hash TEXT UNIQUE NOT NULL,created REAL NOT NULL);
                 CREATE TABLE IF NOT EXISTS rooms(code TEXT PRIMARY KEY,document TEXT NOT NULL,updated REAL NOT NULL);
                 CREATE TABLE IF NOT EXISTS battles(id TEXT PRIMARY KEY,document TEXT NOT NULL,updated REAL NOT NULL);
@@ -720,12 +729,12 @@ class Store(V3Features, OnlineFeatures):
             obj(body)
             limit = MAX_CLOUD_BODY if path == "/v1/cloud/upload" else MAX_BODY
             require(len(dumps(body).encode("utf-8")) <= limit, "body_too_large", "Request exceeds maximum size", 413)
+            if method == "POST" and path in ("/v1/auth/register", "/v1/auth/login"):
+                return self.auth_request(path, body, peer)
             with self.lock, self.connect() as db:
                 db.execute("BEGIN IMMEDIATE")
                 if method == "GET" and path == "/v1/health":
                     return 200, {"ok": True, "protocol": PROTOCOL, "rules_version": RULES, "service": "kuray-multiplayer", "server_time": self.clock()}
-                if method == "POST" and path in ("/v1/auth/register", "/v1/auth/login"):
-                    return self.auth_request(db, path, body, peer)
                 if method == "POST" and path == "/v1/identities":
                     return self.create_identity(db, body)
                 if method == "POST" and path == "/v1/identities/recover":
