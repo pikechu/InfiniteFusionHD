@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "b17c5157a09e555103315c7013c8ede7b1edca8ae4f105e969f070d146fbff2d",
+  "data_hash": "5a164041d0736ea188c431388847f23f581e1c809ceeae22b6ab0983612dc6c2",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -1650,9 +1650,13 @@
       "sha256": "aa6da92b46df2418c207f36d15f8765b3c8fcc031cc8547445bd08156a4008b7",
       "size": 5354
     },
+    "Data/Scripts/052_AddOns/SpriteAssets.rb": {
+      "sha256": "bc2afeb30cbe4020f9db9ae18143534b7b6c8f641b60812cf62605ff32868854",
+      "size": 5146
+    },
     "Data/Scripts/052_AddOns/SpriteCreditsUtils.rb": {
-      "sha256": "cb41a137d827e2c692e7ea84c105f15e6d83639ca71ec5b02d0f6840fb6bf465",
-      "size": 16122
+      "sha256": "c1183adf245c6c8d31a3374b59e365772bfdf31f1c9e4f33fc14a566f8333407",
+      "size": 15934
     },
     "Data/Scripts/052_AddOns/TRQuests.rb": {
       "sha256": "83610d75d5f183285409b6d1ecdf2b528ffec7d9dd89d37dcd2ce7eecb510ac1",
@@ -1851,8 +1855,8 @@
       "size": 0
     },
     "Data/Scripts/999_Main/999_Main.rb": {
-      "sha256": "15532725671da5b2dd9ffed8800701688f585b63496750df6139106619bfc4a2",
-      "size": 5448
+      "sha256": "a2fec1d1afdaaf5be0eab62d9565cffc98598396fd155c03188222567324c5ad",
+      "size": 4797
     },
     "Data/Scripts/RemoteUrls.rb": {
       "sha256": "ebc05f148d813466508a0f061802c4a26d0542266235f0bb845fe89c77ed20f0",
@@ -2035,5 +2039,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-22T03:20:43Z"
+  "built_at": "2026-10-22T03:31:35Z"
 }

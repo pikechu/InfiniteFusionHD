@@ -67,33 +67,11 @@ def clearTempFolder()
 end
 
 def sortCustomBattlers()
-  $game_temp.nb_imported_sprites=0
-  echo "Sorting CustomBattlers files..."
-  alreadyExists = {}
-  Dir.foreach(Settings::CUSTOM_BATTLERS_FOLDER) do |filename|
-    next if filename == '.' or filename == '..'
-    next if !filename.end_with?(".png")
-    headNum = filename.split('.')[0]
-    oldPath = Settings::CUSTOM_BATTLERS_FOLDER + filename
-    newDir = Settings::CUSTOM_BATTLERS_FOLDER_INDEXED + headNum.to_s
-    newPath = newDir + "/" + filename
-    begin
-      if File.file?(newPath)
-        alreadyExists[oldPath] = newPath
-        echo "\nFile " + newPath + " already exists... Skipping."
-
-      else
-        Dir.mkdir(newDir) if !Dir.exist?(newDir)
-        File.rename(oldPath, newPath)
-        $game_temp.nb_imported_sprites+=1
-        echo "\nSorted " + filename + " into " + newPath
-      end
-    rescue
-      echo "\nCould not sort "+ filename
-    end
-  end
-  echo "\nFinished sorting"
-  $game_temp.unimportedSprites=alreadyExists
+  result = KIF::SpriteImport.run
+  $game_temp.nb_imported_sprites = result[:imported]
+  $game_temp.unimportedSprites = result[:duplicates]
+  echoln "Sprite import: imported=#{result[:imported]} duplicates=#{result[:duplicates].length} invalid=#{result[:invalid].length}"
+  result[:imported]
 end
 
 # def playInViewPort(viewport)

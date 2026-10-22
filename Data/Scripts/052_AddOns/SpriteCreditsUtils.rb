@@ -362,11 +362,7 @@ end
 
 # crashes 'cause we don't have spritesheets
 def get_total_completion_percent()
-  return 0.00
-  customSpritesList = $game_temp.custom_sprites_list.keys
-  total_nb_pokemon = (NB_POKEMON * NB_POKEMON) + NB_POKEMON
-  sprited_pokemon = customSpritesList.length
-  return (sprited_pokemon.to_f / total_nb_pokemon) * 100
+  return KIF::SpriteIndex.completion_percent
 end
 
 def get_top_contributors_for_pokemon(species_sprites, top_x)
