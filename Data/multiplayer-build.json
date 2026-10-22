@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "17354e77172faf618be0d2fea20338b80d878eb9912a7b9f78437c845ffcdead",
+  "data_hash": "cd2f036a2adac532f7d0a72d9045f09e7f4a0c2a5bf1ce254673b8af835944df",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -1551,8 +1551,8 @@
       "size": 1775
     },
     "Data/Scripts/052_AddOns/HttpCalls.rb": {
-      "sha256": "33c477f5ce7a0e8008961e46d59591138c33c7bdcf01ec7209733e36cc0bb311",
-      "size": 10994
+      "sha256": "c21a7628fff2d01b9c560afc284355468eb43e05253aabd214f41a098acddf5f",
+      "size": 11892
     },
     "Data/Scripts/052_AddOns/IntroScreen.rb": {
       "sha256": "5d0972727642f50c8c6a31016c485bbf2c427ea64fa0056eb0d71c6a0a2a17e4",
@@ -1605,6 +1605,10 @@
     "Data/Scripts/052_AddOns/Pathfinding.rb": {
       "sha256": "f7bcbdd0f7be3f5a20bf36550cc7ed258d1177cbf5783edaa0d37dd2494593cb",
       "size": 3235
+    },
+    "Data/Scripts/052_AddOns/PokedexEntries.rb": {
+      "sha256": "ddf5b9746ecb577d69b679de6b984bc48c359b08225228f4d4116ef441f17115",
+      "size": 3306
     },
     "Data/Scripts/052_AddOns/PokedexUtils.rb": {
       "sha256": "1d60ec9cee413bf666cef2c1ba3a5cfd535848748bfa0f30ddca77896b3701b0",
@@ -1851,8 +1855,8 @@
       "size": 5448
     },
     "Data/Scripts/RemoteUrls.rb": {
-      "sha256": "c91e63b8e499d38639af5e0c4a7b856be57e503a5e4a8f7114f56c6c6670b76d",
-      "size": 2977
+      "sha256": "ebc05f148d813466508a0f061802c4a26d0542266235f0bb845fe89c77ed20f0",
+      "size": 2985
     },
     "Data/Skills.rxdata": {
       "sha256": "d87c907444a534558ee146ef466991f97b563ac339973cc9f29df13c58f933fa",
@@ -2031,5 +2035,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-21T01:36:23Z"
+  "built_at": "2026-10-22T02:39:56Z"
 }

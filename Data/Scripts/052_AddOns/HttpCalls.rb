@@ -51,7 +51,21 @@ end
 
 def updateCustomDexFile
   return if !downloadAllowed?()
-  download_file(Settings::CUSTOM_DEX_FILE_URL, Settings::CUSTOM_DEX_ENTRIES_PATH,)
+  response = KIF::Platform.http_get(Settings::CUSTOM_DEX_FILE_URL)
+  return nil unless response.is_a?(Hash) && response[:status] == 200
+  path = KIF::Platform.read_path(Settings::CUSTOM_DEX_ENTRIES_PATH)
+  incoming = KIF::PokedexEntries.parse(response[:body])
+  existing = File.file?(path) ? KIF::PokedexEntries.parse(File.binread(path)) : []
+  result = KIF::PokedexEntries.merge(existing, incoming)
+  # Even a stale server response must never remove KIF's bundled/local entries.
+  KIF::PokedexEntries.write(path, result[:entries]) if result[:added] > 0
+  echoln "Custom dex update: added=#{result[:added]} skipped=#{result[:skipped]} total=#{result[:entries].length}"
+  File.file?(path) ? path : nil
+rescue Exception => error
+  # Native JSON/HTTP failures are MKXPError, which is not a StandardError.
+  raise unless error.is_a?(StandardError) || (defined?(MKXPError) && error.is_a?(MKXPError))
+  echoln "Custom dex update failed (#{error.class}); existing entries retained"
+  nil
 end
 
 def createCustomSpriteFolders()
