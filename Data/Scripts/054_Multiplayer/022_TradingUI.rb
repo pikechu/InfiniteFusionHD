@@ -35,7 +35,23 @@ module KIFMultiplayer
 
   def self.open_trading_menu(client = self.client)
     raise Error, "请从标题选择在线模式，注册或登录账号后使用交易中心。" unless client.profile.account["username"]
-    with_ui_fonts { TradingUI.new(client).main }
+    with_trading_scene { TradingUI.new(client).main }
+  end
+
+  def self.with_trading_scene
+    previous_scene = $scene
+    previous_chatting = OnlineMode.chatting if defined?(OnlineMode)
+    $scene = Object.new
+    OnlineMode.chatting = true if defined?(OnlineMode) && OnlineMode.active?
+    with_ui_fonts { yield }
+  rescue Error => error
+    pbMessage("交易：#{display_text(error.message)}")
+  rescue StandardError => error
+    log_error(error)
+    pbMessage("交易界面暂时不可用，请重试。")
+  ensure
+    $scene = previous_scene
+    OnlineMode.chatting = previous_chatting if defined?(OnlineMode)
   end
 
   class TradingUI
@@ -55,6 +71,27 @@ module KIFMultiplayer
     def label(asset)
       snapshot = asset["snapshot"]
       "#{text(snapshot['name'])} · #{text(snapshot['species'])} Lv.#{snapshot['level']}#{snapshot['shiny'] ? ' ★' : ''}"
+    end
+    def listing_label(value)
+      return "#{text(value['item']['name'])} ×#{value['quantity']} · 单价 #{value['unit_price']} · 总价 #{value['price']}" if value["kind"] == "item"
+      "#{label({'snapshot' => value['snapshot']})} · #{value['price']}"
+    end
+    def item_name(id); GameData::Item.get(id).name; end
+    def inspect_item(id, quantity)
+      item = GameData::Item.get(id)
+      pbMessage("#{text(item.name)} ×#{quantity}\n#{text(item.description)}\n来源：服务器库存；不会写入本地背包。")
+    end
+    def inspect_listing(value)
+      value["kind"] == "item" ? inspect_item(value["item_id"], value["quantity"]) : inspect_asset({"id" => value["asset_id"], "snapshot" => value["snapshot"]})
+    end
+    def resolve_id(type, value)
+      return value.upcase if value =~ /\A[A-Za-z0-9_]+\z/
+      registry = GameData.const_get(type)
+      matches = registry::DATA.values.uniq.select { |entry| entry.name.include?(value) }.first(20)
+      raise Error, "未找到对应名称，请输入游戏名称或英文 ID。" if matches.empty?
+      return matches.first.id.to_s if matches.length == 1
+      selected = choose("选择#{type == :Item ? '道具' : '精灵'}", matches.map { |entry| text(entry.name) } + ["返回"])
+      selected >= 0 && selected < matches.length ? matches[selected].id.to_s : nil
     end
     def inspect_asset(asset)
       snapshot = asset["snapshot"]
@@ -81,34 +118,44 @@ module KIFMultiplayer
       @trading.recover
       loop do
         wallet = @trading.wallet
-        heading = "交易中心 · 托管精灵封测\n联机币 #{wallet['available']}（预留 #{wallet['reserved']}）\n此处精灵保存在服务器收藏箱。"
-        index = choose(heading, ["全球精灵市场", "出售精灵", "我的挂牌", "面对面交易", "待领取", "交易记录", "恢复断线操作", "服务器托管收藏箱", "返回"])
-        return if index < 0 || index >= 8
+        heading = "交易中心 · 托管资产封测\n联机币 #{wallet['available']}（预留 #{wallet['reserved']}）\n精灵和道具均保存在服务器。"
+        index = choose(heading, ["全球精灵市场", "全球道具市场", "出售", "我的挂牌", "面对面交易", "待领取", "我的联机道具", "交易记录", "恢复断线操作", "服务器托管收藏箱", "交易邀请设置", "返回"])
+        return if index < 0 || index >= 11
         @ui.perform do
           case index
           when 0 then market
-          when 1 then sell
-          when 2 then listings
-          when 3 then exchanges
-          when 4 then deliveries
-          when 5 then history
-          when 6
+          when 1 then market("item")
+          when 2
+            kind = choose("选择出售类型", ["精灵", "道具", "返回"])
+            sell if kind == 0
+            sell_item if kind == 1
+          when 3 then listings
+          when 4 then exchanges
+          when 5 then deliveries
+          when 6 then inventory
+          when 7 then history
+          when 8
             @trading.recover
             pbMessage("已核实原操作并刷新服务器钱包、交付和交易会话。")
-          when 7 then KIFMultiplayer.open_collection_menu(@client)
+          when 9 then KIFMultiplayer.open_collection_menu(@client)
+          when 10 then preferences
           end
         end
       end
     end
     def filters_menu(filters)
       filters = WireJSON.parse(WireJSON.dump(filters))
+      return item_filters(filters) if filters["category"] == "item"
       loop do
-        index = choose("市场筛选\n#{text(WireJSON.dump(filters))}", ["物种英文 ID／融合 B25H133", "最低等级", "最高等级", "最低价格", "最高价格", "闪光", "性格 ID", "特性 ID（包含第二特性）", "融合头部图鉴号", "融合身体图鉴号", "六项 IV 下限／精确值", "至少几项 31 IV", "清空", "完成"])
-        return filters if index < 0 || index >= 13
+        index = choose("市场筛选\n#{text(WireJSON.dump(filters))}", ["物种名称／ID／融合 B25H133", "最低等级", "最高等级", "最低价格", "最高价格", "闪光", "性格 ID", "特性 ID（包含第二特性）", "融合头部图鉴号", "融合身体图鉴号", "六项 IV 下限／精确值", "至少几项 31 IV", "性别", "清空", "完成"])
+        return filters if index < 0 || index >= 14
         case index
         when 0, 6, 7
           key = {0 => "species", 6 => "nature", 7 => "ability"}[index]
-          value = @ui.enter("输入 #{key}，留空取消该条件", filters[key].to_s, 80).upcase
+          value = @ui.enter("输入 #{key}，留空取消该条件", filters[key].to_s, 80)
+          value = resolve_id(:Species, value) if index == 0 && !value.empty?
+          next if value.nil?
+          value = value.upcase
           value.empty? ? filters.delete(key) : filters[key] = value
         when 1, 2, 3, 4, 8, 9, 11
           key = {1 => "min_level", 2 => "max_level", 3 => "min_price", 4 => "max_price", 8 => "head", 9 => "body", 11 => "min_perfect"}[index]
@@ -131,17 +178,39 @@ module KIFMultiplayer
             key = mode == 0 ? "iv_min" : "iv_exact"
             (filters[key] ||= {})[stat] = value
           end
-        when 12 then filters = {}
+        when 12
+          gender = choose("性别条件", ["不限", "雄性", "雌性", "无性别", "返回"])
+          filters.delete("gender") if gender == 0
+          filters["gender"] = gender - 1 if gender >= 1 && gender <= 3
+        when 13 then filters = {"category" => "pokemon"}
         end
       end
     end
-    def market
-      filters, sort, cursor = {}, "price_asc", nil
+    def item_filters(filters)
+      loop do
+        selected = choose("道具筛选\n#{text(WireJSON.dump(filters))}", ["道具名称／ID", "最低整单总价", "最高整单总价", "清空", "完成"])
+        return filters if selected < 0 || selected >= 4
+        if selected == 0
+          value = @ui.enter("输入道具名称或英文 ID；留空取消", filters["item_id"].to_s, 80)
+          value = resolve_id(:Item, value) unless value.empty?
+          next if value.nil?
+          value.empty? ? filters.delete("item_id") : filters["item_id"] = value
+        elsif selected == 3
+          filters = {"category" => "item"}
+        else
+          key = selected == 1 ? "min_price" : "max_price"
+          value = number("输入整单总价；留空取消", filters[key] || 0)
+          value ? filters[key] = value : filters.delete(key)
+        end
+      end
+    end
+    def market(category = "pokemon")
+      filters, sort, cursor = {"category" => category}, "price_asc", nil
       loop do
         page = @trading.search(filters, sort, cursor)
         values = page["listings"]
-        actions = values.map { |value| "#{label({'snapshot' => value['snapshot']})} · #{value['price']}" }
-        index = choose("全球精灵市场 · 联机币\n#{values.length} 条", actions + ["下一页", "回到第一页", "筛选", "排序", "返回"])
+        actions = values.map { |value| listing_label(value) }
+        index = choose("全球#{category == 'item' ? '道具' : '精灵'}市场 · 联机币\n#{values.length} 条", actions + ["下一页", "回到第一页", "筛选", "排序", "返回"])
         return if index < 0 || index >= actions.length + 4
         if index < actions.length
           listing_menu(values[index])
@@ -162,10 +231,16 @@ module KIFMultiplayer
       loop do
         value = @trading.listing(value["id"])
         own = value["seller_id"] == @client.player_id
-        index = choose("#{label({'snapshot' => value['snapshot']})}\n#{state(value['status'])} · 售价 #{value['price']} 联机币\n上架费 #{value['fee']} · 商品 #{text(value['id'])}", ["查看完整精灵与外观", own ? "撤销挂牌" : "购买", "返回"])
-        return if index < 0 || index >= 2
+        index = choose("#{listing_label(value)}\n#{state(value['status'])} · 总价 #{value['price']} 联机币\n上架费 #{value['fee']} · 商品 #{text(value['id'])}", ["查看完整详情", own ? "撤销挂牌" : "购买", "分享到交易频道", "返回"])
+        return if index < 0 || index >= 3
         if index == 0
-          inspect_asset({"id" => value["asset_id"], "snapshot" => value["snapshot"]})
+          inspect_listing(value)
+        elsif index == 2
+          raise Error, "仅能分享自己仍在售的商品。" unless own && value["status"] == "active"
+          world = defined?(OnlineMode) && OnlineMode.world
+          raise Error, "请先连接在线地图。" unless world
+          world.send_chat("trade", listing_label(value)[0, 180], value["id"])
+          pbMessage("商品已排队发送到交易频道，点击商品卡会重新核对挂牌状态。")
         else
           raise Error, "此商品已经结束。" unless value["status"] == "active"
           if own
@@ -173,8 +248,8 @@ module KIFMultiplayer
             @trading.cancel_listing(value["id"])
             pbMessage("已撤单，请到待领取收纳原资产。")
           else
-            inspect_asset({"id" => value["asset_id"], "snapshot" => value["snapshot"]})
-            next unless pbConfirmMessage("支付 #{value['price']} 联机币购买这只精灵？\n成交后保存在服务器待领取，不进入主队伍。")
+            inspect_listing(value)
+            next unless pbConfirmMessage("支付整单总价 #{value['price']} 联机币购买？\n成交后保存在服务器待领取。")
             result = @trading.buy(value)
             pbMessage("成交 #{text(result['order']['id'])}。资产已归你所有，请到待领取收纳。")
           end
@@ -199,7 +274,7 @@ module KIFMultiplayer
     def listings
       loop do
         values = @trading.my_listings
-        index = choose("我的挂牌", values.map { |v| "#{state(v['status'])} · #{label({'snapshot' => v['snapshot']})} · #{v['price']}" } + ["返回"])
+        index = choose("我的挂牌", values.map { |v| "#{state(v['status'])} · #{listing_label(v)}" } + ["返回"])
         return if index < 0 || index >= values.length
         listing_menu(values[index])
       end
@@ -207,10 +282,10 @@ module KIFMultiplayer
     def deliveries
       loop do
         values = @trading.deliveries.select { |value| value["status"] == "pending" }
-        index = choose("待领取 #{values.length} 项\n领取仅收纳已有资产，不重复生成精灵。", values.map { |v| "#{text(v['reason'])} · #{label(v['asset'])}" } + ["返回"])
+        index = choose("待领取 #{values.length} 项\n领取只解除交付占用，不重复生成资产。", values.map { |v| "#{text(v['reason'])} · #{v['kind'] == 'item' ? text(item_name(v['item_id'])) + ' ×' + v['quantity'].to_s : label(v['asset'])}" } + ["返回"])
         return if index < 0 || index >= values.length
         value = values[index]
-        inspect_asset(value["asset"])
+        value["kind"] == "item" ? inspect_item(value["item_id"], value["quantity"]) : inspect_asset(value["asset"])
         next unless pbConfirmMessage("收纳到服务器收藏箱？")
         @trading.claim(value["id"])
         pbMessage("收纳完成，可在收藏箱查看或再次交易。")
@@ -239,6 +314,74 @@ module KIFMultiplayer
         end
       end
     end
+    def sell_item
+      values = @trading.inventory["items"].select { |value| value["available"] > 0 && value["item"]["tradeable"] }
+      raise Error, "没有可出售的联机道具。" if values.empty?
+      selected = choose("选择道具", values.map { |v| "#{text(v['item']['name'])} · 可用 #{v['available']}" } + ["返回"])
+      return if selected < 0 || selected >= values.length
+      value = values[selected]
+      quantity = number("出售数量（最多9999，当前可用#{value['available']}）", 1, 1)
+      return unless quantity
+      raise Error, "超过当前可用数量或单次9999上限。" if quantity > [9999, value["available"]].min
+      unit = number("每件单价（联机币）", 100, 1)
+      return unless unit
+      total = @trading.amount(unit * quantity, 1)
+      fee = [[(total * 2 + 99) / 100, 100].max, 25000].min
+      return unless pbConfirmMessage("#{text(value['item']['name'])} ×#{quantity}\n单价 #{unit} · 整单总价 #{total}\n上架费 #{fee} · 7天到期，整单出售。确认？")
+      @trading.sell_item(value["item_id"], quantity, unit)
+      pbMessage("道具已上架。")
+    end
+    def inventory
+      values = @trading.inventory["items"]
+      loop do
+        selected = choose("联机道具库存", values.map { |v| "#{text(v['item']['name'])} · 可用 #{v['available']}／占用 #{v['reserved']}" } + ["返回"])
+        return if selected < 0 || selected >= values.length
+        inspect_item(values[selected]["item_id"], values[selected]["quantity"])
+      end
+    end
+    def preferences
+      loop do
+        value = @trading.preferences
+        selected = choose("交易邀请设置\n附近邀请：#{value['allow_nearby'] ? '接收' : '关闭'}\n好友码邀请：#{value['allow_friend'] ? '接收' : '关闭'}\n已屏蔽 #{value['blocked'].length} 人", ["切换附近邀请", "切换好友码邀请", "按好友码屏蔽玩家", "取消屏蔽", "返回"])
+        return if selected < 0 || selected >= 4
+        if selected == 0 || selected == 1
+          key = selected == 0 ? "allow_nearby" : "allow_friend"
+          @trading.preferences({key => !value[key]})
+        elsif selected == 2
+          code = @ui.enter("输入对方八位好友码", "", 8).upcase
+          @trading.preferences({"block_friend_code" => code}) unless code.empty?
+        else
+          trainers = value["blocked"]
+          chosen = choose("选择取消屏蔽的玩家", trainers.map { |t| "#{text(t['nickname'])} · #{text(t['friend_code'])}" } + ["返回"])
+          @trading.preferences({"unblock_friend_code" => trainers[chosen]["friend_code"]}) if chosen >= 0 && chosen < trainers.length
+        end
+      end
+    end
+    def edit_items(session)
+      selected = WireJSON.parse(WireJSON.dump(session["offers"][@client.player_id]["items"] || {}))
+      values = @trading.inventory["items"].select { |value| value["item"]["tradeable"] && (value["available"] > 0 || selected[value["item_id"]]) }
+      loop do
+        index = choose("交易道具 #{selected.length}/8", values.map { |v| "#{text(v['item']['name'])} · 给出 #{selected[v['item_id']] || 0}" } + ["清空道具", "完成", "取消编辑"])
+        return nil if index < 0 || index >= values.length + 2
+        return selected if index == values.length + 1
+        if index == values.length
+          selected = {}
+        else
+          value = values[index]
+          id = value["item_id"]
+          maximum = value["available"] + (session["offers"][@client.player_id]["items"] || {})[id].to_i
+          quantity = number("给出数量 0至#{maximum}（0删除）", selected[id] || 0)
+          next if quantity.nil?
+          raise Error, "道具数量不足。" if quantity > maximum
+          if quantity == 0
+            selected.delete(id)
+          else
+            raise Error, "最多八种道具。" if !selected.key?(id) && selected.length >= 8
+            selected[id] = quantity
+          end
+        end
+      end
+    end
     def edit_offer(session)
       reference = "exchange:" + session["id"]
       assets = @trading.assets.select { |a| !a["locked"] || a["lock_reference"] == reference }
@@ -252,16 +395,19 @@ module KIFMultiplayer
         elsif index == assets.length
           selected = []
         else
+          items = edit_items(session)
+          return if items.nil?
           coins = number("给对方的联机币金额；0 为不给钱", session["offers"][@client.player_id]["amount"])
           return unless coins
-          return @trading.offer(session, selected, coins)
+          return @trading.offer(session, selected, coins, items)
         end
       end
     end
     def inspect_offers(session)
       session["members"].each do |owner|
         offer = session["offers"][owner]
-        pbMessage("#{owner == @client.player_id ? '你' : '对方'} · 好友码 #{text(session['friend_codes'][owner])}\n给出 #{offer['assets'].length} 只精灵、#{offer['amount']} 联机币。")
+        item_text = (offer["items"] || {}).map { |id, quantity| "#{text(item_name(id))} ×#{quantity}" }.join("、")
+        pbMessage("#{owner == @client.player_id ? '你' : '对方'} · 好友码 #{text(session['friend_codes'][owner])}\n给出 #{offer['assets'].length} 只精灵、#{offer['amount']} 联机币。\n道具：#{item_text.empty? ? '无' : item_text}")
         offer["assets"].each { |asset| inspect_asset(asset) }
       end
     end

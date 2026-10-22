@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "82d04d53268b8b2dc69738799c60443be64cb41da0ce91aa4cffdf8d8dd450bf",
+  "data_hash": "3bc71d37379706dc64503e85567b459373c4ed5038e3cb899d2f14842be8a66f",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -1787,8 +1787,8 @@
       "size": 14776
     },
     "Data/Scripts/054_Multiplayer/018_World.rb": {
-      "sha256": "daf1f298b72ec8abf7fdb4179eb650e887dc5459a086efcc5b0f6f2b496e977c",
-      "size": 19495
+      "sha256": "f89c951eaea402c8d7f456d55451fc1ea026b90771c8980b2efcdd2481e55547",
+      "size": 22538
     },
     "Data/Scripts/054_Multiplayer/019_OnlineMode.rb": {
       "sha256": "628b6f2dcb6a86719a9796b5475472d440ca1273022bc12c18e66c82b2be7b45",
@@ -1799,12 +1799,16 @@
       "size": 9216
     },
     "Data/Scripts/054_Multiplayer/021_TradingClient.rb": {
-      "sha256": "36a7a20aa2b4bad55fe9079738c5e416e06abf76f04083de02355e35002361e0",
-      "size": 7541
+      "sha256": "01b32175993a6b10f6ff9a0f2cee5830799fccba24e1ae3037620158ddb99c0c",
+      "size": 10695
     },
     "Data/Scripts/054_Multiplayer/022_TradingUI.rb": {
-      "sha256": "ea7c69130adcdd365847955df4c5f374643519a28ea57a8907d934828e92a002",
-      "size": 15609
+      "sha256": "3f6bda1cbbae30a1f17a6bb398e6e6a70feb3d4653b9ec852077f102fa8bfdbc",
+      "size": 23841
+    },
+    "Data/Scripts/054_Multiplayer/023_TradingEntries.rb": {
+      "sha256": "114481c610162a2b76bbc473b7396af1d4130aa4b8bbba1c9584a3f45e90064e",
+      "size": 2303
     },
     "Data/Scripts/100_DemICE's AI/AI Move EffectScores.rb": {
       "sha256": "c44d777b7c6beeb56c6a24a308d835b62299ad213ed7cf86fb7b2fa41fef98ee",
@@ -2055,5 +2059,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-22T08:58:12Z"
+  "built_at": "2026-10-22T10:09:00Z"
 }

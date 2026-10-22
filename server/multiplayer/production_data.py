@@ -13,7 +13,7 @@ import re
 import sqlite3
 import uuid
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 REQUIRED_TABLES = {"accounts", "identities", "account_sessions", "cloud_saves", "cloud_uploads",
                    "cloud_chunks", "cloud_chunk_receipts", "cloud_leases", "world_presence", "chat_messages", "deployment_meta",
                    "rooms", "battles", "operations", "showcases", "gyms", "gym_versions", "gym_challenges",
@@ -22,6 +22,8 @@ REQUIRED_TABLES = {"accounts", "identities", "account_sessions", "cloud_saves", 
                    "economy_meta", "wallet_accounts", "wallet_holds", "ledger_transactions", "ledger_entries", "trading_grants",
                    "market_listings", "market_orders", "trading_deliveries", "exchange_sessions", "trading_events"}
 
+
+REQUIRED_TABLES |= {"inventory_accounts", "item_balances", "item_holds", "item_ledger_transactions", "item_ledger_entries", "trading_preferences"}
 
 def atomic_bytes(path, data):
     path = Path(path)

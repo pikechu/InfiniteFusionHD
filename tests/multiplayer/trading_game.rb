@@ -127,11 +127,82 @@ begin
     marker.call("guest-committed")
     marker.call("guest-pass", {"pid" => Process.pid, "wallet" => trading.wallet, "transaction_id" => session["transaction_id"]})
   end
+  # Phase 2: actual world presence, trade cards, item delivery and nearby mixed
+  # barter. WorldSession is real; no synthetic presence or item inventory.
+  marker.call(role + "-pokemon-done")
+  peer_role = role == "host" ? "guest" : "host"
+  test.wait(client, "peer Pokemon flow finished") { read.call(peer_role + "-pokemon-done") }
+  old_chatting = KIFMultiplayer::OnlineMode.chatting
+  KIFMultiplayer::OnlineMode.chatting = true
+  world = KIFMultiplayer::WorldSession.new(client, client.compatibility)
+  client.wait_update = proc { world.tick }
+  test.wait(client, "real map presence") { world.tick; world.map_key && !world.players.empty? }
+  item_quantity = lambda do |id|
+    entry = trading.inventory["items"].find { |value| value["item_id"] == id }
+    entry ? entry["quantity"] : 0
+  end
+  if role == "host"
+    item_listing = trading.sell_item("POTION", 3, 600)
+    test.check(item_listing["price"] == 1800 && item_listing["quantity"] == 3, "native item listing distinguishes unit price quantity and total")
+    world.send_chat("trade", "联机道具测试出售", item_listing["id"])
+    marker.call("item-listing", {"id" => item_listing["id"]})
+    test.wait(client, "guest item claim") { read.call("guest-item-claimed") }
+    test.check(item_quantity.call("POTION") == 7 && trading.wallet["balance"] == 235600, "native item sale debits server stock and credits money once")
+    peer = read.call("guest-identity")
+    session = trading.invite_nearby(peer["id"])
+    marker.call("nearby-item-exchange", {"id" => session["id"]})
+    test.wait(client, "nearby invitation accepted") { trading.exchange(session["id"])["status"] == "offering" }
+    session = trading.offer(trading.exchange(session["id"]), [], 1000, {"POTION" => 2, "RARECANDY" => 1})
+    marker.call("host-items-offered")
+    test.wait(client, "guest item offer") { read.call("guest-items-offered") }
+    trading.exchange_action(trading.exchange(session["id"]), "lock")
+    marker.call("host-items-locked")
+    test.wait(client, "item review timer") do
+      current = trading.exchange(session["id"])
+      current["status"] == "locked" && current["server_time"] >= current["confirm_after"]
+    end
+    trading.exchange_action(trading.exchange(session["id"]), "confirm")
+    marker.call("host-items-confirmed")
+    test.wait(client, "mixed item commit") { read.call("guest-items-committed") }
+    session = trading.exchange(session["id"])
+    test.check(session["status"] == "committed" && item_quantity.call("POTION") == 6 && item_quantity.call("RARECANDY") == 4, "native nearby barter conserves both item types")
+    test.check(trading.wallet["balance"] == 234600, "native mixed item payment settles once")
+    marker.call("host-pass", {"pid" => Process.pid, "wallet" => trading.wallet, "transaction_id" => session["transaction_id"]})
+  else
+    item_marker = test.wait(client, "item listing") { read.call("item-listing") }
+    test.wait(client, "real trade-channel item card") { world.visible_messages("trade").any? { |m| m["listing"] && m["listing"]["id"] == item_marker["id"] } }
+    listing = trading.search({"category" => "item", "item_id" => "POTION"})["listings"].find { |value| value["id"] == item_marker["id"] }
+    test.check(listing && listing["unit_price"] == 600, "native item search and world card point to same active listing")
+    purchased = trading.buy(trading.listing(listing["id"]))
+    trading.claim(purchased["delivery"]["id"])
+    trading.claim(purchased["delivery"]["id"])
+    test.check(item_quantity.call("POTION") == 23 && trading.wallet["balance"] == 163200, "native item purchase and repeated claim preserve exact quantity")
+    marker.call("guest-item-claimed")
+    invitation = test.wait(client, "nearby trade") { read.call("nearby-item-exchange") }
+    test.wait(client, "map invitation notification") { world.trade_invites.any? { |value| value["id"] == invitation["id"] } }
+    test.check(true, "native world polling receives only current trainer's invitation notification")
+    session = trading.exchange_action(trading.exchange(invitation["id"]), "accept")
+    test.wait(client, "host item offer") { read.call("host-items-offered") }
+    session = trading.offer(trading.exchange(session["id"]), [], 0, {"POTION" => 1})
+    marker.call("guest-items-offered")
+    test.wait(client, "host item lock") { read.call("host-items-locked") }
+    trading.exchange_action(trading.exchange(session["id"]), "lock")
+    test.wait(client, "host item confirmation") { read.call("host-items-confirmed") }
+    session = trading.exchange_action(trading.exchange(session["id"]), "confirm")
+    test.check(item_quantity.call("POTION") == 24 && item_quantity.call("RARECANDY") == 6 && trading.wallet["balance"] == 164200, "native mixed barter transfers items and money atomically")
+    marker.call("guest-items-committed")
+    marker.call("guest-pass", {"pid" => Process.pid, "wallet" => trading.wallet, "transaction_id" => session["transaction_id"]})
+  end
+  client.wait_update = nil
+  world.close
+  KIFMultiplayer::OnlineMode.chatting = old_chatting
   test.check(test.digest == original_world, "managed trading leaves main player bag system and story unchanged")
   test.log("TRADING_NATIVE_PASS role=#{role}")
   passed = true
 rescue Exception => error
   $kif_test_log.call("TRADING_NATIVE_FAIL #{error.class}: #{error.message}\n#{error.backtrace.join("\n")}") if $kif_test_log
 ensure
+  world.close if defined?(world) && world
+  KIFMultiplayer::OnlineMode.chatting = old_chatting if defined?(old_chatting)
   exit!(passed ? 0 : 1)
 end

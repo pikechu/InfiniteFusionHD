@@ -80,4 +80,26 @@ reloaded = KIFMultiplayer::Client.new(KIFMultiplayer::Profile.new(profile.path),
 reloaded.recover_pending
 assert.call(transport.purchases == 1 && reloaded.profile.account["pending"].nil?, "new client recovers original committed response without submitting another purchase")
 assert.call(reloaded.profile.account["last_recovered_operation"]["response"]["order"]["id"] == "ord_fixture", "recovered order receipt persists with journal cleanup")
+GameData::Item.define_singleton_method(:exists?) { |id| %w[POTION RARECANDY].include?(id.to_s) || GameData::TradeRegistry.exists?(id) }
+stock = {"owner_id" => client.player_id, "version" => 1, "items" => [{"item_id" => "POTION", "quantity" => 20, "available" => 15, "reserved" => 5, "item" => {"id" => "POTION", "name" => "伤药", "tradeable" => true}}]}
+transport.response = {"ok" => true, "inventory" => stock}
+assert.call(trading.inventory["items"].first["available"] == 15, "server inventory preserves available and reserved item counts")
+bad_stock = KIFMultiplayer::TradeCodec.copy(stock)
+bad_stock["items"][0]["available"] = 19
+transport.response = {"ok" => true, "inventory" => bad_stock}
+reject.call("inconsistent item reservations rejected") { trading.inventory }
+item_listing = listing.merge("kind" => "item", "asset_id" => "itm_POTION", "item_id" => "POTION", "quantity" => 5, "unit_price" => 400, "price" => 2000, "item" => {"id" => "POTION", "name" => "伤药"}, "snapshot" => {})
+assert.call(trading.validate_listing(item_listing)["price"] == 2000, "item listing verifies unit quantity and total")
+reject.call("misleading item total rejected") { trading.validate_listing(item_listing.merge("price" => 400)) }
+reject.call("negative mixed-trade item quantity rejected") { trading.validate_offer_items({"POTION" => -1}) }
+load "Data/Scripts/054_Multiplayer/017_OnlineClient.rb"
+load "Data/Scripts/054_Multiplayer/018_World.rb"
+world = KIFMultiplayer::WorldSession.new(client, compatibility)
+journal_before = KIFMultiplayer::WireJSON.dump(profile.account["pending"])
+world.send_chat("trade", "出售伤药", "lst_fixture")
+assert.call(world.pending_messages == 1 && KIFMultiplayer::WireJSON.dump(profile.account["pending"]) == journal_before, "trade-card chat queues without replacing an existing economic journal")
+reject.call("listing cards cannot be forged into world channel") { world.send_chat("world", "bad card", "lst_fixture") }
+assert.call(world.pending_messages == 1, "invalid card leaves earlier queued trade message intact")
+world.remember({"id" => 1, "channel" => "trade", "map_key" => nil, "sender_id" => "p_other", "nickname" => "Other", "text" => "Potion", "listing" => {"id" => "lst_fixture", "price" => 2000, "currency" => "LINK", "kind" => "item", "label" => "伤药"}})
+assert.call(world.visible_messages("trade").length == 1, "trade cards remain visible when no map is selected")
 puts "TRADING_CLIENT_TEST_PASS checks=#{checks}"

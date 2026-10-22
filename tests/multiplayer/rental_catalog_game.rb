@@ -105,6 +105,19 @@ begin
   end
   path = "server/multiplayer/catalog-rental-v1.json"
   File.open(path, "wb") { |file| file.write(KIFMultiplayer::WireJSON.dump(output)) }
+  item_ids = %i[POTION SUPERPOTION HYPERPOTION MAXPOTION FULLRESTORE ANTIDOTE PARALYZEHEAL PARLYZHEAL BURNHEAL ICEHEAL AWAKENING FULLHEAL REVIVE MAXREVIVE ETHER MAXETHER ELIXIR MAXELIXIR POKEBALL GREATBALL ULTRABALL REPEL SUPERREPEL MAXREPEL RARECANDY HPUP PROTEIN IRON CALCIUM ZINC CARBOS FIRESTONE WATERSTONE THUNDERSTONE LEAFSTONE MOONSTONE SUNSTONE]
+  missing_items = item_ids.reject { |id| GameData::Item::DATA.key?(id) }
+  log.call("TRADING_ITEM_UNAVAILABLE #{missing_items.join(',')}") unless missing_items.empty?
+  item_ids -= missing_items
+  raise "Required trading test items are missing" unless %i[POTION RARECANDY POKEBALL].all? { |id| item_ids.include?(id) }
+  items = item_ids.map do |id|
+    item = GameData::Item.get(id)
+    raise "Bound item cannot enter trading catalog: #{id}" if item.is_important?
+    {"id" => item.id.to_s, "name" => item.name, "tradeable" => true, "price" => item.price, "pocket" => item.pocket}
+  end
+  item_catalog = {"version" => 1, "compatibility" => output["compatibility"], "items" => items}
+  File.open("server/multiplayer/catalog-trading-items-v1.json", "wb") { |file| file.write(KIFMultiplayer::WireJSON.dump(item_catalog)) }
+  log.call("TRADING_ITEM_CATALOG_PASS count=#{items.length}")
   log.call("RENTAL_CATALOG_PASS count=#{output['candidates'].length} sha256=#{Digest::SHA256.hexdigest(File.binread(path))}")
   passed = true
 rescue Exception => error

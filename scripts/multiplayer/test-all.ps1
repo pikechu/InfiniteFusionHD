@@ -29,7 +29,7 @@ try {
         & $PythonExecutable -m unittest discover -s server/multiplayer -p 'test_*.py' -q
         if ($LASTEXITCODE -ne 0) { throw 'Multiplayer service tests failed.' }
     }
-    foreach ($suite in @('client', 'identity_recovery', 'reconnect_journal', 'snapshot_rules', 'scene_restore', 'battle', 'battle_confirmation', 'boss', 'authority_session', 'guest_scene', 'guest_visual_divergence', 'battle_board', 'gym_dungeon_replay', 'gym_orphan_recovery', 'trade', 'trading_client', 'transaction_recovery', 'rental', 'hall', 'hall_invite_recovery', 'pool', 'collections', 'cards', 'transport', 'cross_platform', 'online', 'android_network')) {
+    foreach ($suite in @('client', 'identity_recovery', 'reconnect_journal', 'snapshot_rules', 'scene_restore', 'battle', 'battle_confirmation', 'boss', 'authority_session', 'guest_scene', 'guest_visual_divergence', 'battle_board', 'gym_dungeon_replay', 'gym_orphan_recovery', 'trade', 'trading_client', 'trading_entries', 'transaction_recovery', 'rental', 'hall', 'hall_invite_recovery', 'pool', 'collections', 'cards', 'transport', 'cross_platform', 'online', 'android_network')) {
         $testPath = Join-Path $rootPath "tests/multiplayer/${suite}_test.rb"
         & $RubyExecutable --disable-gems $testPath
         if ($LASTEXITCODE -ne 0) { throw "Multiplayer Ruby suite failed: $suite" }

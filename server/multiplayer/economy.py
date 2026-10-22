@@ -56,13 +56,21 @@ class EconomyFeatures:
                 db.execute("INSERT OR IGNORE INTO wallet_accounts(owner) VALUES(?)", (owner,))
                 db.execute("UPDATE wallet_accounts SET balance=balance+?,version=version+1 WHERE owner=?", (delta, owner))
 
-    def trading_grant(self, db, owner, amount, catalog_slots, event_id):
+    def trading_grant(self, db, owner, amount, catalog_slots, event_id, items=None):
         """Trusted operator API, deliberately absent from HTTP dispatch."""
         integer(amount, 0, MAX_COINS, "amount")
         string(event_id, 8, 100, "event_id", r"[A-Za-z0-9_-]+")
         require(db.execute("SELECT 1 FROM accounts WHERE owner=?", (owner,)).fetchone(), "account_required", "A registered account is required", 403)
         require(type(catalog_slots) is list and len(catalog_slots) <= 12 and all(type(slot) is int and 0 <= slot < 12 for slot in catalog_slots), "invalid_grant", "Choose up to twelve installed catalog slots")
-        fingerprint = digest(dumps({"owner": owner, "amount": amount, "slots": catalog_slots}))
+        items = {} if items is None else items
+        require(type(items) is dict and len(items) <= 32, "invalid_grant", "Choose at most thirty-two item types")
+        for item_id, quantity in items.items():
+            self.inventory_item(item_id)
+            integer(quantity, 1, 999_999_999, "quantity")
+        material = {"owner": owner, "amount": amount, "slots": catalog_slots}
+        if items:
+            material["items"] = items
+        fingerprint = digest(dumps(material))
         previous = db.execute("SELECT fingerprint,document FROM trading_grants WHERE event_id=?", (event_id,)).fetchone()
         if previous:
             require(previous["fingerprint"] == fingerprint, "grant_conflict", "Grant event already used with different parameters", 409)
@@ -70,12 +78,19 @@ class EconomyFeatures:
         catalog = self.catalog() if catalog_slots else None
         assets = []
         for slot in catalog_slots:
-            asset = {"id": "pkm_" + secrets.token_hex(16), "owner_id": owner, "snapshot": copy.deepcopy(catalog["pokemon"][slot]), "source": "server_catalog", "catalog_version": 1, "catalog_hash": digest(dumps(catalog)), "compatibility": copy.deepcopy(catalog["compatibility"]), "created_at": self.clock()}
+            asset = {"id": "pkm_" + secrets.token_hex(16), "owner_id": owner, "snapshot": copy.deepcopy(catalog["pokemon"][slot]), "source": "server_catalog", "catalog_version": 1, "catalog_hash": digest(dumps(catalog)), "asset_rules_hash": self.asset_contract(catalog), "compatibility": copy.deepcopy(catalog["compatibility"]), "created_at": self.clock()}
             db.execute("INSERT INTO hosted_assets VALUES(?,?,?)", (asset["id"], owner, dumps(asset)))
             assets.append(asset["id"])
         tx = "grant_" + secrets.token_hex(16)
         self.post_money(db, tx, "operator_grant", {owner: amount, "system:issuer": -amount}, {"event_id": event_id, "assets": assets})
+        if items:
+            changes = {}
+            for item_id, quantity in items.items():
+                changes[owner, item_id], changes["system:issuer", item_id] = quantity, -quantity
+            self.post_items(db, tx, "operator_grant", changes, {"event_id": event_id})
         document = {"event_id": event_id, "owner_id": owner, "amount": amount, "asset_ids": assets, "transaction_id": tx}
+        if items:
+            document["items"] = items
         db.execute("INSERT INTO trading_grants VALUES(?,?,?,?)", (event_id, owner, fingerprint, dumps(document)))
         return document
 
@@ -83,4 +98,5 @@ class EconomyFeatures:
         unbalanced = db.execute("SELECT transaction_id FROM ledger_entries GROUP BY transaction_id HAVING SUM(amount)<>0").fetchall()
         drift = db.execute("SELECT w.owner FROM wallet_accounts w LEFT JOIN ledger_entries e ON e.owner=w.owner GROUP BY w.owner HAVING w.balance<>COALESCE(SUM(e.amount),0)").fetchall()
         overspent = db.execute("SELECT h.owner FROM wallet_holds h LEFT JOIN wallet_accounts w ON w.owner=h.owner GROUP BY h.owner HAVING SUM(h.amount)>COALESCE(w.balance,0)").fetchall()
-        return {"ok": not (unbalanced or drift or overspent), "unbalanced": [r[0] for r in unbalanced], "wallet_drift": [r[0] for r in drift], "overreserved": [r[0] for r in overspent]}
+        inventory = self.inventory_audit(db)
+        return {"ok": not (unbalanced or drift or overspent) and inventory["ok"], "unbalanced": [r[0] for r in unbalanced], "wallet_drift": [r[0] for r in drift], "overreserved": [r[0] for r in overspent], "inventory": inventory}

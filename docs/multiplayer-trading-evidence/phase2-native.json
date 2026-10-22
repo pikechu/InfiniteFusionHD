@@ -1,0 +1,118 @@
+{
+  "phase": "items-discovery-and-semantic-upgrades",
+  "date": "2026-10-22",
+  "data_hash": "3bc71d37379706dc64503e85567b459373c4ed5038e3cb899d2f14842be8a66f",
+  "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
+  "native_ruby": "3.1.3",
+  "native_directory": "temp/multiplayer/trading-46f26d441e",
+  "processes": {
+    "host": 13636,
+    "guest_before_exit": 26876,
+    "guest_after_restart": 37012
+  },
+  "counts": {
+    "hosted_assets": 6,
+    "asset_locks": 0,
+    "market_orders": 2,
+    "market_listings": 3,
+    "trading_deliveries": 3,
+    "exchange_sessions": 2,
+    "ledger_transactions": 9,
+    "item_ledger_transactions": 4,
+    "item_holds": 0
+  },
+  "wallet_balances": [
+    164200,
+    234600
+  ],
+  "item_totals": {
+    "POTION": 30,
+    "RARECANDY": 10
+  },
+  "currency_and_item_ledgers_balanced": true,
+  "all_deliveries_claimed": true,
+  "assertions": {
+    "host": [
+      "2026-10-22 10:09:21 UTC PASS native host starts with three authoritative assets and audited funds",
+      "2026-10-22 10:09:21 UTC PASS standard-art preview fixture renders installed native Pokemon art",
+      "2026-10-22 10:09:21 UTC PASS trading preview never changes the main world's sprite cache",
+      "2026-10-22 10:09:22 UTC PASS native menu cancel sentinel exits home market and filter flows",
+      "2026-10-22 10:09:23 UTC PASS listing reserves actual server asset and charges exact fee",
+      "2026-10-22 10:09:33 UTC PASS offline-compatible market settlement credits seller once",
+      "2026-10-22 10:09:33 UTC PASS sold asset is absent from seller ownership",
+      "2026-10-22 10:09:34 UTC PASS native seller cancels unsold listing",
+      "2026-10-22 10:09:35 UTC PASS repeated return claim retains one existing asset",
+      "2026-10-22 10:09:39 UTC PASS native direct exchange reserves wallet funds",
+      "2026-10-22 10:09:49 UTC PASS native direct settlement applies net money and clears reserves",
+      "2026-10-22 10:09:49 UTC PASS native host final inventory count preserves unique assets",
+      "2026-10-22 10:09:55 UTC PASS native item listing distinguishes unit price quantity and total",
+      "2026-10-22 10:10:00 UTC PASS native item sale debits server stock and credits money once",
+      "2026-10-22 10:10:15 UTC PASS native nearby barter conserves both item types",
+      "2026-10-22 10:10:15 UTC PASS native mixed item payment settles once",
+      "2026-10-22 10:10:15 UTC PASS managed trading leaves main player bag system and story unchanged",
+      "2026-10-22 10:10:15 UTC TRADING_NATIVE_PASS role=host"
+    ],
+    "guest": [
+      "2026-10-22 10:09:23 UTC PASS real HTTP market search finds native listing",
+      "2026-10-22 10:09:26 UTC PASS uncertain native purchase retains durable request ID",
+      "2026-10-22 10:09:26 UTC TRADING_NATIVE_RESTART_REQUIRED Server unreachable: IOError",
+      "2026-10-22 10:09:32 UTC PASS fresh process finds durable uncertain purchase journal",
+      "2026-10-22 10:09:32 UTC PASS fresh process resolves original purchase request without a second debit",
+      "2026-10-22 10:09:32 UTC PASS restart recovery debits purchase exactly once",
+      "2026-10-22 10:09:32 UTC PASS fresh process recovers server pending delivery",
+      "2026-10-22 10:09:32 UTC PASS native duplicate claim never duplicates asset",
+      "2026-10-22 10:09:49 UTC PASS native guest confirms same offer hash and receives net settlement",
+      "2026-10-22 10:09:49 UTC PASS native guest inventory count preserves all received assets",
+      "2026-10-22 10:09:56 UTC PASS native item search and world card point to same active listing",
+      "2026-10-22 10:10:00 UTC PASS native item purchase and repeated claim preserve exact quantity",
+      "2026-10-22 10:10:02 UTC PASS native world polling receives only current trainer's invitation notification",
+      "2026-10-22 10:10:14 UTC PASS native mixed barter transfers items and money atomically",
+      "2026-10-22 10:10:14 UTC PASS managed trading leaves main player bag system and story unchanged",
+      "2026-10-22 10:10:14 UTC TRADING_NATIVE_PASS role=guest"
+    ]
+  },
+  "limits": [
+    "Native production HTTP and renderer fixture; nearby and chat use real WorldSession.",
+    "Menu routing separately tested with controls scripted; human touch/keyboard acceptance remains separate."
+  ],
+  "regression": {
+    "python_cases": 209,
+    "python_passed": 208,
+    "python_skipped": 1,
+    "python_seconds": 350.06,
+    "ruby_suites": [
+      "client",
+      "identity_recovery",
+      "reconnect_journal",
+      "snapshot_rules",
+      "scene_restore",
+      "battle",
+      "battle_confirmation",
+      "boss",
+      "authority_session",
+      "guest_scene",
+      "guest_visual_divergence",
+      "battle_board",
+      "gym_dungeon_replay",
+      "gym_orphan_recovery",
+      "trade",
+      "trading_client",
+      "trading_entries",
+      "transaction_recovery",
+      "rental",
+      "hall",
+      "hall_invite_recovery",
+      "pool",
+      "collections",
+      "cards",
+      "transport",
+      "cross_platform",
+      "online",
+      "android_network"
+    ],
+    "client_assertions": 20,
+    "entry_assertions": 11,
+    "entry_assertions_note": "Two gender-selector assertions added after full run and passed targeted suite; final native run uses the resulting UI build.",
+    "log": "temp/multiplayer/trading-regression-phase2/test-all.log"
+  }
+}

@@ -260,33 +260,55 @@ class OnlineFeatures:
             db.execute("UPDATE world_presence SET map_key=?,document=?,seq=?,updated=? WHERE owner=?", (map_key, dumps(document), seq, now, owner))
             member = self.world_member(db, owner, session)
         players = [json.loads(row["document"]) for row in db.execute("SELECT document FROM world_presence WHERE map_key=? AND owner!=? AND updated>? ORDER BY owner LIMIT 128", (member["map_key"], owner, now - 20))] if member["map_key"] else []
-        rows = db.execute("SELECT id,document FROM chat_messages WHERE (channel='world' OR map_key=?) AND id>? ORDER BY id " + ("DESC" if after == 0 else "ASC") + " LIMIT 50", (member["map_key"], after)).fetchall()
+        # Keep old world clients working: their parser knows only map/world.
+        # Current-build clients additionally receive trade messages and invites.
+        trade_build = False
+        try:
+            current = json.loads(self.catalog_path.read_text(encoding='utf-8-sig'))['compatibility']
+            trade_build = json.loads(member['compatibility']) == current
+        except (OSError,ValueError,KeyError,AttributeError):
+            pass
+        rows = db.execute("SELECT id,document FROM chat_messages WHERE (channel='world' OR (channel='trade' AND ?) OR map_key=?) AND id>? ORDER BY id " + ("DESC" if after == 0 else "ASC") + " LIMIT 50", (int(trade_build), member["map_key"], after)).fetchall()
         rows = list(reversed(rows)) if after == 0 else rows
         cursor = rows[-1]["id"] if rows else max(after, db.execute("SELECT COALESCE(MAX(id),0) FROM chat_messages").fetchone()[0])
         # Online mode keeps its single-writer lease alive even during menus.
         db.execute("UPDATE cloud_leases SET expires=? WHERE owner=? AND session_id=? AND expires>?", (now + 120, owner, session, now))
-        return 200, {"ok": True, "world": {"players": players, "map_key": member["map_key"], "messages": [json.loads(row["document"]) for row in rows], "cursor": cursor, "server_time": now}}
+        invites = []
+        if trade_build:
+            for row in db.execute("SELECT x.id,x.idle,i.nickname,i.friend_code FROM exchange_sessions x JOIN identities i ON i.id=x.host WHERE x.guest=? AND x.status='invited' AND x.idle>? AND x.expires>? ORDER BY x.id LIMIT 5",(owner,now,now)):
+                invites.append({'id':row['id'],'nickname':row['nickname'],'friend_code':row['friend_code'],'expires_at':row['idle']})
+        return 200, {"ok": True, "world": {"players": players, "map_key": member["map_key"], "messages": [json.loads(row["document"]) for row in rows], "cursor": cursor, "server_time": now, 'trade_invites':invites}}
 
     def chat_request(self, db, identity, method, parts, body):
         require(method == "POST" and parts == ["v1", "chat", "send"], "not_found", "Unknown chat operation", 404)
-        obj(body, {"session_id", "client_id", "channel", "text"}, {"session_id", "client_id", "channel", "text"})
+        obj(body, {"session_id", "client_id", "channel", "text", "listing_id"}, {"session_id", "client_id", "channel", "text"})
         owner, now = identity["id"], self.clock()
         member = self.world_member(db, owner, self.online_session_id(body))
         client_id = string(body["client_id"], 16, 80, "client_id", r"[A-Za-z0-9_-]+")
-        require(body["channel"] in ("map", "world"), "invalid_channel", "Choose map or world chat")
+        require(body["channel"] in ("map", "world", "trade"), "invalid_channel", "Choose map, world or trade chat")
         text = string(body["text"], 1, 200, "text")
         require(text.strip() == text and text.strip(), "invalid_message", "Chat message is empty or has surrounding whitespace")
         require(not any(ord(c) == 127 or 0x202A <= ord(c) <= 0x202E or 0x2066 <= ord(c) <= 0x2069 for c in text), "invalid_message", "Unsupported control character")
-        fingerprint = digest(dumps([body["channel"], text]))
+        material = [body['channel'],text]
+        if 'listing_id' in body:
+            require(body['channel']=='trade','invalid_channel','Listing cards require the trade channel')
+            string(body['listing_id'],1,80,'listing_id',r'[A-Za-z0-9_-]+')
+            material.append(body['listing_id'])
+        fingerprint = digest(dumps(material))
         old = db.execute("SELECT fingerprint,document FROM chat_messages WHERE owner=? AND client_id=?", (owner, client_id)).fetchone()
         if old:
             require(old["fingerprint"] == fingerprint, "message_conflict", "Message ID reused for different text", 409)
             return 200, {"ok": True, "message": json.loads(old["document"])}
-        require(body["channel"] == "world" or member["map_key"] is not None, "map_chat_unavailable", "Enter a map before using map chat", 409)
+        require(body["channel"] in ("world","trade") or member["map_key"] is not None, "map_chat_unavailable", "Enter a map before using map chat", 409)
         count = db.execute("SELECT COUNT(*) FROM chat_messages WHERE owner=? AND created>?", (owner, now - 3)).fetchone()[0]
         require(count < 3, "chat_rate_limited", "Please wait before sending more messages", 429)
         map_key = member["map_key"] if body["channel"] == "map" else None
         message = {"sender_id": owner, "nickname": identity["nickname"], "channel": body["channel"], "map_key": map_key, "text": text, "created_at": now}
+        if 'listing_id' in body:
+            listing = self.market_listing(db,body['listing_id'])
+            require(listing['status']=='active' and listing['seller_id']==owner,'listing_unavailable','Only the seller can share an active listing',409)
+            message['listing'] = {key:listing[key] for key in ('id','price','currency')}
+            message['listing'].update(kind=listing.get('kind','pokemon'),label=listing['item']['name'] if listing.get('kind')=='item' else listing['snapshot']['species'])
         cursor = db.execute("INSERT INTO chat_messages(owner,client_id,fingerprint,channel,map_key,document,created) VALUES(?,?,?,?,?,?,?)", (owner, client_id, fingerprint, body["channel"], map_key, "{}", now)).lastrowid
         message["id"] = cursor
         db.execute("UPDATE chat_messages SET document=? WHERE id=?", (dumps(message), cursor))

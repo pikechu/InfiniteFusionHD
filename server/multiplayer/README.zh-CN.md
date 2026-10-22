@@ -1,6 +1,6 @@
 # 本地联机协调服务（协议 2）
 
-2026-10-22 新增精灵交易中心、服务器钱包、领取与恢复。使用与生产数据库版本 2 迁移见 [交易中心说明](../../docs/multiplayer-trading-center.zh-CN.md)。
+2026-10-22 新增精灵／道具市场、混合交易、联机库存、附近邀请与交易频道；钱包与道具均有权威台账。使用与生产数据库版本 3 迁移见 [交易中心说明](../../docs/multiplayer-trading-center.zh-CN.md)。
 
 2026-10-21新增账号、云存档、主线地图同步与聊天，完整使用/验证说明见 `../../docs/multiplayer-online-world.zh-CN.md`。新端点使用Bearer身份，其中auth/register、auth/login无需身份；本节POST不使用经济操作日志，上传和聊天分别以upload_id/client_id去重。
 

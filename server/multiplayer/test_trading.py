@@ -297,7 +297,8 @@ class TradingTests(unittest.TestCase):
         try:
             result = migrate(self.database, backup)
             self.assertTrue(result['ok'])
-            self.assertEqual(inspect_database(self.database, data_id)['schema_version'], 2)
+            from production_data import SCHEMA_VERSION
+            self.assertEqual(inspect_database(self.database, data_id)['schema_version'], SCHEMA_VERSION)
             with closing(sqlite3.connect(backup)) as db:
                 self.assertEqual(db.execute("SELECT value FROM deployment_meta WHERE name='schema_version'").fetchone()[0], '1')
             self.store = Store(self.database, clock=self.clock)

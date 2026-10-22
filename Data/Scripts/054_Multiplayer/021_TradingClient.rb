@@ -27,6 +27,23 @@ module KIFMultiplayer
     def assets
       CollectionClient.new(@client).refresh
     end
+    def item_quantity(value, minimum = 0)
+      check(value.is_a?(Integer) && value.between?(minimum, 999_999_999), "道具数量无效。")
+      value
+    end
+    def inventory
+      value = @client.request("GET", "/v1/inventory")["inventory"]
+      check(value.is_a?(Hash) && value["owner_id"] == @client.player_id && value["items"].is_a?(Array) && value["items"].length <= 128)
+      check(value["version"].is_a?(Integer) && value["version"] >= 0)
+      value["items"].each do |item|
+        check(item.is_a?(Hash) && item["item_id"].is_a?(String))
+        Snapshot.registry(:Item, item["item_id"])
+        %w[quantity available reserved].each { |key| item_quantity(item[key]) }
+        check(item["available"] + item["reserved"] == item["quantity"] && item["item"].is_a?(Hash) && item["item"]["id"] == item["item_id"])
+        check(item["item"]["name"].is_a?(String) && item["item"]["name"].length.between?(1, 100) && [true, false].include?(item["item"]["tradeable"]))
+      end
+      value
+    end
     def validate_listing(value)
       check(value.is_a?(Hash))
       %w[id seller_id asset_id].each { |key| identifier(value[key]) }
@@ -35,7 +52,16 @@ module KIFMultiplayer
       check(value["revision"].is_a?(Integer) && value["revision"] >= 1 && value["currency"] == "LINK")
       check(%w[active sold cancelled expired].include?(value["status"]))
       check(value["compatibility"].is_a?(Hash))
-      Snapshot.validate(value["snapshot"])
+      if value["kind"] == "item"
+        Snapshot.registry(:Item, value["item_id"])
+        item_quantity(value["quantity"], 1)
+        amount(value["unit_price"], 1)
+        check(value["quantity"] * value["unit_price"] == value["price"] && value["item"].is_a?(Hash) && value["item"]["id"] == value["item_id"])
+        check(value["item"]["name"].is_a?(String) && value["item"]["name"].length.between?(1, 100))
+      else
+        check(value["kind"].nil? || value["kind"] == "pokemon")
+        Snapshot.validate(value["snapshot"])
+      end
       value
     end
     def search(filters = {}, sort = "price_asc", cursor = nil)
@@ -52,6 +78,10 @@ module KIFMultiplayer
     end
     def sell(asset_id, price)
       validate_listing(@client.request("POST", "/v1/market/listings", {"asset_id" => identifier(asset_id), "price" => amount(price, 1), "compatibility" => @client.compatibility})["listing"])
+    end
+    def sell_item(item_id, quantity, unit_price)
+      Snapshot.registry(:Item, item_id)
+      validate_listing(@client.request("POST", "/v1/market/listings", {"kind" => "item", "item_id" => item_id, "quantity" => item_quantity(quantity, 1), "unit_price" => amount(unit_price, 1), "compatibility" => @client.compatibility})["listing"])
     end
     def buy(value)
       validate_listing(value)
@@ -78,7 +108,12 @@ module KIFMultiplayer
       values.each do |value|
         check(value.is_a?(Hash) && value["owner_id"] == @client.player_id && %w[pending claimed].include?(value["status"]))
         %w[id asset_id event_id].each { |key| identifier(value[key]) }
-        CollectionClient.new(@client).validate_asset(value["asset"]) if value["status"] == "pending"
+        if value["kind"] == "item"
+          Snapshot.registry(:Item, value["item_id"])
+          item_quantity(value["quantity"], 1)
+        elsif value["status"] == "pending"
+          CollectionClient.new(@client).validate_asset(value["asset"])
+        end
       end
       values
     end
@@ -88,6 +123,15 @@ module KIFMultiplayer
       value
     end
     def history; @client.request("GET", "/v1/trading/history")["events"]; end
+    def preferences(body = nil)
+      value = @client.request(body ? "POST" : "GET", "/v1/trading/preferences", body)["preferences"]
+      check(value.is_a?(Hash) && [true, false].include?(value["allow_nearby"]) && [true, false].include?(value["allow_friend"]))
+      check(value["blocked"].is_a?(Array) && value["blocked"].length <= 100)
+      value["blocked"].each do |trainer|
+        check(trainer.is_a?(Hash) && trainer["friend_code"].is_a?(String) && trainer["friend_code"] =~ /\A[A-F0-9]{8}\z/ && trainer["nickname"].is_a?(String))
+      end
+      value
+    end
     def validate_exchange(value)
       check(value.is_a?(Hash))
       identifier(value["id"])
@@ -98,6 +142,7 @@ module KIFMultiplayer
         amount(offer["amount"])
         offer["assets"].each { |asset| identifier(asset["id"]); Snapshot.validate(asset["snapshot"]) }
         check(offer["assets"].map { |asset| asset["id"] }.uniq.length == offer["assets"].length)
+        validate_offer_items(offer["items"] || {})
       end
       check(%w[invited offering locked committed cancelled expired].include?(value["status"]))
       check(value["revision"].is_a?(Integer) && value["revision"] > 0)
@@ -116,6 +161,14 @@ module KIFMultiplayer
       check(friend_code.is_a?(String) && friend_code =~ /\A[A-Fa-f0-9]{8}\z/, "好友码应为八位字母数字。")
       validate_exchange(@client.request("POST", "/v1/exchanges", {"friend_code" => friend_code.upcase, "compatibility" => @client.compatibility})["exchange"])
     end
+    def invite_nearby(target_id)
+      validate_exchange(@client.request("POST", "/v1/exchanges", {"target_id" => identifier(target_id), "compatibility" => @client.compatibility})["exchange"])
+    end
+    def validate_offer_items(items)
+      check(items.is_a?(Hash) && items.length <= 8, "每次最多交易八种道具。")
+      items.each { |item_id, quantity| Snapshot.registry(:Item, item_id); item_quantity(quantity, 1) }
+      items
+    end
     def exchange_action(value, action, body = {})
       validate_exchange(value)
       check(%w[accept offer lock confirm cancel].include?(action))
@@ -129,14 +182,14 @@ module KIFMultiplayer
       end
       validate_exchange(@client.request("POST", "/v1/exchanges/#{value['id']}/#{action}", body)["exchange"])
     end
-    def offer(value, asset_ids, coins)
+    def offer(value, asset_ids, coins, items = {})
       check(asset_ids.is_a?(Array) && asset_ids.length <= 6 && asset_ids.uniq.length == asset_ids.length)
       asset_ids.each { |id| identifier(id) }
-      exchange_action(value, "offer", {"revision" => value["revision"], "asset_ids" => asset_ids, "amount" => amount(coins)})
+      exchange_action(value, "offer", {"revision" => value["revision"], "asset_ids" => asset_ids, "amount" => amount(coins), "items" => validate_offer_items(items)})
     end
     def recover
       @client.recover_pending
-      {"wallet" => wallet, "deliveries" => deliveries, "exchanges" => exchanges}
+      {"wallet" => wallet, "deliveries" => deliveries, "exchanges" => exchanges, "inventory" => inventory}
     end
   end
 end

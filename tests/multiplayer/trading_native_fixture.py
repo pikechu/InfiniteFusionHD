@@ -15,7 +15,7 @@ try:
         assert status == 201, response
         with store.lock, store.connect() as db:
             db.execute('BEGIN IMMEDIATE')
-            store.trading_grant(db, response['identity']['id'], 200000, [0, 1, 2] if role == 'host' else [3, 4, 5], 'native_fixture_' + role)
+            store.trading_grant(db, response['identity']['id'], 200000, [0, 1, 2] if role == 'host' else [3, 4, 5], 'native_fixture_' + role, {'POTION':10 if role=='host' else 20,'RARECANDY':5})
     (run / 'scenario.json').write_text(json.dumps({'directory': str(run).replace('\\', '/')}), encoding='utf-8')
 finally:
     store.close()

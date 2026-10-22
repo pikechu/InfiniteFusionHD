@@ -1,12 +1,13 @@
 module KIFMultiplayer
   class WorldSession
-    attr_reader :players, :messages, :map_key, :error, :revision, :client
+    attr_reader :players, :messages, :map_key, :error, :revision, :client, :trade_invites
     def initialize(client, compatibility, session_id = nil)
       @client, @compatibility = client, compatibility
       @session_id = session_id || KIFMultiplayer.operation_id
       @server, @owner, @token = client.server, client.player_id, client.token
       @io, @joined, @closed = AsyncRequest.new(client), false, false
       @players, @messages, @outbox, @cursor, @seq, @revision = [], [], [], 0, 0, 0
+      @trade_invites = []
       @next_poll = 0
     end
     def position
@@ -51,14 +52,26 @@ module KIFMultiplayer
       end
       check(ids.uniq.length == ids.length && !ids.include?(@owner))
       world["messages"].each { |message| validate_message(message) }
+      invites = world["trade_invites"] || []
+      check(invites.is_a?(Array) && invites.length <= 5)
+      invites.each do |invite|
+        check(invite.is_a?(Hash) && invite["id"].is_a?(String) && invite["id"] =~ /\A[A-Za-z0-9_-]{1,80}\z/)
+        check(invite["nickname"].is_a?(String) && invite["nickname"].length <= 32 && invite["friend_code"].is_a?(String) && invite["friend_code"] =~ /\A[A-F0-9]{8}\z/)
+      end
       world
     end
     def check(value); raise Error.new("地图或聊天响应无效。", "invalid_world") unless value; end
     def validate_message(message)
       check(message.is_a?(Hash) && message["id"].is_a?(Integer) && message["id"] > 0)
-      check(%w[map world].include?(message["channel"]) && message["sender_id"].is_a?(String) && message["sender_id"] =~ /\A[A-Za-z0-9_-]{3,80}\z/)
+      check(%w[map world trade].include?(message["channel"]) && message["sender_id"].is_a?(String) && message["sender_id"] =~ /\A[A-Za-z0-9_-]{3,80}\z/)
       check(message["nickname"].is_a?(String) && message["nickname"].length <= 32 && message["text"].is_a?(String) && message["text"].length.between?(1, 200))
-      check(message["channel"] == "world" && message["map_key"].nil? || message["channel"] == "map" && message["map_key"].is_a?(String) && message["map_key"] =~ /\A[a-f0-9]{64}\z/)
+      check(%w[world trade].include?(message["channel"]) && message["map_key"].nil? || message["channel"] == "map" && message["map_key"].is_a?(String) && message["map_key"] =~ /\A[a-f0-9]{64}\z/)
+      if message["listing"]
+        listing = message["listing"]
+        check(message["channel"] == "trade" && listing.is_a?(Hash) && listing["id"].is_a?(String) && listing["id"] =~ /\A[A-Za-z0-9_-]{1,80}\z/)
+        check(Snapshot.number(listing["price"], 1, 9_999_999_999) && listing["currency"] == "LINK" && %w[pokemon item].include?(listing["kind"]))
+        check(listing["label"].is_a?(String) && listing["label"].length.between?(1, 100))
+      end
       message
     end
     def remember(message)
@@ -70,15 +83,22 @@ module KIFMultiplayer
       @revision += 1
     end
     def visible_messages(channel = nil)
-      @messages.select { |value| (!channel || value["channel"] == channel) && (value["channel"] == "world" || value["map_key"] == @map_key) }
+      @messages.select { |value| (!channel || value["channel"] == channel) && (%w[world trade].include?(value["channel"]) || value["map_key"] == @map_key) }
     end
-    def send_chat(channel, text)
+    def send_chat(channel, text, listing_id = nil)
       text = text.to_s.strip
-      raise Error, "请选择地图或世界频道。" unless %w[map world].include?(channel)
+      raise Error, "请选择地图、世界或交易频道。" unless %w[map world trade].include?(channel)
       raise Error, "请输入1至200字，不能包含换行或控制字符。" unless text.length.between?(1, 200) && text !~ /[\x00-\x1f\x7f\u202a-\u202e\u2066-\u2069]/
       raise Error, "地图尚未连接，请稍候。" if channel == "map" && !@map_key
       raise Error, "待发送消息较多，请稍候。" if @outbox.length >= 5
       @outbox << {"session_id" => @session_id, "client_id" => KIFMultiplayer.operation_id, "channel" => channel, "text" => text, "map_key" => @map_key}
+      if listing_id
+        unless channel == "trade" && listing_id.is_a?(String) && listing_id =~ /\A[A-Za-z0-9_-]{1,80}\z/
+          @outbox.pop
+          raise Error, "商品分享编号无效。"
+        end
+        @outbox.last["listing_id"] = listing_id
+      end
       @next_poll = 0
     end
     def pending_messages; @outbox.length; end
@@ -113,6 +133,9 @@ module KIFMultiplayer
             @outbox.shift
           when :sync
             world = validate_world(response["world"])
+            invitations = world["trade_invites"] || []
+            @revision += 1 if invitations != @trade_invites
+            @trade_invites = invitations
             if same_map?(@sent_position, current)
               @players, @map_key, @cursor = world["players"], world["map_key"], world["cursor"]
             elsif @sent_position.nil? && current.nil?
@@ -125,7 +148,7 @@ module KIFMultiplayer
           @error, @players = error, []
           if error.respond_to?(:code)
             @joined = false if error.code == "world_session_lost"
-            @outbox.shift if @kind == :chat && %w[invalid_message invalid_field message_conflict map_chat_unavailable].include?(error.code)
+            @outbox.shift if @kind == :chat && %w[invalid_message invalid_field message_conflict map_chat_unavailable listing_unavailable listing_not_found not_owner invalid_channel].include?(error.code)
           end
           @next_poll = KIFMultiplayer.monotonic + 2
         end
@@ -134,7 +157,7 @@ module KIFMultiplayer
       if !@joined
         @kind = :join
         @io.start("/v1/world/join", {"session_id" => @session_id, "compatibility" => @compatibility})
-      elsif @outbox.any? && (@outbox.first["channel"] == "world" || @map_key && same_map?(current, @sent_position))
+      elsif @outbox.any? && (%w[world trade].include?(@outbox.first["channel"]) || @map_key && same_map?(current, @sent_position))
         message = @outbox.first
         if message["channel"] == "map" && message["map_key"] != @map_key
           @outbox.shift
@@ -286,6 +309,7 @@ module KIFMultiplayer
         cloud = OnlineMode.cloud
         lines = session.visible_messages.last(2)
         status = cloud && cloud.error ? "云存档待同步：#{cloud.error.message}" : (session.error ? "地图连接中断，正在重连…" : "在线 · 同地图 #{players.length + 1} 人 · 暂停菜单 → 聊天")
+        status = "收到 #{session.trade_invites.length} 个交易邀请 · 暂停 → 交易中心" if !session.error && !(cloud && cloud.error) && !session.trade_invites.empty?
         key = [status, lines.map { |message| message["id"] }, Graphics.height]
         return if key == @drawn
         @drawn = key
@@ -294,7 +318,7 @@ module KIFMultiplayer
         bitmap.fill_rect(0, 0, Graphics.width, 80, Color.new(12, 20, 30, 170))
         bitmap.draw_text(8, 0, Graphics.width - 16, 24, status)
         lines.each_with_index do |message, index|
-          channel = message["channel"] == "world" ? "世界" : "地图"
+          channel = {"world" => "世界", "map" => "地图", "trade" => "交易"}[message["channel"]]
           bitmap.draw_text(8, 24 + index * 24, Graphics.width - 16, 24, "[#{channel}] #{message['nickname']}：#{message['text']}")
         end
       end
@@ -340,11 +364,15 @@ module KIFMultiplayer
             @scroll = [@scroll - 1, 0].max
           elsif Input.trigger?(Input::USE)
             compose
+          elsif Input.trigger?(Input::LEFT)
+            listing_cards
           elsif defined?(Input::MOUSELEFT) && Input.trigger?(Input::MOUSELEFT) && Input.respond_to?(:mouse_y) && Input.mouse_y >= Graphics.height - 48
-            if Input.mouse_x < Graphics.width / 3
+            if Input.mouse_x < Graphics.width / 4
               switch_channel
-            elsif Input.mouse_x < Graphics.width * 2 / 3
+            elsif Input.mouse_x < Graphics.width / 2
               compose
+            elsif Input.mouse_x < Graphics.width * 3 / 4
+              listing_cards
             else
               break
             end
@@ -358,14 +386,31 @@ module KIFMultiplayer
       $scene = previous_scene
     end
     def switch_channel
-      @channel = @channel == "map" ? "world" : "map"
+      channels = %w[map world trade]
+      @channel = channels[(channels.index(@channel) + 1) % channels.length]
       @scroll = 0
     end
     def compose
-      value = pbMessageFreeText(@channel == "map" ? "发送地图消息（最多200字）" : "发送世界消息（最多200字）", "", false, 200).to_s.strip
+      name = {"map" => "地图", "world" => "世界", "trade" => "交易"}[@channel]
+      value = pbMessageFreeText("发送#{name}消息（最多200字）", "", false, 200).to_s.strip
       return if value.empty?
       @session.send_chat(@channel, value)
       @scroll = 0
+    rescue Error => error
+      pbMessage(KIFMultiplayer.display_text(error.message))
+    end
+    def listing_cards
+      raise Error, "请先切换到交易频道。" unless @channel == "trade"
+      cards = @session.visible_messages("trade").map { |message| message["listing"] }.compact.reverse.uniq { |card| card["id"] }.first(20)
+      raise Error, "当前频道没有商品卡片。" if cards.empty?
+      client = @session.client
+      ui = UI.new(client)
+      selected = ui.choose("选择商品（将重新查询状态与价格）", cards.map { |card| "#{KIFMultiplayer.display_text(card['label'])} · #{card['price']} 联机币" } + ["返回"])
+      return if selected < 0 || selected >= cards.length
+      KIFMultiplayer.with_trading_scene do
+        trading = TradingClient.new(client)
+        TradingUI.new(client).listing_menu(trading.listing(cards[selected]["id"]))
+      end
     rescue Error => error
       pbMessage(KIFMultiplayer.display_text(error.message))
     end
@@ -375,15 +420,16 @@ module KIFMultiplayer
       bitmap = @canvas.bitmap
       bitmap.fill_rect(0, 0, Graphics.width, Graphics.height, Color.new(19, 27, 41))
       bitmap.font.color = Color.new(240, 245, 255)
-      title = @channel == "map" ? "地图聊天" : "世界聊天"
+      title = {"map" => "地图聊天", "world" => "世界聊天", "trade" => "交易聊天"}[@channel]
       bitmap.draw_text(16, 8, Graphics.width - 32, 32, "#{title} · 待发送 #{@session.pending_messages}")
-      status = @session.error ? @session.error.message : "方向键翻阅 · 动作键切换频道 · 确认键输入"
+      status = @session.error ? @session.error.message : "上下翻阅 · 动作切换 · 确认输入 · 左键商品"
       bitmap.font.size = 14
       bitmap.draw_text(16, 42, Graphics.width - 32, 24, status)
       bitmap.font.size = 18
       lines = []
       @session.visible_messages(@channel).each do |message|
         prefix = "#{message['nickname']}："
+        prefix += "[商品 #{message['listing']['label']} #{message['listing']['price']}] " if message["listing"]
         current = ""
         (prefix + message["text"]).each_char do |character|
           if bitmap.text_size(current + character).width > Graphics.width - 40
@@ -401,8 +447,8 @@ module KIFMultiplayer
       lines[[finish - capacity, 0].max...finish].to_a.each_with_index do |line, index|
         bitmap.draw_text(20, 76 + index * 24, Graphics.width - 40, 24, line)
       end
-      ["切换频道", "输入消息", "返回地图"].each_with_index do |label, index|
-        width = Graphics.width / 3
+      ["切换频道", "输入消息", "交易商品", "返回地图"].each_with_index do |label, index|
+        width = Graphics.width / 4
         bitmap.fill_rect(index * width + 4, Graphics.height - 44, width - 8, 36, Color.new(44, 68, 95))
         bitmap.draw_text(index * width, Graphics.height - 44, width, 36, label, 1)
       end
