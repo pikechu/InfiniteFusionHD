@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "content": "d787e2264c8f5de6604ba8ff",
+  "apk_sha256": "cfd952f70179a5d8d6ff8c6649646b7abc610bffe6dc44e53689082a45c114d0",
+  "markers": {
+    "movement": {
+      "x": 20,
+      "direction": 6
+    },
+    "movement-seen": {
+      "passed": true
+    },
+    "guest-render": {
+      "passed": true,
+      "map_key": "fa7b6aa5454dca9326669637b7bf4f6a5ad2ac88b2cf4fc0dca2b90028cd3c75",
+      "ruby": "3.4.10"
+    },
+    "host-render": {
+      "passed": true,
+      "map_key": "fa7b6aa5454dca9326669637b7bf4f6a5ad2ac88b2cf4fc0dca2b90028cd3c75",
+      "ruby": "3.1.3"
+    },
+    "guest-transfer": {
+      "passed": true
+    },
+    "host-isolation": {
+      "passed": true
+    },
+    "host-pass": {
+      "passed": true,
+      "ruby": "3.1.3"
+    },
+    "guest-pass": {
+      "passed": true,
+      "ruby": "3.4.10"
+    },
+    "restore-windows-pass": {
+      "passed": true,
+      "ruby": "3.4.10"
+    },
+    "restore-roundtrip-pass": {
+      "passed": true,
+      "ruby": "3.1.3"
+    },
+    "restore-android-pass": {
+      "passed": true,
+      "ruby": "3.1.3"
+    }
+  },
+  "remote_saves": [
+    {
+      "owner": "p_2c3e6fb633897da65ef81643",
+      "slot": "file-a",
+      "revision": 4,
+      "document_bytes": 27545
+    },
+    {
+      "owner": "p_e7e6113847ee41216b399735",
+      "slot": "file-a",
+      "revision": 7,
+      "document_bytes": 27629
+    }
+  ],
+  "scenario": "Windows and Android complete game; native map rendering; five fresh processes; cloud roundtrip",
+  "normal_startup_touch_gate": "title confirm -> online/offline selection -> login/register menu, normal APK entry (no customScript)"
+}
