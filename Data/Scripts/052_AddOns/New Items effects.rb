@@ -361,8 +361,11 @@ ItemHandlers::UseFromBag.add(:DEBUGGER, proc { |item|
   if Kernel.pbConfirmMessageSerious(_INTL("Innapropriate use of this item can lead to unwanted effects and make the game unplayable. Do you want to continue?"))
     $game_player.cancelMoveRoute()
     Kernel.pbStartOver(false)
+    pbCommonEvent(COMMON_EVENT_FIX_GAME)
     Kernel.pbMessage(_INTL("Please report the glitch on the Pokecommunity thread, on the game's subreddit or in the game's Discord channel."))
+    next 1
   end
+  next 0
 })
 
 def useSleepingBag()
