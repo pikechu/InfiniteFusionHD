@@ -193,6 +193,7 @@ module GameData
     end
 
     def replace_species_to_randomized(species, trainerId, pokemonIndex)
+      return species if $game_switches[SWITCH_DONT_RANDOMIZE]
       return species if $game_switches[SWITCH_FIRST_RIVAL_BATTLE]
       if isGymBattle() && $game_switches[SWITCH_RANDOMIZE_GYMS_SEPARATELY]
         return replace_species_to_randomized_gym(species, trainerId, pokemonIndex)
