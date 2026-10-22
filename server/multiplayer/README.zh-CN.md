@@ -1,5 +1,23 @@
 # 本地联机协调服务（协议 2）
 
+2026-10-21新增账号、云存档、主线地图同步与聊天，完整使用/验证说明见 `../../docs/multiplayer-online-world.zh-CN.md`。新端点使用Bearer身份，其中auth/register、auth/login无需身份；本节POST不使用经济操作日志，上传和聊天分别以upload_id/client_id去重。
+
+| POST路径 | 请求要点 |
+| --- | --- |
+| `/v1/auth/register`、`/v1/auth/login` | `username,password,protocol:2`，注册可带nickname；返回identity、token、username、expires_at |
+| `/v1/auth/logout` | 撤销当前账号会话凭据；游戏退出先关闭云写入会话 |
+| `/v1/cloud/open` | `session_id,compatibility`；单账号单写入租约，返回云槽位版本列表 |
+| `/v1/cloud/heartbeat`、`/close` | `session_id`；续期或关闭 |
+| `/v1/cloud/download` | `session_id,slot`；返回当前槽位save和revision |
+| `/v1/cloud/upload` | `session_id,slot,revision,upload_id,save:{format,game_version,payload,sha256}`；版本CAS、幂等提交 |
+| `/v1/cloud/chunk` | `session_id,upload_id,index,total,sha256,data`；16KiB分片、返回next_index或最终上传回执 |
+| `/v1/world/join` | `session_id,compatibility` |
+| `/v1/world/sync` | `session_id,seq,after,position`；position可null隐藏，或含map_id/map_hash/width/height/x/y/direction/character_id/moving；返回world玩家与消息增量 |
+| `/v1/world/leave` | `session_id` |
+| `/v1/chat/send` | `session_id,client_id,channel:map或world,text`；服务器填入真实发送者、昵称、地图范围 |
+
+云端与账号记录保存在同一SQLite事务体系中；服务器不解释游戏对象、不执行上传数据。重启清空地图在线状态，保留账号、存档及上传回执。云数据应与身份数据库一起私密备份。
+
 第三版和后续独立玩法服务状态机位于 `backend_v3.py`，由同一 `Store` 和 SQLite 写事务协调；客户端实现与原生游戏验收见根 `docs`，不能仅因服务测试通过就宣称游戏验收通过。
 
 ## 第三版及独立玩法协议
@@ -119,7 +137,7 @@ Python 3 标准库 `http.server`、`sqlite3`，无需 pip。该服务用于好�
 第二版自动回归：
 
 ```powershell
-& python -m unittest discover -s server/multiplayer -p 'test_*.py' -v
+& 'D:\Users\meikun.zhang\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -m unittest discover -s server/multiplayer -p 'test_*.py' -v
 ```
 
 在项目根目录运行：
@@ -215,7 +233,7 @@ SQLite 数据包括身份凭据哈希、房间 JSON、冻结队伍与逐阶段�
 ## 测试
 
 ```powershell
-& python -m unittest discover -s server/multiplayer -p 'test_*.py' -v
+& 'D:\Users\meikun.zhang\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -m unittest discover -s server/multiplayer -p 'test_*.py' -v
 ```
 
 单测与真实 localhost HTTP 复用同一组业务场景，使用 `data/tests` 下唯一测试数据库。测试不打开游戏存档。服务接口测试不替代双游戏进程、局域网或公网验收；结果以项目的测试报告为准。

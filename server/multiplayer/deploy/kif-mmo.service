@@ -1,0 +1,33 @@
+[Unit]
+Description=KIF multiplayer production service
+After=network.target
+RequiresMountsFor=/var/lib/kif-mmo
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=kif-mmo
+Group=kif-mmo
+WorkingDirectory=/opt/kif-mmo/current/server/multiplayer
+Environment=KIF_CONFIG=/etc/kif-mmo/production.json
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/kif-mmo/current/venv/bin/gunicorn --config /opt/kif-mmo/current/server/multiplayer/deploy/gunicorn.conf.py
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=35
+KillMode=mixed
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/kif-mmo
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=1G
+TasksMax=64
+LimitNOFILE=1024
+
+[Install]
+WantedBy=multi-user.target

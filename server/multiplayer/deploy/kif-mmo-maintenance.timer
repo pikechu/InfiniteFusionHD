@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily KIF backup retention and verification
+
+[Timer]
+OnCalendar=*-*-* 04:07:00
+Persistent=true
+Unit=kif-mmo-maintenance.service
+
+[Install]
+WantedBy=timers.target

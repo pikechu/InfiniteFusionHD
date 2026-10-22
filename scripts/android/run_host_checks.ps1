@@ -25,12 +25,15 @@ try {
     $sources = @(Get-ChildItem -LiteralPath android/tests/java -Recurse -File -Filter '*.java' | ForEach-Object FullName)
     $sources += Join-Path $repository 'android/app/src/main/java/org/kuray/kif/SaveTransfer.java'
     $sources += Join-Path $repository 'android/app/src/main/java/org/kuray/kif/AnalyticsProtocol.java'
-    & (Join-Path $jdk 'bin/javac.exe') '-J-Duser.language=en' --release 8 -encoding UTF-8 -d $classes $sources
+    $sources += Join-Path $repository 'android/app/src/main/java/org/kuray/kif/AsyncHttpQueue.java'
+    & (Join-Path $jdk 'bin/javac.exe') '-J-Duser.language=en' '-J-Xms16m' '-J-Xmx128m' --release 8 -encoding UTF-8 -d $classes $sources
     if ($LASTEXITCODE -ne 0) { throw 'Save transfer host test compilation failed' }
-    & (Join-Path $jdk 'bin/java.exe') -cp $classes SaveTransferHostTest $output
+    & (Join-Path $jdk 'bin/java.exe') -Xms16m -Xmx128m -cp $classes SaveTransferHostTest $output
     if ($LASTEXITCODE -ne 0) { throw 'Save transfer filesystem checks failed' }
-    & (Join-Path $jdk 'bin/java.exe') -cp $classes org.kuray.kif.AnalyticsProtocolHostTest
+    & (Join-Path $jdk 'bin/java.exe') -Xms16m -Xmx128m -cp $classes org.kuray.kif.AnalyticsProtocolHostTest
     if ($LASTEXITCODE -ne 0) { throw 'Analytics protocol host checks failed' }
+    & (Join-Path $jdk 'bin/java.exe') -Xms16m -Xmx128m -cp $classes org.kuray.kif.AsyncHttpQueueHostTest
+    if ($LASTEXITCODE -ne 0) { throw 'Asynchronous HTTP lifecycle checks failed' }
     git diff --check
     if ($LASTEXITCODE -ne 0) { throw 'Git whitespace checks failed' }
 } finally { Pop-Location }

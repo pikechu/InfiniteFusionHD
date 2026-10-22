@@ -424,23 +424,37 @@ try:
 except ImportError:
     from backend_v3 import V3Features, bind_api
 bind_api(globals())
+try:
+    from .online import OnlineFeatures, bind_api as bind_online_api, MAX_CLOUD_BODY
+except ImportError:
+    from online import OnlineFeatures, bind_api as bind_online_api, MAX_CLOUD_BODY
+bind_online_api(globals())
 
 
-class Store(V3Features):
-    def __init__(self, database, clock=time.time, heartbeat_seconds=8, reconnect_seconds=60, room_ttl=86400):
+class Store(V3Features, OnlineFeatures):
+    def __init__(self, database, clock=time.time, heartbeat_seconds=8, reconnect_seconds=60, room_ttl=86400,
+                 synchronous="NORMAL", create=True, auth_concurrency=2):
+        if synchronous not in ("NORMAL", "FULL"):
+            raise ValueError("Unsupported SQLite synchronous mode")
+        if not isinstance(auth_concurrency, int) or not 1 <= auth_concurrency <= 4:
+            raise ValueError("Authentication concurrency must be 1..4")
         self.database = str(database)
         self.clock = clock
         self.heartbeat_seconds = heartbeat_seconds
         self.reconnect_seconds = reconnect_seconds
         self.room_ttl = room_ttl
         self.lock = threading.RLock()
-        Path(self.database).parent.mkdir(parents=True, exist_ok=True)
-        self._db = sqlite3.connect(self.database, timeout=10, check_same_thread=False)
+        self.auth_lock = threading.Lock()
+        self.auth_slots = threading.BoundedSemaphore(auth_concurrency)
+        if create:
+            Path(self.database).parent.mkdir(parents=True, exist_ok=True)
+        target = self.database if create else Path(self.database).resolve().as_uri() + "?mode=rw"
+        self._db = sqlite3.connect(target, uri=not create, timeout=10, check_same_thread=False)
         self._db.row_factory = sqlite3.Row
         with self.connect() as db:
+            db.execute("PRAGMA synchronous=" + synchronous)
             db.executescript("""
                 PRAGMA journal_mode=WAL;
-                PRAGMA synchronous=NORMAL;
                 CREATE TABLE IF NOT EXISTS identities(id TEXT PRIMARY KEY,nickname TEXT NOT NULL,friend_code TEXT UNIQUE NOT NULL,token_hash TEXT UNIQUE NOT NULL,recovery_hash TEXT UNIQUE NOT NULL,created REAL NOT NULL);
                 CREATE TABLE IF NOT EXISTS rooms(code TEXT PRIMARY KEY,document TEXT NOT NULL,updated REAL NOT NULL);
                 CREATE TABLE IF NOT EXISTS battles(id TEXT PRIMARY KEY,document TEXT NOT NULL,updated REAL NOT NULL);
@@ -455,6 +469,7 @@ class Store(V3Features):
                 CREATE TABLE IF NOT EXISTS trade_receipts(transaction_id TEXT NOT NULL,owner TEXT NOT NULL,document TEXT NOT NULL,acked INTEGER NOT NULL DEFAULT 0,PRIMARY KEY(transaction_id,owner));
             """)
             self.init_v3(db)
+            self.init_online(db)
             # Protocol-1 waiting rooms have no engine-instance handshake. They
             # remain readable history, but cannot be reopened by a v2 client.
             for row in db.execute("SELECT document FROM rooms").fetchall():
@@ -708,11 +723,14 @@ class Store(V3Features):
             battle["deadline"] = None
         self.save_battle(db, battle)
 
-    def request(self, method, path, body=None, token=None):
+    def request(self, method, path, body=None, token=None, peer="local"):
         body = {} if body is None else body
         try:
             obj(body)
-            require(len(dumps(body).encode("utf-8")) <= MAX_BODY, "body_too_large", "Request exceeds maximum size", 413)
+            limit = MAX_CLOUD_BODY if path == "/v1/cloud/upload" else MAX_BODY
+            require(len(dumps(body).encode("utf-8")) <= limit, "body_too_large", "Request exceeds maximum size", 413)
+            if method == "POST" and path in ("/v1/auth/register", "/v1/auth/login"):
+                return self.auth_request(path, body, peer)
             with self.lock, self.connect() as db:
                 db.execute("BEGIN IMMEDIATE")
                 if method == "GET" and path == "/v1/health":
@@ -722,9 +740,13 @@ class Store(V3Features):
                 if method == "POST" and path == "/v1/identities/recover":
                     return self.recover_identity(db, body)
                 row = db.execute("SELECT id,nickname,friend_code FROM identities WHERE token_hash=?", (digest(token or ""),)).fetchone()
-                require(row is not None, "identity_invalid", "Missing or invalid identity token", 401)
-                owner = row["id"]
-                identity = dict(row)
+                identity = dict(row) if row else self.account_identity(db, token)
+                require(identity is not None, "identity_invalid", "Missing or invalid identity token", 401)
+                owner = identity["id"]
+                if method == "POST" and path == "/v1/auth/logout":
+                    obj(body)
+                    db.execute("DELETE FROM account_sessions WHERE token_hash=?", (digest(token or ""),))
+                    return 200, {"ok": True}
                 if method == "GET" and path == "/v1/identity":
                     return 200, {"ok": True, "identity": identity}
                 if method == "GET" and path.startswith("/v1/operations/"):
@@ -735,7 +757,8 @@ class Store(V3Features):
                 # Replay downloads recheck publication/consent on EVERY read;
                 # an operation-cache response must not bypass later unpublish.
                 transient_heartbeat = path.startswith("/v1/battles/") and path.endswith("/heartbeat") and len(path.strip("/").split("/")) == 4
-                mutation = method == "POST" and not transient_heartbeat and not (path.startswith("/v1/replays/") and path.endswith("/download"))
+                transient_online = path.startswith(("/v1/cloud/", "/v1/world/", "/v1/chat/"))
+                mutation = method == "POST" and not transient_online and not transient_heartbeat and not (path.startswith("/v1/replays/") and path.endswith("/download"))
                 fingerprint = None
                 if mutation:
                     request_id = string(body.get("request_id"), 8, 100, "request_id", r"[A-Za-z0-9_\-]+")
@@ -779,6 +802,9 @@ class Store(V3Features):
     def dispatch(self, db, identity, method, path, body, internal_route_id=None):
         owner = identity["id"]
         parts = path.strip("/").split("/")
+        online = self.dispatch_online(db, identity, method, parts, body)
+        if online is not None:
+            return online
         v3 = self.dispatch_v3(db, identity, method, parts, body)
         if v3 is not None:
             return v3
@@ -1407,14 +1433,19 @@ class Handler(BaseHTTPRequestHandler):
             require(not parsed.query and not parsed.fragment, "invalid_path", "Query strings are not supported")
             body = {}
             if method == "POST":
-                require(self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower() == "application/json", "content_type", "Use application/json", 415)
                 length = int(self.headers.get("Content-Length", "0"))
-                require(0 < length <= MAX_BODY, "body_too_large", "Invalid request body length", 413)
+                limit = MAX_CLOUD_BODY if parsed.path == "/v1/cloud/upload" else MAX_BODY
+                require(0 < length <= limit, "body_too_large", "Invalid request body length", 413)
                 require(not self.headers.get("Transfer-Encoding"), "invalid_encoding", "Chunked requests are not supported")
-                body = json.loads(self.rfile.read(length).decode("utf-8"), parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+                # Drain bounded bodies before a media-type rejection. Closing
+                # a Windows socket with unread input can reset the connection
+                # before the peer receives our structured 415 response.
+                raw = self.rfile.read(length)
+                require(self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower() == "application/json", "content_type", "Use application/json", 415)
+                body = json.loads(raw.decode("utf-8"), parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
             header = self.headers.get("Authorization", "")
             token = header[7:] if header.startswith("Bearer ") else None
-            status, response = self.server.store.request(method, parsed.path, body, token)
+            status, response = self.server.store.request(method, parsed.path, body, token, self.client_address[0])
         except APIError as error:
             status, response = error.status, error.response()
         except (ValueError, UnicodeError, RecursionError):

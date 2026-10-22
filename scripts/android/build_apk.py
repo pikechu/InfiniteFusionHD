@@ -26,7 +26,7 @@ def source_snapshot():
     paths.update((ROOT / "android/ruby").glob("*.rb"))
     paths.update((ROOT / "Data/Scripts").rglob("*.rb"))
     paths.update((ROOT / "temp/android-generated/java").rglob("*.java"))
-    for name in ("Game.ini", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
+    for name in ("Game.ini", "Data/multiplayer-build.json", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
                  "android/native/kif_android_bridge.c", "scripts/android/build_bridge.ps1",
                  "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py"):
         path = ROOT / name
@@ -42,7 +42,7 @@ def assert_sources_unchanged(expected):
 
 def validate_staged_scripts(manifest):
     for name, expected in manifest["files"].items():
-        if name == "Game.ini" or name.startswith("Data/Scripts/"):
+        if name == "Game.ini" or name == "Data/multiplayer-build.json" or name.startswith("Data/Scripts/"):
             path = ROOT / name
         elif "/" not in name and name.endswith(".rb"):
             path = ROOT / "android/ruby" / name
@@ -54,7 +54,7 @@ def validate_staged_scripts(manifest):
 def validate_apk_assets(assets, with_network, require_payload=True):
     """Reject stale partials/unknown paths instead of silently bundling or deleting them."""
     required = {"payload.zip", "payload-manifest.json", "mkxp-base.json"}
-    allowed = required | ({"network-enabled"} if with_network else set())
+    allowed = required | {"analytics.json"} | ({"network-enabled"} if with_network else set())
     if not assets.exists():
         if require_payload:
             raise ValueError(f"No staged assets: {assets}")
@@ -120,7 +120,7 @@ def output_name(runtime_only, with_network, emulator_compatible):
     if runtime_only:
         stem = "KIF-network-probe-arm64" if with_network else "KIF-runtime-probe-arm64"
         return stem + ("-emulator" if emulator_compatible else "") + "-test.apk"
-    stem = "KIF-0.20.7-android.8-arm64"
+    stem = "KIF-0.20.7-android.9-arm64"
     if emulator_compatible:
         stem += "-emulator"
     if with_network:
@@ -145,6 +145,7 @@ def require_input_bridge(generated):
                         "Java_org_kuray_kif_NetworkBridge_setDisplayStretch",
                         "Init_libkif_android_bridge", "Init_kif_android_bridge"}
     if (not isinstance(provenance, dict) or provenance.get("inputBridge") is not True
+            or provenance.get("httpAsync", {}).get("version") != 1
             or provenance.get("outputSha256") != sha
             or provenance.get("sourceSha256") != hashlib.sha256(source.read_bytes()).hexdigest()
             or not required_exports.issubset(provenance.get("definedExports", []))):
@@ -175,9 +176,9 @@ def main():
     generated = ROOT / "temp/android-generated"
     runtime_library, original_runtime_sha, emulator_record = select_runtime(generated, args.emulator_compatible)
     input_bridge_record = require_input_bridge(generated)
-    work = ROOT / ("temp/android-network-build" if args.runtime_only and args.with_network else "temp/android-smoke-build" if args.runtime_only else "temp/android-build")
+    work = ROOT / ("temp/android-network-build" if args.runtime_only and args.with_network else "temp/android-smoke-build" if args.runtime_only else "temp/android-build-network" if args.with_network else "temp/android-build")
     if args.emulator_compatible:
-        work = work.with_name(work.name + "-emulator" + ("-network" if args.with_network and not args.runtime_only else ""))
+        work = work.with_name(work.name + "-emulator")
     work.mkdir(parents=True, exist_ok=True)
     assets = work / "assets"
     # Check before reading/rebuilding a large payload or starting Java/D8 work.
@@ -196,6 +197,13 @@ def main():
     if not all((assets / name).is_file() for name in ("payload.zip", "payload-manifest.json", "mkxp-base.json")):
         raise SystemExit("No staged payload")
     manifest = json.loads((assets / "payload-manifest.json").read_text())
+    analytics_path = ROOT / "Data/analytics.json"
+    analytics = json.loads(analytics_path.read_text(encoding="utf-8")) if analytics_path.is_file() else {"enabled": False}
+    if set(analytics) - {"enabled", "endpoint", "site_id", "app_url", "channel", "heartbeat_seconds", "dimensions"}:
+        raise SystemExit("Unsupported analytics fields; never bundle server tokens")
+    if args.runtime_only:
+        analytics["enabled"] = False
+    (assets / "analytics.json").write_text(json.dumps(analytics, indent=2), encoding="utf-8")
     network_marker = assets / "network-enabled"
     if args.with_network:
         network_marker.write_text("1", encoding="ascii")
@@ -204,16 +212,18 @@ def main():
     if args.skip_payload:
         print("Verifying staged payload canonical hashes and alias inventory", flush=True)
     validate_payload(assets / "payload.zip", manifest, verify_hashes=args.skip_payload)
+    if not args.runtime_only and "Data/multiplayer-build.json" not in manifest["files"]:
+        raise SystemExit("Online build manifest missing; rebuild payload")
     validate_staged_scripts(manifest)
     assert_sources_unchanged(source_hashes)
     sources = sorted((ROOT / "android/app/src/main/java").rglob("*.java")) + sorted((generated / "java").rglob("*.java"))
     source_list = work / "sources.txt"
     source_list.write_text("\n".join('"' + str(f).replace("\\", "/") + '"' for f in sources), encoding="utf-8")
     print("Compiling Java shell and pinned SDL bootstrap", flush=True)
-    run([jdk / "bin/javac.exe", "-J-Duser.language=en", "-encoding", "UTF-8", "--release", "8", "-classpath", platform, "-d", classes, "@" + str(source_list)])
+    run([jdk / "bin/javac.exe", "-J-Xmx256m", "-J-Duser.language=en", "-encoding", "UTF-8", "--release", "8", "-classpath", platform, "-d", classes, "@" + str(source_list)])
     jar = work / "classes.jar"
     run([jdk / "bin/jar.exe", "cf", jar, "-C", classes, "."])
-    run([jdk / "bin/java.exe", "-cp", tools / "lib/d8.jar", "com.android.tools.r8.D8", "--min-api", "30", "--lib", platform, "--output", dex, jar])
+    run([jdk / "bin/java.exe", "-Xmx256m", "-cp", tools / "lib/d8.jar", "com.android.tools.r8.D8", "--min-api", "30", "--lib", platform, "--output", dex, jar])
     unsigned = work / "kif-unsigned.apk"
     app_manifest = work / "AndroidManifest.xml"
     app_xml = (ROOT / "android/app/src/main/AndroidManifest.xml").read_text(encoding="utf-8")
@@ -241,7 +251,7 @@ def main():
     output = ROOT / "temp/artifacts"
     output.mkdir(exist_ok=True)
     final = output / output_name(args.runtime_only, args.with_network, args.emulator_compatible)
-    signer = [jdk / "bin/java.exe", "-jar", tools / "lib/apksigner.jar"]
+    signer = [jdk / "bin/java.exe", "-Xmx256m", "-jar", tools / "lib/apksigner.jar"]
     assert_sources_unchanged(source_hashes)
     run(signer + ["sign", "--ks", key, "--ks-key-alias", "androiddebugkey", "--ks-pass", "env:KIF_TEST_KEY_PASSWORD", "--key-pass", "env:KIF_TEST_KEY_PASSWORD", "--out", final, aligned], env=env)
     run(signer + ["verify", "--verbose", final])

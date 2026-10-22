@@ -1,0 +1,20 @@
+[Unit]
+Description=KIF backup retention and repository integrity verification
+RequiresMountsFor=/var/lib/kif-mmo
+
+[Service]
+Type=oneshot
+User=kif-mmo
+Group=kif-mmo
+WorkingDirectory=/opt/kif-mmo/current/server/multiplayer
+Environment=KIF_CONFIG=/etc/kif-mmo/production.json
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/kif-mmo/current/venv/bin/python production_ops.py retention
+ExecStart=/opt/kif-mmo/current/venv/bin/python production_ops.py repo-check
+TimeoutStartSec=12min
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/kif-mmo

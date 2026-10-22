@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "592e5b0868296282e125e497b7fb43afd6d19a6e84d8e463bd42ee4f84775886",
+  "data_hash": "50bae6f3b380967d22c393a6862ebe3aa9e221f97fdaeb4d60e68006134185f1",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -1719,12 +1719,12 @@
       "size": 760
     },
     "Data/Scripts/054_Multiplayer/001_Client.rb": {
-      "sha256": "611a1572c4eeaa915283df41025a26d6474cba1ea3b0971ee94cc1251d274c5c",
-      "size": 42836
+      "sha256": "abb1c86df34d6e256a17902252c5f4a7acd92b36184eaf32a965a80f0974c38f",
+      "size": 44972
     },
     "Data/Scripts/054_Multiplayer/002_UI.rb": {
-      "sha256": "1e9e1b87211b21a2bb0ec4b25d8edb23b6ebc742e26233bdcfd920b9703ae7bf",
-      "size": 25952
+      "sha256": "3c2b31a590d96ed12dd916ecd9c80199091a4ba4a07af1a7e2acb4f9cc13b3bf",
+      "size": 26107
     },
     "Data/Scripts/054_Multiplayer/003_Battle.rb": {
       "sha256": "6b421f64e2d91d2c92b5cdb999e8e410fb0ed4f7d43f753d2c3972b68e636232",
@@ -1747,8 +1747,8 @@
       "size": 13860
     },
     "Data/Scripts/054_Multiplayer/008_Hall.rb": {
-      "sha256": "5830a044dc4c9dd8e5f122d2352f9ee0694b9a55c3442082f660e978b4e0d25f",
-      "size": 21020
+      "sha256": "c4178a8b4d166018afc00343587b46eb8b701bc66da04edfd4f7cf0a6cb49ef9",
+      "size": 21098
     },
     "Data/Scripts/054_Multiplayer/009_Pool.rb": {
       "sha256": "46a0e9e1929543f3af5cdb1b4474d08f84899fbf12005c14d11801668534d4ef",
@@ -1775,8 +1775,28 @@
       "size": 23075
     },
     "Data/Scripts/054_Multiplayer/015_Transport.rb": {
-      "sha256": "88712b29d0a78167d71b36bc23505567039db208919df6d3f2ce17e9f9ce8186",
-      "size": 17204
+      "sha256": "5fba199aba7d993f1da460e38adf18a5a7ddfbca4e3291b547e7e1181ff7deaa",
+      "size": 20497
+    },
+    "Data/Scripts/054_Multiplayer/016_CloudCodec.rb": {
+      "sha256": "1a3f46290a52a484bab5d3e25435831469041265c2a696f6edf327fadd650150",
+      "size": 10658
+    },
+    "Data/Scripts/054_Multiplayer/017_OnlineClient.rb": {
+      "sha256": "61f8a7e5f2b3b27401dda1602fe19ef662f1c1085175bf35b53296c74d59448b",
+      "size": 14459
+    },
+    "Data/Scripts/054_Multiplayer/018_World.rb": {
+      "sha256": "92c6144e038e918289214b3cb19c59caacbf7f3cb56e273988e661e3e6ae622e",
+      "size": 19072
+    },
+    "Data/Scripts/054_Multiplayer/019_OnlineMode.rb": {
+      "sha256": "800fada101d232292a0f2b0e7e87c222e0a55f22f3880664bf3c0ed6a56fe026",
+      "size": 10306
+    },
+    "Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb": {
+      "sha256": "9bb53e6940a690499cea83b42bee58a73b236bfd63dce365282d414c08baa500",
+      "size": 9054
     },
     "Data/Scripts/055_Analytics/001_Analytics.rb": {
       "sha256": "f778bed0d7b3c9fd0fd21be5ec41ef03c7462506a627e6849a5fe73650e737b2",
@@ -2031,5 +2051,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-21T06:24:05Z"
+  "built_at": "2026-10-22T06:49:20Z"
 }

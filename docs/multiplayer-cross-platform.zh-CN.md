@@ -1,17 +1,17 @@
 # 不同平台多端同服现状
 
-当前不能标为支持Windows与Android/macOS/Linux混合同服。
+2026-10-22：Windows 与 Android.9 已完成本机混合同服验证，包括登录、同地图互见、地图/世界聊天、定时云保存和双向跨端恢复，详见 [Android.9 验收](multiplayer-android9-validation.md)。Android 使用模拟器；物理设备、跨机器 LAN 与公网仍需单独验收。
 
 | 组合 | 状态 |
 | --- | --- |
 | Windows同机、独立身份、多Game | 真实服务及独立存档，综合117项与交易恢复18项通过；人工菜单仍待验 |
 | 两台Windows设备 | 协议和地址支持远端服务，尚无LAN设备验收 |
-| Windows与Android | 尚未交付含完整联机模块、网络权限和生产适配器的Android客户端，当前不可用 |
+| Windows与Android | Android.9 完整网络 APK 与 Windows Game.exe 的上述混合场景通过；旧战斗/交易玩法未全部跨端复验 |
 | macOS/Linux混合设备 | 没有项目发行运行时及实机验收，未确认支持 |
 | 公网 | 未部署、未验收 |
 
 协议按版本、代码/数据/Mods摘要及规则版本判断兼容，不按OS名称白名单；有界JSON不传任意Ruby对象，房主单引擎计算、访客接收权威结果，不要求不同Ruby随机种子重算一致。但同摘要只是必要条件：网络、TLS、资源大小写、引擎、输入、原子存档仍须逐平台验证。
 
-Android走显式注册的平台adapter，缺失时在写pending之前拒绝，不能退回不安全native HTTP。平台标志/adapter的25项mock通过不等于设备验收。本次main不包含Android工程或APK；此前Android调查的原始设备/文件记录只保留本地。
+Android 已包含网络权限、证书验证与 JNI 异步 HTTPS；在线模式注册平台 adapter，缺失时在写 pending 前拒绝。慢请求通过协作式轮询让游戏继续更新。平台 mock 测试与实际 Android 完整游戏验收分别记录，不能互相替代。main 包含 Android 工程与构建脚本，APK 产物保存在本地。
 
 各端须指向同一可达服务并使用独立身份。恢复同身份会轮换token，单场权威绑定禁止多引擎并行结算，不支持把内存战斗自动迁移到另一设备。跨平台启用前须真实完成房间、展示、选队、对战/再战、断线及保存后重启恢复。

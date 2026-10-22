@@ -265,8 +265,21 @@ public final class GameActivity extends SDLActivity {
         super.onWindowFocusChanged(focused);
         if (focused) enterImmersiveMode(); else if (bridgeReady) releaseKeys();
     }
-    @Override protected void onResume() { super.onResume(); resumed = true; if (GAME_PATH != null && !mBrokenLibraries) { resumeNativeThread(); enterImmersiveMode(); } }
-    @Override protected void onPause() { if (!mBrokenLibraries) { releaseKeys(); pauseNativeThread(); } resumed = false; super.onPause(); }
+    @Override protected void onResume() {
+        super.onResume(); resumed = true;
+        if (GAME_PATH != null && !mBrokenLibraries) {
+            resumeNativeThread(); enterImmersiveMode();
+            if (!getIntent().getBooleanExtra("runtimeSmoke", false)
+                && !getIntent().getBooleanExtra("gameSmoke", false)
+                && !getIntent().getBooleanExtra("networkSmoke", false)
+                && !getIntent().getBooleanExtra("fontSmoke", false)) Analytics.onGameResume(this);
+        }
+    }
+    @Override protected void onPause() {
+        Analytics.onGamePause(); NetworkBridge.cancelPendingRequests();
+        if (!mBrokenLibraries) { releaseKeys(); pauseNativeThread(); }
+        resumed = false; super.onPause();
+    }
     @Override public boolean dispatchKeyEvent(KeyEvent event) {
         if (event.getKeyCode() == KeyEvent.KEYCODE_BACK && !mBrokenLibraries) {
             if (mScreenKeyboardShown) {
@@ -286,7 +299,7 @@ public final class GameActivity extends SDLActivity {
         return super.dispatchKeyEvent(event);
     }
     @Override protected void onDestroy() {
-        if (!mBrokenLibraries) releaseKeys(); super.onDestroy();
+        Analytics.onGamePause(); if (!mBrokenLibraries) releaseKeys(); super.onDestroy();
         // MRI cannot be initialized twice in one process. The launcher remains in its own process.
         android.os.Process.killProcess(android.os.Process.myPid());
     }

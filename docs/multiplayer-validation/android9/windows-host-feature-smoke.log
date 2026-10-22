@@ -1,0 +1,15 @@
+2026-10-22 01:46:00 UTC BEGIN pid=31192 profile=mixed-host-ebdbf8d91c ruby=3.1.3
+2026-10-22 01:46:02 UTC SOURCE_LOADED count=457 modules=Data/Scripts/054_Multiplayer/001_Client.rb,Data/Scripts/054_Multiplayer/002_UI.rb,Data/Scripts/054_Multiplayer/003_Battle.rb,Data/Scripts/054_Multiplayer/004_Boss.rb,Data/Scripts/054_Multiplayer/005_Gym.rb,Data/Scripts/054_Multiplayer/006_Trade.rb,Data/Scripts/054_Multiplayer/007_Rental.rb,Data/Scripts/054_Multiplayer/008_Hall.rb,Data/Scripts/054_Multiplayer/009_Pool.rb,Data/Scripts/054_Multiplayer/010_Collections.rb,Data/Scripts/054_Multiplayer/011_Dungeon.rb,Data/Scripts/054_Multiplayer/012_Replay.rb,Data/Scripts/054_Multiplayer/013_Cards.rb,Data/Scripts/054_Multiplayer/014_GuestScene.rb,Data/Scripts/054_Multiplayer/015_Transport.rb,Data/Scripts/054_Multiplayer/016_CloudCodec.rb,Data/Scripts/054_Multiplayer/017_OnlineClient.rb,Data/Scripts/054_Multiplayer/018_World.rb,Data/Scripts/054_Multiplayer/019_OnlineMode.rb,Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb
+2026-10-22 01:46:12 UTC PASS host: production mode selection and registration/login before character flow
+2026-10-22 01:46:12 UTC PASS host: offline saves isolated
+2026-10-22 01:47:31 UTC PASS host: same map peer received
+2026-10-22 01:47:32 UTC PASS host: both chat channels deliver Unicode across platforms
+2026-10-22 01:47:33 UTC PASS host: Android observed Windows movement
+2026-10-22 01:47:33 UTC PASS host: peer avatar rendered by real map spriteset
+2026-10-22 01:47:33 UTC PASS remote avatar does not become collision event
+2026-10-22 01:47:39 UTC PASS host: world chat crosses maps and departed avatar disappears
+2026-10-22 01:47:39 UTC PASS map chat never leaks to Windows on another map
+2026-10-22 01:47:40 UTC PASS host: manual save reaches server
+2026-10-22 01:47:41 UTC PASS host: real 60-second scheduled save captures progress
+2026-10-22 01:47:41 UTC PASS host: periodic save reaches server
+2026-10-22 01:47:41 UTC MIXED_GAME_PASS role=host

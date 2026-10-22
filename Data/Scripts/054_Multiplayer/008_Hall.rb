@@ -81,7 +81,7 @@ module KIFMultiplayer
     def tick
       return if @closed || @foreground
       if @worker
-        return if @worker.alive?
+        return if busy?
         begin
           value = @worker.value
           if value.is_a?(Exception)
@@ -110,7 +110,7 @@ module KIFMultiplayer
       transport, url, token = @client.transport, @client.server + endpoint, @client.token
       @last_worker_method = method
       @next_poll = Time.now + 0.35
-      @worker = Thread.new do
+      @worker = KIFMultiplayer.network_worker do
         begin
           response = transport.call(method, url, body, token, 3.0)
           status = response[:status] || response["status"]
@@ -126,7 +126,10 @@ module KIFMultiplayer
       end
       KIFMultiplayer.register_worker(@worker) if KIFMultiplayer.respond_to?(:register_worker)
     end
-    def busy?; @worker && @worker.alive?; end
+    def busy?
+      @worker.poll if @worker && @worker.respond_to?(:poll)
+      @worker && @worker.alive?
+    end
     def drain
       previous_foreground = @foreground
       @foreground = true

@@ -1,0 +1,49 @@
+{
+  "checks": [
+    "real HTTPS proxy verifies hostname and isolated CA",
+    "test CA was not installed into global trust",
+    "proxy replaces spoofed client-IP headers",
+    "backend rejects connections without proxy identity",
+    "authenticated same-map peers through HTTPS",
+    "Unicode map and world chat through HTTPS",
+    "cloud upload retry commits exactly once",
+    "20 identities / 100 concurrent HTTPS identity polls",
+    "online consistent SQLite snapshot encrypted by real Restic",
+    "account login and cloud payload survive encrypted restore",
+    "restore revokes old tokens and fences stale upload outboxes"
+  ],
+  "domain_default": "if.pikastairs.cc",
+  "global_trust_unchanged": true,
+  "identity_poll_max_ms": 2078.0,
+  "identity_poll_p95_ms": 2062.0,
+  "identity_poll_samples": 100,
+  "local_https_only": true,
+  "passed": true,
+  "restore_revision_fence": 1792639807319,
+  "tools": {
+    "caddy": "2.11.7",
+    "restic": "0.19.1"
+  },
+  "wsgi_host": "Windows stdlib test host; Linux Gunicorn/systemd execution remains platform-specific",
+  "unit_suite": {
+    "run": 171,
+    "passed": 170,
+    "skipped": 1,
+    "errors": 0,
+    "skip_reason": "Windows token lacks directory symlink privilege; Linux code activation remains a target-host check"
+  },
+  "offline_dependencies": {
+    "verified": true,
+    "gunicorn": "26.2.0",
+    "packaging": "26.3",
+    "global_python_unchanged": true
+  },
+  "factory_smoke": true,
+  "deploy_syntax": {
+    "bash_n": true,
+    "caddy_adapt": true,
+    "python_compile": true,
+    "linux_systemd_executed": false
+  },
+  "public_deployment_executed": false
+}

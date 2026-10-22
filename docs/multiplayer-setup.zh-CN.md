@@ -1,6 +1,10 @@
 # 联机安装与启动
 
-当前为Windows开发验证版，网络协议2，HTTP路径与精灵schema仍为v1。服务只需Python 3，无pip依赖。根目录保留项目已有Game.exe、DLL和资源。
+当前网络协议2，HTTP路径与精灵schema仍为v1。本地开发服务只需Python 3，无pip依赖；生产服务使用锁定依赖和独立部署脚本。根目录保留项目已有Game.exe、DLL和资源。
+
+启动游戏时先选择在线或离线；在线模式需注册/登录后进入角色流程，存档按账号隔离并定时保存到服务器。同地图玩家可互见，暂停菜单提供地图/世界聊天。使用方式见 [在线模式说明](multiplayer-online-world.zh-CN.md)，双端结果见 [Android.9 验收](multiplayer-android9-validation.md)。
+
+生产配置、离线发布、持久数据目录、加密备份及恢复步骤见 [生产运行手册](../server/multiplayer/deploy/README.md)，本地结果见 [生产验收](multiplayer-production-validation.zh-CN.md)。默认域名 `if.pikastairs.cc`；尚未公网部署，也未修改客户端默认地址。
 
 ## 构建与服务
 

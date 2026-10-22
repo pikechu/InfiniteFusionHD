@@ -1,0 +1,40 @@
+{
+	admin 127.0.0.1:2020
+	servers {
+		timeouts {
+			read_header 5s
+			read_body 15s
+			write 25s
+			idle 30s
+		}
+		max_header_size 16KiB
+	}
+}
+
+if.pikastairs.cc {
+	@api path /v1/*
+	handle @api {
+		request_body {
+			max_size 2MiB
+		}
+		reverse_proxy 127.0.0.1:8765 {
+			# Replace client-supplied copies; never pass arbitrary XFF chains
+			# as the application's security/rate-limiting identity.
+			header_up X-KIF-Client-IP {remote_host}
+			request_buffers 2MiB
+			transport http {
+				dial_timeout 2s
+				response_header_timeout 20s
+				max_conns_per_host 32
+				keepalive 4s
+			}
+		}
+	}
+	handle {
+		respond 404
+	}
+	header {
+		X-Content-Type-Options nosniff
+		Cache-Control no-store
+	}
+}

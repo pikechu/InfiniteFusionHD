@@ -1,0 +1,18 @@
+[Unit]
+Description=Check KIF service and encrypted backup freshness
+RequiresMountsFor=/var/lib/kif-mmo
+
+[Service]
+Type=oneshot
+User=kif-mmo
+Group=kif-mmo
+WorkingDirectory=/opt/kif-mmo/current/server/multiplayer
+Environment=KIF_CONFIG=/etc/kif-mmo/production.json
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/bin/curl --fail --silent --show-error --max-time 5 -H X-KIF-Client-IP:127.0.0.1 http://127.0.0.1:8765/v1/health
+ExecStart=/opt/kif-mmo/current/venv/bin/python production_ops.py backup-status
+TimeoutStartSec=30
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true

@@ -63,6 +63,10 @@ reject.call("network_unavailable", "Android missing adapter blocks HTTP mutation
 verify.call(!profile.account["pending"], "Android unavailable network creates no transaction journal")
 reject.call("network_unavailable", "Android missing adapter blocks HTTPS too") { android_transport.validate_url("https://localhost/v1/health") }
 
+explicit_socket = KIFMultiplayer::HTTPTransport.new.enable_online_network
+verify.call(explicit_socket.backend == :core_socket, "online mode can explicitly enable verified core Socket networking on Android")
+verify.call(explicit_socket.validate_url("http://127.0.0.1:45678/v1/health")[:scheme] == "http", "explicit Android Socket path accepts local HTTP without native HTTPLite")
+
 calls = []
 adapter = Object.new
 adapter.define_singleton_method(:get) do |url, headers|

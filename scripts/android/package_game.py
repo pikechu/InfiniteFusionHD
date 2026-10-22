@@ -43,7 +43,10 @@ def write_payload(output: Path, runtime_only=False, asset_root=None):
             if not file.is_file():
                 raise ValueError(f"Missing tracked asset: {name}; pass --asset-root for a sparse checkout")
             sources[name] = file
-        sources["Data/Scripts/000_Platform.rb"] = ROOT / "Data/Scripts/000_Platform.rb"
+        for file in (ROOT / "Data/Scripts").rglob("*.rb"):
+            sources[file.relative_to(ROOT).as_posix()] = file
+        for name in ("Data/multiplayer-build.json", "Data/analytics.json"):
+            if (ROOT / name).is_file(): sources[name] = ROOT / name
     sources["Game.ini"] = ROOT / "Game.ini"
     sources["kif_android_preload.rb"] = ROOT / "android/ruby/kif_android_preload.rb"
     sources["android-runtime-smoke.rb"] = ROOT / "android/ruby/android-runtime-smoke.rb"
@@ -101,7 +104,9 @@ def refresh_ruby_payload(output: Path):
         return write_payload(output, True)
     tracked = subprocess.check_output(["git", "-C", str(ROOT), "ls-files", "-z", "--", "Data/Scripts"]).decode("utf-8").split("\0")
     scripts = {name: ROOT / name for name in filter(None, tracked)}
-    scripts["Data/Scripts/000_Platform.rb"] = ROOT / "Data/Scripts/000_Platform.rb"
+    scripts.update({p.relative_to(ROOT).as_posix(): p for p in (ROOT / "Data/Scripts").rglob("*.rb")})
+    for name in ("Data/multiplayer-build.json", "Data/analytics.json"):
+        if (ROOT / name).is_file(): scripts[name] = ROOT / name
     for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb", "android-network-smoke.rb", "android-font-smoke.rb"):
         scripts[name] = ROOT / "android/ruby" / name
     if (ROOT / "android/ruby/kif_android_http.rb").is_file():

@@ -20,7 +20,9 @@ extern void rb_define_module_function(VALUE module, const char *name,
 extern char *rb_string_value_cstr(VALUE *value);
 extern VALUE rb_utf8_str_new(const char *bytes, long length);
 extern VALUE rb_ary_new_from_args(long length, ...);
+extern VALUE rb_ary_entry(VALUE array, long offset);
 extern VALUE rb_ull2inum(unsigned long long number);
+extern unsigned long long rb_num2ull(VALUE value);
 extern VALUE rb_protect(VALUE (*function)(VALUE), VALUE argument, int *state);
 extern void rb_jump_tag(int state) __attribute__((noreturn));
 extern void rb_raise(VALUE exception_class, const char *format, ...)
@@ -37,6 +39,10 @@ static pthread_mutex_t bridge_mutex = PTHREAD_MUTEX_INITIALIZER;
 static JavaVM *bridge_vm;
 static jclass bridge_class; /* Owned global reference, protected by bridge_mutex. */
 static jmethodID bridge_perform_http;
+static jmethodID bridge_start_http;
+static jmethodID bridge_poll_http;
+static jmethodID bridge_cancel_http;
+static VALUE bridge_nil;
 /* Independent from HTTP configuration: input never enters SDL or Java from Ruby. */
 static pthread_mutex_t input_mutex = PTHREAD_MUTEX_INITIALIZER;
 static uint32_t input_pressed;
@@ -159,6 +165,12 @@ static VALUE input_poll(VALUE receiver) {
                                rb_ull2inum((unsigned long long)released));
 }
 
+static jmethodID optional_method(JNIEnv *env, jclass type, const char *name, const char *signature) {
+    jmethodID method = (*env)->GetStaticMethodID(env, type, name, signature);
+    if (method == NULL && (*env)->ExceptionCheck(env)) (*env)->ExceptionClear(env);
+    return method;
+}
+
 KIF_EXPORT JNIEXPORT void JNICALL
 Java_org_kuray_kif_NetworkBridge_configure(JNIEnv *env, jclass java_class) {
     JavaVM *vm = NULL;
@@ -173,6 +185,9 @@ Java_org_kuray_kif_NetworkBridge_configure(JNIEnv *env, jclass java_class) {
         throw_configuration_error(env, "NetworkBridge.performHttp(byte[]) is unavailable");
         return;
     }
+    jmethodID start = optional_method(env, java_class, "startHttp", "([BI)J");
+    jmethodID poll = optional_method(env, java_class, "pollHttp", "(J)[B");
+    jmethodID cancel = optional_method(env, java_class, "cancelHttp", "(J)V");
     jclass new_class = (jclass)(*env)->NewGlobalRef(env, java_class);
     if (new_class == NULL) {
         throw_configuration_error(env, "Cannot retain the Android networking class");
@@ -193,6 +208,9 @@ Java_org_kuray_kif_NetworkBridge_configure(JNIEnv *env, jclass java_class) {
     bridge_vm = vm;
     bridge_class = new_class;
     bridge_perform_http = method;
+    bridge_start_http = start;
+    bridge_poll_http = poll;
+    bridge_cancel_http = cancel;
     if (old_class != NULL) (*env)->DeleteGlobalRef(env, old_class);
     (void)pthread_mutex_unlock(&bridge_mutex);
 }
@@ -332,9 +350,129 @@ cleanup:
     return result;
 }
 
+enum AsyncCall { ASYNC_START, ASYNC_POLL, ASYNC_CANCEL };
+
+/* Only bounded copies and fast Java mailbox methods run while holding the GVL.
+ * Java workers never receive Ruby VALUEs and never call the Ruby API. */
+static VALUE async_http_call(VALUE argument, VALUE timeout_value, enum AsyncCall operation) {
+    const char *request_bytes = NULL;
+    size_t request_length = 0;
+    unsigned long long id = 0;
+    unsigned long long timeout = 0;
+    if (operation == ASYNC_START) {
+        request_bytes = rb_string_value_cstr(&argument);
+        while (request_length <= KIF_REQUEST_LIMIT && request_bytes[request_length] != '\0') request_length++;
+        if (request_length > KIF_REQUEST_LIMIT) rb_raise(rb_eRuntimeError, "Android network request exceeds 64 KiB");
+        timeout = rb_num2ull(timeout_value);
+        if (timeout < 1 || timeout > 20000) rb_raise(rb_eRuntimeError, "Invalid Android request deadline");
+    } else {
+        id = rb_num2ull(argument);
+        if (id == 0 || id > (unsigned long long)INT64_MAX) rb_raise(rb_eRuntimeError, "Invalid Android request ID");
+    }
+    JavaVM *vm = NULL;
+    if (pthread_mutex_lock(&bridge_mutex) != 0) rb_raise(rb_eRuntimeError, "Cannot access Android networking");
+    vm = bridge_vm;
+    (void)pthread_mutex_unlock(&bridge_mutex);
+    if (vm == NULL) rb_raise(rb_eRuntimeError, "Android networking has not been configured");
+
+    JNIEnv *env = NULL;
+    int attached_here = 0;
+    jint environment_status = (*vm)->GetEnv(vm, (void **)&env, JNI_VERSION_1_6);
+    if (environment_status == JNI_EDETACHED) {
+        if ((*vm)->AttachCurrentThread(vm, &env, NULL) != JNI_OK || env == NULL)
+            rb_raise(rb_eRuntimeError, "Cannot attach Android networking caller");
+        attached_here = 1;
+    } else if (environment_status != JNI_OK || env == NULL) {
+        rb_raise(rb_eRuntimeError, "Cannot obtain Android networking environment");
+    }
+
+    const char *error = NULL;
+    jclass type = NULL;
+    jmethodID method = NULL;
+    jbyteArray request = NULL;
+    jbyteArray response = NULL;
+    jlong job_id = 0;
+    struct ResponseBytes copied = {NULL, 0};
+    if (pthread_mutex_lock(&bridge_mutex) != 0) { error = "Cannot access Android networking class"; goto cleanup; }
+    if (bridge_vm == vm && bridge_class != NULL) {
+        type = (jclass)(*env)->NewLocalRef(env, bridge_class);
+        method = operation == ASYNC_START ? bridge_start_http : (operation == ASYNC_POLL ? bridge_poll_http : bridge_cancel_http);
+    }
+    (void)pthread_mutex_unlock(&bridge_mutex);
+    if ((*env)->ExceptionCheck(env) || type == NULL || method == NULL) {
+        error = "Android async networking is unavailable; update the APK"; goto cleanup;
+    }
+    if (operation == ASYNC_START) {
+        request = (*env)->NewByteArray(env, (jsize)request_length);
+        if ((*env)->ExceptionCheck(env) || request == NULL) { error = "Cannot allocate Android request"; goto cleanup; }
+        (*env)->SetByteArrayRegion(env, request, 0, (jsize)request_length, (const jbyte *)request_bytes);
+        if ((*env)->ExceptionCheck(env)) { error = "Cannot copy Android request"; goto cleanup; }
+        job_id = (*env)->CallStaticLongMethod(env, type, method, request, (jint)timeout);
+    } else if (operation == ASYNC_CANCEL) {
+        (*env)->CallStaticVoidMethod(env, type, method, (jlong)id);
+    } else {
+        response = (jbyteArray)(*env)->CallStaticObjectMethod(env, type, method, (jlong)id);
+    }
+    if ((*env)->ExceptionCheck(env)) { error = "Android async networking raised a Java exception"; goto cleanup; }
+    if (response != NULL) {
+        jsize length = (*env)->GetArrayLength(env, response);
+        if ((*env)->ExceptionCheck(env) || length < 0 || length > KIF_RESPONSE_LIMIT) { error = "Invalid Android response length"; goto cleanup; }
+        copied.bytes = (char *)malloc(length != 0 ? (size_t)length : 1);
+        if (copied.bytes == NULL) { error = "Cannot allocate Android response"; goto cleanup; }
+        copied.length = (long)length;
+        if (length != 0) (*env)->GetByteArrayRegion(env, response, 0, length, (jbyte *)copied.bytes);
+        if ((*env)->ExceptionCheck(env)) { error = "Cannot copy Android response"; goto cleanup; }
+    }
+
+cleanup:
+    if ((*env)->ExceptionCheck(env)) (*env)->ExceptionClear(env);
+    if (response != NULL) (*env)->DeleteLocalRef(env, response);
+    if (request != NULL) (*env)->DeleteLocalRef(env, request);
+    if (type != NULL) (*env)->DeleteLocalRef(env, type);
+    if (attached_here && (*vm)->DetachCurrentThread(vm) != JNI_OK && error == NULL) error = "Cannot detach Android networking caller";
+    if (error != NULL) { free(copied.bytes); rb_raise(rb_eRuntimeError, "%s", error); }
+    if (operation == ASYNC_START) {
+        if (job_id < 0) rb_raise(rb_eRuntimeError, "Invalid Android request ID");
+        return rb_ull2inum((unsigned long long)job_id);
+    }
+    if (operation != ASYNC_POLL || copied.bytes == NULL) return bridge_nil;
+    int state = 0;
+    VALUE result = rb_protect(make_ruby_response, (VALUE)(uintptr_t)&copied, &state);
+    free(copied.bytes);
+    if (state != 0) rb_jump_tag(state);
+    return result;
+}
+
+static VALUE request_start(VALUE receiver, VALUE request, VALUE timeout) {
+    (void)receiver;
+    return async_http_call(request, timeout, ASYNC_START);
+}
+static VALUE request_poll(VALUE receiver, VALUE id) {
+    (void)receiver;
+    return async_http_call(id, bridge_nil, ASYNC_POLL);
+}
+static VALUE request_cancel(VALUE receiver, VALUE id) {
+    (void)receiver;
+    return async_http_call(id, bridge_nil, ASYNC_CANCEL);
+}
+static VALUE http_async_version(VALUE receiver) {
+    (void)receiver;
+    unsigned long long available = 0;
+    if (pthread_mutex_lock(&bridge_mutex) != 0) rb_raise(rb_eRuntimeError, "Cannot inspect Android networking");
+    available = bridge_start_http != NULL && bridge_poll_http != NULL && bridge_cancel_http != NULL ? 1ULL : 0ULL;
+    (void)pthread_mutex_unlock(&bridge_mutex);
+    return rb_ull2inum(available);
+}
+KIF_EXPORT uint32_t kif_android_http_async_version(void) { return UINT32_C(1); }
+
 KIF_EXPORT void Init_libkif_android_bridge(void) {
+    bridge_nil = rb_ary_entry(rb_ary_new_from_args(0L), 0L);
     VALUE module = rb_define_module("KIFAndroidBridge");
     rb_define_module_function(module, "request", (KifRubyMethod)request_json, 1);
+    rb_define_module_function(module, "request_start", (KifRubyMethod)request_start, 2);
+    rb_define_module_function(module, "request_poll", (KifRubyMethod)request_poll, 1);
+    rb_define_module_function(module, "request_cancel", (KifRubyMethod)request_cancel, 1);
+    rb_define_module_function(module, "http_async_version", (KifRubyMethod)http_async_version, 0);
     rb_define_module_function(module, "input_poll", (KifRubyMethod)input_poll, 0);
     rb_define_module_function(module, "text_input_request_poll", (KifRubyMethod)text_input_request_poll, 0);
     rb_define_module_function(module, "display_mode_poll", (KifRubyMethod)display_mode_poll, 0);

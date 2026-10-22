@@ -1,0 +1,11 @@
+2026-10-22 01:50:58 UTC BEGIN pid=28296 profile=mixed-restore-roundtrip-ebdbf8d91c ruby=3.1.3
+2026-10-22 01:50:59 UTC SOURCE_LOADED count=457 modules=Data/Scripts/054_Multiplayer/001_Client.rb,Data/Scripts/054_Multiplayer/002_UI.rb,Data/Scripts/054_Multiplayer/003_Battle.rb,Data/Scripts/054_Multiplayer/004_Boss.rb,Data/Scripts/054_Multiplayer/005_Gym.rb,Data/Scripts/054_Multiplayer/006_Trade.rb,Data/Scripts/054_Multiplayer/007_Rental.rb,Data/Scripts/054_Multiplayer/008_Hall.rb,Data/Scripts/054_Multiplayer/009_Pool.rb,Data/Scripts/054_Multiplayer/010_Collections.rb,Data/Scripts/054_Multiplayer/011_Dungeon.rb,Data/Scripts/054_Multiplayer/012_Replay.rb,Data/Scripts/054_Multiplayer/013_Cards.rb,Data/Scripts/054_Multiplayer/014_GuestScene.rb,Data/Scripts/054_Multiplayer/015_Transport.rb,Data/Scripts/054_Multiplayer/016_CloudCodec.rb,Data/Scripts/054_Multiplayer/017_OnlineClient.rb,Data/Scripts/054_Multiplayer/018_World.rb,Data/Scripts/054_Multiplayer/019_OnlineMode.rb,Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: production mode selection and registration/login before character flow
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: offline saves isolated
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: empty client cache discovers cloud character
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: trainer restored
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: Pokemon restored
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: story and periodic save restored
+2026-10-22 01:51:07 UTC PASS restore-roundtrip: inventory restored
+2026-10-22 01:51:08 UTC PASS Windows restores Android continuation of Windows save
+2026-10-22 01:51:09 UTC MIXED_GAME_PASS role=restore-roundtrip
