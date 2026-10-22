@@ -190,6 +190,7 @@ module KIFMultiplayer
   end
 
   class PublicVisualPokemon < Pokemon
+    def visual_authoritative?; !!@visual_authoritative; end
     def freeze_visual_capacity(entry)
       @visual_authoritative = true
       @level, @totalhp, @hp = entry["level"], entry["totalhp"], entry["hp"]

@@ -824,7 +824,7 @@ class Pokemon
       changeSpeciesSpecific(pokemon, newSpecies)
     end
     $Trainer.pokedex.set_seen(pokemon.species)
-    $Trainer.pokedex.set_owned(pokemon.species)
+    $Trainer.pokedex.set_owned(pokemon.species) if pokemon.player_owned?
   end
 
   def form_simple
