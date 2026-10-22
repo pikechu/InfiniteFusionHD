@@ -36,6 +36,8 @@ def write_payload(output: Path, runtime_only=False, asset_root=None):
             file = (ROOT if name.startswith("Data/Scripts/") else asset_root) / name
             if any(p.startswith(".") for p in Path(name).parts) or file.suffix.lower() in (".exe", ".dll", ".lnk", ".bat", ".log"):
                 continue
+            if file.name.lower() in ("thumbs.db", "desktop.ini"):
+                continue
             if name.startswith("Data/Scripts/") and file.suffix != ".rb":
                 raise ValueError(f"Non-Ruby file in unscreened script loader: {name}")
             if file.suffix.lower() in (".sav", ".bak"):
