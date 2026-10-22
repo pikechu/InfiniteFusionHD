@@ -16,11 +16,19 @@ try {
     $env:KIF_MULTIPLAYER_SAVE_DIR = Join-Path $stage 'saves'
     $env:KIF_MULTIPLAYER_PROFILE = $run.Profile
     $env:KIF_UPSTREAM_TASK = $Task
+    $timer = [Diagnostics.Stopwatch]::StartNew()
+    $peakWorkingSet = 0L
     $process = Start-Process -FilePath (Join-Path $stage 'Game.exe') -WorkingDirectory $stage -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $stage 'stdout.log') -RedirectStandardError (Join-Path $stage 'stderr.log')
     $deadline = [DateTime]::UtcNow.AddMinutes(2)
     while (-not $process.WaitForExit(1000)) {
+      $process.Refresh()
+      $peakWorkingSet = [Math]::Max($peakWorkingSet, $process.WorkingSet64)
       if ([DateTime]::UtcNow -gt $deadline) { Stop-Process -Id $process.Id; throw 'Native check timed out' }
     }
+    $timer.Stop()
+    $metrics = @{elapsed_seconds=$timer.Elapsed.TotalSeconds;sampled_peak_working_set_bytes=$peakWorkingSet;profile=$run.Profile}
+    $metrics | ConvertTo-Json | Set-Content (Join-Path $stage 'native-metrics.json') -Encoding utf8
+    Write-Output ('NATIVE_RUN_METRICS ' + ($metrics | ConvertTo-Json -Compress))
     Get-Content (Join-Path $stage ('saves/' + $run.Log)) -Tail 28 -Encoding UTF8
     Write-Output "NATIVE_EXIT=$($process.ExitCode) profile=$($run.Profile)"
     if ($process.ExitCode -ne 0) { throw "Native validation failed: $($run.Profile)" }

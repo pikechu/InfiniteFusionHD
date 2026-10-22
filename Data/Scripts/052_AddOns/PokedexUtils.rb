@@ -24,6 +24,10 @@ class PokedexUtils
       if !pbResolveBitmap(unfused_path)
         unfused_path = Settings::BATTLERS_FOLDER + dexNum.to_s + form_suffix + "/" + dexNum.to_s + form_suffix + ".png"
       end
+      if form_suffix.empty? && KIF::SpriteSheets.mode != 0 && !pbResolveBitmap(unfused_path) && (sheet = KIF::SpriteSheets.candidate(:base, dexNum)) &&
+         (KIF::SpriteSheets.mode == 2 || KIF::SpriteSheets.sheet(:base, dexNum, "", false))
+        unfused_path = sheet
+      end
       ret << unfused_path
 
       getAltLettersList().each { |alt_letter|
@@ -32,7 +36,8 @@ class PokedexUtils
           ret << altFilePath
         end
       }
-      return ret
+      ret.concat(KIF::SpriteSheets.candidates(:base, dexNum)) if form_suffix.empty?
+      return ret.uniq
     end
     body_id = getBodyID(species)
     head_id = getHeadID(species, body_id)
@@ -50,7 +55,14 @@ class PokedexUtils
         end
       end
     }
-    ret << Settings::BATTLERS_FOLDER + head_id.to_s + "/" + baseFilename + ".png"
+    ret.concat(KIF::SpriteSheets.candidates(:custom, head_id, body_id)) if form_suffix.empty?
+    generated = Settings::BATTLERS_FOLDER + head_id.to_s + "/" + baseFilename + ".png"
+    if form_suffix.empty? && !pbResolveBitmap(generated) && KIF::SpriteSheets.mode != 0 &&
+       (KIF::SpriteSheets.mode == 2 || KIF::SpriteSheets.sheet(:autogen, head_id, "", false))
+      generated = KIF::SpriteSheets.candidate(:autogen, head_id, body_id)
+    end
+    ret << generated
+    ret.uniq!
     return ret
   end
 

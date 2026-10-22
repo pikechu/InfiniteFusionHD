@@ -18,6 +18,11 @@ class PokemonSystem
   attr_accessor :textinput
   attr_accessor :quicksurf
   attr_accessor :download_sprites
+  def sprite_sheet_mode; @sprite_sheet_mode.nil? ? 1 : @sprite_sheet_mode; end
+  def sprite_sheet_mode=(value)
+    @sprite_sheet_mode = [0, 1, 2].include?(value) ? value : 1
+    KIF::SpriteSheets.clear if defined?(KIF::SpriteSheets)
+  end
   attr_accessor :max_nb_sprites_download
   attr_accessor :on_mobile
   attr_accessor :type_icons
@@ -324,6 +329,7 @@ class PokemonSystem
     @quicksurf = saved.quicksurf if saved.quicksurf
     @quicksave = saved.quicksave if saved.quicksave
     @download_sprites = saved.download_sprites if saved.download_sprites
+    self.sprite_sheet_mode = saved.sprite_sheet_mode if saved.respond_to?(:sprite_sheet_mode)
     @on_mobile = saved.on_mobile if saved.on_mobile
     # Modded
     @shiny_icons_kuray = saved.shiny_icons_kuray if saved.shiny_icons_kuray
@@ -494,6 +500,7 @@ def options_as_json(options={})
     "textinput" => $PokemonSystem.textinput,
     "quicksurf" => $PokemonSystem.quicksurf,
     "download_sprites" => $PokemonSystem.download_sprites,
+    "sprite_sheet_mode" => $PokemonSystem.sprite_sheet_mode,
     "on_mobile" => $PokemonSystem.on_mobile,
     "battlestyle" => $PokemonSystem.battlestyle,
     "battle_type" => $PokemonSystem.battle_type,
@@ -620,6 +627,7 @@ def options_load_json(jsonparse)
   $PokemonSystem.textinput = jsonparse['textinput']
   $PokemonSystem.quicksurf = jsonparse['quicksurf']
   $PokemonSystem.download_sprites = jsonparse['download_sprites']
+  $PokemonSystem.sprite_sheet_mode = jsonparse['sprite_sheet_mode']
   $PokemonSystem.on_mobile = jsonparse['on_mobile']
   $PokemonSystem.battlestyle = jsonparse['battlestyle']
   $PokemonSystem.battle_type = jsonparse['battle_type']
@@ -1804,6 +1812,9 @@ class VanillaOptSc_1 < PokemonOption_Scene
                      "Automatically download missing custom sprites and Pokédex entries from the internet"
       )
     #
+    options << EnumOption.new(_INTL("Sprite sheets"), [_INTL("Off"), _INTL("Local"), _INTL("Online")],
+      proc { $PokemonSystem.sprite_sheet_mode }, proc { |value| $PokemonSystem.sprite_sheet_mode = value },
+      ["Use individual PNGs only.", "Use installed sheets when a PNG is missing.", "Download missing sheets when Download data is On. Local custom PNGs take priority."])
     generated_entries_option_selected=$PokemonSystem.use_generated_dex_entries ? 1 : 0
     options << EnumOption.new(_INTL("Autogen dex entries"), [_INTL("Off"), _INTL("On")],
                               proc { generated_entries_option_selected },

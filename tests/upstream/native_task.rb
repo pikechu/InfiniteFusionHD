@@ -1,7 +1,7 @@
 # Explicit isolated native probe. No normal player saves or external requests.
 passed = false
 begin
-  load "scripts/multiplayer/test-bootstrap.rb"
+  load File.join(ENV.fetch("KIF_TEST_SOURCE_ROOT", "."), "scripts/multiplayer/test-bootstrap.rb")
   module UpstreamTest
     class << self
       attr_accessor :checks
@@ -20,7 +20,7 @@ begin
   end
   task = ENV.fetch("KIF_UPSTREAM_TASK")
   raise "Invalid task" unless task.match?(/\AU0[2-9]\z/)
-  load "tests/upstream/#{task}.rb"
+  load File.join(ENV.fetch("KIF_TEST_SOURCE_ROOT", "."), "tests/upstream/#{task}.rb")
   KIFMultiplayerFeatureTest.log("#{task}_PASS checks=#{UpstreamTest.checks} native=true no_player_saves=true")
   passed = true
 rescue Exception => error

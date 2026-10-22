@@ -223,6 +223,13 @@ def get_unfused_sprite_path(dex_number_id, spriteform = nil)
     record_sprite_substitution(substitution_id,path)
     return path
   end
+  if !spriteform || spriteform == 0
+    sheet_path = KIF::SpriteSheets.resolve(:base, dex_number_id.to_i, nil, random_alt.to_s)
+    if sheet_path
+      record_sprite_substitution(substitution_id, sheet_path)
+      return sheet_path
+    end
+  end
   downloaded_path = download_unfused_main_sprite(dex_number, random_alt)
   if pbResolveBitmap(downloaded_path)
     record_sprite_substitution(substitution_id,downloaded_path)
@@ -310,6 +317,13 @@ def get_fusion_sprite_path(head_id, body_id, spriteform_body = nil, spriteform_h
     record_sprite_substitution(substitution_id, local_custom_path) if !forcingSprite
     return local_custom_path
   end
+  if (!spriteform_body || spriteform_body == 0) && (!spriteform_head || spriteform_head == 0)
+    sheet_path = KIF::SpriteSheets.resolve(:custom, head_id.to_i, body_id.to_i, random_alt.to_s)
+    if sheet_path
+      record_sprite_substitution(substitution_id, sheet_path) if !forcingSprite
+      return sheet_path
+    end
+  end
   #if the game has loaded an autogen earlier, no point in trying to redownload, so load that instead
   return $PokemonGlobal.autogen_sprites_cache[substitution_id] if  $PokemonGlobal && $PokemonGlobal.autogen_sprites_cache[substitution_id]
 
@@ -327,6 +341,13 @@ def get_fusion_sprite_path(head_id, body_id, spriteform_body = nil, spriteform_h
     return local_generated_path
   end
 
+  if (!spriteform_body || spriteform_body == 0) && (!spriteform_head || spriteform_head == 0)
+    sheet_path = KIF::SpriteSheets.resolve(:autogen, head_id.to_i, body_id.to_i)
+    if sheet_path
+      add_to_autogen_cache(substitution_id, sheet_path)
+      return sheet_path
+    end
+  end
   #Download generated sprite if nothing else found
   autogen_path = download_autogen_sprite(head_id, body_id,spriteform_body,spriteform_head)
   if pbResolveBitmap(autogen_path)
