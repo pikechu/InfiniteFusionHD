@@ -96,6 +96,19 @@ class ProductionTests(unittest.TestCase):
             Application(self.config)
         self.assertFalse(self.config.database.exists())
 
+    def test_missing_legacy_journal_is_not_silently_reinitialized(self):
+        self.app.close()
+        connection = sqlite3.connect(self.config.database)
+        connection.execute("DROP TABLE operations")
+        connection.close()
+        with self.assertRaises(RuntimeError):
+            Application(self.config)
+        database = sqlite3.connect(self.config.database)
+        try:
+            self.assertFalse(database.execute("SELECT 1 FROM sqlite_master WHERE name='operations'").fetchone())
+        finally:
+            database.close()
+
     def test_proxy_boundary_and_invalid_input(self):
         self.assertEqual(self.request(remote="198.51.100.1")[0], 403)
         self.assertEqual(self.request(ip="203.0.113.1, 1.2.3.4")[0], 400)

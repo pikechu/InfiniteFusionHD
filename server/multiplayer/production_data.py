@@ -15,12 +15,15 @@ import uuid
 
 SCHEMA_VERSION = 1
 REQUIRED_TABLES = {"accounts", "identities", "account_sessions", "cloud_saves", "cloud_uploads",
-                   "cloud_chunks", "cloud_chunk_receipts", "cloud_leases", "world_presence", "deployment_meta"}
+                   "cloud_chunks", "cloud_chunk_receipts", "cloud_leases", "world_presence", "chat_messages", "deployment_meta",
+                   "rooms", "battles", "operations", "showcases", "gyms", "gym_versions", "gym_challenges",
+                   "gym_favorites", "rewards", "trades", "trade_receipts", "pool_deposits", "hosted_assets",
+                   "asset_locks", "halls", "dungeons", "replays", "cards"}
 
 
 def atomic_bytes(path, data):
     path = Path(path)
-    temporary = path.with_name(path.name + ".pending-" + uuid.uuid4().hex)
+    temporary = path.with_name(".tmp-" + uuid.uuid4().hex[:16])
     descriptor = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     try:
         with os.fdopen(descriptor, "wb") as output:
@@ -68,6 +71,7 @@ class Config:
     release_dir: Path
     required_mount: Path | None = None
     allow_local_repository: bool = False
+    backup_credentials_file: Path | None = None
 
     @property
     def database(self):
@@ -82,8 +86,8 @@ class Config:
         raw.setdefault("domain", "if.pikastairs.cc")
         if not isinstance(raw["domain"], str) or not re.fullmatch(r"(?=.{1,253}$)[a-z0-9]+(?:[.-][a-z0-9]+)*", raw["domain"]):
             raise ValueError("Invalid server domain")
-        for name in ("data_dir", "data_id_file", "backup_dir", "restic_repository_file", "restic_password_file", "release_dir", "required_mount"):
-            if name == "required_mount" and raw.get(name) is None:
+        for name in ("data_dir", "data_id_file", "backup_dir", "restic_repository_file", "restic_password_file", "release_dir", "required_mount", "backup_credentials_file"):
+            if name in ("required_mount", "backup_credentials_file") and raw.get(name) is None:
                 continue
             value = raw.get(name)
             if not isinstance(value, str) or not Path(value).is_absolute():
