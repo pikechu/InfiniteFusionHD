@@ -121,8 +121,9 @@ SaveData.register_conversion(:v19_convert_global_metadata) do
       end
     end
     if global.hallOfFame
-      global.hallOfFame.each do |team|
-        next if !team
+      global.hallOfFame.each do |record|
+        team = record.is_a?(Hash) ? record[:TEAM] : record
+        next unless team.is_a?(Array)
         team.each_with_index do |pkmn, i|
           team[i] = PokeBattle_Pokemon.convert(pkmn) if pkmn
         end
