@@ -360,13 +360,9 @@ def prompt_flag_purchase(flag_id, flag_name, price)
   end
 end
 
-# crashes 'cause we don't have spritesheets
+# Coverage comes from the shared index and works with either asset backend.
 def get_total_completion_percent()
-  return 0.00
-  customSpritesList = $game_temp.custom_sprites_list.keys
-  total_nb_pokemon = (NB_POKEMON * NB_POKEMON) + NB_POKEMON
-  sprited_pokemon = customSpritesList.length
-  return (sprited_pokemon.to_f / total_nb_pokemon) * 100
+  return KIF::SpriteIndex.completion_percent
 end
 
 def get_top_contributors_for_pokemon(species_sprites, top_x)
@@ -428,14 +424,35 @@ def getRandomSpriteArtist(creditsMap = nil, minimumNumberOfSprites = 10, giveUpA
   return nil
 end
 
-def getSpriteCredits(spriteName)
-  File.foreach(Settings::CREDITS_FILE_PATH) do |line|
-    row = line.split(',')
-    if row[0] == (spriteName)
-      return row[1]
+module KIF
+  module SpriteCredits
+    def self.lookup(name, path = Settings::CREDITS_FILE_PATH)
+      signature = File.file?(path) ? [path, File.size(path), File.mtime(path).to_f, File.ctime(path).to_f] : [path]
+      if @signature != signature
+        @signature, @cache = signature, {}
+      end
+      if @cache.key?(name)
+        value = @cache.delete(name)
+      else
+        value = nil
+        if File.file?(path)
+          File.foreach(path) do |line|
+            row = line.split(',')
+            next unless row[0] == name
+            value = row[1]
+            break
+          end
+        end
+      end
+      @cache[name.dup] = value
+      @cache.shift while @cache.length > 256
+      value && value.dup
     end
   end
-  return nil
+end
+
+def getSpriteCredits(spriteName)
+  KIF::SpriteCredits.lookup(spriteName)
 end
 
 def formatList(list, separator)

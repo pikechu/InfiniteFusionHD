@@ -126,7 +126,9 @@ class PokemonPokedexInfo_Scene
   def pbGetAvailableForms(species=nil)
     chosen_species = species != nil ? species : @species
     dex_num = getDexNumberForSpecies(chosen_species)
-    if dex_num <= NB_POKEMON
+    if KIF::SpriteSheets.mode == 2
+      # Online sheets are resolved only for the alternatives on screen.
+    elsif dex_num <= NB_POKEMON
       download_all_unfused_alt_sprites(dex_num)
     else
       body_id = getBodyID(chosen_species)
@@ -141,15 +143,34 @@ class PokemonPokedexInfo_Scene
   end
 
   def setAvailableBitmaps(available_alts)
-    @available_bitmaps = available_alts.map { |path| AnimatedBitmap.new(path).recognizeDims() }
+    disposeAvailableBitmaps
+    @available_paths = available_alts.dup
+    @available_bitmaps = {}
   end
 
   def getAvailableBitmap(index)
-    if @available_bitmaps[index] 
-      return @available_bitmaps[index].bitmap
+    return nil if !@available_paths || @available_paths.empty?
+    index %= @available_paths.length
+    image = @available_bitmaps.delete(index)
+    unless image
+      path = KIF::SpriteSheets.resolve_path(@available_paths[index]) || pbResolveBitmap(@available_paths[index]) || Settings::DEFAULT_SPRITE_PATH
+      image = AnimatedBitmap.new(path).recognizeDims()
     end
-    echoln("nil bitmap. check @available and @available_bitmaps")
-    return nil
+    @available_bitmaps[index] = image
+    while @available_bitmaps.length > 8
+      _, oldest = @available_bitmaps.shift
+      oldest.dispose
+    end
+    image.bitmap
+  end
+
+  def disposeAvailableBitmaps
+    if @available_bitmaps.is_a?(Hash)
+      @available_bitmaps.each_value { |image| image.dispose }
+    elsif @available_bitmaps
+      @available_bitmaps.each { |image| image.dispose }
+    end
+    @available_bitmaps = nil
   end
 
   def hide_all_selected_windows

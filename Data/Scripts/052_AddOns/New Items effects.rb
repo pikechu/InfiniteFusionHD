@@ -308,6 +308,14 @@ ItemHandlers::BattleUseOnPokemon.add(:FANCYMEAL, proc { |item, pokemon, battler,
   next pbBattleHPItem(pokemon, battler, 100, scene)
 })
 
+ItemHandlers::UseOnPokemon.add(:COFFEE, proc { |item, pokemon, scene|
+  next pbHPItem(pokemon, 50, scene)
+})
+ItemHandlers::CanUseInBattle.copy(:POTION, :COFFEE)
+ItemHandlers::BattleUseOnPokemon.add(:COFFEE, proc { |item, pokemon, battler, choices, scene|
+  next pbBattleHPItem(pokemon, battler, 50, scene)
+})
+
 ItemHandlers::UseOnPokemon.add(:RAGECANDYBAR, proc { |item, pokemon, scene|
   if pokemon.level <= 1
     scene.pbDisplay(_INTL("It won't have any effect."))
@@ -353,8 +361,11 @@ ItemHandlers::UseFromBag.add(:DEBUGGER, proc { |item|
   if Kernel.pbConfirmMessageSerious(_INTL("Innapropriate use of this item can lead to unwanted effects and make the game unplayable. Do you want to continue?"))
     $game_player.cancelMoveRoute()
     Kernel.pbStartOver(false)
+    pbCommonEvent(COMMON_EVENT_FIX_GAME)
     Kernel.pbMessage(_INTL("Please report the glitch on the Pokecommunity thread, on the game's subreddit or in the game's Discord channel."))
+    next 1
   end
+  next 0
 })
 
 def useSleepingBag()
@@ -408,6 +419,30 @@ ItemHandlers::UseInField.add(:SLEEPINGBAG, proc { |item|
   next useSleepingBag()
 })
 
+
+def useRocketUniform()
+  return 0 unless $game_switches[SWITCH_JOINED_TEAM_ROCKET]
+  removing = isWearingTeamRocketOutfit()
+  prompt = removing ? "Remove the Team Rocket uniform?" : "Put on the Team Rocket uniform?"
+  return 0 unless Kernel.pbConfirmMessage(_INTL(prompt))
+  if removing
+    clothes = $Trainer.last_worn_outfit
+    clothes = getDefaultClothes() if !clothes || [CLOTHES_TEAM_ROCKET_MALE, CLOTHES_TEAM_ROCKET_FEMALE].include?(clothes)
+    hat = $Trainer.last_worn_hat
+    hat = nil if hat == HAT_TEAM_ROCKET
+  else
+    clothes = pbGet(VAR_TRAINER_GENDER) == GENDER_MALE ? CLOTHES_TEAM_ROCKET_MALE : CLOTHES_TEAM_ROCKET_FEMALE
+    hat = HAT_TEAM_ROCKET
+  end
+  # Capture both destinations before the outfit setters change last_worn_*.
+  playOutfitChangeAnimation()
+  putOnClothes(clothes, true)
+  putOnHat(hat, true)
+  return 1
+end
+
+ItemHandlers::UseFromBag.add(:ROCKETUNIFORM, proc { |item| next useRocketUniform() })
+ItemHandlers::UseInField.add(:ROCKETUNIFORM, proc { |item| next useRocketUniform() })
 
 ItemHandlers::UseFromBag.add(:ODDKEYSTONE, proc { |item|
   TOTAL_SPIRITS_NEEDED = 108

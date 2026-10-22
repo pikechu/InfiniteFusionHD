@@ -1,5 +1,6 @@
 # Shared initialized production game runtime for explicit isolated diagnostics.
-load "scripts/multiplayer/runtime-preload.rb"
+source_root = ENV.fetch("KIF_TEST_SOURCE_ROOT", ".")
+load File.join(source_root, "scripts/multiplayer/runtime-preload.rb")
 require "digest/sha2"
 $kif_test_directory = ENV.fetch("KIF_MULTIPLAYER_SAVE_DIR")
 $kif_test_log = lambda do |message|
@@ -19,16 +20,16 @@ loader = lambda do |path|
     loaded << full
   end
   directories.sort.each do |name|
-    next if path == "Data/Scripts" && name == "999_Main"
+    next if File.basename(path) == "Scripts" && name == "999_Main"
     loader.call(File.join(path, name))
   end
 end
-loader.call("Data/Scripts")
+loader.call(File.join(source_root, "Data/Scripts"))
 $kif_test_log.call("SOURCE_LOADED count=#{loaded.length} modules=#{loaded.grep(%r{054_Multiplayer/}).join(',')}")
 $POKEMONDATA_QUEUEING = []
 MessageTypes.loadMessageFile("Data/messages.dat")
 PluginManager.runPlugins
-Dir["Mods/*.rb"].sort.each { |file| load File.expand_path(file) }
+Dir[File.join(source_root, "Mods/*.rb")].sort.each { |file| load File.expand_path(file) }
 Game.initialize
 SaveData.initialize_bootup_values
 SaveData.load_new_game_values

@@ -128,6 +128,10 @@ module KIFMultiplayer
     def self.asset_key(path)
       return nil if path.nil? || path == ""
       return "default" if path == "none"
+      if defined?(KIF::SpriteSheets) && (entry = KIF::SpriteSheets.request(path))
+        return "default" if entry[0] == :autogen
+        path = KIF::SpriteSheets.logical_path(path)
+      end
       base = /\AGraphics\/BaseSprites\/([1-9][0-9]{0,2}[A-Za-z_-]{0,12})\.png\z/.match(path.to_s)
       return "base:#{base[1]}" if base
       prefix = Settings::CUSTOM_BATTLERS_FOLDER_INDEXED
@@ -147,6 +151,12 @@ module KIFMultiplayer
         ids = /\A([0-9]+)\.([0-9]+)/.match(stem)
         check(species == "B#{ids[2]}H#{ids[1]}", "融合立绘素材与组成不一致")
         path = Settings::CUSTOM_BATTLERS_FOLDER_INDEXED + "#{ids[1]}/#{stem}.png"
+      end
+      if !File.file?(path) && defined?(KIF::SpriteSheets)
+        entry = KIF::SpriteIndex.parse_name(File.basename(path))
+        if entry
+          path = KIF::SpriteSheets.resolve(entry[:body] ? :custom : :base, entry[:head], entry[:body], entry[:alt], false) || path
+        end
       end
       check(File.file?(path), "缺少已安装素材 #{key}，请先安装相同素材再交换")
       path

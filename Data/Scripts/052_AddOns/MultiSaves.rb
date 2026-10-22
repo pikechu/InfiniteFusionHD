@@ -732,6 +732,18 @@ end
 module Game
   # Fix New Game bug (if you saved during an event script)
   # This fix is from Essentials v20.1 Hotfixes 1.0.5
+  def self.inherit_ngp_outfits(source)
+    return if !source || source.equal?($Trainer)
+    [:unlocked_hats, :unlocked_clothes].each do |field|
+      previous = source.respond_to?(field) ? source.public_send(field) : nil
+      next unless previous.is_a?(Array)
+      defaults = $Trainer.public_send(field)
+      defaults = [] unless defaults.is_a?(Array)
+      values = (defaults + previous).select { |id| id.is_a?(String) || id.is_a?(Symbol) }.uniq
+      $Trainer.public_send("#{field}=", values.map { |id| id.is_a?(String) ? id.dup : id })
+    end
+  end
+
   def self.start_new(ngp_bag = nil, ngp_storage = nil, ngp_trainer = nil)
     if $game_map && $game_map.events
       $game_map.events.each_value { |event| event.clear_starting }
@@ -741,6 +753,9 @@ module Game
     pbMapInterpreter&.clear
     pbMapInterpreter&.setup(nil, 0, 0)
     $scene = Scene_Map.new
+    # NG+ may be entered after a loaded game. Keep boot options, but create
+    # fresh world/player values before copying the explicit source's unlocks.
+    SaveData.mark_values_as_unloaded if ngp_trainer
     SaveData.load_new_game_values
     $MapFactory = PokemonMapFactory.new($data_system.start_map_id)
     $game_player.moveto($data_system.start_x, $data_system.start_y)
@@ -755,6 +770,7 @@ module Game
     # end
     if ngp_trainer != nil
       $Trainer.ngp_migrate_pokedex(ngp_trainer.pokedex)
+      inherit_ngp_outfits(ngp_trainer)
     end
     if ngp_storage != nil
       $PokemonStorage = ngp_clean_pc_data(ngp_storage, ngp_trainer.party)

@@ -136,15 +136,17 @@ def generate_front_trainer_sprite_bitmap_from_appearance(trainerAppearance)
 end
 
 def generate_front_trainer_sprite_bitmap(allowEasterEgg=true, pokeball = nil, clothes_id = nil, hat_id = nil, hair_id = nil,
-                                         skin_tone_id = nil, hair_color = nil, hat_color = nil, clothes_color = nil)
+                                         skin_tone_id = nil, hair_color = nil, hat_color = nil, clothes_color = nil, use_current_defaults = true)
   echoln hat_id
-  clothes_id = $Trainer.clothes if !clothes_id
-  hat_id = $Trainer.hat if !hat_id
-  hair_id = $Trainer.hair if !hair_id
-  skin_tone_id = $Trainer.skin_tone if !skin_tone_id
-  hair_color = $Trainer.hair_color if !hair_color
-  hat_color = $Trainer.hat_color if !hat_color
-  clothes_color = $Trainer.clothes_color if !clothes_color
+  if use_current_defaults
+    clothes_id = $Trainer.clothes if !clothes_id
+    hat_id = $Trainer.hat if !hat_id
+    hair_id = $Trainer.hair if !hair_id
+    skin_tone_id = $Trainer.skin_tone if !skin_tone_id
+    hair_color = $Trainer.hair_color if !hair_color
+    hat_color = $Trainer.hat_color if !hat_color
+    clothes_color = $Trainer.clothes_color if !clothes_color
+  end
 
   hairFilename = getTrainerSpriteHairFilename(hair_id) #_INTL(Settings::PLAYER_GRAPHICS_FOLDER + Settings::PLAYER_HAIR_FOLDER + "/hair_trainer_{1}", $Trainer.hair)
   outfitFilename = getTrainerSpriteOutfitFilename(clothes_id) #_INTL(Settings::PLAYER_GRAPHICS_FOLDER + Settings::PLAYER_CLOTHES_FOLDER + "/clothes_trainer_{1}", $Trainer.clothes)

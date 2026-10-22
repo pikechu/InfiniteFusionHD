@@ -103,8 +103,10 @@ class PokeBattle_Battler
   attr_reader :hp
 
   def hp=(value)
+    old_hp = @hp
     @hp = value.to_i
     @pokemon.hp = value.to_i if @pokemon
+    checkHPRelatedFormChange(@hp) if @pokemon && old_hp != @hp
   end
 
   def fainted?; return @hp<=0; end
@@ -769,7 +771,10 @@ class PokeBattle_Battler
 
   #Changes the form VISUALLY in battles. The species is changed in the equivalent method in Pokemon class
   def checkHPRelatedFormChange(new_hp)
-    if @ability_id == :SHIELDSDOWN
+    return if @_hp_form_changing || new_hp <= 0 || !hasActiveAbility?(:SHIELDSDOWN)
+    return if @pokemon.respond_to?(:visual_authoritative?) && @pokemon.visual_authoritative?
+    begin
+      @_hp_form_changing = true
       if @pokemon.isFusionOf(:MINIOR_M)
         if new_hp <= (@totalhp / 2)
           changeBattlerForm(:MINIOR_M, :MINIOR_C,nil, :SHELLSMASH)
@@ -782,12 +787,20 @@ class PokeBattle_Battler
           @battle.pbDisplay(_INTL("{1} changed to the Meteor Form!", pbThis))
         end
       end
+    ensure
+      @_hp_form_changing = false
     end
   end
 
 
   def changeBattlerForm(oldForm, newForm,commonAnimation=nil,moveAnimation=nil)
+    abilities = [@ability_id, @ability2_id]
+    saved_abilities = {}
+    [:@ability, :@ability_index, :@ability2, :@ability2_index].each { |key| saved_abilities[key] = @pokemon.instance_variable_get(key) }
     @pokemon.changeFormSpecies(oldForm, newForm)
+    saved_abilities.each { |key, value| @pokemon.instance_variable_set(key, value) }
+    pbUpdate(true)
+    @ability_id, @ability2_id = abilities
     if moveAnimation
       changeFormSpeciesMoveAnimation(oldForm, newForm,moveAnimation)
     else

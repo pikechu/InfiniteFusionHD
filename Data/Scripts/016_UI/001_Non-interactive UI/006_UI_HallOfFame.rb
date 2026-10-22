@@ -74,7 +74,15 @@ class HallOfFame_Scene
   def pbStartScenePC
     pbStartScene
     @hallIndex = $PokemonGlobal.hallOfFame.size - 1
-    @hallEntry = $PokemonGlobal.hallOfFame[-1]
+    loadHistoryRecord
+    while @hallEntry.empty? && @hallIndex > 0
+      @hallIndex -= 1
+      loadHistoryRecord
+    end
+    if @hallEntry.empty?
+      pbEndScene
+      return false
+    end
     createBattlers(false)
     pbFadeInAndShow(@sprites) { pbUpdate }
     pbUpdatePC
@@ -124,10 +132,18 @@ class HallOfFame_Scene
   def saveHallEntry
     for i in 0...$Trainer.party.length
       # Clones every pokémon object
-      @hallEntry.push($Trainer.party[i].clone) if !$Trainer.party[i].egg? || ALLOWEGGS
+      @hallEntry.push(Marshal.load(Marshal.dump($Trainer.party[i]))) if !$Trainer.party[i].egg? || ALLOWEGGS
     end
     # Update the global variables
-    $PokemonGlobal.hallOfFame.push(@hallEntry)
+    @hallRecord = { :TEAM => @hallEntry, :DATE => Time.now.strftime("%Y-%m-%d"),
+                    :MODE => getCurrentGameMode(), :DIFFICULTY => getDifficulty() }
+    { :TRAINER_HAT => :hat, :TRAINER_HAT_COLOR => :hat_color, :TRAINER_HAIR => :hair,
+      :TRAINER_HAIR_COLOR => :hair_color, :TRAINER_CLOTHES => :clothes,
+      :TRAINER_CLOTHES_COLOR => :clothes_color, :TRAINER_SKIN => :skin_tone }.each do |key, field|
+      value = $Trainer.public_send(field)
+      @hallRecord[key] = value.is_a?(String) ? value.dup : value
+    end
+    $PokemonGlobal.hallOfFame.push(@hallRecord)
     $PokemonGlobal.hallOfFameLastNumber += 1
     $PokemonGlobal.hallOfFame.delete_at(0) if HALLLIMIT > -1 &&
       $PokemonGlobal.hallOfFame.size > HALLLIMIT
@@ -244,8 +260,11 @@ class HallOfFame_Scene
   end
 
   def createTrainerBattler
+    @xmovement ||= []
+    @ymovement ||= []
+    @sprites["trainer"].dispose if @sprites["trainer"] && !@sprites["trainer"].disposed?
     @sprites["trainer"] = IconSprite.new(@viewport)
-    @sprites["trainer"].setBitmapDirectly(generate_front_trainer_sprite_bitmap())
+    @sprites["trainer"].setBitmapDirectly(historyTrainerBitmap())
     if !SINGLEROW
       @sprites["trainer"].x = Graphics.width - 96
       @sprites["trainer"].y = 160
@@ -350,7 +369,7 @@ class HallOfFame_Scene
     pbDrawTextPositions(overlay, [[_INTL("{1}", timeString), x, y, 2, BASECOLOR, SHADOWCOLOR]])
   end
 
-  def writeGameMode(overlay, x, y)
+  def getCurrentGameMode()
     gameMode = "Classic mode"
     if $game_switches[SWITCH_MODERN_MODE]
       gameMode = "Modern mode"
@@ -374,7 +393,11 @@ class HallOfFame_Scene
       gameMode = "Debug mode"
     end
 
-    pbDrawTextPositions(overlay, [[_INTL("{1} ({2})", gameMode, getDifficulty), x, y, 2, BASECOLOR, SHADOWCOLOR]])
+    return gameMode
+  end
+
+  def writeGameMode(overlay, x, y)
+    pbDrawTextPositions(overlay, [[_INTL("{1} ({2})", getCurrentGameMode(), getDifficulty), x, y, 2, BASECOLOR, SHADOWCOLOR]])
   end
 
   def pbAnimationLoop
@@ -476,27 +499,65 @@ class HallOfFame_Scene
     return false
   end
 
+  def loadHistoryRecord
+    @hallRecord = $PokemonGlobal.hallOfFame[@hallIndex] || { :TEAM => [] }
+    @hallEntry = @hallRecord[:TEAM].select { |pokemon| pokemon && pokemon.respond_to?(:species) }
+  end
+
+  def historyTrainerBitmap
+    record = @hallRecord || {}
+    return generate_front_trainer_sprite_bitmap() unless record[:TRAINER_CLOTHES] && record[:TRAINER_HAIR] && record[:TRAINER_SKIN]
+    generate_front_trainer_sprite_bitmap(false, nil, record[:TRAINER_CLOTHES], record[:TRAINER_HAT],
+      record[:TRAINER_HAIR], record[:TRAINER_SKIN], record[:TRAINER_HAIR_COLOR],
+      record[:TRAINER_HAT_COLOR], record[:TRAINER_CLOTHES_COLOR], false)
+  end
+
+  def writeHistoryOverview
+    if @hallRecord[:TRAINER_CLOTHES] && @hallRecord[:TRAINER_HAIR] && @hallRecord[:TRAINER_SKIN]
+      createTrainerBattler
+      @sprites["trainer"].x = SINGLEROW ? Graphics.width / 2 : Graphics.width - 96
+      @sprites["trainer"].y = SINGLEROW ? 178 : 160
+    elsif @sprites["trainer"]
+      @sprites["trainer"].visible = false
+    end
+    setPokemonSpritesOpacity(-1, OPACITY)
+    overlay = @sprites["overlay"].bitmap
+    overlay.clear
+    number = $PokemonGlobal.hallOfFameLastNumber + @hallIndex - $PokemonGlobal.hallOfFame.size + 1
+    font_size = overlay.font.size
+    overlay.font.size = [font_size, 24].min
+    unknown = _INTL("Unknown")
+    date, mode, difficulty = [:DATE, :MODE, :DIFFICULTY].map { |key| @hallRecord[key] || unknown }
+    pbDrawTextPositions(overlay, [
+      [_INTL("Hall of Fame No. {1}", number), Graphics.width / 2, 8, 2, BASECOLOR, SHADOWCOLOR],
+      [_INTL("Date: {1}", date), Graphics.width / 2, Graphics.height - 96, 2, BASECOLOR, SHADOWCOLOR],
+      [_INTL("Mode: {1}", mode), Graphics.width / 2, Graphics.height - 66, 2, BASECOLOR, SHADOWCOLOR],
+      [_INTL("Difficulty: {1}", difficulty), Graphics.width / 2, Graphics.height - 36, 2, BASECOLOR, SHADOWCOLOR]
+    ])
+    overlay.font.size = font_size
+  end
+
   def pbUpdatePC
-    # Change the team
-    if @battlerIndex >= @hallEntry.size
-      @hallIndex -= 1
-      return false if @hallIndex == -1
-      @hallEntry = $PokemonGlobal.hallOfFame[@hallIndex]
-      @battlerIndex = 0
-      createBattlers(false)
-    elsif @battlerIndex < 0
-      @hallIndex += 1
-      return false if @hallIndex >= $PokemonGlobal.hallOfFame.size
-      @hallEntry = $PokemonGlobal.hallOfFame[@hallIndex]
-      @battlerIndex = @hallEntry.size - 1
+    if @battlerIndex > @hallEntry.size || @battlerIndex < 0
+      direction = @battlerIndex < 0 ? 1 : -1
+      loop do
+        @hallIndex += direction
+        return false if @hallIndex < 0 || @hallIndex >= $PokemonGlobal.hallOfFame.size
+        loadHistoryRecord
+        break unless @hallEntry.empty?
+      end
+      @battlerIndex = direction == 1 ? @hallEntry.size : 0
       createBattlers(false)
     end
-    # Change the pokemon
+    if @battlerIndex == @hallEntry.size
+      writeHistoryOverview
+      return true
+    end
+    @sprites["trainer"].visible = false if @sprites["trainer"]
     @hallEntry[@battlerIndex].play_cry
     setPokemonSpritesOpacity(@battlerIndex, OPACITY)
-    hallNumber = $PokemonGlobal.hallOfFameLastNumber + @hallIndex -
-      $PokemonGlobal.hallOfFame.size + 1
-    writePokemonData(@hallEntry[@battlerIndex], hallNumber)
+    number = $PokemonGlobal.hallOfFameLastNumber + @hallIndex - $PokemonGlobal.hallOfFame.size + 1
+    writePokemonData(@hallEntry[@battlerIndex], number)
     return true
   end
 end
@@ -516,7 +577,7 @@ class HallOfFameScreen
   end
 
   def pbStartScreenPC
-    @scene.pbStartScenePC
+    return unless @scene.pbStartScenePC
     @scene.pbPCSelection
     @scene.pbEndScene
   end
@@ -527,7 +588,7 @@ end
 #===============================================================================
 class HallOfFamePC
   def shouldShow?
-    return $PokemonGlobal.hallOfFameLastNumber > 0
+    return $PokemonGlobal.hallOfFameLastNumber > 0 && $PokemonGlobal.hallOfFame.any? { |record| record[:TEAM].any? { |pokemon| pokemon && pokemon.respond_to?(:species) } }
   end
 
   def name
@@ -555,6 +616,19 @@ class PokemonGlobalMetadata
 
   def hallOfFame
     @hallOfFame = [] if !@hallOfFame
+    @hallOfFame.map! do |entry|
+      record = entry.is_a?(Array) ? { :TEAM => entry } : entry
+      record = { :TEAM => [], :LEGACY => record } unless record.is_a?(Hash)
+      [:TEAM, :DATE, :MODE, :DIFFICULTY, :TRAINER_HAT, :TRAINER_HAT_COLOR,
+       :TRAINER_HAIR, :TRAINER_HAIR_COLOR, :TRAINER_CLOTHES, :TRAINER_CLOTHES_COLOR, :TRAINER_SKIN].each do |key|
+        record[key] = record[key.to_s] if !record.key?(key) && record.key?(key.to_s)
+      end
+      unless record[:TEAM].is_a?(Array)
+        record[:LEGACY_TEAM] = record[:TEAM] if record.key?(:TEAM)
+        record[:TEAM] = []
+      end
+      record
+    end
     return @hallOfFame
   end
 
