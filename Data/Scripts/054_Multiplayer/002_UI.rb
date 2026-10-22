@@ -154,10 +154,11 @@ module KIFMultiplayer
             KIFMultiplayer.open_replay_menu(@client) if mode == 1
           when 7
             connect
-            mode = choose("交换与收藏\n本地休闲个体与服务器托管资产分区。", ["好友休闲交换", "在线奇迹交换池", "服务器托管收藏箱", "返回"])
+            mode = choose("交换与收藏\n本地休闲个体与服务器托管资产分区。", ["好友休闲交换", "在线奇迹交换池", "服务器托管收藏箱", "交易中心（市场／钱包）", "返回"])
             KIFMultiplayer.open_trade_menu(@client) if mode == 0
             KIFMultiplayer.open_pool_menu(@client) if mode == 1
             KIFMultiplayer.open_collection_menu(@client) if mode == 2
+            KIFMultiplayer.open_trading_menu(@client) if mode == 3
           when 8
             mode = choose("休闲联机", ["随机租借杯", "可走动大厅", "返回"])
             KIFMultiplayer.open_rental_menu(@client) if mode == 0

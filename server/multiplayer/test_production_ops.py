@@ -17,8 +17,8 @@ from service import PROTOCOL, RULES
 
 class ProductionRecoveryTests(unittest.TestCase):
     def setUp(self):
-        self.base = Path(__file__).resolve().parents[2] / "temp/production-ops-tests"
-        self.root = self.base / uuid.uuid4().hex
+        self.base = Path(os.environ.get("KIF_TEST_TEMP_ROOT", str(Path(__file__).resolve().parents[2] / "temp/production-ops-tests"))).resolve()
+        self.root = self.base / uuid.uuid4().hex[:12]
         self.root.mkdir(parents=True)
         executable = os.environ.get("KIF_TEST_RESTIC") or (str(Path(__file__).resolve().parents[2] / "temp/tools/multiplayer-production/restic.exe") if os.name == "nt" else shutil.which("restic"))
         if not executable or not Path(executable).is_file():

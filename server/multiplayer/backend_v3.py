@@ -153,6 +153,8 @@ class V3Features:
             self.trade_document(db, old["reference"].split(":", 1)[1])
         elif old and old["reference"].startswith("pool:"):
             self.deposit(db, old["reference"].split(":", 1)[1])
+        elif old and old["reference"].startswith(("market:", "exchange:")):
+            self.refresh_trading_lock(db, old["reference"])
         return db.execute("SELECT reference FROM asset_locks WHERE asset_id=?", (asset_id,)).fetchone()
 
     def transfer_asset(self, db, asset_id, old_owner, new_owner, reference):

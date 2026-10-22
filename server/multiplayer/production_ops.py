@@ -203,11 +203,24 @@ def restore(config, snapshot_id):
     private_directory(config.backup_dir)
     with database_instance_lock(config.data_dir / "maintenance"), database_instance_lock(config.database):
         available = json.loads(restic(config, "snapshots", "--json", "--tag", tags(data_id), cache=False))
-        if not any(item["id"] == snapshot_id for item in available):
+        selected = next((item for item in available if item["id"] == snapshot_id), None)
+        if selected is None:
             raise RuntimeError("Snapshot does not belong to this server data identity")
+        paths = selected.get("paths")
+        if not isinstance(paths, list) or len(paths) != 1 or not isinstance(paths[0], str):
+            raise RuntimeError("Backup must have exactly one source directory")
+        source_path = paths[0].replace("\\", "/")
+        # Restic stores a Windows D:/... source as /D/... in its tree. Restore
+        # only the recorded backup subtree: ancestors such as /D/Users carry
+        # protected machine ACLs and have no place inside database staging.
+        if re.match(r"^[A-Za-z]:/", source_path):
+            source_path = "/" + source_path[0] + source_path[2:]
+        if (not source_path.startswith("/") or not source_path.endswith("/current") or
+                any(part in (".", "..") for part in source_path.split("/"))):
+            raise RuntimeError("Unexpected backup source directory")
         staging = config.backup_dir / ("restore-" + uuid.uuid4().hex)
         private_directory(staging)
-        restic(config, "restore", snapshot_id, "--target", str(staging), cache=False)
+        restic(config, "restore", snapshot_id + ":" + source_path, "--target", str(staging), "--verify", cache=False)
         manifests = list(staging.rglob("manifest.json"))
         if len(manifests) != 1:
             raise RuntimeError("Backup must contain exactly one database manifest")

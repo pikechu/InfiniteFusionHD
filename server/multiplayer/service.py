@@ -431,7 +431,17 @@ except ImportError:
 bind_online_api(globals())
 
 
-class Store(V3Features, OnlineFeatures):
+try:
+    from .economy import EconomyFeatures, bind_api as bind_economy_api
+    from .trading import TradingFeatures, bind_api as bind_trading_api
+except ImportError:
+    from economy import EconomyFeatures, bind_api as bind_economy_api
+    from trading import TradingFeatures, bind_api as bind_trading_api
+bind_economy_api(globals())
+bind_trading_api(globals())
+
+
+class Store(V3Features, OnlineFeatures, EconomyFeatures, TradingFeatures):
     def __init__(self, database, clock=time.time, heartbeat_seconds=8, reconnect_seconds=60, room_ttl=86400,
                  synchronous="NORMAL", create=True, auth_concurrency=2):
         if synchronous not in ("NORMAL", "FULL"):
@@ -470,6 +480,7 @@ class Store(V3Features, OnlineFeatures):
             """)
             self.init_v3(db)
             self.init_online(db)
+            self.init_trading(db)
             # Protocol-1 waiting rooms have no engine-instance handshake. They
             # remain readable history, but cannot be reopened by a v2 client.
             for row in db.execute("SELECT document FROM rooms").fetchall():
@@ -758,7 +769,7 @@ class Store(V3Features, OnlineFeatures):
                 # an operation-cache response must not bypass later unpublish.
                 transient_heartbeat = path.startswith("/v1/battles/") and path.endswith("/heartbeat") and len(path.strip("/").split("/")) == 4
                 transient_online = path.startswith(("/v1/cloud/", "/v1/world/", "/v1/chat/"))
-                mutation = method == "POST" and not transient_online and not transient_heartbeat and not (path.startswith("/v1/replays/") and path.endswith("/download"))
+                mutation = method == "POST" and path != "/v1/market/search" and not transient_online and not transient_heartbeat and not (path.startswith("/v1/replays/") and path.endswith("/download"))
                 fingerprint = None
                 if mutation:
                     request_id = string(body.get("request_id"), 8, 100, "request_id", r"[A-Za-z0-9_\-]+")
@@ -802,6 +813,9 @@ class Store(V3Features, OnlineFeatures):
     def dispatch(self, db, identity, method, path, body, internal_route_id=None):
         owner = identity["id"]
         parts = path.strip("/").split("/")
+        trading = self.dispatch_trading(db, identity, method, parts, body)
+        if trading is not None:
+            return trading
         online = self.dispatch_online(db, identity, method, parts, body)
         if online is not None:
             return online
