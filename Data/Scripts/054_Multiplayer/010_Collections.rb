@@ -9,7 +9,7 @@ module KIFMultiplayer
       value
     end
     def validate_asset(asset, require_owner = true)
-      unless asset.is_a?(Hash) && asset["source"] == "server_catalog" && asset["catalog_version"] == 1
+      unless asset.is_a?(Hash) && %w[server_catalog server_managed].include?(asset["source"]) && asset["catalog_version"] == 1
         raise Error, "托管资产来源或目录版本不支持。"
       end
       identifier(asset["id"])

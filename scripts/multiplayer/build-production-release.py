@@ -16,6 +16,8 @@ def build(output, wheel_dir):
     service = ROOT / "server/multiplayer"
     modules = ("service.py", "online.py", "backend_v3.py", "production.py", "production_data.py", "production_ops.py", "release_manager.py", "economy.py", "trading.py", "trading_admin.py")
     modules += ("inventory.py",)
+    modules += ("mainline.py", "native_engine.py", "native_worker.rb")
+    modules += ("native_battle.rb",)
     sources = {"server/multiplayer/" + name: service / name for name in modules}
     sources.update({path.relative_to(ROOT).as_posix(): path for path in service.glob("catalog-*.json")})
     templates = {"production.json", "gunicorn.conf.py", "Caddyfile", "manage.sh", "install-tools.py", "tools.lock.json", "backup-credentials.example.json", "README.md"}

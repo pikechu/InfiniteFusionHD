@@ -10,17 +10,20 @@ import secrets
 from pathlib import Path
 try:
     from .inventory import InventoryFeatures, bind_api as bind_inventory_api
+    from .mainline import MainlineFeatures, bind_api as bind_mainline_api
 except ImportError:
     from inventory import InventoryFeatures, bind_api as bind_inventory_api
+    from mainline import MainlineFeatures, bind_api as bind_mainline_api
 
 
 def bind_api(api):
     for name in ("obj", "require", "string", "integer", "boolean", "dumps", "digest", "validate_compatibility", "STATS", "APIError"):
         globals()[name] = api[name]
     bind_inventory_api(api)
+    bind_mainline_api(api)
 
 
-class TradingFeatures(InventoryFeatures):
+class TradingFeatures(InventoryFeatures, MainlineFeatures):
     def init_trading(self, db):
         self.catalog_history_path = Path(__file__).parent / 'catalog-asset-history-v1.json'
         self.init_economy(db)
@@ -41,6 +44,7 @@ class TradingFeatures(InventoryFeatures):
             CREATE INDEX IF NOT EXISTS trading_history ON trading_events(owner,created,id);
             CREATE TABLE IF NOT EXISTS trading_preferences(owner TEXT PRIMARY KEY,document TEXT NOT NULL);
         """)
+        self.init_mainline(db)
 
     def trading_account(self, db, owner, writing=False):
         require(db.execute("SELECT 1 FROM accounts WHERE owner=?", (owner,)).fetchone() is not None, "account_required", "Please log in to a registered online account", 403)
@@ -111,7 +115,7 @@ class TradingFeatures(InventoryFeatures):
 
     def trading_asset(self, db, asset_id, owner, compatibility):
         asset = self.asset(db, asset_id, owner)
-        require(asset.get("source") == "server_catalog" and asset.get("catalog_version") == 1, "untrusted_asset", "Only server-managed assets can be traded", 409)
+        require(asset.get("source") in ("server_catalog","server_managed") and asset.get("catalog_version") == 1, "untrusted_asset", "Only server-managed assets can be traded", 409)
         catalog = self.catalog(compatibility)
         expected = self.asset_contract(catalog)
         if 'asset_rules_hash' not in asset:
@@ -363,6 +367,7 @@ class TradingFeatures(InventoryFeatures):
                 require(not db.execute("SELECT 1 FROM exchange_sessions WHERE (host=? OR guest=?) AND status NOT IN ('committed','cancelled','expired')", (participant, participant)).fetchone(), "exchange_pending", "A participant already has an open exchange", 409)
             session = {"id": "exc_" + secrets.token_hex(16), "host_id": owner, "guest_id": target["id"], "members": [owner, target["id"]], "friend_codes": {owner: db.execute("SELECT friend_code FROM identities WHERE id=?", (owner,)).fetchone()[0], target["id"]: code}, "status": "invited", "compatibility": compatibility, "revision": 1, "offers": {p: {"assets": [], "amount": 0} for p in (owner, target["id"])}, "locked": [], "confirmed": [], "created_at": self.clock(), "expires_at": self.clock() + 600, "idle_until": self.clock() + 30, "confirm_after": None}
             session['invite_kind'] = 'nearby' if 'target_id' in body else 'friend'
+            session['trade_evolution'] = self.native_engine is not None
             self.save_exchange(db, session)
             return 201, {"ok": True, "exchange": session}
         session = self.exchange_session(db, parts[2])
@@ -457,9 +462,17 @@ class TradingFeatures(InventoryFeatures):
                 self.transfer_asset(db, asset["id"], owner, recipient, reference)
         session.update(status="committed", transaction_id=transaction_id, committed_at=self.clock())
         self.release_exchange(db, session)
+        for owner,recipient in ((a,b),(b,a)):
+            other=session['offers'][recipient]['assets']
+            counterpart=other[0]['snapshot'] if other else None
+            for asset in session['offers'][owner]['assets']:
+                self.queue_trade_evolution(db,transaction_id,asset['id'],recipient,counterpart)
         self.trading_event(db, transaction_id, [a, b], "exchange", session)
 
     def dispatch_trading(self, db, identity, method, parts, body):
+        mainline = self.dispatch_mainline(db,identity,method,parts,body)
+        if mainline is not None:
+            return mainline
         if parts[:2] not in (["v1", "market"], ["v1", "wallet"], ["v1", "exchanges"], ["v1", "deliveries"], ["v1", "trading"], ['v1','inventory']):
             return None
         owner = identity["id"]

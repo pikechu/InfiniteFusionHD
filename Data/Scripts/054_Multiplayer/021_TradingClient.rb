@@ -33,8 +33,15 @@ module KIFMultiplayer
     end
     def inventory
       value = @client.request("GET", "/v1/inventory")["inventory"]
+      validate_inventory(value)
+    end
+    def validate_inventory(value)
       check(value.is_a?(Hash) && value["owner_id"] == @client.player_id && value["items"].is_a?(Array) && value["items"].length <= 128)
       check(value["version"].is_a?(Integer) && value["version"] >= 0)
+      if value["catalog_ids"]
+        check(value["catalog_ids"].is_a?(Array) && value["catalog_ids"].length <= 128)
+        value["catalog_ids"].each { |id| Snapshot.registry(:Item, id) }
+      end
       value["items"].each do |item|
         check(item.is_a?(Hash) && item["item_id"].is_a?(String))
         Snapshot.registry(:Item, item["item_id"])

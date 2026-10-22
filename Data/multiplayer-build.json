@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "3bc71d37379706dc64503e85567b459373c4ed5038e3cb899d2f14842be8a66f",
+  "data_hash": "8dffd8ce3e6319ba0ade5ef0911d0bc3c243517565b54e00f94736c6fc35a0b3",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -1755,8 +1755,8 @@
       "size": 15079
     },
     "Data/Scripts/054_Multiplayer/010_Collections.rb": {
-      "sha256": "e615c25125d0bf1bd79d3ada0378f883917d4338674368b0a0fd8d4b66c99dae",
-      "size": 19158
+      "sha256": "aed8703f55f8f840acfb8c9d451f3ad191492c4c252be53acde0ee261cfebf8e",
+      "size": 18799
     },
     "Data/Scripts/054_Multiplayer/011_Dungeon.rb": {
       "sha256": "16dc8c2dabb73f9b4484b39b08b695e2510ef8ccbc9e41e0b69896a52a2f4176",
@@ -1799,16 +1799,32 @@
       "size": 9216
     },
     "Data/Scripts/054_Multiplayer/021_TradingClient.rb": {
-      "sha256": "01b32175993a6b10f6ff9a0f2cee5830799fccba24e1ae3037620158ddb99c0c",
-      "size": 10695
+      "sha256": "5e45becb1473521bd60adf8da9a3b27b2cce74e45cf746867711cb1e777cdb3c",
+      "size": 10968
     },
     "Data/Scripts/054_Multiplayer/022_TradingUI.rb": {
-      "sha256": "3f6bda1cbbae30a1f17a6bb398e6e6a70feb3d4653b9ec852077f102fa8bfdbc",
-      "size": 23841
+      "sha256": "4634291550c67a7474fe9a3f16e952652c8cd52362a696ce73349194a56853bc",
+      "size": 24365
     },
     "Data/Scripts/054_Multiplayer/023_TradingEntries.rb": {
       "sha256": "114481c610162a2b76bbc473b7396af1d4130aa4b8bbba1c9584a3f45e90064e",
       "size": 2303
+    },
+    "Data/Scripts/054_Multiplayer/024_MainlineClient.rb": {
+      "sha256": "1144a4131c4aeb8bec32c7b80dc9df76b3ed38514f61811179145ef17bd73afe",
+      "size": 7456
+    },
+    "Data/Scripts/054_Multiplayer/025_MainlineUI.rb": {
+      "sha256": "0bc23ac741d6c455a34e602c26cb2c9c9c5c9a294b60d4b221c74e2119e54042",
+      "size": 13811
+    },
+    "Data/Scripts/054_Multiplayer/026_MainlineHooks.rb": {
+      "sha256": "e3714ba67d481f579a478a16814d7ef9c080a44547cb95d2caf0a6e5c6f3264a",
+      "size": 17856
+    },
+    "Data/Scripts/054_Multiplayer/027_MainlineBattle.rb": {
+      "sha256": "8b2099716f0229f892ee9dc6faed0f89a4f83490d4b8add7a6cd56f8bf2e8d26",
+      "size": 9433
     },
     "Data/Scripts/100_DemICE's AI/AI Move EffectScores.rb": {
       "sha256": "c44d777b7c6beeb56c6a24a308d835b62299ad213ed7cf86fb7b2fa41fef98ee",
@@ -2059,5 +2075,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-22T10:09:00Z"
+  "built_at": "2026-10-22T12:24:20Z"
 }

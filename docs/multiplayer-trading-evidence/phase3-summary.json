@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "date": "2026-10-22",
+  "data_hash": "8dffd8ce3e6319ba0ade5ef0911d0bc3c243517565b54e00f94736c6fc35a0b3",
+  "schema_version": 4,
+  "python": {
+    "total": 231,
+    "passed": 230,
+    "skipped": 1,
+    "seconds": 332.777,
+    "skip": "Windows token cannot create directory symlinks; Linux activation remains a host check",
+    "real_restic_backup_and_restore": true
+  },
+  "ruby_suites": 29,
+  "targeted_last_changes": {
+    "mainline": 16,
+    "native_protocol": 6,
+    "ruby_suites": 29
+  },
+  "native_evidence": {
+    "mainline-client": {
+      "file": "mainline-client.json",
+      "directory": "temp/multiplayer/mainline-client-4cca6326b4"
+    },
+    "mainline-native-http": {
+      "file": "mainline-native-http.json",
+      "directory": "temp/multiplayer/mainline-http-d168791cce"
+    },
+    "mainline-native-battle-foundation": {
+      "file": "mainline-native-battle-foundation.json",
+      "directory": "temp/multiplayer/native-battle-22c94f6251"
+    },
+    "mainline-native-cultivation": {
+      "file": "mainline-native-cultivation.json",
+      "directory": "temp/multiplayer/native-cultivation-643fc8e8ab"
+    },
+    "mainline-public-battle": {
+      "file": "mainline-public-battle.json",
+      "directory": "temp/multiplayer/public-native-battle-0d0e2e9a8e"
+    }
+  },
+  "boundaries": [
+    "Windows native engine runtime required for authoritative mainline; marketplace works independently",
+    "Fresh-device scenario uses new profiles on the same Windows host, not two physical devices",
+    "Android device, public-network and special story-battle adaptations are not claimed by these tests"
+  ]
+}

@@ -100,7 +100,7 @@ class InventoryFeatures:
             value['item'] = catalog.get(row[0],{'id':row[0],'name':row[0],'tradeable':False})
             values.append(value)
         version = db.execute('SELECT version FROM inventory_accounts WHERE owner=?', (owner,)).fetchone()
-        return {'owner_id':owner,'version':version[0] if version else 0,'items':values}
+        return {'owner_id':owner,'version':version[0] if version else 0,'items':values,'catalog_ids':sorted(catalog)}
 
     def new_item_delivery(self, db, owner, item_id, quantity, event_id, reason):
         delivery_id = 'del_' + secrets.token_hex(16)

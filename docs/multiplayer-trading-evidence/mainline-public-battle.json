@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "public command path captures one native-generated Pokemon",
+    "capture consumes the reserved ball once",
+    "native battle returns medicine when used on a full-health target",
+    "captured identity joins the server party",
+    "re-reading completed battle does not create another capture",
+    "native outcome keeps currency and item ledgers balanced",
+    "battle releases every asset lock"
+  ],
+  "directory": "temp/multiplayer/public-native-battle-0d0e2e9a8e",
+  "data_hash": "8dffd8ce3e6319ba0ade5ef0911d0bc3c243517565b54e00f94736c6fc35a0b3"
+}

@@ -109,6 +109,8 @@ begin
   missing_items = item_ids.reject { |id| GameData::Item::DATA.key?(id) }
   log.call("TRADING_ITEM_UNAVAILABLE #{missing_items.join(',')}") unless missing_items.empty?
   item_ids -= missing_items
+  item_ids += %i[MASTERBALL KINGSROCK METALCOAT DRAGONSCALE UPGRADE DUBIOUSDISC PRISMSCALE PROTECTOR ELECTIRIZER MAGMARIZER REAPERCLOTH EVERSTONE] + output["pokemon"].map { |snapshot| snapshot["item"] && snapshot["item"].to_sym }.compact
+  item_ids = item_ids.uniq.select { |id| GameData::Item::DATA.key?(id) }
   raise "Required trading test items are missing" unless %i[POTION RARECANDY POKEBALL].all? { |id| item_ids.include?(id) }
   items = item_ids.map do |id|
     item = GameData::Item.get(id)

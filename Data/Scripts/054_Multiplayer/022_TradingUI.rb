@@ -85,6 +85,11 @@ module KIFMultiplayer
       value["kind"] == "item" ? inspect_item(value["item_id"], value["quantity"]) : inspect_asset({"id" => value["asset_id"], "snapshot" => value["snapshot"]})
     end
     def resolve_id(type, value)
+      if type == :Species && value =~ /\A[0-9]+\z/
+        id = value.to_i
+        raise Error, "图鉴号不存在。" unless GameData::Species::DATA.key?(id)
+        return GameData::Species.get(id).id.to_s
+      end
       return value.upcase if value =~ /\A[A-Za-z0-9_]+\z/
       registry = GameData.const_get(type)
       matches = registry::DATA.values.uniq.select { |entry| entry.name.include?(value) }.first(20)
@@ -119,8 +124,8 @@ module KIFMultiplayer
       loop do
         wallet = @trading.wallet
         heading = "交易中心 · 托管资产封测\n联机币 #{wallet['available']}（预留 #{wallet['reserved']}）\n精灵和道具均保存在服务器。"
-        index = choose(heading, ["全球精灵市场", "全球道具市场", "出售", "我的挂牌", "面对面交易", "待领取", "我的联机道具", "交易记录", "恢复断线操作", "服务器托管收藏箱", "交易邀请设置", "返回"])
-        return if index < 0 || index >= 11
+        index = choose(heading, ["全球精灵市场", "全球道具市场", "出售", "我的挂牌", "面对面交易", "待领取", "我的联机道具", "交易记录", "恢复断线操作", "服务器托管收藏箱", "交易邀请设置", "托管角色与培养", "返回"])
+        return if index < 0 || index >= 12
         @ui.perform do
           case index
           when 0 then market
@@ -139,6 +144,7 @@ module KIFMultiplayer
             pbMessage("已核实原操作并刷新服务器钱包、交付和交易会话。")
           when 9 then KIFMultiplayer.open_collection_menu(@client)
           when 10 then preferences
+          when 11 then KIFMultiplayer.open_mainline_menu(@client)
           end
         end
       end
@@ -404,6 +410,7 @@ module KIFMultiplayer
       end
     end
     def inspect_offers(session)
+      pbMessage("本服启用交易进化。成交后符合条件的精灵由服务器进化，所需携带物会消耗。\n可先在托管角色的进化菜单查看交易预览。") if session['trade_evolution']
       session["members"].each do |owner|
         offer = session["offers"][owner]
         item_text = (offer["items"] || {}).map { |id, quantity| "#{text(item_name(id))} ×#{quantity}" }.join("、")

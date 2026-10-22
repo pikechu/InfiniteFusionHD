@@ -142,6 +142,8 @@ class V3Features:
 
     def lock_asset(self, db, asset_id, owner, reference):
         asset = self.asset(db, asset_id, owner)
+        if not reference.startswith("mainline:"):
+            require(self.mainline_assignment(db, asset_id) is None, "asset_in_party", "Move this asset to the online PC before trading", 409)
         old = self.refresh_asset_lock(db, asset_id)
         require(old is None or old["reference"] == reference, "asset_locked", "Hosted asset is already committed to another operation", 409)
         db.execute("INSERT OR REPLACE INTO asset_locks VALUES(?,?)", (asset_id, reference))
@@ -155,6 +157,8 @@ class V3Features:
             self.deposit(db, old["reference"].split(":", 1)[1])
         elif old and old["reference"].startswith(("market:", "exchange:")):
             self.refresh_trading_lock(db, old["reference"])
+        elif old and old["reference"].startswith("mainline:"):
+            self.refresh_mainline_lock(db, old["reference"])
         return db.execute("SELECT reference FROM asset_locks WHERE asset_id=?", (asset_id,)).fetchone()
 
     def transfer_asset(self, db, asset_id, old_owner, new_owner, reference):
@@ -178,6 +182,9 @@ class V3Features:
                 lock = self.refresh_asset_lock(db, asset["id"])
                 asset["locked"] = bool(lock)
                 asset["lock_reference"] = lock["reference"] if lock else None
+                assigned = self.mainline_assignment(db, asset["id"])
+                if assigned is not None:
+                    asset.update(locked=True, lock_reference="party:" + assigned["character_id"], assigned_character=assigned["character_id"])
                 assets.append(asset)
             return 200, {"ok": True, "assets": assets}
         require(method == "POST", "not_found", "Unknown collection endpoint", 404)
@@ -265,6 +272,7 @@ class V3Features:
                     transferred[other] = self.transfer_asset(db, offer["asset_id"], participant, other, "trade:" + trade["code"])
                 for participant in trade["members"]:
                     asset = transferred[participant]
+                    self.queue_trade_evolution(db,trade["transaction_id"],asset["id"],participant,trade["offers"][participant]["snapshot"])
                     receipt = {"transaction_id": trade["transaction_id"], "source": "server_managed", "owner_id": participant, "offered_hash": trade["offers"][participant]["hash"], "received_hash": digest(dumps(asset["snapshot"])), "received_asset": asset, "committed_at": self.clock()}
                     db.execute("INSERT INTO trade_receipts VALUES(?,?,?,0)", (trade["transaction_id"], participant, dumps(receipt)))
         else:
@@ -306,6 +314,8 @@ class V3Features:
             else:
                 receipt["received_asset"] = self.transfer_asset(db, other["asset_id"], other["owner_id"], own["owner_id"], "pool:" + other["deposit_id"])
                 receipt["received_hash"] = digest(dumps(receipt["received_asset"]["snapshot"]))
+                offered=self.asset(db,own["asset_id"])
+                self.queue_trade_evolution(db,transaction,other["asset_id"],own["owner_id"],offered.get("full",offered["snapshot"]))
             own.update({"status": "matched", "final_status": "matched", "transaction_id": transaction, "receipt": receipt})
             self.save_deposit(db, own)
 
