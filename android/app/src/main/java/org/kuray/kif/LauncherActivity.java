@@ -78,7 +78,17 @@ public final class LauncherActivity extends Activity {
             working = false; setContentView(installLayout);
             install();
         }); menu.addView(repair);
-        setContentView(menu);
+        if (Analytics.isConfigured(this)) {
+            CheckBox statistics = new CheckBox(this); statistics.setText("Anonymous usage statistics");
+            statistics.setChecked(Analytics.isUsageEnabled(this));
+            statistics.setOnCheckedChangeListener((button, enabled) -> Analytics.setUsageEnabled(this, enabled));
+            menu.addView(statistics);
+            TextView explanation = new TextView(this); explanation.setTextSize(12);
+            explanation.setText("Shares a random install ID, app version, phone model / manufacturer and distribution channel. Region is estimated from IP by the statistics server. No saves, player names or GPS. Turning this off erases the random ID.");
+            menu.addView(explanation);
+        }
+        ScrollView scroll = new ScrollView(this); scroll.setFillViewport(true); scroll.addView(menu);
+        setContentView(scroll);
     }
     @Override protected void onActivityResult(int request, int result, Intent data) {
         super.onActivityResult(request, result, data);

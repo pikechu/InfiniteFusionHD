@@ -26,7 +26,7 @@ def source_snapshot():
     paths.update((ROOT / "android/ruby").glob("*.rb"))
     paths.update((ROOT / "Data/Scripts").rglob("*.rb"))
     paths.update((ROOT / "temp/android-generated/java").rglob("*.java"))
-    for name in ("Game.ini", "Data/multiplayer-build.json", "Data/multiplayer/rental-catalog.json", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
+    for name in ("Game.ini", "Data/multiplayer-build.json", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
                  "android/native/kif_android_bridge.c", "scripts/android/build_bridge.ps1",
                  "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py"):
         path = ROOT / name
@@ -54,7 +54,7 @@ def validate_staged_scripts(manifest):
 def validate_apk_assets(assets, with_network, require_payload=True):
     """Reject stale partials/unknown paths instead of silently bundling or deleting them."""
     required = {"payload.zip", "payload-manifest.json", "mkxp-base.json"}
-    allowed = required | ({"network-enabled"} if with_network else set())
+    allowed = required | {"analytics.json"} | ({"network-enabled"} if with_network else set())
     if not assets.exists():
         if require_payload:
             raise ValueError(f"No staged assets: {assets}")
@@ -176,9 +176,9 @@ def main():
     generated = ROOT / "temp/android-generated"
     runtime_library, original_runtime_sha, emulator_record = select_runtime(generated, args.emulator_compatible)
     input_bridge_record = require_input_bridge(generated)
-    work = ROOT / ("temp/android-network-build" if args.runtime_only and args.with_network else "temp/android-smoke-build" if args.runtime_only else "temp/android-build")
+    work = ROOT / ("temp/android-network-build" if args.runtime_only and args.with_network else "temp/android-smoke-build" if args.runtime_only else "temp/android-build-network" if args.with_network else "temp/android-build")
     if args.emulator_compatible:
-        work = work.with_name(work.name + "-emulator" + ("-network" if args.with_network and not args.runtime_only else ""))
+        work = work.with_name(work.name + "-emulator")
     work.mkdir(parents=True, exist_ok=True)
     assets = work / "assets"
     # Check before reading/rebuilding a large payload or starting Java/D8 work.
@@ -197,6 +197,13 @@ def main():
     if not all((assets / name).is_file() for name in ("payload.zip", "payload-manifest.json", "mkxp-base.json")):
         raise SystemExit("No staged payload")
     manifest = json.loads((assets / "payload-manifest.json").read_text())
+    analytics_path = ROOT / "Data/analytics.json"
+    analytics = json.loads(analytics_path.read_text(encoding="utf-8")) if analytics_path.is_file() else {"enabled": False}
+    if set(analytics) - {"enabled", "endpoint", "site_id", "app_url", "channel", "heartbeat_seconds", "dimensions"}:
+        raise SystemExit("Unsupported analytics fields; never bundle server tokens")
+    if args.runtime_only:
+        analytics["enabled"] = False
+    (assets / "analytics.json").write_text(json.dumps(analytics, indent=2), encoding="utf-8")
     network_marker = assets / "network-enabled"
     if args.with_network:
         network_marker.write_text("1", encoding="ascii")
