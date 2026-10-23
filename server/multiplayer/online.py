@@ -277,7 +277,8 @@ class OnlineFeatures:
         if trade_build:
             for row in db.execute("SELECT x.id,x.idle,i.nickname,i.friend_code FROM exchange_sessions x JOIN identities i ON i.id=x.host WHERE x.guest=? AND x.status='invited' AND x.idle>? AND x.expires>? ORDER BY x.id LIMIT 5",(owner,now,now)):
                 invites.append({'id':row['id'],'nickname':row['nickname'],'friend_code':row['friend_code'],'expires_at':row['idle']})
-        return 200, {"ok": True, "world": {"players": players, "map_key": member["map_key"], "messages": [json.loads(row["document"]) for row in rows], "cursor": cursor, "server_time": now, 'trade_invites':invites}}
+        market_unread=min(9999,db.execute('SELECT COUNT(*) FROM market_notifications WHERE owner=? AND read=0',(owner,)).fetchone()[0])
+        return 200, {"ok": True, "world": {"players": players, "map_key": member["map_key"], "messages": [json.loads(row["document"]) for row in rows], "cursor": cursor, "server_time": now, 'trade_invites':invites,'market_unread':market_unread}}
 
     def chat_request(self, db, identity, method, parts, body):
         require(method == "POST" and parts == ["v1", "chat", "send"], "not_found", "Unknown chat operation", 404)

@@ -31,17 +31,17 @@ class MainlineFeatures(StoryFeatures):
     def start_mainline_maintenance(self):
         self.mainline_stop = threading.Event()
         self.mainline_thread = None
-        if self.native_engine is None:
-            return
+        native_jobs_enabled=self.native_engine is not None
         def maintain():
-            while not self.mainline_stop.wait(0.25):
+            while not self.mainline_stop.wait(0.25 if native_jobs_enabled else 1.0):
                 try:
                     with self.lock:
                         if self.mainline_stop.is_set():
                             break
                         with self.connect() as database:
                             database.execute('BEGIN IMMEDIATE')
-                            self.tick_mainline_jobs(database)
+                            self.tick_trading(database)
+                            if native_jobs_enabled:self.tick_mainline_jobs(database)
                 except Exception:
                     logging.getLogger('multiplayer').exception('Native mainline maintenance failed')
                     self.mainline_stop.wait(1)
@@ -104,6 +104,8 @@ class MainlineFeatures(StoryFeatures):
         party = []
         for row in db.execute('SELECT asset_id FROM ml_party WHERE character_id=? ORDER BY slot',(character['id'],)):
             asset = self.asset(db,row[0],character['owner_id'])
+            custody=self.market_custody_info(db,asset['id'])
+            if custody:asset['custody']=custody
             party.append(asset)
         value['party'] = party
         story=db.execute("SELECT document FROM ml_story_sessions WHERE character_id=? AND status IN ('active','judging') ORDER BY expires DESC LIMIT 1",(character['id'],)).fetchone()
@@ -149,7 +151,10 @@ class MainlineFeatures(StoryFeatures):
         inputs,hashes = [],{}
         compatibility = self.catalog()['compatibility']
         for asset in assets:
-            self.trading_asset(db,asset['id'],owner,compatibility)
+            self.market_custody_guard(db,asset['id'],owner,operation)
+            if operation=='ev' and params.get('reduce'):
+                self.market_custody_guard(db,asset['id'],owner,'ev_reduce')
+            self.trading_asset(db,asset['id'],owner,compatibility,allow_custody=True)
             assigned = self.mainline_assignment(db,asset['id'])
             require(assigned is None or assigned['character_id']==character['id'],'asset_assigned','Switch to the character currently using this asset',409)
             current = self.lock_asset(db,asset['id'],owner,reference)
@@ -517,9 +522,13 @@ class MainlineFeatures(StoryFeatures):
         obj(body,{'request_id','operation','asset_ids','params','compatibility'},{'request_id','operation','asset_ids','params','compatibility'})
         self.trading_compatibility(body['compatibility'])
         operation,ids,params = body['operation'],body['asset_ids'],body['params']
+        obj(params)
         require(operation in self.mainline_config()['supported_operations'],'invalid_operation','Unsupported mainline operation')
         require(type(ids) is list and 1<=len(ids)<=6 and all(type(value) is str for value in ids) and len(set(ids))==len(ids),'invalid_assets','Choose distinct server assets')
         assets = [self.asset(db,value,owner) for value in ids]
+        for asset in assets:
+            self.market_custody_guard(db,asset['id'],owner,operation)
+            if operation=='ev' and params.get('reduce'):self.market_custody_guard(db,asset['id'],owner,'ev_reduce')
         if operation in self.STORY_OPERATIONS:
             job=self.prepare_story_operation(db,owner,character,operation,assets,params)
             return 202,{'ok':True,'job':self.mainline_job_view(job)}
@@ -645,6 +654,7 @@ class MainlineFeatures(StoryFeatures):
         if len(parts)==5 and parts[:3]==['v1','mainline','assets'] and parts[4]=='release' and method=='POST':
             obj(body,{'request_id','version'},{'request_id','version'})
             asset=self.asset(db,parts[3],owner)
+            self.market_custody_guard(db,asset['id'],owner,'release')
             require(type(body['version']) is int and body['version']==asset.get('version',1),'asset_changed','Refresh the current asset',409)
             require(self.mainline_assignment(db,asset['id']) is None and self.refresh_asset_lock(db,asset['id']) is None,'asset_locked','Deposit the Pokemon in the online PC before releasing',409)
             self.ensure_attachment_backing(db,asset)
@@ -754,6 +764,8 @@ class MainlineFeatures(StoryFeatures):
                     asset['locked'] = bool(lock)
                     asset['lock_reference'] = lock[0] if lock else None
                     asset['assigned_character'] = assigned['character_id'] if assigned else None
+                    custody=self.market_custody_info(db,asset['id'])
+                    if custody:asset['custody']=custody
                     # The selected asset's full object is fetched individually.
                     asset.pop('full',None)
                     asset.pop('lineage',None)
@@ -772,6 +784,7 @@ class MainlineFeatures(StoryFeatures):
                 ids = body['asset_ids']
                 require(type(ids) is list and len(ids)<=6 and all(type(value) is str for value in ids) and len(set(ids))==len(ids),'invalid_party','Choose up to six different assets')
                 for asset_id in ids:
+                    self.market_custody_guard(db,asset_id,owner,'party')
                     asset = self.asset(db,asset_id,owner)
                     require('full' in asset,'asset_not_prepared','Prepare this legacy asset before using it',409)
                     require(self.refresh_asset_lock(db,asset_id) is None,'asset_locked','Asset is committed to another operation',409)
@@ -793,5 +806,7 @@ class MainlineFeatures(StoryFeatures):
         if len(parts)==5 and parts[:3]==['v1','mainline','jobs'] and parts[4]=='commands' and method=='POST':
             return self.mainline_command(db,owner,parts[3],body)
         if len(parts)==4 and parts[:3]==['v1','mainline','assets'] and method=='GET':
-            return 200,{'ok':True,'asset':self.asset(db,parts[3],owner)}
+            asset=self.asset(db,parts[3],owner);custody=self.market_custody_info(db,asset['id'])
+            if custody:asset['custody']=custody
+            return 200,{'ok':True,'asset':asset}
         raise APIError(404,'not_found','Unknown mainline endpoint')

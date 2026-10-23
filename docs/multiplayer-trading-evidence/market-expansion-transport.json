@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "requests": 80,
+  "payloads": "Empty, 1, 20 and 80 strings containing exactly 512 Chinese characters each; exact response values and HTTP framing retained",
+  "android": {
+    "apk_sha256": "e8d7c5a07649f218eea99dd63d30b7758bd1757e85bf3214f927427f6c0b5248",
+    "content": "b63431ad45dbb14c5ebf3d17",
+    "platform": "Android11/API30 x86_64 owned AVD with ARM64 translation",
+    "transport": "ADB reverse to the isolated loopback server"
+  },
+  "directory": "temp/multiplayer/market-transport-a4437671ab",
+  "scope": "Actual APK over ADB reverse; emulator NAT comparison failed strict framing, no product validation bypass or deadline extension"
+}

@@ -774,7 +774,7 @@ class Store(V3Features, OnlineFeatures, EconomyFeatures, TradingFeatures):
                 transient_heartbeat = path.startswith("/v1/battles/") and path.endswith("/heartbeat") and len(path.strip("/").split("/")) == 4
                 transient_online = path.startswith(("/v1/cloud/", "/v1/world/", "/v1/chat/"))
                 mainline_read = path.startswith("/v1/mainline/") and path.endswith(("/pc/search", "/sync"))
-                mutation = method == "POST" and not mainline_read and path != "/v1/market/search" and not transient_online and not transient_heartbeat and not (path.startswith("/v1/replays/") and path.endswith("/download"))
+                mutation = method == "POST" and not mainline_read and path not in ("/v1/market/search","/v1/market/history","/v1/market/contracts/search") and not transient_online and not transient_heartbeat and not (path.startswith("/v1/replays/") and path.endswith("/download"))
                 fingerprint = None
                 if mutation:
                     request_id = string(body.get("request_id"), 8, 100, "request_id", r"[A-Za-z0-9_\-]+")

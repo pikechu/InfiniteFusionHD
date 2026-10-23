@@ -90,13 +90,19 @@ module KIFMultiplayer
       Snapshot.registry(:Item, item_id)
       validate_listing(@client.request("POST", "/v1/market/listings", {"kind" => "item", "item_id" => item_id, "quantity" => item_quantity(quantity, 1), "unit_price" => amount(unit_price, 1), "compatibility" => @client.compatibility})["listing"])
     end
-    def buy(value)
+    def buy(value, quantity = nil)
       validate_listing(value)
       check(value["status"] == "active" && value["seller_id"] != @client.player_id, "商品已结束或属于自己。")
       check(value["compatibility"] == @client.compatibility, "商品与当前游戏数据版本不一致。")
-      response = @client.request("POST", "/v1/market/listings/#{value['id']}/buy", {"revision" => value["revision"], "price" => value["price"], "compatibility" => @client.compatibility})
+      payload={"revision" => value["revision"], "price" => value["price"], "compatibility" => @client.compatibility}
+      if quantity
+        check(value['kind']=='item' && quantity.is_a?(Integer) && quantity.between?(1,value['quantity']))
+        payload['quantity']=quantity;payload['price']=quantity*value['unit_price']
+      end
+      response = @client.request("POST", "/v1/market/listings/#{value['id']}/buy", payload)
       order = response["order"]
-      check(order.is_a?(Hash) && order["listing_id"] == value["id"] && order["asset_id"] == value["asset_id"] && order["buyer_id"] == @client.player_id && order["price"] == value["price"])
+      check(order.is_a?(Hash) && order["listing_id"] == value["id"] && order["asset_id"] == value["asset_id"] && order["buyer_id"] == @client.player_id && order["price"] == payload['price'])
+      check(order['quantity']==quantity) if quantity
       identifier(order["id"])
       response
     end

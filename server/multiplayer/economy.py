@@ -99,4 +99,5 @@ class EconomyFeatures:
         drift = db.execute("SELECT w.owner FROM wallet_accounts w LEFT JOIN ledger_entries e ON e.owner=w.owner GROUP BY w.owner HAVING w.balance<>COALESCE(SUM(e.amount),0)").fetchall()
         overspent = db.execute("SELECT h.owner FROM wallet_holds h LEFT JOIN wallet_accounts w ON w.owner=h.owner GROUP BY h.owner HAVING SUM(h.amount)>COALESCE(w.balance,0)").fetchall()
         inventory = self.inventory_audit(db)
-        return {"ok": not (unbalanced or drift or overspent) and inventory["ok"], "unbalanced": [r[0] for r in unbalanced], "wallet_drift": [r[0] for r in drift], "overreserved": [r[0] for r in overspent], "inventory": inventory}
+        market = self.market_extensions_audit(db)
+        return {"ok": not (unbalanced or drift or overspent) and inventory["ok"] and market['ok'], "unbalanced": [r[0] for r in unbalanced], "wallet_drift": [r[0] for r in drift], "overreserved": [r[0] for r in overspent], "inventory": inventory,'market':market}

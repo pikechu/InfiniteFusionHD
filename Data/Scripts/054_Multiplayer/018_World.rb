@@ -1,6 +1,6 @@
 module KIFMultiplayer
   class WorldSession
-    attr_reader :players, :messages, :map_key, :error, :revision, :client, :trade_invites
+    attr_reader :players, :messages, :map_key, :error, :revision, :client, :trade_invites, :market_unread
     def initialize(client, compatibility, session_id = nil)
       @client, @compatibility = client, compatibility
       @session_id = session_id || KIFMultiplayer.operation_id
@@ -8,6 +8,7 @@ module KIFMultiplayer
       @io, @joined, @closed = AsyncRequest.new(client), false, false
       @players, @messages, @outbox, @cursor, @seq, @revision = [], [], [], 0, 0, 0
       @trade_invites = []
+      @market_unread = 0
       @next_poll = 0
     end
     def position
@@ -53,6 +54,7 @@ module KIFMultiplayer
       check(ids.uniq.length == ids.length && !ids.include?(@owner))
       world["messages"].each { |message| validate_message(message) }
       invites = world["trade_invites"] || []
+      check(Snapshot.number(world.fetch('market_unread',0),0,9999))
       check(invites.is_a?(Array) && invites.length <= 5)
       invites.each do |invite|
         check(invite.is_a?(Hash) && invite["id"].is_a?(String) && invite["id"] =~ /\A[A-Za-z0-9_-]{1,80}\z/)
@@ -136,6 +138,7 @@ module KIFMultiplayer
             invitations = world["trade_invites"] || []
             @revision += 1 if invitations != @trade_invites
             @trade_invites = invitations
+            @market_unread=world.fetch('market_unread',0)
             if same_map?(@sent_position, current)
               @players, @map_key, @cursor = world["players"], world["map_key"], world["cursor"]
             elsif @sent_position.nil? && current.nil?
@@ -310,6 +313,7 @@ module KIFMultiplayer
         lines = session.visible_messages.last(2)
         status = cloud && cloud.error ? "云存档待同步：#{cloud.error.message}" : (session.error ? "地图连接中断，正在重连…" : "在线 · 同地图 #{players.length + 1} 人 · 暂停菜单 → 聊天")
         status = "收到 #{session.trade_invites.length} 个交易邀请 · 暂停 → 交易中心" if !session.error && !(cloud && cloud.error) && !session.trade_invites.empty?
+        status = "交易中心有 #{session.market_unread} 条未读提醒 · 更多交易功能 → 站内通知" if !session.error && !(cloud && cloud.error) && session.trade_invites.empty? && session.market_unread>0
         key = [status, lines.map { |message| message["id"] }, Graphics.height]
         return if key == @drawn
         @drawn = key

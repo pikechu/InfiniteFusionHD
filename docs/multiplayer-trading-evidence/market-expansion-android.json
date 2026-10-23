@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "host": {
+    "passed": true,
+    "pid": 27436,
+    "checks": [
+      "real game extension menus exit on their native cancel sentinel",
+      "partial purchase leaves exactly seven units with current price",
+      "saved search produces a durable arrival notification",
+      "actual reciprocal trades are excluded from public price samples",
+      "mail transfers the existing Pokemon instead of copying it",
+      "funded item order fills through two real client supplies",
+      "real server native cultivation raises the original training asset to its goal",
+      "rental returns the same original identity after native gameplay",
+      "fixed repayment closes a real funded collateral loan",
+      "outbid and higher funded bid settle at the final server price",
+      "server expiry settles the agreed collateral default",
+      "completed host flows release all wallet reservations"
+    ],
+    "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8"
+  },
+  "guest": {
+    "passed": true,
+    "pid": 19342,
+    "checks": [
+      "partial purchase response loss keeps its durable operation",
+      "new process recovers a partial purchase without a second debit",
+      "partial recovery owns exactly the purchased item quantity",
+      "duplicate mail claim preserves one Pokemon and exact attachment deliveries",
+      "a displaced bidder receives a persistent notification",
+      "training worker consumes its own candy through the actual native engine",
+      "verified training goal pays the promised reward exactly once",
+      "actual client cannot sell a Pokemon held under a rental",
+      "rental client renders its actual compiled encounter map",
+      "rented Pokemon executes legal commands in a real native wild battle",
+      "rental return removes the temporary Pokemon from the borrower party",
+      "winning auction transfers the original Pokemon to the funded bidder",
+      "default cannot leave the collateral usable by its former borrower",
+      "completed guest flows release all wallet reservations"
+    ],
+    "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8"
+  },
+  "restarted_after_committed_partial_purchase": true,
+  "counts": {
+    "hosted_assets": 8,
+    "market_orders": 6,
+    "market_contracts": 7,
+    "market_custody": 0,
+    "market_contract_bids": 3,
+    "asset_locks": 0,
+    "wallet_holds": 0,
+    "item_holds": 0
+  },
+  "wallets": {
+    "host": {
+      "owner_id": "p_3f7bbb45998a7a2eb1b00fd3",
+      "currency": "LINK",
+      "balance": 198800,
+      "reserved": 0,
+      "available": 198800,
+      "version": 22
+    },
+    "guest": {
+      "owner_id": "p_8c33c86b3695ae9b0a96c7cc",
+      "currency": "LINK",
+      "balance": 202300,
+      "reserved": 0,
+      "available": 202300,
+      "version": 19
+    },
+    "rival": {
+      "owner_id": "p_67296fbc5c48a82d2210a5b1",
+      "currency": "LINK",
+      "balance": 200000,
+      "reserved": 0,
+      "available": 200000,
+      "version": 1
+    }
+  },
+  "audit": {
+    "ok": true,
+    "unbalanced": [],
+    "wallet_drift": [],
+    "overreserved": [],
+    "inventory": {
+      "ok": true,
+      "unbalanced": [],
+      "quantity_drift": [],
+      "overreserved": []
+    },
+    "market": {
+      "ok": true,
+      "cash_drift": [],
+      "contract_issues": []
+    }
+  },
+  "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8",
+  "directory": "temp/multiplayer/market-extension-ae5bfab57e",
+  "scope": "Actual Windows host and full Android APK guest with real native cultivation/battle; third bidder uses HTTP; deadline offsets limited to the isolated server. No public or physical-phone claim.",
+  "android": {
+    "apk_sha256": "e8d7c5a07649f218eea99dd63d30b7758bd1757e85bf3214f927427f6c0b5248",
+    "content": "b63431ad45dbb14c5ebf3d17",
+    "platform": "Android11/API30 x86_64 owned AVD with ARM64 translation",
+    "transport": "ADB reverse to the isolated loopback server"
+  }
+}

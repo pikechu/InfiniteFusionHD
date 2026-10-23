@@ -126,8 +126,8 @@ module KIFMultiplayer
       loop do
         wallet = @trading.wallet
         heading = "交易中心 · 托管资产封测\n联机币 #{wallet['available']}（预留 #{wallet['reserved']}）\n精灵和道具均保存在服务器。"
-        index = choose(heading, ["全球精灵市场", "全球道具市场", "出售", "我的挂牌", "面对面交易", "待领取", "我的联机道具", "交易记录", "恢复断线操作", "服务器托管收藏箱", "交易邀请设置", "托管角色与培养", "返回"])
-        return if index < 0 || index >= 12
+        index = choose(heading, ["全球精灵市场", "全球道具市场", "出售", "我的挂牌", "面对面交易", "待领取", "我的联机道具", "交易记录", "恢复断线操作", "服务器托管收藏箱", "交易邀请设置", "托管角色与培养", "更多交易功能", "返回"])
+        return if index < 0 || index >= 13
         @ui.perform do
           case index
           when 0 then market
@@ -147,6 +147,7 @@ module KIFMultiplayer
           when 9 then KIFMultiplayer.open_collection_menu(@client)
           when 10 then preferences
           when 11 then KIFMultiplayer.open_mainline_menu(@client)
+          when 12 then TradingExtrasUI.new(@client).main
           end
         end
       end
@@ -212,14 +213,14 @@ module KIFMultiplayer
         end
       end
     end
-    def market(category = "pokemon")
-      filters, sort, cursor = {"category" => category}, "price_asc", nil
+    def market(category = "pokemon", initial_filters = nil, initial_sort = 'price_asc')
+      filters, sort, cursor = initial_filters || {"category" => category}, initial_sort, nil
       loop do
         page = @trading.search(filters, sort, cursor)
         values = page["listings"]
         actions = values.map { |value| listing_label(value) }
-        index = choose("全球#{category == 'item' ? '道具' : '精灵'}市场 · 联机币\n#{values.length} 条", actions + ["下一页", "回到第一页", "筛选", "排序", "返回"])
-        return if index < 0 || index >= actions.length + 4
+        index = choose("全球#{category == 'item' ? '道具' : '精灵'}市场 · 联机币\n#{values.length} 条", actions + ["下一页", "回到第一页", "筛选", "排序", "收藏此搜索", "返回"])
+        return if index < 0 || index >= actions.length + 5
         if index < actions.length
           listing_menu(values[index])
         elsif index == actions.length
@@ -228,6 +229,8 @@ module KIFMultiplayer
           cursor = nil
         elsif index == actions.length + 2
           filters, cursor = filters_menu(filters), nil
+        elsif index == actions.length + 4
+          TradingExtrasUI.new(@client).save_search(filters,sort)
         else
           selected = choose("排序", ["价格从低到高", "价格从高到低", "最新上架", "即将到期", "等级从高到低", "IV 总和从高到低", "返回"])
           sort = %w[price_asc price_desc newest expiring level_desc iv_desc][selected] if selected >= 0 && selected < 6
@@ -257,8 +260,12 @@ module KIFMultiplayer
             pbMessage("已撤单，请到待领取收纳原资产。")
           else
             inspect_listing(value)
-            next unless pbConfirmMessage("支付整单总价 #{value['price']} 联机币购买？\n成交后保存在服务器待领取。")
-            result = @trading.buy(value)
+            quantity=value['kind']=='item' ? number('购买数量；留空返回',value['quantity'],1) : nil
+            next if value['kind']=='item' && quantity.nil?
+            raise Error,'购买数量超过剩余库存。' if quantity && quantity>value['quantity']
+            total=quantity ? quantity*value['unit_price'] : value['price']
+            next unless pbConfirmMessage("支付 #{total} 联机币#{quantity ? "购买#{quantity}件" : '购买精灵'}？\n成交后保存在服务器待领取。")
+            result = @trading.buy(value,quantity)
             pbMessage("成交 #{text(result['order']['id'])}。资产已归你所有，请到待领取收纳。")
           end
           return

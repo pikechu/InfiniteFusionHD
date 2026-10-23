@@ -141,6 +141,7 @@ class V3Features:
         return json.loads(row["document"])
 
     def lock_asset(self, db, asset_id, owner, reference):
+        self.market_custody_guard(db,asset_id,owner,'inspect' if reference.startswith('mainline:') else 'trade')
         asset = self.asset(db, asset_id, owner)
         if not reference.startswith("mainline:"):
             require(self.mainline_assignment(db, asset_id) is None, "asset_in_party", "Move this asset to the online PC before trading", 409)
@@ -159,6 +160,8 @@ class V3Features:
             self.refresh_trading_lock(db, old["reference"])
         elif old and old["reference"].startswith("mainline:"):
             self.refresh_mainline_lock(db, old["reference"])
+        elif old and old['reference'].startswith('contract:'):
+            self.market_contract(db,old['reference'].split(':',1)[1])
         return db.execute("SELECT reference FROM asset_locks WHERE asset_id=?", (asset_id,)).fetchone()
 
     def transfer_asset(self, db, asset_id, old_owner, new_owner, reference):
@@ -182,6 +185,8 @@ class V3Features:
                 lock = self.refresh_asset_lock(db, asset["id"])
                 asset["locked"] = bool(lock)
                 asset["lock_reference"] = lock["reference"] if lock else None
+                custody=db.execute('SELECT contract_id,kind,expires FROM market_custody WHERE asset_id=?',(asset['id'],)).fetchone()
+                if custody:asset.update(locked=True,lock_reference='custody:'+custody['contract_id'],custody=dict(custody))
                 assigned = self.mainline_assignment(db, asset["id"])
                 if assigned is not None:
                     asset.update(locked=True, lock_reference="party:" + assigned["character_id"], assigned_character=assigned["character_id"])

@@ -9,7 +9,7 @@ from production_data import SCHEMA_VERSION
 
 
 def migrate(database, backup):
-    """Offline additive v1->v2 migration; keep a complete, exclusive backup."""
+    """Offline schema migration with a complete backup before any recovery/write."""
     from production_ops import snapshot
     database, backup = Path(database).resolve(), Path(backup).resolve()
     if not database.is_file() or backup.exists() or database == backup:

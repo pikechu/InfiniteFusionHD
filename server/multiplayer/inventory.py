@@ -136,6 +136,7 @@ class InventoryFeatures:
         listing = {'id':listing_id,'kind':'item','seller_id':owner,'asset_id':'itm_'+item['id'],'asset_rules_hash':self.asset_contract(self.catalog()),'item_id':item['id'],'item':item,'quantity':quantity,'unit_price':unit_price,'price':total,'fee':fee,'currency':'LINK','status':'active','revision':1,'created_at':self.clock(),'expires_at':self.clock()+7*86400,'snapshot':{},'compatibility':compatibility}
         db.execute('INSERT INTO market_listings VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',(listing_id,owner,listing['asset_id'],'active',total,fee,1,self.clock(),listing['expires_at'],item['id'],0,'',0,0,'{}',dumps(listing)))
         self.trading_event(db,'listed_'+listing_id,[owner],'listed',listing)
+        self.market_alerts(db,listing)
         return 201, {'ok':True,'listing':listing,'wallet':self.wallet(db,owner)}
 
     def close_item_listing(self, db, listing, status):
@@ -149,14 +150,18 @@ class InventoryFeatures:
         self.trading_event(db,status+'_'+listing['id'],[listing['seller_id']],status,listing)
         return listing
 
-    def buy_item_listing(self, db, owner, listing, order_id):
+    def buy_item_listing(self, db, owner, listing, order_id,quantity=None):
         self.inventory_item(listing['item_id'],listing['compatibility'])
         reference = 'market:'+listing['id']
         row = db.execute('SELECT quantity FROM item_holds WHERE owner=? AND reference=? AND item_id=?',(listing['seller_id'],reference,listing['item_id'])).fetchone()
         require(row and row[0] == listing['quantity'],'item_hold_lost','Listing item reservation differs',409)
+        quantity=listing['quantity'] if quantity is None else quantity
+        integer(quantity,1,listing['quantity'],'quantity')
         db.execute('DELETE FROM item_holds WHERE owner=? AND reference=?',(listing['seller_id'],reference))
-        self.post_items(db,order_id,'market_purchase',{(listing['seller_id'],listing['item_id']):-listing['quantity'],(owner,listing['item_id']):listing['quantity']},{'listing_id':listing['id']})
-        return self.new_item_delivery(db,owner,listing['item_id'],listing['quantity'],order_id,'purchase')
+        if quantity<listing['quantity']:
+            db.execute('INSERT INTO item_holds VALUES(?,?,?,?)',(listing['seller_id'],reference,listing['item_id'],listing['quantity']-quantity))
+        self.post_items(db,order_id,'market_purchase',{(listing['seller_id'],listing['item_id']):-quantity,(owner,listing['item_id']):quantity},{'listing_id':listing['id']})
+        return self.new_item_delivery(db,owner,listing['item_id'],quantity,order_id,'purchase')
 
     def inventory_audit(self, db):
         unbalanced = db.execute('SELECT transaction_id,item_id FROM item_ledger_entries GROUP BY transaction_id,item_id HAVING SUM(quantity)<>0').fetchall()

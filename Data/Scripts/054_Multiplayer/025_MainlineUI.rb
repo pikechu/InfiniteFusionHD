@@ -10,7 +10,10 @@ module KIFMultiplayer
     end
     def text(value); KIFMultiplayer.display_text(value); end
     def choose(title, choices); @ui.choose(title, choices); end
-    def label(asset); @trading_ui.label(asset); end
+    def label(asset)
+      value=@trading_ui.label(asset);custody=asset['custody']
+      value+ (custody ? " · #{custody['kind']=='rental' ? '租用' : '代练'}至UTC #{Time.at(custody['expires']).utc.strftime('%m-%d %H:%M')}" : '')
+    end
     def number(title, initial = 1); @trading_ui.number(title, initial, 1); end
     def main
       config = @sdk.config

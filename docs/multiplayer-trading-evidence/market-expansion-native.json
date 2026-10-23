@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "host": {
+    "passed": true,
+    "pid": 7884,
+    "checks": [
+      "real game extension menus exit on their native cancel sentinel",
+      "partial purchase leaves exactly seven units with current price",
+      "saved search produces a durable arrival notification",
+      "actual reciprocal trades are excluded from public price samples",
+      "mail transfers the existing Pokemon instead of copying it",
+      "funded item order fills through two real client supplies",
+      "real server native cultivation raises the original training asset to its goal",
+      "rental returns the same original identity after native gameplay",
+      "fixed repayment closes a real funded collateral loan",
+      "outbid and higher funded bid settle at the final server price",
+      "server expiry settles the agreed collateral default",
+      "completed host flows release all wallet reservations"
+    ],
+    "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8"
+  },
+  "guest": {
+    "passed": true,
+    "pid": 18304,
+    "checks": [
+      "partial purchase response loss keeps its durable operation",
+      "new process recovers a partial purchase without a second debit",
+      "partial recovery owns exactly the purchased item quantity",
+      "duplicate mail claim preserves one Pokemon and exact attachment deliveries",
+      "a displaced bidder receives a persistent notification",
+      "training worker consumes its own candy through the actual native engine",
+      "verified training goal pays the promised reward exactly once",
+      "actual client cannot sell a Pokemon held under a rental",
+      "rented Pokemon executes legal commands in a real native wild battle",
+      "rental return removes the temporary Pokemon from the borrower party",
+      "winning auction transfers the original Pokemon to the funded bidder",
+      "default cannot leave the collateral usable by its former borrower",
+      "completed guest flows release all wallet reservations"
+    ],
+    "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8"
+  },
+  "restarted_after_committed_partial_purchase": true,
+  "counts": {
+    "hosted_assets": 8,
+    "market_orders": 6,
+    "market_contracts": 7,
+    "market_custody": 0,
+    "market_contract_bids": 3,
+    "asset_locks": 0,
+    "wallet_holds": 0,
+    "item_holds": 0
+  },
+  "wallets": {
+    "host": {
+      "owner_id": "p_0e028d7bd28e8a4178c7b67c",
+      "currency": "LINK",
+      "balance": 198800,
+      "reserved": 0,
+      "available": 198800,
+      "version": 22
+    },
+    "guest": {
+      "owner_id": "p_740ec1d967cd9d3aaf75d0b0",
+      "currency": "LINK",
+      "balance": 202300,
+      "reserved": 0,
+      "available": 202300,
+      "version": 19
+    },
+    "rival": {
+      "owner_id": "p_17a538d58d42e09c9be41c4e",
+      "currency": "LINK",
+      "balance": 200000,
+      "reserved": 0,
+      "available": 200000,
+      "version": 1
+    }
+  },
+  "audit": {
+    "ok": true,
+    "unbalanced": [],
+    "wallet_drift": [],
+    "overreserved": [],
+    "inventory": {
+      "ok": true,
+      "unbalanced": [],
+      "quantity_drift": [],
+      "overreserved": []
+    },
+    "market": {
+      "ok": true,
+      "cash_drift": [],
+      "contract_issues": []
+    }
+  },
+  "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8",
+  "directory": "temp/multiplayer/market-extension-98688b6e4a",
+  "scope": "Two actual Windows Game.exe clients and real server-native training/battle; third bidder uses actual HTTP. Deadlines advanced only by this isolated server clock; no public/physical-device claim."
+}

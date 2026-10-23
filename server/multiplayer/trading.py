@@ -11,9 +11,13 @@ from pathlib import Path
 try:
     from .inventory import InventoryFeatures, bind_api as bind_inventory_api
     from .mainline import MainlineFeatures, bind_api as bind_mainline_api
+    from .market_extras import MarketExtras, bind_api as bind_extras_api
+    from .market_contracts import MarketContracts, bind_api as bind_contracts_api
 except ImportError:
     from inventory import InventoryFeatures, bind_api as bind_inventory_api
     from mainline import MainlineFeatures, bind_api as bind_mainline_api
+    from market_extras import MarketExtras, bind_api as bind_extras_api
+    from market_contracts import MarketContracts, bind_api as bind_contracts_api
 
 
 def bind_api(api):
@@ -21,20 +25,23 @@ def bind_api(api):
         globals()[name] = api[name]
     bind_inventory_api(api)
     bind_mainline_api(api)
+    bind_extras_api(api)
+    bind_contracts_api(api)
 
 
-class TradingFeatures(InventoryFeatures, MainlineFeatures):
+class TradingFeatures(InventoryFeatures, MainlineFeatures, MarketExtras, MarketContracts):
     def init_trading(self, db):
         self.catalog_history_path = Path(__file__).parent / 'catalog-asset-history-v1.json'
         self.init_economy(db)
         self.init_inventory(db)
+        self.init_market_extras(db)
         db.executescript("""
             CREATE TABLE IF NOT EXISTS market_listings(id TEXT PRIMARY KEY,seller TEXT NOT NULL,asset_id TEXT NOT NULL,status TEXT NOT NULL,price INTEGER NOT NULL,fee INTEGER NOT NULL,revision INTEGER NOT NULL,created REAL NOT NULL,expires REAL NOT NULL,species TEXT NOT NULL,level INTEGER NOT NULL,nature TEXT NOT NULL,shiny INTEGER NOT NULL,iv_total INTEGER NOT NULL,snapshot TEXT NOT NULL,document TEXT NOT NULL);
             CREATE INDEX IF NOT EXISTS market_search ON market_listings(status,price,id);
             CREATE INDEX IF NOT EXISTS market_species ON market_listings(status,species,price);
             CREATE INDEX IF NOT EXISTS market_seller ON market_listings(seller,status);
             CREATE INDEX IF NOT EXISTS market_expiry ON market_listings(status,expires);
-            CREATE TABLE IF NOT EXISTS market_orders(id TEXT PRIMARY KEY,listing_id TEXT UNIQUE NOT NULL,buyer TEXT NOT NULL,seller TEXT NOT NULL,document TEXT NOT NULL,created REAL NOT NULL);
+            CREATE TABLE IF NOT EXISTS market_orders(id TEXT PRIMARY KEY,listing_id TEXT NOT NULL,buyer TEXT NOT NULL,seller TEXT NOT NULL,document TEXT NOT NULL,created REAL NOT NULL);
             CREATE TABLE IF NOT EXISTS trading_deliveries(id TEXT PRIMARY KEY,owner TEXT NOT NULL,event_id TEXT NOT NULL,asset_id TEXT NOT NULL,status TEXT NOT NULL,document TEXT NOT NULL,created REAL NOT NULL,UNIQUE(event_id,asset_id));
             CREATE INDEX IF NOT EXISTS deliveries_owner ON trading_deliveries(owner,status,created);
             CREATE TABLE IF NOT EXISTS exchange_sessions(id TEXT PRIMARY KEY,host TEXT NOT NULL,guest TEXT NOT NULL,status TEXT NOT NULL,expires REAL NOT NULL,idle REAL NOT NULL,document TEXT NOT NULL);
@@ -44,6 +51,8 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
             CREATE INDEX IF NOT EXISTS trading_history ON trading_events(owner,created,id);
             CREATE TABLE IF NOT EXISTS trading_preferences(owner TEXT PRIMARY KEY,document TEXT NOT NULL);
         """)
+        self.upgrade_market_orders(db)
+        self.init_market_contracts(db)
         self.init_mainline(db)
 
     def trading_account(self, db, owner, writing=False):
@@ -113,7 +122,8 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
             candidates += history['catalogs']
         return next((candidate for candidate in candidates if digest(dumps(candidate)) == asset.get('catalog_hash')), None)
 
-    def trading_asset(self, db, asset_id, owner, compatibility):
+    def trading_asset(self, db, asset_id, owner, compatibility,allow_custody=False):
+        self.market_custody_guard(db,asset_id,owner,'inspect' if allow_custody else 'trade')
         asset = self.asset(db, asset_id, owner)
         require(asset.get("source") in ("server_catalog","server_managed") and asset.get("catalog_version") == 1, "untrusted_asset", "Only server-managed assets can be traded", 409)
         catalog = self.catalog(compatibility)
@@ -157,7 +167,7 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
         return listing
 
     def save_listing(self, db, listing):
-        db.execute("UPDATE market_listings SET status=?,revision=?,document=? WHERE id=?", (listing["status"], listing["revision"], dumps(listing), listing["id"]))
+        db.execute("UPDATE market_listings SET status=?,price=?,revision=?,document=? WHERE id=?", (listing["status"],listing['price'], listing["revision"], dumps(listing), listing["id"]))
 
     def market_listing(self, db, listing_id, upgrade=True):
         string(listing_id, 1, 80, "listing_id", r"[A-Za-z0-9_-]+")
@@ -214,6 +224,8 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
         return session
 
     def tick_trading(self, db):
+        self.tick_market_extras(db)
+        self.tick_market_contracts(db)
         for row in db.execute("SELECT id FROM market_listings WHERE status='active' AND expires<=? LIMIT 200", (self.clock(),)).fetchall():
             self.market_listing(db, row[0])
         for row in db.execute("SELECT id FROM exchange_sessions WHERE status NOT IN ('committed','cancelled','expired') AND (expires<=? OR idle<=?) LIMIT 200", (self.clock(), self.clock())).fetchall():
@@ -225,11 +237,13 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
         elif reference.startswith("exchange:"):
             self.exchange_session(db, reference.split(":", 1)[1])
 
-    def market_search(self, db, body):
+    def market_search(self, db, body, listing_id=None):
         obj(body, {"filters", "sort", "cursor"})
         filters = body.get("filters", {})
         obj(filters, {"category", "item_id", "species", "nature", "ability", "gender", "shiny", "min_level", "max_level", "min_price", "max_price", "iv_min", "iv_exact", "min_perfect", "head", "body", "fused"})
         sql, args = ["status='active'", "expires> ?"], [self.clock()]
+        if listing_id is not None:
+            sql.append('id=?');args.append(listing_id)
         category = filters.get('category','pokemon')
         require(category in ('pokemon','item'),'invalid_category','Choose Pokemon or items')
         sql.append("COALESCE(json_extract(document,'$.kind'),'pokemon')=?")
@@ -310,30 +324,39 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
         listing = {"id": listing_id, "kind":"pokemon", "seller_id": owner, "asset_id": asset["id"], "asset_rules_hash":asset['asset_rules_hash'], "status": "active", "price": price, "fee": fee, "currency": "LINK", "revision": 1, "created_at": self.clock(), "expires_at": self.clock() + 7 * 86400, "snapshot": copy.deepcopy(snapshot), "compatibility": compatibility}
         db.execute("INSERT INTO market_listings VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (listing_id, owner, asset["id"], "active", price, fee, 1, self.clock(), listing["expires_at"], snapshot["species"], snapshot["level"], snapshot["nature"], int(snapshot["shiny"]), sum(snapshot["iv"].values()), dumps(snapshot), dumps(listing)))
         self.trading_event(db, "listed_" + listing_id, [owner], "listed", listing)
+        self.market_alerts(db,listing)
         return 201, {"ok": True, "listing": listing, "wallet": self.wallet(db, owner)}
 
     def buy_listing(self, db, owner, listing, body):
-        obj(body, {"request_id", "revision", "price", "compatibility"}, {"request_id", "revision", "price", "compatibility"})
+        obj(body, {"request_id", "revision", "price", "compatibility", "quantity"}, {"request_id", "revision", "price", "compatibility"})
         require(listing["status"] == "active", "listing_closed", "Listing has already sold, expired or been cancelled", 409)
         require(owner != listing["seller_id"], "own_listing", "Cannot purchase your own listing", 409)
-        require(type(body["revision"]) is int and body["revision"] == listing["revision"] and type(body["price"]) is int and body["price"] == listing["price"], "listing_changed", "Inspect the current listing before purchasing", 409)
+        require(type(body['revision']) is int and body['revision']==listing['revision'],'listing_changed','Inspect the current listing before purchasing',409)
+        quantity=integer(body.get('quantity',listing.get('quantity',1)),1,listing.get('quantity',1),'quantity')
+        total=quantity*listing['unit_price'] if listing.get('kind')=='item' else listing['price']
+        require(type(body["revision"]) is int and body["revision"] == listing["revision"] and type(body["price"]) is int and body["price"] == total, "listing_changed", "Inspect the current listing before purchasing", 409)
         require(self.trading_compatibility(body["compatibility"]) == listing["compatibility"], "asset_incompatible", "Listing and client versions differ", 409)
         if listing.get('kind') != 'item':
             self.trading_asset(db, listing["asset_id"], listing["seller_id"], listing["compatibility"])
         order_id = "ord_" + secrets.token_hex(16)
-        self.post_money(db, order_id, "market_purchase", {owner: -listing["price"], listing["seller_id"]: listing["price"]}, {"listing_id": listing["id"]})
+        self.post_money(db, order_id, "market_purchase", {owner: -total, listing["seller_id"]: total}, {"listing_id": listing["id"]})
         if listing.get('kind') == 'item':
-            delivery = self.buy_item_listing(db,owner,listing,order_id)
+            delivery = self.buy_item_listing(db,owner,listing,order_id,quantity)
         else:
             self.transfer_asset(db, listing["asset_id"], listing["seller_id"], owner, "market:" + listing["id"])
             delivery = self.new_delivery(db, owner, listing["asset_id"], order_id, "purchase")
-        order = {"id": order_id, "listing_id": listing["id"], "asset_id": listing["asset_id"], "buyer_id": owner, "seller_id": listing["seller_id"], "price": listing["price"], "currency": "LINK", "delivery_id": delivery["id"], "created_at": self.clock()}
+        order = {"id": order_id, "listing_id": listing["id"], "asset_id": listing["asset_id"], "buyer_id": owner, "seller_id": listing["seller_id"], "price": total, "currency": "LINK", "delivery_id": delivery["id"], "created_at": self.clock(), 'asset_rules_hash':listing['asset_rules_hash'],'snapshot':listing['snapshot']}
         if listing.get('kind') == 'item':
-            order.update(kind='item',item_id=listing['item_id'],quantity=listing['quantity'],unit_price=listing['unit_price'])
-        listing.update(status="sold", revision=listing["revision"] + 1, order_id=order_id)
+            order.update(kind='item',item_id=listing['item_id'],quantity=quantity,unit_price=listing['unit_price'])
+            listing.setdefault('original_quantity',listing['quantity'])
+            listing['remaining_quantity']=listing['quantity']-quantity
+        if listing.get('remaining_quantity',0)>0:
+            listing.update(quantity=listing['remaining_quantity'],price=listing['remaining_quantity']*listing['unit_price'],revision=listing['revision']+1)
+        else:listing.update(status="sold", revision=listing["revision"] + 1, order_id=order_id)
         self.save_listing(db, listing)
         db.execute("INSERT INTO market_orders VALUES(?,?,?,?,?,?)", (order_id, listing["id"], owner, listing["seller_id"], dumps(order), self.clock()))
         self.trading_event(db, order_id, [owner, listing["seller_id"]], "purchase", order)
+        if listing['status']=='active':self.market_alerts(db,listing)
         return 200, {"ok": True, "order": order, "delivery": delivery, "wallet": self.wallet(db, owner)}
 
     def exchange_hash(self, session):
@@ -470,6 +493,7 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
         self.trading_event(db, transaction_id, [a, b], "exchange", session)
 
     def dispatch_trading(self, db, identity, method, parts, body):
+        self.tick_trading(db)
         mainline = self.dispatch_mainline(db,identity,method,parts,body)
         if mainline is not None:
             return mainline
@@ -477,7 +501,10 @@ class TradingFeatures(InventoryFeatures, MainlineFeatures):
             return None
         owner = identity["id"]
         self.trading_account(db, owner)
-        self.tick_trading(db)
+        extra=self.dispatch_market_extras(db,owner,method,parts,body)
+        if extra is not None:return extra
+        contract=self.dispatch_market_contracts(db,owner,method,parts,body)
+        if contract is not None:return contract
         if parts == ['v1','trading','preferences'] and method in ('GET','POST'):
             return self.preferences_request(db,owner,method,body)
         if method == 'GET' and parts == ['v1','inventory']:

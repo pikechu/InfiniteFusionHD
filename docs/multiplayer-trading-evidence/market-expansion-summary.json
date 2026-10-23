@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "date": "2026-10-23",
+  "schema_version": 6,
+  "data_hash": "7b2b9718b34fa89dfef2a249a80c698f54d6329a9f970aa2f473be11d98cf5a8",
+  "input_files": 519,
+  "delivered_features": [
+    "executed price history",
+    "saved searches",
+    "arrival and contract notifications",
+    "asset attachment mail",
+    "partial item fills",
+    "auctions",
+    "funded buy orders",
+    "native verified training services",
+    "playable bounded Pokemon rentals",
+    "collateral loans"
+  ],
+  "full_regression": {
+    "total": 267,
+    "passed": 266,
+    "skipped": 1,
+    "seconds": 1328.213,
+    "real_restic_backup_and_restore": true,
+    "ruby_suites": 31
+  },
+  "last_changes": {
+    "parameter_guard_and_market_tests": 27,
+    "mainline_tests": 16,
+    "mail_capacity_tests": 13,
+    "native_runtime_guard": 1,
+    "reason": "Validate nonobject native parameters, accepted-mail reachability and availability of native-backed contract types"
+  },
+  "client_contract_assertions": 17,
+  "android": {
+    "apk": "KIF-0.20.7-android.9-arm64-emulator-network-test.apk",
+    "sha256": "e8d7c5a07649f218eea99dd63d30b7758bd1757e85bf3214f927427f6c0b5248",
+    "payload": "b63431ad45dbb14c5ebf3d17",
+    "bytes": 750188848,
+    "transport": "ADB reverse to the isolated loopback server",
+    "complete_utf8_response_checks": 80
+  },
+  "evidence": {
+    "market-expansion-native": {
+      "file": "market-expansion-native.json",
+      "directory": "temp/multiplayer/market-extension-98688b6e4a"
+    },
+    "market-expansion-android": {
+      "file": "market-expansion-android.json",
+      "directory": "temp/multiplayer/market-extension-ae5bfab57e"
+    },
+    "market-expansion-upgrade": {
+      "file": "market-expansion-upgrade.json",
+      "directory": "temp/multiplayer/market-v5-upgrade-a6d370e260"
+    },
+    "market-expansion-transport": {
+      "file": "market-expansion-transport.json",
+      "directory": "temp/multiplayer/market-transport-a4437671ab"
+    }
+  },
+  "deferred_trade_features": [],
+  "boundaries": [
+    "Public-network and physical-phone acceptance remain deferred by the user",
+    "Actual native client flows are automated, not manual keyboard/touch acceptance",
+    "Windows native engine runtime required for authoritative gameplay; no production deployment"
+  ]
+}
