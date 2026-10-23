@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "date": "2026-10-23",
+  "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
+  "input_files": 518,
+  "schema_version": 5,
+  "python": {
+    "total": 241,
+    "passed": 240,
+    "skipped": 1,
+    "seconds": 663.229,
+    "real_restic_backup_and_restore": true,
+    "skip": "Windows directory-symlink permission; Linux deployment remains a separate host check"
+  },
+  "ruby_suites": 30,
+  "client_fix": "Atomic character+inventory sync; quarantine failed loaded projections; prevent overlapping sync/cloud snapshots",
+  "regression_scope": "Full backend run; all Ruby suites and real Windows/Android acceptance repeated after the final client-only sync fix",
+  "android": {
+    "apk": "KIF-0.20.7-android.9-arm64-emulator-network-test.apk",
+    "sha256": "9e3161c2a52fa424424c78feb1ef03067edbe58eda167fb7df5485795978b257",
+    "bytes": 750180656,
+    "content": "b3d06fb62e89b97bf9614db8",
+    "platform": "Android11 x86_64 AVD with ARM64 translation"
+  },
+  "evidence": {
+    "special-native": {
+      "file": "special-native.json",
+      "directory": "temp/multiplayer/native-story-9715d34036"
+    },
+    "special-http": {
+      "file": "special-http.json",
+      "directory": "temp/multiplayer/public-story-a8864455f0"
+    },
+    "special-v4-upgrade": {
+      "file": "special-v4-upgrade.json",
+      "directory": "temp/multiplayer/special-v4-upgrade-de8df75f9a"
+    },
+    "mainline-client": {
+      "file": "mainline-client.json",
+      "directory": "temp/multiplayer/mainline-client-dd906b7777"
+    },
+    "android-trading": {
+      "file": "android-trading.json",
+      "directory": "temp/multiplayer/mixed-trading-96c8ed9337"
+    },
+    "android-mainline": {
+      "file": "android-mainline.json",
+      "directory": "temp/multiplayer/mainline-client-85efe850c3"
+    }
+  },
+  "boundaries": [
+    "Public-network validation deferred explicitly by the user",
+    "No physical phone available; Android acceptance uses an owned Android11/API30 x86_64 AVD with ARM64 translation",
+    "Automated production-client flows and actual map rendering; no claim of manual touch-menu or two-physical-device acceptance",
+    "Authoritative mainline requires the Windows native game runtime; no production deployment",
+    "Price history, alerts, player asset mail and partial fills remain deferred by the design"
+  ]
+}

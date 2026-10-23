@@ -1,6 +1,7 @@
 """Own native client process against an isolated live native-authority service."""
 from pathlib import Path
-import json,os,secrets,subprocess,sys,threading,time,urllib.request,urllib.error
+import argparse,json,os,secrets,subprocess,sys,threading,time,urllib.request,urllib.error
+parser=argparse.ArgumentParser();parser.add_argument('--adb',type=Path);parser.add_argument('--serial',default='emulator-5558');args=parser.parse_args()
 root=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(root/'server/multiplayer'))
 from service import Store,make_server,PROTOCOL
@@ -43,6 +44,24 @@ try:
         time.sleep(.1)
     assert process.poll()==0,(process.poll(),stage,run)
     evidence=json.loads((run/'mainline-client-pass.json').read_text())
+    if args.adb:
+        sys.path.insert(0,str(root/'tests/multiplayer'))
+        from android_mainline_restore import restore_android
+        evidence['fresh_device']=restore_android(root,args.adb,args.serial,server.server_port,'role_'+run_id,run)
+        scenario.write_text(json.dumps(dict(directory=run.as_posix(),username='role_'+run_id,roundtrip=True)),encoding='utf-8')
+        profile='mainline-roundtrip-'+run_id
+        prepared=subprocess.run(['powershell','-NoProfile','-ExecutionPolicy','Bypass','-File',str(root/'scripts/multiplayer/prepare-runtime.ps1'),'-Profile',profile,'-CustomScript',str(root/'tests/multiplayer/mainline_restore_game.rb')],cwd=root,capture_output=True,text=True,check=True)
+        stage=Path(prepared.stdout.strip().splitlines()[-1]);configuration=stage/'mkxp.json'
+        configuration.write_text(configuration.read_text(encoding='utf-8-sig'),encoding='utf-8')
+        env=dict(os.environ,KIF_MULTIPLAYER_PROFILE=profile,KIF_MULTIPLAYER_SAVE_DIR=str(stage/'saves'),KIF_MULTIPLAYER_SERVER=url,KIF_MULTIPLAYER_SCENARIO=str(scenario))
+        with open(stage/'stdout.log','wb') as out,open(stage/'stderr.log','wb') as err:process=subprocess.Popen([str(stage/'Game.exe')],cwd=stage,env=env,stdout=out,stderr=err,**options)
+        assert process.wait(timeout=90)==0,stage
+        evidence['windows_roundtrip']=json.loads((run/'mainline-restore-pass.json').read_text())
+        evidence['directory']=run.relative_to(root).as_posix()
+        with store.connect() as db:assert store.economy_audit(db)['ok']
+        (root/'docs/multiplayer-trading-evidence/android-mainline.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        print('ANDROID_MAINLINE_RESTORE_PASS',json.dumps(evidence,ensure_ascii=False))
+        sys.exit(0)
     profile='mainline-restore-'+run_id
     prepared=subprocess.run(['powershell','-NoProfile','-ExecutionPolicy','Bypass','-File',str(root/'scripts/multiplayer/prepare-runtime.ps1'),'-Profile',profile,'-CustomScript',str(root/'tests/multiplayer/mainline_restore_game.rb')],cwd=root,capture_output=True,text=True,check=True)
     stage=Path(prepared.stdout.strip().splitlines()[-1]);configuration=stage/'mkxp.json'

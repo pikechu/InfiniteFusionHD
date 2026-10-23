@@ -11,14 +11,14 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
       def validate_prompt(prompt)
         check(prompt.is_a?(Hash) && prompt["sequence"].is_a?(Integer) && prompt["sequence"].between?(0, 999))
         state = prompt["state"]
-        check(state.is_a?(Hash) && %w[command switch].include?(state["kind"]))
-        check(state["battlers"].is_a?(Array) && state["battlers"].length <= 4)
+        check(state.is_a?(Hash) && %w[command switch safari].include?(state["kind"]))
+        check(state["battlers"].is_a?(Array) && state["battlers"].length <= 6)
         state["battlers"].each do |battler|
           Snapshot.registry(:Species, battler["species"])
           check(Snapshot.number(battler["hp"], 0, 65535) && Snapshot.number(battler["totalhp"], 1, 65535) && battler["hp"] <= battler["totalhp"])
         end
         check(state["moves"].is_a?(Array) && state["moves"].length <= 4 && state["switches"].is_a?(Array) && state["switches"].length <= 6 && state["balls"].is_a?(Array) && state["balls"].length <= 8)
-        state["moves"].each { |move| Snapshot.registry(:Move, move["id"]); check(Snapshot.number(move["index"], 0, 3) && Snapshot.number(move["pp"], 0, 1000)) }
+        state["moves"].each { |move| Snapshot.registry(:Move, move["id"]); check(Snapshot.number(move["index"], 0, 3) && Snapshot.number(move["pp"], 0, 1000));check(move['targets'].is_a?(Array) && move['targets'].length.between?(1,6) && move['targets'].all? { |value| Snapshot.number(value,-1,5) }) }
         state["switches"].each { |entry| check(Snapshot.number(entry["party_index"], 0, 5)) }
         state["balls"].each { |entry| Snapshot.registry(:Item, entry["id"]); check(Snapshot.number(entry["quantity"], 1, 99)) }
         check(state["medicine"].is_a?(Array) && state["medicine"].length<=8)
@@ -36,6 +36,10 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
         selected >= 0 && selected < values.length ? {"action" => "switch", "party_index" => values[selected]["party_index"]} : nil
       end
       def choose_command(state)
+        if state['kind']=='safari'
+          selected=@ui.choose("沙湖 · 剩余 #{state['ball_count']} 个球",['沙湖球','投饵','投石','离开战斗'])
+          return selected.between?(0,3) ? {'action'=>%w[safari_ball bait rock surrender][selected]} : nil
+        end
         return choose_switch(state) if state["kind"] == "switch"
         moves = state["moves"]
         labels = moves.map { |move| "#{text(GameData::Move.get(move['id']).name)} · PP #{move['pp']}" }
@@ -46,7 +50,16 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
         events = (state["events"] || []).last(3).map { |line| text(line) }.join("\n")
         selected = @ui.choose("服务器对战\n#{heading}\n#{events}", labels)
         return nil if selected < 0 || selected >= labels.length
-        return moves.empty? ? {"action" => "forced"} : {"action" => "move", "move_index" => moves[selected]["index"]} if selected < move_count
+        if selected<move_count
+          return {'action'=>'forced'} if moves.empty?
+          move=moves[selected];targets=move['targets'];target=targets.first
+          if targets.length>1
+            choice=@ui.choose('选择招式目标',targets.map { |id| battler=state['battlers'].find { |entry| entry['index']==id };battler ? "#{text(GameData::Species.get(battler['species']).name)} · HP #{battler['hp']}/#{battler['totalhp']}" : '自动目标' }+['返回'])
+            return nil if choice<0 || choice>=targets.length
+            target=targets[choice]
+          end
+          return {'action'=>'move','move_index'=>move['index'],'target'=>target}
+        end
         return choose_switch(state) if selected == move_count
         if selected == move_count + 1
           balls = state["balls"]
@@ -76,6 +89,7 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
               @sdk.save_intent(nil) if @sdk.intent && @sdk.intent["job_id"] == job_id
               raise Error, "服务器对战未完成，原状态与资源已保留。" if job["status"] == "failed"
               outcome = job["result"]
+              Mainline.last_battle_result=outcome if Mainline.respond_to?(:last_battle_result=)
               check(outcome.is_a?(Hash) && Snapshot.number(outcome["decision"], 1, 5))
               pbMessage((outcome["events"] || []).last(5).map { |line| text(line) }.join("\n")) unless (outcome["events"] || []).empty?
               pbMessage("服务器已保存战斗结果。捕获 #{(outcome['captured_asset_ids'] || []).length} 只，联机币变化 #{outcome['money_delta']}。")

@@ -11,6 +11,11 @@ begin
   marker = lambda { |name, value = {"passed" => true}| test.marker(path.call(name), value) }
   read = lambda { |name| test.read(path.call(name)) }
   client = KIFMultiplayer::Client.new
+  if config['cross_device']
+    marker=lambda { |name,value={'passed'=>true}| client.raw_request('POST','/fixture/'+name,value) }
+    read=lambda { |name| client.raw_request('GET','/fixture/'+name)['value'] }
+    {:@clothes=>STARTING_OUTFIT,:@hair=>'3_'+DEFAULT_OUTFIT_MALE,:@unlocked_clothes=>[],:@unlocked_hats=>[],:@unlocked_hairstyles=>[]}.each { |key,value| $Trainer.instance_variable_set(key,value) }
+  end
   original_world = test.digest
   if role == "guest" && read.call("guest-restart-required")
     test.check(!!client.profile.account["pending"], "fresh process finds durable uncertain purchase journal")
@@ -135,8 +140,27 @@ begin
   old_chatting = KIFMultiplayer::OnlineMode.chatting
   KIFMultiplayer::OnlineMode.chatting = true
   world = KIFMultiplayer::WorldSession.new(client, client.compatibility)
+  if config['cross_device']
+    test.check(test.digest==original_world,'Pokemon trading preserves the original world before renderer initialization')
+    previous_world=KIFMultiplayer::OnlineMode.world
+    KIFMultiplayer::OnlineMode.world=world
+    previous_map_scene=$scene
+    $game_player.refresh
+    $scene=Scene_Map.new;$scene.createSpritesets
+  end
   client.wait_update = proc { world.tick }
   test.wait(client, "real map presence") { world.tick; world.map_key && !world.players.empty? }
+  if config['cross_device']
+    8.times { Graphics.update;Input.update;$scene.updateSpritesets }
+    layer=$scene.spriteset.instance_variable_get(:@usersprites).find { |sprite| sprite.is_a?(KIFMultiplayer::WorldSprites) }
+    test.check(layer && layer.avatars.length==1,'native cross-device avatar rendered from real map presence')
+    bitmap=Graphics.snap_to_bitmap;bitmap.to_file(File.join(ENV.fetch('KIF_MULTIPLAYER_SAVE_DIR'),'trading-world.png'));bitmap.dispose
+    marker.call(role+'-render',{'map_key'=>world.map_key,'ruby'=>RUBY_VERSION})
+    # Scene_Map initialization updates its map trail/day-night metadata. Capture
+    # the invariant after that deliberate setup; subsequent checks do not tick
+    # story/time events while the production trading SDK performs transactions.
+    original_world=test.digest
+  end
   item_quantity = lambda do |id|
     entry = trading.inventory["items"].find { |value| value["item_id"] == id }
     entry ? entry["quantity"] : 0
@@ -196,7 +220,13 @@ begin
   client.wait_update = nil
   world.close
   KIFMultiplayer::OnlineMode.chatting = old_chatting
+  if config['cross_device']
+    $scene.disposeSpritesets
+    $scene=previous_map_scene
+    KIFMultiplayer::OnlineMode.world=previous_world
+  end
   test.check(test.digest == original_world, "managed trading leaves main player bag system and story unchanged")
+  marker.call(role+'-complete',{'pid'=>Process.pid,'wallet'=>trading.wallet,'data_hash'=>client.compatibility['data_hash'],'ruby'=>RUBY_VERSION}) if config['cross_device']
   test.log("TRADING_NATIVE_PASS role=#{role}")
   passed = true
 rescue Exception => error

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "declared story capture creates one owned asset",
+    "equivalent story context cannot claim the capture again",
+    "forged command fails without creating assets",
+    "Safari entry allocates exactly 30 bound balls for one fee",
+    "native Safari surrender preserves unthrown ball quota",
+    "leaving Safari retires its quota and activity",
+    "Sport Ball capture becomes a persisted contest candidate",
+    "contest candidate is not tradable before judging",
+    "judging creates one final asset from the original candidate",
+    "special encounter money and item ledgers balance",
+    "special activities leave no native asset locks"
+  ],
+  "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
+  "directory": "temp/multiplayer/public-story-a8864455f0",
+  "fixture": "operator seeded badges/supplies; world presence is API fixture data, not a rendered cross-device test"
+}

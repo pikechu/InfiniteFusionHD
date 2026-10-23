@@ -63,6 +63,22 @@ begin
   test.check($Trainer.party.empty?,"loading stale cloud party cannot restore a sold asset")
   test.check($Trainer.money==1900,"loading stale cloud wallet uses current settled balance")
   test.check(cloud.flush,"independent role and original role cloud uploads complete")
+  transport=client.transport;original_transport_call=transport.method(:call)
+  transport.define_singleton_method(:call) do |method,url,*args|
+    raise IOError,'Isolated projection refresh failure' if url.end_with?('/sync') && url.include?('/mainline/')
+    original_transport_call.call(method,url,*args)
+  end
+  failed=false
+  begin
+    SaveData.mark_values_as_unloaded;Game.load(old_managed)
+  rescue KIFMultiplayer::Error
+    failed=true
+  ensure
+    transport.define_singleton_method(:call) { |*args| original_transport_call.call(*args) }
+  end
+  test.check(failed && $Trainer.party.empty? && $Trainer.money==0 && $PokemonBag.pbQuantity(:POTION)==0,'failed first economic refresh cannot expose stale party wallet or server items')
+  KIFMultiplayer::Mainline.refresh
+  test.check($Trainer.party.empty? && $Trainer.money==1900,'quarantined role recovers current authority after the connection returns')
   checks=File.readlines(File.join(ENV.fetch("KIF_MULTIPLAYER_SAVE_DIR"),"feature-smoke.log")).grep(/PASS /).map { |line| line.split('PASS ',2)[1].strip }
   test.marker(File.join(directory,"mainline-client-pass.json"),{"passed"=>true,"pid"=>Process.pid,"checks"=>checks,"data_hash"=>client.compatibility['data_hash']})
   cloud.close

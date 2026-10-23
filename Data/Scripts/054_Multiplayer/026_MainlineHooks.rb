@@ -10,6 +10,7 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
             $Trainer.instance_variable_get(:@kif_mainline_owner_id) == OnlineMode.world.client.player_id
         end
         def projecting?; !!Thread.current[:kif_mainline_projection]; end
+        def synchronizing?; !!@refreshing; end
         def with_projection
           previous = Thread.current[:kif_mainline_projection]
           Thread.current[:kif_mainline_projection] = true
@@ -43,7 +44,7 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
             preview=sdk.operate(character_id,"preview_evolution",[asset],params)
             return false unless pbConfirmMessage("进化为 #{KIFMultiplayer.display_text(preview['result']['preview']['species'])} 并消耗所选道具？")
           end
-          KIFMultiplayer.with_trading_scene { sdk.operate(character_id,operation,[asset],params) }
+          KIFMultiplayer.with_trading_scene(true) { sdk.operate(character_id,operation,[asset],params) }
           refresh
           scene.pbHardRefresh if scene && scene.respond_to?(:pbHardRefresh)
           true
@@ -140,14 +141,33 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
         end
         def refresh
           return unless active?
-          KIFMultiplayer.with_trading_scene do
-            character = sdk.character(character_id)
-            inventory = TradingClient.new(client).inventory
-            apply(character, inventory)
+          return if @refreshing
+          acquired_refresh=@refreshing=true
+          @io.cancel if @io
+          @pending=nil
+          KIFMultiplayer.with_trading_scene(true) do
+            snapshot=sdk.sync(character_id)
+            apply(snapshot['character'],snapshot['inventory'])
+          end
+        ensure
+          @refreshing=false if acquired_refresh
+        end
+        def invalidate_loaded_projection
+          with_projection do
+            $Trainer.party=[]
+            $Trainer.instance_variable_set(:@money,0)
+            projected=$Trainer.instance_variable_get(:@kif_mainline_projected_items) || {}
+            ids=(($Trainer.instance_variable_get(:@kif_mainline_catalog_ids) || [])+projected.keys).uniq
+            ids.each do |id|
+              count=$PokemonBag.pbQuantity(id.to_sym)
+              $PokemonBag.pbDeleteItem(id.to_sym,count) if count>0
+            end
+            $Trainer.instance_variable_set(:@kif_mainline_projected_items,{})
+            $Trainer.instance_variable_set(:@kif_mainline_sync_version,nil)
           end
         end
         def tick
-          return if @ticking
+          return if @ticking || @refreshing
           acquired_tick=@ticking=true
           unless active?
             @io.cancel if @io
@@ -225,10 +245,19 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
         value
       end
     end
+    module MainlineCloudSaveBarrier
+      def safe_to_save?(*args)
+        return false if Mainline.projecting? || Mainline.synchronizing?
+        super
+      end
+    end
     module MainlineGameLoad
       def load(*args)
         value = super
-        Mainline.refresh if Mainline.active?
+        if Mainline.active?
+          Mainline.invalidate_loaded_projection
+          Mainline.refresh
+        end
         value
       end
     end
@@ -241,7 +270,7 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
         return super unless Mainline.active? && !Mainline.projecting? && equal?($Trainer)
         ids=Mainline.sdk.character(Mainline.character_id)['party'].map { |asset| asset['id'] }
         return if ids.empty?
-        KIFMultiplayer.with_trading_scene { Mainline.sdk.operate(Mainline.character_id,'heal',ids) }
+        KIFMultiplayer.with_trading_scene(true) { Mainline.sdk.operate(Mainline.character_id,'heal',ids) }
         Mainline.refresh
       end
     end
@@ -323,6 +352,7 @@ unless ENV["KIF_SERVER_ENGINE"] == "1"
     end
   end
   Graphics.singleton_class.prepend(KIFMultiplayer::MainlineGraphics) if defined?(Graphics)
+  KIFMultiplayer::OnlineMode.singleton_class.prepend(KIFMultiplayer::MainlineCloudSaveBarrier)
   Game.singleton_class.prepend(KIFMultiplayer::MainlineGameLoad) if defined?(Game)
   Player.prepend(KIFMultiplayer::MainlineMoneyGuard) if defined?(Player)
   PokemonBag.prepend(KIFMultiplayer::MainlineBagGuard) if defined?(PokemonBag)

@@ -10,6 +10,8 @@ class MainlineFixtureTransport
   def call(method,url,body,token,timeout)
     value=if url.include?('/operations/')
       {'ok'=>true,'status'=>'completed','http_status'=>202,'response'=>@committed}
+    elsif url.end_with?('/sync')
+      @response
     elsif method=='POST'
       @writes+=1;@committed=@response
       if @lose;@lose=false;raise IOError,'native response lost after commit';end
@@ -30,11 +32,15 @@ profile=KIFMultiplayer::Profile.new(File.join(TRADE_TEST_DIR,'mainline-profile.j
 profile.account.merge!('identity'=>{'id'=>'p_native','nickname'=>'Native'},'token'=>'test-only','connected'=>true)
 profile.save
 transport=MainlineFixtureTransport.new;client=KIFMultiplayer::Client.new(profile,transport)
+client.define_singleton_method(:compatibility) { {'protocol'=>2,'game_version'=>'fixture','data_hash'=>'fixture','mods_hash'=>'none','rules_version'=>'friendly-singles-v1'} }
 sdk=KIFMultiplayer::MainlineClient.new(client)
 wallet={'owner_id'=>client.player_id,'currency'=>'LINK','balance'=>1000,'available'=>1000,'reserved'=>0,'version'=>1}
 asset={'id'=>'pkm_native','owner_id'=>client.player_id,'source'=>'server_managed','catalog_version'=>1,'version'=>1,'snapshot'=>trade_test_snapshot(100)['pokemon'],'full'=>trade_test_snapshot(100)}
 role={'id'=>'chr_native','owner_id'=>client.player_id,'name'=>'Online','revision'=>1,'party'=>[asset],'wallet'=>wallet}
 assert.call(sdk.validate_character(role)==role,'role validates complete authoritative party and wallet')
+transport.response={'ok'=>true,'character'=>role,'inventory'=>{'owner_id'=>client.player_id,'version'=>1,'items'=>[],'catalog_ids'=>[]}}
+synced=sdk.sync(role['id'])
+assert.call(synced['character']==role && synced['inventory']['items']==[] && transport.writes==0 && !profile.account['pending'],'atomic role and inventory sync does not create an economic journal')
 reject.call('other account role rejected') { sdk.validate_character(role.merge('owner_id'=>'p_other')) }
 reject.call('duplicate party identity rejected') { sdk.validate_character(role.merge('party'=>[asset,asset])) }
 reject.call('party without complete data rejected') { sdk.validate_character(role.merge('party'=>[asset.reject { |key,_| key=='full' }])) }

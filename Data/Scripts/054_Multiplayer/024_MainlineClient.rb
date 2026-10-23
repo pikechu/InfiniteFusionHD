@@ -40,6 +40,10 @@ module KIFMultiplayer
     def character(id)
       validate_character(@client.request("GET", "/v1/mainline/characters/#{identifier(id)}")["character"])
     end
+    def sync(id)
+      value=@client.raw_request('POST',"/v1/mainline/characters/#{identifier(id)}/sync",{'compatibility'=>@client.compatibility})
+      {'character'=>validate_character(value['character']),'inventory'=>@trading.validate_inventory(value['inventory'])}
+    end
     def asset(id)
       validate_asset(@client.request("GET", "/v1/mainline/assets/#{identifier(id)}")["asset"])
     end

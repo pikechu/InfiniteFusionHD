@@ -25,11 +25,16 @@ module KIFServerBattle
 
   class Engine < KIFMultiplayerAIBattle
     attr_reader :captured, :events
-    def initialize(scene, party, foes, player, opponent, controller, reward_enabled)
+    def initialize(scene, party, foes, player, opponent, controller, reward_enabled,params={})
       super(scene, party, foes, player, opponent, controller)
       @internalBattle, @expGain, @moneyGain = true, true, reward_enabled
       @canRun, @canLose, @showAnims, @switchStyle = true, true, false, false
       @captured, @events = [], []
+      @native_params=params
+      @expGain=false if params['no_exp']
+      setBattleMode(params.fetch('battle_size','single'))
+      @rules['alwaysflee']=true if params['kind']=='roamer'
+      @canRun=params.fetch('can_run',true)
     end
     def pbGainExp; PokeBattle_Battle.instance_method(:pbGainExp).bind(self).call; end
     def pbGainMoney; PokeBattle_Battle.instance_method(:pbGainMoney).bind(self).call; end
@@ -45,47 +50,67 @@ module KIFServerBattle
     end
     def pbDisplayPaused(message); pbDisplay(message); end
     def pbEndOfBattle; PokeBattle_Battle.instance_method(:pbEndOfBattle).bind(self).call; end
+    def pbEndOfRoundPhase
+      super
+      @decision=3 if @native_params['kind']=='contest' && @decision==0 && $PokemonBag.pbQuantity(:SPORTBALL)<=0
+    end
     def public_state(index)
       state = input_state(index)
+      state['active_index']=index
+      state['moves'].each { |entry| entry['targets']=move_targets(index,@battlers[index].moves[entry['index']]) }
       state["battlers"] = @battlers.compact.map do |battler|
         {"index" => battler.index, "hp" => battler.hp, "totalhp" => battler.totalhp, "species" => battler.displaySpecies.to_s, "level" => battler.level, "status" => battler.status.to_s}
       end
       state["party"] = pbParty(0).each_with_index.map { |pokemon, slot| {"party_index" => slot, "species" => pokemon.species.to_s, "name" => pokemon.name, "level" => pokemon.level, "hp" => pokemon.hp, "totalhp" => pokemon.totalhp} }
-      state["balls"] = wildBattle? ? KIFServerBattle.belt.keys.select { |id| GameData::Item.get(id).is_poke_ball? && $PokemonBag.pbQuantity(id) > 0 }.map { |id| {"id" => id.to_s, "quantity" => $PokemonBag.pbQuantity(id)} } : []
+      can_catch=wildBattle? && @battlers.compact.count { |battler| battler.index.odd? && !battler.fainted? }==1
+      state["balls"] = can_catch ? KIFServerBattle.belt.keys.select { |id| GameData::Item.get(id).is_poke_ball? && $PokemonBag.pbQuantity(id) > 0 }.map { |id| {"id" => id.to_s, "quantity" => $PokemonBag.pbQuantity(id)} } : []
       state["medicine"] = KIFServerBattle.belt.keys.select { |id| KIFServerBattle::MEDICINE.include?(id) && $PokemonBag.pbQuantity(id)>0 }.map { |id| {"id"=>id.to_s,"quantity"=>$PokemonBag.pbQuantity(id)} }
       state["events"] = @events.last(20)
       state
     end
+    def move_targets(index,move)
+      data=move.pbTarget(@battlers[index])
+      return [-1] if singleBattle? || data.num_targets!=1 || data.id==:RandomNearFoe
+      values=@battlers.compact.select { |b| !b.fainted? && pbMoveCanTarget?(index,b.index,data) }.map(&:index)
+      values.empty? ? [-1] : values
+    end
     def pbCommandPhase
       @scene.pbBeginCommandPhase
       @battlers.each_with_index { |battler, index| pbClearChoice(index) if battler && pbCanShowCommands?(index) }
-      if pbCanShowCommands?(0)
-        action = @gym_controller.call(public_state(0))
+      @battlers.compact.each do |battler|
+        current=battler.index
+        next unless pbCanShowCommands?(current) && pbOwnedByPlayer?(current)
+        action = @gym_controller.call(public_state(current))
         case action && action["action"]
         when "move"
           index = action["move_index"]
-          raise "Illegal native battle move" unless index.is_a?(Integer) && (0..3).include?(index) && pbCanChooseMove?(0, index, false) && pbRegisterMove(0, index, false)
-          pbRegisterTarget(0, -1)
+          target=action.fetch('target',-1)
+          raise "Illegal native battle move" unless index.is_a?(Integer) && (0..3).include?(index) && pbCanChooseMove?(current, index, false) && move_targets(current,battler.moves[index]).include?(target) && pbRegisterMove(current, index, false)
+          pbRegisterTarget(current, target)
         when "switch"
-          raise "Illegal native battle switch" unless action["party_index"].is_a?(Integer) && pbRegisterSwitch(0, action["party_index"])
+          raise "Illegal native battle switch" unless action["party_index"].is_a?(Integer) && pbRegisterSwitch(current, action["party_index"])
         when "catch"
           id = action["item_id"]
           raise "Illegal native capture item" unless wildBattle? && id.is_a?(String) && KIFServerBattle.belt.key?(id.to_sym) && GameData::Item.get(id).is_poke_ball? && $PokemonBag.pbQuantity(id) > 0
-          pbRegisterItem(0, id.to_sym, 1)
+          target=@battlers.compact.find { |b| b.index.odd? && !b.fainted? }
+          raise 'No unique capture target' unless target && public_state(current)['balls'].any? { |entry| entry['id']==id }
+          pbRegisterItem(current, id.to_sym, target.index)
         when "item"
           id,slot=action["item_id"],action["party_index"]
           raise "Illegal native medicine" unless id.is_a?(String) && KIFServerBattle::MEDICINE.include?(id.to_sym) && KIFServerBattle.belt.key?(id.to_sym) && $PokemonBag.pbQuantity(id)>0 && slot.is_a?(Integer) && slot.between?(0,pbParty(0).length-1)
-          pbRegisterItem(0,id.to_sym,slot)
-        when "forced" then pbAutoChooseMove(0, false)
+          pbRegisterItem(current,id.to_sym,slot)
+        when "forced" then pbAutoChooseMove(current, false)
         when "surrender" then @decision = 3; return
         else raise "Unknown native battle command"
         end
       end
-      @battleAI.pbDefaultChooseEnemyCommand(1) if pbCanShowCommands?(1)
+      @battlers.compact.each do |battler|
+        @battleAI.pbDefaultChooseEnemyCommand(battler.index) if pbCanShowCommands?(battler.index) && !pbOwnedByPlayer?(battler.index)
+      end
       @decision = 3 if (@turnCount || 0) >= 500
     end
     def pbSwitchInBetween(index, lax = false, can_cancel = false)
-      return super unless index.even?
+      return PokeBattle_Battle.instance_method(:pbSwitchInBetween).bind(self).call(index,lax,can_cancel) unless pbOwnedByPlayer?(index)
       state = public_state(index).merge("kind" => "switch")
       action = @gym_controller.call(state)
       party = action && action["party_index"]
@@ -99,10 +124,10 @@ module KIFServerBattle
     def prompt(request, state)
       sequence = @sequence
       @sequence += 1
-      payload = {"job_id" => request["job_id"], "nonce" => request["nonce"], "sequence" => sequence, "state" => state, "deadline" => Time.now.to_f + 60}
+      deadline=[Time.now.to_f+60,request['params'].fetch('story_expires_at',Time.now.to_f+60)].min
+      payload = {"job_id" => request["job_id"], "nonce" => request["nonce"], "sequence" => sequence, "state" => state, "deadline" => deadline}
       KIFServerEngine.write("prompt.json", payload)
       file = File.join(KIFServerEngine.directory, "command-%04d.json" % sequence)
-      deadline = Time.now.to_f + 60
       loop do
         if File.file?(file)
           value = KIFServerEngine.verified(KIFMultiplayer::WireJSON.parse(File.binread(file)))
@@ -121,8 +146,12 @@ module KIFServerBattle
       params = request["params"]
       cap = params.fetch("level_cap")
       case params.fetch("kind")
-      when "wild"
+      when "wild",'safari'
         map_id = params.fetch("map_id")
+        if params['kind']=='safari'
+          load File.expand_path('native_modes.rb',__dir__)
+          raise 'This map is outside Safari' unless KIFServerModes.safari_maps.include?(map_id)
+        end
         data = GameData::Encounter.get(map_id, 0)
         raise "This map has no certified encounters" unless data && !data.types.empty?
         type = params["encounter_type"]
@@ -138,6 +167,9 @@ module KIFServerBattle
         pokemon.form = 0
         pokemon.instance_variable_set(:@kuraycustomfile, nil)
         [[pokemon], nil]
+      when 'contest'
+        load File.expand_path('native_modes.rb',__dir__)
+        [[KIFServerModes.contest_encounter(params.fetch('map_id'),cap)],nil]
       when "scripted"
         map_id = KIFServerEngine.bounded(params.fetch("map_id"), 1, 999999)
         species = KIFServerEngine.registered(:Species, params.fetch("species"))
@@ -154,12 +186,31 @@ module KIFServerBattle
         pokemon.form = 0
         [[pokemon], nil]
       when "trainer"
-        type = KIFServerEngine.registered(:TrainerType, params.fetch("trainer_type"))
-        key = [type, params.fetch("trainer_name"), params.fetch("trainer_version", 0)]
-        raise "Trainer is not installed" unless GameData::Trainer::DATA.key?(key)
-        trainer = pbLoadTrainer(*key)
-        raise "Trainer level cap exceeded" if trainer.party.any? { |pokemon| pokemon.level > cap }
-        [trainer.party, trainer]
+        descriptions=params['trainers'] || [params]
+        trainers=descriptions.map do |entry|
+          type=KIFServerEngine.registered(:TrainerType,entry.fetch('trainer_type'))
+          key=[type,entry.fetch('trainer_name'),entry.fetch('trainer_version',0)]
+          raise 'Trainer is not installed' unless GameData::Trainer::DATA.key?(key)
+          trainer=pbLoadTrainer(*key)
+          raise 'Trainer level cap exceeded' if trainer.party.any? { |pokemon| pokemon.level>cap }
+          trainer
+        end
+        [trainers.flat_map(&:party),trainers]
+      when 'story'
+        load File.expand_path('native_story.rb',__dir__)
+        descriptor=KIFServerStory.resolve(params,$Trainer.party)
+        params['can_run']=descriptor.fetch('can_run',true) && !descriptor['rules']['cannotrun']
+        params['no_exp']=descriptor['rules']['noexp']
+        params['reward_enabled']=false if descriptor['rules']['nomoney']
+        params['battle_size']=descriptor['rules'].key?('birdboss') ? '1v3' : descriptor['rules'].key?('triple') ? 'triple' : descriptor['rules'].key?('double') ? 'double' : descriptor['foes'].length.between?(2,3) && !descriptor['trainers'] ? "#{[$Trainer.able_pokemon_count,descriptor['foes'].length].min}v#{descriptor['foes'].length}" : 'single'
+        [descriptor['foes'],descriptor['trainers']]
+      when 'roamer'
+        index=KIFServerEngine.bounded(params.fetch('roamer_index'),0,Settings::ROAMING_SPECIES.length-1)
+        data=Settings::ROAMING_SPECIES[index]
+        raise 'Roamer does not patrol this map' unless pbRoamingAreas(index).key?(params.fetch('map_id'))
+        raise 'Roamer exceeds verified level cap' if data[1]>cap
+        pokemon=params['roamer_state'] ? KIFServerEngine.import(params['roamer_state']) : pbGenerateWildPokemon(data[0],data[1],true)
+        [[pokemon],nil]
       when "boss"
         index = KIFServerEngine.bounded(params.fetch("boss_index"), 0, 7)
         catalog = KIFMultiplayer::WireJSON.parse(File.binread("server/multiplayer/catalog-rental-v1.json"))
@@ -185,12 +236,45 @@ module KIFServerBattle
       $Trainer.instance_variable_set(:@money, params.fetch("wallet", 0))
       $PokemonBag = PokemonBag.new
       @belt.each { |id, count| $PokemonBag.pbStoreItem(id, count) }
+      if params['kind']=='contest'
+        @belt[:SPORTBALL]=params.fetch('story_ball_count')
+        $PokemonBag.pbStoreItem(:SPORTBALL,@belt[:SPORTBALL])
+      end
       foes, trainer = opponent(request)
+      if params['map_id'] && params['kind']!='safari' && !trainer
+        load File.expand_path('native_modes.rb',__dir__)
+        raise 'A Safari entry is required for captures on this map' if KIFServerModes.safari_maps.include?(params['map_id'])
+      end
+      if params['kind']=='safari'
+        return KIFServerModes.safari(request,party,foes)
+      end
       before_money = $Trainer.money
       controller = proc { |state| prompt(request, state) }
-      battle = Engine.new(Scene.new, party, foes, $Trainer, trainer, controller, params.fetch("reward_enabled", true))
+      if trainer && trainer.is_a?(Array)
+        starts=[];total=0;trainer.each { |entry| starts<<total;total+=entry.party.length }
+        params['battle_size']="#{[$Trainer.able_pokemon_count,trainer.length].min}v#{trainer.length}" if trainer.length>1 && !params.key?('battle_size')
+      end
+      battle_party=params['kind']=='contest' ? [party.fetch(params.fetch('selected_index'))] : party
+      player_trainers=[$Trainer]
+      if params['partner'] && params['kind']!='contest' && params['battle_size']!='1v3' && (foes.length>1 || params.fetch('battle_size','single')!='single')
+        partner=params['partner'];type=KIFServerEngine.registered(:TrainerType,partner['trainer_type'])
+        key=[type,partner['trainer_name'],partner['trainer_version']]
+        raise 'Certified partner is not installed' unless GameData::Trainer::DATA.key?(key)
+        ally=pbLoadTrainer(*key)
+        raise 'Certified partner exceeds level cap' if ally.party.any? { |pokemon| pokemon.level>params['level_cap'] }
+        player_starts=[0,battle_party.length];battle_party=battle_party+ally.party;player_trainers<<ally
+        params['battle_size']='double'
+      end
+      battle = Engine.new(Scene.new, battle_party, foes, player_trainers, trainer, controller, params.fetch("reward_enabled", true),params)
+      battle.party1starts=player_starts if player_starts
+      if starts
+        battle.party2starts=starts; battle.items=trainer.map(&:items);battle.endSpeeches=trainer.map(&:lose_text)
+      end
       decision = battle.pbStartBattle
-      {"pokemon" => party.map { |pokemon| KIFServerEngine.export(pokemon) }, "captured" => battle.captured.map { |pokemon| KIFServerEngine.export(pokemon) }, "decision" => decision, "money_delta" => $Trainer.money - before_money, "bag_final" => @belt.keys.each_with_object({}) { |id, values| values[id.to_s] = $PokemonBag.pbQuantity(id) }, "events" => battle.events.last(30)}
+      result={"pokemon" => party.map { |pokemon| KIFServerEngine.export(pokemon) }, "captured" => battle.captured.map { |pokemon| KIFServerEngine.export(pokemon) }, "decision" => decision, "money_delta" => $Trainer.money - before_money, "bag_final" => params.fetch('belt').keys.each_with_object({}) { |id, values| values[id.to_s] = $PokemonBag.pbQuantity(id.to_sym) }, "events" => battle.events.last(30)}
+      result['story_ball_remaining']=$PokemonBag.pbQuantity(:SPORTBALL) if params['kind']=='contest'
+      result['roamer_state']=KIFServerEngine.export(foes[0]) if params['kind']=='roamer' && decision!=4
+      result
     end
   end
 end

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "pid": 25564,
+  "checks": [
+    "native client mounts authoritative role in independent slot",
+    "fork preserves original role save",
+    "server identity projects into actual party",
+    "managed getters ignore local IV cheat option",
+    "local money setter cannot replace server wallet",
+    "local item reward remains casual instead of issuing online stock",
+    "casual storage exposes preserved local party and items",
+    "casual storage changes preserve local items and cannot debit online stock",
+    "cloud codec preserves role and asset references",
+    "normal party healing persists through authoritative native operation",
+    "loading stale cloud party cannot restore a sold asset",
+    "loading stale cloud wallet uses current settled balance",
+    "independent role and original role cloud uploads complete",
+    "failed first economic refresh cannot expose stale party wallet or server items",
+    "quarantined role recovers current authority after the connection returns"
+  ],
+  "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
+  "fresh_device": {
+    "passed": true,
+    "pid": 13892,
+    "checks": [
+      "fresh device downloads both original and managed role slots",
+      "fresh device refreshes current ownership before using downloaded party",
+      "fresh device receives current wallet without replaying starter funds",
+      "restored managed role renders the actual game map",
+      "fresh device retains original casual role independently",
+      "new role on a fresh device cannot receive starter or funds again",
+      "Android uploads the managed role to its own cloud slot"
+    ],
+    "apk_sha256": "9e3161c2a52fa424424c78feb1ef03067edbe58eda167fb7df5485795978b257",
+    "content": "b3d06fb62e89b97bf9614db8",
+    "platform": "Android11 x86_64 AVD with ARM64 translation"
+  },
+  "windows_roundtrip": {
+    "passed": true,
+    "pid": 5860,
+    "checks": [
+      "fresh device downloads both original and managed role slots",
+      "fresh device refreshes current ownership before using downloaded party",
+      "fresh device receives current wallet without replaying starter funds",
+      "Windows restores managed story progress written by Android",
+      "restored managed role renders the actual game map",
+      "fresh device retains original casual role independently"
+    ]
+  },
+  "directory": "temp/multiplayer/mainline-client-85efe850c3"
+}

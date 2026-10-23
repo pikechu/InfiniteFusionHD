@@ -67,7 +67,7 @@ module KIFMultiplayer
     def character_menu(id)
       loop do
         character = @sdk.character(id)
-        choices = ["队伍与联机 PC", "培养与回复", "学习招式", "进化", "融合", "拆分", "恢复原操作", "繁育", "释放联机 PC 精灵"]
+        choices = ["队伍与联机 PC", "培养与回复", "学习招式", "进化", "融合", "拆分", "恢复原操作", "繁育", "释放联机 PC 精灵",'剧情活动']
         can_mount = @sdk.config["battle_authority"] && defined?(Mainline) && Mainline.respond_to?(:mount)
         choices << "进入主线角色" if can_mount
         choices << "联机徽章挑战" if can_mount
@@ -85,8 +85,9 @@ module KIFMultiplayer
           when 6 then @sdk.recover
           when 7 then breed(character)
           when 8 then release(character)
-          when 9 then Mainline.mount(@client, character) if can_mount
-          when 10
+          when 9 then story_activities(character)
+          when 10 then Mainline.mount(@client, character) if can_mount
+          when 11
             raise Error,"请先进入这个托管角色。" unless Mainline.active? && Mainline.character_id==character['id']
             count=(character['badges'] || []).length
             raise Error,"八枚联机徽章已完成。" if count>=8

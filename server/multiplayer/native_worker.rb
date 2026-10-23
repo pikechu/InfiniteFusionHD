@@ -83,6 +83,10 @@ module KIFServerEngine
     def registered(type, value)
       check(value.is_a?(String) && value =~ /\A[A-Za-z0-9_]{1,80}\z/, "Invalid game identifier")
       klass = GameData.const_get(type)
+      if type==:Species && value =~ /\AB(\d+)H(\d+)\z/
+        check([$1.to_i,$2.to_i].all? { |number| number.between?(1,NB_POKEMON) && klass::DATA.key?(number) },'Unknown fusion component')
+        return value.to_sym
+      end
       check(klass::DATA.key?(value.to_sym), "Unknown game identifier")
       value.to_sym
     end
@@ -136,6 +140,18 @@ module KIFServerEngine
       params = @request.fetch("params", {})
       inputs = @request.fetch("inputs", []).map { |entry| import(entry) }
       case @request.fetch("operation")
+      when "story_catalog"
+        load File.expand_path('native_story.rb',__dir__)
+        load File.expand_path('native_battle.rb',__dir__)
+        load File.expand_path('native_modes.rb',__dir__)
+        KIFServerStory.catalog(inputs).merge('safari_maps'=>KIFServerModes.safari_maps,'contest_maps'=>KIFServerModes.contest_maps,'roamers'=>Settings::ROAMING_SPECIES.each_with_index.map { |data,index| {'index'=>index,'species'=>data[0].to_s,'level'=>data[1],'maps'=>pbRoamingAreas(index).keys} })
+      when 'safari_enter','contest_enter','contest_finish','partner_register'
+        load File.expand_path('native_battle.rb',__dir__)
+        load File.expand_path('native_modes.rb',__dir__)
+        if @request['operation']=='partner_register';KIFServerModes.partner(@request,inputs)
+        elsif @request['operation']=='contest_finish';KIFServerModes.judge(@request,inputs)
+        else;KIFServerModes.entry(@request,inputs)
+        end
       when "encounter_catalog"
         maps = []
         GameData::Encounter.each do |data|

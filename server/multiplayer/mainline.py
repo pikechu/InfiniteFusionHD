@@ -15,16 +15,19 @@ import logging
 
 try:
     from .native_engine import NativeEngine
+    from .story import StoryFeatures,bind_api as bind_story_api
 except ImportError:
     from native_engine import NativeEngine
+    from story import StoryFeatures,bind_api as bind_story_api
 
 
 def bind_api(api):
+    bind_story_api(api)
     for name in ('obj','require','string','integer','boolean','dumps','digest','validate_trade_snapshot','validate_compatibility','APIError','STATS'):
         globals()[name] = api[name]
 
 
-class MainlineFeatures:
+class MainlineFeatures(StoryFeatures):
     def start_mainline_maintenance(self):
         self.mainline_stop = threading.Event()
         self.mainline_thread = None
@@ -52,6 +55,7 @@ class MainlineFeatures:
         if thread and thread is not threading.current_thread():
             thread.join(timeout=5)
     def init_mainline(self,db):
+        self.init_story(db)
         self.mainline_epoch = secrets.token_hex(16)
         db.executescript('''
             CREATE TABLE IF NOT EXISTS ml_characters(id TEXT PRIMARY KEY,owner TEXT NOT NULL,name TEXT NOT NULL,revision INTEGER NOT NULL,document TEXT NOT NULL,created REAL NOT NULL);
@@ -83,7 +87,7 @@ class MainlineFeatures:
             self.fail_mainline_job(db,job,'server_restart')
 
     def mainline_config(self):
-        return {'enabled':self.native_engine is not None,'native_required':True,'currency':'LINK','max_party':6,'asset_source':'server_managed','supported_operations':['inspect','train','ev','learn','evolve','preview_evolution','heal','preview_fusion','fuse','split','breed','use_item','equip','battle'],'battle_authority':self.native_engine is not None,'costs':{'fuse':1000,'split':500,'learn':1000,'breed':2000,'ev_reduce_per_item':250},'starter_per_account':1,'egg_incubation_seconds':300}
+        return {'enabled':self.native_engine is not None,'native_required':True,'currency':'LINK','max_party':6,'asset_source':'server_managed','supported_operations':['inspect','train','ev','learn','evolve','preview_evolution','heal','preview_fusion','fuse','split','breed','use_item','equip','battle',*self.STORY_OPERATIONS],'battle_authority':self.native_engine is not None,'costs':{'fuse':1000,'split':500,'learn':1000,'breed':2000,'ev_reduce_per_item':250,'safari_enter':500},'starter_per_account':1,'egg_incubation_seconds':300}
 
     def mainline_character(self,db,character_id,owner):
         string(character_id,1,80,'character_id',r'[A-Za-z0-9_-]+')
@@ -102,6 +106,8 @@ class MainlineFeatures:
             asset = self.asset(db,row[0],character['owner_id'])
             party.append(asset)
         value['party'] = party
+        story=db.execute("SELECT document FROM ml_story_sessions WHERE character_id=? AND status IN ('active','judging') ORDER BY expires DESC LIMIT 1",(character['id'],)).fetchone()
+        value['story']=self.story_view(json.loads(story[0])) if story else None
         value['wallet'] = self.wallet(db,character['owner_id'])
         return value
 
@@ -123,6 +129,7 @@ class MainlineFeatures:
         self.touch_inventory(db,job['owner_id'])
 
     def fail_mainline_job(self,db,job,code):
+        self.reset_story_job(db,job)
         cancel=getattr(self.native_engine,'cancel',None)
         if cancel:cancel(job['id'])
         job.update(status='failed',error_code=code)
@@ -195,6 +202,8 @@ class MainlineFeatures:
         return asset
 
     def settle_mainline_job(self,db,job,result):
+        if job['operation'] in self.STORY_OPERATIONS:
+            return self.settle_story_operation(db,job,result)
         owner = job['owner_id']
         character = self.mainline_character(db,job['character_id'],owner)
         operation = job['operation']
@@ -408,7 +417,8 @@ class MainlineFeatures:
         require(type(fulls) is list and len(fulls)==len(job['asset_ids']) and type(caught) is list and len(caught)<=6,'native_result_invalid','Native battle roster differs',500)
         fulls = [validate_trade_snapshot(value) for value in fulls]
         caught = [validate_trade_snapshot(value) for value in caught]
-        require(not caught or job['native']['params']['kind'] in ('wild','scripted'),'native_result_invalid','Trainer battles cannot create captures',500)
+        require(not caught or job['native']['params']['kind'] in ('wild','scripted','story','roamer','safari','contest'),'native_result_invalid','Trainer battles cannot create captures',500)
+        require(all(full['pokemon']['owner']['id']==job['native']['owner']['id'] for full in caught),'native_result_invalid','Captured original trainer differs',500)
         assets = []
         for asset_id in job['asset_ids']:
             asset = self.asset(db,asset_id,owner)
@@ -438,6 +448,7 @@ class MainlineFeatures:
             self.post_items(db,job['id'],'native_battle',changes,{'character_id':character['id']})
         for asset,full in zip(assets,fulls):
             self.update_mainline_asset(db,asset,full,job)
+        caught,story_extra=self.settle_special_battle(db,job,character,result,caught)
         captured_ids = []
         for full in caught:
             require(full['pokemon']['owner']['id']==job['native']['owner']['id'],'native_result_invalid','Captured original trainer differs',500)
@@ -454,9 +465,13 @@ class MainlineFeatures:
         scope = params.get('reward_scope')
         if (decision==1 or decision==4 and caught) and scope:
             db.execute('INSERT OR IGNORE INTO ml_claims VALUES(?,?,?)',(owner,scope,dumps({'job_id':job['id']})))
+        if decision==1:
+            for reward_scope in params.get('reward_scopes',[]):
+                db.execute('INSERT OR IGNORE INTO ml_claims VALUES(?,?,?)',(owner,reward_scope,dumps({'job_id':job['id']})))
         character['revision']+=1
         self.save_mainline_character(db,character)
         job.update(status='completed',result={'decision':decision,'captured_asset_ids':captured_ids,'money_delta':delta,'events':result.get('events',[])[:30],'character_revision':character['revision']})
+        job['result'].update(story_extra)
         job.pop('prompt',None)
         self.save_mainline_job(db,job)
         self.trading_event(db,job['id'],[owner],'native_battle',job['result'])
@@ -468,7 +483,7 @@ class MainlineFeatures:
         job = json.loads(row[0])
         sequence = integer(body['sequence'],0,999,'sequence')
         command = body['command']
-        obj(command,{'action','move_index','party_index','item_id'},{'action'})
+        obj(command,{'action','move_index','party_index','item_id','target'},{'action'})
         old = db.execute('SELECT document FROM ml_commands WHERE job_id=? AND sequence=?',(job_id,sequence)).fetchone()
         if old:
             require(json.loads(old[0])==command,'command_changed','A different command is already recorded',409)
@@ -479,6 +494,8 @@ class MainlineFeatures:
         require(state.get('kind')!='switch' or action=='switch','illegal_command','A legal replacement is required',409)
         if action=='move':
             require(type(command.get('move_index')) is int and any(value['index']==command['move_index'] for value in state.get('moves',[])),'illegal_move','Choose a current legal move',409)
+            move=next(value for value in state['moves'] if value['index']==command['move_index'])
+            require(type(command.get('target',-1)) is int and command.get('target',-1) in move.get('targets',[-1]),'illegal_target','Choose a current legal move target',409)
         elif action=='switch':
             require(type(command.get('party_index')) is int and any(value['party_index']==command['party_index'] for value in state.get('switches',[])),'illegal_switch','Choose a current legal replacement',409)
         elif action=='catch':
@@ -487,8 +504,10 @@ class MainlineFeatures:
             require(state.get('kind')=='command' and any(value['id']==command.get('item_id') and value['quantity']>0 for value in state.get('medicine',[])) and type(command.get('party_index')) is int and any(value['party_index']==command['party_index'] for value in state.get('party',[])),'illegal_item','Choose a reserved medicine and current party target',409)
         elif action=='forced':
             require(not state.get('moves') and state.get('kind')=='command','illegal_move','A forced action is not required',409)
+        elif action in ('safari_ball','bait','rock'):
+            require(state.get('kind')=='safari' and state.get('ball_count',0)>0,'illegal_command','Safari action unavailable',409)
         else:
-            require(action=='surrender' and state.get('kind')=='command','illegal_command','Unknown native battle command')
+            require(action=='surrender' and state.get('kind') in ('command','safari'),'illegal_command','Unknown native battle command')
         db.execute('INSERT INTO ml_commands(job_id,sequence,document,dispatched) VALUES(?,?,?,0)',(job_id,sequence,dumps(command)))
         job['submitted_sequence']=sequence
         self.save_mainline_job(db,job)
@@ -501,6 +520,11 @@ class MainlineFeatures:
         require(operation in self.mainline_config()['supported_operations'],'invalid_operation','Unsupported mainline operation')
         require(type(ids) is list and 1<=len(ids)<=6 and all(type(value) is str for value in ids) and len(set(ids))==len(ids),'invalid_assets','Choose distinct server assets')
         assets = [self.asset(db,value,owner) for value in ids]
+        if operation in self.STORY_OPERATIONS:
+            job=self.prepare_story_operation(db,owner,character,operation,assets,params)
+            return 202,{'ok':True,'job':self.mainline_job_view(job)}
+        if operation not in ('battle','heal','inspect'):
+            require(not db.execute("SELECT 1 FROM ml_story_sessions WHERE character_id=? AND status IN ('active','judging')",(character['id'],)).fetchone(),'story_pending','Finish the current Safari or contest before changing Pokemon',409)
         coins,items = 0,{}
         if operation in ('inspect','heal'):
             obj(params,set())
@@ -559,24 +583,28 @@ class MainlineFeatures:
             params = {'lineage':assets[0]['lineage'],'fusion_base_exp':assets[0]['fusion_base_exp']}
             coins = 500
         elif operation=='battle':
-            obj(params,{'kind','map_id','encounter_type','species','level','trainer_type','trainer_name','trainer_version','boss_index','belt'},{'kind','belt'})
+            obj(params,{'kind','map_id','encounter_type','species','level','trainer_type','trainer_name','trainer_version','trainers','boss_index','belt','story','roamer_index','session_id'},{'kind','belt'})
             require(ids==[row[0] for row in db.execute('SELECT asset_id FROM ml_party WHERE character_id=? ORDER BY slot',(character['id'],))],'party_changed','Battle uses the current authoritative party',409)
             require(all('full' in asset for asset in assets) and any(asset['full']['preserved']['hp']>0 for asset in assets),'no_able_pokemon','Choose an able server Pokemon',409)
             badges = len(character.get('badges',[]))
             cap = min(100,20+badges*10)
             require(all(asset['snapshot']['level']<=cap for asset in assets),'level_cap','Party exceeds current verified badge level cap',409)
-            require(params['kind'] in ('wild','scripted','trainer','boss'),'invalid_battle','Choose a supported battle kind')
-            if params['kind'] in ('wild','scripted','trainer'):
+            require(params['kind'] in ('wild','scripted','trainer','boss','story','roamer','safari','contest'),'invalid_battle','Choose a supported battle kind')
+            if params['kind']!='boss':
                 map_id = integer(params.get('map_id'),1,999999,'map_id')
                 presence = db.execute('SELECT document,updated FROM world_presence WHERE owner=?',(owner,)).fetchone()
                 require(presence and presence['updated']>self.clock()-20 and json.loads(presence['document']).get('map_id')==map_id,'map_changed','Enter this online map before starting the battle',409)
             if params['kind']=='trainer':
-                string(params.get('trainer_type'),1,80,'trainer_type',r'[A-Za-z0-9_]+')
-                string(params.get('trainer_name'),1,80,'trainer_name')
-                integer(params.get('trainer_version',0),0,999,'trainer_version')
-                scope = 'trainer:'+character['id']+':'+digest(dumps([params['trainer_type'],params['trainer_name'],params.get('trainer_version',0)]))
-                params['reward_scope']=scope
-                params['reward_enabled']=not bool(db.execute('SELECT 1 FROM ml_claims WHERE owner=? AND scope=?',(owner,scope)).fetchone())
+                descriptions=params.get('trainers',[{key:params[key] for key in ('trainer_type','trainer_name','trainer_version') if key in params}])
+                require(type(descriptions) is list and 1<=len(descriptions)<=3,'invalid_trainers','Choose at most three installed trainers')
+                scopes=[]
+                for entry in descriptions:
+                    obj(entry,{'trainer_type','trainer_name','trainer_version'},{'trainer_type','trainer_name'})
+                    string(entry['trainer_type'],1,80,'trainer_type',r'[A-Za-z0-9_]+');string(entry['trainer_name'],1,80,'trainer_name');integer(entry.get('trainer_version',0),0,999,'trainer_version')
+                    scopes.append('trainer:'+character['id']+':'+digest(dumps([entry['trainer_type'],entry['trainer_name'],entry.get('trainer_version',0)])))
+                require(len(set(scopes))==len(scopes),'invalid_trainers','Choose different trainers')
+                params['trainers']=descriptions;params['reward_scopes']=scopes
+                params['reward_enabled']=not any(db.execute('SELECT 1 FROM ml_claims WHERE owner=? AND scope=?',(owner,scope)).fetchone() for scope in scopes)
             else:
                 params['reward_enabled']=True
             if params['kind']=='scripted':
@@ -587,8 +615,12 @@ class MainlineFeatures:
                 params['reward_scope']=scope
             if params['kind']=='boss':
                 require(type(params.get('boss_index')) is int and params['boss_index']==badges and badges<8,'badge_order','Challenge the next verified badge',409)
+            if params['kind'] in ('story','roamer','safari','contest'):
+                self.prepare_special_battle(db,owner,character,params)
             if 'encounter_type' in params:
                 string(params['encounter_type'],1,40,'encounter_type',r'[A-Za-z0-9_]+')
+            if character.get('partner') and params['kind'] not in ('safari','contest'):
+                params['partner']=character['partner']
             belt = params['belt']
             require(type(belt) is dict and len(belt)<=8,'invalid_belt','Choose at most eight item types')
             for item_id,quantity in belt.items():
@@ -606,6 +638,8 @@ class MainlineFeatures:
         owner = identity['id']
         self.trading_account(db,owner)
         self.tick_mainline_jobs(db)
+        story=self.dispatch_story(db,owner,method,parts,body)
+        if story is not None:return story
         if parts==['v1','mainline','config'] and method=='GET':
             return 200,{'ok':True,'config':self.mainline_config()}
         if len(parts)==5 and parts[:3]==['v1','mainline','assets'] and parts[4]=='release' and method=='POST':
@@ -733,6 +767,7 @@ class MainlineFeatures:
             if len(parts)==5 and parts[4]=='party' and method=='POST':
                 obj(body,{'request_id','asset_ids','revision'},{'request_id','asset_ids','revision'})
                 self.require_mainline_idle(db,owner)
+                require(not db.execute("SELECT 1 FROM ml_story_sessions WHERE character_id=? AND status IN ('active','judging')",(character['id'],)).fetchone(),'story_pending','Finish the current Safari or contest before changing party',409)
                 require(type(body['revision']) is int and body['revision']==character['revision'],'character_changed','Refresh the current character',409)
                 ids = body['asset_ids']
                 require(type(ids) is list and len(ids)<=6 and all(type(value) is str for value in ids) and len(set(ids))==len(ids),'invalid_party','Choose up to six different assets')

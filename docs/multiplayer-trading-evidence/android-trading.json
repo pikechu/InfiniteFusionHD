@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "scenario": "Windows seller + Android emulator buyer, real complete APK, response-loss hard exit/restart, Pokemon/items/mixed barter/nearby/trade cards",
+  "apk_sha256": "9e3161c2a52fa424424c78feb1ef03067edbe58eda167fb7df5485795978b257",
+  "content": "b3d06fb62e89b97bf9614db8",
+  "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
+  "markers": {
+    "host-identity": {
+      "id": "p_1f70b6d42fa5074d52d9713c",
+      "friend_code": "327A45D8"
+    },
+    "listing": {
+      "id": "lst_b922ed7830e8e44ace5137423d7202ef",
+      "asset_id": "pkm_0d08444551a77f2383f6fb90ca4a6768"
+    },
+    "guest-identity": {
+      "id": "p_cce0e55857139782e0dfb05f",
+      "friend_code": "4879F41C"
+    },
+    "guest-restart-required": {
+      "pid": 15079,
+      "request_id": "76a178262f69d1c9739d54bb628f9995"
+    },
+    "guest-claimed": {
+      "passed": true
+    },
+    "exchange": {
+      "id": "exc_cda4e1586d9b690e221adcc9a75ab385"
+    },
+    "host-offered": {
+      "passed": true
+    },
+    "guest-offered": {
+      "passed": true
+    },
+    "host-locked": {
+      "passed": true
+    },
+    "host-confirmed": {
+      "passed": true
+    },
+    "guest-committed": {
+      "passed": true
+    },
+    "host-pass": {
+      "pid": 21520,
+      "wallet": {
+        "available": 234600,
+        "balance": 234600,
+        "currency": "LINK",
+        "owner_id": "p_1f70b6d42fa5074d52d9713c",
+        "reserved": 0,
+        "version": 9
+      },
+      "transaction_id": "exc_tx_27070b4d106381bd88a35a46d3d90c95"
+    },
+    "host-pokemon-done": {
+      "passed": true
+    },
+    "guest-pass": {
+      "pid": 15436,
+      "wallet": {
+        "available": 164200,
+        "balance": 164200,
+        "currency": "LINK",
+        "owner_id": "p_cce0e55857139782e0dfb05f",
+        "reserved": 0,
+        "version": 6
+      },
+      "transaction_id": "exc_tx_27070b4d106381bd88a35a46d3d90c95"
+    },
+    "guest-pokemon-done": {
+      "passed": true
+    },
+    "guest-render": {
+      "map_key": "ea91b6ea58f7937e246fc9bb33df8c08921b40b5ab657e70d7c94aadc6a4aac4",
+      "ruby": "3.4.10"
+    },
+    "host-render": {
+      "map_key": "ea91b6ea58f7937e246fc9bb33df8c08921b40b5ab657e70d7c94aadc6a4aac4",
+      "ruby": "3.1.3"
+    },
+    "item-listing": {
+      "id": "lst_a1651cbc7205b5f2cdd5d2054f1cd6c3"
+    },
+    "guest-item-claimed": {
+      "passed": true
+    },
+    "nearby-item-exchange": {
+      "id": "exc_4e95635f9100cee820a8118827d74b3d"
+    },
+    "host-items-offered": {
+      "passed": true
+    },
+    "guest-items-offered": {
+      "passed": true
+    },
+    "host-items-locked": {
+      "passed": true
+    },
+    "host-items-confirmed": {
+      "passed": true
+    },
+    "guest-items-committed": {
+      "passed": true
+    },
+    "host-complete": {
+      "pid": 21520,
+      "wallet": {
+        "available": 234600,
+        "balance": 234600,
+        "currency": "LINK",
+        "owner_id": "p_1f70b6d42fa5074d52d9713c",
+        "reserved": 0,
+        "version": 9
+      },
+      "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
+      "ruby": "3.1.3"
+    },
+    "guest-complete": {
+      "pid": 15436,
+      "wallet": {
+        "available": 164200,
+        "balance": 164200,
+        "currency": "LINK",
+        "owner_id": "p_cce0e55857139782e0dfb05f",
+        "reserved": 0,
+        "version": 6
+      },
+      "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
+      "ruby": "3.4.10"
+    }
+  },
+  "counts": {
+    "hosted_assets": 6,
+    "market_orders": 2,
+    "exchange_sessions": 2,
+    "trading_deliveries": 3,
+    "asset_locks": 0
+  },
+  "directory": "temp/multiplayer/mixed-trading-96c8ed9337",
+  "scope": "Isolated Android 11 x86_64 emulator using ARM64 translation; no physical phone or public network claim"
+}

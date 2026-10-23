@@ -38,15 +38,17 @@ module KIFMultiplayer
     with_trading_scene { TradingUI.new(client).main }
   end
 
-  def self.with_trading_scene
+  def self.with_trading_scene(propagate_errors = false)
     previous_scene = $scene
     previous_chatting = OnlineMode.chatting if defined?(OnlineMode)
     $scene = Object.new
     OnlineMode.chatting = true if defined?(OnlineMode) && OnlineMode.active?
     with_ui_fonts { yield }
   rescue Error => error
+    raise if propagate_errors
     pbMessage("交易：#{display_text(error.message)}")
   rescue StandardError => error
+    raise if propagate_errors
     log_error(error)
     pbMessage("交易界面暂时不可用，请重试。")
   ensure

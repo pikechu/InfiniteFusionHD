@@ -23,10 +23,11 @@ from service import Store, Handler, ExclusiveHTTPServer
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--serial", default="emulator-5556")
+    parser.add_argument("--adb", type=Path, help="ADB executable when SDK tools are outside this checkout")
     parser.add_argument("--port", type=int, default=18801)
     parser.add_argument("--timeout", type=int, default=240)
     args = parser.parse_args()
-    adb = [str(ROOT / "temp/tools/android-sdk/platform-tools/adb.exe"), "-s", args.serial]
+    adb = [str(args.adb or ROOT / "temp/tools/android-sdk/platform-tools/adb.exe"), "-s", args.serial]
     app = "org.kuray.kif"
     run_id = uuid.uuid4().hex[:10]
     evidence = ROOT / "temp/multiplayer" / ("mixed-world-" + run_id)

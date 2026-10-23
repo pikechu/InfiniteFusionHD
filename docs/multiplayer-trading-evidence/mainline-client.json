@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "pid": 10096,
+  "pid": 32100,
   "checks": [
     "native client mounts authoritative role in independent slot",
     "fork preserves original role save",
@@ -14,19 +14,22 @@
     "normal party healing persists through authoritative native operation",
     "loading stale cloud party cannot restore a sold asset",
     "loading stale cloud wallet uses current settled balance",
-    "independent role and original role cloud uploads complete"
+    "independent role and original role cloud uploads complete",
+    "failed first economic refresh cannot expose stale party wallet or server items",
+    "quarantined role recovers current authority after the connection returns"
   ],
-  "data_hash": "8dffd8ce3e6319ba0ade5ef0911d0bc3c243517565b54e00f94736c6fc35a0b3",
+  "data_hash": "6d217d712857f05032459f39f2562a594a54c8bba7b96bd2e26a571928e5fdb0",
   "fresh_device": {
     "passed": true,
-    "pid": 36984,
+    "pid": 13300,
     "checks": [
       "fresh device downloads both original and managed role slots",
       "fresh device refreshes current ownership before using downloaded party",
       "fresh device receives current wallet without replaying starter funds",
+      "restored managed role renders the actual game map",
       "fresh device retains original casual role independently",
       "new role on a fresh device cannot receive starter or funds again"
     ]
   },
-  "directory": "temp/multiplayer/mainline-client-4cca6326b4"
+  "directory": "temp/multiplayer/mainline-client-dd906b7777"
 }

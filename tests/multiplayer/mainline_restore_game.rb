@@ -2,6 +2,9 @@ passed=false
 begin
   load 'scripts/multiplayer/test-bootstrap.rb'
   test=KIFMultiplayerFeatureTest
+  module PBDebug
+    def self.logonerr;yield;end
+  end
   config=KIFMultiplayer::WireJSON.parse(File.read(ENV.fetch('KIF_MULTIPLAYER_SCENARIO')))
   client=KIFMultiplayer::Client.new
   client.authenticate('login',config.fetch('username'),'NativeMainlineFixture123')
@@ -14,10 +17,25 @@ begin
   SaveData.mark_values_as_unloaded;Game.load(old)
   test.check(KIFMultiplayer::Mainline.active? && $Trainer.party.empty?,'fresh device refreshes current ownership before using downloaded party')
   test.check($Trainer.money==1900,'fresh device receives current wallet without replaying starter funds')
+  test.check($game_variables[88]==12345,'Windows restores managed story progress written by Android') if config['roundtrip']
+  if $scene.is_a?(Scene_Map)
+    $scene.createSpritesets unless $scene.map_renderer
+    8.times { Graphics.update;Input.update;$scene.updateSpritesets }
+    bitmap=Graphics.snap_to_bitmap;bitmap.to_file(File.join(ENV.fetch('KIF_MULTIPLAYER_SAVE_DIR'),'managed-restore.png'));bitmap.dispose
+    test.check(!!$scene.map_renderer,'restored managed role renders the actual game map')
+  end
   test.check(SaveData.read_from_file(SaveData.get_full_path('File A'))[:player].name=='保留的休闲角色','fresh device retains original casual role independently')
   sdk=KIFMultiplayer::MainlineClient.new(client)
-  second=sdk.create('另一个角色',0,'SQUIRTLE')
-  test.check(second['party'].empty? && second['wallet']['balance']==1900,'new role on a fresh device cannot receive starter or funds again')
+  unless config['roundtrip']
+    second=sdk.create('另一个角色',0,'SQUIRTLE')
+    test.check(second['party'].empty? && second['wallet']['balance']==1900,'new role on a fresh device cannot receive starter or funds again')
+  end
+  if config['cross_device']
+    $game_variables[88]=12345
+    KIFMultiplayer::TradeSave.new.persist
+    cloud.queue_save($Trainer.save_slot,SaveData.compile_save_hash)
+    test.check(cloud.flush,'Android uploads the managed role to its own cloud slot')
+  end
   cloud.close
   checks=File.readlines(File.join(ENV.fetch('KIF_MULTIPLAYER_SAVE_DIR'),'feature-smoke.log')).grep(/PASS /).map { |line| line.split('PASS ',2)[1].strip }
   test.marker(File.join(config.fetch('directory'),'mainline-restore-pass.json'),{'passed'=>true,'pid'=>Process.pid,'checks'=>checks})
