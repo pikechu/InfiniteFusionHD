@@ -32,8 +32,8 @@ module Game
     # Set language (and choose language if there is no save file)
     if Settings::LANGUAGES.length >= 2
       $PokemonSystem.language = pbChooseLanguage if save_data.empty?
-      pbLoadMessages('Data/' + Settings::LANGUAGES[$PokemonSystem.language][1])
     end
+    GameLanguage.load($PokemonSystem.language)
   end
 
   #For new game plus - resets everything in boxes/party to level 5 and 1st stage

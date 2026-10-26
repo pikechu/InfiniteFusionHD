@@ -628,6 +628,8 @@ module MessageTypes
   ScriptTexts        = 24
   RibbonNames        = 25
   RibbonDescriptions = 26
+  FusionNamePrefixes = 27
+  FusionNameSuffixes = 28
   @@messages         = Messages.new
   @@messagesFallback = Messages.new("Data/messages.dat",true)
 
@@ -708,6 +710,10 @@ module MessageTypes
 
   def self.getOriginal(type,id)
     return @@messagesFallback.get(type,id)
+  end
+
+  def self.getTranslation(type,id)
+    return @@messages.get(type,id)
   end
 
   def self.getFromHash(type,key)

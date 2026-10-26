@@ -819,7 +819,7 @@ def options_load_json(jsonparse)
   if json_ver >= 9
     $PokemonSystem.pifimprovedshinies = jsonparse['pifimprovedshinies']
   end
-
+  GameLanguage.load($PokemonSystem.language)
 end
 
 def options_to_json(*options)
@@ -1251,6 +1251,7 @@ class PokemonOption_Scene
   end
 
   def pbStartScene(inloadscreen = false)
+    @inloadscreen = inloadscreen
     @sprites = {}
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewport.z = 99999
@@ -1304,6 +1305,13 @@ class PokemonOption_Scene
   def pbGetOptions(inloadscreen = false)
     options = []
 
+    if GameLanguage.available.length > 1
+      language = Settings::LANGUAGES[$PokemonSystem.language] || Settings::LANGUAGES[0]
+      options << ButtonOption.new(_INTL("Language") + ": " + language[0],
+                                  proc { @choose_language = true },
+                                  _INTL("Choose the game's language. Save the game to keep this setting."))
+    end
+
     options << ButtonOption.new(_INTL("PIF Settings"),
                               proc {
                                 @vanilla_menu = true
@@ -1339,6 +1347,26 @@ class PokemonOption_Scene
       screen.pbStartScreen
     }
     @kuray_menu = false
+  end
+
+  def chooseLanguage
+    @choose_language = false
+    language = pbChooseLanguage
+    return if language == $PokemonSystem.language
+    loaded = GameLanguage.load(language)
+    pbSetSystemFont(@sprites["title"].contents)
+    @sprites["title"].text = _INTL("Options")
+    pbSetSystemFont(@sprites["textbox"].contents)
+    @PokemonOptions = pbAddOnOptions(pbGetOptions(@inloadscreen))
+    @sprites["option"].dispose
+    @sprites["option"] = initOptionsWindow
+    @sprites["option"].active = true
+    for i in 0...@PokemonOptions.length
+      @sprites["option"].setValueNoRefresh(i, (@PokemonOptions[i].get || 0))
+    end
+    @sprites["option"].refresh
+    updateDescription(0)
+    pbMessage(_INTL("The language file could not be loaded. English has been restored.")) if !loaded
   end
 
   def openVanilla()
@@ -1383,6 +1411,7 @@ class PokemonOption_Scene
         Graphics.update
         Input.update
         pbUpdate
+        chooseLanguage if @choose_language
         if @sprites["option"].mustUpdateOptions
           # Set the values of each option
           for i in 0...@PokemonOptions.length
@@ -1651,7 +1680,7 @@ class SLOptionsScene < PokemonOption_Scene
   end
 
   def pbRenKO(index=1)
-    $PokemonSystem.optionsnames[index] = pbEnterText("Enter name for Preset", 0, 12, $PokemonSystem.optionsnames[index])
+    $PokemonSystem.optionsnames[index] = pbEnterText(_INTL("Enter name for Preset"), 0, 12, $PokemonSystem.optionsnames[index])
     buildKO()
     refreshOption(index)
     return
@@ -1681,7 +1710,7 @@ class SLOptionsScene < PokemonOption_Scene
         elsif value == 2
           pbRenKO(index)
         end
-      }, ["Load " + $PokemonSystem.optionsnames[index], "Save " + $PokemonSystem.optionsnames[index], "Rename " + $PokemonSystem.optionsnames[index]]
+      }, [_INTL("Load {1}", $PokemonSystem.optionsnames[index]), _INTL("Save {1}", $PokemonSystem.optionsnames[index]), _INTL("Rename {1}", $PokemonSystem.optionsnames[index])]
     )
   end
   
@@ -1983,7 +2012,7 @@ class VanillaOptSc_1 < PokemonOption_Scene
       $Trainer.lowest_difficulty = $Trainer.selected_difficulty
       echoln "lowered difficulty (#{$Trainer.selected_difficulty})"
       if @manually_changed_difficulty
-        pbMessage(_INTL("The savefile's lowest selected difficulty was changed to #{getDisplayDifficulty()}."))
+        pbMessage(_INTL("The savefile's lowest selected difficulty was changed to {1}.", getDisplayDifficulty()))
         @manually_changed_difficulty = false
       end
     end

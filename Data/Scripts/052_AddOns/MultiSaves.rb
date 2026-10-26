@@ -538,7 +538,7 @@ class PokemonLoadScreen
         when cmd_language
           @scene.pbEndScene
           $PokemonSystem.language = pbChooseLanguage
-          pbLoadMessages('Data/' + Settings::LANGUAGES[$PokemonSystem.language][1])
+          GameLanguage.load($PokemonSystem.language)
           if show_continue
             @save_data[:pokemon_system] = $PokemonSystem
             File.open(SaveData.get_full_path(@selected_file), 'wb') { |file| Marshal.dump(@save_data, file) }
@@ -797,8 +797,8 @@ module Game
     # Set language (and choose language if there is no save file)
     if Settings::LANGUAGES.length >= 2
       $PokemonSystem.language = pbChooseLanguage if save_data.empty?
-      pbLoadMessages('Data/' + Settings::LANGUAGES[$PokemonSystem.language][1])
     end
+    GameLanguage.load($PokemonSystem.language)
   end
 
   # Saves the game. Returns whether the operation was successful.

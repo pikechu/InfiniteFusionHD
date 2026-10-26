@@ -898,7 +898,7 @@ class PokeBattle_AI
 		mold_broken=moldbroken(user,target,move.function)
 		# Type effectiveness
 		if Effectiveness.ineffective?(typeMod) || score<=0
-			if move.baseDamage>0 || move.name=="Thunder Wave"
+			if move.baseDamage>0 || move.id==:THUNDERWAVE
 				return true
 			end
 		end
@@ -920,7 +920,7 @@ class PokeBattle_AI
 		return true if move.function == "162" && !user.pbHasType?(:FIRE)
 		# OHKO Moves
 		if move.function == "070"
-			return true if move.name=="Sheer Cold" && target.pbHasType?(:ICE)
+			return true if move.id==:SHEERCOLD && target.pbHasType?(:ICE)
 			return true if target.hasActiveAbility?(:STURDY,false,mold_broken)
 		end
 		# Immunity due to ability/item/other effects

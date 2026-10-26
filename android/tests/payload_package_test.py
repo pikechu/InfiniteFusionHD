@@ -99,6 +99,7 @@ class PayloadPackageTest(unittest.TestCase):
                 scripts.mkdir(parents=True)
                 (scripts / "000_Platform.rb").write_bytes(b"new platform\n")
                 (scripts / "001_Example.rb").write_bytes(b"new script\n")
+                (fixture / "Data/messages_zh.dat").write_bytes(b"Chinese language pack")
                 helpers = fixture / "android/ruby"
                 helpers.mkdir(parents=True)
                 for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb",
@@ -122,6 +123,7 @@ class PayloadPackageTest(unittest.TestCase):
                 package_game.validate_payload(path, refreshed, verify_hashes=True)
                 with zipfile.ZipFile(path) as archive:
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/Scripts/001_Example.rb"), b"new script\n")
+                    self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/messages_zh.dat"), b"Chinese language pack")
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Graphics/other.png"), logical["Graphics/other.png"])
                     self.assertNotIn("Graphics/other.png", archive.namelist())
                 self.assertEqual(refreshed["archiveFormat"], 2)
