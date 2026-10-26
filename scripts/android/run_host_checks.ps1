@@ -18,6 +18,8 @@ try {
         & $RubyPath --disable-gems "android/tests/$testName.rb"
         if ($LASTEXITCODE -ne 0) { throw "Failed: $testName" }
     }
+    & $RubyPath --disable-gems tests/gameplay/startup_downloads_test.rb
+    if ($LASTEXITCODE -ne 0) { throw 'Startup download regression checks failed' }
     & $RubyPath --disable-gems -e 'files = Dir.glob("Data/Scripts/**/*.rb") + Dir.glob("android/ruby/*.rb"); files.each { |f| RubyVM::InstructionSequence.compile_file(f) }; puts "PASS: #{files.length} Ruby files compile (no game execution)"'
     if ($LASTEXITCODE -ne 0) { throw 'Ruby syntax checks failed' }
     $classes = Join-Path $output 'save-transfer-classes'

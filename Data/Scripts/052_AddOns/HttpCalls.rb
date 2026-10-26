@@ -89,7 +89,7 @@ def download_file(url, saveLocation)
       echoln _INTL("Failed to download file {1}", url)
     end
     return nil
-  rescue MKXPError, Errno::ENOENT => error
+  rescue MKXPError, StandardError => error
     echo error
     return nil
   end
@@ -129,7 +129,7 @@ def download_sprite(base_path, head_id, body_id, saveLocation = "Graphics/temp",
     # echoln _INTL("Tried to download file {1} . Got response  {2}",url,response[:body])
     echoln "tried to download " + url
     return nil
-  rescue MKXPError, Errno::ENOENT
+  rescue MKXPError, StandardError
     return nil
   end
 end
