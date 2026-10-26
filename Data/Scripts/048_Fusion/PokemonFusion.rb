@@ -1127,10 +1127,10 @@ def setFusionMoves(fusedPoke, poke2, selected2ndOption = false)
   # fusedPoke.moves=moves
   bodySpecies = getBodyID(fusedPoke)
   headSpecies = getHeadID(fusedPoke, bodySpecies)
-  bodySpeciesName = GameData::Species.get(bodySpecies).real_name
-  headSpeciesName = GameData::Species.get(headSpecies).real_name
+  bodySpeciesName = GameData::Species.get(bodySpecies).name
+  headSpeciesName = GameData::Species.get(headSpecies).name
 
-  choice = Kernel.pbMessage("What to do with the moveset?", [_INTL("Combine movesets"), _INTL("Keep {1}'s moveset", bodySpeciesName), _INTL("Keep {1}'s moveset", headSpeciesName)], 0)
+  choice = Kernel.pbMessage(_INTL("What to do with the moveset?"), [_INTL("Combine movesets"), _INTL("Keep {1}'s moveset", bodySpeciesName), _INTL("Keep {1}'s moveset", headSpeciesName)], 0)
   if choice == 1
     if selected2ndOption
       fusedPoke.moves = poke2.moves
@@ -1217,7 +1217,7 @@ def pbChooseNature(species1_nature, species2_nature)
   nature1 = GameData::Nature.get(species1_nature)
   nature2 = GameData::Nature.get(species2_nature)
 
-  if (Kernel.pbMessage("Choose a nature.", [_INTL("{1}", nature1.real_name), _INTL("{1}", nature2.real_name)], 2)) == 0
+  if (Kernel.pbMessage(_INTL("Choose a nature."), [nature1.name, nature2.name], 2)) == 0
     return nature1.id_number
   else
     return nature2.id_number

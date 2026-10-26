@@ -4,6 +4,18 @@ module GameData
     attr_reader :body_pokemon
     attr_reader :head_pokemon
 
+    def name
+      return super unless $PokemonSystem && $PokemonSystem.language == 2
+      head = GameData::NAT_DEX_MAPPING[@head_pokemon.id_number] || @head_pokemon.id_number
+      body = GameData::NAT_DEX_MAPPING[@body_pokemon.id_number] || @body_pokemon.id_number
+      return GameLanguage.fusion_name(head, body, super)
+    end
+
+    def category
+      return super unless $PokemonSystem && $PokemonSystem.language != 0
+      return split_and_combine_text(@body_pokemon.category, @head_pokemon.category, " ")
+    end
+
     def initialize(id)
       if id.is_a?(Integer)
         body_id = getBodyID(id)
@@ -406,7 +418,7 @@ module GameData
     end
 
     def calculate_category
-      return split_and_combine_text(@body_pokemon.category, @head_pokemon.category, " ")
+      return split_and_combine_text(@body_pokemon.real_category, @head_pokemon.real_category, " ")
     end
 
     def calculate_growth_rate

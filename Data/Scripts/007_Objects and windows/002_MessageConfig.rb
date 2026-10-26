@@ -125,16 +125,22 @@ module MessageConfig
   end
 
   def self.pbGetSystemFontName
+    language_font = GameLanguage.font_name
+    return language_font if language_font
     @@systemFont = pbDefaultSystemFontName if !@@systemFont
     return @@systemFont
   end
 
   def self.pbGetSmallFontName
+    language_font = GameLanguage.font_name
+    return language_font if language_font
     @@smallFont = pbDefaultSmallFontName if !@@smallFont
     return @@smallFont
   end
 
   def self.pbGetNarrowFontName
+    language_font = GameLanguage.font_name
+    return language_font if language_font
     @@narrowFont = pbDefaultNarrowFontName if !@@narrowFont
     return @@narrowFont
   end
@@ -167,16 +173,20 @@ module MessageConfig
   end
 
   def self.pbSetSystemFontName(value)
+    # Temporary Chinese UI overrides must not replace the player's font preset.
+    return if value == "Noto Sans SC" && GameLanguage.font_name
     @@systemFont = MessageConfig.pbTryFonts(value)
     @@systemFont = MessageConfig.pbDefaultSystemFontName if @@systemFont == ""
   end
 
   def self.pbSetSmallFontName(value)
+    return if value == "Noto Sans SC" && GameLanguage.font_name
     @@smallFont = MessageConfig.pbTryFonts(value)
     @@smallFont = MessageConfig.pbDefaultSmallFontName if @@smallFont == ""
   end
 
   def self.pbSetNarrowFontName(value)
+    return if value == "Noto Sans SC" && GameLanguage.font_name
     @@narrowFont = MessageConfig.pbTryFonts(value)
     @@narrowFont = MessageConfig.pbDefaultNarrowFontName if @@narrowFont == ""
   end

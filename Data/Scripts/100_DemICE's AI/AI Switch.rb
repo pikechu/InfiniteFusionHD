@@ -45,7 +45,7 @@ class PokeBattle_AI
 			opphpchange=(EndofTurnHPChanges(b,battler,false,false,true)) # what % of our hp will change after end of turn effects go through
 			for j in battler.moves
 				if (j.function=="006" && b.pbCanPoison?(battler,false,j)) ||# Toxic
-					(j.name=="Will-O-Wisp" && b.pbCanBurn?(battler,false,j)) ||# Willo
+					(j.id==:WILLOWISP && b.pbCanBurn?(battler,false,j)) ||# Willo
 					(j.function=="0DC" && !b.pbHasType?(:GRASS) && b.effects[PBEffects::Substitute]<=0) # Leech Seed
 					tickdamage=true
 				end	
@@ -318,7 +318,7 @@ class PokeBattle_AI
 						end
 					end	
 					if (j.function=="006" && pokmon.pbCanPoison?(newenemy,false,j)) ||# Toxic
-						(j.name=="Will-O-Wisp" && pokmon.pbCanBurn?(newenemy,false,j)) ||# Willo
+						(j.id==:WILLOWISP && pokmon.pbCanBurn?(newenemy,false,j)) ||# Willo
 						(j.function=="0DC" && !pokmon.pbHasType?(:GRASS) && pokmon.effects[PBEffects::Substitute]<=0) # Leech Seed
 						death=true	
 					end	
@@ -422,7 +422,7 @@ class PokeBattle_AI
 				pokmon.eachOpposing do |b|
 					mold_broken=moldbroken(pokmon,b,m.function)
 					if (m.function=="006" && b.pbCanPoison?(pokmon,false,m)) ||# Toxic
-						(m.name=="Will-O-Wisp" && b.pbCanBurn?(pokmon,false,m)) ||# Willo
+						(m.id==:WILLOWISP && b.pbCanBurn?(pokmon,false,m)) ||# Willo
 						(m.function=="0DC" && !b.pbHasType?(:GRASS) && b.effects[PBEffects::Substitute]<=0) # Leech Seed
 						tickdamage=true
 						sum+=150

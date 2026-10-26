@@ -588,11 +588,7 @@ def pbLoadRpgxpScene(scene)
 end
 
 def pbChooseLanguage
-  commands=[]
-  for lang in Settings::LANGUAGES
-    commands.push(lang[0])
-  end
-  return pbShowCommands(nil,commands)
+  return GameLanguage.choose
 end
 
 def pbScreenCapture
