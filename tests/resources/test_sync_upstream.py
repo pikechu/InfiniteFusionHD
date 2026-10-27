@@ -96,6 +96,8 @@ class UpstreamSyncTests(unittest.TestCase):
         self.assertEqual(before, after)
 
     def test_html_and_capacity_errors_are_rejected(self):
+        credits = sync.merge_credits(b"1.1,local\n", b"1.1,artist,main,reference text  \n")
+        self.assertFalse(any(line.endswith((b' ', b'\t')) for line in credits.splitlines()))
         with self.assertRaises(ValueError):
             sync.index_names(b"<html>server error</html>", False, 501)
         with self.assertRaises(ValueError):
