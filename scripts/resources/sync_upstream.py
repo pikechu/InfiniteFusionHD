@@ -109,6 +109,8 @@ def merge_credits(existing, incoming):
     upstream = rows(incoming)
     published = {row[0] for row in upstream}
     combined = upstream + [row for row in rows(existing) if row[0] not in published]
+    for row in combined:
+        row[-1] = row[-1].rstrip()
     stream = io.StringIO()
     csv.writer(stream, lineterminator="\n").writerows(combined)
     return stream.getvalue().encode()
