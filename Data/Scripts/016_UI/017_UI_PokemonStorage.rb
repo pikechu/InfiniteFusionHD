@@ -1933,11 +1933,11 @@ class PokemonStorageScene
         break
       else
         kuraychoices = [
-          _INTL("Re-roll Sprite (P" + pricenow.to_s + ")"),
+          _INTL("Re-roll Sprite (P{1})", pricenow),
           _INTL("Nevermind"),
         ]
         kuraychoice = pbShowCommands(
-          _INTL("You have P" + $Trainer.money.to_s_formatted), kuraychoices)
+          _INTL("You have P{1}", $Trainer.money.to_s_formatted), kuraychoices)
         case kuraychoice
         when 0
           $Trainer.money -= pricenow
@@ -1989,11 +1989,11 @@ class PokemonStorageScene
       pbDisplay(_INTL("Not enough Money!"))
     else
       kuraychoices = [
-        _INTL("Use Default Sprite (P" + pricenow.to_s + ")"),
+        _INTL("Use Default Sprite (P{1})", pricenow),
         _INTL("Nevermind"),
       ]
       kuraychoice = pbShowCommands(
-        _INTL("You have P" + $Trainer.money.to_s_formatted), kuraychoices)
+        _INTL("You have P{1}", $Trainer.money.to_s_formatted), kuraychoices)
       case kuraychoice
       when 0
         $Trainer.money -= pricenow
@@ -2191,7 +2191,7 @@ class PokemonStorageScene
           _INTL("Nevermind"),
         ]
         kuraychoice = pbShowCommands(
-          _INTL("You have P" + $Trainer.money.to_s_formatted), kuraychoices)
+          _INTL("You have P{1}", $Trainer.money.to_s_formatted), kuraychoices)
         case kuraychoice
         when 0
           $Trainer.money -= pricenow
@@ -2337,7 +2337,7 @@ class PokemonStorageScene
     iddoing = 0
     maxdoing = 400
     3.times do |iddoing|
-      helptext = pbDisplay(_INTL("#{['R', 'G', 'B'][iddoing]} Increment (0-#{maxdoing})"))
+      helptext = pbDisplay(_INTL("{1} Increment (0-{2})", ['R', 'G', 'B'][iddoing], maxdoing))
       params = ChooseNumberParams.new
       params.setMaxDigits(3)
       params.setRange(0, maxdoing)
@@ -2349,7 +2349,7 @@ class PokemonStorageScene
       if qty < maxdoing + 1 && qty > -1
         pokemon.shinyKRS[iddoing] = qty-200
         pbKurayRefresh(overlayvar1, overlayvar2)
-        pbDisplay(_INTL("Changed #{['R', 'G', 'B'][iddoing]} Increment!"))
+        pbDisplay(_INTL("Changed {1} Increment!", ['R', 'G', 'B'][iddoing]))
       end
     end
 
@@ -2359,7 +2359,7 @@ class PokemonStorageScene
     maxdoing = 4
     3.times do |iddoing|
       currslot += 1
-      helptext = pbDisplay(_INTL("#{['R', 'G', 'B'][iddoing]} Semi-Inverted (0-#{maxdoing})"))
+      helptext = pbDisplay(_INTL("{1} Semi-Inverted (0-{2})", ['R', 'G', 'B'][iddoing], maxdoing))
       params = ChooseNumberParams.new
       params.setMaxDigits(1)
       params.setRange(0, maxdoing)
@@ -2371,7 +2371,7 @@ class PokemonStorageScene
       if qty < maxdoing + 1 && qty > -1
         pokemon.shinyKRS[currslot] = qty
         pbKurayRefresh(overlayvar1, overlayvar2)
-        pbDisplay(_INTL("Changed #{['R', 'G', 'B'][iddoing]} Semi-Inverted!"))
+        pbDisplay(_INTL("Changed {1} Semi-Inverted!", ['R', 'G', 'B'][iddoing]))
       end
     end
 
@@ -2381,7 +2381,7 @@ class PokemonStorageScene
     maxdoing = 2
     3.times do |iddoing|
       currslot += 1
-      helptext = pbDisplay(_INTL("#{['R', 'G', 'B'][iddoing]} Timid-Black (0-#{maxdoing})"))
+      helptext = pbDisplay(_INTL("{1} Timid-Black (0-{2})", ['R', 'G', 'B'][iddoing], maxdoing))
       params = ChooseNumberParams.new
       params.setMaxDigits(1)
       params.setRange(0, maxdoing)
@@ -2393,7 +2393,7 @@ class PokemonStorageScene
       if qty < maxdoing + 1 && qty > -1
         pokemon.shinyKRS[currslot] = qty
         pbKurayRefresh(overlayvar1, overlayvar2)
-        pbDisplay(_INTL("Changed #{['R', 'G', 'B'][iddoing]} Timid-Black!"))
+        pbDisplay(_INTL("Changed {1} Timid-Black!", ['R', 'G', 'B'][iddoing]))
       end
     end
     helptext = pbDisplay(_INTL("0 = Nrm Spr | 1-2-3 = Shiny Spr (1=Forced, 3=KIF only when hybrid)"))
@@ -2447,7 +2447,7 @@ class PokemonStorageScene
       pokemon.shinyimprovpif = 0
     end
     pbKurayRefresh(overlayvar1, overlayvar2)
-    pbDisplay(_INTL("Re-rolled into " + pokemon.shinyValue.to_s + ";" + pokemon.shinyR.to_s + ";" + pokemon.shinyG.to_s + ";" + pokemon.shinyB.to_s + "!"))
+    pbDisplay(_INTL("Re-rolled into {1};{2};{3};{4}!", pokemon.shinyValue, pokemon.shinyR, pokemon.shinyG, pokemon.shinyB))
   end
 
   def pbKurayNoEvo(selected, heldpoke)
@@ -3721,16 +3721,16 @@ class PokemonStorageScreen
     box = selected[0]
     index = selected[1]
     if @storage[box, index]
-      pbDisplay("Can't place that there.")
+      pbDisplay(_INTL("Can't place that there."))
       return
       echoln _INTL("Position {1},{2} is not empty...", box, index)
     end
     if box != -1 && index >= @storage.maxPokemon(box)
-      pbDisplay("Can't place that there.")
+      pbDisplay(_INTL("Can't place that there."))
       return
     end
     if box != -1 && @heldpkmn.mail
-      pbDisplay("Please remove the mail.")
+      pbDisplay(_INTL("Please remove the mail."))
       return
     end
     if box >= 0
@@ -3759,7 +3759,7 @@ class PokemonStorageScreen
       return false
     end
     if box != -1 && @heldpkmn.mail
-      pbDisplay("Please remove the mail.")
+      pbDisplay(_INTL("Please remove the mail."))
       return false
     end
     if box >= 0
@@ -3860,11 +3860,11 @@ class PokemonStorageScreen
         heldX = held[1] + selectedPos[0]
         heldY = held[2] + selectedPos[1]
         if heldX < 0 || heldX >= PokemonBox::BOX_WIDTH || heldY < 0 || heldY >= PokemonBox::BOX_HEIGHT
-          pbDisplay("Can't place that there.")
+          pbDisplay(_INTL("Can't place that there."))
           return
         end
         if @storage[box, heldX + heldY * PokemonBox::BOX_WIDTH]
-          pbDisplay("Can't place that there.")
+          pbDisplay(_INTL("Can't place that there."))
           return
         end
       end
@@ -3881,7 +3881,7 @@ class PokemonStorageScreen
     else
       partyCount = @storage.party.length
       if partyCount + @multiheldpkmn.length > Settings::MAX_PARTY_SIZE
-        pbDisplay("Can't place that there.")
+        pbDisplay(_INTL("Can't place that there."))
         return
       end
       @scene.pbPlaceMulti(box, selectedIndex)
@@ -4860,14 +4860,14 @@ class PokemonStorageScreen
       pricenow = 0 if $PokemonSystem.kuraystreamerdream != 0
       if $Trainer.money < pricenow
         pbPlayBuzzerSE
-        pbDisplay(_INTL("Not enough Money ! Cost P" + pricenow.to_s))
+        pbDisplay(_INTL("Not enough Money ! Cost P{1}", pricenow))
       else
         kuraychoices = [
-          _INTL("Buy! (P" + pricenow.to_s + ")"),
+          _INTL("Buy! (P{1})", pricenow),
           _INTL("Nevermind"),
         ]
         kuraychoice = pbShowCommands(
-          _INTL("You have P" + $Trainer.money.to_s_formatted), kuraychoices)
+          _INTL("You have P{1}", $Trainer.money.to_s_formatted), kuraychoices)
         case kuraychoice
         when 0
           $Trainer.money -= pricenow

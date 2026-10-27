@@ -10,6 +10,16 @@
 /Mods/*.rb text eol=lf
 /Data/*.dat -text
 /Data/*.rxdata -text
+/Data/localization/**/*.json text eol=lf
+/Data/localization/*.txt text eol=lf
+/Data/multiplayer-build.json text eol=lf
+/scripts/**/*.py text eol=lf
+/scripts/android/*.ps1 text eol=lf
+/android/app/src/main/**/*.java text eol=lf
+/android/app/src/main/AndroidManifest.xml text eol=lf
+/android/ruby/*.rb text eol=lf
+/Game.ini text eol=lf
+/docs/gameplay-evidence/** -text whitespace=cr-at-eol
 /server/multiplayer/*.json text eol=lf
 /Fonts/*.otf -text
 /docs/multiplayer-functional-spec.zh-CN.md whitespace=-blank-at-eol,-blank-at-eof

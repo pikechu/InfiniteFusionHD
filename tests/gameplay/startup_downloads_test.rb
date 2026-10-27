@@ -59,7 +59,11 @@ Dir.mktmpdir("regression-", "temp/startup-downloads") do |directory|
   sprite_directory = File.expand_path("Graphics", directory)
   sprite = File.join(sprite_directory, "1.2.png")
   sprite_url = "https://fixture.invalid/{1}.{2}.png"
-  download = lambda { download_sprite(sprite_url, 1, 2, sprite_directory) }
+  download = lambda do
+    # Each failure fixture must reach HTTP instead of a previous session miss.
+    $kif_sprite_download_attempts = {}
+    download_sprite(sprite_url, 1, 2, sprite_directory)
+  end
   sprite_body = "\x89PNG\r\n\x1a\n\xff".b
   verify.call(download.call == sprite && File.binread(sprite) == sprite_body, "sprite downloads still succeed")
   failures = [KIFMultiplayer::Error.new("invalid endpoint", "invalid_server"),

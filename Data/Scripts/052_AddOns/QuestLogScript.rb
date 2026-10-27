@@ -229,7 +229,7 @@ end
 def finishQuest(id, silent=false)
   return if pbCompletedQuest?(id)
   pbMEPlay("Register phone") if !silent
-  Kernel.pbMessage("\\C[6]Quest completed!") if !silent
+  Kernel.pbMessage(_INTL("\\C[6]Quest completed!")) if !silent
 
   $game_variables[222] += 1 # karma
   $game_variables[97] -= 1 #nb. quests active
@@ -1064,9 +1064,9 @@ def getQuestReward(eventId)
       next
     end
     pbCallBub(2, eventId)
-    pbMessage("Also, there's one more thing...")
+    pbMessage(_INTL("Also, there's one more thing..."))
     pbCallBub(2, eventId)
-    pbMessage("As a gift for having helped so many people, I want to give you this.")
+    pbMessage(_INTL("As a gift for having helped so many people, I want to give you this."))
     pbReceiveItem(reward.item, reward.quantity)
     $PokemonGlobal.questRewardsObtained << reward.item
 
@@ -1078,7 +1078,7 @@ def getQuestReward(eventId)
 
   pbCallBub(2, eventId)
   if nb_to_next_reward <= 0
-    pbMessage("I have no more rewards to give you! Thanks for helping all these people!")
+    pbMessage(_INTL("I have no more rewards to give you! Thanks for helping all these people!"))
   elsif nb_to_next_reward == 1
     pbMessage("Help #{nb_to_next_reward} more person and I'll give you something good!")
   else

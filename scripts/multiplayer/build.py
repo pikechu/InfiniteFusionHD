@@ -64,6 +64,6 @@ if __name__ == "__main__":
         print(f"BUILD_CHECK_PASS files={len(manifest['files'])} data={manifest['data_hash']}")
     else:
         temporary = output.with_suffix(".json.pending")
-        temporary.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        temporary.write_bytes((json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
         temporary.replace(output)
         print(f"BUILD_PASS files={len(manifest['files'])} manifest={output}")

@@ -249,7 +249,7 @@ def change_game_difficulty(down_only = false)
     available_difficulties << choice_hard
   end
   available_difficulties << choice_cancel
-  index = pbMessage("Select a new difficulty", available_difficulties, available_difficulties[-1])
+  index = pbMessage(_INTL("Select a new difficulty"), available_difficulties, available_difficulties[-1])
   choice = available_difficulties[index]
   case choice
   when choice_easy
@@ -762,7 +762,7 @@ def give_date_specific_hats()
   if (current_date.day == 24 || current_date.day == 25) && current_date.month == 12
     if !$Trainer.unlocked_hats.include?(HAT_SANTA)
       pbCallBub(2,@event_id,true)
-      pbMessage("Hi! We're giving out a special hat today for the holidays season. Enjoy!")
+      pbMessage(_INTL("Hi! We're giving out a special hat today for the holidays season. Enjoy!"))
       obtainHat(HAT_SANTA)
     end
   end
@@ -1148,8 +1148,8 @@ def openUrlInBrowser(url="")
   system("xdg-open", url) || system("open", url) || system("start", url)
   rescue
     Input.clipboard = url
-    pbMessage("The game could not open the link in the browser")
-    pbMessage("The link has been copied to your clipboard instead")
+    pbMessage(_INTL("The game could not open the link in the browser"))
+    pbMessage(_INTL("The link has been copied to your clipboard instead"))
   end
 end
 

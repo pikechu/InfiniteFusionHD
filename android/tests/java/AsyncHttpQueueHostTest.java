@@ -30,6 +30,7 @@ public final class AsyncHttpQueueHostTest {
         final CountDownLatch entered = new CountDownLatch(1);
         final CountDownLatch release = new CountDownLatch(1);
         final AtomicBoolean cancelled = new AtomicBoolean();
+        final CountDownLatch cancellation = new CountDownLatch(1);
         final AtomicBoolean executed = new AtomicBoolean();
         @Override public byte[] execute(long end) {
             executed.set(true);
@@ -42,7 +43,7 @@ public final class AsyncHttpQueueHostTest {
             }
             return bytes("late-success");
         }
-        @Override public void cancel() { cancelled.set(true); }
+        @Override public void cancel() { cancelled.set(true); cancellation.countDown(); }
     }
 
     public static void main(String[] args) throws Exception {
@@ -63,7 +64,8 @@ public final class AsyncHttpQueueHostTest {
             long expiring = queue.start(timeout, 60);
             check(timeout.entered.await(1, TimeUnit.SECONDS), "timeout fixture really entered blocking IO");
             check(new String(await(queue, expiring), StandardCharsets.UTF_8).equals("SocketTimeoutException"), "deadline returns even when backend ignores interruption");
-            check(timeout.cancelled.get(), "timeout asks backend to disconnect");
+            // The result is published before the deadline thread requests IO cancellation.
+            check(timeout.cancellation.await(1, TimeUnit.SECONDS), "timeout asks backend to disconnect");
             timeout.release.countDown();
 
             Held one = new Held(), two = new Held(), queued = new Held(), fourth = new Held();

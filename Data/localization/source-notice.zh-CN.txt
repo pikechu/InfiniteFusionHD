@@ -17,3 +17,13 @@ Pokecommunity社区			https://www.pokecommunity.com/showthread.php?t=347883
 
 这是一个免费的宝可梦粉丝游戏。如果您为玩这个游戏支付了任何费用，那您可能被骗了。
 本游戏与任天堂、Game Freak 或 Creatures Inc. 无关。
+
+2026-10-27 社区图鉴与图片汉化补充：
+15,005 条社区自定义融合图鉴已有独立中文版本；英文原文、精灵图对应关系及原作者署名保留。中文先经本地机器初译，后在用户授权下，以 Google 整段对照译文辅助复核，并参考宝可梦百科、游戏 Wiki 和现有术语表，完成全部 14,423 种原文的助手逐句审校，覆盖 15,005 条记录；此为助手审校，并非人类译者签审。
+111 张中文图片使用独立副本，按语言加载。作者署名、产品/框架名称、网址及必要的技术标识保留。
+离线初译使用 OPUS 英译中模型（Apache-2.0）：https://huggingface.co/Helsinki-NLP/opus-mt-en-zh
+转换版：https://huggingface.co/gaudi/opus-mt-en-zh-ctranslate2
+Google 对照仅发送图鉴英文描述与临时术语标记，不发送作者、精灵图路径、存档、账号或其他文件。游戏直接读取本地中文资料，模型与制作工具依赖不打入游戏。
+详情与验收范围见 docs/localization-community-and-images.zh-CN.md。
+
+Android.14 合入最新 main 时保留全部 82,207 条英文图鉴。已审段落按完全相同原文复用后，中文覆盖 20,022 条；其余新增内容暂保留英文。固定审校范围与未审数量见 zh-CN-dex-proofread-progress.json。

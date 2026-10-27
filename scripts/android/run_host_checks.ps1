@@ -18,8 +18,10 @@ try {
         & $RubyPath --disable-gems "android/tests/$testName.rb"
         if ($LASTEXITCODE -ne 0) { throw "Failed: $testName" }
     }
-    & $RubyPath --disable-gems tests/gameplay/startup_downloads_test.rb
-    if ($LASTEXITCODE -ne 0) { throw 'Startup download regression checks failed' }
+    foreach ($test in @('wearable', 'door_events', 'outfit_cache', 'startup_downloads')) {
+        & $RubyPath --disable-gems "tests/gameplay/${test}_test.rb"
+        if ($LASTEXITCODE -ne 0) { throw "Local gameplay regression failed: $test" }
+    }
     & $RubyPath --disable-gems -e 'files = Dir.glob("Data/Scripts/**/*.rb") + Dir.glob("android/ruby/*.rb"); files.each { |f| RubyVM::InstructionSequence.compile_file(f) }; puts "PASS: #{files.length} Ruby files compile (no game execution)"'
     if ($LASTEXITCODE -ne 0) { throw 'Ruby syntax checks failed' }
     $classes = Join-Path $output 'save-transfer-classes'
@@ -36,6 +38,12 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Analytics protocol host checks failed' }
     & (Join-Path $jdk 'bin/java.exe') -Xms16m -Xmx128m -cp $classes org.kuray.kif.AsyncHttpQueueHostTest
     if ($LASTEXITCODE -ne 0) { throw 'Asynchronous HTTP lifecycle checks failed' }
+    $payloadClasses = Join-Path $output 'payload-classes'
+    [IO.Directory]::CreateDirectory($payloadClasses) | Out-Null
+    & (Join-Path $jdk 'bin/javac.exe') --release 8 -d $payloadClasses android/app/src/main/java/org/kuray/kif/PayloadArchive.java android/tests/payload-java/PayloadArchiveHostTest.java
+    if ($LASTEXITCODE -ne 0) { throw 'Payload host test compilation failed' }
+    & (Join-Path $jdk 'bin/java.exe') -Xms16m -Xmx128m -cp $payloadClasses org.kuray.kif.PayloadArchiveHostTest $output
+    if ($LASTEXITCODE -ne 0) { throw 'Payload checksum/alias/streaming checks failed' }
     git diff --check
     if ($LASTEXITCODE -ne 0) { throw 'Git whitespace checks failed' }
 } finally { Pop-Location }

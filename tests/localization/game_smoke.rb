@@ -66,6 +66,22 @@ begin
   Graphics.update
   Graphics.screenshot(File.join(directory, "settings-shiny-zh.png"))
   shiny_scene.pbEndScene
+  $game_variables[12] = "小茂"
+  dialogue_window = pbCreateMessageWindow
+  [[43, "Oh yes, that's right! Well I'm sure that you and \\V[12] will have a ton of fun on your Pokémon journey together!", "mom"],
+   [77, "You'll get one too, Blue. Be patient!", "oak"],
+   [95, "I'll let you know if I find anything, \\PN. That is, if I haven't already taken down their whole organization by the next time I see you!", "rival"]].each do |map, text, name|
+    translated = _MAPINTL(map, text)
+    check.call(translated.match?(/[\u3400-\u9fff]/), "native #{name} dialogue uses Chinese")
+    if name == "mom"
+      layout = getFormattedText(dialogue_window.contents, 0, 0, 300, -1, "<b>" + translated + "</b>")
+      check.call(layout.any? { |character| character[2] > 0 } && layout.all? { |character| character[0] == "\n" || character[1] + character[3] <= 302 }, "formatted Chinese dialogue wraps within its window")
+    end
+    pbMessageDisplay(dialogue_window, translated, false)
+    Graphics.update
+    Graphics.screenshot(File.join(directory, name + "-dialogue-zh.png"))
+  end
+  pbDisposeMessageWindow(dialogue_window)
   GameLanguage.load(1)
   check.call(pbGetMessage(MessageTypes::Species, 1) == "Bulbizarre", "native French language data")
   scene = PokemonOption_Scene.new

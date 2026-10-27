@@ -166,6 +166,26 @@ def getFormattedTextForDims(bitmap,xDst,yDst,widthDst,heightDst,text,lineheight,
      explicitBreaksOnly,true)
 end
 
+def isCJKTextBreak(chars, position)
+  return chars[position].match?(/[\u3400-\u9fff（《【「『]/) &&
+         (position == 0 || !chars[position - 1].match?(/[（《【「『(\[]/))
+end
+
+def splitCJKTextWords(text)
+  return [text] unless text.match?(/[\u3400-\u9fff]/)
+  chars = text.scan(/./m)
+  words, word = [], ""
+  chars.each_with_index do |char, position|
+    if !word.empty? && isCJKTextBreak(chars, position)
+      words << word
+      word = ""
+    end
+    word += char
+  end
+  words << word unless word.empty?
+  return words
+end
+
 def getFormattedTextFast(bitmap,xDst,yDst,widthDst,heightDst,text,lineheight,
                          newlineBreaks=true,explicitBreaksOnly=false)
   x=y=0
@@ -209,7 +229,7 @@ def getFormattedTextFast(bitmap,xDst,yDst,widthDst,heightDst,text,lineheight,
       end
     end
     isspace=(textchars[position][/\s/]||isWaitChar(textchars[position]))  ? true : false
-    if hadspace && !isspace
+    if (hadspace && !isspace) || isCJKTextBreak(textchars, position)
       # set last word to here
       lastword[0]=characters.length
       lastword[1]=x
@@ -695,7 +715,7 @@ def getFormattedText(bitmap,xDst,yDst,widthDst,heightDst,text,lineheight=32,
       end
     end
     isspace=(textchars[position][/\s/] || isWaitChar(textchars[position])) ? true : false
-    if hadspace && !isspace
+    if (hadspace && !isspace) || (!graphic && isCJKTextBreak(textchars, position))
       # set last word to here
       lastword[0]=characters.length
       lastword[1]=x
@@ -916,7 +936,7 @@ def getLineBrokenText(bitmap,value,width,dims)
       ret.push(["",x,y,0,textheight,line,position,column,0])
       next
     end
-    words=[ccheck]
+    words=splitCJKTextWords(ccheck)
     for i in 0...words.length
       word=words[i]
       if word && word!=""
@@ -932,13 +952,14 @@ def getLineBrokenText(bitmap,value,width,dims)
           textheight=0
         end
         textheight=[textheight,textSize.height].max
+        length = word.scan(/./m).length
         ret.push([word,x,y,textwidth,textheight,line,position,column,length])
         x+=textwidth
         dims[0]=x if dims && dims[0]<x
+        position+=length
+        column+=length
       end
     end
-    position+=length
-    column+=length
   end
   dims[1]=y+textheight if dims
   return ret
@@ -974,20 +995,21 @@ def getLineBrokenChunks(bitmap,value,width,dims,plain=false)
       words=[ccheck]
     end
     for i in 0...words.length
-      word=words[i]
-      if word && word!=""
-        textSize=bitmap.text_size(word)
-        textwidth=textSize.width
-        if x>0 && x+textwidth>width
-          minTextSize=bitmap.text_size(word.gsub(/\s*/,""))
-          if x>0 && x+minTextSize.width>width
-            x=0
-            y+=32
+      for word in splitCJKTextWords(words[i])
+        if word && word!=""
+          textSize=bitmap.text_size(word)
+          textwidth=textSize.width
+          if x>0 && x+textwidth>width
+            minTextSize=bitmap.text_size(word.gsub(/\s*/,""))
+            if x>0 && x+minTextSize.width>width
+              x=0
+              y+=32
+            end
           end
+          ret.push([word,x,y,textwidth,32,color])
+          x+=textwidth
+          dims[0]=x if dims && dims[0]<x
         end
-        ret.push([word,x,y,textwidth,32,color])
-        x+=textwidth
-        dims[0]=x if dims && dims[0]<x
       end
       if textcols[i]
         color=textcols[i]

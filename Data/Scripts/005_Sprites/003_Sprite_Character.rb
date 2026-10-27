@@ -231,7 +231,10 @@ class Sprite_Character < RPG::Sprite
         self.bitmap = (@charbitmapAnimated) ? @charbitmap.bitmap : @charbitmap
       end
     else
-      @bushbitmap = BushBitmap.new(@charbitmap, (@tile_id >= 384), bushdepth) if !@bushbitmap
+      if !@bushbitmap
+        source = (@character == $game_player) ? getClothedPlayerSprite() : @charbitmap
+        @bushbitmap = BushBitmap.new(source, (@tile_id >= 384), bushdepth)
+      end
       self.bitmap = @bushbitmap.bitmap
     end
     self.visible = !@character.transparent
