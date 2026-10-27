@@ -158,8 +158,8 @@ public final class GameActivity extends SDLActivity {
         extraControls.addView(actionButton("显示模式", () -> { hideExtraControls(); showDisplaySettings(); }), new LinearLayout.LayoutParams(-1, dp(44)));
         extraControls.addView(actionButton("按键设置", () -> { hideExtraControls(); showControlSettings(); }), new LinearLayout.LayoutParams(-1, dp(44)));
         GridLayout shortcuts = new GridLayout(this); shortcuts.setColumnCount(3);
-        String[] labels = {"跑步 Z", "A", "S", "快捷 D", "Q", "W"};
-        int[] codes = {KeyEvent.KEYCODE_Z, KeyEvent.KEYCODE_A, KeyEvent.KEYCODE_S, KeyEvent.KEYCODE_D, KeyEvent.KEYCODE_Q, KeyEvent.KEYCODE_W};
+        String[] labels = {"A", "S", "快捷 D", "Q", "W"};
+        int[] codes = {KeyEvent.KEYCODE_A, KeyEvent.KEYCODE_S, KeyEvent.KEYCODE_D, KeyEvent.KEYCODE_Q, KeyEvent.KEYCODE_W};
         for (int i = 0; i < codes.length; i++) shortcuts.addView(button(labels[i], codes[i]), new ViewGroup.LayoutParams(dp(64), dp(44)));
         extraControls.addView(shortcuts);
         LinearLayout tools = new LinearLayout(this);

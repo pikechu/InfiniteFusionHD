@@ -25,6 +25,7 @@ public final class TouchControlsInstrumentation extends Instrumentation {
     private interface Check { void run() throws Exception; }
     private static final int C = KeyEvent.KEYCODE_C;
     private static final int X = KeyEvent.KEYCODE_X;
+    private static final int Z = KeyEvent.KEYCODE_Z;
     private static final int U = KeyEvent.KEYCODE_DPAD_UP;
     private static final int D = KeyEvent.KEYCODE_DPAD_DOWN;
     private static final int L = KeyEvent.KEYCODE_DPAD_LEFT;
@@ -60,6 +61,41 @@ public final class TouchControlsInstrumentation extends Instrumentation {
                     touch(MotionEvent.ACTION_DOWN, ids(2), points(b));
                     touch(MotionEvent.ACTION_UP, ids(2), points(b));
                     trace(X, -X);
+                });
+                runCase("run_tap", () -> {
+                    RectF r = bounds("Run");
+                    require(touch(MotionEvent.ACTION_DOWN, ids(2), points(r)), "run consumes DOWN");
+                    touch(MotionEvent.ACTION_UP, ids(2), points(r));
+                    trace(Z, -Z);
+                });
+                runCase("direction_and_run_two_fingers", () -> {
+                    float[] up = direction(U), r = center(bounds("Run"));
+                    touch(MotionEvent.ACTION_DOWN, ids(3), points(up));
+                    touch(pointerDown(1), ids(3, 9), points(up, r));
+                    touch(MotionEvent.ACTION_MOVE, ids(3, 9), points(up, r));
+                    require(held.contains(U) && held.contains(Z) && held.size() == 2, "direction and run stay held together");
+                    touch(pointerUp(1), ids(3, 9), points(up, r));
+                    require(held.size() == 1 && held.contains(U), "releasing run preserves movement");
+                    touch(MotionEvent.ACTION_UP, ids(3), points(up));
+                    trace(U, Z, -Z, -U);
+                });
+                runCase("run_slide_out_and_reenter", () -> {
+                    RectF r = bounds("Run");
+                    touch(MotionEvent.ACTION_DOWN, ids(5), points(r));
+                    touch(MotionEvent.ACTION_MOVE, ids(5), points(background()));
+                    require(held.isEmpty(), "sliding out releases run");
+                    touch(MotionEvent.ACTION_MOVE, ids(5), points(r));
+                    touch(MotionEvent.ACTION_UP, ids(5), points(r));
+                    trace(Z, -Z, Z, -Z);
+                });
+                runCase("run_cancel_and_focus_loss_release", () -> {
+                    RectF r = bounds("Run");
+                    touch(MotionEvent.ACTION_DOWN, ids(0), points(r));
+                    touch(MotionEvent.ACTION_CANCEL, ids(0), points(r));
+                    require(held.isEmpty(), "CANCEL releases run");
+                    touch(MotionEvent.ACTION_DOWN, ids(0), points(r));
+                    view.onWindowFocusChanged(false);
+                    trace(Z, -Z, Z, -Z);
                 });
                 runCase("game_area_touch_passes_through", () -> {
                     require(!touch(MotionEvent.ACTION_DOWN, ids(0), points(background())), "background DOWN passes through");
@@ -168,6 +204,15 @@ public final class TouchControlsInstrumentation extends Instrumentation {
                     touch(MotionEvent.ACTION_UP, ids(0), points(up));
                     trace(U, -U);
                 });
+                runCase("menu_releases_direction_and_run", () -> {
+                    float[] up = direction(U), r = center(bounds("Run")), m = center(bounds("Menu"));
+                    touch(MotionEvent.ACTION_DOWN, ids(0), points(up));
+                    touch(pointerDown(1), ids(0, 4), points(up, r));
+                    touch(pointerDown(2), ids(0, 4, 8), points(up, r, m));
+                    touch(pointerUp(2), ids(0, 4, 8), points(up, r, m));
+                    require(menuCalls == 1 && held.isEmpty(), "menu releases movement and run");
+                    require(events.size() == 4 && events.contains(-U) && events.contains(-Z), "both menu releases observed");
+                });
                 runCase("unrelated_finger_preserves_control", () -> {
                     float[] c = center(bounds("Confirm")), empty = background();
                     touch(MotionEvent.ACTION_DOWN, ids(5), points(c));
@@ -186,11 +231,22 @@ public final class TouchControlsInstrumentation extends Instrumentation {
                 runCase("geometry_1280x720", () -> geometry(1280, 720));
                 runCase("geometry_1920x1080", () -> geometry(1920, 1080));
                 runCase("small_landscape_geometry_fits", () -> {
-                    layout(640, 360); setScale(1.5f);
-                    requireInside(bounds("Dpad"), 640, 360, "small D-pad");
-                    requireInside(bounds("Confirm"), 640, 360, "small confirm");
-                    requireInside(bounds("Back"), 640, 360, "small back");
-                    require(!RectF.intersects(bounds("Dpad"), bounds("Back")), "small screen clusters stay separate");
+                    layout(640, 360);
+                    for (float size : new float[] {.65f, 1f, 1.5f}) {
+                        setScale(size);
+                        requireInside(bounds("Dpad"), 640, 360, "small D-pad");
+                        requireInside(bounds("Confirm"), 640, 360, "small confirm");
+                        requireInside(bounds("Back"), 640, 360, "small back");
+                        RectF r = bounds("Run");
+                        requireInside(r, 640, 360, "small run");
+                        require(!RectF.intersects(bounds("Dpad"), bounds("Back")), "small screen clusters stay separate");
+                        require(!RectF.intersects(r, bounds("Dpad")) && !RectF.intersects(r, bounds("Back"))
+                                && !RectF.intersects(r, bounds("Confirm")) && !RectF.intersects(r, bounds("Menu")),
+                                "small run does not overlap other controls");
+                        touch(MotionEvent.ACTION_DOWN, ids(0), points(r));
+                        require(held.size() == 1 && held.contains(Z), "small run hits Z");
+                        touch(MotionEvent.ACTION_UP, ids(0), points(r));
+                    }
                 });
             });
             JSONObject report = new JSONObject();
@@ -272,20 +328,31 @@ public final class TouchControlsInstrumentation extends Instrumentation {
 
     private void geometry(int width, int height) throws Exception {
         layout(width, height);
-        float previousDpad = 0, previousConfirm = 0, previousBack = 0;
+        float previousDpad = 0, previousConfirm = 0, previousBack = 0, previousRun = 0;
         for (float size : new float[] {.65f, 1f, 1.5f}) {
             setScale(size); near(scale(), size, "requested size is retained");
-            RectF pad = bounds("Dpad"), c = bounds("Confirm"), b = bounds("Back"), m = bounds("Menu");
+            RectF pad = bounds("Dpad"), c = bounds("Confirm"), b = bounds("Back"), r = bounds("Run"), m = bounds("Menu");
             requireInside(pad, width, height, "D-pad"); requireInside(c, width, height, "confirm");
             requireInside(b, width, height, "back"); requireInside(m, width, height, "menu");
-            require(pad.width() > previousDpad && c.width() > previousConfirm && b.width() > previousBack,
+            requireInside(r, width, height, "run");
+            require(pad.width() > previousDpad && c.width() > previousConfirm && b.width() > previousBack
+                    && r.width() > previousRun,
                     "65/100/150% visibly increase control sizes");
-            previousDpad = pad.width(); previousConfirm = c.width(); previousBack = b.width();
+            previousDpad = pad.width(); previousConfirm = c.width(); previousBack = b.width(); previousRun = r.width();
             require(!RectF.intersects(pad, c) && !RectF.intersects(pad, b), "left and right clusters do not overlap");
             require(!RectF.intersects(c, b) && !RectF.intersects(m, c), "action controls and menu do not overlap");
+            require(!RectF.intersects(r, pad) && !RectF.intersects(r, c) && !RectF.intersects(r, b)
+                    && !RectF.intersects(r, m), "run does not overlap other controls");
+            near(r.right, c.right, "run is aligned with the right edge");
+            near(r.bottom, b.bottom, "run is aligned with the bottom edge");
+            require(r.centerX() > width / 2f && r.centerY() > height / 2f, "run stays in the bottom-right corner");
             touch(MotionEvent.ACTION_DOWN, ids(0), points(c));
             touch(MotionEvent.ACTION_UP, ids(0), points(c));
             require(held.isEmpty(), "resized confirm releases");
+            touch(MotionEvent.ACTION_DOWN, ids(0), points(r));
+            require(held.size() == 1 && held.contains(Z), "resized run hits Z");
+            touch(MotionEvent.ACTION_UP, ids(0), points(r));
+            require(held.isEmpty(), "resized run releases");
         }
     }
 
