@@ -34,9 +34,8 @@ def test_http_get
 end
 
 def updateHttpSettingsFile
-  return if !downloadAllowed?()
-  echoln "UPDATING SETTINGS"
-  download_file(Settings::HTTP_CONFIGS_FILE_URL, Settings::HTTP_CONFIGS_FILE_PATH,)
+  # Network addresses ship with the game; never download executable Ruby code.
+  nil
 end
 
 def updateKurayJsonSettings
@@ -112,6 +111,9 @@ def download_sprite(base_path, head_id, body_id, saveLocation = "Graphics/temp",
     end
 
     return downloaded_file_name if pbResolveBitmap(downloaded_file_name)
+    if defined?(KIF::OfflineResources) && KIF::OfflineResources.installed? && KIF::OfflineResources.missing(downloaded_file_name)
+      return downloaded_file_name
+    end
 
     url = _INTL(base_path, head_id, body_id)
 
@@ -119,6 +121,11 @@ def download_sprite(base_path, head_id, body_id, saveLocation = "Graphics/temp",
       url = _INTL(base_path, head_id)
     end
 
+    return nil unless url.is_a?(String) && url.start_with?("https://", "http://")
+    # A missing/removed sprite is tried once per session, not every render.
+    $kif_sprite_download_attempts ||= {}
+    return nil if $kif_sprite_download_attempts[url]
+    $kif_sprite_download_attempts[url] = true
     response = KIF::Platform.http_get(url)
     if response[:status] == 200
       return nil unless KIF::Platform.write_download(downloaded_file_name, response[:body])
@@ -284,16 +291,21 @@ GAME_VERSION_FORMAT_REGEX = /\A\d+(\.\d+)*\z/
 
 def fetch_latest_game_version
   begin
-    download_file(Settings::VERSION_FILE_URL, Settings::REMOTE_VERSION_FILE_PATH,)
-    version_file = File.open(Settings::REMOTE_VERSION_FILE_PATH, "r")
-    version = version_file.readline.strip
-    version_file.close
+    return @kif_latest_game_version if @kif_version_checked
+    @kif_version_checked = true
+    version = if defined?(KIF::OfflineResources)
+                KIF::OfflineResources.fetch(Settings::VERSION_FILE_URL, 1024).strip
+              else
+                response = KIF::Platform.http_get(Settings::VERSION_FILE_URL)
+                return nil unless response.is_a?(Hash) && response[:status] == 200
+                response[:body].to_s.strip
+              end
 
     version_format_valid = version.match(GAME_VERSION_FORMAT_REGEX)
 
-    return version if version_format_valid
-    return nil
-  rescue MKXPError, Errno::ENOENT => error
+    @kif_latest_game_version = version if version_format_valid
+    return @kif_latest_game_version
+  rescue MKXPError, StandardError => error
     echo error
     return nil
   end

@@ -126,8 +126,8 @@ class PokemonPokedexInfo_Scene
   def pbGetAvailableForms(species=nil)
     chosen_species = species != nil ? species : @species
     dex_num = getDexNumberForSpecies(chosen_species)
-    if KIF::SpriteSheets.mode == 2
-      # Online sheets are resolved only for the alternatives on screen.
+    if KIF::SpriteSheets.mode == 2 || (defined?(KIF::OfflineResources) && KIF::OfflineResources.installed?)
+      # Resolve only the visible alternatives; installed packs need no probing.
     elsif dex_num <= NB_POKEMON
       download_all_unfused_alt_sprites(dex_num)
     else

@@ -205,11 +205,17 @@ module ChineseLocalization
     scripts, details = script_translations(source, references, target)
     overrides = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-overrides.json"), encoding: "UTF-8"))
     overrides.merge!(JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-settings.json"), encoding: "UTF-8")))
+    offline_texts = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-offline-resources.json"), encoding: "UTF-8"))
+    overrides.merge!(offline_texts)
     overrides.each do |key, value|
       raise "Invalid translation: #{key}" unless safe_translation?(key, value)
     end
     result[24] = OrderedHash.new
     scripts.merge(overrides).sort.each { |key, value| result[24][key] = value if safe_translation?(key, value) }
+    offline_texts.each do |key, value|
+      result[24].delete(key)
+      result[24][Messages.stringToKey(key.dup)] = value
+    end
     counts["script_texts"] = result[24].length
     # The Chinese edition also translates the fusion name fragments. Read their
     # literal AST values, keeping the game's English constants and cached data.

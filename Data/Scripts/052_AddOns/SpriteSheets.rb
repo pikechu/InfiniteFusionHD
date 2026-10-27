@@ -82,10 +82,17 @@ module KIF
       def sheet(type, head, alt, download)
         relative = sheet_relative(type, head, alt)
         saved = File.join(root(type), pack, "downloads", relative)
+        path = bundled(type, head, alt)
+        return saved if File.file?(saved)
+        return path if File.file?(path)
+        installed = !@test_root && defined?(KIF::OfflineResources) && KIF::OfflineResources.installed?
+        if installed && download && downloadAllowed?() && KIF::OfflineResources.entries.key?(path)
+          return KIF::OfflineResources.missing(path) ? path : nil
+        end
         @attempted ||= {}
-        if mode == 2 && download && downloadAllowed?() && !File.file?(saved) && !@attempted[saved]
+        if (mode == 2 || installed) && download && downloadAllowed?() && !@attempted[saved]
           @attempted[saved] = true
-          response = KIF::Platform.http_get(SOURCE + relative)
+          response = installed ? {:status => 200, :body => KIF::OfflineResources.fetch(SOURCE + relative)} : KIF::Platform.http_get(SOURCE + relative)
           if response.is_a?(Hash) && response[:status] == 200 && png_header(response[:body], type)
             SpriteImport.mkdir(File.dirname(saved))
             pending = saved + ".#{Process.pid}.pending"
@@ -246,6 +253,7 @@ module KIF
     module LoadPrewarm
       def load(*args)
         value = super
+        $PokemonSystem.sprite_sheet_mode = 1 if defined?(KIF::OfflineResources) && KIF::OfflineResources.installed?
         KIF::SpriteSheets.preload_party($Trainer)
         value
       end

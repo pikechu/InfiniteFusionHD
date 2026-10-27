@@ -6,7 +6,7 @@
 # You should change it to your file's url once you upload it.
 #===============================================================================
 module MysteryGift
-  URL = "https://pastebin.com/raw/w6BqqUsm"
+  URL = Settings::MYSTERY_GIFT_KURAY_URL
 end
 
 #===============================================================================
@@ -168,8 +168,8 @@ def pbManageMysteryGifts
           newfile.push(gift) if online.include?(gift[0])
         end
         string=pbMysteryGiftEncrypt(newfile)
-        File.open("MysteryGift.txt","wb") { |f| f.write(string) }
-        pbMessage(_INTL("The gifts were saved to MysteryGift.txt."))
+        File.open(Settings::MYSTERY_GIFT_KURAY_PATH,"wb") { |f| f.write(string) }
+        pbMessage(_INTL("The gifts were saved to {1}.", Settings::MYSTERY_GIFT_KURAY_PATH))
         pbMessage(_INTL("Upload MysteryGift.txt to the Internet."))
       rescue
         pbMessage(_INTL("Couldn't save the gifts to MysteryGift.txt."))
