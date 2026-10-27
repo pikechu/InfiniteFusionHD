@@ -469,16 +469,7 @@ class PokemonPokedexInfo_Scene
     end
   
     def getCustomDexEntry(sprite)
-      json_data = File.read(Settings::CUSTOM_DEX_ENTRIES_PATH)
-      parsed_data = HTTPLite::JSON.parse(json_data)
-  
-      entries = parsed_data.select { |entry| entry["sprite"] == sprite }
-      if entries.any?
-        return entries.map { |entry| entry["entry"] }
-      else
-        echoln "No custom entry found for sprite " + sprite.to_s
-        return nil
-      end
+      KIF::PokedexEntries.entries_for(sprite)
     end
 
     def getAIDexEntry(pokemonID, name)

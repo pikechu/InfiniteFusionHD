@@ -6,7 +6,7 @@ module KIF
     CACHE = "Data/offline-resources"
     DATA_PATHS = ["Data/sprites/CUSTOM_SPRITES", "Data/sprites/BASE_SPRITES",
                   "Data/sprites/Sprite Credits.csv", "Data/pokedex/dex.json",
-                  "Data/pokedex/all_entries.json", "Data/pokedex/dex_zh.json"].freeze
+                  "Data/pokedex/all_entries.json", "Data/pokedex/dex_zh.json", "Data/pokedex/dex.json.gz"].freeze
     LIMIT = 8 * 1024 * 1024
     class Cancelled < StandardError; end
 
@@ -26,7 +26,8 @@ module KIF
           image ||= path.is_a?(String) && path.match?(%r{\AGraphics/Battlers/substitute(?:_back)?\.png\z})
           unless (DATA_PATHS.include?(path) ? entry["kind"] == "data" : image && entry["kind"] == "image") && !path.split("/").any? { |part| part.empty? || part == "." || part == ".." } &&
                  !seen[path.downcase] && size.is_a?(Integer) && size.between?(1, LIMIT) &&
-                 url.is_a?(String) && url.match?(%r{\Ahttps://raw\.githubusercontent\.com/(?:pikechu/InfiniteFusionHD/(?:main|[0-9a-f]{40})|infinitefusion/infinitefusion-e18/[0-9a-f]{40})/[A-Za-z0-9_./% -]+\z}) &&
+                 url.is_a?(String) && (url.match?(%r{\Ahttps://raw\.githubusercontent\.com/(?:pikechu/InfiniteFusionHD/(?:main|[0-9a-f]{40})|infinitefusion/infinitefusion-e18/[0-9a-f]{40})/[A-Za-z0-9_./% -]+\z}) ||
+                 image && url.match?(%r{\Ahttps://infinitefusion\.net/customsprites/spritesheets/(?:spritesheets_base/[0-9]+|spritesheets_custom/[0-9]+/[0-9]+[a-z]{0,3})\.png\z})) &&
                  ((entry["sha256"].is_a?(String) && entry["sha256"].match?(/\A[0-9a-f]{64}\z/)) ||
                   (entry["sha1"].is_a?(String) && entry["sha1"].match?(/\A[0-9a-f]{40}\z/)))
             raise ArgumentError, "资源清单包含不支持的路径或校验值"
@@ -116,12 +117,29 @@ module KIF
         # locally authored entries which an update must never remove.
         entry["path"] == "Data/pokedex/dex.json" ? CACHE + "/dex-source.json" : entry["path"]
       end
+      def dex?(entry)
+        ["Data/pokedex/dex.json", "Data/pokedex/dex.json.gz"].include?(entry["path"])
+      end
+      def dex_body(entry, bytes)
+        return bytes unless entry["path"].end_with?(".gz")
+        require "zlib"
+        require "stringio"
+        reader = Zlib::GzipReader.new(StringIO.new(bytes))
+        result = "".b
+        until reader.eof?
+          result << reader.read(65536)
+          raise IOError, "图鉴解压后超过容量限制" if result.bytesize > KIF::PokedexEntries::MAX_BYTES
+        end
+        result
+      ensure
+        reader.close if reader
+      end
       def stamp(entry)
         path = file_path(entry)
         return nil unless File.file?(path)
         result = [checksum(entry), File.size(path), File.mtime(path).to_f.to_s]
-        if entry["path"] == "Data/pokedex/dex.json" && File.file?(entry["path"])
-          result += [File.size(entry["path"]), File.mtime(entry["path"]).to_f.to_s]
+        if dex?(entry) && File.file?(Settings::CUSTOM_DEX_ENTRIES_PATH)
+          result += [File.size(Settings::CUSTOM_DEX_ENTRIES_PATH), File.mtime(Settings::CUSTOM_DEX_ENTRIES_PATH).to_f.to_s]
         end
         result
       end
@@ -133,13 +151,13 @@ module KIF
         end
         return false unless File.file?(path) && !File.symlink?(path)
         known = (state["verified"] ||= {})
-        return true if !strict && known[entry["path"]] == stamp(entry) && File.file?(entry["path"])
+        return true if !strict && known[entry["path"]] == stamp(entry) && (!dex?(entry) || File.file?(Settings::CUSTOM_DEX_ENTRIES_PATH))
         known.delete(entry["path"])
         return false unless File.size(path) == entry["size"] && valid_bytes?(entry, File.binread(path))
-        install(entry, File.binread(path)) if entry["path"] == "Data/pokedex/dex.json" && !File.file?(entry["path"])
-        if entry["path"] == "Data/pokedex/dex.json"
-          local = KIF::PokedexEntries.parse(File.binread(entry["path"]))
-          incoming = KIF::PokedexEntries.parse(File.binread(path))
+        install(entry, File.binread(path)) if dex?(entry) && !File.file?(Settings::CUSTOM_DEX_ENTRIES_PATH)
+        if dex?(entry)
+          local = KIF::PokedexEntries.parse(File.binread(Settings::CUSTOM_DEX_ENTRIES_PATH))
+          incoming = KIF::PokedexEntries.parse(dex_body(entry, File.binread(path)))
           return false unless KIF::PokedexEntries.merge(local, incoming)[:added] == 0
         end
         known[entry["path"]] = stamp(entry)
@@ -147,12 +165,13 @@ module KIF
       end
       def install(entry, bytes)
         raise IOError, "文件校验失败：#{entry['path']}" unless valid_bytes?(entry, bytes)
-        if entry["path"] == "Data/pokedex/dex.json"
-          destination(entry["path"])
-          incoming = KIF::PokedexEntries.parse(bytes)
-          existing = File.file?(entry["path"]) ? KIF::PokedexEntries.parse(File.binread(entry["path"])) : []
+        if dex?(entry)
+          target = Settings::CUSTOM_DEX_ENTRIES_PATH
+          destination(target)
+          incoming = KIF::PokedexEntries.parse(dex_body(entry, bytes))
+          existing = File.file?(target) ? KIF::PokedexEntries.parse(File.binread(target)) : []
           merged = KIF::PokedexEntries.merge(existing, incoming)
-          KIF::PokedexEntries.write(entry["path"], merged[:entries]) if merged[:added] > 0 || !File.file?(entry["path"])
+          KIF::PokedexEntries.write(target, merged[:entries]) if merged[:added] > 0 || !File.file?(target)
         end
         atomic(file_path(entry), bytes)
         (state["verified"] ||= {})[entry["path"]] = stamp(entry)
@@ -193,14 +212,15 @@ module KIF
         else
           # Android's existing bridge yields from a cooperative Fiber while Java
           # performs TLS; it never creates a native-HTTP background Ruby thread.
-          worker = KIFMultiplayer::FiberWorker.new { KIF::Platform.http_get(url) }
+          headers = url.start_with?("https://infinitefusion.net/") ? {"User-Agent" => "Mozilla/5.0 InfiniteFusionHD", "Range" => "bytes=0-#{limit - 1}"} : {}
+          worker = KIFMultiplayer::FiberWorker.new { KIF::Platform.http_get(url, headers) }
           while worker.alive?
             worker.poll
             yield(0) if block_given?
             KIFMultiplayer.pump if worker.alive?
           end
           response = worker.value
-          raise IOError, "资源请求失败，请重试" unless response.is_a?(Hash) && response[:status] == 200 && response[:body].is_a?(String) && response[:body].bytesize <= limit
+          raise IOError, "资源请求失败，请重试" unless response.is_a?(Hash) && [200, 206].include?(response[:status]) && response[:body].is_a?(String) && response[:body].bytesize <= limit
           response[:body]
         end
       ensure

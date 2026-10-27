@@ -16,10 +16,11 @@ class ManifestTests(unittest.TestCase):
         with patch.object(Path, "is_file", return_value=True), patch.object(Path, "read_bytes", return_value=b"first\r\nsecond\r\n"):
             rows = builder.bundled_data()
         expected = b"first\nsecond\n"
-        self.assertEqual(len(rows), len(builder.DATA))
+        self.assertEqual(len(rows), len(builder.DATA) - 1)
         for row in rows:
-            self.assertEqual(row["size"], len(expected))
-            self.assertEqual(row["sha256"], hashlib.sha256(expected).hexdigest())
+            content = b"first\r\nsecond\r\n" if row["path"].endswith(".gz") else expected
+            self.assertEqual(row["size"], len(content))
+            self.assertEqual(row["sha256"], hashlib.sha256(content).hexdigest())
 
     def test_revision_is_deterministic_and_case_collisions_fail(self):
         rows = [{"path": "b.png"}, {"path": "a.png"}]

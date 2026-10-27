@@ -2,8 +2,23 @@
 # KIF's records in their original order and append only distinct valid text.
 module KIF
   module PokedexEntries
-    MAX_BYTES = 8 * 1024 * 1024
+    MAX_BYTES = 32 * 1024 * 1024
     MAX_ENTRIES = 100_000
+
+    def self.entries_for(sprite)
+      path = Settings::CUSTOM_DEX_ENTRIES_PATH
+      stamp = File.file?(path) ? [File.size(path), File.mtime(path).to_f, File.ctime(path).to_f] : nil
+      if @display_stamp != stamp || !@display_index
+        @display_index = {}
+        records = stamp ? parse(File.binread(path)) : []
+        records.each do |row|
+          next unless valid?(row)
+          (@display_index[row["sprite"]] ||= []) << row["entry"]
+        end
+        @display_stamp = stamp
+      end
+      @display_index[sprite]
+    end
 
     def self.parse(text)
       raise ArgumentError, "Invalid custom dex size" unless text.is_a?(String) && text.bytesize <= MAX_BYTES
