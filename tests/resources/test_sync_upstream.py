@@ -6,6 +6,7 @@ import shutil
 import struct
 import sys
 import unittest
+import urllib.error
 from unittest.mock import patch
 import uuid
 
@@ -103,6 +104,18 @@ class UpstreamSyncTests(unittest.TestCase):
             sync.merge_dex([{"bad":"local"}], [], 501)
         with self.assertRaises(ValueError):
             sync.apply({"unexpected/path":b"x"})
+
+    def test_unpublished_sheet_is_deferred_without_publishing_a_dead_url(self):
+        def fetch(url, limit, probe=False):
+            if url.endswith('/1a.png'):
+                raise urllib.error.HTTPError(url, 404, 'not published', {}, None)
+            return self.fetch(url, limit, probe)
+        outputs, summary = sync.prepare(fetch, self.api, workers=1)
+        self.assertEqual(summary['pending_sheets'], 1)
+        self.assertEqual(summary['verified_sheets'], 2)
+        manifest = json.loads(outputs['Data/offline-resources.json'])
+        self.assertFalse(any(row['url'].endswith('/1a.png') for row in manifest['files']))
+        self.assertTrue(json.loads(outputs[sync.STATE])['pending_sheets'])
 
 
 if __name__ == "__main__":
