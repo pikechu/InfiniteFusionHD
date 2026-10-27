@@ -1,4 +1,6 @@
-# Windows 与 Android 客户端打包
+# InfiniteFusionHD Windows 与 Android 客户端打包
+
+项目继承 KIF FORK。改名后新生成的 Windows ZIP、Android APK 使用 `InfiniteFusionHD-` 前缀；服务端归档使用 `InfiniteFusionHD-server-` 前缀。旧成品包名称和历史校验记录保持原样。游戏标题和 Android 显示名称统一为 InfiniteFusionHD，存档目录、`org.kuray.kif` 包名、签名及现有服务标识继续保留。
 
 以干净的 main 提交构建。先通过 `scripts/multiplayer/build.py --check`，并保证服务端租借目录的兼容信息匹配。不要把其他工作区未提交的脚本或存档拷入产物。
 

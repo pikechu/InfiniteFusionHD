@@ -1,7 +1,7 @@
 # Explicit diagnostic intent only. Uses public fixtures and separate probe files;
 # never opens player saves and never calls native HTTPLite HTTP methods.
 module KIFNetworkSmoke
-  PNG_URL = "https://raw.githubusercontent.com/pikechu/kurayshinyrevamp/main/Graphics/BaseSprites/1.png"
+  PNG_URL = "https://raw.githubusercontent.com/pikechu/InfiniteFusionHD/main/Graphics/BaseSprites/1.png"
   ECHO_URL = "https://httpbingo.org/post"
 
   class << self
@@ -98,7 +98,7 @@ module KIFNetworkSmoke
       end
 
       check("https_404_preserved") do
-        response = adapter.get("https://raw.githubusercontent.com/pikechu/kurayshinyrevamp/main/kif-network-probe-not-found-20261016")
+        response = adapter.get("https://raw.githubusercontent.com/pikechu/InfiniteFusionHD/main/kif-network-probe-not-found-20261016")
         assert(response[:status] == 404, "Missing status=#{response[:status]} error=#{response[:error]}")
         "HTTP 404 returned without treating transport as successful 200"
       end

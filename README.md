@@ -1,139 +1,84 @@
-# Kuray Infinite Fusion (KIF)
+# InfiniteFusionHD
 
-Kuray Infinite Fusion (KIF) is a fork of Infinite Fusion, which adds countless new features, including infinite colors for shinies, mods support (people can create mods and load them from a "Mods" folder), a powerful AI (thanks to DemICE), and more!
+[简体中文](README.md) | [English](README.en.md)
 
-Kuray Infinite Fusion (KIF) is community-based and community-focused, it's made by the community, for the community, allowing anyone to easily create new features for Infinite Fusion and to have a better experience overall.
+**继承 KIF FORK，聚焦高清画面与跨平台联网的 Pokémon Infinite Fusion 社区分支。**
 
-The original Pokemon Infinite Fusion (PIF) has been created by Chardub/Frogman, using Pokemon Essential.
+InfiniteFusionHD is a fork of Kuray Infinite Fusion (KIF), focused on enhanced visuals and online play across Windows and Android.
 
-Kuray Infinite Fusion (KIF) is standalone, which means, you do not need Pokemon Infinite Fusion (PIF), and you should NOT install KIF on top of a PIF game.
+本项目从 **KIF FORK（Kuray Infinite Fusion）** 继承而来，在其融合玩法、闪光配色、Mod 支持及便利功能的基础上，继续补充**素材高清化、联网玩法、Windows / Android 适配和简体中文支持**。KIF 原有功能属于上游贡献，本分支新增内容与实际完成范围见下文。
 
-Please remember that the backbone of KIF (which is PIF) is still being developed and maintained by Chardub/Frogman, if PIF dies, KIF is very likely to die as well.
+项目地址：[pikechu/InfiniteFusionHD](https://github.com/pikechu/InfiniteFusionHD) · [发布下载](https://github.com/pikechu/InfiniteFusionHD/releases) · [问题反馈](https://github.com/pikechu/InfiniteFusionHD/issues)
 
-This Github allows you to see the game (open-source), but also to contribute to the development of this project with pull-requests, and download the latest release to stay up-to-date.
+**开发状态（2026-10-27）**：账号、云存档、在线世界及下列休闲联机玩法已在 main 中；高清重绘、进一步的地图与加载修复、交易中心和运营后台仍在开发工作区，尚未合并到 main。发布包包含的实际内容以对应版本说明为准。
 
-# Official Links
-Website: https://www.kurayinfinitefusion.com/
+## 高清化：让融合世界更细腻
 
-Discord: https://discord.gg/kuray-hub-1121345297352753243 | https://discord.gg/vZUCRxDTPe
+- **战斗背景细节重绘（开发中）**：开发工作区已应用四批共 **86 张素材**，包含全部 **70 张独立战斗背景**和 **16 张敌我地台**，覆盖昼夜户外、城市、洞穴、道馆与特殊场景。
+- **保留原有构图与兼容性**：AI 辅助补绘纹理与细节，保留原文件名、宽高和透明通道，沿用原有场景布局与地台位置。
+- **画面与移动修复（开发中）**：修正服饰、头发和帽子的遮挡及跟随问题，改善草丛显示、动作切换缓存和资源释放。
+- **持续分批推进**：HD 表示本分支的视觉增强方向；当前仍使用原始素材尺寸与游戏基础分辨率，尚未完成全素材重绘。地图图块、界面、角色和动画等仍需逐批处理。
 
-Twitter: https://twitter.com/kuray_hub
+当前高清替换与渲染修复首先应用于开发工作区，尚未随 main 或客户端发布。它们不是全素材重绘完成或显示分辨率提升的声明。
 
-Reddit: https://www.reddit.com/r/kurayhub/
+## 联网：从单人融合冒险走向共同游玩
 
-Github: https://github.com/kurayamiblackheart/kurayshinyrevamp *(You are here!)*
+| 功能 | 本分支新增内容 |
+| --- | --- |
+| 账号与云存档 | 注册、登录、云端保存与跨端恢复；启动时选择在线或离线游玩 |
+| 在线世界 | 主线地图玩家互见、地图聊天和世界聊天 |
+| 好友对战 | 双人房间、选队、准备、好友单打与再战 |
+| 合作与挑战 | 合作 Boss、异步玩家 AI 道馆、随机租借杯和固定路线合作副本 |
+| 精灵交换 | 好友休闲交换、在线奇迹交换池与服务器托管收藏 |
+| 社交与回放 | 训练师名片、六槽展柜、精灵展示与双方同意后的战斗回放分享 |
+| 可部署服务端 | 协调服务、生产部署材料、备份与恢复工具 |
 
-YouTube: https://www.youtube.com/@kuraylab
+**开发中的扩展**：交易中心支持受控在线角色的精灵、道具及 GOLD 交易，包括挂牌、购买、待领取和交易记录；运营后台补充审计、统计与受控角色整档回滚。这些实现尚未合并到 main。
 
-Twitch: https://www.twitch.tv/kurayamiblackheart
+在线休闲玩法与开发中的服务器受控角色有各自的规则和资产边界；历史本地存档不会直接导入受控在线经济。云存档同步也不等于对本地资产来源的认证。
 
+当前已有 Windows 与 Android 模拟器联测及分项验收记录；公网部署、实体手机体验、全地图自然通关和生产容量仍须独立验收。参与联网需要可用的同版本服务端，源码中的默认域名不代表公共服务已经开放。
 
-Pokemon Infinite Fusion (PIF) Github: https://github.com/infinitefusion/infinitefusion-e18
+使用及进度：[联机设置](docs/multiplayer-setup.zh-CN.md) · [账号、云存档与在线世界](docs/multiplayer-online-world.zh-CN.md) · [休闲交换与恢复](docs/multiplayer-trade-fields.zh-CN.md) · [服务端说明](server/multiplayer/README.zh-CN.md) · [部署说明](server/multiplayer/deploy/README.md)
 
-Pokemon Infinite Fusion (PIF) Discord: https://discord.gg/infinitefusion
+## 其他补充
 
-Pokemon Essential Github: https://github.com/Maruno17/pokemon-essentials
+- **Windows / Android 双端**：Windows 客户端打包与 Android 独立应用，包含触控按键、键盘输入、画面比例设置、存档导入导出和可选 HTTPS 网络支持。
+- **简体中文适配**：可切换语言、中文字体、剧情与常用界面翻译、中文融合名称和图鉴文本；保留社区翻译来源说明。覆盖范围与剩余内容见[汉化记录](docs/localization.zh-CN.md)。
+- **图鉴与素材链路**：补充上游图鉴条目、图集支持及下载失败处理，改善可选网络资源不可用时的启动体验。见[图鉴更新](docs/pokedex-merge.zh-CN.md)与[图集支持](docs/spritesheets.zh-CN.md)。
+- **加载与稳定性（开发中）**：继续改善 Android 首次资源安装、地图加载和角色动作缓存，修复本地地图与渲染问题；这些后续修复尚未合并到 main。
 
+## 从 KIF FORK 继承的功能
 
-**If you've been banned from our Discord (the Kuray Hub), you can fill this form to ask for an unban, or informations about the ban:** https://forms.gle/TPCprf38ANmYNB5T8
+以下能力来自 KIF 及其社区，本分支继续继承与维护：
 
------------------------------------------------
+- 融合宝可梦、自定义精灵立绘与融合图标。
+- 多模式闪光配色、自定义闪光颜色与闪光缓存。
+- `Mods` 文件夹加载与社区扩展支持。
+- DemICE 的强化 AI、终局挑战与自我对战。
+- 加速、自动战斗、多存档与备份、快捷存档和可配置经验 / 等级限制。
+- 宝可梦导入导出、电脑箱排序与多选、个体立绘等便利功能。
 
-# Installation
-_To install KIF, please go in "Releases" and get the last release (download Source Code.zip) or follow this link: https://github.com/kurayamiblackheart/kurayshinyrevamp/archive/refs/heads/release.zip_
+完整上游功能清单与原作者署名保存在[KIF 上游 README](docs/upstream-KIF-README.md)。
 
-_Text instruction on how to Install KIF are available on our Discord: https://discord.gg/UFxQkUZeyE_
+## 下载与运行
 
-__Google Docs of the game (OBSOLETE, but some informations are still useful):__ https://docs.google.com/document/d/1O6pKKL62dbLcapO0c2zDG2UI-eN6uatYlt_0GSk1dbE/edit
+1. 从 [InfiniteFusionHD Releases](https://github.com/pikechu/InfiniteFusionHD/releases) 获取对应平台的完整客户端；没有适用发布包时请按[客户端打包说明](docs/client-packaging.zh-CN.md)自行构建。
+2. Windows 将完整客户端解压到可写目录，运行 `Game.exe`。源码 ZIP 不保证包含本地新增素材或完整可运行发布包。
+3. Android 安装手机版本 APK；模拟器专用包仅用于模拟器测试。首次启动等待资源校验与安装完成。
+4. 单人游玩可选择离线；联网时在游戏内设置与客户端兼容的服务端地址。
 
-# List of Constant Features
+请独立安装本项目，不要覆盖安装到其他 PIF / KIF 游戏目录。改名后继续沿用既有存档位置、Android 包名 `org.kuray.kif`、原生接口和服务配置标识，便于兼容已有存档与同签名应用升级。Android 卸载会删除私有存档，迁移前请先导出。
 
-- **Modding support** **| by DEMICE**
-- Game's Speed up to **x10** & displayed on the title **| by REIZOD**
-- No double-confirmation for unfusing **| by REIZOD**
-- Revamped Gender Icons **| by REIZOD**
-- IV/EVs in Pokemon's Summary **| by LUMINATRON**
-- Pokemon can relearn Pre-Evolution moves **| by REIZOD**
-- Quick Surf is now Quick Field Moves **| by REIZOD**
-- 161 more PC backgrounds **| by REIZOD**
-- Transgender stone works with genderless, male and female **| by REIZOD**
-- Endgame challenge & Powerful AI by DemICE, now opponents fight for real! **| by DEMICE**
-- Infinite Save Files, new backup file created at each save **| by DEMICE**
-- Custom Fusion Icons support **| by REIZOD**
-- Self-Battle *(battle your own Pokemons from your PC/"Battlers" folder/Team !)* **| by REIZOD, TRAPSTARR & DEMICE**
-- Shiny Finder.exe *(a program created by Reïzod which allows you to quickly see all the shiny possibilities of a .png sprite)* **| by REIZOD**
-- Auto-updater *(thanks to HungryPickle)*, the game will check for update by itself, and if there is an update, will ask you whether you want to update or not (when launching the game), if you press yes, it will update without you having to do anything, and it will automatically restart, all updated! **| By HUNGRYPICKLE**
-- Brought back the feature that allowed in PIF to breed fused Pokemons. Before PIF 6.0, it was possible to do this in the base game of PIF. Now it's KIF-exclusive. **| by REIZOD**
-- A tool that allows you to install all the sprites *(autogen and custom)* from PIF's gitlab servers, so that you can have all the sprites that have been made for the game locally on your computer! Running this tool may take a few hours, please only run it overnight, or when you can let it run for a long time. There's more than 200 000 small sprites involved, so it takes a while to move them and organize them on the computer. You can also manually access those sprites from the gitlab servers yourself by following those links: https://gitlab.com/pokemoninfinitefusion/autogen-fusion-sprites *(autogen)* & https://gitlab.com/pokemoninfinitefusion/customsprites *(custom)* **| by REIZOD**
-- Mystery Gift *(KIF distributes mystery gifts, to be informed on ongoing distributions and their passwords, please join the Discord server)* **| by REIZOD**
-- Patches a lot of PIF bugs, making the game more stable.
+开发入口：[Windows / Android 打包](docs/client-packaging.zh-CN.md) · [Android 工程](docs/android/README.md) · [联机进度](docs/multiplayer-progress.zh-CN.md)
 
-# List of Optional Features (you can turn them ON/OFF and/or configure/customize them!)
+## 项目来源与致谢
 
-- Shiny Animations Toggle **| by REIZOD**
-- Shiny Revamp *(using a system built from scratch doing channels shifting on top of hue shifting for very complex color manipulations, **37 964 160 000 shiny combinations** on all sprites, also using black, grey and white as color. Two shinies are different now, you can have a Black Charmander and a Blue Charmander, generated Pokemons have their own shiny data!)* | *There's 3 modes to choose from, the default one has 360 possible shinies *(only uses hue shifting)*, the second one is the normal mode, with hue shifting and channels shifting, with 622 080 possible shinies, the third one is the most advanced color manipulations one, with over 37 billions possible shinies.* **| by REIZOD**
-- 1v1/2v2/3v3 Wild Battles **| by REIZOD**
-- 1v1/2v2/3v3 Trainer Battles **| by REIZOD**
-- Shiny Icons **| by REIZOD**
-- Export/Export All/Import One Random/Import All Pokemons *(from/to .json & .png files, store your Pokemons on your computer&share them to other players! You can even store their appearence (sprite) too! Possibility to export the shiny .png sprite of a Shiny Pokemon as well!)* **| by REIZOD**
-- Lock Evolution *(prevents a Pokemon from evolving until manually unlocked on an evo-locked Pokemon)* **| by REIZOD**
-- Choose/Re-roll Shiny Colors *(DEBUG only)* **| by REIZOD**
-- Shiny Dye Fusing **| by JUSTANOTHERU5ER**
-- Shiny Preview on Fusions, and Fusion Preview *(no black/green silhouettes)* **| by REIZOD**
-- Robust Level Caps *(customizable system, from Smart Exp Points, to Locked Exp Points, to obtaining Rare Candies when exceeding the cap instead of levelling up)* **| by REIZOD & HUNGRYPICKLE**
-- Buy more PC boxes *(infinite)* **| by REIZOD**
-- Gamble to transform Pokemon into Shiny/Change its Shiny Colors **| by REIZOD**
-- Sort Pokemons in PC, sort a single box/all boxes *(options: Specie Name, Name, Dex Number, Level, HP, Atk, Def, SpA, SpD, Spe, Caught Date, Shiny, OT (Original Trainer's name), Gender, Ability, Nature, Held Item, First Type, Second Type, Caught Map (Map ID), Happiness, Exp, Markings, Total IVs (sum of IVs), Total EVs (sum of EVs))* **| by REIZOD**
-- Multi-Select in PC **| by SYLVI**
-- Change Game's Font **| by REIZOD**
-- Pokemons' Sprites as Icons *(in team and PC boxes)* **| by SYLVI**
-- Individual Custom Sprites *(can have 2 Eevees with different sprites, all sprites availables are being used giving more uniqueness to each Pokemon)* **| by REIZOD**
-- Kuray Shop *(buy items/HM/etc unobtainable otherwises (rare candie, masterball, transgender/mist stones, ...))* **| by REIZOD**
-- Dynamic Self-Fusions stat boosts *(the Pokemons with the worst base stats gets the most boost from a self-fusion)*, you can turn this feature on/off in the options. **| by REIZOD** 
-- ~~Blacklisting/Rarity/Re-roll/Reset systems for sprites | by REIZOD~~ *(Abandoned, will have to be re-done)*
-- PC & Instant Heal from menu **| by REIZOD**
-- ~~Per-Save File/Global feature system | by SYLVI~~ *(Not working)*
-- Change Shiny Odds from options menu **| by REIZOD**
-- Pokemons added to Pokedex when catching/evolving fusions **| by TRAPSTARR**
-- Consumables Items recovered after battle **| by TRAPSTARR**
-- Configurable ExpAll redistribution. **| by HUNGRYPICKLE**
-- Types Icons in-battle *(various sets of icons to choose from)* **| by TRAPSTARR & MIRASEIN & FAIRYGODMOTHER**
-- Auto-Battle **| by REIZOD & TRAPSTARR**
-- Trainers use Shinies *(can be configured so that the Trainers can have shinies constantly, or only for their Ace, or never, if the feature is activated, the Shiny Wild odds will make it possible for the trainers to have random shinies as well. This feature goes well with the Rocket Mode, which allows you to catch trainers' Pokemons)* **| by TRAPSTARR**
-- Damage Variance deactivatable **| by DEMICE**
-- Option to unfuse traded Pokemons *(can be turned ON/OFF in the Options Menu)* **| by REIZOD**
-- Quicksave Feature **| by DEMICE**
-- Dark Battle GUI & More battle GUI to choose from **| by TRAPSTARR & MIRASEIN**
-- Option to enable/disable the sprite selection in Pokedex when catching a new Pokemon **| by REIZOD**
-- Option to enable/disable the prompt that asks you if you wish to nickname a newly obtained Pokemon **| by REIZOD**
-- Option to enable/disable the prompt that asks you if you wish to add a newly obtained Pokemon in your team or send it to PC **| by REIZOD**
-- Option to skip the intro cutscene when launching the game *(Open a batch console (you can do so by pressing WIN+R and entering "cmd" in the box), then execute this code: ``echo:Y>"%appdata%\kurayinfinitefusion\NoIntro.krs"``. Breakdown: The code will create a file named "NoIntro.krs" in your savefile directory. When this file exists, the intro cutscene will always be skipped at launch, launching the game faster.)* **| by REIZOD**
-- Ability to decompile and recompile the game entirely *(PIF does not allow you to decompile their database, but KIF allows you to do so)* - PLEASE, do not use this utility feature if you do not know what you're doing. It is available in the debug options menu. **| by REIZOD**
-- Brought back the feature that allowed in PIF to breed legendaries Pokemon, and any Pokemon, if the Pokemon that was unbreedable was the head in the fusion *(for example, a Mew head with a Pikachu head fusion, can breed if this feature is activated in the options)* before PIF 6.0, it was possible to do this in the base game of PIF. Now it's a KIF-exclusive option. **| by REIZOD**
-- Poison Overworld Config, allows you to make it so that Pokemons with certain abilities are immune to Poison in the Overworld *(can configure it so that they even heal from Overworld Poison, this feature is disabled by default)* **| by BLUEWUPPO**
-- Modern Hail feature *(optional)* **| by BLUEWUPPO**
-- Bug Type Buff feature *(optional)* **| by BLUEWUPPO**
-- Ice Type Buff feature *(optional)* **| by BLUEWUPPO**
-- Frostbite instead of Frozen feature *(optional)* **| by BLUEWUPPO**
-- Drowsy instead of Asleep feature *(optional)* **| by BLUEWUPPO**
-- Add Event Moves to the Battle Factory Egg Move Tutor **| by HUNGRYPICKLE & REKT1029**
-- Brought back the dominant typing for fusions that were in PIF before PIF 6.0, it is now a KIF-exclusive option. **| by DEMICE**
-- Ability to adjust the base stats spread for fused Pokemons. **| by HUNGRYPICKLE**
-- Tutor.net, allows you to teach TMs that you've already obtained to your Pokemons, also registers move tutors, all your move teaching in one menu! **| by DEMICE**
-- Added a "Metronome Madness" challenge *(forces Pokemons to use the move Metronome)*. **| by REIZOD**
-- Added a "Letdown" challenge *(sometimes, a Pokemon will use Splash instead of the move it was supposed to use)*. **| by REIZOD**
-- Added a "Berserker" challenge *(all the stats of the enemy will raise, the frequency depends on the difficulty you've choosen on this challenge)* **| by REIZOD**
-- Ability to choose how the speed-up works *(choose between Toggling the speed-up value, or only speeding up when you hold the button)* **| by REIZOD**
-- Shiny Cache System *(optimizes performances when displaying shinies from KIF, also allows you to access all the shinies .png from the "Cache" folder)*, because of the massive performance boost, the cache is turned on by default. **| by REIZOD**
-- Create and Load options presets, to quickly change between game configurations! **| by REIZOD**
-- Exempt boxes from the "Sort All Pokemons" feature. **| by REIZOD**
-- Exempt boxes from the "Export All Pokemons" feature. **| by REIZOD**
-- No-EVs Mode: This mode disable EVs, forcing all Pokemons to have 0 EVs *(it is non-destructive, so if you disable it again, the EVs your Pokemons had beforehand will be saved, this mode simply ignores the EVs of the Pokemons during stats calculations, it applies retroactively to every Pokemons, including enemies, it will also show "0" as EVs in the Pokemons' summaries)*. **| by REIZOD**
-- Max IVs Mode: This mode forces all Pokemons to have 31 IVs *(it is also non-destructive, it does not overwrite the real IVs of Pokemons, it just ignores their real IVs and use the value "31" in all calculations regarding IVs as long as the mode is activated, it applies retroactively and to enemies as well, just like the No-EVs Mode)*. **| by REIZOD**
-- Added an option to display the level of the Pokemons in battle when using No Level Mode aka Base Stats Mode (warning: the levels of the Pokemons do not impact their stats in this mode!), that option may be helpful for moves such as Seismic Toss, etc. **| by REIZOD**
-- Added a Rocket Mode, which is disabled by default. If enabled, you can catch the Pokemons of other trainers. You can configure it to work only on Rocket Ball or for every balls. If activated, Rocket Balls will appear in the Kuray Shop right at the start of the game. **| by REIZOD**
-- Added a Trainer Exp. Boost modifier. By default in PIF/KIF, the exp. boost from defeating a trainer's Pokemon is +50%. You can change that boost now. **| by REIZOD**
-- Added EVs Train Mode *(When you turn this new option ON, the enemies Pokemons will never yield their Pokemon's species EVs. However, the held Power-items will continue to give 4 of their respective EVs to your Pokemons. It's a QoL that allows you to utilize Power Anklet (Speed), Power Band (Special Defense), Power Belt (Defense), Power Bracer (Attack), Power Lens (Special Attack) and Power Weight (HP) to EVs train without having the EVs yields of the enemies Pokemons interfering with your EVs training.)* **| by REIZOD**
-- Added Auto-Battle Shortcut *(Enabled by default. If disabled, the shortcut keybind to toggle Auto-Battle ON/OFF during battles will be disabled)* **| by REIZOD**
-- Added Auto-Battle Shiny Stop *(Disabled by default. If enabled, the Auto-Battle will automatically turn itself OFF if a wild Shiny pokemon is encountered)* **| by REIZOD**
-- K-Eggs (Kuray Eggs)*, available in the Kuray Shop. Those items can be used from the Bag to spawn a random Pokémon (a Fire K-Egg will give you a random Fire Pokémon, etc). K-Eggs uses the Catch Rate of Pokémon as their rarity (the lower the catch rate, the rarer the Pokémon in K-Eggs). K-Eggs are 10 times more likely to be shiny than wild encounters. You can customize the K-Eggs system in the Options.* **| by REIZOD**
+项目继承关系：**Pokémon Essentials → Pokémon Infinite Fusion（PIF）→ Kuray Infinite Fusion（KIF FORK）→ InfiniteFusionHD**。
+
+- **KIF FORK / Kuray Infinite Fusion**：由 Kurayami Blackheart（Reïzod）及 KurayHub 社区开发。感谢 DemICE、Sylvi、Hungry Pickle、bluewuppo、Trapstarr 及其他代码、素材与测试贡献者。[上游仓库](https://github.com/kurayamiblackheart/kurayshinyrevamp) · [上游网站](https://www.kurayinfinitefusion.com/)
+- **Pokémon Infinite Fusion**：由 Chardub / Frogman 及社区开发。[PIF 仓库](https://github.com/infinitefusion/infinitefusion-e18)
+- **Pokémon Essentials**：感谢 Maruno 及所有引擎贡献者。[Essentials 仓库](https://github.com/Maruno17/pokemon-essentials)
+- **社区美术与汉化**：精灵、音乐、图块及翻译的原作者署名继续保留于 `PIF_Credits.txt`、游戏内制作人员名单与 `Data/localization/source-notice.zh-CN.txt`。
+
+InfiniteFusionHD 是在上述项目基础上继续开发的社区衍生分支。项目改名不改变上游作品、素材和社区贡献的归属；KIF 的网站及社区链接仅作为来源引用。

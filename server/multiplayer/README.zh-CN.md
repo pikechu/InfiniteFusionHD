@@ -1,4 +1,6 @@
-# 本地联机协调服务（协议 2）
+# InfiniteFusionHD 联机协调服务（协议 2）
+
+InfiniteFusionHD 继承 KIF FORK，重点扩展高清画面和联网玩法。部署目录、`KIF_*` 环境变量、服务单元与协议标识沿用原值，保持现有部署及数据兼容。
 
 2026-10-21新增账号、云存档、主线地图同步与聊天，完整使用/验证说明见 `../../docs/multiplayer-online-world.zh-CN.md`。新端点使用Bearer身份，其中auth/register、auth/login无需身份；本节POST不使用经济操作日志，上传和聊天分别以upload_id/client_id去重。
 

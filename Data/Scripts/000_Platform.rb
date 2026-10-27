@@ -74,7 +74,7 @@ module KIF
           [command.code, command.indent, command.parameters] == expected
         end
         [
-          RPG::EventCommand.new(101, 0, ["KIF Android Test is an independent test port."]),
+          RPG::EventCommand.new(101, 0, ["InfiniteFusionHD is an independent test port."]),
           RPG::EventCommand.new(401, 0, ["This APK is not an official upstream release."]),
           RPG::EventCommand.new(101, 0, ["Obtain builds from a source you trust."]),
           RPG::EventCommand.new(401, 0, ["Your adventure will now continue."]),

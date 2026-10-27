@@ -41,7 +41,7 @@ Copy-RuntimeFile (Join-Path $repository 'Game.ini') (Join-Path $stage 'Game.ini'
 $configuration = [ordered]@{
     gameFolder = ([IO.Path]::GetFullPath($GameRoot)).Replace('\','/')
     rgssVersion = 1
-    windowTitle = "KIF Multiplayer [$Profile]"
+    windowTitle = "InfiniteFusionHD Multiplayer [$Profile]"
     defScreenW = 512
     defScreenH = 384
     pathCache = $false

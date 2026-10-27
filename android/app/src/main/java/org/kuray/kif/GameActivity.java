@@ -172,7 +172,7 @@ public final class GameActivity extends SDLActivity {
         RelativeLayout.LayoutParams extra = new RelativeLayout.LayoutParams(dp(208), -2);
         extra.addRule(RelativeLayout.ALIGN_PARENT_RIGHT); extra.topMargin = dp(60); extra.rightMargin = dp(12);
         controls.addView(extraControls, extra);
-        fps = new TextView(this); fps.setTextColor(Color.WHITE); fps.setTextSize(11); fps.setText("KIF • starting");
+        fps = new TextView(this); fps.setTextColor(Color.WHITE); fps.setTextSize(11); fps.setText("InfiniteFusionHD • starting");
         fps.setVisibility(fpsOverlayEnabled ? View.VISIBLE : View.GONE);
         RelativeLayout.LayoutParams fp = new RelativeLayout.LayoutParams(-2, -2); fp.leftMargin = dp(8); controls.addView(fps, fp);
     }

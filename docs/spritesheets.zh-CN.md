@@ -1,6 +1,6 @@
 # U09：图集与独立 PNG 共存
 
-Issue：[#3](https://github.com/pikechu/kurayshinyrevamp/issues/3)。本次实现沿用 IF 6.4 的图集布局，接入 KIF 的现有立绘和配色链路；不批量转换用户图片或存档。
+Issue：[#3](https://github.com/pikechu/InfiniteFusionHD/issues/3)。本次实现沿用 IF 6.4 的图集布局，接入 KIF 的现有立绘和配色链路；不批量转换用户图片或存档。
 
 ## 使用方式
 

@@ -1,4 +1,6 @@
-# KIF Android 工程
+# InfiniteFusionHD Android 工程
+
+本项目继承 KIF FORK。当前应用显示名称为 **InfiniteFusionHD**，继续沿用 `org.kuray.kif` 包名和既有签名、存档与原生接口；下文各版本名称属于历史构建记录。
 
 本目录记录实际进展与限制。开发分支：`codex/android-port-v1`，从干净的 `main`（`7ed0deda`）建立，工作树位于原仓库 `temp/android-verify`。原目录后来出现并行联机功能开发，本移植已隔离，只迁入 Android 改动。未运行原安装更新器、未重置原工作区、未读取或覆盖 Windows 玩家存档。临时工具、下载、签名和构建产物全部在仓库 `temp/`，不提交。
 

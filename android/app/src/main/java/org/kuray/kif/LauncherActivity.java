@@ -21,7 +21,7 @@ public final class LauncherActivity extends Activity {
         LinearLayout layout = new LinearLayout(this);
         installLayout = layout;
         layout.setOrientation(LinearLayout.VERTICAL); layout.setGravity(Gravity.CENTER); layout.setPadding(48, 24, 48, 24);
-        message = new TextView(this); message.setText("Preparing KIF game content…"); message.setTextSize(20); layout.addView(message);
+        message = new TextView(this); message.setText("Preparing InfiniteFusionHD game content…"); message.setTextSize(20); layout.addView(message);
         progress = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal); progress.setMax(1000);
         layout.addView(progress, new LinearLayout.LayoutParams(-1, 24));
         setContentView(layout); install();
@@ -47,7 +47,7 @@ public final class LauncherActivity extends Activity {
                 android.util.Log.e("KIF-Install", "Installation failed", ex);
                 runOnUiThread(() -> {
                     working = false;
-                    if (!isFinishing() && !isDestroyed()) new AlertDialog.Builder(this).setTitle("KIF installation failed")
+                    if (!isFinishing() && !isDestroyed()) new AlertDialog.Builder(this).setTitle("InfiniteFusionHD installation failed")
                         .setMessage(ex.getMessage() + "\nYour saves are unchanged. Free space if necessary, then retry.")
                         .setPositiveButton("Retry", (d, w) -> install()).setNegativeButton("Close", (d, w) -> finish()).show();
                 });
@@ -68,9 +68,9 @@ public final class LauncherActivity extends Activity {
     private void showSaveMenu() {
         LinearLayout menu = new LinearLayout(this); menu.setOrientation(LinearLayout.VERTICAL); menu.setGravity(Gravity.CENTER); menu.setPadding(48,24,48,24);
         saveMenu = menu;
-        TextView title = new TextView(this); title.setText("KIF saves • export before uninstalling"); title.setTextSize(20); menu.addView(title);
+        TextView title = new TextView(this); title.setText("InfiniteFusionHD saves • export before uninstalling"); title.setTextSize(20); menu.addView(title);
         Button play = new Button(this); play.setText("Start game"); play.setOnClickListener(v -> startGame()); menu.addView(play);
-        Button export = new Button(this); export.setText("Export saves to ZIP"); export.setOnClickListener(v -> startActivityForResult(new Intent(Intent.ACTION_CREATE_DOCUMENT).setType("application/zip").addCategory(Intent.CATEGORY_OPENABLE).putExtra(Intent.EXTRA_TITLE, "KIF-saves.zip"), 202)); menu.addView(export);
+        Button export = new Button(this); export.setText("Export saves to ZIP"); export.setOnClickListener(v -> startActivityForResult(new Intent(Intent.ACTION_CREATE_DOCUMENT).setType("application/zip").addCategory(Intent.CATEGORY_OPENABLE).putExtra(Intent.EXTRA_TITLE, "InfiniteFusionHD-saves.zip"), 202)); menu.addView(export);
         Button importButton = new Button(this); importButton.setText("Import saves from ZIP"); importButton.setOnClickListener(v -> startActivityForResult(new Intent(Intent.ACTION_OPEN_DOCUMENT).setType("application/zip").addCategory(Intent.CATEGORY_OPENABLE), 201)); menu.addView(importButton);
         Button repair = new Button(this); repair.setText("Verify / repair bundled assets"); repair.setOnClickListener(v -> {
             File marker = new File(installedRoot, ".complete");

@@ -53,6 +53,14 @@ class Scene_Credits
   # Start Editing
   CREDIT = <<_END_
 
+--- InfiniteFusionHD ---
+
+HD visual enhancements and online play
+Windows / Android and Simplified Chinese support
+
+Inherited from KIF FORK
+(Kuray Infinite Fusion)
+
 --- KIF CREDITS ---
 
 Kuray Infinite Fusion

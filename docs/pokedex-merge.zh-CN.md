@@ -1,6 +1,6 @@
 # IF 融合图鉴文案合并记录
 
-日期：2026-10-22（Asia/Shanghai）。对应 [Issue #3 的 U01](https://github.com/pikechu/kurayshinyrevamp/issues/3)。本次图鉴改动以远程 main（8afd177c）为基线，单独提交到 codex/pokedex-text-update；未重新打包 APK。
+日期：2026-10-22（Asia/Shanghai）。对应 [Issue #3 的 U01](https://github.com/pikechu/InfiniteFusionHD/issues/3)。本次图鉴改动以远程 main（8afd177c）为基线，单独提交到 codex/pokedex-text-update；未重新打包 APK。
 
 ## 数据来源与结果
 

@@ -5,7 +5,7 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- The network build variant opts into the verified Android TLS bridge. -->
-    <application android:label="KIF Android Test" android:theme="@android:style/Theme.Material.NoActionBar" android:debuggable="true" android:allowBackup="false" android:extractNativeLibs="true" android:largeHeap="true" android:usesCleartextTraffic="false">
+    <application android:label="InfiniteFusionHD" android:theme="@android:style/Theme.Material.NoActionBar" android:debuggable="true" android:allowBackup="false" android:extractNativeLibs="true" android:largeHeap="true" android:usesCleartextTraffic="false">
         <activity android:name=".LauncherActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="sensorLandscape" android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
         </activity>

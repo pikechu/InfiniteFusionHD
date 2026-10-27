@@ -35,9 +35,9 @@ def build(output, ref):
     if any(name not in inventory for name in required):
         raise ValueError("Committed client inputs are incomplete")
     manifest = json.loads(git("show", commit + ":Data/multiplayer-build.json"))
-    prefix = "KIF-" + version + "-windows/"
+    prefix = "InfiniteFusionHD-" + version + "-windows/"
     output.mkdir(parents=True, exist_ok=True)
-    final = output / ("KIF-" + version + "-windows-main-" + commit[:8] + ".zip")
+    final = output / ("InfiniteFusionHD-" + version + "-windows-main-" + commit[:8] + ".zip")
     pending = final.with_suffix(".zip.pending")
     if final.exists() or pending.exists():
         raise FileExistsError("Preserve existing artifacts; choose a new output directory")

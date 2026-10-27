@@ -39,7 +39,7 @@
 
 公开测试资源：
 
-- [GitHub Raw PNG](https://raw.githubusercontent.com/pikechu/kurayshinyrevamp/main/Graphics/BaseSprites/1.png)
+- [GitHub Raw PNG](https://raw.githubusercontent.com/pikechu/InfiniteFusionHD/main/Graphics/BaseSprites/1.png)
 - [POST echo](https://httpbingo.org/post)、[GET redirect](https://httpbingo.org/redirect/1)、[POST 307 fixture](https://httpbingo.org/redirect-to?url=%2Fpost&status_code=307)
 
 没有发送玩家存档、帐号、认证 header 或交易内容。POST 仅包含上述测试字符串。

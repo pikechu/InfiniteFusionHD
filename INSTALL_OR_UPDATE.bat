@@ -4,16 +4,18 @@
 
 set mgit=".\REQUIRED_BY_INSTALLER_UPDATER\cmd\git.exe"
 %mgit% init .
-%mgit% remote add origin "https://github.com/kurayamiblackheart/kurayshinyrevamp.git"
-%mgit% fetch origin release
-%mgit% reset --hard origin/release
+%mgit% remote set-url origin "https://github.com/pikechu/InfiniteFusionHD.git" 2>nul
+if errorlevel 1 %mgit% remote add origin "https://github.com/pikechu/InfiniteFusionHD.git"
+%mgit% fetch origin main
+if errorlevel 1 exit /b 1
+%mgit% reset --hard origin/main
 
 @REM .\REQUIRED_BY_INSTALLER_UPDATER\7z.exe e -spf -aoa -o"Data" "Data\species.zip"
 
 echo:
 echo Installer/Updater made by Hungry Pickle
 echo:
-echo Thank you for installing or updating! You can close this window now.
+echo InfiniteFusionHD installed or updated. You can close this window now.
 
 set arg1=%1
 if "%arg1%" == "auto" (

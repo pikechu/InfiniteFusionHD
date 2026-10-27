@@ -47,7 +47,7 @@ def build(output, wheel_dir):
                "catalog_compatibility": json.loads(contents["server/multiplayer/catalog-rental-v1.json"])["compatibility"]}
     contents["release.json"] = (json.dumps(release, sort_keys=True, indent=2) + "\n").encode()
     output.mkdir(parents=True, exist_ok=True)
-    destination = output / ("kif-mmo-" + version + ".tar.gz")
+    destination = output / ("InfiniteFusionHD-server-" + version + ".tar.gz")
     with destination.open("wb") as file, gzip.GzipFile(fileobj=file, mode="wb", mtime=0) as compressed:
         with tarfile.open(fileobj=compressed, mode="w") as archive:
             for name, data in sorted(contents.items()):

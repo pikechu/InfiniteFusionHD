@@ -1,4 +1,4 @@
-# KIF 统计：Matomo + 下载入口
+# InfiniteFusionHD 统计：Matomo + 下载入口
 
 统计后台复用 Matomo，自建代码只负责游戏埋点适配和下载跳转，不再实现统计数据库、用户系统或报表界面。默认游戏配置为关闭，仓库没有配置真实收集地址，也没有启动或公开部署服务。
 
@@ -97,7 +97,7 @@ Visit scope 适合设备和版本信息；创建方法与各 scope 含义见[官
 
 ```json
 {
-  "windows": "https://github.com/kurayamiblackheart/kurayshinyrevamp/archive/refs/heads/release.zip"
+  "windows": "https://github.com/pikechu/InfiniteFusionHD/archive/refs/heads/main.zip"
 }
 ```
 
