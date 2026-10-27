@@ -10,7 +10,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[2]
 CLIENT_DIRS = ("Audio", "Data", "Fonts", "Graphics", "Mods")
 CLIENT_FILES = ("Game.exe", "Game-compatibility.exe", "Game.ini", "mkxp.json",
-                "PIF_Credits.txt", "PIF_readme.txt", "README.md")
+                "PIF_Credits.txt", "PIF_readme.txt", "README.md", "INSTALL_OR_UPDATE.bat")
 
 
 def git(*arguments):
@@ -32,6 +32,7 @@ def build(output, ref):
     inventory = git("ls-tree", "--name-only", "-z", commit).decode().split("\0")
     required = list(CLIENT_DIRS + CLIENT_FILES)
     required += sorted(name for name in inventory if name.endswith(".dll"))
+    required.append("REQUIRED_BY_INSTALLER_UPDATER")
     if any(name not in inventory for name in required):
         raise ValueError("Committed client inputs are incomplete")
     manifest = json.loads(git("show", commit + ":Data/multiplayer-build.json"))

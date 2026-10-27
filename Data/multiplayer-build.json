@@ -3,7 +3,7 @@
   "protocol": 2,
   "rules_version": "friendly-singles-v1",
   "source_loader": "Data/Scripts.rxdata -> Data/Scripts (files-first sorted)",
-  "data_hash": "5ea90b47f7f7754d36c9533db1fd7ab376125ecd20b4f570adb40032a5d7c9be",
+  "data_hash": "a8c65a6282bbbbc7508d4ee1bc82cfb94301b0ff5434e0a230848ece0a73c555",
   "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
   "files": {
     "Data/Actors.rxdata": {
@@ -47,8 +47,8 @@
       "size": 14468
     },
     "Data/Scripts/001_Settings.rb": {
-      "sha256": "b07d0679286ecc239ee8aab272cf55f9907160b48a462825407ce8f5da70bf4a",
-      "size": 27721
+      "sha256": "8069d448652ed9c9744ae81269dfcbdb8d6a423de01a74341cf5c06897e99466",
+      "size": 27805
     },
     "Data/Scripts/001_Technical/001_Debugging/001_PBDebug.rb": {
       "sha256": "773ffd1cbc6e9d054f4f4e035bac7d6364778f69e412d834d3c3f6d73d38bb6b",
@@ -1047,8 +1047,8 @@
       "size": 37730
     },
     "Data/Scripts/016_UI/023_UI_MysteryGift.rb": {
-      "sha256": "2e0ca0c8144dbafb7e04d838a7b72965203e033507612661018f5031070e4dfa",
-      "size": 15339
+      "sha256": "557106b8a1691855a2f88b7fa9e0be9d11a263d3cbafd4b06f0391bb16680570",
+      "size": 15375
     },
     "Data/Scripts/016_UI/024_UI_TextEntry.rb": {
       "sha256": "8faf97d124b6d2a4b02f0dce71c24f02441330226bef1d73ec996f440a4bb6e6",
@@ -1555,8 +1555,8 @@
       "size": 1775
     },
     "Data/Scripts/052_AddOns/HttpCalls.rb": {
-      "sha256": "1c079ee5de4aef1f43792a40c6defe17928c30158a65f037479acb4511e8d8cf",
-      "size": 11876
+      "sha256": "db5f46f19fa72681050997a1692205b5aabd13ae649b8d64eb2577b08e8d6c61",
+      "size": 12575
     },
     "Data/Scripts/052_AddOns/IntroScreen.rb": {
       "sha256": "e5d533d5734cfd9a95062c46188429ad8826267d19a016a624f68a2164b2bd9c",
@@ -1571,8 +1571,8 @@
       "size": 2088
     },
     "Data/Scripts/052_AddOns/MultiSaves.rb": {
-      "sha256": "25bd0b1409fadf023072bdc4e8122e6d47cdaf3b6c2a24d276571d2113c86b2f",
-      "size": 31997
+      "sha256": "c8ee6083a2872fd73d638bcf3505b3794578bade95da835551c7ff2c4340570b",
+      "size": 32018
     },
     "Data/Scripts/052_AddOns/MultiSaves_Infinite Save Backups.rb": {
       "sha256": "28d18ef37b327eb8e0c8c45420fe91cb5d1f44c35180110aeb4a2fbeb1bd1968",
@@ -1595,8 +1595,8 @@
       "size": 1625
     },
     "Data/Scripts/052_AddOns/OnlineWondertrade.rb": {
-      "sha256": "e59d1c4941d57ca4053083013b318ad3759a8354deda70acf633c255136980b2",
-      "size": 3281
+      "sha256": "3128b072a5641f0537ecb7ddff089b8ec27e2c046b551b084f7e54c702fa0155",
+      "size": 392
     },
     "Data/Scripts/052_AddOns/Overrides.rb": {
       "sha256": "324f16399d11a38176a423468bac1ea92c014b5f2ca1e0fd7e0f19dc7d5faef2",
@@ -1663,8 +1663,8 @@
       "size": 16582
     },
     "Data/Scripts/052_AddOns/SpriteSheets.rb": {
-      "sha256": "792876dd8fc687fc173f6e5ff22c8a3f33e16aff408d9a7665c6c69efc6e3de4",
-      "size": 12655
+      "sha256": "a1fb9c1b18fa6f918443c36d341ff49c10ad1c3ae660952acf538b8f1cb0de6b",
+      "size": 13254
     },
     "Data/Scripts/052_AddOns/TRQuests.rb": {
       "sha256": "83610d75d5f183285409b6d1ecdf2b528ffec7d9dd89d37dcd2ce7eecb510ac1",
@@ -1695,8 +1695,8 @@
       "size": 2457
     },
     "Data/Scripts/052_AddOns/UI_Pokedex_SpritesPage.rb": {
-      "sha256": "3fd05c2240d59d85f434db33a04788ce1cd4e218a5ec42ef6b0b9d0d95e82a9e",
-      "size": 15529
+      "sha256": "eed57ef9c7c460a63e4aec62de0ce47f7b270ee56d36b6c8f188892ad8279325",
+      "size": 15610
     },
     "Data/Scripts/052_AddOns/UnrealTime.rb": {
       "sha256": "a101359c220287dfb450301e86ed24c1d6dbf6751728ec42f2c3a4c15093ca5d",
@@ -1733,6 +1733,10 @@
     "Data/Scripts/052_Tests/FusionUtilsTests.rb": {
       "sha256": "f5206cebee290affc5e0428875ed4d4de0a12153e484e810d16f69fc65fc8056",
       "size": 760
+    },
+    "Data/Scripts/053_OfflineResources/001_OfflineResources.rb": {
+      "sha256": "f464221564190d6ceb3fbe1ff1a8a7954932ccf073020f713377e896db0a9e0b",
+      "size": 17130
     },
     "Data/Scripts/054_Multiplayer/001_Client.rb": {
       "sha256": "abb1c86df34d6e256a17902252c5f4a7acd92b36184eaf32a965a80f0974c38f",
@@ -1979,8 +1983,8 @@
       "size": 30150186
     },
     "Data/messages_zh.dat": {
-      "sha256": "26e360709b39b33506325b008cf641f5e5b8ed69fc5a53a8395c026453d65ad5",
-      "size": 5117330
+      "sha256": "ad9560d751ff6a39d022121f66d1050bf62f2fcd4109d6443ec83f828249dafb",
+      "size": 5291204
     },
     "Data/metadata.dat": {
       "sha256": "3dfdc2055f5c90ba338bea5f827ffd98b7d995e765b54c17d243fe87272acc7d",
@@ -2071,5 +2075,5 @@
       "size": 2089
     }
   },
-  "built_at": "2026-10-27T05:59:38Z"
+  "built_at": "2026-10-27T08:45:58Z"
 }
