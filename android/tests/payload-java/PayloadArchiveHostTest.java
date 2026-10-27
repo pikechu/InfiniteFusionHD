@@ -45,6 +45,14 @@ public final class PayloadArchiveHostTest {
         return bytes.toByteArray();
     }
     static Path directory(String name) throws Exception { return Files.createDirectory(base.resolve(name)); }
+    static final class CountedInput extends FilterInputStream {
+        int reads;
+        CountedInput(byte[] data) { super(new ByteArrayInputStream(data)); }
+        @Override public int read() throws IOException { reads++; return in.read(); }
+        @Override public int read(byte[] data, int offset, int length) throws IOException {
+            reads++; return in.read(data, offset, length);
+        }
+    }
     static long restore(byte[] archive, Map<String, PayloadArchive.Entry> entries, Path root) throws Exception {
         return PayloadArchive.restore(new ByteArrayInputStream(archive), entries,
             name -> {
@@ -58,6 +66,10 @@ public final class PayloadArchiveHostTest {
         Files.createDirectories(approved);
         base = Files.createTempDirectory(approved, "payload-").toAbsolutePath().normalize();
         if (!base.startsWith(approved)) throw new IOException("Fixture escaped approved temp root");
+        byte[] allBytes = new byte[256]; StringBuilder expectedHex = new StringBuilder();
+        for (int i = 0; i < 256; i++) { allBytes[i] = (byte)i; expectedHex.append(String.format(Locale.ROOT,"%02x",i)); }
+        check(PayloadArchive.hex(allBytes).equals(expectedHex.toString()) && PayloadArchive.hex(new byte[0]).equals(""),
+              "allocation-bounded digest encoding preserves all byte values and leading zeroes");
         byte[] original = bytes("Actual audio/image bytes: \u2603\n");
         byte[] archive = zip(new String[]{"Audio/source.bin"}, new byte[][]{original});
         Map<String, PayloadArchive.Entry> entries = manifest(original);
@@ -135,6 +147,17 @@ public final class PayloadArchiveHostTest {
         }
         rejects(() -> restore(duplicate, entries, directory("duplicate")), "duplicate canonical ZIP member");
         check(!Files.exists(base.resolve("escape")), "path validation never creates outside destination");
+        byte[] noise = new byte[1024 * 1024]; new Random(7).nextBytes(noise);
+        byte[] tail = bytes("entry boundary after incompressible data");
+        Map<String, PayloadArchive.Entry> bulk = new LinkedHashMap<>();
+        bulk.put("one.bin", entry(noise,null)); bulk.put("tail.bin", entry(tail,null)); bulk.put("two.bin", entry(noise,null));
+        CountedInput counted = new CountedInput(zip(new String[]{"one.bin","tail.bin","two.bin"}, new byte[][]{noise,tail,noise}));
+        Path buffered = directory("buffered");
+        check(PayloadArchive.restore(counted,bulk,name -> buffered.resolve(name).toFile(),(a,b,c) -> {}) == noise.length*2L+tail.length,
+              "large buffers preserve adjacent ZIP entry boundaries and hashes");
+        check(Arrays.equals(Files.readAllBytes(buffered.resolve("two.bin")),noise), "pushback preserves following large entry");
+        check(counted.reads < 128, "payload restore avoids thousands of 512-byte asset JNI reads");
+        System.out.println("PAYLOAD_SOURCE_READS=" + counted.reads);
         System.out.println("PASS " + checks + " assertions (production PayloadArchive restore; host filesystem)");
         System.out.println("Fixture evidence retained: " + base);
     }

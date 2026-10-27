@@ -398,7 +398,7 @@ class PokemonPokedexInfo_Scene
           entryText = @randomEntryText
           shadowColor = shadow
         else
-          entryText = "No custom Pokédex entry available for this Pokémon. Please consider submitting an entry for this Pokémon on the game's Discord."
+          entryText = _INTL("No custom Pokédex entry available for this Pokémon. Please consider submitting an entry for this Pokémon on the game's Discord.")
           shadowColor = shadow
         end
       end
@@ -409,35 +409,34 @@ class PokemonPokedexInfo_Scene
 
     max_chars_per_page = 150
     pages = splitTextIntoPages(entryText, max_chars_per_page)
-    @entry_page = 0 if !@entry_page || pages.length == 1
+    @entryPageCount = pages.length
+    @entry_page = (@entry_page || 0) % @entryPageCount
     displayedText = pages[@entry_page]
     if pages.length > 1
       page_indicator_text = "#{@entry_page + 1}/#{pages.length}"
-      drawTextEx(overlay, 425, 340, Graphics.width - (40 * 2), 4, # overlay, x, y, width, num lines
-                 page_indicator_text, baseColor, shadow)
+      # Keep the indicator above the entry instead of covering its fourth line.
+      previous_size = overlay.font.size
+      overlay.font.size = 16
+      pbDrawShadowText(overlay, 425, 216, 70, 20, page_indicator_text, baseColor, shadow, 2)
+      overlay.font.size = previous_size
     end
 
-    drawTextEx(overlay, 40, 244, Graphics.width - (40 * 2), 4, # overlay, x, y, width, num lines
+    entry_y = ($PokemonSystem && $PokemonSystem.language == 2) ? 240 : 244
+    drawTextEx(overlay, 40, entry_y, Graphics.width - (40 * 2), 4,
                displayedText, baseColor, shadowColor)
   end
 
   def splitTextIntoPages(text, max_chars_per_page)
-    words = text.split
-    pages = []
-    current_page = ""
-
-    words.each do |word|
-      if current_page.length + word.length + 1 > max_chars_per_page
-        pages << current_page.strip
-        current_page = word
-      else
-        current_page += " " unless current_page.empty?
-        current_page += word
-      end
+    bitmap = @sprites["overlay"].bitmap
+    chunks = getLineBrokenChunks(bitmap, text.to_s, Graphics.width - 80, nil)
+    lines = []
+    chunks.each do |chunk|
+      line = chunk[2] / 32
+      lines[line] ||= ""
+      lines[line] += chunk[0]
     end
-
-    pages << current_page.strip unless current_page.empty?
-    pages
+    pages = lines.map { |line| line || "" }.each_slice(4).map { |page| page.join("\n") }
+    pages.empty? ? [""] : pages
   end
 
   def reloadDexEntry()
@@ -448,7 +447,7 @@ class PokemonPokedexInfo_Scene
 
   def changeEntryPage()
     pbSEPlay("GUI sel cursor")
-    @entry_page = @entry_page == 1 ? 0 : 1
+    @entry_page = ((@entry_page || 0) + 1) % (@entryPageCount || 1)
     reloadDexEntry
   end
   
@@ -462,7 +461,12 @@ class PokemonPokedexInfo_Scene
       spritename = sprite_bitmap.filename
       possibleCustomEntries = getCustomDexEntry(spritename)
       if possibleCustomEntries && possibleCustomEntries.length > 0
-        customEntry = possibleCustomEntries.sample
+        key = [species_data.species, spritename, $PokemonSystem.language, possibleCustomEntries]
+        if @customEntryKey != key
+          @customEntryKey = key
+          @customEntryText = possibleCustomEntries.sample
+        end
+        customEntry = @customEntryText
         customEntry = customEntry.gsub(Settings::CUSTOM_ENTRIES_NAME_PLACEHOLDER,species_data.name)
       end
       return customEntry

@@ -40,7 +40,16 @@ class Game_Event < Game_Character
   end
 
   def start
-    @starting = true if @list.size > 1
+    return if @list.size <= 1
+    # Older house pages only fade/transfer. Keep doors with their own SE or
+    # animated move route unchanged, and play once when a silent door starts.
+    if !@starting && @trigger == 1 && name == "Home door" &&
+       @list.any? { |command| command.code == 201 } &&
+       !@list.any? { |command| command.code == 250 ||
+         (command.code == 209 && command.parameters[1].list.any? { |move| move.code == 44 }) }
+      pbSEPlay("Entering Door")
+    end
+    @starting = true
   end
 
   def erase

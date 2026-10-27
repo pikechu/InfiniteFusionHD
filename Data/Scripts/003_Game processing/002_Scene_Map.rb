@@ -105,11 +105,24 @@ class Scene_Map
 
     $game_player.straighten
     $game_map.update
-    disposeSpritesets
-    if RPG::Cache.need_clearing
-      RPG::Cache.clear
+    # Acquire the destination's textures before releasing the old map's owners.
+    maps = $MapFactory.maps
+    maps.each do |map|
+      @map_renderer.add_tileset(map.tileset_name)
+      map.autotile_names.each { |name| @map_renderer.add_autotile(name) }
     end
-    createSpritesets
+    begin
+      disposeSpritesets
+      if RPG::Cache.need_clearing
+        RPG::Cache.clear
+      end
+      createSpritesets
+    ensure
+      maps.each do |map|
+        @map_renderer.remove_tileset(map.tileset_name)
+        map.autotile_names.each { |name| @map_renderer.remove_autotile(name) }
+      end
+    end
     if $game_temp.transition_processing
       $game_temp.transition_processing = false
       Graphics.transition(20)

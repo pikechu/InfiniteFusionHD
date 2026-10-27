@@ -503,7 +503,7 @@ class PurifyChamberScreen
             @scene.pbSummary(cmd[1],heldpkmn)
           elsif choice==2
             if pbBoxesFull?
-              @scene.pbDisplay("All boxes are full.")
+              @scene.pbDisplay(_INTL("All boxes are full."))
             elsif heldpkmn
               @scene.pbWithdraw(cmd[1],heldpkmn)
               $PokemonStorage.pbStoreCaught(heldpkmn)
@@ -558,7 +558,7 @@ class PurifyChamberScreen
         heldpkmn=pkmn if pkmn
       else # cancel
         if heldpkmn
-          @scene.pbDisplay("You're holding a Pokémon!")
+          @scene.pbDisplay(_INTL("You're holding a Pokémon!"))
         else
           if !@scene.pbConfirm("Continue editing sets?")
             break

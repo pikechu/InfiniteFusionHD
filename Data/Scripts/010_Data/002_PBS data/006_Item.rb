@@ -85,17 +85,20 @@ module GameData
 
     # @return [String] the translated name of this item
     def name
-      return pbGetMessage(MessageTypes::Items, @id_number)
+      text = pbGetMessage(MessageTypes::Items, @id_number)
+      return _INTL(text.empty? ? @real_name : text)
     end
 
     # @return [String] the translated plural version of the name of this item
     def name_plural
-      return pbGetMessage(MessageTypes::ItemPlurals, @id_number)
+      text = pbGetMessage(MessageTypes::ItemPlurals, @id_number)
+      return _INTL(text.empty? ? @real_name_plural : text)
     end
 
     # @return [String] the translated description of this item
     def description
-      return pbGetMessage(MessageTypes::ItemDescriptions, @id_number)
+      text = pbGetMessage(MessageTypes::ItemDescriptions, @id_number)
+      return _INTL(text.empty? ? @real_description : text)
     end
 
     def has_battle_use?

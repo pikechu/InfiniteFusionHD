@@ -28,31 +28,6 @@ class Sprite_Wearable < RPG::Sprite
     @sprite.y  += offsets_array[current_frame][1]
   end
 
-  def adjustPositionForScreenScrolling
-    return if !$game_map.scrolling? && !@was_just_scrolling
-    if $game_map.scrolling?
-      @was_just_scrolling=true
-    else
-      @was_just_scrolling=false
-    end
-    offset_x = 0
-    offset_y = 0
-    case $game_map.scroll_direction
-    when DIRECTION_RIGHT
-      offset_x=-8
-    when DIRECTION_LEFT
-      offset_x=8
-    when DIRECTION_UP
-      offset_y=8
-      @sprite.z+=50 #weird layering glitch for some reason otherwise. It's reset to the correct value in the next animation frame
-    when DIRECTION_DOWN
-      offset_y=-8
-    end
-    @sprite.x+=offset_x
-    @sprite.y+=offset_y
-  end
-
-
   def set_sprite_position(action, direction, current_frame)
     @sprite.x = @player_sprite.x - @player_sprite.ox
     @sprite.y = @player_sprite.y - @player_sprite.oy
@@ -111,32 +86,32 @@ class Sprite_Wearable < RPG::Sprite
       @sprite.x = @player_sprite.x - @player_sprite.ox
       @sprite.y = @player_sprite.y - @player_sprite.oy
     end
-    adjustPositionForScreenScrolling()
-
     @sprite.y -= 2 if current_frame % 2 == 1
   end
 
 
   def animate(action, frame=nil)
     @action = action
-    current_frame = @player_sprite.character.pattern if !frame
+    current_frame = frame || @player_sprite.character.pattern
     direction = @player_sprite.character.direction
     crop_spritesheet(direction)
     adjust_layer()
     set_sprite_position(@action, direction, current_frame)
+    @sprite.visible = @player_sprite.visible
+    @sprite.opacity = @player_sprite.opacity
   end
 
   def update(action, filename,color)
     @sprite.opacity = @player_sprite.opacity if @wearableBitmap
     if filename != @filename || color != @color
+      replacement = nil
       if pbResolveBitmap(filename)
-        #echoln pbResolveBitmap(filename)
-        @wearableBitmap = AnimatedBitmap.new(filename,color)
-        @sprite.bitmap = @wearableBitmap.bitmap
-      else
-        @wearableBitmap = nil
-        @sprite.bitmap = nil
+        replacement = AnimatedBitmap.new(filename,color)
       end
+      previous = @wearableBitmap
+      @wearableBitmap = replacement
+      @sprite.bitmap = replacement ? replacement.bitmap : nil
+      previous.dispose if previous
       @color =color
       @filename = filename
     end
@@ -144,9 +119,9 @@ class Sprite_Wearable < RPG::Sprite
   end
 
   def adjust_layer()
-    if @sprite.z != @player_sprite.z+@relative_z
-      @sprite.z = @player_sprite.z+@relative_z
-    end
+    # RGSS1 draws equal-Z sprites in creation order: body, hair, hat. Raising
+    # a layer by even 1 crosses the roof/door tile priority above the body.
+    @sprite.z = @player_sprite.z
   end
 
   def crop_spritesheet(direction)
@@ -159,6 +134,8 @@ class Sprite_Wearable < RPG::Sprite
     return if @disposed
     @sprite.dispose if @sprite
     @sprite = nil
+    @wearableBitmap.dispose if @wearableBitmap
+    @wearableBitmap = nil
     @disposed = true
   end
 

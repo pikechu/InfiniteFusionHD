@@ -659,6 +659,8 @@ class PokemonFusionScene
 
   # Starts the fusion screen
 
+  public
+
   def pbStartScreen(pokemon1, pokemon2, newspecies,splicerItem)
     @sprites = {}
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)

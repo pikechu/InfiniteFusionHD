@@ -378,7 +378,7 @@ class Messages
 
   def self.stringToKey(str)
     if str && str[/[\r\n\t\1]|^\s+|\s+$|\s{2,}/]
-       key=str.clone
+       key=str.dup
        key.gsub!(/^\s+/,"")
        key.gsub!(/\s+$/,"")
        key.gsub!(/\s{2,}/," ")
@@ -594,7 +594,7 @@ class Messages
     elsif @messages[0][0] && @messages[0][0][id]
       return @messages[0][0][id]
     end
-    return key
+    return getFromHash(MessageTypes::ScriptTexts, key)
   end
 end
 

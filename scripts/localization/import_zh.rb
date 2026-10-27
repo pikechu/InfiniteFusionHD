@@ -3,11 +3,32 @@ require "json"
 require "ripper"
 require "digest"
 require "fileutils"
+require "csv"
 ROOT = File.expand_path("../..", __dir__) unless defined?(ROOT)
 load File.join(ROOT, "Data/Scripts/001_Technical/003_Intl_Messages.rb") unless defined?(Messages)
 
 module ChineseLocalization
   CJK = /[\u3400-\u9fff]/
+  # Match the game's control codes before adjacent English words (e.g. \bHello).
+  CONTROLS = /\\(?:[A-Za-z]+\[(?:[^\[\]]|\[[^\[\]]*\])*\]|\[[0-9a-f]{8}\]|pog|pn|pm|pg|tp|te|tn|tm|cn|pt|ft|hs|wd|wm|op|cl|wu|[mnbrg]|[1.!|^<>\\]|[A-Za-z]+)|[\x01-\x08\x0b-\x1f]/i
+
+  def self.controls(text)
+    text.scan(CONTROLS).filter_map do |token|
+      next if token.downcase == "\\n"
+      next "\x01" if token == "\\1"
+      if token =~ /\A\\ch\[(.*)\]\z/i
+        fields = CSV.parse_line($1, strip: true)
+        return nil unless fields && fields.length >= 3 && fields[0].match?(/\A\d+\z/)
+        # Labels are translated; variable, cancel behavior and option count stay.
+        nested = controls(fields.drop(2).join(","))
+        return nil unless nested
+        next JSON.generate(["ch", fields[0], fields[1].downcase, fields.length - 2, nested])
+      end
+      token.sub(/\A\\[A-Za-z]+/) { |code| code.downcase }.gsub(/\\[vn]\[/i) { |code| code.downcase }
+    end.sort
+  rescue CSV::MalformedCSVError
+    return nil
+  end
 
   def self.utf8(value)
     case value
@@ -21,10 +42,9 @@ module ChineseLocalization
   def self.safe_translation?(english, chinese)
     return false unless english.is_a?(String) && chinese.is_a?(String) && english.valid_encoding? && chinese.valid_encoding? && chinese.match?(CJK)
     placeholders = /\{\d+(?::[^}]+)?\}/
-    controls = /\\(?:[A-Za-z]+(?:\[[^\]]*\])?|[.!|^<>])|[\x01-\x08\x0b-\x1f]/
-    layout = ["\\n", "\\r"]
+    before, after = controls(english), controls(chinese)
     return english.scan(placeholders).sort == chinese.scan(placeholders).sort &&
-           (english.scan(controls) - layout).sort == (chinese.scan(controls) - layout).sort
+           before && after && before == after
   end
 
   def self.shape(node)
@@ -202,20 +222,57 @@ module ChineseLocalization
       end
       result[0][map_id] = translated unless translated.empty?
     end
+    story = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-story.json"), encoding: "UTF-8"))
+    result[0][0] ||= OrderedHash.new
+    story.each do |key, value|
+      raise "Invalid story translation: #{key}" unless safe_translation?(key, value)
+      key = Messages.stringToKey(key)
+      result[0].compact.each { |messages| messages[key] = value if messages.key?(key) }
+      result[0][0][key] = value
+    end
+    counts["map_texts"] = result[0].compact.sum(&:length)
+    counts["story_overrides"] = story.length
     scripts, details = script_translations(source, references, target)
     overrides = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-overrides.json"), encoding: "UTF-8"))
     overrides.merge!(JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-settings.json"), encoding: "UTF-8")))
-    offline_texts = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-offline-resources.json"), encoding: "UTF-8"))
-    overrides.merge!(offline_texts)
+    overrides.merge!(JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-offline-resources.json"), encoding: "UTF-8")))
+    overrides.merge!(JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-ui.json"), encoding: "UTF-8")))
+    overrides.merge!(JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-content.json"), encoding: "UTF-8")))
+    overrides.merge!(JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-trainer-dialogue.json"), encoding: "UTF-8")))
     overrides.each do |key, value|
       raise "Invalid translation: #{key}" unless safe_translation?(key, value)
     end
-    result[24] = OrderedHash.new
-    scripts.merge(overrides).sort.each { |key, value| result[24][key] = value if safe_translation?(key, value) }
-    offline_texts.each do |key, value|
-      result[24].delete(key)
-      result[24][Messages.stringToKey(key.dup)] = value
+    [2, 3, 4, 7, 8, 9, 21].each do |section|
+      english[section].each_with_index do |text, id|
+        next unless text.is_a?(String) && overrides[text]
+        result[section] ||= []
+        result[section][id] = overrides[text]
+      end
+      counts[section.to_s] = (result[section] || []).compact.count { |text| !text.empty? }
     end
+    species_overrides = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-species.json"), encoding: "UTF-8"))
+    species_data = Marshal.load(File.binread(File.join(target, "Data/species.dat")))
+    species_overrides.each do |symbol, fields|
+      record = species_data.fetch(symbol.to_sym)
+      id = record.instance_variable_get(:@id_number)
+      fields.each do |field, translated|
+        section = {"entry" => 3, "form" => 4}.fetch(field)
+        raise "Invalid species translation: #{symbol}/#{field}" unless safe_translation?(english[section][id], translated)
+        result[section] ||= []
+        result[section][id] = translated
+      end
+    end
+    [3, 4].each { |section| counts[section.to_s] = (result[section] || []).compact.count { |text| !text.empty? } }
+    counts["species_overrides"] = species_overrides.length
+    [16, 17, 22].each do |section|
+      result[section] ||= OrderedHash.new
+      english[section].each_key do |text|
+        result[section][text] = overrides[text] if overrides[text]
+      end
+      counts[section.to_s] = result[section].length
+    end
+    result[24] = OrderedHash.new
+    scripts.merge(overrides).sort.each { |key, value| result[24][Messages.stringToKey(key)] = value if safe_translation?(key, value) }
     counts["script_texts"] = result[24].length
     # The Chinese edition also translates the fusion name fragments. Read their
     # literal AST values, keeping the game's English constants and cached data.

@@ -120,6 +120,7 @@ end
 # archives.  Returns nil if the path can't be found.
 def pbResolveBitmap(x)
   return nil if !x
+  x = GameLanguage.bitmap_path(x) if defined?(GameLanguage)
   noext = x.gsub(/\.(bmp|png|gif|jpg|jpeg)$/,"")
   filename = nil
 #  RTP.eachPathFor(x) { |path|

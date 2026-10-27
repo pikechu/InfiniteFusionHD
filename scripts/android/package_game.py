@@ -24,6 +24,21 @@ BASE_CONFIG = {
     "fontSub": ["Arial>Liberation Sans"],
 }
 
+def add_chinese_assets(sources):
+    import hashlib
+    for name in ("Data/pokedex/dex_zh.json", "Data/localization/zh-CN-images.json"):
+        path = ROOT / name
+        if path.is_file(): sources[name] = path
+    manifest = ROOT / "Data/localization/zh-CN-images.json"
+    if manifest.is_file():
+        for row in json.loads(manifest.read_text(encoding="utf-8"))["images"].values():
+            path = (ROOT / row["path"]).resolve()
+            if not path.is_relative_to(ROOT / "Graphics/Chinese") or path.suffix != ".png":
+                raise ValueError("Invalid Chinese asset path")
+            if hashlib.sha256(path.read_bytes()).hexdigest() != row["sha256"]:
+                raise ValueError("Chinese asset checksum mismatch: " + row["path"])
+            sources[row["path"]] = path
+
 def write_payload(output: Path, runtime_only=False, asset_root=None):
     output.mkdir(parents=True, exist_ok=True)
     asset_root = (asset_root or ROOT).resolve()
@@ -49,6 +64,7 @@ def write_payload(output: Path, runtime_only=False, asset_root=None):
             sources[file.relative_to(ROOT).as_posix()] = file
         for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat", "Data/offline-resources.json", "Data/localization/source-notice.zh-CN.txt"):
             if (ROOT / name).is_file(): sources[name] = ROOT / name
+        add_chinese_assets(sources)
     sources["Game.ini"] = ROOT / "Game.ini"
     sources["kif_android_preload.rb"] = ROOT / "android/ruby/kif_android_preload.rb"
     sources["android-runtime-smoke.rb"] = ROOT / "android/ruby/android-runtime-smoke.rb"
@@ -109,6 +125,7 @@ def refresh_ruby_payload(output: Path):
     scripts.update({p.relative_to(ROOT).as_posix(): p for p in (ROOT / "Data/Scripts").rglob("*.rb")})
     for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat", "Data/offline-resources.json", "Data/localization/source-notice.zh-CN.txt"):
         if (ROOT / name).is_file(): scripts[name] = ROOT / name
+    add_chinese_assets(scripts)
     for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb", "android-network-smoke.rb", "android-font-smoke.rb"):
         scripts[name] = ROOT / "android/ruby" / name
     if (ROOT / "android/ruby/kif_android_http.rb").is_file():

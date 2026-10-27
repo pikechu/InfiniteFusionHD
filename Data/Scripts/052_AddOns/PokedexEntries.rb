@@ -2,18 +2,35 @@
 # KIF's records in their original order and append only distinct valid text.
 module KIF
   module PokedexEntries
-    MAX_BYTES = 32 * 1024 * 1024
+    MAX_BYTES = 32 * 1024 * 1024 # The upstream 82k-entry corpus exceeds 8 MiB.
     MAX_ENTRIES = 100_000
+    CHINESE_PATH = "Data/pokedex/dex_zh.json"
+
+    def self.file_stamp(path)
+      File.file?(path) ? [path, File.size(path), File.mtime(path)] : [path, nil]
+    end
 
     def self.entries_for(sprite)
       path = Settings::CUSTOM_DEX_ENTRIES_PATH
-      stamp = File.file?(path) ? [File.size(path), File.mtime(path).to_f, File.ctime(path).to_f] : nil
-      if @display_stamp != stamp || !@display_index
+      chinese = $PokemonSystem && $PokemonSystem.language == 2
+      stamp = [file_stamp(path), chinese ? file_stamp(CHINESE_PATH) : nil]
+      if @display_stamp != stamp
+        records = File.file?(path) ? parse(File.binread(path)).select { |row| valid?(row) } : []
+        translations = {}
+        if chinese && File.file?(CHINESE_PATH)
+          begin
+            parse(File.binread(CHINESE_PATH)).each do |row|
+              next unless valid?(row) && row["source"].is_a?(String)
+              translations[[row["sprite"], row["source"], row["author"]]] = row["entry"]
+            end
+          rescue StandardError, MKXPError
+            # A damaged optional language file must not hide the source dex.
+          end
+        end
         @display_index = {}
-        records = stamp ? parse(File.binread(path)) : []
         records.each do |row|
-          next unless valid?(row)
-          (@display_index[row["sprite"]] ||= []) << row["entry"]
+          text = translations[[row["sprite"], row["entry"], row["author"]]] || row["entry"]
+          (@display_index[row["sprite"]] ||= []) << text
         end
         @display_stamp = stamp
       end

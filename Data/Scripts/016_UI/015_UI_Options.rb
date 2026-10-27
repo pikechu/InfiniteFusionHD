@@ -1664,10 +1664,10 @@ class SLOptionsScene < PokemonOption_Scene
     if File.exists?(RTP.getSaveFolder + "\\Options_" + index.to_s + ".kro")
       data = File.read(RTP.getSaveFolder + "\\Options_" + index.to_s + ".kro")
       options_load_json(eval(data))
-      pbMessage(_INTL("Loaded options from Preset {1}.", $PokemonSystem.optionsnames[index]))
+      pbMessage(_INTL("Loaded options from Preset {1}.", presetName(index)))
     else
       pbPlayBuzzerSE
-      pbMessage(_INTL("No options found in {1}.", $PokemonSystem.optionsnames[index]))
+      pbMessage(_INTL("No options found in {1}.", presetName(index)))
     end
     return
   end
@@ -1675,7 +1675,7 @@ class SLOptionsScene < PokemonOption_Scene
   def pbSaveKO(index=1)
     # pbPlayCursorSE
     File.open(RTP.getSaveFolder + "\\Options_" + index.to_s + ".kro", 'w') { |f| f.write(options_to_json()) }
-    pbMessage(_INTL("Saved current options into Preset {1}.", $PokemonSystem.optionsnames[index]))
+    pbMessage(_INTL("Saved current options into Preset {1}.", presetName(index)))
     return
   end
 
@@ -1689,6 +1689,11 @@ class SLOptionsScene < PokemonOption_Scene
   def buildKO()
     kurayjson_save(RTP.getSaveFolder + "\\Options_Names.kro", $PokemonSystem.optionsnames)
   end
+
+  def presetName(index)
+    name = $PokemonSystem.optionsnames[index]
+    return name == "Slot #{index + 1}" ? _INTL("Slot {1}", index + 1) : name
+  end
   
   def createButtonsOption(index)
     if !$KURAY_OPTIONSNAME_LOADED
@@ -1700,7 +1705,7 @@ class SLOptionsScene < PokemonOption_Scene
         end
       end
     end
-    ButtonsOption.new(_INTL($PokemonSystem.optionsnames[index]), [_INTL("Load"), _INTL("Save"), _INTL("Name")],
+    ButtonsOption.new(presetName(index), [_INTL("Load"), _INTL("Save"), _INTL("Name")],
       proc {
         |value|
         if value == 0
@@ -1710,7 +1715,7 @@ class SLOptionsScene < PokemonOption_Scene
         elsif value == 2
           pbRenKO(index)
         end
-      }, [_INTL("Load {1}", $PokemonSystem.optionsnames[index]), _INTL("Save {1}", $PokemonSystem.optionsnames[index]), _INTL("Rename {1}", $PokemonSystem.optionsnames[index])]
+      }, [_INTL("Load {1}", presetName(index)), _INTL("Save {1}", presetName(index)), _INTL("Rename {1}", presetName(index))]
     )
   end
   

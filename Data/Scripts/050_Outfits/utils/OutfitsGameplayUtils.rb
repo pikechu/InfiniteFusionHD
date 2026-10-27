@@ -15,7 +15,7 @@ def obtainHat(outfit_id)
   end
   $Trainer.unlocked_hats << outfit_id if !$Trainer.unlocked_hats.include?(outfit_id)
   obtainOutfitMessage(outfit)
-  if pbConfirmMessage("Would you like to put it on right now?")
+  if pbConfirmMessage(_INTL("Would you like to put it on right now?"))
     putOnHat(outfit_id, false)
     return true
   end
@@ -32,7 +32,7 @@ def obtainClothes(outfit_id)
   return if !outfit
   $Trainer.unlocked_clothes << outfit_id if !$Trainer.unlocked_clothes.include?(outfit_id)
   obtainOutfitMessage(outfit)
-  if pbConfirmMessage("Would you like to put it on right now?")
+  if pbConfirmMessage(_INTL("Would you like to put it on right now?"))
     putOnClothes(outfit_id)
     return true
   end

@@ -39,7 +39,7 @@ class Scene_Map
 		if Input.trigger?(Input::JUMPDOWN) && $PokemonSystem.quicksave == 1
 		if Scene_Map.pbSaveScreen
 			else
-			pbMessage("Save failed.")
+			pbMessage(_INTL("Save failed."))
 			end
 		end
 	end

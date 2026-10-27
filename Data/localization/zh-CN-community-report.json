@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-27",
+  "language": "zh-CN",
+  "records": 20022,
+  "unique_sources": 14423,
+  "sprites": 14512,
+  "source_sha256": "964f765a5f91b4547ada77fa025af567683ea55a0a1d6fa559845e5d95397299",
+  "translation_sha256": "a99bff85b886ccf0318cd35f4d75483394570dbba25c95377ebcaa76a68eb7a2",
+  "translation_bytes": 6700590,
+  "translation_method": "Complete AI sentence-by-sentence proofreading against the English originals, with Wiki terminology/context references; previous OPUS draft and authorized Google paragraph comparison retained as provenance, not final authority",
+  "source_and_credits_preserved": true,
+  "untranslated_english_sentences": 0,
+  "unknown_model_characters": 0,
+  "abnormal_adjacent_repetition": 0,
+  "image_sources": 111,
+  "image_files": 111,
+  "image_text_regions": 855,
+  "raster_inventory": 18546,
+  "ocr_sources": 18506,
+  "small_icons_or_empty_images_manually_checked": 40,
+  "retained_identifiers": [
+    "source author credits",
+    "product/framework names and logos",
+    "URLs",
+    "physical keyboard keys",
+    "standard units and technical identifiers",
+    "editor-only sprite reference notes and collision markers"
+  ],
+  "native_validation": {
+    "community": "2026-10-27 10:28:51 UTC CUSTOM_DEX_NATIVE_PASS entries=15005 sprites=14412 pages=15099 language_rounds=3 normal_player_saves=false",
+    "images": "2026-10-27 04:34:57 UTC CHINESE_IMAGES_NATIVE_PASS images=111 language_rounds=3 direct_and_cache=true normal_player_saves=false",
+    "main_integration": "2026-10-27 10:46:18 UTC CUSTOM_DEX_NATIVE_PASS entries=82207 translated=20022 sprites=74198 pages=20148 language_rounds=3 normal_player_saves=false"
+  },
+  "android_device_checked": false,
+  "installer_built": false,
+  "model": {
+    "repository": "gaudi/opus-mt-en-zh-ctranslate2",
+    "revision": "dcd22168f08b99dd34c62bc2195e31dc2f04e90b",
+    "files": [
+      {
+        "type": "file",
+        "oid": "12fa4a1e9376e71b039f96f25d31e5f8cc078b2f",
+        "size": 433,
+        "path": ".gitattributes"
+      },
+      {
+        "type": "file",
+        "oid": "14f7ffae5e0002dc9427364ff298c3a750b8c31e",
+        "size": 6720,
+        "path": "README.md"
+      },
+      {
+        "type": "file",
+        "oid": "b5ba065f115cc729eb5379b9e81afb79f20b25f3",
+        "size": 215,
+        "path": "config.json"
+      },
+      {
+        "type": "file",
+        "oid": "f07859fcab98712b231d115475990a962eebc851",
+        "size": 293,
+        "path": "generation_config.json"
+      },
+      {
+        "type": "file",
+        "oid": "a56854dc3429213d56db3c80f2876a97d5b55af8",
+        "size": 155502615,
+        "lfs": {
+          "oid": "f24c2bb82368f7de0196882de1d8b644d2aa54ae2439c3142f263de8a64ea2a9",
+          "size": 155502615,
+          "pointerSize": 134
+        },
+        "xetHash": "1ae09d98a3d690a72ec925ba0f2fc833646ced454886004123cd0aa2578dade2",
+        "path": "model.bin"
+      },
+      {
+        "type": "file",
+        "oid": "93c0e4f87b8daea84b62dbbf24f92960411f606b",
+        "size": 1303887,
+        "path": "shared_vocabulary.json"
+      },
+      {
+        "type": "file",
+        "oid": "3c703242f5782526e1d1a71e566d3a6c3dcc0a88",
+        "size": 806435,
+        "lfs": {
+          "oid": "5775ddc9e3ff2fae91554da56468ad35ff56edaba870fea74447bc7234bfdaa8",
+          "size": 806435,
+          "pointerSize": 131
+        },
+        "xetHash": "03be21fecf7a3ce995194ba2a481a4c4d5d8c64fbe1bac9ccc3dd6034c8c9618",
+        "path": "source.spm"
+      },
+      {
+        "type": "file",
+        "oid": "63a9413cc1d9969d34c3c1451d977335959564ea",
+        "size": 804600,
+        "lfs": {
+          "oid": "81dc94efa84e4025ef38d25d5d07429fe41e3eb29d44003f1db6fe98487b0052",
+          "size": 804600,
+          "pointerSize": 131
+        },
+        "xetHash": "52e8d491045ef192b6420f8a7d879565387db0f89f7d8230334dc0faad24339f",
+        "path": "target.spm"
+      },
+      {
+        "type": "file",
+        "oid": "af90e7a4c0e5e8f828e146bdb499c22cef85740e",
+        "size": 44,
+        "path": "tokenizer_config.json"
+      },
+      {
+        "type": "file",
+        "oid": "423d3deb0188828da557bb61494bf73e4b86d275",
+        "size": 1617791,
+        "path": "vocab.json"
+      }
+    ]
+  },
+  "terminology_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/languages.csv",
+      "sha256": "fbb60019a6a461783d5671a995d5f590db61792a273e90faa0ed630d102a19b8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv",
+      "sha256": "820cde17074cdb1c2b0595c997fb8f998e773bd5da3bb525dec85703c86c5fd9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/move_names.csv",
+      "sha256": "99e23ee38ea53d1473474d463b87651deac3cd4928750f8186feae66da45c147"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/ability_names.csv",
+      "sha256": "8acb80c42210f86ae747dc3347b060d69cd2574a9dbfaf74774ae632ca6348da"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/type_names.csv",
+      "sha256": "685230c51074cf2f723debcf827a4df4c36ab0ec7e929c806ad65a3e40958705"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/item_names.csv",
+      "sha256": "c4ad0b446e395c378d8ba75d6900f051cc9ebb99431d4000adeac35f492852f0"
+    }
+  ],
+  "gif_previews_checked": 8,
+  "offline_initial_sha256": "d9b4de6a731dc28149a16958a41760c8a0e05ba4c64385e133685fd44e79468f",
+  "google_descriptions_fetched": 14422,
+  "remote_scope": {
+    "authorized_by_user": true,
+    "destination": "translate.googleapis.com",
+    "sent": [
+      "English community descriptions",
+      "temporary term and batch markers"
+    ],
+    "author_metadata_sent": false,
+    "sprite_paths_sent": false,
+    "player_saves_sent": false,
+    "account_information_sent": false
+  },
+  "reference_notes": "Data/localization/zh-CN-dex-reference-notes.json",
+  "unresolved_translation_review_flags": 0,
+  "semantic_regressions_corrected": 2,
+  "numeric_review_unresolved": 0,
+  "numeric_review_valid_variants": [
+    "2 trillion -> 2万亿",
+    "6 or 7 -> 六七"
+  ],
+  "context_review_performed_by": "AI assistant, not human translator sign-off",
+  "previous_review_stage": {
+    "whole_entry_overrides": 974,
+    "records_using_whole_entry_overrides": 1020,
+    "sentence_overrides": 37,
+    "new_context_review_sources": 721,
+    "records_changed_from_previous": 14749,
+    "semantic_round2": {
+      "added_review_sources": 260,
+      "records_changed": 315,
+      "source_before_sha256": "3489ae2fed9fc7b24a3614bf3dc8b41bd31cbad700ef932652660d34ecdd8429",
+      "semantic_checks": [
+        "skin shedding",
+        "modifier attachment",
+        "court and retinue",
+        "positive/negative conditions",
+        "spirit and willpower",
+        "spines and backbone",
+        "contrast and causality",
+        "name/author/source identity"
+      ],
+      "human_translator_sign_off": false,
+      "native_pages_checked": 15984,
+      "semantic_regression_cases": 9,
+      "normal_player_saves_accessed": false
+    }
+  },
+  "whole_entry_overrides": 14423,
+  "records_using_whole_entry_overrides": 20022,
+  "full_sentence_review": {
+    "complete": true,
+    "previous_reviewed_sources": 974,
+    "new_reviewed_sources": 13449,
+    "reviewed_sources": 14423,
+    "reviewed_records": 15005,
+    "remaining_sources": 0,
+    "human_translator_sign_off": false,
+    "parallel_review_authorized_by_user": true,
+    "coverage_report": "Data/localization/zh-CN-dex-proofread-progress.json",
+    "offline_builder": "scripts/localization/build_proofread_dex.py",
+    "shards": {
+      "a.json": 4613,
+      "b.json": 4413,
+      "c-extra.json": 600,
+      "c.json": 3413,
+      "root-extra.json": 200,
+      "root.json": 210
+    },
+    "native_pages_checked": 15099,
+    "shard_sha256": {
+      "a.json": "821b76881f0ccfae3fa4f10c61716d23d010d39a0b0d675b59e3a39925cfa346",
+      "b.json": "2ae7697e4324ed8c3e58495910d4e15d5a65236d7822f2ac85ad0625dfec18e9",
+      "c-extra.json": "25a5a53e898fc2900df3e104d842e9bd3852d76b2e5395f42d1cda9728155bbf",
+      "c.json": "470e5d942f4f7e1a66f6eb2c5169d0f7587d5f50ee72eea38a81f136152e4fff",
+      "root-extra.json": "5a0699dc33b3672c0f4a85a307d49f12011cbfff78486e3effb88dcd319214c6",
+      "root.json": "eeac57a716f6e1ed4ff3f106d923755ea5a9ab1e5f48afcaa7630103647d5bcf"
+    }
+  },
+  "review_source_snapshot": {
+    "path": "Data/localization/zh-CN-dex-source.json",
+    "sha256": "89fa995d1a247c14013cce9edc683639d56249ca1f82a09fbbb56a191570cd04",
+    "records": 15005,
+    "unique_sources": 14423,
+    "original_input_sha256": "068e6c26f54cce55fa632cf742209494243c56438a20df02ceffd99753831d10"
+  },
+  "upstream_integration": {
+    "game_records": 82207,
+    "translated_records": 20022,
+    "exact_reviewed_text_reused_for_additional_records": 5017,
+    "untranslated_game_records": 62185,
+    "unreviewed_unique_sources": 61021,
+    "preserve_upstream_english": true,
+    "user_approved_scope": "Keep latest main; ship reviewed prose now, retain new prose in English."
+  }
+}

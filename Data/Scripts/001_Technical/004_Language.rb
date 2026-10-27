@@ -1,9 +1,31 @@
 # Keep Settings::LANGUAGES indices stable: they are stored in existing saves.
 module GameLanguage
+  def self.bitmap_path(path)
+    return path unless path.is_a?(String) && $PokemonSystem && $PokemonSystem.language == 2
+    if !@image_paths
+      @image_paths = {}
+      begin
+        data = HTTPLite::JSON.parse(File.binread("Data/localization/zh-CN-images.json"))
+        data["images"].each do |source, row|
+          target = row["path"]
+          next unless target.is_a?(String) && target.start_with?("Graphics/Chinese/") && !target.include?("..")
+          @image_paths[source.downcase.sub(/\.(png|gif|bmp|jpe?g)\z/i, "")] = target if File.file?(target)
+        end
+      rescue StandardError, MKXPError
+        # Optional translated art can fall back to the original assets.
+      end
+    end
+    key = path.tr("\\", "/").sub(/\A\.\//, "")
+    root = Dir.pwd.tr("\\", "/") + "/"
+    key = key[root.length..-1] if key.downcase.start_with?(root.downcase)
+    @image_paths[key.downcase.sub(/\.(png|gif|bmp|jpe?g)\z/i, "")] || path
+  end
+
   def self.message(type, id, original)
     return original if !$PokemonSystem || $PokemonSystem.language == 0
     text = MessageTypes.getTranslation(type, id)
-    return text.empty? ? original : text
+    return text unless text.empty?
+    return original.is_a?(String) ? _INTL(original) : original
   end
 
   def self.fusion_name(head, body, original)
@@ -51,4 +73,15 @@ module GameLanguage
       @choosing = previous
     end
   end
+end
+
+# Some scenes construct native Bitmaps directly, bypassing RPG::Cache.
+if defined?(Bitmap)
+  module ChineseBitmapPath
+    def initialize(*args)
+      args[0] = GameLanguage.bitmap_path(args[0]) if args[0].is_a?(String)
+      super(*args)
+    end
+  end
+  Bitmap.prepend(ChineseBitmapPath)
 end

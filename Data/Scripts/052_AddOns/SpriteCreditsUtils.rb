@@ -319,7 +319,7 @@ def display_special_banner()
   flag_name = "Team 500,000"
   price = 10000
 
-  banner_title = "Half-million Milestone Banner"
+  banner_title = _INTL("Half-million Milestone Banner")
   flag_path = "Trainer Card/backgrounds/#{flag_id}"
 
   flag_image_id = 10
@@ -331,7 +331,7 @@ def display_special_banner()
   $game_screen.pictures[frame_image_id].show("teamFlagFrame", 0, x_position, y_position, 50, 50)
 
   pbMessage("\"#{banner_title}\"")
-  pbMessage("A banner honoring the 500,000 members of the community who have come together to inspire countless others.")
+  pbMessage(_INTL("A banner honoring the 500,000 members of the community who have come together to inspire countless others."))
   pbWait(10)
   percent = get_total_completion_percent()
   pbMessage("All Pokémon completion: \\C[1]#{sprintf('%.2f', percent)}%")
@@ -350,11 +350,11 @@ def prompt_flag_purchase(flag_id, flag_name, price)
       $Trainer.money -= price
       unlock_card_background(flag_id)
       pbMessage("\\GYou purchased the \\C[1]#{flag_name}\\C[0] Trainer Card background!")
-      if pbConfirmMessage("Swap your current Trainer Card for the newly purchased one?")
+      if pbConfirmMessage(_INTL("Swap your current Trainer Card for the newly purchased one?"))
         pbSEPlay("GUI trainer card open")
         $Trainer.card_background = flag_id
       else
-        pbMessage("You can swap the background at anytime when viewing your Trainer Card.")
+        pbMessage(_INTL("You can swap the background at anytime when viewing your Trainer Card."))
       end
     end
   end
@@ -395,7 +395,7 @@ def displayGalleryFrame(frame)
 
   pif_sprite = pbGet(VAR_GALLERY_FEATURED_SPRITES)[frame]
   if !pif_sprite.is_a?(PIFSprite)
-    pbMessage("The frame is empty...")
+    pbMessage(_INTL("The frame is empty..."))
     return
   end
   species = getPokemonSpeciesFromPifSprite(pif_sprite)
