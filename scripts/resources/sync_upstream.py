@@ -116,7 +116,12 @@ def merge_credits(existing, incoming):
 
 def image_entry(request, previous, state, fetch=download):
     path, url, custom = request
-    header, etag = fetch(url, LIMIT, True)
+    try:
+        header, etag = fetch(url, LIMIT, True)
+    except urllib.error.HTTPError as error:
+        if error.code == 404:
+            return None, "" # The official index can precede a sheet's publication.
+        raise
     if len(header) != 24 or header[:8] != b"\x89PNG\r\n\x1a\n" or header[12:16] != b"IHDR":
         raise ValueError("Invalid sheet PNG: " + path)
     width, height = struct.unpack(">II", header[16:24])
@@ -177,18 +182,20 @@ def prepare(fetch=download, api=catalog.api, workers=8):
     requests = sorted(set(requests))
     github = catalog.build(previous=previous, data_overrides=outputs)
     rows = {row["path"]: row for row in github["files"] if row["kind"] == "image"}
-    image_state = {}
+    image_state, missing = {}, []
     pool = ThreadPoolExecutor(max_workers=workers)
     pending = [pool.submit(image_entry, request, previous_rows, state.get("images", {}), fetch) for request in requests]
     try:
         for count, future in enumerate(as_completed(pending), 1):
             row, etag = future.result()
-            rows[row["path"]] = row
-            image_state[row["path"]] = etag
+            if row is not None:
+                rows[row["path"]] = row
+                image_state[row["path"]] = etag
             if count % 100 == 0:
-                print("Verified official sheets: %d/%d" % (count, len(requests)), flush=True)
+                print("Checked official sheets: %d/%d" % (count, len(requests)), flush=True)
     finally:
         pool.shutdown(wait=True, cancel_futures=True)
+    missing = sorted(request[0] for request in requests if request[0] not in image_state)
     for path, body in outputs.items():
         if path != "Data/pokedex/dex.json" and len(body) > LIMIT:
             raise ValueError("Resource exceeds download capacity: " + path)
@@ -196,8 +203,10 @@ def prepare(fetch=download, api=catalog.api, workers=8):
     if manifest["revision"] == previous["revision"]:
         manifest["upstream_commit"] = previous["upstream_commit"]
     outputs["Data/offline-resources.json"] = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode()
-    outputs[STATE] = json_bytes({"images": dict(sorted(image_state.items()))})
-    summary = {"dex_entries": len(combined), "verified_sheets": len(requests), "revision": manifest["revision"]}
+    outputs[STATE] = json_bytes({"images": dict(sorted(image_state.items())), "pending_sheets": missing})
+    summary = {"dex_entries": len(combined), "verified_sheets": len(image_state), "pending_sheets": len(missing), "revision": manifest["revision"]}
+    if missing:
+        print("Sheets awaiting upstream publication: %d; retaining available verified snapshots" % len(missing), flush=True)
     return outputs, summary
 
 
