@@ -6,16 +6,17 @@ function Report($value) {
 }
 try {
     $target = [Uri]$Url
-    if ($target.Scheme -ne 'https' -or $target.Host -ne 'raw.githubusercontent.com' -or
+    if ($target.Scheme -ne 'https' -or $target.Host -notin @('raw.githubusercontent.com', 'infinitefusion.net') -or
         $target.UserInfo -or $Limit -lt 1 -or $Limit -gt 8388608) { throw 'Invalid resource request' }
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     $request = [Net.HttpWebRequest]::Create($target)
     $request.AllowAutoRedirect = $false
     $request.Timeout = 8000
     $request.ReadWriteTimeout = 5000
-    $request.UserAgent = 'InfiniteFusionHD-Resources/1'
+    $request.UserAgent = 'Mozilla/5.0 InfiniteFusionHD-Resources/1'
+    if ($target.Host -eq 'infinitefusion.net') { $request.AddRange(0, $Limit - 1) }
     $response = $request.GetResponse()
-    if ([int]$response.StatusCode -ne 200 -or $response.ContentLength -gt $Limit) { throw 'Invalid resource response' }
+    if ([int]$response.StatusCode -notin @(200, 206) -or $response.ContentLength -gt $Limit) { throw 'Invalid resource response' }
     $source = $response.GetResponseStream()
     $output = [IO.File]::Open($Destination, [IO.FileMode]::CreateNew, [IO.FileAccess]::Write, [IO.FileShare]::Read)
     $buffer = New-Object byte[] 65536

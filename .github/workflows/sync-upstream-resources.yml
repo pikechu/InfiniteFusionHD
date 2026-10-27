@@ -1,0 +1,50 @@
+name: Sync upstream resources
+
+on:
+  schedule:
+    - cron: '23 3,15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: upstream-resource-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          sparse-checkout: |
+            Data
+            scripts/resources
+            tests/resources
+          sparse-checkout-cone-mode: true
+      - name: Test synchronizer
+        run: python3 -m unittest discover -s tests/resources -p 'test_*.py' -v
+      - name: Synchronize and validate official resources
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/resources/sync_upstream.py
+      - name: Verify client resource contracts
+        run: ruby --disable-gems tests/resources/offline_resources_test.rb
+      - name: Publish changed resources
+        run: |
+          git add -- Data/sprites/CUSTOM_SPRITES Data/sprites/BASE_SPRITES 'Data/sprites/Sprite Credits.csv' Data/pokedex/dex.json Data/pokedex/dex.json.gz Data/offline-resources.json Data/upstream-resource-state.json
+          if git diff --cached --quiet; then
+            echo 'No resource changes.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git diff --cached --check
+          git diff --cached --stat >> "$GITHUB_STEP_SUMMARY"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore(resources): synchronize official upstream resources'
+          git push origin HEAD:main

@@ -3,6 +3,7 @@ require "json"
 require "fileutils"
 require "tmpdir"
 require "zlib"
+require "stringio"
 require "digest/sha2"
 require "digest/sha1"
 ROOT = File.expand_path("../..", __dir__)
@@ -146,6 +147,27 @@ Dir.mktmpdir("offline-resources-", File.join(ROOT, "temp")) do |directory|
     check.call(resources.valid_file?(dex_entry, true), "merged dex keeps an independently verifiable source copy")
     File.write(dex_entry["path"], JSON.generate([local_entry]))
     check.call(!resources.valid_file?(dex_entry, true), "full integrity check also detects published entries missing from the active merged dex")
+    packed_stream = StringIO.new
+    writer = Zlib::GzipWriter.new(packed_stream)
+    writer.write(dex_bytes); writer.close
+    packed = packed_stream.string
+    packed_entry = {"path"=>"Data/pokedex/dex.json.gz", "kind"=>"data", "size"=>packed.bytesize,
+                    "sha256"=>Digest::SHA256.hexdigest(packed)}
+    resources.install(packed_entry, packed)
+    check.call(resources.valid_file?(packed_entry, true), "compressed dex downloads install and verify the merged local dex")
+    check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], dex[0]['entry']], "cached dex lookup preserves local and upstream descriptions")
+    reject.call("corrupt compressed dex preserves the active descriptions") { resources.install(packed_entry, packed[0...-1]) }
+    original_limit = KIF::PokedexEntries::MAX_BYTES
+    KIF::PokedexEntries.send(:remove_const, :MAX_BYTES)
+    KIF::PokedexEntries.const_set(:MAX_BYTES, 8)
+    reject.call("compressed dex expansion is bounded") { resources.dex_body(packed_entry, packed) }
+    KIF::PokedexEntries.send(:remove_const, :MAX_BYTES)
+    KIF::PokedexEntries.const_set(:MAX_BYTES, original_limit)
+    cdn_catalog = Marshal.load(Marshal.dump(catalog))
+    cdn_catalog['files'][0]['url'] = 'https://infinitefusion.net/customsprites/spritesheets/spritesheets_base/1.png'
+    check.call(resources.parse(JSON.generate(cdn_catalog)).is_a?(Hash), "manifest accepts only the official CDN sheet prefix")
+    cdn_catalog['files'][0]['url'] = 'https://infinitefusion.net/elsewhere/1.png'
+    reject.call("manifest rejects unrelated CDN paths") { resources.parse(JSON.generate(cdn_catalog)) }
     resources.instance_variable_set(:@manifest, nil)
     resources.atomic(resources::CACHE + '/manifest.json', 'corrupt cache')
     check.call(resources.manifest['revision'] == ('a' * 64), "corrupt manifest cache falls back to the bundled manifest")

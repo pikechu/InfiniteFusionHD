@@ -23,6 +23,8 @@ Dir.mktmpdir("resource-https-", File.join(root, "temp")) do |directory|
     bytes = resources.fetch(entry["url"], entry["size"]) { progress += 1 }
     raise "Downloaded bytes did not pass manifest verification" unless resources.valid_bytes?(entry, bytes)
     raise "No progress callbacks" unless progress > 0
+    cdn = resources.fetch('https://infinitefusion.net/customsprites/spritesheets/spritesheets_base/1.png')
+    raise "Official CDN range download failed" unless KIF::SpriteSheets.png_header(cdn, :base)
     begin
       resources.fetch(entry["url"], entry["size"]) { raise KIF::OfflineResources::Cancelled }
       raise "Cancellation was ignored"

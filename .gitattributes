@@ -1,6 +1,8 @@
 # Preserve source/catalog hashes and archived evidence on every checkout.
 /Data/Scripts/**/*.rb text eol=lf
 /Data/pokedex/*.json text eol=lf
+/Data/pokedex/*.gz -text
+/Data/upstream-resource-state.json text eol=lf
 /Data/sprites/BASE_SPRITES text eol=lf
 /Data/sprites/CUSTOM_SPRITES text eol=lf
 "/Data/sprites/Sprite Credits.csv" text eol=lf
