@@ -23,3 +23,17 @@
 `tests/gameplay/outfit_catalog_test.rb` 验证惰性枚举、换装调用者、重复查询复用、数据变化、切换存档、存档字段和错误保留。`tests/gameplay/shop_loading_game.rb` 使用实际地图和商店 UI 验证本地开店路径，禁止任何 HTTP。原生证据分别保存在 `temp/multiplayer/shop-before-20261028/saves/shop-before.json` 与 `temp/multiplayer/shop-after-20261028/saves/shop-after.json`。
 
 当前没有连接的 Android 设备，以上耗时不能当作手机测量值。Android 采用相同 Ruby 路径，但仍需重新打包并在用户设备上验证首次开店表现。
+
+## 全地图与公共入口补查
+
+随后扫描全部 809 张地图、109 个公共事件，共检查 25,180 段事件脚本。发现 85 段服饰相关入口，分布于 26 张地图及公共事件 80（换装）、97（发型/染色）；包括华蓝、枯叶、玉虹、金黄、浅红、红莲、满金等地的商店或旅馆。地图 816 等测试场景也计入地图数，不能将此数当作营业店铺数。
+
+共用商店模板还按 18 个城镇标识生成衣帽商品，其中含同城状态变体；以是否包含基础商品两种参数分别验证。静态事件提取出 25 组不同的库存生成参数，琴音岛旅馆的动态首领条件另以 4 组输入覆盖。检查范围是加载路径、调用稳定性与商品列表保持，不是全部 NPC 剧情、解锁条件和库存设计验收。
+
+`tests/gameplay/outfit_entrypoints_audit.rb` 仅读取地图与事件数据，生成入口报告，不执行 NPC 脚本或修改剧情开关。`tests/gameplay/outfit_entrypoints_game.rb` 在隔离原生运行时执行提取的生成器参数、各城镇共用模板、直接衣帽/理发入口、衣柜、列表读取及静默服饰授予，共 111 组；全程禁止 HTTP。
+
+补查发现玩家的 `unlock_clothes`、`unlock_hat`、`unlock_hair` 仍直接重读单类 JSON。改为复用已验证的公共查询缓存，保持授予类别、重复解锁处理和动画分支不变。原生回归中，连续 9 次静默授予的 JSON 读取由 9 次降至 0；111 组的总读取仅首次 3 次，网络请求为 0。修复前后捕获的共用商店、直接商店和衣柜商品 ID 列表完全一致。
+
+衣服、帽子和理发店备货不再扫描无关发型图片。用户明确请求完整发型列表时仍需首次发现实际版本；本次素材下为 690 次路径探测，同一选择器第二次读取为 0 次。该真实需求与误扫所有发型不同，不能宣称全部界面首次打开都没有本地素材开销。
+
+补查证据位于 `temp/multiplayer/outfit-entrypoints-before-20261028/saves/outfit-entrypoints.json` 与 `temp/multiplayer/outfit-entrypoints-after-20261028/saves/outfit-entrypoints.json`。本轮没有操作真实存档，没有购买商品，也未在 Android 真机逐点运行。
