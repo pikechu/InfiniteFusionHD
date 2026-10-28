@@ -1,0 +1,55 @@
+{
+  "phase": "original",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2125460   9950788  18% /data/user/0",
+  "apk_sha256": "0d32551b45245f09e019f9629133c961ae0bd456e5a915021f10ebee72909587",
+  "exact_installed_apk_reused": false,
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "native_failure_tail": [
+    "W/SQLiteLog( 1605): (28) double-quoted string literal: \"org.kuray.kif\"",
+    "W/system_server(  509): Failed to determine oat file name for dex location /data/app/~~TtoPjGjpFqIb4Bzy5Zn2Tw==/org.kuray.kif-nAeLNT5hVYAj_l8mXdATxQ==/base.apk: Dalvik cache directory does not exist",
+    "W/ActivityTaskManager(  509): Force removing ActivityRecord{251a0be u0 org.kuray.kif/.LauncherActivity t15 f}}: app died, no saved state",
+    "W/org.kuray.kif( 4588): Unexpected CPU variant for X86 using defaults: x86_64",
+    "W/system_server(  509): Failed to determine oat file name for dex location /data/app/~~TtoPjGjpFqIb4Bzy5Zn2Tw==/org.kuray.kif-nAeLNT5hVYAj_l8mXdATxQ==/base.apk: Dalvik cache directory does not exist",
+    "W/linker  ( 4628): Warning: \"/data/app/~~TtoPjGjpFqIb4Bzy5Zn2Tw==/org.kuray.kif-nAeLNT5hVYAj_l8mXdATxQ==/lib/arm64/libc++_shared.so\" unused DT entry: unknown processor-specific (type 0x70000001 arg 0x0) (ignoring)",
+    "W/system_server(  509): Failed to determine oat file name for dex location /data/app/~~TtoPjGjpFqIb4Bzy5Zn2Tw==/org.kuray.kif-nAeLNT5hVYAj_l8mXdATxQ==/base.apk: Dalvik cache directory does not exist",
+    "F/libc    ( 4628): Fatal signal 2570 (?), code 0 (SI_USER) in tid 4669 (rgss), pid 4628 (SDLActivity)",
+    "W/InputDispatcher(  509): channel 'acdc59b org.kuray.kif/org.kuray.kif.GameActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9",
+    "E/InputDispatcher(  509): channel 'acdc59b org.kuray.kif/org.kuray.kif.GameActivity (server)' ~ Channel is unrecoverably broken and will be disposed!",
+    "W/InputDispatcher(  509): Attempted to unregister already unregistered input channel 'acdc59b org.kuray.kif/org.kuray.kif.GameActivity (server)'",
+    "W/ActivityTaskManager(  509): Force removing ActivityRecord{6d720f9 u0 org.kuray.kif/.GameActivity t16}: app died, no saved state",
+    "E/Layer   (  373): [Bounds for - org.kuray.kif/org.kuray.kif.GameActivity#0] No local sync point found"
+  ],
+  "passed": false,
+  "expected_translator_limitation": false,
+  "elapsed_ms": 16250.0,
+  "last_stage": "sprite-x",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 34
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 88
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

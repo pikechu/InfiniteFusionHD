@@ -1,0 +1,54 @@
+{
+  "phase": "legacy-read",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2163528   9912720  18% /storage/emulated/0/Android/obb",
+  "apk_sha256": "0e43d0327d61e52c1636b920f9fa8370681cf747acf27785736ee3ce62d61bc2",
+  "exact_installed_apk_reused": true,
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "native": {
+    "backtrace": [
+      "/data/data/org.kuray.kif/files/content/a7f36fc8b5812ee9d9a5cc2a/Data/Scripts/054_Multiplayer/001_Client.rb:208:in 'KIFMultiplayer::WireJSON::Parser#failure'",
+      "/data/data/org.kuray.kif/files/content/a7f36fc8b5812ee9d9a5cc2a/Data/Scripts/054_Multiplayer/001_Client.rb:232:in 'KIFMultiplayer::WireJSON::Parser#value'",
+      "/data/data/org.kuray.kif/files/content/a7f36fc8b5812ee9d9a5cc2a/Data/Scripts/054_Multiplayer/001_Client.rb:214:in 'KIFMultiplayer::WireJSON::Parser#parse'",
+      "/data/data/org.kuray.kif/files/content/a7f36fc8b5812ee9d9a5cc2a/Data/Scripts/054_Multiplayer/001_Client.rb:146:in 'KIFMultiplayer::WireJSON.parse'",
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-read-190755-01ad4e/support/tests/localization/android_legacy_read.rb:5:in '<top (required)>'",
+      "android-game-smoke.rb:26:in 'Kernel#load'",
+      "android-game-smoke.rb:26:in '<main>'",
+      "-e:in 'Kernel#eval'"
+    ],
+    "complete": true,
+    "error": "KIFMultiplayer::Error: Invalid JSON: expected a value",
+    "passed": false
+  },
+  "passed": false,
+  "elapsed_ms": 57437.99999996554,
+  "last_stage": "ruby-started",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 34
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 209
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

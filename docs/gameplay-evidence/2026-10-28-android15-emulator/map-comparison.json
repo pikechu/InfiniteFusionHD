@@ -1,0 +1,75 @@
+{
+  "environment": "Android11/API30 x86_64 ARM translation,4cores3GiB,SwiftShader; sameassets andpatchedcore",
+  "scope": "Real Scene_Map.transfer_player inside standard pbFadeOutIn; autorun story isolated. Fully opaque block measured separately from fixed fades. First cycle is not an OS cold-cache guarantee.",
+  "rounds": 3,
+  "routes": [
+    {
+      "map_id": 43,
+      "location": "真新镇家中",
+      "map14": {
+        "first_cycle_ms": 1740.2630999999928,
+        "revisit_black_hold_median_ms": 242.52925000000403,
+        "revisit_total_fade_median_ms": 661.1907500000029,
+        "sampled_rss_max_kib": 717168
+      },
+      "map": {
+        "first_cycle_ms": 1612.6183000000083,
+        "revisit_black_hold_median_ms": 243.6250999999885,
+        "revisit_total_fade_median_ms": 660.5513500000058,
+        "sampled_rss_max_kib": 716928
+      },
+      "revisit_change_percent": 0.45184240663114217
+    },
+    {
+      "map_id": 42,
+      "location": "真新镇",
+      "map14": {
+        "first_cycle_ms": 502.7328000000182,
+        "revisit_black_hold_median_ms": 513.9234000000101,
+        "revisit_total_fade_median_ms": 948.7909999999999,
+        "sampled_rss_max_kib": 717512
+      },
+      "map": {
+        "first_cycle_ms": 488.14840000000004,
+        "revisit_black_hold_median_ms": 510.7547500000038,
+        "revisit_total_fade_median_ms": 947.3329500000034,
+        "sampled_rss_max_kib": 717624
+      },
+      "revisit_change_percent": -0.6165607559426634
+    },
+    {
+      "map_id": 81,
+      "location": "常青市商店",
+      "map14": {
+        "first_cycle_ms": 277.5622999999996,
+        "revisit_black_hold_median_ms": 189.8946499999994,
+        "revisit_total_fade_median_ms": 608.1167999999906,
+        "sampled_rss_max_kib": 718696
+      },
+      "map": {
+        "first_cycle_ms": 298.29259999999636,
+        "revisit_black_hold_median_ms": 209.9898999999965,
+        "revisit_total_fade_median_ms": 627.6057000000037,
+        "sampled_rss_max_kib": 718936
+      },
+      "revisit_change_percent": 10.582314983596008
+    },
+    {
+      "map_id": 79,
+      "location": "常青市",
+      "map14": {
+        "first_cycle_ms": 1387.8601000000117,
+        "revisit_black_hold_median_ms": 839.199899999997,
+        "revisit_total_fade_median_ms": 1271.5197500000102,
+        "sampled_rss_max_kib": 725576
+      },
+      "map": {
+        "first_cycle_ms": 1392.942000000005,
+        "revisit_black_hold_median_ms": 867.4427000000122,
+        "revisit_total_fade_median_ms": 1301.330749999991,
+        "sampled_rss_max_kib": 725800
+      },
+      "revisit_change_percent": 3.365443680345459
+    }
+  ]
+}

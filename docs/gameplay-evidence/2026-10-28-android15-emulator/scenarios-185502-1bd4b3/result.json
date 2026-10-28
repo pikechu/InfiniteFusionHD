@@ -1,0 +1,65 @@
+{
+  "phase": "scenarios",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2137068   9939180  18% /data/user/0",
+  "apk_sha256": "0e43d0327d61e52c1636b920f9fa8370681cf747acf27785736ee3ce62d61bc2",
+  "exact_installed_apk_reused": true,
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "native": {
+    "complete": true,
+    "passed": true,
+    "phase": "scenarios",
+    "rss_kib": 756028,
+    "ruby": "3.4.10",
+    "assertions": [
+      "all reviewed dialogue/UI/item additions resolve in the installed Android runtime: []",
+      "all opening event pages/choices use Chinese; 576 texts",
+      "accepting a quest updates the real quest log/counters",
+      "repeated acceptance cannot duplicate a quest",
+      "quest acceptance title/description popups are Chinese",
+      "completing a quest preserves real completion behavior",
+      "repeated completion cannot duplicate progress",
+      "the first real quest reward grants HM08",
+      "a reward cannot be collected twice",
+      "expert progress formats7/12 after translation",
+      "representative postgame branch oak-postgame is Chinese",
+      "representative postgame branch saffron-photo is Chinese",
+      "representative postgame branch wonder-trade is Chinese"
+    ],
+    "phase_markers": [
+      "2026-10-28 10:58:13 UTC ANDROID_SCENARIOS_PASS opening=576 quest_accept_complete_reward=true"
+    ],
+    "source_files_loaded": 462
+  },
+  "passed": true,
+  "elapsed_ms": 103577.99999997951,
+  "last_stage": "ruby-started",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 34
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 214
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "zip_entries": 33,
+  "changed_content_entry": [
+    "lib/arm64-v8a/libmkxp-z.so"
+  ],
+  "signature_metadata_changes": [
+    "META-INF/ANDROIDD.SF",
+    "META-INF/ANDROIDD.RSA",
+    "META-INF/MANIFEST.MF"
+  ],
+  "different_core_bytes": 16,
+  "core_byte_offsets": [
+    1217644,
+    1217645,
+    1217646,
+    1217647,
+    1217648,
+    1217649,
+    1217650,
+    1217651,
+    1217820,
+    1217821,
+    1217822,
+    1217823,
+    1217824,
+    1217825,
+    1217826,
+    1217827
+  ],
+  "phone_core_sha256": "6f90fabcb227eafa2a5b3a8967dbe34368cec06efab5cd3e709f538003186232",
+  "emulator_core_sha256": "90bee3c7406d62ca903ffb64798bca3f6da009e4b94402a580cb37a8f7ae0d23",
+  "all_game_assets_java_code_and_other_libraries_equal": true,
+  "ordinary_phone_apk_modified": false,
+  "scope": "ZIP CRC/size inventory plus complete core byte comparison; signing metadata differs because the core differs."
+}

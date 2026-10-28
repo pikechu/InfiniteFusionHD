@@ -1,0 +1,71 @@
+{
+  "phase": "legacy-write",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2169168   9907080  18% /data/user/0",
+  "apk_sha256": "0e43d0327d61e52c1636b920f9fa8370681cf747acf27785736ee3ce62d61bc2",
+  "exact_installed_apk_reused": true,
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "test_source_sha256": {
+    "scripts/multiplayer/runtime-preload.rb": "fb6880cb5f0fb33c859be183060797d82dc499346090f8550e06b9f5093a6957",
+    "scripts/multiplayer/test-bootstrap.rb": "a9f8262200330679e60f0038832f1e989ee8ba8f7f45ce3a5525c1dcb96ce290",
+    "tests/gameplay/map_transfer_game.rb": "4b4bfd0d6fb15a3b53185f8d9aeb3c8d72927b695fd42ca308420278358606fe",
+    "tests/localization/android_legacy_read.rb": "9b74ceb9bfff32535d2218c29522624f750274ee0347d47bf21e1c57c64d031f",
+    "tests/localization/android_legacy_write.rb": "8c48ee544adb9cf7ae02fa9a02acaf305d21af4a884a4e7fcf2991224cfafce5",
+    "tests/localization/android_map_transfer_game.rb": "79a3ab6c7ebb5c77f4d51d9587d480f7ba2b81116240db29089d5e975a189688",
+    "tests/localization/android_scenarios.rb": "d000496f30c70067bf493ce3821410f97d2ef50793953d97b295659821145c5d",
+    "tests/localization/custom_dex_game.rb": "b0ab52f3d5bcc3330352a2c90485bbe956b09a340bb2f0e4ae4d47f72d08f315",
+    "tests/localization/game_smoke.rb": "a18857383d4a06bfa6882ce18dfc8fb36fcb81b32e0f1b0dda609a447dcf557a",
+    "tests/localization/quest_dialogue_game.rb": "0318ab664efe39768e0137bd568d2ade5362f5725c30c1b97cbc01195b6555a8"
+  },
+  "probe_sha256": "d6f795c0a198497bc17dc120f0ae7a39285c9ca18abc75077014df478e08cef3",
+  "native": {
+    "backtrace": [
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-write-192145-ac6d0c/support/scripts/multiplayer/test-bootstrap.rb:51:in 'KIFMultiplayerFeatureTest.check'",
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-write-192145-ac6d0c/support/tests/localization/android_legacy_write.rb:27:in 'Method#call'",
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-write-192145-ac6d0c/support/tests/localization/android_legacy_write.rb:27:in '<top (required)>'",
+      "android-game-smoke.rb:26:in 'Kernel#load'",
+      "android-game-smoke.rb:26:in '<main>'",
+      "-e:in 'Kernel#eval'"
+    ],
+    "complete": true,
+    "error": "RuntimeError: FEATURE_ASSERTION_FAILED legacy control JSON is fully persisted before process exit",
+    "passed": false,
+    "assertions": [
+      "Android14 game code writes through its actual save-slot API",
+      "legacy control encoder returned a nonempty JSON document"
+    ],
+    "phase_markers": [],
+    "source_files_loaded": 462
+  },
+  "passed": false,
+  "elapsed_ms": 68062.00000003446,
+  "last_stage": "ruby-started",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 33
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 214
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

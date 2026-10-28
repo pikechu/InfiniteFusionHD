@@ -1,0 +1,52 @@
+{
+  "phase": "legacy-write",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2134080   9942168  18% /storage/emulated/0/Android/obb",
+  "apk_sha256": "0e43d0327d61e52c1636b920f9fa8370681cf747acf27785736ee3ce62d61bc2",
+  "exact_installed_apk_reused": true,
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "native": {
+    "backtrace": [
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-write-185819-8b5e66/support/scripts/multiplayer/test-bootstrap.rb:51:in 'KIFMultiplayerFeatureTest.check'",
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-write-185819-8b5e66/support/tests/localization/android_legacy_write.rb:18:in 'Method#call'",
+      "/data/user/0/org.kuray.kif/files/diagnostics/android15-legacy-write-185819-8b5e66/support/tests/localization/android_legacy_write.rb:18:in '<top (required)>'",
+      "android-game-smoke.rb:26:in 'Kernel#load'",
+      "android-game-smoke.rb:26:in '<main>'",
+      "-e:in 'Kernel#eval'"
+    ],
+    "complete": true,
+    "error": "RuntimeError: FEATURE_ASSERTION_FAILED Android14 game code writes a full valid save",
+    "passed": false
+  },
+  "passed": false,
+  "elapsed_ms": 61500.0,
+  "last_stage": "ruby-started",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 33
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 214
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}
