@@ -1,0 +1,392 @@
+{
+  "complete": true,
+  "reviewed_at": "2026-10-28T06:43:17.398720+00:00",
+  "scope": "仅核对zh-CN-quest-dialogue.json script_texts与指定六份现有包的精确同源重叠；不涉及图鉴或衣帽未重叠文本。",
+  "script_texts_total": 705,
+  "comparison_statistics": {
+    "content": {
+      "overlap": 30,
+      "different": 14,
+      "identical": 16
+    },
+    "ui": {
+      "overlap": 0,
+      "different": 0,
+      "identical": 0
+    },
+    "settings": {
+      "overlap": 0,
+      "different": 0,
+      "identical": 0
+    },
+    "overrides": {
+      "overlap": 0,
+      "different": 0,
+      "identical": 0
+    },
+    "offline-resources": {
+      "overlap": 0,
+      "different": 0,
+      "identical": 0
+    },
+    "trainer-dialogue": {
+      "overlap": 0,
+      "different": 0,
+      "identical": 0
+    }
+  },
+  "overlap_pairs_reviewed": 30,
+  "conflicts_reviewed": 14,
+  "retain_current": 14,
+  "adopt_proposed": 0,
+  "require_new_translation": 0,
+  "conflicts": [
+    {
+      "source": "I have no more rewards to give you! Thanks for helping all these people!",
+      "current": "我已经没有更多奖励了！谢谢你帮助了这些人！",
+      "proposed": "我已经没有更多奖励了！谢谢你帮助了这么多人！",
+      "chosen": "我已经没有更多奖励了！谢谢你帮助了这些人！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿已表达奖励发完与感谢帮助这些人的完整意思。“这么多人”只调整感叹口吻，没有修复漏义，保留既有译文。"
+    },
+    {
+      "source": "First off what does the legendary Pokémon look like?",
+      "current": "首先，那只传说宝可梦长什么样？",
+      "proposed": "先说说，那只传说宝可梦长什么样？",
+      "chosen": "首先，那只传说宝可梦长什么样？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "First off译为“首先”准确，现稿对传说宝可梦外貌的提问完整。新稿“先说说”属于口语风格调整。"
+    },
+    {
+      "source": "Hmm... You better have some more information.",
+      "current": "嗯……你最好能再提供一些信息。",
+      "proposed": "嗯……你最好还能提供点别的信息。",
+      "chosen": "嗯……你最好能再提供一些信息。",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿准确表达希望对方再提供更多信息。新稿“别的信息”与现稿“再提供一些信息”均通顺，没有需要覆盖的误译。"
+    },
+    {
+      "source": "So you don't know its type... Hmm...",
+      "current": "所以，你连它的属性也不知道……嗯……",
+      "proposed": "所以你不知道它的属性……嗯……",
+      "chosen": "所以，你连它的属性也不知道……嗯……",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿保留不知道属性及迟疑语气。“连……也”与这段NPC连续追问、责问的语境相符，不新增宝可梦属性或事件；新稿只是减轻语气。"
+    },
+    {
+      "source": "I've never heard of such a creature, but keep going.",
+      "current": "我从未听说过这样的生物，不过请继续说。",
+      "proposed": "我没听说过这样的生物，不过你接着说。",
+      "chosen": "我从未听说过这样的生物，不过请继续说。",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿完整保留从未听说这种生物、但让对方继续的转折。“请继续说”与“你接着说”是礼貌程度和口语差异。"
+    },
+    {
+      "source": "Do you even know anything? This has been such a waste of time!",
+      "current": "你到底知道些什么？真是浪费我的时间！",
+      "proposed": "你到底知道些什么？真是白白浪费时间！",
+      "chosen": "你到底知道些什么？真是浪费我的时间！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿完整保留责问对方所知以及浪费时间的抱怨。“我的时间”在当前说话者抱怨语境中自然，不改变事件或线索。"
+    },
+    {
+      "source": "How can you not know where it was sighted? Do you know how unhelpful this is to me?",
+      "current": "你怎么会不知道目击地点？你知道这对我有多没帮助吗？",
+      "proposed": "你怎么会不知道目击地点？你知道这让我多难办吗？",
+      "chosen": "你怎么会不知道目击地点？你知道这对我有多没帮助吗？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿明确目击地点未知以及信息对说话者没有帮助。后句较直译但意思完整；新稿“让我多难办”属表达润色，无须为此覆盖既有文本。"
+    },
+    {
+      "source": "... Wait, I can't take your only Pokémon!",
+      "current": "……等等，我不能拿走你唯一的宝可梦！",
+      "proposed": "……等等，我可不能拿走你唯一的宝可梦！",
+      "chosen": "……等等，我不能拿走你唯一的宝可梦！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿准确表达不能拿走玩家唯一的宝可梦。新稿多一个语气词“可”，不修复语义或数量边界。"
+    },
+    {
+      "source": "Oh, this is the Pokémon you got from the collector, right?",
+      "current": "哦，这是你从收藏家那里得到的宝可梦，对吧？",
+      "proposed": "哦，这就是你从收藏家那里得到的宝可梦，对吧？",
+      "chosen": "哦，这是你从收藏家那里得到的宝可梦，对吧？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿完整保留从收藏家处获得宝可梦以及末尾求确认的口吻。“这就是”只是新稿强调，既有指代无误。"
+    },
+    {
+      "source": "It's a true testament to your mastery of Pokémon typings!",
+      "current": "这充分证明了你对宝可梦属性的精通！",
+      "proposed": "这足以证明，你对宝可梦属性已经十分精通！",
+      "chosen": "这充分证明了你对宝可梦属性的精通！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿准确表达这证明玩家精通宝可梦属性。新稿调整语序、程度和停顿，未修复属性概念或主语问题。"
+    },
+    {
+      "source": "You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+      "current": "将{1}收进了\\n<icon=bagPocket{2}>\\c[1]{3}口袋\\c[0]。",
+      "proposed": "你把{1}收进了\\n<icon=bagPocket{2}>\\c[1]{3}口袋\\c[0]。",
+      "chosen": "将{1}收进了\\n<icon=bagPocket{2}>\\c[1]{3}口袋\\c[0]。",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿完整表达把{1}收进{3}口袋，省略中文主语自然；bagPocket{2}图标、换行及颜色控制码均完整。新稿仅增加“你把”，应统一沿用已有Pocket模板。"
+    },
+    {
+      "source": "\\me[{1}]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]",
+      "current": "\\me[{1}]获得了{2}个\\c[1]{3}\\c[0]！\\wtnp[30]",
+      "proposed": "\\me[{1}]你获得了\\c[1]{3}\\c[0] ×{2}！\\wtnp[30]",
+      "chosen": "\\me[{1}]获得了{2}个\\c[1]{3}\\c[0]！\\wtnp[30]",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿以“{2}个{3}”正确显示数量与物品，获得提示的声效、颜色和等待控制码完整。新稿改成“{3} ×{2}”及增加“你”仅属数量排版和句式变化，沿用既有格式。"
+    },
+    {
+      "source": "\\me[{1}]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "current": "\\me[{1}]获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "proposed": "\\me[{1}]你获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "chosen": "\\me[{1}]获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "现稿正确显示获得一件物品；英语不定冠词an无需硬译为量词。{1}/{2}与声效、颜色、等待控制码完整。新稿只多“你”，保留既有提示。"
+    },
+    {
+      "source": "Remove hat",
+      "current": "取下帽子",
+      "proposed": "摘下帽子",
+      "chosen": "取下帽子",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "“取下帽子”准确且适合作为菜单命令；“摘下帽子”属于近义措辞，保留既有UI译法以免同功能异译。"
+    }
+  ],
+  "identical_translation_checks": [
+    {
+      "source": "\\C[6]Quest completed!",
+      "current": "\\C[6]任务完成！",
+      "proposed": "\\C[6]任务完成！",
+      "chosen": "\\C[6]任务完成！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Also, there's one more thing...",
+      "current": "另外，还有一件事……",
+      "proposed": "另外，还有一件事……",
+      "chosen": "另外，还有一件事……",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "As a gift for having helped so many people, I want to give you this.",
+      "current": "为了感谢你帮助了这么多人，我想把这个送给你。",
+      "proposed": "为了感谢你帮助了这么多人，我想把这个送给你。",
+      "chosen": "为了感谢你帮助了这么多人，我想把这个送给你。",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "\\C[2]Mission completed!",
+      "current": "\\C[2]任务完成！",
+      "proposed": "\\C[2]任务完成！",
+      "chosen": "\\C[2]任务完成！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "\\C[2]Mission Failed...",
+      "current": "\\C[2]任务失败……",
+      "proposed": "\\C[2]任务失败……",
+      "chosen": "\\C[2]任务失败……",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "You don't know? Have you even seen that Pokémon?",
+      "current": "你不知道？你真的见过那只宝可梦吗？",
+      "proposed": "你不知道？你真的见过那只宝可梦吗？",
+      "chosen": "你不知道？你真的见过那只宝可梦吗？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Okay... What about its type?",
+      "current": "好吧……它是什么属性？",
+      "proposed": "好吧……它是什么属性？",
+      "chosen": "好吧……它是什么属性？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "That sounds pretty exciting!",
+      "current": "听起来真让人兴奋！",
+      "proposed": "听起来真让人兴奋！",
+      "chosen": "听起来真让人兴奋！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "So... Where was this legendary Pokémon sighted?",
+      "current": "那么……有人在哪里见过这只传说宝可梦？",
+      "proposed": "那么……有人在哪里见过这只传说宝可梦？",
+      "chosen": "那么……有人在哪里见过这只传说宝可梦？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Yeah, I can't take that one. The collector blabbed to the police so it's too risky.",
+      "current": "对，这只我不能收。收藏家向警察告了密，风险太大了。",
+      "proposed": "对，这只我不能收。收藏家向警察告了密，风险太大了。",
+      "chosen": "对，这只我不能收。收藏家向警察告了密，风险太大了。",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Hmm... Let's see...",
+      "current": "嗯……让我看看……",
+      "proposed": "嗯……让我看看……",
+      "chosen": "嗯……让我看看……",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "\\GPleasure doing business with you.",
+      "current": "\\G合作愉快。",
+      "proposed": "\\G合作愉快。",
+      "chosen": "\\G合作愉快。",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Stop wasting my time!",
+      "current": "别浪费我的时间！",
+      "proposed": "别浪费我的时间！",
+      "chosen": "别浪费我的时间！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Do you think you can handle that?",
+      "current": "你觉得自己应付得来吗？",
+      "proposed": "你觉得自己应付得来吗？",
+      "chosen": "你觉得自己应付得来吗？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Well then, I'll keep my word. You can have this very special outfit!",
+      "current": "那么，我会遵守约定。这套特别的服装就送给你了！",
+      "proposed": "那么，我会遵守约定。这套特别的服装就送给你了！",
+      "chosen": "那么，我会遵守约定。这套特别的服装就送给你了！",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    },
+    {
+      "source": "Would you like to put it on right now?",
+      "current": "要现在就穿上吗？",
+      "proposed": "要现在就穿上吗？",
+      "chosen": "要现在就穿上吗？",
+      "current_origin": "Data/localization/zh-CN-content.json",
+      "proposed_origin": "Data/localization/zh-CN-quest-dialogue.json#/script_texts",
+      "decision": "retain_current",
+      "source_key_preserved_exactly": true,
+      "reason": "两处原文键与中文逐字相同；已逐条对照英文，语义、主语、语气和现有控制码均完整，维持现稿。"
+    }
+  ],
+  "source_files_sha256": {
+    "Data/localization/zh-CN-quest-dialogue.json": "2801573e90c27440079f772753cdc43588ce2cdf0eeb5da2d32738ca98eafb22",
+    "Data/localization/zh-CN-content.json": "02c73c72621c8b4024f8b47f72153a2469abb007000ab7bde210856c37573478",
+    "Data/localization/zh-CN-ui.json": "0e3c751c9bc257773182b53da8f3683110f98b0cb0fc5ba586bb1b347e5c7d30",
+    "Data/localization/zh-CN-settings.json": "6d271715aadafa1249fc6af6aa7c25bb1ca647aac3ddd538a7ff67d911a451c2",
+    "Data/localization/zh-CN-overrides.json": "1a79bb6528e232f63c9e62d7741a9fa736380a4138eb4251046df9f5f2502da2",
+    "Data/localization/zh-CN-offline-resources.json": "9a6f3065761039de42975bf3d18ebd396fd8e2a6315ee8af04df8c28037d1048",
+    "Data/localization/zh-CN-trainer-dialogue.json": "1398f2e141c698296e35c8580e48f27cfc22ecd33965deaa3db7131acd2476a0"
+  },
+  "tracked_files_modified": false,
+  "notes": [
+    "现有译文完整准确时优先保留，避免仅为口语、语序、量词或数量展示样式更换成熟模板。",
+    "report保留读取快照中的精确source/current/proposed；父任务整合前可按source与哈希复核，未修改任何翻译包。",
+    "当前仅content包与script_texts有交集，ui/settings/overrides/offline-resources/trainer-dialogue均无精确同源键。"
+  ]
+}

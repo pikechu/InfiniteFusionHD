@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-28",
+  "baseline_main": "cf24c7bd8f9f13638453c011611b682e97a24278",
+  "integrated_main": "c272fe68734a7b3fa6869c123b0e9f6ed4cca2b8",
+  "dex_records": 82207,
+  "dex_unique_english_sources": 75444,
+  "dex_new_unique_reviewed": 61021,
+  "dex_source_sha256": "964f765a5f91b4547ada77fa025af567683ea55a0a1d6fa559845e5d95397299",
+  "dex_chinese_sha256": "0dd34901931cd870442eba09e3d7d5669144aee39979aa63ba27787f72e271bb",
+  "pack_sha256": "e32567edb40d57d450d28f201b059c005576211149534cd9c1dbcb39b592ed9b",
+  "reviewed_delta": {
+    "script_texts": 992,
+    "map_texts": 49,
+    "indexed_texts": 26
+  },
+  "quest_definitions": 77,
+  "clothes_hats_unique_texts": 393,
+  "hair_unique_texts": 109,
+  "preset_visible_fields": 510,
+  "map_audit": {
+    "maps": 808,
+    "common_events": 109,
+    "confirmed_repair_sources": 109,
+    "callsites": 188
+  },
+  "native_validation": {
+    "quests": 77,
+    "outfit_fields": 510,
+    "legacy_data_unchanged": true,
+    "language_rounds": [
+      "zh-CN",
+      "en",
+      "zh-CN",
+      "fr",
+      "en"
+    ],
+    "quest_and_language_pass": true,
+    "real_android_device": false
+  },
+  "android_build": {
+    "version_code": 15,
+    "version_name": "0.20.8-android.15",
+    "phone_core_sha256": "6f90fabcb227eafa2a5b3a8967dbe34368cec06efab5cd3e709f538003186232",
+    "emulator_variant": false,
+    "built": false
+  },
+  "limits": [
+    "Static audit does not execute every map condition or dynamic script.",
+    "Ordinary Ruby encoding mismatch is regression coverage, not a confirmed Android14 root cause.",
+    "No real player saves were read or written."
+  ],
+  "host_tests": 14,
+  "host_tests_passed": true,
+  "temporary_logs_cleaned": true
+}

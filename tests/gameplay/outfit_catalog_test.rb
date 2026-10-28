@@ -15,6 +15,8 @@ load File.join(ROOT, "Data/Scripts/050_Outfits/wrappers/001_Outfit.rb")
 load File.join(ROOT, "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitsGlobal.rb")
 load File.join(ROOT, "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitsSearch.rb")
 load File.join(ROOT, "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitSelector.rb")
+# Catalog fixtures keep English labels; live language switching is tested separately.
+def _INTL(text); text; end
 class Trainer; end
 load File.join(ROOT, "Data/Scripts/015_Trainers and player/004_Player.rb")
 checks = 0

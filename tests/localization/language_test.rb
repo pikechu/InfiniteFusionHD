@@ -33,6 +33,19 @@ check = lambda { |value, name| raise "FAIL #{name}" unless value; checks += 1 }
 check.call(GameLanguage.available[0, 2] == [0, 1], "bundled English and French are available")
 check.call(GameLanguage.load(0) && pbGetMessage(MessageTypes::Species, 1) == "Bulbasaur", "real English pack")
 check.call(GameLanguage.load(1) && pbGetMessage(MessageTypes::Species, 1) == "Bulbizarre", "real French pack")
+french = Marshal.load(File.binread("Data/messages_fr.dat"))
+french_sample = nil
+french[0].each_with_index do |messages, id|
+  next unless messages
+  key = messages.keys.find do |text|
+    text.is_a?(String) && !text.ascii_only? && text.dup.force_encoding(Encoding::UTF_8).valid_encoding? && messages[text].bytes != text.bytes
+  end
+  french_sample = [id,key,messages[key]] if key
+  break if french_sample
+end
+check.call(!french_sample.nil?, "legacy French map sample exists")
+id, key, value = french_sample
+check.call(_MAPINTL(id, key) == value && _MAPINTL(id, key.dup.force_encoding(Encoding::UTF_8)) == value, "French binary keys retain translation from either text encoding")
 check.call(GameLanguage.load(0) && pbGetMessage(MessageTypes::Species, 1) == "Bulbasaur", "switch back to English")
 check.call(GameLanguage.available.include?(2) && GameLanguage.load(2), "production Chinese pack is installed")
 check.call(pbGetMessage(MessageTypes::Species, 1) == "妙蛙种子", "production Chinese species names")

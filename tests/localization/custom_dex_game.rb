@@ -15,7 +15,9 @@ begin
   expected.zip(chinese).each_with_index do |(en,zh), index|
     raise "Record identity changed #{index}" unless en["sprite"] == zh["sprite"] && en["author"] == zh["author"] && en["entry"] == zh["source"]
     raise "Missing Chinese #{index}" unless zh["entry"].match?(/[\u3400-\u9fff]/)
-    raise "English remains #{index}" if zh["entry"].gsub("POKENAME", "").gsub("DNA", "").match?(/[A-Za-z]{3}/)
+    prose = zh["entry"].gsub("POKENAME", "").gsub("DNA", "")
+    prose = prose.gsub("jeb_", "") if en["entry"].include?("jeb_")
+    raise "English remains #{index}" if prose.match?(/[A-Za-z]{3}/)
   end
   english_index = original.group_by { |row| row["sprite"] }.transform_values { |rows| rows.map { |row| row["entry"] } }
   translations = chinese.to_h { |row| [[row["sprite"],row["source"],row["author"]],row["entry"]] }

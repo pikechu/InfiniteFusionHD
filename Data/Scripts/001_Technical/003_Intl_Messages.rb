@@ -377,6 +377,11 @@ class Messages
   end
 
   def self.stringToKey(str)
+    # RGSS maps may tag UTF-8 dialogue as binary; leave stored strings intact.
+    if str.is_a?(String) && str.encoding == Encoding::ASCII_8BIT
+      utf8 = str.dup.force_encoding(Encoding::UTF_8)
+      str = utf8 if utf8.valid_encoding?
+    end
     if str && str[/[\r\n\t\1]|^\s+|\s+$|\s{2,}/]
        key=str.dup
        key.gsub!(/^\s+/,"")
@@ -385,6 +390,12 @@ class Messages
        return key
     end
     return str
+  end
+
+  def self.lookupHashValue(hash,key)
+    return nil if !hash
+    # Older language packs can retain the same UTF-8 bytes in binary Hash keys.
+    return hash[key] || (hash[key.b] if key.is_a?(String) && key.encoding != Encoding::ASCII_8BIT)
   end
 
   def self.normalizeValue(value)
@@ -577,22 +588,19 @@ class Messages
 
   def getFromHash(type,key)
     delayedLoad
-    return key if !@messages || !@messages[type] || !key
+    return key if !@messages || !@messages[type]
     id=Messages.stringToKey(key)
-    return key if !@messages[type][id]
-    return @messages[type][id]
+    return Messages.lookupHashValue(@messages[type],id) || key
   end
 
   def getFromMapHash(type,key)
     delayedLoad
-    return key if !@messages
-    return key if !@messages[0]
+    return key if !@messages || !@messages[0]
     return key if !@messages[0][type] && !@messages[0][0]
     id=Messages.stringToKey(key)
-    if @messages[0][type] &&  @messages[0][type][id]
-      return @messages[0][type][id]
-    elsif @messages[0][0] && @messages[0][0][id]
-      return @messages[0][0][id]
+    [@messages[0][type], @messages[0][0]].each do |hash|
+      value=Messages.lookupHashValue(hash,id)
+      return value if value
     end
     return getFromHash(MessageTypes::ScriptTexts, key)
   end

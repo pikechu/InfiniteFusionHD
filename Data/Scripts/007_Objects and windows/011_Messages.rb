@@ -860,6 +860,7 @@ end
 # Message-displaying functions
 #===============================================================================
 def pbMessage(message, commands = nil, cmdIfCancel = 0, skin = nil, defaultCmd = 0, &block)
+  message = _INTL(message) if message.is_a?(String)
   ret = 0
   msgwindow = pbCreateMessageWindow(nil, skin)
   if commands
@@ -876,6 +877,7 @@ def pbMessage(message, commands = nil, cmdIfCancel = 0, skin = nil, defaultCmd =
 end
 
 def pbMessageNoSound(message, commands = nil, cmdIfCancel = 0, skin = nil, defaultCmd = 0, &block)
+  message = _INTL(message) if message.is_a?(String)
   ret = 0
   msgwindow = pbCreateMessageWindow(nil, skin)
   if commands
@@ -911,6 +913,7 @@ end
 
 
 def pbShowCommands(msgwindow, commands = nil, cmdIfCancel = 0, defaultCmd = 0)
+  commands = commands.map { |text| text.is_a?(String) ? _INTL(text) : text } if commands
   return 0 if !commands
   $PokemonTemp.speechbubble_arrow.visible =false if $PokemonTemp.speechbubble_arrow && !$PokemonTemp.speechbubble_arrow.disposed?
   if defaultCmd == 0 && ($game_variables && $game_variables[VAR_COMMAND_WINDOW_INDEX] != 0)
@@ -951,6 +954,8 @@ def pbShowCommands(msgwindow, commands = nil, cmdIfCancel = 0, defaultCmd = 0)
 end
 
 def pbShowCommandsWithHelp(msgwindow, commands, help, cmdIfCancel = 0, defaultCmd = 0)
+  commands = commands.map { |text| text.is_a?(String) ? _INTL(text) : text } if commands
+  help = help.map { |text| text.is_a?(String) ? _INTL(text) : text } if help
   msgwin = msgwindow
   msgwin = pbCreateMessageWindow(nil) if !msgwindow
   oldlbl = msgwin.letterbyletter

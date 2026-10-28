@@ -31,9 +31,13 @@ def audit(complete=False, root=None):
             if source not in expected:problems.append([path.name,"unknown source",source]);continue
             if source in reviewed or source in baseline:problems.append([path.name,"duplicate assignment",source]);continue
             if not isinstance(text,str) or not re.search(r"[\u3400-\u9fff]",text):problems.append([path.name,"missing Chinese",source]);continue
-            if re.search(r"[A-Za-z]{3,}",text.replace("POKENAME","").replace("DNA","")):problems.append([path.name,"English text",source])
+            latin_text=text.replace("POKENAME","").replace("DNA","")
+            # A literal display name is an identifier, not translatable prose.
+            # Permit it only where that exact identifier occurs in the source.
+            if "jeb_" in source:latin_text=latin_text.replace("jeb_","")
+            if re.search(r"[A-Za-z]{3,}",latin_text):problems.append([path.name,"English text",source])
             if any(t in text for t in ["⁇","�","<x","ZXQ"]):problems.append([path.name,"unknown marker",source])
-            has_name=bool(re.search(r"POKENAME|PKOENAME|POKEMAME|POEKNAME|POKNEAME|POKÉNAME",source,re.I) or re.search(r"\bNAME\b",source))
+            has_name=bool(re.search(r"POKENAME|PKOENAME|POKEMAME|POEKNAME|POKNEAME|POKÉNAME|POKNAME|POKENSME",source,re.I) or re.search(r"\bNAME\b",source))
             if ("POKENAME" in text)!=has_name:problems.append([path.name,"name placeholder",source])
             reviewed[source]=text
     all_reviewed=baseline|reviewed

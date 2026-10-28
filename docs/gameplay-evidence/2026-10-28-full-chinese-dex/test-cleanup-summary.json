@@ -1,0 +1,49 @@
+[
+  {
+    "path": "native-full-dex-20261028-042849\\feature-smoke.log",
+    "tail": [
+      "2026-10-28 04:31:05 UTC BEGIN pid=23776 profile=dex-full-reviewed-20261028 ruby=3.1.3",
+      "2026-10-28 04:32:02 UTC SOURCE_LOADED count=462 modules=./Data/Scripts/054_Multiplayer/001_Client.rb,./Data/Scripts/054_Multiplayer/002_UI.rb,./Data/Scripts/054_Multiplayer/003_Battle.rb,./Data/Scripts/054_Multiplayer/004_Boss.rb,./Data/Scripts/054_Multiplayer/005_Gym.rb,./Data/Scripts/054_Multiplayer/006_Trade.rb,./Data/Scripts/054_Multiplayer/007_Rental.rb,./Data/Scripts/054_Multiplayer/008_Hall.rb,./Data/Scripts/054_Multiplayer/009_Pool.rb,./Data/Scripts/054_Multiplayer/010_Collections.rb,./Data/Scripts/054_Multiplayer/011_Dungeon.rb,./Data/Scripts/054_Multiplayer/012_Replay.rb,./Data/Scripts/054_Multiplayer/013_Cards.rb,./Data/Scripts/054_Multiplayer/014_GuestScene.rb,./Data/Scripts/054_Multiplayer/015_Transport.rb,./Data/Scripts/054_Multiplayer/016_CloudCodec.rb,./Data/Scripts/054_Multiplayer/017_OnlineClient.rb,./Data/Scripts/054_Multiplayer/018_World.rb,./Data/Scripts/054_Multiplayer/019_OnlineMode.rb,./Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb",
+      "2026-10-28 04:34:14 UTC PASS reviewed corpus maps to every matching upstream record",
+      "2026-10-28 04:36:18 UTC DEX_RENDER width=512 height=384 background=Graphics/Pictures/Pokedex/bg_info resolved=Graphics/Chinese/Pictures/Pokedex/bg_info.png cache=[\"Graphics/Chinese/Pictures/Pokedex/bg_info.png\"]",
+      "2026-10-28 04:37:57 UTC PASS long Chinese uses at least three pages",
+      "2026-10-28 04:38:09 UTC PASS page navigation cycles all pages",
+      "2026-10-28 04:38:10 UTC PASS source descriptions and author credits stay unchanged",
+      "2026-10-28 04:38:10 UTC CUSTOM_DEX_NATIVE_PASS entries=82207 translated=82207 sprites=74198 pages=83570 language_rounds=3 normal_player_saves=false"
+    ],
+    "bytes": 1726
+  },
+  {
+    "path": "native-full-dex-20261028-042849\\runtime.log",
+    "tail": [
+      "PRODUCTION_SOURCE_EVALUATED 015_Transport.rb trace_path=./Data/Scripts/054_Multiplayer/015_Transport.rb pid=23776",
+      "PRODUCTION_SOURCE_EVALUATED 016_CloudCodec.rb trace_path=./Data/Scripts/054_Multiplayer/016_CloudCodec.rb pid=23776",
+      "PRODUCTION_SOURCE_EVALUATED 017_OnlineClient.rb trace_path=./Data/Scripts/054_Multiplayer/017_OnlineClient.rb pid=23776",
+      "PRODUCTION_SOURCE_EVALUATED 018_World.rb trace_path=./Data/Scripts/054_Multiplayer/018_World.rb pid=23776",
+      "PRODUCTION_SOURCE_EVALUATED 019_OnlineMode.rb trace_path=./Data/Scripts/054_Multiplayer/019_OnlineMode.rb pid=23776",
+      "PRODUCTION_SOURCE_EVALUATED 020_AndroidNetwork.rb trace_path=./Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb pid=23776",
+      "PRODUCTION_MODULES_EVALUATED count=20 pid=23776",
+      "PRODUCTION_FINAL_METHODS ./Data/Scripts/054_Multiplayer/015_Transport.rb:442,./Data/Scripts/054_Multiplayer/003_Battle.rb:686,./Data/Scripts/054_Multiplayer/012_Replay.rb:6 data_hash=ef917c99214cbcfe1ed0d14c84ee1265494b5b636b82241db27c91b6517c4ede"
+    ],
+    "bytes": 2697
+  },
+  {
+    "path": "native-full-dex-20261028-042849\\stderr.log",
+    "tail": [
+      "./Data/Scripts/RemoteUrls.rb:43: warning: already initialized constant Settings::AI_ENTRIES_URL",
+      "./Data/Scripts/001_Settings.rb:107: warning: previous definition of AI_ENTRIES_URL was here",
+      "./Data/Scripts/RemoteUrls.rb:44: warning: already initialized constant Settings::AI_ENTRIES_RATE_MAX_NB_REQUESTS",
+      "./Data/Scripts/001_Settings.rb:108: warning: previous definition of AI_ENTRIES_RATE_MAX_NB_REQUESTS was here",
+      "./Data/Scripts/RemoteUrls.rb:45: warning: already initialized constant Settings::AI_ENTRIES_RATE_TIME_WINDOW",
+      "./Data/Scripts/001_Settings.rb:109: warning: previous definition of AI_ENTRIES_RATE_TIME_WINDOW was here",
+      "./Data/Scripts/RemoteUrls.rb:46: warning: already initialized constant Settings::AI_ENTRIES_RATE_LOG_FILE",
+      "./Data/Scripts/001_Settings.rb:110: warning: previous definition of AI_ENTRIES_RATE_LOG_FILE was here"
+    ],
+    "bytes": 3696
+  },
+  {
+    "path": "native-full-dex-20261028-042849\\stdout.log",
+    "tail": [],
+    "bytes": 0
+  }
+]

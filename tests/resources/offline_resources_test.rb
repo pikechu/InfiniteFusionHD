@@ -59,6 +59,14 @@ check.call(real["files"].length > 3800, "published pack includes the full three 
 real["files"].select { |e| e["kind"] == "data" }.each do |entry|
   check.call(resources.valid_bytes?(entry, File.binread(File.join(ROOT, entry["path"]))), "bundled data matches manifest: #{entry['path']}")
 end
+large_dex = real["files"].find { |entry| entry["path"] == "Data/pokedex/dex_zh.json" }
+check.call(large_dex && large_dex["size"] > resources::LIMIT && large_dex["size"] <= KIF::PokedexEntries::MAX_BYTES, "full Chinese dex uses its32MiB resource limit")
+oversized_dex = Marshal.load(Marshal.dump(real))
+oversized_dex["files"].find { |entry| entry["path"] == "Data/pokedex/dex_zh.json" }["size"] = KIF::PokedexEntries::MAX_BYTES + 1
+reject.call("dex resource above32MiB is rejected") { resources.parse(JSON.generate(oversized_dex)) }
+oversized_image = Marshal.load(Marshal.dump(real))
+oversized_image["files"].find { |entry| entry["kind"] == "image" }["size"] = resources::LIMIT + 1
+reject.call("image download limit stays8MiB") { resources.parse(JSON.generate(oversized_image)) }
 bad = Marshal.load(Marshal.dump(real))
 bad["files"][0]["path"] = "Data/Scripts/evil.rb"
 reject.call("rejects executable destinations") { resources.parse(JSON.generate(bad)) }

@@ -396,8 +396,19 @@ class HallOfFame_Scene
     return gameMode
   end
 
+  def displayGameMode(mode)
+    return mode unless mode.is_a?(String)
+    translated = _INTL(mode)
+    return translated if translated != mode || !mode.end_with?(" mode")
+    species_name = mode[0...-5]
+    GameData::Species.each do |species|
+      return _INTL("{1} mode", species.name) if species.real_name == species_name
+    end
+    return mode
+  end
+
   def writeGameMode(overlay, x, y)
-    pbDrawTextPositions(overlay, [[_INTL("{1} ({2})", getCurrentGameMode(), getDifficulty), x, y, 2, BASECOLOR, SHADOWCOLOR]])
+    pbDrawTextPositions(overlay, [[_INTL("{1} ({2})", displayGameMode(getCurrentGameMode()), getDifficulty), x, y, 2, BASECOLOR, SHADOWCOLOR]])
   end
 
   def pbAnimationLoop
@@ -531,7 +542,7 @@ class HallOfFame_Scene
     pbDrawTextPositions(overlay, [
       [_INTL("Hall of Fame No. {1}", number), Graphics.width / 2, 8, 2, BASECOLOR, SHADOWCOLOR],
       [_INTL("Date: {1}", date), Graphics.width / 2, Graphics.height - 96, 2, BASECOLOR, SHADOWCOLOR],
-      [_INTL("Mode: {1}", mode), Graphics.width / 2, Graphics.height - 66, 2, BASECOLOR, SHADOWCOLOR],
+      [_INTL("Mode: {1}", displayGameMode(mode)), Graphics.width / 2, Graphics.height - 66, 2, BASECOLOR, SHADOWCOLOR],
       [_INTL("Difficulty: {1}", difficulty), Graphics.width / 2, Graphics.height - 36, 2, BASECOLOR, SHADOWCOLOR]
     ])
     overlay.font.size = font_size

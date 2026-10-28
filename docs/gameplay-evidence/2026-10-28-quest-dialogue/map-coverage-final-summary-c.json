@@ -1,0 +1,5077 @@
+{
+  "status": "read_only_inventory_and_verified_handoff_complete_with_limits",
+  "generated_utc": "2026-10-28T07:04:45.506772+00:00",
+  "source_report": "temp/localization/quest-dialogue/map-coverage-audit-c.json",
+  "priority_repairs": "temp/localization/quest-dialogue/map-priority-repairs-c.json",
+  "scope": {
+    "canonical_map_files": 808,
+    "excluded_backup": [
+      "Data/Map734_bakcup.rxdata"
+    ],
+    "common_events": 109,
+    "script_blocks": 29038,
+    "compiled_map_table_rows": 16410,
+    "literal_universe": "实际地图/公共事件所有页，不以英文compiled消息表为全集；保留原地图SHA。",
+    "event_codes": [
+      101,
+      401,
+      102,
+      355,
+      655,
+      111,
+      209
+    ],
+    "additional_slot": "自动移动路线45",
+    "map_read_errors": 0,
+    "no_map_events_executed": true,
+    "no_real_saves_read": true
+  },
+  "confirmed_handoff": {
+    "unique_sources": 109,
+    "callsites": 188,
+    "first_batches": [
+      100,
+      174
+    ],
+    "last_parenthesized_batch": [
+      9,
+      14
+    ],
+    "parent_status": "父任务已确认109源收齐并合并，最后9源按纯raw写Shared24。",
+    "last9_lookup_mode": "raw",
+    "lookup_mode_enum": [
+      "map",
+      "script",
+      "raw"
+    ],
+    "not_claimed": "未把该数称作原生实际发生次数；补充条目的诊断值是父任务最后9源合并前的快照。"
+  },
+  "menu_boundary": {
+    "covered": [
+      "pbMessage第二参数choices数组",
+      "pbMessageNoSound第二参数数组",
+      "全局pbShowCommands参数1 commands；参数0是窗口",
+      "pbShowCommandsWithHelp参数1 commands与参数2 help",
+      "同一脚本块简单literal数组赋值/append的可能值",
+      "数组内_I/_INTL字面量递归提取"
+    ],
+    "raw_literal_counts_in_snapshot": {},
+    "new_confirmed_menu_translation_sources": 0,
+    "checks": "审计器包含literal变量数组和WithHelp帮助文本的最小自检；Ruby语法检查通过。",
+    "limit": "动态数组/插值/未知接收者不任意求值；不把本次没有新增菜单词条写成所有UI都已无漏译。"
+  },
+  "quest_setters": {
+    "calls": [
+      "pbSetQuestName",
+      "pbSetQuestDesc",
+      "pbSetQuestNPC",
+      "pbSetQuestLocation"
+    ],
+    "visible_literal_records": 0,
+    "independent_check": "808规范地图及109公共事件的所有command字符串参数独立检索也为0命中；不是仅因AST工具漏识别。",
+    "boundary": "只限当前已安装数据；不否定函数存在或默认77任务的文本问题。NPCSprite/颜色资源ID不作可见文字。"
+  },
+  "manual_classification": {
+    "base_unmatched_callsite_count": 450,
+    "base_unmatched_unique_sources": 150,
+    "base_classification_by_callsite": {
+      "variable_number_punctuation_or_technical_id": 201,
+      "debug_acknowledgement": 1,
+      "resource_filename_or_path": 1,
+      "unknown_short_placeholder_needs_context": 2,
+      "cry_onomatopoeia_or_spoken_species_name": 245
+    },
+    "retained_or_reviewed_sources": [
+      {
+        "source": "\\PN!",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 22,
+        "callsites": [
+          {
+            "map_id": 1,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 3,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 42,
+            "event_id": 31,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 5,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 6,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 7,
+            "command_index": 6,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 79,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 18,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 86,
+            "event_id": 47,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 8,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 108,
+            "event_id": 73,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 328,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 6,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 328,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 7,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 328,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 8,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 328,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 9,
+            "command_index": 17,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 472,
+            "event_id": 97,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 472,
+            "event_id": 97,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 490,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 8,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 561,
+            "event_id": 20,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 6,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 599,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 29,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 710,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 18,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 711,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 18,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 739,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 782,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Brozzzt?",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 1,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 1,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 739,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 9,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "...\\V[1]...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 6,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[25]!",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 6,
+            "event_id": 21,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 45,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 171,
+            "event_id": 18,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 21,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 51,
+        "callsites": [
+          {
+            "map_id": 9,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 8,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 9,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 28,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 12,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 6,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 43,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 6,
+            "command_index": 11,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 91,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 93,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 100,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 45,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 148,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 12,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 148,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 12,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 182,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 182,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 285,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 285,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 285,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 285,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 290,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 74,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 360,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 401,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 402,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 402,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 402,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 403,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 403,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 464,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 11,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 464,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 36,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 467,
+            "event_id": 16,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 467,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 468,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 491,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 19,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 491,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 8,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 513,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 648,
+            "event_id": 111,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 648,
+            "event_id": 111,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 648,
+            "event_id": 112,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 648,
+            "event_id": 112,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 648,
+            "event_id": 114,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 648,
+            "event_id": 114,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 783,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 39,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 784,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 784,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 8,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "2...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 11,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "1...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 11,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 16,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[3]!",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 30,
+        "callsites": [
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 40,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 10,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[215]\\n\\V[216] \\V[217]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 40,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Mooooooooo!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 42,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 42,
+            "event_id": 24,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 42,
+            "event_id": 21,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[1]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 42,
+            "event_id": 36,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 42,
+            "event_id": 36,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 42,
+            "event_id": 36,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 6,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 326,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 9,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 546,
+            "event_id": 36,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 13,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Sluuuuuurp!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 42,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "BF1",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 45,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "BF2",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 45,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "\\V[25]...!",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 46,
+            "event_id": 23,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 57,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": ".... Shashahh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 20,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gaagaugh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 14,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 7,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 12,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 13,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 14,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 16,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 17,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 19,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 98,
+            "event_id": 42,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 110,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 144,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 181,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 312,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 20,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 785,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bark! Bark!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Cheep!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Aaargh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 6,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Meaaargh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 8,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Chah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 9,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Screeeeeech!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 10,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 11,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Rarrrrgh!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 15,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Klang!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 18,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Whomp!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 20,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Warhh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 47,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 21,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Auwahwah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 55,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hissssss!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 60,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Sluuuuurp!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 74,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Graah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 80,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 80,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 80,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Faaaaah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 82,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Braaaagh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 82,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Meeeeow!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 82,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hummmmmm... Hummmmmm...",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 87,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Grrrarah Ghagrraaaah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 87,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[5].",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 100,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 100,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\PN.",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 100,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 12,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 100,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 12,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\C[5]\\V[209]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 105,
+            "event_id": 28,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 750,
+            "event_id": 28,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gaahhh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 115,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\ch[1,0,\\V[2]]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 4,
+        "callsites": [
+          {
+            "map_id": 118,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 118,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 356,
+            "event_id": 20,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 731,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 14,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "ok",
+        "classification": "debug_acknowledgement",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 118,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Clef! Cleffa!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 118,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 118,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 4,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Ghaaa hgaaaah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 118,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 5,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\C[1]\\V[5]/Game.rxdata",
+        "classification": "resource_filename_or_path",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 118,
+            "event_id": 37,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 5,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gaah gaaugah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 135,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bleeeergh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 146,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 146,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 146,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bleeeerghh! Blaaaaerh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 146,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gauhh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 159,
+            "event_id": 31,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\PN...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 167,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 6,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 299,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\C[2]\\V[1]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 168,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 5,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 175,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 19,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 175,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 19,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gagaugh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 170,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Braaarah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 170,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hmmmmmmmm...",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 182,
+            "event_id": 16,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 182,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 182,
+            "event_id": 18,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 182,
+            "event_id": 19,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 182,
+            "event_id": 20,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Taa!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 191,
+            "event_id": 18,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 191,
+            "event_id": 18,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hooh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 191,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 191,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hoo!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 192,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "1F",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 212,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 297,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "2F",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 212,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 297,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "3F",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 212,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 297,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "4F",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 212,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 297,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "TM28",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 221,
+            "event_id": 38,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 221,
+            "event_id": 39,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "TM36",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 221,
+            "event_id": 38,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 221,
+            "event_id": 39,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "TM94",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 221,
+            "event_id": 38,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 221,
+            "event_id": 39,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "16",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 221,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          },
+          {
+            "map_id": 221,
+            "event_id": 34,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "Grahh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 230,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[154]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 237,
+            "event_id": 35,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\f[\\v[3]]\\n\\v[5]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 257,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 21,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gauuhgh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 10,
+        "callsites": [
+          {
+            "map_id": 261,
+            "event_id": 16,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 261,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 261,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 261,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 262,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 262,
+            "event_id": 28,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 262,
+            "event_id": 23,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 262,
+            "event_id": 24,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 262,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 262,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Zzz...",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 266,
+            "event_id": 38,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 39,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 36,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 37,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 32,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Mimimi...",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 266,
+            "event_id": 33,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 35,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\C[7].... ",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 266,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 266,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 1,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Schwaah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 279,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Fwahh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 281,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Haaahraaan!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 290,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 53,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 290,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 70,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bazazazzash!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 290,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 102,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[5]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 4,
+        "callsites": [
+          {
+            "map_id": 295,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 269,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 295,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 330,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 295,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 53,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 0,
+            "event_id": null,
+            "common_event_id": 17,
+            "page_number": null,
+            "command_index": 9,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Froosh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 308,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "...!",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 319,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 12,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Brrrahh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 338,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 1,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "GRAAAAH!!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 356,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Meowow!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Graaawh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 9,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 365,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 365,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gyaaas!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Shaoooh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bleeb!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Liiiii!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Meow!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 365,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Grrrrah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 368,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 521,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Heeee! Haaah Ah!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 371,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Dodogyuuun!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 376,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hmm...",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 378,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 216,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 380,
+            "event_id": 52,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 66,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "3... 2... 1...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 384,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 18,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Ooh ooh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 392,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Kazaaah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 413,
+            "event_id": 28,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[113] ...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 421,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 27,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 421,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 30,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 421,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 47,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "...\\V[1]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 457,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 16,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "dfg",
+        "classification": "unknown_short_placeholder_needs_context",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 460,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Fraaah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 472,
+            "event_id": 78,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 472,
+            "event_id": 78,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Achoo!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 476,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 5,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Seeeee! Seeeseesee!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 478,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 478,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Creesh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 4,
+        "callsites": [
+          {
+            "map_id": 485,
+            "event_id": 38,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 485,
+            "event_id": 38,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 11,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 485,
+            "event_id": 33,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 485,
+            "event_id": 33,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 11,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Digdig!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 487,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Tchrtchr!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 487,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 17,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Grrrrh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 487,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 30,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 30,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 30,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 30,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 487,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 30,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Shaaash!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 488,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 488,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 488,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Chughh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 488,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 488,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 488,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 488,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 488,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Vraahhbrbrbr!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 488,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Clef?",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 494,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 494,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Cle! Clefairy!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 494,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 19,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 494,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 19,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Clef clef!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 494,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 23,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 494,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 23,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Boo!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 8,
+        "callsites": [
+          {
+            "map_id": 517,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 33,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 28,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 29,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 30,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 31,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 517,
+            "event_id": 32,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Riiih!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 521,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[176]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 526,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Pih pah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 526,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Meee!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 4,
+        "callsites": [
+          {
+            "map_id": 528,
+            "event_id": 22,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 528,
+            "event_id": 23,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 528,
+            "event_id": 24,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 528,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Meeeeee!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 528,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Hah!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 533,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Squawk!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 534,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Slurrrrp!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 534,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gauuugh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 12,
+        "callsites": [
+          {
+            "map_id": 534,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 560,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 678,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 679,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 683,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 684,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 684,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Roooooar!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 534,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bahruuu!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 534,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Glaugh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 534,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Squish!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 17,
+        "callsites": [
+          {
+            "map_id": 545,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 545,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 12,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 592,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "1...2...3...",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 559,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "KYAAAAH!!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 588,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\v[226]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 624,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Uraaghh",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 670,
+            "event_id": 70,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gyaughaugh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 707,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 797,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 798,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "...?",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 14,
+        "callsites": [
+          {
+            "map_id": 709,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 16,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 8,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 14,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 2,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 709,
+            "event_id": 10,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[233]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 714,
+            "event_id": 19,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 809,
+            "event_id": 19,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 0,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[1]!",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 731,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 7,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 731,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 20,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\v[1]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 2,
+        "callsites": [
+          {
+            "map_id": 737,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 46,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 789,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 54,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "700",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 744,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "500",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 744,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "300",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 744,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "200",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 744,
+            "event_id": 11,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_choice"
+          }
+        ]
+      },
+      {
+        "source": "wo",
+        "classification": "unknown_short_placeholder_needs_context",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 782,
+            "event_id": 9,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Gruauhuaugh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 783,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 8,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\PN?",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 783,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 25,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Linooo!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 802,
+            "event_id": 1,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Shrrrrr... Ziiiing!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 805,
+            "event_id": 3,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 3,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "... ....",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 5,
+        "callsites": [
+          {
+            "map_id": 810,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 6,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 813,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 813,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 813,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 4,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 814,
+            "event_id": 7,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 6,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": ".......",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 3,
+        "callsites": [
+          {
+            "map_id": 813,
+            "event_id": 4,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 813,
+            "event_id": 5,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 813,
+            "event_id": 6,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 10,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Cresssa!!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 823,
+            "event_id": 21,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 8,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Bahhh!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 22,
+        "callsites": [
+          {
+            "map_id": 824,
+            "event_id": 28,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 19,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 29,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 20,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 21,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 22,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 13,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 23,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 33,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 24,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 15,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 34,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 25,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 44,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 35,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 16,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 26,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 45,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 17,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 27,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 46,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          },
+          {
+            "map_id": 824,
+            "event_id": 18,
+            "common_event_id": null,
+            "page_number": 1,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "Tee flee ee!",
+        "classification": "cry_onomatopoeia_or_spoken_species_name",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 825,
+            "event_id": 2,
+            "common_event_id": null,
+            "page_number": 3,
+            "command_index": 2,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "......\\wt[5] ......",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 0,
+            "event_id": null,
+            "common_event_id": 1,
+            "page_number": null,
+            "command_index": 0,
+            "kind": "event_show_text"
+          }
+        ]
+      },
+      {
+        "source": "\\V[2]",
+        "classification": "variable_number_punctuation_or_technical_id",
+        "callsite_count": 1,
+        "callsites": [
+          {
+            "map_id": 0,
+            "event_id": null,
+            "common_event_id": 68,
+            "page_number": null,
+            "command_index": 5,
+            "kind": "event_show_text"
+          }
+        ]
+      }
+    ],
+    "reasonable_examples": [
+      "Zzz、怪叫/喊声可作为拟声，不自动报成英语叙事遗漏",
+      "\\PN/\\V变量由运行时提供内容；不能翻译变量标识本身",
+      "TM编号、楼层F、TP/BST/HP/PP等技术标记与英文句子分开",
+      "Discord/Google/Windows、资源路径、MMMM乐队名、Dem人名不凭字母自动删除"
+    ],
+    "not_auto_exempted": "原文没有的ONE-TRASH等跨作梗不能因看似名字就当合理标识；/n等坏控制码也不算未译英语句子。",
+    "secondary_observations": [
+      {
+        "map_id": 396,
+        "event_id": 1,
+        "page_number": 1,
+        "command_index": 0,
+        "source": "There's nothing but trash in there, what did you expect?",
+        "effective_text": "「ONE-TRASH」到底会在哪呢？",
+        "kind": "semantic_addition_not_a_valid_source_identifier",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 417,
+        "event_id": 3,
+        "page_number": 1,
+        "command_index": 2,
+        "source": "u wot m8?",
+        "effective_text": "你知道m8吗？",
+        "kind": "slang_mistranslation_not_a_person_id",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 502,
+        "event_id": 2,
+        "page_number": 1,
+        "command_index": 0,
+        "source": "There's nothing worth mentionning in there...",
+        "effective_text": "你粗暴的翻找着垃圾桶寻找着\\n「ONE-TRASH」，突然你心中一惊，\\n渐渐习惯了不断这样找寻的生活后，\\n是不是忘记了什么？\\n...良久\\n你毕恭毕敬的对着垃圾桶鞠了深深\\n一躬。",
+        "kind": "semantic_addition_not_a_valid_source_identifier",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 505,
+        "event_id": 5,
+        "page_number": 1,
+        "command_index": 0,
+        "source": "There's nothing in there,",
+        "effective_text": "只有一些废纸，\\n「ONE-TRASH」到底是什么呢？",
+        "kind": "semantic_addition_not_a_valid_source_identifier",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 515,
+        "event_id": 3,
+        "page_number": 1,
+        "command_index": 0,
+        "source": "There's nothing but trash...",
+        "effective_text": "你深深的被这个垃圾桶吸引，\\n你紧紧盯着它，反复的确认着：\\n它是否是传说中的大秘宝——\\n————「ONE-TRASH」\\n噢！它不是！但你确信，\\n你是总有一天会成为垃圾王的男人！",
+        "kind": "semantic_addition_not_a_valid_source_identifier",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 628,
+        "event_id": 14,
+        "page_number": 1,
+        "command_index": 9,
+        "source": "You disagree? Hohoho! Well prove me wrong, will ya? Show me a Pokémon that has the same type as \\C[1]\\V[1]\\C[0] and I might believe you.",
+        "effective_text": "你不同意吗？呵呵！\\n那就证明我错了，好吗？,n给我看一个与\\C[1]\\V[1]\\C[0]类型相同的宝可梦，\\n我可能会相信你。",
+        "kind": "malformed_newline_marker_not_english_prose",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 628,
+        "event_id": 15,
+        "page_number": 1,
+        "command_index": 3,
+        "source": "We honor a different Pokémon everyday here. Today it's all about \\C[1]\\V[1]\\C[0]!",
+        "effective_text": "我们每天在这里向\\ n不同的宝可梦致敬。\\n今天的一切都是关于\\C[1]\\V[1]\\C[0]!",
+        "kind": "malformed_newline_marker_not_english_prose",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 660,
+        "event_id": 16,
+        "page_number": 1,
+        "command_index": 7,
+        "source": "Team Rocket have taken over the entire building. Why do I always have to get caught up in these kinds of things?",
+        "effective_text": "火箭队占领了整栋大楼，/n为什么我总是碰上这种事",
+        "kind": "malformed_newline_marker_not_english_prose",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 670,
+        "event_id": 24,
+        "page_number": 2,
+        "command_index": 1,
+        "source": "Going down a mountain at a high speed is such a thrill, but climbing back up is very difficult.",
+        "effective_text": "冲下山太刺激了/n但爬回来是真的难。",
+        "kind": "malformed_newline_marker_not_english_prose",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      },
+      {
+        "map_id": 670,
+        "event_id": 25,
+        "page_number": 2,
+        "command_index": 11,
+        "source": "Freezing the opponent's Pokémon is difficult, but when it happens, it's almost always a sure K.O.!",
+        "effective_text": "冰冻对手的宝可梦是很困难的/n但如果出现/n便是绝杀！",
+        "kind": "malformed_newline_marker_not_english_prose",
+        "status": "already_observed_secondary_review_not_added_to_109_repairs"
+      }
+    ]
+  },
+  "remaining_static_boundaries": {
+    "unresolved_issue_counts": {
+      "message_join_control_flow_not_simulated": 131,
+      "dynamic_display_argument": 5,
+      "ripper_parse_failure": 39,
+      "variable_map_transfer_not_resolved": 6,
+      "dynamic_localization_argument": 5
+    },
+    "unclassified_script_literals_not_proven_visible": 195,
+    "parse_failure_detail": "39处：36电气机关脚本无可见对话，2处目的地字符串构造，1处不完整传送调用。均保留原脚本，不执行或擅修。",
+    "message_join_control_flow": "跨跳转/循环的131处拼接不执行；同样不是131条漏译。",
+    "unclassified_not_missing_count": "程序字面量包含音乐/资源名和未确定显示宿主；不把它们全部判待译，也不宣称全部已中文。"
+  },
+  "test_or_unknown_maps": [
+    {
+      "map_id": 118,
+      "editor_name": "debug",
+      "file": "Data/Map118.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 202,
+      "editor_name": "backup",
+      "file": "Data/Map202.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 203,
+      "editor_name": "TEST",
+      "file": "Data/Map203.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 355,
+      "editor_name": "Testing Room",
+      "file": "Data/Map355.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 356,
+      "editor_name": "Debug Island",
+      "file": "Data/Map356.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 365,
+      "editor_name": "Cherrygrove City_UNUSED",
+      "file": "Data/Map365.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 374,
+      "editor_name": "Tests",
+      "file": "Data/Map374.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 424,
+      "editor_name": "Cyberspace_backup",
+      "file": "Data/Map424.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 592,
+      "editor_name": "Cherrygrove City_UNUSED",
+      "file": "Data/Map592.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 707,
+      "editor_name": "Unknown location",
+      "file": "Data/Map707.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 708,
+      "editor_name": "Blank",
+      "file": "Data/Map708.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 733,
+      "editor_name": "Vermillion City_backup",
+      "file": "Data/Map733.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 739,
+      "editor_name": "backup",
+      "file": "Data/Map739.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 749,
+      "editor_name": "Vermillion City_backup",
+      "file": "Data/Map749.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 763,
+      "editor_name": "Contest Hall",
+      "file": "Data/Map763.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 764,
+      "editor_name": "Contest (Normal)",
+      "file": "Data/Map764.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 797,
+      "editor_name": "Unknown location",
+      "file": "Data/Map797.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 798,
+      "editor_name": "Unknown location",
+      "file": "Data/Map798.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 799,
+      "editor_name": "Debug Arena",
+      "file": "Data/Map799.rxdata",
+      "static_possible_reachable": true
+    },
+    {
+      "map_id": 809,
+      "editor_name": "Creepy House_backup",
+      "file": "Data/Map809.rxdata",
+      "static_possible_reachable": false
+    },
+    {
+      "map_id": 847,
+      "editor_name": "Oak's Lab_backup",
+      "file": "Data/Map847.rxdata",
+      "static_possible_reachable": false
+    }
+  ],
+  "reachability": {
+    "static_possible_maps": 651,
+    "meaning": "忽略开关/剧情条件的静态可能可达，非实机触发保证；不在集合也不等于不可达。",
+    "limits": "变量/脚本传送、公共事件传送的调用上下文可能增添路径，未读取真实存档求值。"
+  },
+  "shared_fix_impact": {
+    "map": "本地图→公共Map0→共享24；已命中的错误/混排map值会优先，需要修对应map表，不能只补Shared24。",
+    "raw": "原pbMessage正文、EnterText帮助句、显式战后台词、菜单文字此前直接显示；父任务已在共享边界补String的_INTL，raw建议配Shared24生效。",
+    "battle": "Array显式speech及NPCTrainer对象lose_text两条路径均需覆盖；不改训练家ID、队伍或分支。",
+    "menus": "复制commands/help数组后逐项翻译String；不原地改事件数组，不改变选项次序/取消值/索引。",
+    "input": "只翻helptext，不动玩家输入值、长度、ID等。",
+    "observed_source_evidence": {
+      "pbMessage": {
+        "path": "Data/Scripts/007_Objects and windows/011_Messages.rb",
+        "dynamic_intl_calls": [
+          {
+            "line": 863,
+            "source": "message = _INTL(message) if message.is_a?(String)"
+          }
+        ],
+        "line": 862
+      },
+      "pbMessageNoSound": {
+        "path": "Data/Scripts/007_Objects and windows/011_Messages.rb",
+        "dynamic_intl_calls": [
+          {
+            "line": 880,
+            "source": "message = _INTL(message) if message.is_a?(String)"
+          }
+        ],
+        "line": 879
+      },
+      "pbShowCommands": {
+        "path": "Data/Scripts/007_Objects and windows/011_Messages.rb",
+        "dynamic_intl_calls": [
+          {
+            "line": 916,
+            "source": "commands = commands.map { |text| text.is_a?(String) ? _INTL(text) : text } if commands"
+          }
+        ],
+        "line": 915
+      },
+      "pbShowCommandsWithHelp": {
+        "path": "Data/Scripts/007_Objects and windows/011_Messages.rb",
+        "dynamic_intl_calls": [
+          {
+            "line": 957,
+            "source": "commands = commands.map { |text| text.is_a?(String) ? _INTL(text) : text } if commands"
+          },
+          {
+            "line": 958,
+            "source": "help = help.map { |text| text.is_a?(String) ? _INTL(text) : text }"
+          }
+        ],
+        "line": 956
+      },
+      "pbEnterText": {
+        "path": "Data/Scripts/016_UI/024_UI_TextEntry.rb",
+        "dynamic_intl_calls": [
+          {
+            "line": 819,
+            "source": "helptext = _INTL(helptext) if helptext.is_a?(String)"
+          }
+        ],
+        "line": 818
+      },
+      "pbTrainerBattleCore": {
+        "path": "Data/Scripts/012_Overworld/002_Battle triggering/001_Overworld_BattleStarting.rb",
+        "dynamic_intl_calls": [
+          {
+            "line": 511,
+            "source": "foeEndSpeeches.push(_INTL(arg.lose_text))"
+          },
+          {
+            "line": 538,
+            "source": "foeEndSpeeches.push(_INTL(arg[3] || trainer.lose_text))"
+          }
+        ],
+        "line": 479
+      }
+    },
+    "verification_boundary": "这里只记录静态边界及父任务已确认的修复影响；原生综合验证由父任务完成，本报告不冒称已逐页实机遍历。"
+  },
+  "a_report_comparison": {
+    "file": "temp/localization/quest-dialogue/story-runtime-audit-a.json",
+    "no_translation_statistic": 247,
+    "interpretation": "不同取样/筛选及旧基准汇总，不能直接视为247句实质漏译；本次给完整消息/脚本清单并人工区分拟声、标识、真实混排。宿主binary失配不计作Android实际漏译次数。"
+  },
+  "snapshot_policy": "沿用既有地图/CommonEvents/messages原始hash；未以新main内容覆盖。父任务已核新main未改地图/公共事件/消息数据，无需本轮重扫。",
+  "writes": "C只写temp审计文件；tracked游戏数据、地图、真实存档均未由C修改。"
+}

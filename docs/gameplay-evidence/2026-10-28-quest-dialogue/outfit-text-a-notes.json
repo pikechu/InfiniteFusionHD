@@ -1,0 +1,294 @@
+{
+  "assigned_total": 197,
+  "reviewed": 197,
+  "next_index": 197,
+  "read_through_index": 196,
+  "input_sha256": "f010141d423aa7aca792f8d54ec5ce0d424b55aafa274171d6cedbec1dee9787",
+  "method": "Read complete English source and all kind/ID/name/description contexts for each reviewed index; manually translate and self-review. Expert fields explicitly reread before exact reuse. No unread automatic fill or external translation service.",
+  "completed_batches": [
+    {
+      "start": 0,
+      "end_exclusive": 65,
+      "expert_exact_reuse_indices": [
+        18,
+        19,
+        20,
+        21,
+        30,
+        31,
+        33,
+        34,
+        35,
+        40,
+        41,
+        42,
+        43,
+        51,
+        52,
+        63
+      ]
+    },
+    {
+      "start": 65,
+      "end_exclusive": 130,
+      "expert_exact_reuse_indices": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        128,
+        129
+      ]
+    },
+    {
+      "start": 130,
+      "end_exclusive": 197,
+      "expert_exact_reuse_indices": [
+        130,
+        131,
+        135,
+        136
+      ]
+    }
+  ],
+  "references": [
+    {
+      "indices": [
+        32
+      ],
+      "term": "Delinquent",
+      "chinese": "可怕的姐姐",
+      "links": [
+        "https://wiki.52poke.com/wiki/可怕的姐姐",
+        "https://bulbapedia.bulbagarden.net/wiki/Delinquent_(Trainer_class)"
+      ],
+      "basis": "Wiki names table Nintendo label; not Punk Girl/坏女孩. Only outfit display label changed."
+    },
+    {
+      "indices": [
+        37
+      ],
+      "term": "Emerald Gear",
+      "chinese": "米拉特装束",
+      "links": [
+        "https://wiki.52poke.com/wiki/米拉特"
+      ],
+      "basis": "Catalog ID emeraldSPE supplies Pokémon Adventures context; Wiki explicitly Emerald=米拉特. Identity is contextual interpretation, not a claim the outfit is official licensed costume."
+    },
+    {
+      "indices": [
+        57,
+        58
+      ],
+      "term": "Hex Maniac",
+      "chinese": "灵异迷",
+      "links": [
+        "https://wiki.52poke.com/wiki/灵异迷"
+      ],
+      "basis": "Trainer class name; preserve dress description, add no supernatural ability."
+    },
+    {
+      "indices": [
+        65
+      ],
+      "term": "Indigo Ice Beams",
+      "chinese": "石英冰冻光束队",
+      "links": [],
+      "basis": "Exact project usage in Data/localization/dex-proofread/b.json source As part of the Indigo Ice Beams...; Ice Beam=冰冻光束 in project move category. Fictional community team, not claimed official sports franchise."
+    },
+    {
+      "indices": [
+        133,
+        134
+      ],
+      "term": "Veteran",
+      "chinese": "资深训练家",
+      "links": [
+        "https://wiki.52poke.com/zh-hant/资深训练家"
+      ],
+      "basis": "Trainer class, not military veteran or a named character."
+    },
+    {
+      "indices": [
+        145
+      ],
+      "term": "Baneful Fox Mask",
+      "chinese": "咒狐面具",
+      "links": [
+        "https://www.pokemon.co.jp/ex/legends_arceus/sc/news/220622_01/"
+      ],
+      "basis": "Official simplified Chinese product page confirms mask name. Use only name; retain author Zoroark/fable description and do not add Hisui, shiny colors, distribution or movie plot."
+    },
+    {
+      "indices": [
+        172
+      ],
+      "term": "Chuck",
+      "chinese": "阿四",
+      "links": [
+        "https://wiki.52poke.com/zh-hant/阿四",
+        "https://bulbapedia.bulbagarden.net/wiki/Chuck"
+      ],
+      "basis": "Pokémon Gym Leader in fake-eyebrow/moustache context; no battle/story facts added."
+    },
+    {
+      "indices": [
+        180
+      ],
+      "term": "10 gallon hat",
+      "chinese": "高顶宽檐牛仔帽",
+      "links": [
+        "https://dictionary.cambridge.org/us/dictionary/english/ten-gallon-hat",
+        "https://www.dictionary.com/browse/ten-gallon-hat"
+      ],
+      "basis": "Established hat-style noun, not a literal10-gallon capacity. Numeric surface intentionally translated by idiomatic garment meaning; rootin tootin rendered豪迈十足."
+    },
+    {
+      "indices": [
+        163,
+        164
+      ],
+      "term": "Drying Pan",
+      "chinese": "挡雨平底锅",
+      "links": [
+        "https://knowyourmeme.com/memes/ill-use-my-trusty-frying-pan-as-a-drying-pan"
+      ],
+      "basis": "Brock English frying/drying pan wordplay; catalog ID brockpan and explicit rain-off-head description establish intended use. Contextual creative Chinese title, not an official Chinese item claim."
+    }
+  ],
+  "project_terms": {
+    "Biker": "暴走族",
+    "Cresselia": "克雷色利亚",
+    "Spinarak": "圆丝蛛",
+    "Happiny": "小福蛋",
+    "Ho-Oh": "凤王",
+    "Ice Beam": "冰冻光束",
+    "Lycanroc": "鬃岩狼人",
+    "Marshtomp": "沼跃鱼",
+    "Roserade": "罗丝雷朵",
+    "Sandshrew": "穿山鼠",
+    "Pokémon Breeder": "宝可梦培育家"
+  },
+  "boundaries": [
+    "Only exact source-to-display-text output; original IDs/catalog/images/player custom names untouched.",
+    "197 are independent source strings, not 197 distinct outfit records.",
+    "All assigned0–196 source strings manually translated/reviewed and saved; no claim about the other half handled by another agent."
+  ],
+  "interpretations": [
+    {
+      "indices": [
+        78,
+        79
+      ],
+      "basis": "Translate displayed Hooded as 连帽款; internal hooddown/hoodup IDs are preserved and not treated as text to repair."
+    },
+    {
+      "indices": [
+        80
+      ],
+      "basis": "Marshweater combines Marshtomp and sweater; 沼跃鱼毛衣 preserves species and garment without an unnatural transliteration."
+    },
+    {
+      "indices": [
+        119,
+        120
+      ],
+      "basis": "Slow Suit uses 呆呆套装 to retain the relaxed Slow-family association; do not introduce a specific Slowpoke/Slowbro identity absent from display source."
+    },
+    {
+      "indices": [
+        125
+      ],
+      "basis": "Splicer in this fusion game is interpreted as 融合师 for an outfit title; creative context translation, not an official profession claim."
+    },
+    {
+      "indices": [
+        137,
+        138,
+        161,
+        162
+      ],
+      "basis": "Yellow Qipao kept as黄色旗袍 because description explicitly denotes color; Emerald Cap is Brendan RSE version-themed绿宝石帽, distinct from Emerald Gear IDemeraldSPE=米拉特. Do not use a global Emerald translation."
+    },
+    {
+      "indices": [
+        143,
+        144
+      ],
+      "basis": "Partner Cap has Ash internal ID but displayed name is搭档帽; preserve original L logo as one Latin letter, not untranslated dialogue, and do not replace caption with a different official game clothing item."
+    },
+    {
+      "indices": [
+        158
+      ],
+      "basis": "Original with a white . omits the object. Translate only white accent and Breeder use; do not invent a PokéBall or stripe absent from source. Source record unchanged."
+    },
+    {
+      "indices": [
+        169,
+        170,
+        175,
+        176,
+        181,
+        182,
+        183,
+        184,
+        187,
+        188,
+        193,
+        194,
+        195,
+        196
+      ],
+      "basis": "Species names taken from current categorized project/PokeAPI glossary; costume shapes/descriptions retain author wording, not species abilities."
+    }
+  ],
+  "complete": true,
+  "all_source_keys_exact": true,
+  "expert_exact_reuse_count": 28,
+  "expert_exact_reuse_indices": [
+    18,
+    19,
+    20,
+    21,
+    30,
+    31,
+    33,
+    34,
+    35,
+    40,
+    41,
+    42,
+    43,
+    51,
+    52,
+    63,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    128,
+    129,
+    130,
+    131,
+    135,
+    136
+  ],
+  "validation": {
+    "exact_output_count": 197,
+    "source_key_coverage": "all assigned input keys and no extra",
+    "index_coverage": "0–196 contiguous",
+    "latin_exception": {
+      "144": "L is the literal hat emblem in source"
+    },
+    "number_exception": {
+      "180": "10-gallon hat is an idiomatic style term, not a capacity"
+    },
+    "placeholders": "all source placeholder sets preserved",
+    "expert_reuse": "all28 read and confirmed exact"
+  }
+}

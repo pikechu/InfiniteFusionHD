@@ -31,7 +31,7 @@ extern VALUE rb_eRuntimeError;
 
 #define KIF_EXPORT __attribute__((visibility("default")))
 #define KIF_REQUEST_LIMIT ((size_t)64 * 1024)
-#define KIF_RESPONSE_LIMIT ((jsize)12 * 1024 * 1024)
+#define KIF_RESPONSE_LIMIT ((jsize)48 * 1024 * 1024)
 
 _Static_assert(sizeof(VALUE) == sizeof(void *), "MRI VALUE must hold a pointer");
 

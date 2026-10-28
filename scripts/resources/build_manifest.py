@@ -46,7 +46,8 @@ def bundled_data(overrides=None):
         # Git/raw URLs and release archives use LF even on a CRLF checkout.
         if not name.endswith(".gz"):
             raw = raw.replace(b"\r\n", b"\n")
-        if not 0 < len(raw) <= 8 * 1024 * 1024:
+        limit = (32 if name in ("Data/pokedex/dex.json", "Data/pokedex/dex_zh.json") else 8) * 1024 * 1024
+        if not 0 < len(raw) <= limit:
             raise ValueError("Data exceeds the mobile download limit: " + name)
         files.append({"path": name, "url": "https://raw.githubusercontent.com/" + REPOSITORY +
                       "/main/" + urllib.parse.quote(name), "size": len(raw),

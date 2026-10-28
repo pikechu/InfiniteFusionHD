@@ -291,6 +291,12 @@ module ChineseLocalization
               "counts" => counts, "rejected_control_or_placeholder_mismatches" => rejected,
               "id_mapping" => remapped, "scripts" => details,
               "translated_maps" => result[0].compact.length, "overrides" => overrides.length}
+    require_relative "apply_zh_additions"
+    additions = JSON.parse(File.read(File.join(target, "Data/localization/zh-CN-quest-dialogue.json"), encoding: "UTF-8"))
+    report["reviewed_quest_dialogue_additions"] = apply_additions(result, english, additions)
+    counts["script_texts"] = result[24].length
+    counts["map_texts"] = result[0].compact.sum(&:length)
+    report["translated_maps"] = result[0].compact.length
     return result, report
   end
 end

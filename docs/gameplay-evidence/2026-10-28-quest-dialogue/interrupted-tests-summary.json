@@ -1,0 +1,489 @@
+[
+  {
+    "path": "android_dex_download_test.rb.release.log",
+    "tail": [
+      "ANDROID_DEX_DOWNLOAD_PASS checks=5 real_network=false player_saves=false"
+    ],
+    "bytes": 73
+  },
+  {
+    "path": "android_network_test.rb.release.log",
+    "tail": [
+      "PASS Android client selects installed production platform adapter",
+      "PASS Android adapter preserves authenticated requests",
+      "PASS Android adapter preserves Unicode and uint32 JSON",
+      "PASS platform downloads preserve binary image bytes",
+      "PASS legacy form requests use safe adapter without native HTTP",
+      "PASS adapter rejects request header injection",
+      "PASS Android HTTP never enters unsafe native DNS resolution for hostnames",
+      "PASS large HTTPS cloud saves use resumable chunks within native bridge limit",
+      "PASS pending HTTPS yields across game frames without synchronous JNI",
+      "PASS asynchronous HTTPS consumes and releases its response",
+      "PASS HTTPS deadline cancels native job instead of blocking the game",
+      "PASS closing a cooperative HTTPS task runs native cancellation ensure",
+      "PASS old APK cannot silently fall back to blocking HTTPS",
+      "Data/Scripts/054_Multiplayer/001_Client.rb:155:in `dump': JSON payload is too large (KIFMultiplayer::Error)",
+      "\tfrom tests/multiplayer/android_network_test.rb:147:in `block in <main>'",
+      "\tfrom Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb:67:in `bridge'",
+      "\tfrom Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb:45:in `get'",
+      "\tfrom tests/multiplayer/android_network_test.rb:149:in `<main>'"
+    ],
+    "bytes": 1251
+  },
+  {
+    "path": "content_test.rb.final.log",
+    "tail": [
+      "tests/localization/content_test.rb:5:in `block in <main>': FAIL compiled content: Woah! You beat me at my own specialty! (RuntimeError)",
+      "\tfrom tests/localization/content_test.rb:10:in `block (2 levels) in <main>'",
+      "\tfrom tests/localization/content_test.rb:8:in `each'",
+      "\tfrom tests/localization/content_test.rb:8:in `block in <main>'",
+      "\tfrom tests/localization/content_test.rb:7:in `each'",
+      "\tfrom tests/localization/content_test.rb:7:in `<main>'"
+    ],
+    "bytes": 437
+  },
+  {
+    "path": "content_test.rb.release.log",
+    "tail": [
+      "CONTENT_TEST_PASS checks=3405"
+    ],
+    "bytes": 30
+  },
+  {
+    "path": "content_test.rb.validation.log",
+    "tail": [
+      "tests/localization/content_test.rb:5:in `block in <main>': FAIL compiled content: You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0]. (RuntimeError)",
+      "\tfrom tests/localization/content_test.rb:10:in `block (2 levels) in <main>'",
+      "\tfrom tests/localization/content_test.rb:8:in `each'",
+      "\tfrom tests/localization/content_test.rb:8:in `block in <main>'",
+      "\tfrom tests/localization/content_test.rb:7:in `each'",
+      "\tfrom tests/localization/content_test.rb:7:in `<main>'"
+    ],
+    "bytes": 468
+  },
+  {
+    "path": "import_test.rb.validation.log",
+    "tail": [
+      "IMPORT_TEST_PASS checks=29"
+    ],
+    "bytes": 27
+  },
+  {
+    "path": "language_test.rb.after-encoding.log",
+    "tail": [
+      "LANGUAGE_TEST_PASS checks=35"
+    ],
+    "bytes": 29
+  },
+  {
+    "path": "language_test.rb.final.log",
+    "tail": [
+      "LANGUAGE_TEST_PASS checks=35"
+    ],
+    "bytes": 29
+  },
+  {
+    "path": "language_test.rb.validation.log",
+    "tail": [
+      "LANGUAGE_TEST_PASS checks=35"
+    ],
+    "bytes": 29
+  },
+  {
+    "path": "offline_resources_test.rb.final.log",
+    "tail": [
+      "PASS published pack includes the full three sheet sets and auxiliary data",
+      "tests/resources/offline_resources_test.rb:52:in `block in <main>': FAIL bundled data matches manifest: Data/pokedex/all_entries.json (RuntimeError)",
+      "\tfrom tests/resources/offline_resources_test.rb:60:in `block in <main>'",
+      "\tfrom tests/resources/offline_resources_test.rb:59:in `each'",
+      "\tfrom tests/resources/offline_resources_test.rb:59:in `<main>'"
+    ],
+    "bytes": 418
+  },
+  {
+    "path": "offline_resources_test.rb.release.log",
+    "tail": [
+      "PASS new manifest revision displays the resource update badge",
+      "PASS automatic resource checking runs only once at startup",
+      "PASS cancel returns safely with verified files retained",
+      "PASS auxiliary dex updates preserve locally authored entries",
+      "PASS merged dex keeps an independently verifiable source copy",
+      "PASS full integrity check also detects published entries missing from the active merged dex",
+      "PASS compressed dex downloads install and verify the merged local dex",
+      "PASS cached dex lookup preserves local and upstream descriptions",
+      "PASS resource contract supports the Chinese dex and untranslated local entries",
+      "PASS switching back to English refreshes the resource lookup cache",
+      "PASS corrupt compressed dex preserves the active descriptions",
+      "PASS compressed dex expansion is bounded",
+      "PASS manifest accepts only the official CDN sheet prefix",
+      "PASS manifest rejects unrelated CDN paths",
+      "PASS corrupt manifest cache falls back to the bundled manifest",
+      "PASS legacy map entry no longer performs a network trade",
+      "PASS offline Wonder Trade implementation remains available",
+      "OFFLINE_RESOURCES_PASS checks=47 real_network=false player_saves=false"
+    ],
+    "bytes": 2647
+  },
+  {
+    "path": "outfit_catalog_test.rb.final.log",
+    "tail": [
+      "PASS creating a selector never probes hair versions or unrelated graphics",
+      "PASS hat browsing scans only hats",
+      "PASS one selector reuses its requested directory list",
+      "PASS clothes browsing does not scan hairstyles",
+      "PASS hair version enumeration remains available on demand",
+      "PASS clothes cycling resolves its lazy list before selection",
+      "PASS hat cycling resolves its lazy list before selection",
+      "PASS hair cycling resolves its lazy list before selection",
+      "PASS three item lookups parse each source catalog once",
+      "PASS unchanged catalog objects are reused across repeated lookups",
+      "PASS repeated stock lookups never reparse unchanged JSON",
+      "PASS outfit rewards and starting grants reuse the same validated catalogs",
+      "PASS cached grants preserve each category and prevent duplicate unlocks",
+      "PASS cache adds no fields to player metadata",
+      "D:/others/kurayshinyrevamp/temp/localization-release/Data/Scripts/050_Outfits/wrappers/001_Outfit.rb:17:in `name': undefined method `_INTL' for #<Hat:0x0000022fb6e63358 @id=\"new-hat\", @name=\"updated\", @description=\"test\", @tags=[\"pewter\"], @price=20, @type=:HAT> (NoMethodError)",
+      "\tfrom tests/gameplay/outfit_catalog_test.rb:71:in `block in <main>'",
+      "\tfrom D:/others/kurayshinyrevamp/temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/lib/ruby/3.2.0/tmpdir.rb:94:in `mktmpdir'",
+      "\tfrom tests/gameplay/outfit_catalog_test.rb:46:in `<main>'"
+    ],
+    "bytes": 1341
+  },
+  {
+    "path": "outfit_catalog_test.rb.release.log",
+    "tail": [
+      "PASS creating a selector never probes hair versions or unrelated graphics",
+      "PASS hat browsing scans only hats",
+      "PASS one selector reuses its requested directory list",
+      "PASS clothes browsing does not scan hairstyles",
+      "PASS hair version enumeration remains available on demand",
+      "PASS clothes cycling resolves its lazy list before selection",
+      "PASS hat cycling resolves its lazy list before selection",
+      "PASS hair cycling resolves its lazy list before selection",
+      "PASS three item lookups parse each source catalog once",
+      "PASS unchanged catalog objects are reused across repeated lookups",
+      "PASS repeated stock lookups never reparse unchanged JSON",
+      "PASS outfit rewards and starting grants reuse the same validated catalogs",
+      "PASS cached grants preserve each category and prevent duplicate unlocks",
+      "PASS cache adds no fields to player metadata",
+      "PASS changing a catalog refreshes the shared data",
+      "PASS switching local saves initializes that save's catalogs",
+      "PASS invalid changed data remains a visible error",
+      "OUTFIT_CATALOG_PASS checks=17 network=false player_saves=false"
+    ],
+    "bytes": 1035
+  },
+  {
+    "path": "outfit_entrypoints_audit.rb.final.log",
+    "tail": [
+      "{\"maps_scanned\":809,\"common_events_scanned\":109,\"script_blocks_scanned\":25180,\"entry_blocks\":85,\"maps_with_entries\":26,\"common_events_with_entries\":[80,97],\"calls\":{\"hairShop\":33,\"pokemart_clothes_shop\":4,\"OutfitSelector\":31,\"selectHairColor\":6,\"hatShop\":15,\"pokemart_hat_shop\":2,\"clothesShop\":3,\"selectClothes\":4,\"selectHat\":4,\"selectHatColor\":4,\"selectClothesColor\":4,\"selectHairstyle\":3,\"changeOutfit\":3},\"shared_mart_cities\":[\"PEWTER\",\"CERULEAN\",\"VERMILLION\",\"LAVENDER\",\"CELADON\",\"FUCHSIA\",\"SAFFRON\",\"CINNABAR\",\"CRIMSON\",\"GOLDENROD\",\"AZALEA\",\"AZALEA_FLOODED\",\"VIOLET\",\"BLACKTHORN\",\"MAHOGANY\",\"ECRUTEAK\",\"OLIVINE\",\"CIANWOOD\"]}",
+      "OUTFIT_ENTRYPOINTS_AUDIT_PASS profiles=25 dynamic=1 report=temp/outfit-entrypoints.json"
+    ],
+    "bytes": 718
+  },
+  {
+    "path": "quest_dialogue_test.rb.final.log",
+    "tail": [
+      "QUEST_DIALOGUE_PASS checks=2367 quests=77"
+    ],
+    "bytes": 42
+  },
+  {
+    "path": "quest_dialogue_test.rb.release.log",
+    "tail": [
+      "QUEST_DIALOGUE_PASS checks=2376 quests=77"
+    ],
+    "bytes": 42
+  },
+  {
+    "path": "quest_dialogue_test.rb.validation.log",
+    "tail": [
+      "QUEST_DIALOGUE_PASS checks=1802 quests=77"
+    ],
+    "bytes": 42
+  },
+  {
+    "path": "story_test.rb.after-encoding.log",
+    "tail": [
+      "STORY_TEST_PASS checks=887 opening_texts=576"
+    ],
+    "bytes": 45
+  },
+  {
+    "path": "story_test.rb.final.log",
+    "tail": [
+      "STORY_TEST_PASS checks=887 opening_texts=576"
+    ],
+    "bytes": 45
+  },
+  {
+    "path": "story_test.rb.validation.log",
+    "tail": [
+      "STORY_TEST_PASS checks=887 opening_texts=576"
+    ],
+    "bytes": 45
+  },
+  {
+    "path": "story-before-encoding.log",
+    "tail": [
+      "tests/localization/story_test.rb:19:in `block in <main>': FAIL opening dialogue 42:29: It's unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for your protection. (RuntimeError)",
+      "\tfrom tests/localization/story_test.rb:51:in `block (5 levels) in <main>'",
+      "\tfrom tests/localization/story_test.rb:47:in `each'",
+      "\tfrom tests/localization/story_test.rb:47:in `block (4 levels) in <main>'",
+      "\tfrom tests/localization/story_test.rb:33:in `each'",
+      "\tfrom tests/localization/story_test.rb:33:in `each_with_index'",
+      "\tfrom tests/localization/story_test.rb:33:in `block (3 levels) in <main>'",
+      "\tfrom tests/localization/story_test.rb:32:in `each'",
+      "\tfrom tests/localization/story_test.rb:32:in `block (2 levels) in <main>'",
+      "\tfrom tests/localization/story_test.rb:31:in `each_value'",
+      "\tfrom tests/localization/story_test.rb:31:in `block in <main>'",
+      "\tfrom tests/localization/story_test.rb:29:in `each'",
+      "\tfrom tests/localization/story_test.rb:29:in `<main>'"
+    ],
+    "bytes": 939
+  },
+  {
+    "path": "text_wrap_test.rb.validation.log",
+    "tail": [
+      "TEXT_WRAP_PASS checks=15"
+    ],
+    "bytes": 25
+  },
+  {
+    "path": "ui_coverage_test.rb.validation.log",
+    "tail": [
+      "UI_COVERAGE_PASS checks=556 translations=276"
+    ],
+    "bytes": 45
+  },
+  {
+    "path": "native-quest-20261028-145154\\feature-smoke.log",
+    "tail": [
+      "2026-10-28 06:52:05 UTC PASS player nicknames are preserved",
+      "2026-10-28 06:52:05 UTC PASS moves use the production Chinese table",
+      "2026-10-28 06:52:05 UTC PASS items use the production Chinese table",
+      "2026-10-28 06:52:05 UTC PASS species entries use the production Chinese table",
+      "2026-10-28 06:52:05 UTC PASS battle prompt retains its argument",
+      "2026-10-28 06:52:05 UTC PASS language switches leave Pokemon, stats and cached species data unchanged",
+      "2026-10-28 06:52:10 UTC PASS saved language and Chinese font restore together",
+      "2026-10-28 06:52:10 UTC PASS KIF settings use supplementary translations",
+      "2026-10-28 06:52:10 UTC PASS preset names remain untouched in translated prompts",
+      "2026-10-28 06:52:11 UTC PASS native mom dialogue uses Chinese",
+      "2026-10-28 06:52:11 UTC PASS formatted Chinese dialogue wraps within its window",
+      "2026-10-28 06:52:11 UTC PASS native oak dialogue uses Chinese",
+      "2026-10-28 06:52:11 UTC PASS native rival dialogue uses Chinese",
+      "2026-10-28 06:52:11 UTC LANGUAGE_NATIVE_FAIL NameError: undefined local variable or method `check' for main:Object",
+      "D:/others/kurayshinyrevamp/temp/localization-release/tests/localization/quest_dialogue_game.rb:16:in `<top (required)>'",
+      "tests/localization/game_smoke.rb:85:in `load'",
+      "tests/localization/game_smoke.rb:85:in `<main>'",
+      "-e:in `eval'"
+    ],
+    "bytes": 3760
+  },
+  {
+    "path": "native-quest-20261028-145154\\runtime.log",
+    "tail": [
+      "PRODUCTION_SOURCE_EVALUATED 005_Gym.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/005_Gym.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 006_Trade.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/006_Trade.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 007_Rental.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/007_Rental.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 008_Hall.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/008_Hall.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 009_Pool.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/009_Pool.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 010_Collections.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/010_Collections.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 011_Dungeon.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/011_Dungeon.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 012_Replay.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/012_Replay.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 013_Cards.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/013_Cards.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 014_GuestScene.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/014_GuestScene.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 015_Transport.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/015_Transport.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 016_CloudCodec.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/016_CloudCodec.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 017_OnlineClient.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/017_OnlineClient.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 018_World.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/018_World.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 019_OnlineMode.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/019_OnlineMode.rb pid=15392",
+      "PRODUCTION_SOURCE_EVALUATED 020_AndroidNetwork.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb pid=15392",
+      "PRODUCTION_MODULES_EVALUATED count=20 pid=15392",
+      "PRODUCTION_FINAL_METHODS D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/015_Transport.rb:442,D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/003_Battle.rb:686,D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/012_Replay.rb:6 data_hash=0bef98015f6ee8103695d4edfd45f03dfbc39e8a5a4fece59b4e6a8eb91ed074"
+    ],
+    "bytes": 3872
+  },
+  {
+    "path": "native-quest-20261028-145154\\stderr.log",
+    "tail": [
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:22: warning: already initialized constant Settings::CUSTOM_SPRITES_NEW_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:118: warning: previous definition of CUSTOM_SPRITES_NEW_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:26: warning: already initialized constant Settings::BASE_POKEMON_ALT_SPRITES_REPO_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:120: warning: previous definition of BASE_POKEMON_ALT_SPRITES_REPO_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:27: warning: already initialized constant Settings::BASE_POKEMON_ALT_SPRITES_NEW_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:121: warning: previous definition of BASE_POKEMON_ALT_SPRITES_NEW_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:37: warning: already initialized constant Settings::CUSTOMSPRITES_RATE_MAX_NB_REQUESTS",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:112: warning: previous definition of CUSTOMSPRITES_RATE_MAX_NB_REQUESTS was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:38: warning: already initialized constant Settings::CUSTOMSPRITES_ENTRIES_RATE_TIME_WINDOW",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:113: warning: previous definition of CUSTOMSPRITES_ENTRIES_RATE_TIME_WINDOW was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:43: warning: already initialized constant Settings::AI_ENTRIES_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:107: warning: previous definition of AI_ENTRIES_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:44: warning: already initialized constant Settings::AI_ENTRIES_RATE_MAX_NB_REQUESTS",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:108: warning: previous definition of AI_ENTRIES_RATE_MAX_NB_REQUESTS was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:45: warning: already initialized constant Settings::AI_ENTRIES_RATE_TIME_WINDOW",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:109: warning: previous definition of AI_ENTRIES_RATE_TIME_WINDOW was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:46: warning: already initialized constant Settings::AI_ENTRIES_RATE_LOG_FILE",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:110: warning: previous definition of AI_ENTRIES_RATE_LOG_FILE was here"
+    ],
+    "bytes": 5328
+  },
+  {
+    "path": "native-quest-20261028-145154\\stdout.log",
+    "tail": [],
+    "bytes": 0
+  },
+  {
+    "path": "native-quest-20261028-145644\\feature-smoke.log",
+    "tail": [
+      "2026-10-28 06:57:07 UTC PASS player nicknames are preserved",
+      "2026-10-28 06:57:07 UTC PASS moves use the production Chinese table",
+      "2026-10-28 06:57:07 UTC PASS items use the production Chinese table",
+      "2026-10-28 06:57:07 UTC PASS species entries use the production Chinese table",
+      "2026-10-28 06:57:07 UTC PASS battle prompt retains its argument",
+      "2026-10-28 06:57:07 UTC PASS language switches leave Pokemon, stats and cached species data unchanged",
+      "2026-10-28 06:57:27 UTC PASS saved language and Chinese font restore together",
+      "2026-10-28 06:57:27 UTC PASS KIF settings use supplementary translations",
+      "2026-10-28 06:57:27 UTC PASS preset names remain untouched in translated prompts",
+      "2026-10-28 06:57:28 UTC PASS native mom dialogue uses Chinese",
+      "2026-10-28 06:57:28 UTC PASS formatted Chinese dialogue wraps within its window",
+      "2026-10-28 06:57:28 UTC PASS native oak dialogue uses Chinese",
+      "2026-10-28 06:57:28 UTC PASS native rival dialogue uses Chinese",
+      "2026-10-28 06:57:28 UTC LANGUAGE_NATIVE_FAIL NoMethodError: undefined method `file' for Digest::SHA256:Class",
+      "D:/others/kurayshinyrevamp/temp/localization-release/tests/localization/quest_dialogue_game.rb:4:in `<top (required)>'",
+      "tests/localization/game_smoke.rb:85:in `load'",
+      "tests/localization/game_smoke.rb:85:in `<main>'",
+      "-e:in `eval'"
+    ],
+    "bytes": 3753
+  },
+  {
+    "path": "native-quest-20261028-145644\\runtime.log",
+    "tail": [
+      "PRODUCTION_SOURCE_EVALUATED 005_Gym.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/005_Gym.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 006_Trade.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/006_Trade.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 007_Rental.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/007_Rental.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 008_Hall.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/008_Hall.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 009_Pool.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/009_Pool.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 010_Collections.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/010_Collections.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 011_Dungeon.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/011_Dungeon.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 012_Replay.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/012_Replay.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 013_Cards.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/013_Cards.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 014_GuestScene.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/014_GuestScene.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 015_Transport.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/015_Transport.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 016_CloudCodec.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/016_CloudCodec.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 017_OnlineClient.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/017_OnlineClient.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 018_World.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/018_World.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 019_OnlineMode.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/019_OnlineMode.rb pid=25672",
+      "PRODUCTION_SOURCE_EVALUATED 020_AndroidNetwork.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb pid=25672",
+      "PRODUCTION_MODULES_EVALUATED count=20 pid=25672",
+      "PRODUCTION_FINAL_METHODS D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/015_Transport.rb:442,D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/003_Battle.rb:686,D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/012_Replay.rb:6 data_hash=0bef98015f6ee8103695d4edfd45f03dfbc39e8a5a4fece59b4e6a8eb91ed074"
+    ],
+    "bytes": 3872
+  },
+  {
+    "path": "native-quest-20261028-145644\\stderr.log",
+    "tail": [
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:22: warning: already initialized constant Settings::CUSTOM_SPRITES_NEW_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:118: warning: previous definition of CUSTOM_SPRITES_NEW_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:26: warning: already initialized constant Settings::BASE_POKEMON_ALT_SPRITES_REPO_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:120: warning: previous definition of BASE_POKEMON_ALT_SPRITES_REPO_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:27: warning: already initialized constant Settings::BASE_POKEMON_ALT_SPRITES_NEW_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:121: warning: previous definition of BASE_POKEMON_ALT_SPRITES_NEW_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:37: warning: already initialized constant Settings::CUSTOMSPRITES_RATE_MAX_NB_REQUESTS",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:112: warning: previous definition of CUSTOMSPRITES_RATE_MAX_NB_REQUESTS was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:38: warning: already initialized constant Settings::CUSTOMSPRITES_ENTRIES_RATE_TIME_WINDOW",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:113: warning: previous definition of CUSTOMSPRITES_ENTRIES_RATE_TIME_WINDOW was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:43: warning: already initialized constant Settings::AI_ENTRIES_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:107: warning: previous definition of AI_ENTRIES_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:44: warning: already initialized constant Settings::AI_ENTRIES_RATE_MAX_NB_REQUESTS",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:108: warning: previous definition of AI_ENTRIES_RATE_MAX_NB_REQUESTS was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:45: warning: already initialized constant Settings::AI_ENTRIES_RATE_TIME_WINDOW",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:109: warning: previous definition of AI_ENTRIES_RATE_TIME_WINDOW was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:46: warning: already initialized constant Settings::AI_ENTRIES_RATE_LOG_FILE",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:110: warning: previous definition of AI_ENTRIES_RATE_LOG_FILE was here"
+    ],
+    "bytes": 5328
+  },
+  {
+    "path": "native-quest-20261028-145644\\stdout.log",
+    "tail": [],
+    "bytes": 0
+  },
+  {
+    "path": "native-quest-20261028-151946\\feature-smoke.log",
+    "tail": [
+      "2026-10-28 07:20:06 UTC PASS shared menus preserve frozen source arrays",
+      "2026-10-28 07:20:06 UTC PASS saved Hall of Fame mode is localized only for display",
+      "2026-10-28 07:20:06 UTC PASS single-species history uses the localized species name",
+      "2026-10-28 07:20:06 UTC PASS translated splicer label still returns INFINITESPLICERS2",
+      "2026-10-28 07:20:06 UTC PASS translated splicer label still returns SUPERSPLICERS",
+      "2026-10-28 07:20:06 UTC PASS translated splicer label still returns DNASPLICERS",
+      "2026-10-28 07:20:06 UTC PASS original infinite splicer fallback is preserved",
+      "2026-10-28 07:20:06 UTC PASS credits preserve original static author list",
+      "2026-10-28 07:20:06 UTC CREDITS_LAYOUT_PASS min_font_size=25",
+      "2026-10-28 07:20:09 UTC PASS native English quest labels restore immediately",
+      "2026-10-28 07:20:09 UTC PASS credits restore original English without cached Chinese",
+      "2026-10-28 07:20:10 UTC PASS native language switches preserve all quest definitions",
+      "2026-10-28 07:20:10 UTC QUEST_DIALOGUE_NATIVE_PASS quests=77 outfit_fields=510 normal_player_saves=false",
+      "2026-10-28 07:20:11 UTC PASS native French language data",
+      "2026-10-28 07:20:14 UTC PASS KIF settings restore original English labels",
+      "2026-10-28 07:20:14 UTC PASS English species and fusion names restore immediately",
+      "2026-10-28 07:20:14 UTC PASS native English language data restored",
+      "2026-10-28 07:20:14 UTC LANGUAGE_NATIVE_PASS normal_player_saves=false production_chinese_pack=true"
+    ],
+    "bytes": 5702
+  },
+  {
+    "path": "native-quest-20261028-151946\\runtime.log",
+    "tail": [
+      "PRODUCTION_SOURCE_EVALUATED 005_Gym.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/005_Gym.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 006_Trade.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/006_Trade.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 007_Rental.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/007_Rental.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 008_Hall.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/008_Hall.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 009_Pool.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/009_Pool.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 010_Collections.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/010_Collections.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 011_Dungeon.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/011_Dungeon.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 012_Replay.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/012_Replay.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 013_Cards.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/013_Cards.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 014_GuestScene.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/014_GuestScene.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 015_Transport.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/015_Transport.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 016_CloudCodec.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/016_CloudCodec.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 017_OnlineClient.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/017_OnlineClient.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 018_World.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/018_World.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 019_OnlineMode.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/019_OnlineMode.rb pid=29352",
+      "PRODUCTION_SOURCE_EVALUATED 020_AndroidNetwork.rb trace_path=D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb pid=29352",
+      "PRODUCTION_MODULES_EVALUATED count=20 pid=29352",
+      "PRODUCTION_FINAL_METHODS D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/015_Transport.rb:442,D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/003_Battle.rb:686,D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/054_Multiplayer/012_Replay.rb:6 data_hash=0bef98015f6ee8103695d4edfd45f03dfbc39e8a5a4fece59b4e6a8eb91ed074"
+    ],
+    "bytes": 3872
+  },
+  {
+    "path": "native-quest-20261028-151946\\stderr.log",
+    "tail": [
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:22: warning: already initialized constant Settings::CUSTOM_SPRITES_NEW_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:118: warning: previous definition of CUSTOM_SPRITES_NEW_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:26: warning: already initialized constant Settings::BASE_POKEMON_ALT_SPRITES_REPO_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:120: warning: previous definition of BASE_POKEMON_ALT_SPRITES_REPO_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:27: warning: already initialized constant Settings::BASE_POKEMON_ALT_SPRITES_NEW_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:121: warning: previous definition of BASE_POKEMON_ALT_SPRITES_NEW_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:37: warning: already initialized constant Settings::CUSTOMSPRITES_RATE_MAX_NB_REQUESTS",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:112: warning: previous definition of CUSTOMSPRITES_RATE_MAX_NB_REQUESTS was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:38: warning: already initialized constant Settings::CUSTOMSPRITES_ENTRIES_RATE_TIME_WINDOW",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:113: warning: previous definition of CUSTOMSPRITES_ENTRIES_RATE_TIME_WINDOW was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:43: warning: already initialized constant Settings::AI_ENTRIES_URL",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:107: warning: previous definition of AI_ENTRIES_URL was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:44: warning: already initialized constant Settings::AI_ENTRIES_RATE_MAX_NB_REQUESTS",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:108: warning: previous definition of AI_ENTRIES_RATE_MAX_NB_REQUESTS was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:45: warning: already initialized constant Settings::AI_ENTRIES_RATE_TIME_WINDOW",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:109: warning: previous definition of AI_ENTRIES_RATE_TIME_WINDOW was here",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/RemoteUrls.rb:46: warning: already initialized constant Settings::AI_ENTRIES_RATE_LOG_FILE",
+      "D:\\others\\kurayshinyrevamp\\temp\\localization-release/Data/Scripts/001_Settings.rb:110: warning: previous definition of AI_ENTRIES_RATE_LOG_FILE was here"
+    ],
+    "bytes": 5328
+  },
+  {
+    "path": "native-quest-20261028-151946\\stdout.log",
+    "tail": [],
+    "bytes": 0
+  }
+]

@@ -11,6 +11,11 @@ module KIF
     class Cancelled < StandardError; end
 
     class << self
+      def data_limit(path)
+        return KIF::PokedexEntries::MAX_BYTES if ["Data/pokedex/dex.json", "Data/pokedex/dex_zh.json"].include?(path)
+        return LIMIT
+      end
+
       def parse(text)
         raise ArgumentError, "资源清单过大" unless text.is_a?(String) && text.bytesize <= LIMIT
         data = KIFMultiplayer::WireJSON.parse(text.dup.force_encoding(Encoding::UTF_8).sub(/\A\uFEFF/, ""), LIMIT)
@@ -25,7 +30,7 @@ module KIF
           image = path.is_a?(String) && path.match?(%r{\AGraphics/(?:CustomBattlers/spritesheets/(?:spritesheets_base|spritesheets_custom)|Battlers/(?:spritesheets_autogen|Eggs|Special))/[A-Za-z0-9_./ -]+\.png\z})
           image ||= path.is_a?(String) && path.match?(%r{\AGraphics/Battlers/substitute(?:_back)?\.png\z})
           unless (DATA_PATHS.include?(path) ? entry["kind"] == "data" : image && entry["kind"] == "image") && !path.split("/").any? { |part| part.empty? || part == "." || part == ".." } &&
-                 !seen[path.downcase] && size.is_a?(Integer) && size.between?(1, LIMIT) &&
+                 !seen[path.downcase] && size.is_a?(Integer) && size.between?(1, data_limit(path)) &&
                  url.is_a?(String) && (url.match?(%r{\Ahttps://raw\.githubusercontent\.com/(?:pikechu/InfiniteFusionHD/(?:main|[0-9a-f]{40})|infinitefusion/infinitefusion-e18/[0-9a-f]{40})/[A-Za-z0-9_./% -]+\z}) ||
                  image && url.match?(%r{\Ahttps://infinitefusion\.net/customsprites/spritesheets/(?:spritesheets_base/[0-9]+|spritesheets_custom/[0-9]+/[0-9]+[a-z]{0,3})\.png\z})) &&
                  ((entry["sha256"].is_a?(String) && entry["sha256"].match?(/\A[0-9a-f]{64}\z/)) ||
@@ -260,7 +265,7 @@ module KIF
         @missing_attempts ||= {}
         return false if @missing_attempts[path]
         @missing_attempts[path] = true
-        install(entry, fetch(entry["url"]))
+        install(entry, fetch(entry["url"], data_limit(entry["path"])))
         true
       rescue StandardError
         false
@@ -297,7 +302,7 @@ module KIF
           begin
             unless valid_file?(entry, strict)
               raise IOError, "文件缺失或校验失败" if strict
-              install(entry, fetch(entry["url"]) { |bytes| pulse.call(bytes) })
+              install(entry, fetch(entry["url"], data_limit(entry["path"])) { |bytes| pulse.call(bytes) })
             end
           rescue Cancelled
             raise

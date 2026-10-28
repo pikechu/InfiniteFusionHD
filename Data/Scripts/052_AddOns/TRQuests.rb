@@ -43,10 +43,10 @@ def showNewTRMissionMessage(title, description, show_description)
   pbMEPlay("rocketQuest", 80, 110)
 
   pbCallBub(3)
-  Kernel.pbMessage("\\C[#{titleColor}]NEW MISSION: " + title)
+  Kernel.pbMessage("\\C[#{titleColor}]" + _INTL("NEW MISSION: {1}", pbQuestText(title)))
   if show_description
     pbCallBub(3)
-    Kernel.pbMessage("\\C[#{textColor}]" + description)
+    Kernel.pbMessage("\\C[#{textColor}]" + pbQuestText(description))
   end
 end
 
@@ -126,6 +126,7 @@ def legendaryQuestioning()
   pbCallBub(2, @event_id)
   pbMessage(_INTL("First off what does the legendary Pokémon look like?"))
   bodyTypes = { :BIRD => "A flying creature", :BEAST => "A large beast", :FISH => "An aquatic creature", :UNKNOWN => "I don't know..." }
+  bodyTypes.transform_values! { |value| _INTL(value) }
   chosen_bodyType = optionsMenu(bodyTypes.values)
   answers_so_far << bodyTypes.keys[chosen_bodyType]
   if chosen_bodyType == bodyTypes.length - 1
@@ -136,13 +137,14 @@ def legendaryQuestioning()
     uncertain_answers += 1
   else
     pbCallBub(2, @event_id)
-    pbMessage("#{bodyTypes.values[chosen_bodyType]} that's also a legendary Pokémon? That sounds incredible! You have my attention.")
+    pbMessage(_INTL("{1} that's also a legendary Pokémon? That sounds incredible! You have my attention.", bodyTypes.values[chosen_bodyType]))
   end
 
   #question 2
   pbCallBub(2, @event_id)
   pbMessage(_INTL("Okay... What about its type?"))
   types = { :ELECTRIC => "Electric-type", :FIRE => "Fire-type", :WATER => "Water-Type", :ICE => "Ice-type", :UNKNOWN => "I don't know..." }
+  types.transform_values! { |value| _INTL(value) }
   chosen_type = optionsMenu(types.values)
   answers_so_far << types.keys[chosen_type]
 
@@ -153,10 +155,10 @@ def legendaryQuestioning()
   else
     if chosen_bodyType == bodyTypes.length - 1
       pbCallBub(2, @event_id)
-      pbMessage("Hmm... So it's an unknown creature that's #{types.values[chosen_type]}...")
+      pbMessage(_INTL("Hmm... So it's an unknown creature that's {1}...", types.values[chosen_type]))
     else
       pbCallBub(2, @event_id)
-      pbMessage("Hmm... #{bodyTypes.values[chosen_bodyType]} that's #{types.values[chosen_type]}.")
+      pbMessage(_INTL("Hmm... {1} that's {2}.", bodyTypes.values[chosen_bodyType], types.values[chosen_type]))
     end
     susMeter = calculateSuspicionLevel(answers_so_far, uncertain_answers)
     if susMeter == 0
@@ -172,6 +174,7 @@ def legendaryQuestioning()
   pbCallBub(2, @event_id)
   pbMessage(_INTL("So... Where was this legendary Pokémon sighted?"))
   locations = { :VIRIDIAN => "Near Viridian City", :LAVENDER => "Near Lavender Town", :CERULEAN => "Near Cerulean City", :CINNABAR => "Near Cinnabar Island", :UNKNOWN => "I don't know" }
+  locations.transform_values! { |value| _INTL(value) }
   chosen_location = optionsMenu(locations.values)
   if chosen_location == locations.length - 1
     uncertain_answers += 1
@@ -189,21 +192,23 @@ def legendaryQuestioning()
     susMeter = calculateSuspicionLevel(answers_so_far, uncertain_answers)
     if susMeter == 0
       pbCallBub(2, @event_id)
-      pbMessage("#{locations.values[chosen_location]}, huh? Ah yes, that would make a lot of sense... How did I not think of this before?")
+      pbMessage(_INTL("{1}, huh? Ah yes, that would make a lot of sense... How did I not think of this before?", locations.values[chosen_location]))
     else
       pbCallBub(2, @event_id)
-      pbMessage("Hmmm... #{locations.values[chosen_location]}, really? That sounds pretty surprising to me.")
+      pbMessage(_INTL("Hmmm... {1}, really? That sounds pretty surprising to me.", locations.values[chosen_location]))
     end
   end
 
   #question 4
   locations_formatted = { :VIRIDIAN => "Viridian City", :LAVENDER => "Lavender Town", :CERULEAN => "Cerulean City", :CINNABAR => "Cinnabar Island", :UNKNOWN => "that unknown location" }
+  locations_formatted.transform_values! { |value| _INTL(value) }
   pbCallBub(2, @event_id)
-  pbMessage("And at what time of the day was that legendary Pokémon seen near #{locations_formatted.values[chosen_location]} exactly?")
+  pbMessage(_INTL("And at what time of the day was that legendary Pokémon seen near {1} exactly?", locations_formatted.values[chosen_location]))
   time_of_day = { :DAWN => "At dawn", :NOON => "At noon", :AFTERNOON => "In the afternoon", :SUNSET => "At sunset", :NIGHT => "At night" }
+  time_of_day.transform_values! { |value| _INTL(value) }
   chosen_time = optionsMenu(time_of_day.values)
   pbCallBub(2, @event_id)
-  pbMessage("So it was seen near #{locations_formatted.values[chosen_location]} #{time_of_day.values[chosen_time].downcase}...")
+  pbMessage(_INTL("So it was seen near {1} {2}...", locations_formatted.values[chosen_location], time_of_day.values[chosen_time].downcase))
   answers_so_far << time_of_day.keys[chosen_time]
   return calculateSuspicionLevel(answers_so_far, uncertain_answers)
 end
@@ -230,18 +235,18 @@ def sellPokemon(event_id)
     return false
   end
 
-  speciesName = GameData::Species.get(chosenPokemon.species).real_name
+  speciesName = GameData::Species.get(chosenPokemon.species).name
   pbCallBub(2, event_id)
-  if pbConfirmMessageSerious("You wanna sell me this #{speciesName}, is that right?")
+  if pbConfirmMessageSerious(_INTL("You wanna sell me this {1}, is that right?", speciesName))
     pbCallBub(2, event_id)
     pbMessage(_INTL("Hmm... Let's see..."))
     pbWait(10)
     value = calculate_pokemon_value(chosenPokemon)
     pbCallBub(2, event_id)
-    if pbConfirmMessageSerious("\\GI could give you $#{value.to_s} for it. Do we have a deal?")
+    if pbConfirmMessageSerious(_INTL("\\GI could give you ${1} for it. Do we have a deal?", value.to_s))
       payout = (value * 0.7).to_i
       pbCallBub(2, event_id)
-      pbMessage("\\GExcellent. And of course, 30% goes to Team Rocket. So you get $#{payout}.")
+      pbMessage(_INTL("\\GExcellent. And of course, 30% goes to Team Rocket. So you get ${1}.", payout))
       $Trainer.money += payout
       $Trainer.remove_pokemon_at_index(pbGet(1))
       pbSEPlay("Mart buy item")

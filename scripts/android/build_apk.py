@@ -120,7 +120,7 @@ def output_name(runtime_only, with_network, emulator_compatible):
     if runtime_only:
         stem = "InfiniteFusionHD-network-probe-arm64" if with_network else "InfiniteFusionHD-runtime-probe-arm64"
         return stem + ("-emulator" if emulator_compatible else "") + "-test.apk"
-    stem = "InfiniteFusionHD-0.20.8-android.14-arm64"
+    stem = "InfiniteFusionHD-0.20.8-android.15-arm64"
     if emulator_compatible:
         stem += "-emulator"
     if with_network:

@@ -1,0 +1,105 @@
+{
+  "tests": [
+    {
+      "test": "tests/localization/language_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 30,
+      "tail": "LANGUAGE_TEST_PASS checks=35\r\n"
+    },
+    {
+      "test": "tests/localization/story_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 46,
+      "tail": "STORY_TEST_PASS checks=887 opening_texts=576\r\n"
+    },
+    {
+      "test": "tests/resources/test_manifest.py",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 105,
+      "tail": "..\r\n----------------------------------------------------------------------\r\nRan 2 tests in 0.001s\r\n\r\nOK\r\n"
+    },
+    {
+      "test": "tests/resources/test_sync_upstream.py",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 189,
+      "tail": "..Sheets awaiting upstream publication: 1; retaining available verified snapshots\r\n..\r\n----------------------------------------------------------------------\r\nRan 4 tests in 37.645s\r\n\r\nOK\r\n"
+    },
+    {
+      "test": "android/tests/payload_package_test.py",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 2073,
+      "tail": "test_build_main_refuses_partial_before_any_compile_or_pack_command (__main__.PayloadPackageTest.test_build_main_refuses_partial_before_any_compile_or_pack_command) ... ok\r\ntest_build_source_snapshot_detects_concurrent_edits (__main__.PayloadPackageTest.test_build_source_snapshot_detects_concurrent_edits) ... ok\r\ntest_lossless_aliases_keep_every_original_path (__main__.PayloadPackageTest.test_lossless_aliases_keep_every_original_path) ... ok\r\ntest_network_marker_is_exclusive_to_network_variant (__main__.PayloadPackageTest.test_network_marker_is_exclusive_to_network_variant) ... ok\r\ntest_refresh_old_and_deduplicated_payloads (__main__.PayloadPackageTest.test_refresh_old_and_deduplicated_payloads) ... Refreshing Ruby: 0/10\r\nRuby/config snapshot refreshed: 10 logical / 9 archived, id=872a16191f58d46e38179665\r\nRefreshing Ruby: 0/10\r\nRuby/config snapshot refreshed: 10 logical / 9 archived, id=872a16191f58d46e38179665\r\nok\r\ntest_reject_alias_chain_mismatch_and_missing_source (__main__.PayloadPackageTest.test_reject_alias_chain_mismatch_and_missing_source) ... ok\r\ntest_reject_corrupt_missing_and_duplicate_zip_members (__main__.PayloadPackageTest.test_reject_corrupt_missing_and_duplicate_zip_members) ... D:\\Users\\meikun.zhang\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\zipfile\\__init__.py:1625: UserWarning: Duplicate name: 'a.bin'\r\n  return self._open_to_write(zinfo, force_zip64=force_zip64)\r\nok\r\ntest_reject_leftover_partial_before_aapt_collection (__main__.PayloadPackageTest.test_reject_leftover_partial_before_aapt_collection) ... ok\r\ntest_reproducible_archive_and_manifest (__main__.PayloadPackageTest.test_reproducible_archive_and_manifest) ... ok\r\ntest_skip_payload_rejects_stale_game_script (__main__.PayloadPackageTest.test_skip_payload_rejects_stale_game_script) ... ok\r\ntest_strict_assets_reject_unknown_files_and_directories (__main__.PayloadPackageTest.test_strict_assets_reject_unknown_files_and_directories) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 11 tests in 18.868s\r\n\r\nOK\r\n"
+    },
+    {
+      "test": "tests/localization/community_data_test.py",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 161,
+      "tail": "COMMUNITY_DATA_PASS reviewed_corpus=82207 translated_records=82207 game_records=82207 source_and_credits=unchanged name_placeholders=preserved unknown_tokens=0\r\n"
+    },
+    {
+      "test": "tests/localization/proofread_build_test.py",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 595,
+      "tail": "{\"reviewed_sources\": 1, \"remaining_sources\": 1, \"shards\": {}, \"complete\": false}\r\n{\"reviewed_sources\": 2, \"remaining_sources\": 0, \"shards\": {\"a.json\": 1}, \"complete\": true}\r\nPROOFREAD_BUILD_PASS records=3 sources=2 sha256=b1ccfc370eda62af24e86c69245b9438a4c0253f909052e2f75495e6f1180fef\r\n{\"reviewed_sources\": 2, \"remaining_sources\": 0, \"shards\": {\"a.json\": 1}, \"complete\": true}\r\nPROOFREAD_BUILD_PASS records=4 sources=2 sha256=a3f5794905b06c86a229609a0a51732a911a4d2ef0a7cc375ecdd4fabe33df07\r\nPROOFREAD_BUILD_TEST_PASS complete_coverage_required=true source_and_authors=preserved offline=true\r\n"
+    },
+    {
+      "test": "tests/localization/proofread_audit_test.py",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 558,
+      "tail": "{\"reviewed_sources\": 1, \"remaining_sources\": 1, \"shards\": {}, \"complete\": false}\r\n{\"reviewed_sources\": 1, \"remaining_sources\": 1, \"shards\": {}, \"complete\": false}\r\n{\"reviewed_sources\": 2, \"remaining_sources\": 0, \"shards\": {\"a.json\": 1}, \"complete\": true}\r\n{\"reviewed_sources\": 2, \"remaining_sources\": 0, \"shards\": {\"a.json\": 1, \"b.json\": 1}, \"complete\": false}\r\n{\"reviewed_sources\": 2, \"remaining_sources\": 0, \"shards\": {\"a.json\": 1}, \"complete\": false}\r\nPROOFREAD_AUDIT_PASS source_identity=true duplicate_assignments=rejected partial_is_not_complete=true\r\n"
+    },
+    {
+      "test": "tests/multiplayer/android_network_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 1224,
+      "tail": "PASS Android production adapter installs automatically\r\nPASS Android client selects installed production platform adapter\r\nPASS Android adapter preserves authenticated requests\r\nPASS Android adapter preserves Unicode and uint32 JSON\r\nPASS platform downloads preserve binary image bytes\r\nPASS legacy form requests use safe adapter without native HTTP\r\nPASS adapter rejects request header injection\r\nPASS Android HTTP never enters unsafe native DNS resolution for hostnames\r\nPASS large HTTPS cloud saves use resumable chunks within native bridge limit\r\nPASS pending HTTPS yields across game frames without synchronous JNI\r\nPASS asynchronous HTTPS consumes and releases its response\r\nPASS HTTPS deadline cancels native job instead of blocking the game\r\nPASS closing a cooperative HTTPS task runs native cancellation ensure\r\nPASS old APK cannot silently fall back to blocking HTTPS\r\nPASS bounded HTTPS handles dex responses larger than8MiB\r\nPASS HTTPS still rejects bodies above32MiB\r\nPASS Android socket worker yields while waiting instead of creating Ruby IO threads\r\nPASS cooperative Android worker resumes and completes normally\r\nANDROID_NETWORK_CONTRACT_PASS checks=18; host runtime fixture, not Android device acceptance\r\n"
+    },
+    {
+      "test": "tests/resources/android_dex_download_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 74,
+      "tail": "ANDROID_DEX_DOWNLOAD_PASS checks=5 real_network=false player_saves=false\r\n"
+    },
+    {
+      "test": "tests/resources/offline_resources_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 2695,
+      "tail": "PASS published pack includes the full three sheet sets and auxiliary data\r\nPASS bundled data matches manifest: Data/pokedex/all_entries.json\r\nPASS bundled data matches manifest: Data/pokedex/dex.json.gz\r\nPASS bundled data matches manifest: Data/pokedex/dex_zh.json\r\nPASS bundled data matches manifest: Data/sprites/BASE_SPRITES\r\nPASS bundled data matches manifest: Data/sprites/CUSTOM_SPRITES\r\nPASS bundled data matches manifest: Data/sprites/Sprite Credits.csv\r\nPASS full Chinese dex uses its32MiB resource limit\r\nPASS dex resource above32MiB is rejected\r\nPASS image download limit stays8MiB\r\nPASS rejects executable destinations\r\nPASS rejects path traversal\r\nPASS rejects untrusted resource hosts\r\nPASS rejects duplicate destinations\r\nPASS verifies Git blob hash and image header\r\nPASS rejects truncated downloads\r\nPASS rejects same-size corruption\r\nPASS atomic install passes full file verification\r\nPASS failed verification preserves the installed image\r\nPASS bad download cannot overwrite the previous image\r\nPASS full verification detects on-disk corruption\r\nPASS no pending install files remain\r\nPASS download repairs the corrupt file and marks completion only after success\r\nPASS download selects local sheets\r\nPASS repeat download skips verified images\r\nPASS full integrity verification needs no network\r\nPASS missing asset still downloads on demand after pack completion\r\nPASS installed asset never downloads again during play\r\nPASS interrupted download cannot claim a complete pack\r\nPASS retry repairs missing assets and resumes completion\r\nPASS new manifest revision displays the resource update badge\r\nPASS automatic resource checking runs only once at startup\r\nPASS cancel returns safely with verified files retained\r\nPASS auxiliary dex updates preserve locally authored entries\r\nPASS merged dex keeps an independently verifiable source copy\r\nPASS full integrity check also detects published entries missing from the active merged dex\r\nPASS compressed dex downloads install and verify the merged local dex\r\nPASS cached dex lookup preserves local and upstream descriptions\r\nPASS resource contract supports the Chinese dex and untranslated local entries\r\nPASS switching back to English refreshes the resource lookup cache\r\nPASS corrupt compressed dex preserves the active descriptions\r\nPASS compressed dex expansion is bounded\r\nPASS manifest accepts only the official CDN sheet prefix\r\nPASS manifest rejects unrelated CDN paths\r\nPASS corrupt manifest cache falls back to the bundled manifest\r\nPASS legacy map entry no longer performs a network trade\r\nPASS offline Wonder Trade implementation remains available\r\nOFFLINE_RESOURCES_PASS checks=47 real_network=false player_saves=false\r\n"
+    },
+    {
+      "test": "tests/gameplay/outfit_catalog_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 1053,
+      "tail": "PASS creating a selector never probes hair versions or unrelated graphics\r\nPASS hat browsing scans only hats\r\nPASS one selector reuses its requested directory list\r\nPASS clothes browsing does not scan hairstyles\r\nPASS hair version enumeration remains available on demand\r\nPASS clothes cycling resolves its lazy list before selection\r\nPASS hat cycling resolves its lazy list before selection\r\nPASS hair cycling resolves its lazy list before selection\r\nPASS three item lookups parse each source catalog once\r\nPASS unchanged catalog objects are reused across repeated lookups\r\nPASS repeated stock lookups never reparse unchanged JSON\r\nPASS outfit rewards and starting grants reuse the same validated catalogs\r\nPASS cached grants preserve each category and prevent duplicate unlocks\r\nPASS cache adds no fields to player metadata\r\nPASS changing a catalog refreshes the shared data\r\nPASS switching local saves initializes that save's catalogs\r\nPASS invalid changed data remains a visible error\r\nOUTFIT_CATALOG_PASS checks=17 network=false player_saves=false\r\n"
+    },
+    {
+      "test": "tests/localization/content_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 31,
+      "tail": "CONTENT_TEST_PASS checks=3405\r\n"
+    },
+    {
+      "test": "tests/localization/quest_dialogue_test.rb",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 43,
+      "tail": "QUEST_DIALOGUE_PASS checks=2376 quests=77\r\n"
+    }
+  ],
+  "all_passed": true,
+  "temporary_raw_logs": false,
+  "child_processes_closed": true
+}

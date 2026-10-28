@@ -45,7 +45,7 @@ class HairMartAdapter < OutfitsMartAdapter
   def toggleText()
     text = ""
     #text << "Color: R, \n"
-    text << "Toggle Hat: D\n"
+    text << _INTL("Toggle Hat: D\n")
 
   end
 
@@ -91,7 +91,7 @@ class HairMartAdapter < OutfitsMartAdapter
   end
 
   def getDescription(item)
-    return DEFAULT_DESCRIPTION if !item.description
+    return _INTL(DEFAULT_DESCRIPTION) if !item.description
     return item.description
   end
 

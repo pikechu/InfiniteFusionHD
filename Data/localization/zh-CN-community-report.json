@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "language": "zh-CN",
-  "records": 20022,
-  "unique_sources": 14423,
-  "sprites": 14512,
+  "records": 82207,
+  "unique_sources": 75444,
+  "sprites": 74198,
   "source_sha256": "964f765a5f91b4547ada77fa025af567683ea55a0a1d6fa559845e5d95397299",
-  "translation_sha256": "a99bff85b886ccf0318cd35f4d75483394570dbba25c95377ebcaa76a68eb7a2",
-  "translation_bytes": 6700590,
+  "translation_sha256": "0dd34901931cd870442eba09e3d7d5669144aee39979aa63ba27787f72e271bb",
+  "translation_bytes": 31225259,
   "translation_method": "Complete AI sentence-by-sentence proofreading against the English originals, with Wiki terminology/context references; previous OPUS draft and authorized Google paragraph comparison retained as provenance, not final authority",
   "source_and_credits_preserved": true,
   "untranslated_english_sentences": 0,
@@ -29,7 +29,8 @@
   "native_validation": {
     "community": "2026-10-27 10:28:51 UTC CUSTOM_DEX_NATIVE_PASS entries=15005 sprites=14412 pages=15099 language_rounds=3 normal_player_saves=false",
     "images": "2026-10-27 04:34:57 UTC CHINESE_IMAGES_NATIVE_PASS images=111 language_rounds=3 direct_and_cache=true normal_player_saves=false",
-    "main_integration": "2026-10-27 10:46:18 UTC CUSTOM_DEX_NATIVE_PASS entries=82207 translated=20022 sprites=74198 pages=20148 language_rounds=3 normal_player_saves=false"
+    "main_integration": "2026-10-27 10:46:18 UTC CUSTOM_DEX_NATIVE_PASS entries=82207 translated=20022 sprites=74198 pages=20148 language_rounds=3 normal_player_saves=false",
+    "expanded_corpus": "2026-10-28 04:38:10 UTC CUSTOM_DEX_NATIVE_PASS entries=82207 translated=82207 sprites=74198 pages=83570 language_rounds=3 normal_player_saves=false"
   },
   "android_device_checked": false,
   "installer_built": false,
@@ -193,9 +194,68 @@
       "normal_player_saves_accessed": false
     }
   },
-  "whole_entry_overrides": 14423,
-  "records_using_whole_entry_overrides": 20022,
+  "whole_entry_overrides": 75444,
+  "records_using_whole_entry_overrides": 82207,
   "full_sentence_review": {
+    "previous_reviewed_sources": 974,
+    "new_reviewed_sources": 74470,
+    "reviewed_sources": 75444,
+    "reviewed_records": 82207,
+    "remaining_sources": 0,
+    "shards": {
+      "a.json": 4613,
+      "b.json": 4413,
+      "c-extra.json": 600,
+      "c.json": 3413,
+      "expansion-a.json": 18800,
+      "expansion-b.json": 17200,
+      "expansion-c.json": 15521,
+      "expansion-root.json": 9500,
+      "root-extra.json": 200,
+      "root.json": 210
+    },
+    "complete": true,
+    "human_translator_sign_off": false,
+    "parallel_review_authorized_by_user": true,
+    "coverage_report": "Data/localization/zh-CN-dex-proofread-progress.json",
+    "offline_builder": "scripts/localization/build_proofread_dex.py",
+    "review_scope": "All 82,207 current community records / 75,444 exact English source paragraphs",
+    "source_phase": "post-Android.14 expansion",
+    "previous_android14_reviewed_sources": 14423,
+    "expansion_sources_reviewed": 61021,
+    "parent_second_pass_reviewed": 1284,
+    "parent_second_pass_changed": 1150,
+    "native_pages_checked": 83570,
+    "shard_sha256": {
+      "a.json": "9ae3ab94c5c014ceea489ab4e718a8f55b75d32bcbab420248e7eacd69af21e5",
+      "b.json": "a080019b85e0d2c0753561d1a1fbfdc4928bd4f4eb699cead6579352086b7aaf",
+      "c-extra.json": "22441e0b6fd0fe736dbb9c8d6bff1d6500e41af1cbde19b060551e279e80058d",
+      "c.json": "08eecfa4ca2e2e5788930107e8808ee6b9eed33fc9e886a31781f41e31998a63",
+      "expansion-a.json": "36e3902451302be98f38503ca3dcedbc6b11b1fa2f4f6ac342fe8fc53cb478fc",
+      "expansion-b.json": "b3de8e334cd5e0f1b90c82a32df697f6236b547e8cab3d96fa76f2417aaf7518",
+      "expansion-c.json": "93dc843e4f8e16b5c8ccbdeead1a3e5e49fb767bd5d6c6828f041e429fc6291a",
+      "expansion-root.json": "4499c5beda7e03c24cdf1adbf7d6d196a7cc532bf45ac82be1e91ab62c24cd01",
+      "root-extra.json": "65442923ee6458d3cba4cb8c33bb919f32ccfc8c7476aae0e5d29b77c174a3bb",
+      "root.json": "50e98395d45c17208c14dd29c2c2cfa9c8594f62011b436aa4d7a833ab1a2fd2"
+    }
+  },
+  "review_source_snapshot": {
+    "path": "Data/localization/zh-CN-dex-source.json",
+    "sha256": "964f765a5f91b4547ada77fa025af567683ea55a0a1d6fa559845e5d95397299",
+    "records": 82207,
+    "unique_sources": 75444,
+    "original_input_sha256": "964f765a5f91b4547ada77fa025af567683ea55a0a1d6fa559845e5d95397299"
+  },
+  "upstream_integration": {
+    "game_records": 82207,
+    "translated_records": 82207,
+    "untranslated_game_records": 0,
+    "unreviewed_unique_sources": 0,
+    "preserve_upstream_english": true,
+    "source_sha256": "964f765a5f91b4547ada77fa025af567683ea55a0a1d6fa559845e5d95397299",
+    "user_approved_scope": "Finish all current community descriptions with Wiki-informed sentence review."
+  },
+  "android14_completed_review": {
     "complete": true,
     "previous_reviewed_sources": 974,
     "new_reviewed_sources": 13449,
@@ -224,14 +284,14 @@
       "root.json": "eeac57a716f6e1ed4ff3f106d923755ea5a9ab1e5f48afcaa7630103647d5bcf"
     }
   },
-  "review_source_snapshot": {
+  "android14_review_source_snapshot": {
     "path": "Data/localization/zh-CN-dex-source.json",
     "sha256": "89fa995d1a247c14013cce9edc683639d56249ca1f82a09fbbb56a191570cd04",
     "records": 15005,
     "unique_sources": 14423,
     "original_input_sha256": "068e6c26f54cce55fa632cf742209494243c56438a20df02ceffd99753831d10"
   },
-  "upstream_integration": {
+  "android14_upstream_integration": {
     "game_records": 82207,
     "translated_records": 20022,
     "exact_reviewed_text_reused_for_additional_records": 5017,
@@ -239,5 +299,22 @@
     "unreviewed_unique_sources": 61021,
     "preserve_upstream_english": true,
     "user_approved_scope": "Keep latest main; ship reviewed prose now, retain new prose in English."
-  }
+  },
+  "font_glyph_validation": {
+    "reviewed_texts": 75452,
+    "unique_visible_characters": 3820,
+    "font": "Fonts/NotoSansSC-Regular.otf",
+    "font_sha256": "faa6c9df652116dde789d351359f3d7e5d2285a2b2a1f04a2d7244df706d5ea9",
+    "missing": [],
+    "complete_corpus_review": true,
+    "in_corpus_unique_sources": 75444,
+    "legacy_outside_scope": 0
+  },
+  "numeric_expansion_review": {
+    "sources": 61021,
+    "evidence_cases": 161,
+    "remaining_confirmed_errors": 0
+  },
+  "expansion_reference_notes": "Data/localization/zh-CN-dex-expansion-reference-notes.json",
+  "expansion_translation_method": "Direct AI sentence translation and review with Wiki/game terminology; no new Google Translate requests."
 }
