@@ -1,5 +1,12 @@
 param([string]$Url, [string]$Destination, [string]$Status, [int]$Limit = 8388608)
 $ErrorActionPreference = 'Stop'
+function Get-ResourceBodyLimit([Uri]$ResourceUrl) {
+    if ($ResourceUrl.Host -eq 'raw.githubusercontent.com' -and
+        $ResourceUrl.AbsolutePath -match '^/pikechu/InfiniteFusionHD/(?:main|[0-9a-f]{40})/Data/pokedex/(?:dex|dex_zh)\.json$') {
+        return 33554432
+    }
+    return 8388608
+}
 function Report($value) {
     $value | ConvertTo-Json -Compress | Set-Content -LiteralPath ($Status + '.pending') -Encoding UTF8
     Move-Item -LiteralPath ($Status + '.pending') -Destination $Status -Force
@@ -7,7 +14,7 @@ function Report($value) {
 try {
     $target = [Uri]$Url
     if ($target.Scheme -ne 'https' -or $target.Host -notin @('raw.githubusercontent.com', 'infinitefusion.net') -or
-        $target.UserInfo -or $Limit -lt 1 -or $Limit -gt 8388608) { throw 'Invalid resource request' }
+        $target.UserInfo -or $Limit -lt 1 -or $Limit -gt (Get-ResourceBodyLimit $target)) { throw 'Invalid resource request' }
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     $request = [Net.HttpWebRequest]::Create($target)
     $request.AllowAutoRedirect = $false

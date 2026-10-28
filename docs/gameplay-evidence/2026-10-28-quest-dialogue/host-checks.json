@@ -32,8 +32,8 @@
       "test": "android/tests/payload_package_test.py",
       "exit_code": 0,
       "reason": null,
-      "output_bytes": 2073,
-      "tail": "test_build_main_refuses_partial_before_any_compile_or_pack_command (__main__.PayloadPackageTest.test_build_main_refuses_partial_before_any_compile_or_pack_command) ... ok\r\ntest_build_source_snapshot_detects_concurrent_edits (__main__.PayloadPackageTest.test_build_source_snapshot_detects_concurrent_edits) ... ok\r\ntest_lossless_aliases_keep_every_original_path (__main__.PayloadPackageTest.test_lossless_aliases_keep_every_original_path) ... ok\r\ntest_network_marker_is_exclusive_to_network_variant (__main__.PayloadPackageTest.test_network_marker_is_exclusive_to_network_variant) ... ok\r\ntest_refresh_old_and_deduplicated_payloads (__main__.PayloadPackageTest.test_refresh_old_and_deduplicated_payloads) ... Refreshing Ruby: 0/10\r\nRuby/config snapshot refreshed: 10 logical / 9 archived, id=872a16191f58d46e38179665\r\nRefreshing Ruby: 0/10\r\nRuby/config snapshot refreshed: 10 logical / 9 archived, id=872a16191f58d46e38179665\r\nok\r\ntest_reject_alias_chain_mismatch_and_missing_source (__main__.PayloadPackageTest.test_reject_alias_chain_mismatch_and_missing_source) ... ok\r\ntest_reject_corrupt_missing_and_duplicate_zip_members (__main__.PayloadPackageTest.test_reject_corrupt_missing_and_duplicate_zip_members) ... D:\\Users\\meikun.zhang\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\zipfile\\__init__.py:1625: UserWarning: Duplicate name: 'a.bin'\r\n  return self._open_to_write(zinfo, force_zip64=force_zip64)\r\nok\r\ntest_reject_leftover_partial_before_aapt_collection (__main__.PayloadPackageTest.test_reject_leftover_partial_before_aapt_collection) ... ok\r\ntest_reproducible_archive_and_manifest (__main__.PayloadPackageTest.test_reproducible_archive_and_manifest) ... ok\r\ntest_skip_payload_rejects_stale_game_script (__main__.PayloadPackageTest.test_skip_payload_rejects_stale_game_script) ... ok\r\ntest_strict_assets_reject_unknown_files_and_directories (__main__.PayloadPackageTest.test_strict_assets_reject_unknown_files_and_directories) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 11 tests in 18.868s\r\n\r\nOK\r\n"
+      "output_bytes": 2075,
+      "tail": "test_build_main_refuses_partial_before_any_compile_or_pack_command (__main__.PayloadPackageTest.test_build_main_refuses_partial_before_any_compile_or_pack_command) ... ok\r\ntest_build_source_snapshot_detects_concurrent_edits (__main__.PayloadPackageTest.test_build_source_snapshot_detects_concurrent_edits) ... ok\r\ntest_lossless_aliases_keep_every_original_path (__main__.PayloadPackageTest.test_lossless_aliases_keep_every_original_path) ... ok\r\ntest_network_marker_is_exclusive_to_network_variant (__main__.PayloadPackageTest.test_network_marker_is_exclusive_to_network_variant) ... ok\r\ntest_refresh_old_and_deduplicated_payloads (__main__.PayloadPackageTest.test_refresh_old_and_deduplicated_payloads) ... Refreshing Ruby: 0/11\r\nRuby/config snapshot refreshed: 11 logical / 10 archived, id=045297dba26e60c1aecf3209\r\nRefreshing Ruby: 0/11\r\nRuby/config snapshot refreshed: 11 logical / 10 archived, id=045297dba26e60c1aecf3209\r\nok\r\ntest_reject_alias_chain_mismatch_and_missing_source (__main__.PayloadPackageTest.test_reject_alias_chain_mismatch_and_missing_source) ... ok\r\ntest_reject_corrupt_missing_and_duplicate_zip_members (__main__.PayloadPackageTest.test_reject_corrupt_missing_and_duplicate_zip_members) ... D:\\Users\\meikun.zhang\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\zipfile\\__init__.py:1625: UserWarning: Duplicate name: 'a.bin'\r\n  return self._open_to_write(zinfo, force_zip64=force_zip64)\r\nok\r\ntest_reject_leftover_partial_before_aapt_collection (__main__.PayloadPackageTest.test_reject_leftover_partial_before_aapt_collection) ... ok\r\ntest_reproducible_archive_and_manifest (__main__.PayloadPackageTest.test_reproducible_archive_and_manifest) ... ok\r\ntest_skip_payload_rejects_stale_game_script (__main__.PayloadPackageTest.test_skip_payload_rejects_stale_game_script) ... ok\r\ntest_strict_assets_reject_unknown_files_and_directories (__main__.PayloadPackageTest.test_strict_assets_reject_unknown_files_and_directories) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 11 tests in 42.297s\r\n\r\nOK\r\n"
     },
     {
       "test": "tests/localization/community_data_test.py",
@@ -97,6 +97,13 @@
       "reason": null,
       "output_bytes": 43,
       "tail": "QUEST_DIALOGUE_PASS checks=2376 quests=77\r\n"
+    },
+    {
+      "test": "tests/resources/resource_download_limit_test.ps1",
+      "exit_code": 0,
+      "reason": null,
+      "output_bytes": 0,
+      "tail": "RESOURCE_DOWNLOAD_LIMIT_PASS checks=6 network=false temporary_files=false"
     }
   ],
   "all_passed": true,

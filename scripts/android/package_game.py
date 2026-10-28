@@ -62,7 +62,7 @@ def write_payload(output: Path, runtime_only=False, asset_root=None):
             sources[name] = file
         for file in (ROOT / "Data/Scripts").rglob("*.rb"):
             sources[file.relative_to(ROOT).as_posix()] = file
-        for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat", "Data/offline-resources.json", "Data/localization/source-notice.zh-CN.txt"):
+        for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/resource-download.ps1", "Data/messages_zh.dat", "Data/offline-resources.json", "Data/localization/source-notice.zh-CN.txt"):
             if (ROOT / name).is_file(): sources[name] = ROOT / name
         add_chinese_assets(sources)
     sources["Game.ini"] = ROOT / "Game.ini"
@@ -123,7 +123,7 @@ def refresh_ruby_payload(output: Path):
     tracked = subprocess.check_output(["git", "-C", str(ROOT), "ls-files", "-z", "--", "Data/Scripts"]).decode("utf-8").split("\0")
     scripts = {name: ROOT / name for name in filter(None, tracked)}
     scripts.update({p.relative_to(ROOT).as_posix(): p for p in (ROOT / "Data/Scripts").rglob("*.rb")})
-    for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat", "Data/offline-resources.json", "Data/localization/source-notice.zh-CN.txt"):
+    for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/resource-download.ps1", "Data/messages_zh.dat", "Data/offline-resources.json", "Data/localization/source-notice.zh-CN.txt"):
         if (ROOT / name).is_file(): scripts[name] = ROOT / name
     add_chinese_assets(scripts)
     for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb", "android-network-smoke.rb", "android-font-smoke.rb"):

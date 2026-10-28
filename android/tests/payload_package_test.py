@@ -100,6 +100,7 @@ class PayloadPackageTest(unittest.TestCase):
                 (scripts / "000_Platform.rb").write_bytes(b"new platform\n")
                 (scripts / "001_Example.rb").write_bytes(b"new script\n")
                 (fixture / "Data/messages_zh.dat").write_bytes(b"Chinese language pack")
+                (fixture / "Data/resource-download.ps1").write_bytes(b"new download helper\n")
                 helpers = fixture / "android/ruby"
                 helpers.mkdir(parents=True)
                 for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb",
@@ -108,7 +109,8 @@ class PayloadPackageTest(unittest.TestCase):
                 logical = {"Graphics/canonical.png": b"image bytes" * 100,
                            "Graphics/other.png": b"image bytes" * 100,
                            "Data/Scripts/000_Platform.rb": b"old platform\n",
-                           "Data/Scripts/001_Example.rb": b"old script\n"}
+                           "Data/Scripts/001_Example.rb": b"old script\n",
+                           "Data/resource-download.ps1": b"old download helper\n"}
                 path = output / "payload.zip"
                 manifest = self.write(path, logical)
                 if legacy:
@@ -124,6 +126,7 @@ class PayloadPackageTest(unittest.TestCase):
                 with zipfile.ZipFile(path) as archive:
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/Scripts/001_Example.rb"), b"new script\n")
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/messages_zh.dat"), b"Chinese language pack")
+                    self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/resource-download.ps1"), b"new download helper\n")
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Graphics/other.png"), logical["Graphics/other.png"])
                     self.assertNotIn("Graphics/other.png", archive.namelist())
                 self.assertEqual(refreshed["archiveFormat"], 2)
@@ -143,6 +146,15 @@ class PayloadPackageTest(unittest.TestCase):
         with mock.patch.object(build_apk, "ROOT", fixture):
             snapshot = build_apk.source_snapshot()
             build_apk.assert_sources_unchanged(snapshot)
+            downloader = fixture / "Data/resource-download.ps1"
+            downloader.parent.mkdir(parents=True)
+            downloader.write_bytes(b"first downloader\n")
+            snapshot = build_apk.source_snapshot()
+            self.assertIn("Data/resource-download.ps1", snapshot)
+            downloader.write_bytes(b"edited downloader\n")
+            with self.assertRaisesRegex(SystemExit, "resource-download.ps1"):
+                build_apk.assert_sources_unchanged(snapshot)
+            downloader.write_bytes(b"first downloader\n")
             script.write_bytes(b"edited during compilation\n")
             with self.assertRaisesRegex(SystemExit, "probe.rb"):
                 build_apk.assert_sources_unchanged(snapshot)

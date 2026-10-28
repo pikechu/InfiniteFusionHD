@@ -26,7 +26,7 @@ def source_snapshot():
     paths.update((ROOT / "android/ruby").glob("*.rb"))
     paths.update((ROOT / "Data/Scripts").rglob("*.rb"))
     paths.update((ROOT / "temp/android-generated/java").rglob("*.java"))
-    for name in ("Game.ini", "Data/multiplayer-build.json", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
+    for name in ("Game.ini", "Data/multiplayer-build.json", "Data/resource-download.ps1", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
                  "android/native/kif_android_bridge.c", "scripts/android/build_bridge.ps1",
                  "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py"):
         path = ROOT / name
@@ -42,7 +42,7 @@ def assert_sources_unchanged(expected):
 
 def validate_staged_scripts(manifest):
     for name, expected in manifest["files"].items():
-        if name == "Game.ini" or name == "Data/multiplayer-build.json" or name.startswith("Data/Scripts/"):
+        if name == "Game.ini" or name in ("Data/multiplayer-build.json", "Data/resource-download.ps1") or name.startswith("Data/Scripts/"):
             path = ROOT / name
         elif "/" not in name and name.endswith(".rb"):
             path = ROOT / "android/ruby" / name
