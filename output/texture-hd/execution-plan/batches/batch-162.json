@@ -1,0 +1,228 @@
+{
+  "id": "batch-162",
+  "number": 162,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（11/99）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-161"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-162",
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4281,
+      "source_mtime_ns": 1792048521395265400,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_dive_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 13887,
+      "source_mtime_ns": 1792048521405918500,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_fish_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 14738,
+      "source_mtime_ns": 1792048521406926300,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_run.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4337,
+      "source_mtime_ns": 1792048521406926300,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_surf_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trainer001.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 2715,
+      "source_mtime_ns": 1792048521407923700,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trainer001.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4291,
+      "source_mtime_ns": 1792048521407923700,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trchar001.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Pictures/introGirl.png",
+      "size": [
+        90,
+        160
+      ],
+      "source_bytes": 2628,
+      "source_mtime_ns": 1792048521407923700,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Pictures/introGirl.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Transitions/vsTrainer1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3732,
+      "source_mtime_ns": 1792048521408926200,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Transitions/vsTrainer1.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8850,
+      "source_mtime_ns": 1792048521422856800,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_bike.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6734,
+      "source_mtime_ns": 1792048521427994000,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_dive_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 11110,
+      "source_mtime_ns": 1792048521428996200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fish_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fishsurf_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 10464,
+      "source_mtime_ns": 1792048521428996200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fishsurf_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8632,
+      "source_mtime_ns": 1792048521428996200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_run.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7203,
+      "source_mtime_ns": 1792048521429995200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_surf_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/POKEMONTRAINER_Leaf_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 10843,
+      "source_mtime_ns": 1792048521422337700,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/POKEMONTRAINER_Leaf_back.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7758,
+      "source_mtime_ns": 1792048521429995200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5209,
+      "source_mtime_ns": 1792048521429995200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001_10.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Transitions/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3982,
+      "source_mtime_ns": 1792048521430994200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Transitions/vsTrainer_POKEMONTRAINER_Leaf.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3155,
+      "source_mtime_ns": 1792048521430994200,
+      "canonical_source": "Graphics/Alternate Trainers/trchar001.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/trchar001a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3053,
+      "source_mtime_ns": 1792048521430994200,
+      "canonical_source": "Graphics/Alternate Trainers/trchar001a.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

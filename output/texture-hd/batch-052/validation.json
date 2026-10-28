@@ -1,0 +1,67 @@
+{
+  "batch": "batch-052",
+  "status": "completed",
+  "applied": 3,
+  "preserved": 1,
+  "entries": [
+    {
+      "source": "Graphics/Autotiles/ocean-tropical.png",
+      "status": "applied",
+      "size": [
+        3072,
+        128
+      ],
+      "before_sha256": "825ee27d29ceb1d967bc488b6ead3238fb7e67051b1a44a8e24f0bd64c68fdcb",
+      "after_sha256": "7dde90100fa0012e7dc8a6661bc1ac63999fbb96aff1b51050c20f689f8c0ebf",
+      "generated_sha256": "b4022fb91a546e84cd64322e288adc4ee0ec9c72e64f442459289128f23626bd",
+      "assigned_map_count": 250,
+      "actual_map_count": 29
+    },
+    {
+      "source": "Graphics/Autotiles/ocean.png",
+      "status": "applied",
+      "size": [
+        3072,
+        128
+      ],
+      "before_sha256": "6d9f931f0e0c0f676ec5be2dc00625aa30b4ed6a8aaab95b1d793880b44d7acf",
+      "after_sha256": "e5100f44e484a177fa61df0c98a51d28bb4f9f8672ffe0230fd66bbb43b1ff6d",
+      "generated_sha256": "72db81eb7251a55009ef378fe7a77f5025a634cac729bcb972db98840c241efd",
+      "assigned_map_count": 723,
+      "actual_map_count": 48
+    },
+    {
+      "source": "Graphics/Autotiles/ocean_dark.png",
+      "status": "applied",
+      "size": [
+        3072,
+        128
+      ],
+      "before_sha256": "17cfe4eb62c2a55c601b721935c5eb67c27800f7fdb534ecbe1cb3fb0a9cd575",
+      "after_sha256": "8627356db2e32c1ec0557988c79f5224ec6fe37aa7e6e2e2c007fe7067332489",
+      "generated_sha256": "10628d2a0ad3061c5db3344424fe637b7861e207637c7e9b1b99aff9d336919c",
+      "assigned_map_count": 11,
+      "actual_map_count": 2
+    },
+    {
+      "source": "Graphics/Autotiles/Sand shore.png",
+      "status": "preserved",
+      "size": [
+        768,
+        128
+      ],
+      "sha256": "fd8b8705eb444dce63e1969a77618d1bb7f507b254730e97685198892298db6f",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

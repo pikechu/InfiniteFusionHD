@@ -1,0 +1,277 @@
+{
+  "id": "batch-070",
+  "number": 70,
+  "priority": "P2",
+  "stage": "ui_party",
+  "title": "队伍、背包、摘要与通用菜单（7/13）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-069"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-070",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyBall.png",
+      "size": [
+        44,
+        56
+      ],
+      "source_bytes": 10063,
+      "source_mtime_ns": 1792048548354692100,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyBall.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyBallSel.png",
+      "size": [
+        44,
+        56
+      ],
+      "source_bytes": 10063,
+      "source_mtime_ns": 1792048548362692600,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyBallSel.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partybg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 788227,
+      "source_mtime_ns": 1792048548380678600,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partybg.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelBlank.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 12828,
+      "source_mtime_ns": 1792048548370692200,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelBlank.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRect.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548374550600,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRect.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRectSel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548375079300,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRectSel.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRectSelSwap.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548375600800,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRectSelSwap.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRectSwap.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548376126400,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRectSwap.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRound.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548376644400,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRound.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRoundSel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548377167700,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRoundSel.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRoundSelSwap.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548377679400,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRoundSelSwap.png"
+    },
+    {
+      "source": "Graphics/Pictures/goldsilver menu/partyPanelRoundSwap.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 100748,
+      "source_mtime_ns": 1792048548377679400,
+      "canonical_source": "Graphics/Pictures/goldsilver menu/partyPanelRoundSwap.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8448,
+      "source_mtime_ns": 1792048546931625500,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary1.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary2.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8118,
+      "source_mtime_ns": 1792048546931625500,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary2.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary3.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 7968,
+      "source_mtime_ns": 1792048546931625500,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary3.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary4.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8587,
+      "source_mtime_ns": 1792048546932626500,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary4.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary4details.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2727,
+      "source_mtime_ns": 1792048546935624800,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary4details.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary4learning.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2078,
+      "source_mtime_ns": 1792048546935624800,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary4learning.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summary5.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8627,
+      "source_mtime_ns": 1792048546936625000,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summary5.png"
+    },
+    {
+      "source": "Graphics/Pictures/GS Summary Backgrounds/summaryEgg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 7642,
+      "source_mtime_ns": 1792048546936625000,
+      "canonical_source": "Graphics/Pictures/GS Summary Backgrounds/summaryEgg.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 898,
+      "source_mtime_ns": 1792048547322453300,
+      "canonical_source": "Graphics/Pictures/Party/bg.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_ball.png",
+      "size": [
+        44,
+        56
+      ],
+      "source_bytes": 660,
+      "source_mtime_ns": 1792048547322453300,
+      "canonical_source": "Graphics/Pictures/Party/icon_ball.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_ball_sel.png",
+      "size": [
+        44,
+        56
+      ],
+      "source_bytes": 699,
+      "source_mtime_ns": 1792048547323558800,
+      "canonical_source": "Graphics/Pictures/Party/icon_ball_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel.png",
+      "size": [
+        112,
+        48
+      ],
+      "source_bytes": 492,
+      "source_mtime_ns": 1792048547328265200,
+      "canonical_source": "Graphics/Pictures/Party/icon_cancel.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-070/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24,
+  "candidate_files": 0
+}

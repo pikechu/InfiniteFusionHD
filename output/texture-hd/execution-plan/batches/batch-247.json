@@ -1,0 +1,228 @@
+{
+  "id": "batch-247",
+  "number": 247,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（96/99）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-246"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-247",
+  "entries": [
+    {
+      "source": "Graphics/Characters/SCOLIPEDE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5051,
+      "source_mtime_ns": 1792048540691203400,
+      "canonical_source": "Graphics/Characters/SCOLIPEDE.png"
+    },
+    {
+      "source": "Graphics/Characters/SCRAGGY.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3933,
+      "source_mtime_ns": 1792048540691731900,
+      "canonical_source": "Graphics/Characters/SCRAGGY.png"
+    },
+    {
+      "source": "Graphics/Characters/seagallop.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_bytes": 4442,
+      "source_mtime_ns": 1792048542445425100,
+      "canonical_source": "Graphics/Characters/seagallop.png"
+    },
+    {
+      "source": "Graphics/Characters/shadow.png",
+      "size": [
+        24,
+        12
+      ],
+      "source_bytes": 2855,
+      "source_mtime_ns": 1792048542445978900,
+      "canonical_source": "Graphics/Characters/shadow.png"
+    },
+    {
+      "source": "Graphics/Characters/SHARPEDO.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4204,
+      "source_mtime_ns": 1792048540691731900,
+      "canonical_source": "Graphics/Characters/SHARPEDO.png"
+    },
+    {
+      "source": "Graphics/Characters/silhouette.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 16290,
+      "source_mtime_ns": 1792048542445978900,
+      "canonical_source": "Graphics/Characters/silhouette.png"
+    },
+    {
+      "source": "Graphics/Characters/starter.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1400,
+      "source_mtime_ns": 1792048542446501700,
+      "canonical_source": "Graphics/Characters/starter.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsDown.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 119,
+      "source_mtime_ns": 1792048542446501700,
+      "canonical_source": "Graphics/Characters/stepsDown.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsDownBike.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 104,
+      "source_mtime_ns": 1792048542447026800,
+      "canonical_source": "Graphics/Characters/stepsDownBike.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsLeft.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 112,
+      "source_mtime_ns": 1792048542447551100,
+      "canonical_source": "Graphics/Characters/stepsLeft.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsLeftBike.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 106,
+      "source_mtime_ns": 1792048542447551100,
+      "canonical_source": "Graphics/Characters/stepsLeftBike.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsRight.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 112,
+      "source_mtime_ns": 1792048542448082200,
+      "canonical_source": "Graphics/Characters/stepsRight.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsRightBike.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 106,
+      "source_mtime_ns": 1792048542448082200,
+      "canonical_source": "Graphics/Characters/stepsRightBike.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsUp.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 119,
+      "source_mtime_ns": 1792048542448612900,
+      "canonical_source": "Graphics/Characters/stepsUp.png"
+    },
+    {
+      "source": "Graphics/Characters/stepsUpBike.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 104,
+      "source_mtime_ns": 1792048542448612900,
+      "canonical_source": "Graphics/Characters/stepsUpBike.png"
+    },
+    {
+      "source": "Graphics/Characters/STUFFUL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4163,
+      "source_mtime_ns": 1792048540692254100,
+      "canonical_source": "Graphics/Characters/STUFFUL.png"
+    },
+    {
+      "source": "Graphics/Characters/SWABLU.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3970,
+      "source_mtime_ns": 1792048540692254100,
+      "canonical_source": "Graphics/Characters/SWABLU.png"
+    },
+    {
+      "source": "Graphics/Characters/SWIRLIX.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3017,
+      "source_mtime_ns": 1792048540692785400,
+      "canonical_source": "Graphics/Characters/SWIRLIX.png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/characters/BW2_rocket(female).png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 4370,
+      "source_mtime_ns": 1792048540694346300,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/characters/BW2_rocket(female).png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/characters/BW2_rocket(male).png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 4395,
+      "source_mtime_ns": 1792048540694346300,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/characters/BW2_rocket(male).png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

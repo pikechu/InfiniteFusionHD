@@ -1,0 +1,323 @@
+{
+  "id": "batch-098",
+  "number": 98,
+  "priority": "P2",
+  "stage": "ui_map",
+  "title": "地区地图、导航、帮助与训练师卡（5/9）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-097"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-098",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Trainer Card/bg.png",
+      "size": [
+        8,
+        8
+      ],
+      "source_bytes": 74,
+      "source_mtime_ns": 1792048548064910400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/bg.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/bg_f.png",
+      "size": [
+        8,
+        8
+      ],
+      "source_bytes": 74,
+      "source_mtime_ns": 1792048548065909100,
+      "canonical_source": "Graphics/Pictures/Trainer Card/bg_f.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Trainer Card/card.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13527,
+      "source_mtime_ns": 1793075480116920700,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/card.PNG",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5377,
+      "source_mtime_ns": 1792048548065909100,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Trainer Card/card_f.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13704,
+      "source_mtime_ns": 1793075480148848100,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card_f.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card_f.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card_f.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/card_f.PNG",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5416,
+      "source_mtime_ns": 1792048548096907200,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card_f.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card_f.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card_f.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Trainer Card/card_f_postgame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14369,
+      "source_mtime_ns": 1793075480300610000,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card_f_postgame.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card_f_postgame.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card_f_postgame.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/card_f_postgame.PNG",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 17578,
+      "source_mtime_ns": 1792048548096907200,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card_f_postgame.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card_f_postgame.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card_f_postgame.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Trainer Card/card_postgame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14189,
+      "source_mtime_ns": 1793075480180830700,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card_postgame.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card_postgame.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card_postgame.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/card_postgame.PNG",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 17191,
+      "source_mtime_ns": 1792048548097912400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/card_postgame.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/card_postgame.PNG",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/card_postgame.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/icon_badges.png",
+      "size": [
+        256,
+        64
+      ],
+      "source_bytes": 17281,
+      "source_mtime_ns": 1792048548097912400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/icon_badges.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Trainer Card/overlay.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8036,
+      "source_mtime_ns": 1793075473129591500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/overlay.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/overlay.png",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/overlay.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/overlay.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15156,
+      "source_mtime_ns": 1792048548098911000,
+      "canonical_source": "Graphics/Pictures/Trainer Card/overlay.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/overlay.png",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/overlay.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Trainer Card/overlay_postgame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8368,
+      "source_mtime_ns": 1793075473146584100,
+      "canonical_source": "Graphics/Pictures/Trainer Card/overlay_postgame.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/overlay_postgame.png",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/overlay_postgame.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/overlay_postgame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 16175,
+      "source_mtime_ns": 1792048548098911000,
+      "canonical_source": "Graphics/Pictures/Trainer Card/overlay_postgame.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Trainer Card/overlay_postgame.png",
+        "chinese": "Graphics/Chinese/Pictures/Trainer Card/overlay_postgame.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/500000.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 33288,
+      "source_mtime_ns": 1792048547820161800,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/500000.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/BLACK.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3010,
+      "source_mtime_ns": 1792048547820161800,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/BLACK.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/BLASTOISE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 6631,
+      "source_mtime_ns": 1792048547820161800,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/BLASTOISE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/BLUE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3010,
+      "source_mtime_ns": 1792048547821158500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/BLUE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/BOULDERBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14555,
+      "source_mtime_ns": 1792048547831156400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/BOULDERBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/BRONZE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3010,
+      "source_mtime_ns": 1792048547832156800,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/BRONZE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/CASCADEBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14875,
+      "source_mtime_ns": 1792048547832156800,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/CASCADEBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/CHARIZARD.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 7765,
+      "source_mtime_ns": 1792048547833161600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/CHARIZARD.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/EARTHBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14048,
+      "source_mtime_ns": 1792048547833161600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/EARTHBADGE.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "batch-112",
+  "number": 112,
+  "priority": "P2",
+  "stage": "player_body",
+  "title": "其余主角身体与冲浪底层（4/5）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-111"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-112",
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_HeadLegs.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6366,
+      "source_mtime_ns": 1792048542429287100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_HeadLegs.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Insectoid.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6643,
+      "source_mtime_ns": 1792048542429287100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Insectoid.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_MultiBody.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6257,
+      "source_mtime_ns": 1792048542429810100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_MultiBody.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Multiped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6768,
+      "source_mtime_ns": 1792048542430335800,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Multiped.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_MultiWinged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6499,
+      "source_mtime_ns": 1792048542429810100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_MultiWinged.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Quadruped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6146,
+      "source_mtime_ns": 1792048542430335800,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Quadruped.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Serpentine.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6899,
+      "source_mtime_ns": 1792048542430862600,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Serpentine.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Winged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 5795,
+      "source_mtime_ns": 1792048542431389700,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Winged.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Bipedal.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6783,
+      "source_mtime_ns": 1792048542431389700,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Bipedal.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_BipedalTail.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6731,
+      "source_mtime_ns": 1792048542431913900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_BipedalTail.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_board.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7921,
+      "source_mtime_ns": 1792048542437977800,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_board.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Finned.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7093,
+      "source_mtime_ns": 1792048542432441000,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Finned.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Head.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 5945,
+      "source_mtime_ns": 1792048542432976000,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Head.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_HeadArms.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6400,
+      "source_mtime_ns": 1792048542432976000,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_HeadArms.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_HeadBase.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6293,
+      "source_mtime_ns": 1792048542433505900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_HeadBase.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_HeadLegs.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6193,
+      "source_mtime_ns": 1792048542433505900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_HeadLegs.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Insectoid.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6585,
+      "source_mtime_ns": 1792048542434041100,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Insectoid.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_MultiBody.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7528,
+      "source_mtime_ns": 1792048542434568200,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_MultiBody.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Multiped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6445,
+      "source_mtime_ns": 1792048542435100200,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Multiped.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_MultiWinged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7150,
+      "source_mtime_ns": 1792048542434568200,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_MultiWinged.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

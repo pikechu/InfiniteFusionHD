@@ -1,0 +1,328 @@
+{
+  "id": "batch-060",
+  "number": 60,
+  "priority": "P2",
+  "stage": "ui_battle",
+  "title": "战斗界面、血条、按钮、状态与属性图（3/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-059"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-060",
+  "entries": [
+    {
+      "source": "Graphics/Chinese/Pictures/types.png",
+      "size": [
+        64,
+        784
+      ],
+      "source_bytes": 26487,
+      "source_mtime_ns": 1793075472409016100,
+      "canonical_source": "Graphics/Pictures/types.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/types.png",
+        "chinese": "Graphics/Chinese/Pictures/types.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/types.png",
+      "size": [
+        64,
+        784
+      ],
+      "source_bytes": 11738,
+      "source_mtime_ns": 1792048548700082200,
+      "canonical_source": "Graphics/Pictures/types.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/types.png",
+        "chinese": "Graphics/Chinese/Pictures/types.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/types_display.png",
+      "size": [
+        64,
+        728
+      ],
+      "source_bytes": 24208,
+      "source_mtime_ns": 1793075472490648600,
+      "canonical_source": "Graphics/Pictures/types_display.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/types_display.png",
+        "chinese": "Graphics/Chinese/Pictures/types_display.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/types_display.png",
+      "size": [
+        64,
+        728
+      ],
+      "source_bytes": 8001,
+      "source_mtime_ns": 1792048548701080900,
+      "canonical_source": "Graphics/Pictures/types_display.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/types_display.png",
+        "chinese": "Graphics/Chinese/Pictures/types_display.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/ability_bar.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 941,
+      "source_mtime_ns": 1792048546049770200,
+      "canonical_source": "Graphics/Pictures/Battle/ability_bar.png"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/battler_shadow_1.PNG",
+      "size": [
+        52,
+        16
+      ],
+      "source_bytes": 133,
+      "source_mtime_ns": 1792048546049770200,
+      "canonical_source": "Graphics/Pictures/Battle/battler_shadow_1.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/battler_shadow_2.PNG",
+      "size": [
+        72,
+        16
+      ],
+      "source_bytes": 131,
+      "source_mtime_ns": 1792048546084947300,
+      "canonical_source": "Graphics/Pictures/Battle/battler_shadow_2.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/battler_shadow_3.PNG",
+      "size": [
+        100,
+        20
+      ],
+      "source_bytes": 141,
+      "source_mtime_ns": 1792048546085952700,
+      "canonical_source": "Graphics/Pictures/Battle/battler_shadow_3.PNG"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Battle/cursor_command.png",
+      "size": [
+        260,
+        460
+      ],
+      "source_bytes": 79032,
+      "source_mtime_ns": 1793075471760828800,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_command.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_command.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_command.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_command.png",
+      "size": [
+        260,
+        460
+      ],
+      "source_bytes": 6943,
+      "source_mtime_ns": 1792048546085952700,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_command.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_command.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_command.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Battle/cursor_command_darkmode.png",
+      "size": [
+        260,
+        460
+      ],
+      "source_bytes": 77856,
+      "source_mtime_ns": 1793075471898215200,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_command_darkmode.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_command_darkmode.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_command_darkmode.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_command_darkmode.png",
+      "size": [
+        260,
+        460
+      ],
+      "source_bytes": 21166,
+      "source_mtime_ns": 1792048546086948000,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_command_darkmode.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_command_darkmode.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_command_darkmode.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Battle/cursor_command_M2.png",
+      "size": [
+        260,
+        460
+      ],
+      "source_bytes": 64568,
+      "source_mtime_ns": 1793075472046393600,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_command_M2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_command_M2.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_command_M2.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_command_M2.png",
+      "size": [
+        260,
+        460
+      ],
+      "source_bytes": 11462,
+      "source_mtime_ns": 1792048546085952700,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_command_M2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_command_M2.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_command_M2.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_fight.png",
+      "size": [
+        384,
+        874
+      ],
+      "source_bytes": 14496,
+      "source_mtime_ns": 1792048546087949700,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_fight.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Battle/cursor_mega.png",
+      "size": [
+        150,
+        92
+      ],
+      "source_bytes": 8709,
+      "source_mtime_ns": 1793075480324257800,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_mega.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_mega.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_mega.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_mega.png",
+      "size": [
+        150,
+        92
+      ],
+      "source_bytes": 2131,
+      "source_mtime_ns": 1792048546087949700,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_mega.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_mega.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_mega.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Battle/cursor_shift.png",
+      "size": [
+        196,
+        46
+      ],
+      "source_bytes": 4457,
+      "source_mtime_ns": 1793075472308504900,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_shift.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_shift.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_shift.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_shift.png",
+      "size": [
+        196,
+        46
+      ],
+      "source_bytes": 608,
+      "source_mtime_ns": 1792048546087949700,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_shift.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Battle/cursor_shift.png",
+        "chinese": "Graphics/Chinese/Pictures/Battle/cursor_shift.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Battle/cursor_target.png",
+      "size": [
+        472,
+        276
+      ],
+      "source_bytes": 3859,
+      "source_mtime_ns": 1792048546088950700,
+      "canonical_source": "Graphics/Pictures/Battle/cursor_target.png"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/databox_normal.png",
+      "size": [
+        260,
+        84
+      ],
+      "source_bytes": 7790,
+      "source_mtime_ns": 1792048546088950700,
+      "canonical_source": "Graphics/Pictures/Battle/databox_normal.png"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/databox_normal_foe.png",
+      "size": [
+        260,
+        62
+      ],
+      "source_bytes": 7240,
+      "source_mtime_ns": 1792048546089949100,
+      "canonical_source": "Graphics/Pictures/Battle/databox_normal_foe.png"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/databox_safari.png",
+      "size": [
+        232,
+        78
+      ],
+      "source_bytes": 1102,
+      "source_mtime_ns": 1792048546089949100,
+      "canonical_source": "Graphics/Pictures/Battle/databox_safari.png"
+    },
+    {
+      "source": "Graphics/Pictures/Battle/databox_thin.png",
+      "size": [
+        260,
+        62
+      ],
+      "source_bytes": 6885,
+      "source_mtime_ns": 1792048546090949400,
+      "canonical_source": "Graphics/Pictures/Battle/databox_thin.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-060/validation.json",
+  "applied_files": 6,
+  "preserved_files": 18
+}

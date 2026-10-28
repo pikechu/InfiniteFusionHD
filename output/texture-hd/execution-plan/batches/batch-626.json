@@ -1,0 +1,107 @@
+{
+  "id": "batch-626",
+  "number": 626,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（5/116）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-625"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-626",
+  "entries": [
+    {
+      "source": "Graphics/Animations/DustandGrass.png",
+      "size": [
+        768,
+        384
+      ],
+      "source_bytes": 564,
+      "source_mtime_ns": 1792048522213212200,
+      "canonical_source": "Graphics/Animations/DustandGrass.png"
+    },
+    {
+      "source": "Graphics/Animations/Earth1.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 177102,
+      "source_mtime_ns": 1792048522214244500,
+      "canonical_source": "Graphics/Animations/Earth1.png"
+    },
+    {
+      "source": "Graphics/Animations/eb008.png",
+      "size": [
+        64,
+        32
+      ],
+      "source_bytes": 331,
+      "source_mtime_ns": 1792048522720174200,
+      "canonical_source": "Graphics/Animations/eb008.png"
+    },
+    {
+      "source": "Graphics/Animations/eb008_2.png",
+      "size": [
+        12,
+        12
+      ],
+      "source_bytes": 311,
+      "source_mtime_ns": 1792048522720174200,
+      "canonical_source": "Graphics/Animations/eb008_2.png"
+    },
+    {
+      "source": "Graphics/Animations/eb010.png",
+      "size": [
+        40,
+        40
+      ],
+      "source_bytes": 1615,
+      "source_mtime_ns": 1792048522721174600,
+      "canonical_source": "Graphics/Animations/eb010.png"
+    },
+    {
+      "source": "Graphics/Animations/eb024.png",
+      "size": [
+        12,
+        12
+      ],
+      "source_bytes": 226,
+      "source_mtime_ns": 1792048522721174600,
+      "canonical_source": "Graphics/Animations/eb024.png"
+    },
+    {
+      "source": "Graphics/Animations/eb027.png",
+      "size": [
+        186,
+        36
+      ],
+      "source_bytes": 2162,
+      "source_mtime_ns": 1792048522721174600,
+      "canonical_source": "Graphics/Animations/eb027.png"
+    },
+    {
+      "source": "Graphics/Animations/eb027_2.png",
+      "size": [
+        46,
+        46
+      ],
+      "source_bytes": 369,
+      "source_mtime_ns": 1792048522721174600,
+      "canonical_source": "Graphics/Animations/eb027_2.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ]
+}

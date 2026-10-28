@@ -1,0 +1,259 @@
+{
+  "id": "batch-008",
+  "number": 8,
+  "priority": "P1",
+  "stage": "ground",
+  "title": "其余战斗地台：按环境合并敌我两侧与昼夜版本（3/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ground",
+  "processing_notes": "逐图 AI 补绘地面材质；敌我两侧同批，保留原始轮廓、位置与透明通道；与现有背景合成检查。",
+  "depends_on": [
+    "batch-005",
+    "batch-007"
+  ],
+  "file_count": 23,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-008",
+  "entries": [
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_dirt.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 101300,
+      "source_mtime_ns": 1792048527846219100,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_dirt.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/field_dirt.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5667,
+      "source_mtime_ns": 1792048528081971600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/field_dirt.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_grass.png",
+      "size": [
+        270,
+        128
+      ],
+      "source_bytes": 62519,
+      "source_mtime_ns": 1792048527847219500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_grass.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/field_grass.png",
+      "size": [
+        408,
+        93
+      ],
+      "source_bytes": 5841,
+      "source_mtime_ns": 1792048528082967600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/field_grass.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_puddle.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71483,
+      "source_mtime_ns": 1792048527848218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_puddle.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/field_puddle.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 6348,
+      "source_mtime_ns": 1792048528082967600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/field_puddle.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_sand.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 78532,
+      "source_mtime_ns": 1792048527849217200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_sand.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/field_sand.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5406,
+      "source_mtime_ns": 1792048528083968300,
+      "canonical_source": "Graphics/Battlebacks/playerbase/field_sand.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_water.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71483,
+      "source_mtime_ns": 1792048527850218500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/field_water.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 6348,
+      "source_mtime_ns": 1792048528083968300,
+      "canonical_source": "Graphics/Battlebacks/playerbase/field_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/flyinggym.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527850218500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/flyinggym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/flyinggym.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048528084968900,
+      "canonical_source": "Graphics/Battlebacks/playerbase/flyinggym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/forest_eve.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 103125,
+      "source_mtime_ns": 1792048527860668700,
+      "canonical_source": "Graphics/Battlebacks/enemybase/forest_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/forest_night.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 103125,
+      "source_mtime_ns": 1792048527862739300,
+      "canonical_source": "Graphics/Battlebacks/enemybase/forest_night.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/forest_eve.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5520,
+      "source_mtime_ns": 1792048528085966900,
+      "canonical_source": "Graphics/Battlebacks/playerbase/forest_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/forest_grass.png",
+      "size": [
+        270,
+        128
+      ],
+      "source_bytes": 66103,
+      "source_mtime_ns": 1792048527861187800,
+      "canonical_source": "Graphics/Battlebacks/enemybase/forest_grass.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/forest_grass.png",
+      "size": [
+        408,
+        93
+      ],
+      "source_bytes": 5670,
+      "source_mtime_ns": 1792048528115965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/forest_grass.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/forest_mud.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 78224,
+      "source_mtime_ns": 1792048527862220500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/forest_mud.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/forest_mud.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5240,
+      "source_mtime_ns": 1792048528115965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/forest_mud.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/ghostgym.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527863257300,
+      "canonical_source": "Graphics/Battlebacks/enemybase/ghostgym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/ghostgym.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048528115965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/ghostgym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/giovanni.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527863257300,
+      "canonical_source": "Graphics/Battlebacks/enemybase/giovanni.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/giovanni.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048528116966100,
+      "canonical_source": "Graphics/Battlebacks/playerbase/giovanni.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
+  ],
+  "result": "output/texture-hd/batch-008/validation.json"
+}

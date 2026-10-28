@@ -1,0 +1,28 @@
+{
+  "batch": "batch-031",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 1,
+  "entries": [
+    {
+      "source": "Graphics/Tilesets/Mansion interior.PNG",
+      "status": "preserved",
+      "size": [
+        256,
+        928
+      ],
+      "sha256": "dd18c22e6ea3c660211cbfb85343404cba7783727b0dfcb1135c2cd325a27d39",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

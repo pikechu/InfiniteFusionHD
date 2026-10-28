@@ -1,0 +1,297 @@
+{
+  "id": "batch-102",
+  "number": 102,
+  "priority": "P2",
+  "stage": "ui_map",
+  "title": "地区地图、导航、帮助与训练师卡（9/9）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-101"
+  ],
+  "file_count": 23,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-102",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SNEASEL_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5192,
+      "source_mtime_ns": 1792048548057908400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SNEASEL_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SOLOSIS_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2614,
+      "source_mtime_ns": 1792048548057908400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SOLOSIS_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SQUIRTLE_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2502,
+      "source_mtime_ns": 1792048548057908400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SQUIRTLE_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SWINUB_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4031,
+      "source_mtime_ns": 1792048548058908500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SWINUB_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SYLVEON_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4926,
+      "source_mtime_ns": 1792048548062907700,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/SYLVEON_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/TOGEKISS_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3772,
+      "source_mtime_ns": 1792048548062907700,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/TOGEKISS_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/TRAPINCH_FLAG.png",
+      "size": [
+        576,
+        432
+      ],
+      "source_bytes": 3538,
+      "source_mtime_ns": 1792048548063908600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/TRAPINCH_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/TREVENANT_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 6288,
+      "source_mtime_ns": 1792048548063908600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/TREVENANT_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/VOLCARONA_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5997,
+      "source_mtime_ns": 1792048548063908600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/VOLCARONA_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/VOLTORB_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3842,
+      "source_mtime_ns": 1792048548064910400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/VOLTORB_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/WHIMSICOTT_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3874,
+      "source_mtime_ns": 1792048548064910400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/WHIMSICOTT_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/XATU_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3317,
+      "source_mtime_ns": 1792048548064910400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/XATU_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/blank.png",
+      "size": [
+        106,
+        76
+      ],
+      "source_bytes": 4461,
+      "source_mtime_ns": 1792048548099908200,
+      "canonical_source": "Graphics/Pictures/Tutor.net/blank.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/compat.png",
+      "size": [
+        48,
+        192
+      ],
+      "source_bytes": 5735,
+      "source_mtime_ns": 1792048548099908200,
+      "canonical_source": "Graphics/Pictures/Tutor.net/compat.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/moncursor.png",
+      "size": [
+        80,
+        28
+      ],
+      "source_bytes": 4470,
+      "source_mtime_ns": 1792048548100908800,
+      "canonical_source": "Graphics/Pictures/Tutor.net/moncursor.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_bigger_frame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 6450,
+      "source_mtime_ns": 1793075473755049700,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_bigger_frame.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 9160,
+      "source_mtime_ns": 1792048548109907600,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_bigger_frame.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 6722,
+      "source_mtime_ns": 1793075473770046800,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 9107,
+      "source_mtime_ns": 1792048548110910400,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_bigger_frame_blue.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_default.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4495,
+      "source_mtime_ns": 1793075473786049000,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_default.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_default.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_default.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/tutornetbg_default.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 7071,
+      "source_mtime_ns": 1792048548110910400,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_default.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_default.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_default.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_default_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4134,
+      "source_mtime_ns": 1793075473800047300,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_default_blue.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_default_blue.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_default_blue.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Tutor.net/tutornetbg_default_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 6001,
+      "source_mtime_ns": 1792048548111916800,
+      "canonical_source": "Graphics/Pictures/Tutor.net/tutornetbg_default_blue.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Tutor.net/tutornetbg_default_blue.png",
+        "chinese": "Graphics/Chinese/Pictures/Tutor.net/tutornetbg_default_blue.png"
+      }
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "id": "batch-518",
+  "number": 518,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（7/29）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-517"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-518",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/hallfamebars.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 269,
+      "source_mtime_ns": 1792048548380678600,
+      "canonical_source": "Graphics/Pictures/hallfamebars.png"
+    },
+    {
+      "source": "Graphics/Pictures/hallfamebg.new.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 11436,
+      "source_mtime_ns": 1792048548380678600,
+      "canonical_source": "Graphics/Pictures/hallfamebg.new.png"
+    },
+    {
+      "source": "Graphics/Pictures/hallfamebg.png",
+      "size": [
+        8,
+        24
+      ],
+      "source_bytes": 90,
+      "source_mtime_ns": 1792048548380678600,
+      "canonical_source": "Graphics/Pictures/hallfamebg.png"
+    },
+    {
+      "source": "Graphics/Pictures/hallfamebg_multiline.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8672,
+      "source_mtime_ns": 1792048548390679900,
+      "canonical_source": "Graphics/Pictures/hallfamebg_multiline.png"
+    },
+    {
+      "source": "Graphics/Pictures/hatchbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5232,
+      "source_mtime_ns": 1792048548391678900,
+      "canonical_source": "Graphics/Pictures/hatchbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpadventurebg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 735,
+      "source_mtime_ns": 1792048548392680100,
+      "canonical_source": "Graphics/Pictures/helpadventurebg.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpArrowKeys.png",
+      "size": [
+        72,
+        44
+      ],
+      "source_bytes": 226,
+      "source_mtime_ns": 1792048548391678900,
+      "canonical_source": "Graphics/Pictures/helpArrowKeys.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 245,
+      "source_mtime_ns": 1792048548392680100,
+      "canonical_source": "Graphics/Pictures/helpbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpCkey.png",
+      "size": [
+        44,
+        42
+      ],
+      "source_bytes": 184,
+      "source_mtime_ns": 1792048548391678900,
+      "canonical_source": "Graphics/Pictures/helpCkey.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpF5key.png",
+      "size": [
+        44,
+        42
+      ],
+      "source_bytes": 197,
+      "source_mtime_ns": 1792048548391678900,
+      "canonical_source": "Graphics/Pictures/helpF5key.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpFkey.png",
+      "size": [
+        44,
+        42
+      ],
+      "source_bytes": 181,
+      "source_mtime_ns": 1792048548391678900,
+      "canonical_source": "Graphics/Pictures/helpFkey.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpXkey.png",
+      "size": [
+        44,
+        42
+      ],
+      "source_bytes": 192,
+      "source_mtime_ns": 1792048548392680100,
+      "canonical_source": "Graphics/Pictures/helpXkey.png"
+    },
+    {
+      "source": "Graphics/Pictures/helpZkey.png",
+      "size": [
+        44,
+        42
+      ],
+      "source_bytes": 190,
+      "source_mtime_ns": 1792048548392680100,
+      "canonical_source": "Graphics/Pictures/helpZkey.png"
+    },
+    {
+      "source": "Graphics/Pictures/hexatrc.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 30561,
+      "source_mtime_ns": 1792048548393678700,
+      "canonical_source": "Graphics/Pictures/hexatrc.png"
+    },
+    {
+      "source": "Graphics/Pictures/hiddenMovebg.png",
+      "size": [
+        512,
+        160
+      ],
+      "source_bytes": 2631,
+      "source_mtime_ns": 1792048548393678700,
+      "canonical_source": "Graphics/Pictures/hiddenMovebg.png"
+    },
+    {
+      "source": "Graphics/Pictures/hiddenMoveStrobes.png",
+      "size": [
+        52,
+        32
+      ],
+      "source_bytes": 163,
+      "source_mtime_ns": 1792048548393678700,
+      "canonical_source": "Graphics/Pictures/hiddenMoveStrobes.png"
+    },
+    {
+      "source": "Graphics/Pictures/hparea.png",
+      "size": [
+        180,
+        16
+      ],
+      "source_bytes": 249,
+      "source_mtime_ns": 1792048548394679400,
+      "canonical_source": "Graphics/Pictures/hparea.png"
+    },
+    {
+      "source": "Graphics/Pictures/hpbars.png",
+      "size": [
+        180,
+        60
+      ],
+      "source_bytes": 711,
+      "source_mtime_ns": 1792048548394679400,
+      "canonical_source": "Graphics/Pictures/hpbars.png"
+    },
+    {
+      "source": "Graphics/Pictures/hpind.png",
+      "size": [
+        76,
+        22
+      ],
+      "source_bytes": 314,
+      "source_mtime_ns": 1792048548394679400,
+      "canonical_source": "Graphics/Pictures/hpind.png"
+    },
+    {
+      "source": "Graphics/Pictures/introbase.png",
+      "size": [
+        176,
+        48
+      ],
+      "source_bytes": 273,
+      "source_mtime_ns": 1792048548395687100,
+      "canonical_source": "Graphics/Pictures/introbase.png"
+    },
+    {
+      "source": "Graphics/Pictures/introbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 458,
+      "source_mtime_ns": 1792048548396678500,
+      "canonical_source": "Graphics/Pictures/introbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/introBoy.png",
+      "size": [
+        80,
+        160
+      ],
+      "source_bytes": 1146,
+      "source_mtime_ns": 1792048548394679400,
+      "canonical_source": "Graphics/Pictures/introBoy.png"
+    },
+    {
+      "source": "Graphics/Pictures/introGirl.png",
+      "size": [
+        80,
+        160
+      ],
+      "source_bytes": 1261,
+      "source_mtime_ns": 1792048548395687100,
+      "canonical_source": "Graphics/Pictures/introGirl.png"
+    },
+    {
+      "source": "Graphics/Pictures/introMarill.png",
+      "size": [
+        80,
+        76
+      ],
+      "source_bytes": 524,
+      "source_mtime_ns": 1792048548395687100,
+      "canonical_source": "Graphics/Pictures/introMarill.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

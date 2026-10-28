@@ -1,0 +1,64 @@
+{
+  "batch": "batch-053",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 4,
+  "entries": [
+    {
+      "source": "Graphics/Autotiles/Sea deep.png",
+      "status": "preserved",
+      "size": [
+        768,
+        128
+      ],
+      "sha256": "0ef3dfeef073c18de3859e75281c4e0a82862314c07408efabd6a579dd647c3f",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/Sea without shore.png",
+      "status": "preserved",
+      "size": [
+        768,
+        128
+      ],
+      "sha256": "794e32d4185519b3f0d1caa2e4f858ed2e694d6a0bc28fb46d6c94fa70837a09",
+      "reason": "Assigned to a tileset record, but no production map cell uses its autotile slot. Preserve the unused animation source.",
+      "assigned_map_count": 472,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/Sea.png",
+      "status": "preserved",
+      "size": [
+        768,
+        128
+      ],
+      "sha256": "a5ce81b92ab1955367a5b5d04491605141bf3f57e7a9cfb74a25c0cc4c0a3ce3",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/Sea_default.png",
+      "status": "preserved",
+      "size": [
+        768,
+        128
+      ],
+      "sha256": "abedadfe35d9d8bea6b3f46a076297c9b42ebd5a68fcc28703b13397d3478da0",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

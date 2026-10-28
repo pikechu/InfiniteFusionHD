@@ -1,0 +1,279 @@
+{
+  "id": "batch-376",
+  "number": 376,
+  "priority": "P3",
+  "stage": "outfit",
+  "title": "衣服、头发、帽子与其他玩家分层素材（64/66）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "wearable",
+  "processing_notes": "同一套衣服、头发或帽子的全部动作作为一组；用原主角身体叠穿验收，保护 80×80 等实际分格及偏移。",
+  "depends_on": [
+    "batch-114",
+    "batch-115",
+    "batch-375"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/shop/catalog.json"
+  ],
+  "destination": "output/texture-hd/batch-376",
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/hat/sandshrewbeanie/hat_sandshrewbeanie.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 3760,
+      "source_mtime_ns": 1792048542403584100,
+      "canonical_source": "Graphics/Characters/player/hat/sandshrewbeanie/hat_sandshrewbeanie.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/sandshrewbeanie/hat_trainer_sandshrewbeanie.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3216,
+      "source_mtime_ns": 1792048542404118100,
+      "canonical_source": "Graphics/Characters/player/hat/sandshrewbeanie/hat_trainer_sandshrewbeanie.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/santa/hat_santa.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 2211,
+      "source_mtime_ns": 1792048542404648900,
+      "canonical_source": "Graphics/Characters/player/hat/santa/hat_santa.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/santa/hat_trainer_santa.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 860,
+      "source_mtime_ns": 1792048542404648900,
+      "canonical_source": "Graphics/Characters/player/hat/santa/hat_trainer_santa.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/seacaptain/hat_seacaptain.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 1768,
+      "source_mtime_ns": 1792048542405175700,
+      "canonical_source": "Graphics/Characters/player/hat/seacaptain/hat_seacaptain.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/seacaptain/hat_trainer_seacaptain.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 336,
+      "source_mtime_ns": 1792048542405175700,
+      "canonical_source": "Graphics/Characters/player/hat/seacaptain/hat_trainer_seacaptain.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/seleneSM/hat_seleneSM.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 1536,
+      "source_mtime_ns": 1792048542405699500,
+      "canonical_source": "Graphics/Characters/player/hat/seleneSM/hat_seleneSM.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/seleneSM/hat_trainer_seleneSM.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 714,
+      "source_mtime_ns": 1792048542406262800,
+      "canonical_source": "Graphics/Characters/player/hat/seleneSM/hat_trainer_seleneSM.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/serena/hat_serena.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 1410,
+      "source_mtime_ns": 1792048542406262800,
+      "canonical_source": "Graphics/Characters/player/hat/serena/hat_serena.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/serena/hat_trainer_serena.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 625,
+      "source_mtime_ns": 1792048542406790900,
+      "canonical_source": "Graphics/Characters/player/hat/serena/hat_trainer_serena.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopazure/hat_shopazure.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 4603,
+      "source_mtime_ns": 1792659554354810700,
+      "canonical_source": "Graphics/Characters/player/hat/shopazure/hat_shopazure.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopazure/hat_trainer_shopazure.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3664,
+      "source_mtime_ns": 1792659554368181600,
+      "canonical_source": "Graphics/Characters/player/hat/shopazure/hat_trainer_shopazure.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopember/hat_shopember.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 4580,
+      "source_mtime_ns": 1792659555662856600,
+      "canonical_source": "Graphics/Characters/player/hat/shopember/hat_shopember.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopember/hat_trainer_shopember.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3659,
+      "source_mtime_ns": 1792659555679399900,
+      "canonical_source": "Graphics/Characters/player/hat/shopember/hat_trainer_shopember.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopjade/hat_shopjade.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 4637,
+      "source_mtime_ns": 1792659555045416100,
+      "canonical_source": "Graphics/Characters/player/hat/shopjade/hat_shopjade.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopjade/hat_trainer_shopjade.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3730,
+      "source_mtime_ns": 1792659555062446200,
+      "canonical_source": "Graphics/Characters/player/hat/shopjade/hat_trainer_shopjade.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopviolet/hat_shopviolet.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 4568,
+      "source_mtime_ns": 1792659556337284200,
+      "canonical_source": "Graphics/Characters/player/hat/shopviolet/hat_shopviolet.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/shopviolet/hat_trainer_shopviolet.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3693,
+      "source_mtime_ns": 1792659556355516900,
+      "canonical_source": "Graphics/Characters/player/hat/shopviolet/hat_trainer_shopviolet.png",
+      "catalog_pinned": true
+    },
+    {
+      "source": "Graphics/Characters/player/hat/skierF/hat_skierF.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 16764,
+      "source_mtime_ns": 1792048542407317800,
+      "canonical_source": "Graphics/Characters/player/hat/skierF/hat_skierF.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/skierF/hat_trainer_skierF.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3522,
+      "source_mtime_ns": 1792048542407847100,
+      "canonical_source": "Graphics/Characters/player/hat/skierF/hat_trainer_skierF.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/sleepmask/hat_sleepmask.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 2804,
+      "source_mtime_ns": 1792048542408358400,
+      "canonical_source": "Graphics/Characters/player/hat/sleepmask/hat_sleepmask.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/sleepmask/hat_trainer_sleepmask.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1089,
+      "source_mtime_ns": 1792048542408382900,
+      "canonical_source": "Graphics/Characters/player/hat/sleepmask/hat_trainer_sleepmask.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/slowking/hat_slowking.png",
+      "size": [
+        80,
+        320
+      ],
+      "source_bytes": 2718,
+      "source_mtime_ns": 1792048542408921900,
+      "canonical_source": "Graphics/Characters/player/hat/slowking/hat_slowking.png"
+    },
+    {
+      "source": "Graphics/Characters/player/hat/slowking/hat_trainer_slowking.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1542,
+      "source_mtime_ns": 1792048542409452300,
+      "canonical_source": "Graphics/Characters/player/hat/slowking/hat_trainer_slowking.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "同套动作图逐帧叠穿，核对头发/帽子/衣服/身体遮挡和偏移；商城图同步核对校验清单。"
+  ]
+}

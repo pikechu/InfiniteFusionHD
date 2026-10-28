@@ -1,0 +1,249 @@
+{
+  "id": "batch-321",
+  "number": 321,
+  "priority": "P3",
+  "stage": "outfit",
+  "title": "衣服、头发、帽子与其他玩家分层素材（9/66）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "wearable",
+  "processing_notes": "同一套衣服、头发或帽子的全部动作作为一组；用原主角身体叠穿验收，保护 80×80 等实际分格及偏移。",
+  "depends_on": [
+    "batch-114",
+    "batch-115",
+    "batch-320"
+  ],
+  "file_count": 22,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-321",
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_bike_dragonconqueror.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3673,
+      "source_mtime_ns": 1792048540914751000,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_bike_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_dive_dragonconqueror.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3428,
+      "source_mtime_ns": 1792048540914751000,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_dive_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_fish_dragonconqueror.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4401,
+      "source_mtime_ns": 1792048540915791400,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_fish_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_run_dragonconqueror(1).png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3632,
+      "source_mtime_ns": 1792048540915791400,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_run_dragonconqueror(1).png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_run_dragonconqueror.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 16764,
+      "source_mtime_ns": 1792048540916310300,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_run_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_surf_dragonconqueror.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3142,
+      "source_mtime_ns": 1792048540916310300,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_surf_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_trainer_dragonconqueror.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3269,
+      "source_mtime_ns": 1792048540916830700,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_trainer_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_walk_dragonconqueror.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6790,
+      "source_mtime_ns": 1792048540916830700,
+      "canonical_source": "Graphics/Characters/player/clothes/dragonconqueror/clothes_walk_dragonconqueror.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_bike_electriccasual.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 2599,
+      "source_mtime_ns": 1792048540917348300,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_bike_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_dive_electriccasual.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 2030,
+      "source_mtime_ns": 1792048540917348300,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_dive_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_fish_electriccasual.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 2836,
+      "source_mtime_ns": 1792048540919513900,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_fish_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_run_electriccasual.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3304,
+      "source_mtime_ns": 1792048540920032500,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_run_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_surf_electriccasual.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048540920032500,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_surf_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_trainer_electriccasual.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1679,
+      "source_mtime_ns": 1792048540920554600,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_trainer_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/electriccasual/clothes_walk_electriccasual.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3188,
+      "source_mtime_ns": 1792048540920554600,
+      "canonical_source": "Graphics/Characters/player/clothes/electriccasual/clothes_walk_electriccasual.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_bike_emeraldSPE.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 8233,
+      "source_mtime_ns": 1792048540921077700,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_bike_emeraldSPE.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_dive_emeraldSPE.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 8499,
+      "source_mtime_ns": 1792048540921594100,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_dive_emeraldSPE.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_fish_emeraldSPE.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 8330,
+      "source_mtime_ns": 1792048540922104300,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_fish_emeraldSPE.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_run_emeraldSPE.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 9161,
+      "source_mtime_ns": 1792048540922620600,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_run_emeraldSPE.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_surf_emeraldSPE.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 5576,
+      "source_mtime_ns": 1792048540922620600,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_surf_emeraldSPE.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_trainer_emeraldSPE.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3191,
+      "source_mtime_ns": 1792048540923125100,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_trainer_emeraldSPE.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_walk_emeraldSPE.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 8591,
+      "source_mtime_ns": 1792048540923125100,
+      "canonical_source": "Graphics/Characters/player/clothes/emeraldSPE/clothes_walk_emeraldSPE.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "同套动作图逐帧叠穿，核对头发/帽子/衣服/身体遮挡和偏移；商城图同步核对校验清单。"
+  ]
+}

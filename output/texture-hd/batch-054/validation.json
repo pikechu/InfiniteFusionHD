@@ -1,0 +1,65 @@
+{
+  "batch": "batch-054",
+  "status": "completed",
+  "applied": 1,
+  "preserved": 3,
+  "entries": [
+    {
+      "source": "Graphics/Autotiles/Seaweed dark.png",
+      "status": "preserved",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "df8ac667ad1b525880f38a26e2914f4555accf0ad089e3e39af32c5eccc48734",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/Seaweed light.png",
+      "status": "preserved",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "9f5f7a62c8bb097d3abf6c37f34f107b35ecc74e48804f32a8716d520e16ad4a",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/Sewers.png",
+      "status": "preserved",
+      "size": [
+        768,
+        128
+      ],
+      "sha256": "4c24cdf5bd693715b8a74fd36a29ee5b981c478d403ab40e096bbcf6195f5a12",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/Water current east.png",
+      "status": "applied",
+      "size": [
+        256,
+        32
+      ],
+      "before_sha256": "bcd7f27d08ad31772164dabdfd54ac5c6e8b7355c4068c59e1e98e70832fdbe4",
+      "after_sha256": "0e58b9a767daee533f6fa719444bfe6f4e1e687435220239345c0960b91c741f",
+      "generated_sha256": "ee8e579a2aaf8905581320c82cb20cc6d818201a55560902a3ce48787fb32bc9",
+      "assigned_map_count": 3,
+      "actual_map_count": 3
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

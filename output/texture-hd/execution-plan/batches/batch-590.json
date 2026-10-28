@@ -1,0 +1,508 @@
+{
+  "id": "batch-590",
+  "number": 590,
+  "priority": "P4",
+  "stage": "icons",
+  "title": "宝可梦小图标与道具图标（50/64）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "icon",
+  "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
+  "depends_on": [
+    "batch-116",
+    "batch-589"
+  ],
+  "file_count": 48,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-590",
+  "entries": [
+    {
+      "source": "Graphics/Pokemon/Icons/KUBFU.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2126,
+      "source_mtime_ns": 1792048549111642900,
+      "canonical_source": "Graphics/Pokemon/Icons/KUBFU.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYOGRE.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2716,
+      "source_mtime_ns": 1792048549112642300,
+      "canonical_source": "Graphics/Pokemon/Icons/KYOGRE.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYOGRE_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2074,
+      "source_mtime_ns": 1792048549112642300,
+      "canonical_source": "Graphics/Pokemon/Icons/KYOGRE_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYUREM.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 4157,
+      "source_mtime_ns": 1792048549112642300,
+      "canonical_source": "Graphics/Pokemon/Icons/KYUREM.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYUREM_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 4393,
+      "source_mtime_ns": 1792048549112642300,
+      "canonical_source": "Graphics/Pokemon/Icons/KYUREM_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYUREM_2.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2741,
+      "source_mtime_ns": 1792048549113642500,
+      "canonical_source": "Graphics/Pokemon/Icons/KYUREM_2.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYUREM_3.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 4393,
+      "source_mtime_ns": 1792048549113642500,
+      "canonical_source": "Graphics/Pokemon/Icons/KYUREM_3.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/KYUREM_4.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2741,
+      "source_mtime_ns": 1792048549113642500,
+      "canonical_source": "Graphics/Pokemon/Icons/KYUREM_4.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LAIRON.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1892,
+      "source_mtime_ns": 1792048549113642500,
+      "canonical_source": "Graphics/Pokemon/Icons/LAIRON.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LAMPENT.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1221,
+      "source_mtime_ns": 1792048549114642300,
+      "canonical_source": "Graphics/Pokemon/Icons/LAMPENT.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LANDORUS.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2696,
+      "source_mtime_ns": 1792048549114642300,
+      "canonical_source": "Graphics/Pokemon/Icons/LANDORUS.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LANDORUS_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2756,
+      "source_mtime_ns": 1792048549114642300,
+      "canonical_source": "Graphics/Pokemon/Icons/LANDORUS_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LANTURN.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2297,
+      "source_mtime_ns": 1792048549115643300,
+      "canonical_source": "Graphics/Pokemon/Icons/LANTURN.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LAPRAS.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2671,
+      "source_mtime_ns": 1792048549115643300,
+      "canonical_source": "Graphics/Pokemon/Icons/LAPRAS.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LAPRAS_gmax.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2893,
+      "source_mtime_ns": 1792048549115643300,
+      "canonical_source": "Graphics/Pokemon/Icons/LAPRAS_gmax.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LARVESTA.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2150,
+      "source_mtime_ns": 1792048549115643300,
+      "canonical_source": "Graphics/Pokemon/Icons/LARVESTA.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LARVITAR.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1416,
+      "source_mtime_ns": 1792048549116644800,
+      "canonical_source": "Graphics/Pokemon/Icons/LARVITAR.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LATIAS.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2761,
+      "source_mtime_ns": 1792048549116644800,
+      "canonical_source": "Graphics/Pokemon/Icons/LATIAS.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LATIAS_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2093,
+      "source_mtime_ns": 1792048549116644800,
+      "canonical_source": "Graphics/Pokemon/Icons/LATIAS_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LATIOS.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 3003,
+      "source_mtime_ns": 1792048549116644800,
+      "canonical_source": "Graphics/Pokemon/Icons/LATIOS.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LATIOS_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2098,
+      "source_mtime_ns": 1792048549117646300,
+      "canonical_source": "Graphics/Pokemon/Icons/LATIOS_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LEAFEON.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048549117646300,
+      "canonical_source": "Graphics/Pokemon/Icons/LEAFEON.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LEAVANNY.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1937,
+      "source_mtime_ns": 1792048549117646300,
+      "canonical_source": "Graphics/Pokemon/Icons/LEAVANNY.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LEDIAN.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1954,
+      "source_mtime_ns": 1792048549117646300,
+      "canonical_source": "Graphics/Pokemon/Icons/LEDIAN.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LEDYBA.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1717,
+      "source_mtime_ns": 1792048549118681000,
+      "canonical_source": "Graphics/Pokemon/Icons/LEDYBA.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LICKILICKY.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2476,
+      "source_mtime_ns": 1792048549118681000,
+      "canonical_source": "Graphics/Pokemon/Icons/LICKILICKY.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LICKITUNG.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2288,
+      "source_mtime_ns": 1792048549118681000,
+      "canonical_source": "Graphics/Pokemon/Icons/LICKITUNG.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LIEPARD.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2356,
+      "source_mtime_ns": 1792048549118681000,
+      "canonical_source": "Graphics/Pokemon/Icons/LIEPARD.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LILEEP.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2101,
+      "source_mtime_ns": 1792048549119672400,
+      "canonical_source": "Graphics/Pokemon/Icons/LILEEP.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LILLIGANT.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1753,
+      "source_mtime_ns": 1792048549119672400,
+      "canonical_source": "Graphics/Pokemon/Icons/LILLIGANT.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LILLIPUP.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1605,
+      "source_mtime_ns": 1792048549119672400,
+      "canonical_source": "Graphics/Pokemon/Icons/LILLIPUP.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LINOONE.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2050,
+      "source_mtime_ns": 1792048549119672400,
+      "canonical_source": "Graphics/Pokemon/Icons/LINOONE.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LINOONE_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1679,
+      "source_mtime_ns": 1792048549120673000,
+      "canonical_source": "Graphics/Pokemon/Icons/LINOONE_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LITLEO.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1621,
+      "source_mtime_ns": 1792048549120673000,
+      "canonical_source": "Graphics/Pokemon/Icons/LITLEO.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LITTEN.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1903,
+      "source_mtime_ns": 1792048549120673000,
+      "canonical_source": "Graphics/Pokemon/Icons/LITTEN.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LITWICK.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 922,
+      "source_mtime_ns": 1792048549120673000,
+      "canonical_source": "Graphics/Pokemon/Icons/LITWICK.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LOMBRE.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2288,
+      "source_mtime_ns": 1792048549121643100,
+      "canonical_source": "Graphics/Pokemon/Icons/LOMBRE.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LOPUNNY.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2259,
+      "source_mtime_ns": 1792048549121643100,
+      "canonical_source": "Graphics/Pokemon/Icons/LOPUNNY.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LOPUNNY_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2111,
+      "source_mtime_ns": 1792048549121643100,
+      "canonical_source": "Graphics/Pokemon/Icons/LOPUNNY_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LOTAD.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1498,
+      "source_mtime_ns": 1792048549121643100,
+      "canonical_source": "Graphics/Pokemon/Icons/LOTAD.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LOUDRED.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1857,
+      "source_mtime_ns": 1792048549122642100,
+      "canonical_source": "Graphics/Pokemon/Icons/LOUDRED.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUCARIO.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1941,
+      "source_mtime_ns": 1792048549122642100,
+      "canonical_source": "Graphics/Pokemon/Icons/LUCARIO.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUCARIO_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1936,
+      "source_mtime_ns": 1792048549122642100,
+      "canonical_source": "Graphics/Pokemon/Icons/LUCARIO_1.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUDICOLO.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2126,
+      "source_mtime_ns": 1792048549123642200,
+      "canonical_source": "Graphics/Pokemon/Icons/LUDICOLO.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUGIA.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2547,
+      "source_mtime_ns": 1792048549123642200,
+      "canonical_source": "Graphics/Pokemon/Icons/LUGIA.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUMINEON.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2404,
+      "source_mtime_ns": 1792048549123642200,
+      "canonical_source": "Graphics/Pokemon/Icons/LUMINEON.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUNALA.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 2033,
+      "source_mtime_ns": 1792048549123642200,
+      "canonical_source": "Graphics/Pokemon/Icons/LUNALA.png"
+    },
+    {
+      "source": "Graphics/Pokemon/Icons/LUNATONE.png",
+      "size": [
+        128,
+        64
+      ],
+      "source_bytes": 1363,
+      "source_mtime_ns": 1792048549124642000,
+      "canonical_source": "Graphics/Pokemon/Icons/LUNATONE.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
+  ]
+}

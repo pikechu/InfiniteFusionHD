@@ -1,0 +1,507 @@
+{
+  "id": "batch-851",
+  "number": 851,
+  "priority": "P5",
+  "stage": "source96",
+  "title": "96×96 源素材集合：先核对与运行素材的关系（27/28）",
+  "status": "needs_usage_audit",
+  "action": "audit_then_enhance_if_used",
+  "method": "audit",
+  "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
+  "depends_on": [
+    "batch-850"
+  ],
+  "file_count": 48,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-851",
+  "entries": [
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Daliah by .head_empty..png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2475,
+      "source_mtime_ns": 1792048526781499100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Daliah by .head_empty..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small_golem_boulder by luxio..png",
+      "size": [
+        50,
+        46
+      ],
+      "source_bytes": 10006,
+      "source_mtime_ns": 1792048526849133800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small_golem_boulder by luxio..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small_gyarados_head by Glowing0v3rlord#5121.png",
+      "size": [
+        24,
+        29
+      ],
+      "source_bytes": 816,
+      "source_mtime_ns": 1792048526849133800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small_gyarados_head by Glowing0v3rlord#5121.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Maga by .head_empty..png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1932,
+      "source_mtime_ns": 1792048526781499100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Maga by .head_empty..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Mew by Teddy2k#4565.png",
+      "size": [
+        23,
+        25
+      ],
+      "source_bytes": 500,
+      "source_mtime_ns": 1792048526782499600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Mew by Teddy2k#4565.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Naked_Vileplume by .head_empty..png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 966,
+      "source_mtime_ns": 1792048526782499600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Naked_Vileplume by .head_empty..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Nest_Asset by volvonovic.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3490,
+      "source_mtime_ns": 1792048526782499600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Nest_Asset by volvonovic.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small_nidoqueen_head by luxio..png",
+      "size": [
+        55,
+        44
+      ],
+      "source_bytes": 1240,
+      "source_mtime_ns": 1792048526849133800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small_nidoqueen_head by luxio..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Poppy by .head_empty..png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1401,
+      "source_mtime_ns": 1792048526782499600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Poppy by .head_empty..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Rose by .head_empty..png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1811,
+      "source_mtime_ns": 1792048526783500400,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Rose by .head_empty..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Salamence_Wings by Howls#4468.png",
+      "size": [
+        70,
+        40
+      ],
+      "source_bytes": 1066,
+      "source_mtime_ns": 1792048526783500400,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Salamence_Wings by Howls#4468.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Snorunt_Line by hero.drawing.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 9374,
+      "source_mtime_ns": 1792048526783500400,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Snorunt_Line by hero.drawing.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Snorunt_Line_Smol by hero.drawing.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 5269,
+      "source_mtime_ns": 1792048526784498200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Snorunt_Line_Smol by hero.drawing.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Solosis_Head by yorui3913.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 884,
+      "source_mtime_ns": 1792048526784498200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Solosis_Head by yorui3913.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Solosis_Head_-_Smol by yorui3913.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 518,
+      "source_mtime_ns": 1792048526784498200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_Solosis_Head_-_Smol by yorui3913.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small_tao_trio by chromaerym.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 7581,
+      "source_mtime_ns": 1792048526849133800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small_tao_trio by chromaerym.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small_tao_trio_96x96 by chromaerym.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 7366,
+      "source_mtime_ns": 1792048526850134500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small_tao_trio_96x96 by chromaerym.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small_trev_base by ruminino.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3625,
+      "source_mtime_ns": 1792048526850134500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small_trev_base by ruminino.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Small_White_Lilly by .head_empty..png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1307,
+      "source_mtime_ns": 1792048526785497900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Small_White_Lilly by .head_empty..png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/SmallBarboach by its.emily.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 483,
+      "source_mtime_ns": 1792048526781499100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/SmallBarboach by its.emily.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/smoke1 by quote.lass.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 21532,
+      "source_mtime_ns": 1792048526850134500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/smoke1 by quote.lass.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/smoke2 by quote.lass.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 21593,
+      "source_mtime_ns": 1792048526851134600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/smoke2 by quote.lass.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/smoke3 by quote.lass.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 22163,
+      "source_mtime_ns": 1792048527017055200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/smoke3 by quote.lass.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Sneasel by Glowing0v3rlord#5121.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2016,
+      "source_mtime_ns": 1792048526785497900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Sneasel by Glowing0v3rlord#5121.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Sneasel by Thronebutt#2640.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 967,
+      "source_mtime_ns": 1792048526785497900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Sneasel by Thronebutt#2640.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Snow_Ball by yorui3913.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 966,
+      "source_mtime_ns": 1792048526785497900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Snow_Ball by yorui3913.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Snow_Ball_-_Smol by yorui3913.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 556,
+      "source_mtime_ns": 1792048526786498600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Snow_Ball_-_Smol by yorui3913.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Spheal by driesdd.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1438,
+      "source_mtime_ns": 1792048526786498600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Spheal by driesdd.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/spiritombkeystone1x by ItsEmily#9627.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 910,
+      "source_mtime_ns": 1792048527017613200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/spiritombkeystone1x by ItsEmily#9627.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/spiritombkeystone3x by ItsEmily#9627.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1421,
+      "source_mtime_ns": 1792048527017613200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/spiritombkeystone3x by ItsEmily#9627.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/SPOONS by etacarbomba.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 7017,
+      "source_mtime_ns": 1792048526778500500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/SPOONS by etacarbomba.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/sprite_assets by quote.lass.png",
+      "size": [
+        295,
+        193
+      ],
+      "source_bytes": 30531,
+      "source_mtime_ns": 1792048527018142000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/sprite_assets by quote.lass.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Stones_2.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1452,
+      "source_mtime_ns": 1792048526786498600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Stones_2.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/subs_doll by robosoup.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1767,
+      "source_mtime_ns": 1792048527018142000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/subs_doll by robosoup.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Sun by ghostneko7.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2864,
+      "source_mtime_ns": 1792048526787498000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Sun by ghostneko7.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/sun by hero.drawing.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4023,
+      "source_mtime_ns": 1792048527018668100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/sun by hero.drawing.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Suna by ghostneko7.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 593,
+      "source_mtime_ns": 1792048526787498000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Suna by ghostneko7.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/sunflora by green494.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2047,
+      "source_mtime_ns": 1792048527019200800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/sunflora by green494.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/sus_tail by not not Seni (Team George)#3061.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4863,
+      "source_mtime_ns": 1792048527019200800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/sus_tail by not not Seni (Team George)#3061.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Swablu_Mini_96x96 by LunaticMarkers#2643.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1393,
+      "source_mtime_ns": 1792048526788500600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Swablu_Mini_96x96 by LunaticMarkers#2643.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Swablu_Mini_288x288 by LunaticMarkers#2643.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3118,
+      "source_mtime_ns": 1792048526788500600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Swablu_Mini_288x288 by LunaticMarkers#2643.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/SwabluCustombase96 by whiterisere.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2016,
+      "source_mtime_ns": 1792048526787498000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/SwabluCustombase96 by whiterisere.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/SwabluCustombase288 by whiterisere.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3327,
+      "source_mtime_ns": 1792048526787498000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/SwabluCustombase288 by whiterisere.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Term_Dark_Stone by terminatphilippe.png",
+      "size": [
+        12,
+        12
+      ],
+      "source_bytes": 264,
+      "source_mtime_ns": 1792048526788500600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Term_Dark_Stone by terminatphilippe.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/terms_light_stone by terminatphilippe.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 638,
+      "source_mtime_ns": 1792048527019728000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/terms_light_stone by terminatphilippe.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/test2 by Supercalifragilistic#8703.png",
+      "size": [
+        501,
+        342
+      ],
+      "source_bytes": 6696,
+      "source_mtime_ns": 1792048527020245000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/test2 by Supercalifragilistic#8703.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/tiny_bonsly_centered_96px by teddyo.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 884,
+      "source_mtime_ns": 1792048527020245000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/tiny_bonsly_centered_96px by teddyo.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Tiny_Castform_Asset by jokeofalltrades_.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3078,
+      "source_mtime_ns": 1792048526790498700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Tiny_Castform_Asset by jokeofalltrades_.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
+  ]
+}

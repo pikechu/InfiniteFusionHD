@@ -1,0 +1,228 @@
+{
+  "id": "batch-202",
+  "number": 202,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（51/99）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-201"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-202",
+  "entries": [
+    {
+      "source": "Graphics/Characters/BW045.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2438,
+      "source_mtime_ns": 1792048530717801500,
+      "canonical_source": "Graphics/Characters/BW045.png"
+    },
+    {
+      "source": "Graphics/Characters/BW046.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2593,
+      "source_mtime_ns": 1792048530718802200,
+      "canonical_source": "Graphics/Characters/BW046.png"
+    },
+    {
+      "source": "Graphics/Characters/BW047.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2809,
+      "source_mtime_ns": 1792048530718802200,
+      "canonical_source": "Graphics/Characters/BW047.png"
+    },
+    {
+      "source": "Graphics/Characters/BW048.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2879,
+      "source_mtime_ns": 1792048530718802200,
+      "canonical_source": "Graphics/Characters/BW048.png"
+    },
+    {
+      "source": "Graphics/Characters/BW049.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 830,
+      "source_mtime_ns": 1792048530718802200,
+      "canonical_source": "Graphics/Characters/BW049.png"
+    },
+    {
+      "source": "Graphics/Characters/BW050.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 1677,
+      "source_mtime_ns": 1792048530718802200,
+      "canonical_source": "Graphics/Characters/BW050.png"
+    },
+    {
+      "source": "Graphics/Characters/BW051.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 1702,
+      "source_mtime_ns": 1792048530719803100,
+      "canonical_source": "Graphics/Characters/BW051.png"
+    },
+    {
+      "source": "Graphics/Characters/BW052.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 1659,
+      "source_mtime_ns": 1792048530719803100,
+      "canonical_source": "Graphics/Characters/BW052.png"
+    },
+    {
+      "source": "Graphics/Characters/BW053.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 1706,
+      "source_mtime_ns": 1792048530719803100,
+      "canonical_source": "Graphics/Characters/BW053.png"
+    },
+    {
+      "source": "Graphics/Characters/BW054.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2156,
+      "source_mtime_ns": 1792048530719803100,
+      "canonical_source": "Graphics/Characters/BW054.png"
+    },
+    {
+      "source": "Graphics/Characters/BW055.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 3484,
+      "source_mtime_ns": 1792048530720801700,
+      "canonical_source": "Graphics/Characters/BW055.png"
+    },
+    {
+      "source": "Graphics/Characters/BW056.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 34915,
+      "source_mtime_ns": 1792048530720801700,
+      "canonical_source": "Graphics/Characters/BW056.png"
+    },
+    {
+      "source": "Graphics/Characters/BW057.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 3186,
+      "source_mtime_ns": 1792048530720801700,
+      "canonical_source": "Graphics/Characters/BW057.png"
+    },
+    {
+      "source": "Graphics/Characters/BW058.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2464,
+      "source_mtime_ns": 1792048530721801300,
+      "canonical_source": "Graphics/Characters/BW058.png"
+    },
+    {
+      "source": "Graphics/Characters/BW059.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2674,
+      "source_mtime_ns": 1792048530721801300,
+      "canonical_source": "Graphics/Characters/BW059.png"
+    },
+    {
+      "source": "Graphics/Characters/BW060.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2708,
+      "source_mtime_ns": 1792048530721801300,
+      "canonical_source": "Graphics/Characters/BW060.png"
+    },
+    {
+      "source": "Graphics/Characters/BW061.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2660,
+      "source_mtime_ns": 1792048530721801300,
+      "canonical_source": "Graphics/Characters/BW061.png"
+    },
+    {
+      "source": "Graphics/Characters/BW062.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2401,
+      "source_mtime_ns": 1792048530722801600,
+      "canonical_source": "Graphics/Characters/BW062.png"
+    },
+    {
+      "source": "Graphics/Characters/BW063.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2352,
+      "source_mtime_ns": 1792048530722801600,
+      "canonical_source": "Graphics/Characters/BW063.png"
+    },
+    {
+      "source": "Graphics/Characters/BW064.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2652,
+      "source_mtime_ns": 1792048530722801600,
+      "canonical_source": "Graphics/Characters/BW064.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

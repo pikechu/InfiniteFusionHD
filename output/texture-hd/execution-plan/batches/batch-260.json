@@ -1,0 +1,228 @@
+{
+  "id": "batch-260",
+  "number": 260,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（10/62）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-259"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-260",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/BUNEARY.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3517,
+      "source_mtime_ns": 1792048531154637100,
+      "canonical_source": "Graphics/Characters/Followers/BUNEARY.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/BUNNELBY.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3680,
+      "source_mtime_ns": 1792048531155172300,
+      "canonical_source": "Graphics/Characters/Followers/BUNNELBY.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/BURMY.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3770,
+      "source_mtime_ns": 1792048531155710000,
+      "canonical_source": "Graphics/Characters/Followers/BURMY.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/BURMY_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3275,
+      "source_mtime_ns": 1792048531155710000,
+      "canonical_source": "Graphics/Characters/Followers/BURMY_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/BURMY_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3309,
+      "source_mtime_ns": 1792048531156261300,
+      "canonical_source": "Graphics/Characters/Followers/BURMY_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/BUTTERFREE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4568,
+      "source_mtime_ns": 1792048531156855000,
+      "canonical_source": "Graphics/Characters/Followers/BUTTERFREE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/BUZZWOLE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7031,
+      "source_mtime_ns": 1792048531157379000,
+      "canonical_source": "Graphics/Characters/Followers/BUZZWOLE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CACNEA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3635,
+      "source_mtime_ns": 1792048531157898500,
+      "canonical_source": "Graphics/Characters/Followers/CACNEA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CACTURNE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3599,
+      "source_mtime_ns": 1792048531157898500,
+      "canonical_source": "Graphics/Characters/Followers/CACTURNE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CALYREX.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5344,
+      "source_mtime_ns": 1792048531158406600,
+      "canonical_source": "Graphics/Characters/Followers/CALYREX.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CALYREX_1.png",
+      "size": [
+        280,
+        280
+      ],
+      "source_bytes": 8821,
+      "source_mtime_ns": 1792048531158406600,
+      "canonical_source": "Graphics/Characters/Followers/CALYREX_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CALYREX_2.png",
+      "size": [
+        280,
+        280
+      ],
+      "source_bytes": 9295,
+      "source_mtime_ns": 1792048531159418500,
+      "canonical_source": "Graphics/Characters/Followers/CALYREX_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CAMERUPT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5571,
+      "source_mtime_ns": 1792048531159418500,
+      "canonical_source": "Graphics/Characters/Followers/CAMERUPT.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CARBINK.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4130,
+      "source_mtime_ns": 1792048531159418500,
+      "canonical_source": "Graphics/Characters/Followers/CARBINK.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CARKOL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5048,
+      "source_mtime_ns": 1792048531160420000,
+      "canonical_source": "Graphics/Characters/Followers/CARKOL.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CARNIVINE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4569,
+      "source_mtime_ns": 1792048531160420000,
+      "canonical_source": "Graphics/Characters/Followers/CARNIVINE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CARRACOSTA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5145,
+      "source_mtime_ns": 1792048531161423800,
+      "canonical_source": "Graphics/Characters/Followers/CARRACOSTA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CARVANHA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4710,
+      "source_mtime_ns": 1792048531161423800,
+      "canonical_source": "Graphics/Characters/Followers/CARVANHA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CASCOON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2473,
+      "source_mtime_ns": 1792048531161423800,
+      "canonical_source": "Graphics/Characters/Followers/CASCOON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/CASTFORM.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2350,
+      "source_mtime_ns": 1792048531161423800,
+      "canonical_source": "Graphics/Characters/Followers/CASTFORM.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

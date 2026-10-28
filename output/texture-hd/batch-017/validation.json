@@ -1,0 +1,29 @@
+{
+  "batch": "batch-017",
+  "status": "completed",
+  "applied": 1,
+  "preserved": 0,
+  "entries": [
+    {
+      "source": "Graphics/Tilesets/Outdoor.png",
+      "status": "applied",
+      "size": [
+        256,
+        43808
+      ],
+      "before_sha256": "b7bcb9747b96cababd4d48870b65ba130f09eafb4c17a20d8d6bf5650390564a",
+      "after_sha256": "3d681e912bd862c547072e049b88dffff6622e0f1e06bd096709f799bf63de46",
+      "generated_sha256": "5ca900dac71bcce0b4fd8e0a7bd3f21f31f4af7674acbbd6d7715154f5ca6181",
+      "assigned_map_count": 108,
+      "actual_map_count": 108
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

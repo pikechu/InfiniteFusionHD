@@ -1,0 +1,228 @@
+{
+  "id": "batch-271",
+  "number": 271,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（21/62）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-270"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-271",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/FROSLASS.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4620,
+      "source_mtime_ns": 1792048532131560400,
+      "canonical_source": "Graphics/Characters/Followers/FROSLASS.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FROSMOTH.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5873,
+      "source_mtime_ns": 1792048532132558500,
+      "canonical_source": "Graphics/Characters/Followers/FROSMOTH.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4086,
+      "source_mtime_ns": 1792048532132558500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5194,
+      "source_mtime_ns": 1792048532132558500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5517,
+      "source_mtime_ns": 1792048532133556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5095,
+      "source_mtime_ns": 1792048532133556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_3.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5329,
+      "source_mtime_ns": 1792048532133556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_4.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_5.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5209,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_5.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_6.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5157,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_6.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_7.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5306,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_7.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_8.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5197,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_8.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_9.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5401,
+      "source_mtime_ns": 1792048532135556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_9.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURRET.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4181,
+      "source_mtime_ns": 1792048532135556500,
+      "canonical_source": "Graphics/Characters/Followers/FURRET.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GABITE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4748,
+      "source_mtime_ns": 1792048532135556500,
+      "canonical_source": "Graphics/Characters/Followers/GABITE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GABITE_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4745,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GABITE_female.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GALLADE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4927,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GALLADE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GALVANTULA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6112,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GALVANTULA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GARBODOR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6072,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GARBODOR.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GARCHOMP.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6046,
+      "source_mtime_ns": 1792048532137557500,
+      "canonical_source": "Graphics/Characters/Followers/GARCHOMP.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GARCHOMP_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6042,
+      "source_mtime_ns": 1792048532137557500,
+      "canonical_source": "Graphics/Characters/Followers/GARCHOMP_female.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

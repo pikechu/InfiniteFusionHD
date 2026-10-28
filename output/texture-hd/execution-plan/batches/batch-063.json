@@ -1,0 +1,50 @@
+{
+  "id": "batch-063",
+  "number": 63,
+  "priority": "P2",
+  "stage": "ui_battle",
+  "title": "战斗界面、血条、按钮、状态与属性图（6/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-062"
+  ],
+  "file_count": 2,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-063",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Summary/icon_ball_ABILITYBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 377,
+      "source_mtime_ns": 1792048547748434600,
+      "canonical_source": "Graphics/Pictures/Summary/icon_ball_ABILITYBALL.png"
+    },
+    {
+      "source": "Graphics/Pictures/Summary/icon_ball_STATUSBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 366,
+      "source_mtime_ns": 1792048547787777500,
+      "canonical_source": "Graphics/Pictures/Summary/icon_ball_STATUSBALL.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-063/validation.json",
+  "applied_files": 0,
+  "preserved_files": 2
+}

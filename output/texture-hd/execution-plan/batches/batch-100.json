@@ -1,0 +1,273 @@
+{
+  "id": "batch-100",
+  "number": 100,
+  "priority": "P2",
+  "stage": "ui_map",
+  "title": "地区地图、导航、帮助与训练师卡（7/9）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-099"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-100",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/SILVER.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3010,
+      "source_mtime_ns": 1792048548003693700,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/SILVER.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/SOULBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13710,
+      "source_mtime_ns": 1792048548004218300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/SOULBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/STORMBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14660,
+      "source_mtime_ns": 1792048548009068200,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/STORMBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/THUNDERBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13969,
+      "source_mtime_ns": 1792048548009594500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/THUNDERBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/VENUSAUR.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 7911,
+      "source_mtime_ns": 1792048548010251400,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/VENUSAUR.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/VOLCANOBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15577,
+      "source_mtime_ns": 1792048548011083600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/VOLCANOBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/ZEKROM.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 7292,
+      "source_mtime_ns": 1792048548011621300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/ZEKROM.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/ZEPHYRBADGE.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15625,
+      "source_mtime_ns": 1792048548012140100,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/ZEPHYRBADGE.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/500000_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 33227,
+      "source_mtime_ns": 1792048548012688900,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/500000_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BEEDRILL_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4570,
+      "source_mtime_ns": 1792048548013268500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BEEDRILL_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BIDOOF_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4276,
+      "source_mtime_ns": 1792048548013798300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BIDOOF_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BULBASAUR_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2229,
+      "source_mtime_ns": 1792048548021444600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BULBASAUR_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BUNEARY_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1939,
+      "source_mtime_ns": 1792048548022674300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BUNEARY_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BUTTERFREE_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2777,
+      "source_mtime_ns": 1792048548022674300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BUTTERFREE_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHANDELURE_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 6635,
+      "source_mtime_ns": 1792048548023203100,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHANDELURE_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHARMANDER_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2459,
+      "source_mtime_ns": 1792048548023719300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHARMANDER_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHINCHOU_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3856,
+      "source_mtime_ns": 1792048548024256200,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHINCHOU_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CLEFABLE_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4198,
+      "source_mtime_ns": 1792048548024768800,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CLEFABLE_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CLEFFA_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3949,
+      "source_mtime_ns": 1792048548025308600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CLEFFA_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/COFAGRIGUS_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 9985,
+      "source_mtime_ns": 1792048548025822600,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/COFAGRIGUS_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CORSOLA_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4138,
+      "source_mtime_ns": 1792048548026351000,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CORSOLA_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CRESSELIA_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4311,
+      "source_mtime_ns": 1792048548027377300,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CRESSELIA_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/DARKRAI_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3994,
+      "source_mtime_ns": 1792048548027385500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/DARKRAI_FLAG.png"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/DIGLETT_FLAG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4319,
+      "source_mtime_ns": 1792048548027385500,
+      "canonical_source": "Graphics/Pictures/Trainer Card/backgrounds/flags/DIGLETT_FLAG.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

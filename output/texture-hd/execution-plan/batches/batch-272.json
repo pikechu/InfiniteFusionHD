@@ -1,0 +1,228 @@
+{
+  "id": "batch-272",
+  "number": 272,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（22/62）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-271"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-272",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/GARDEVOIR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4483,
+      "source_mtime_ns": 1792048532138559600,
+      "canonical_source": "Graphics/Characters/Followers/GARDEVOIR.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GASTLY.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3802,
+      "source_mtime_ns": 1792048532138559600,
+      "canonical_source": "Graphics/Characters/Followers/GASTLY.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GASTRODON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4769,
+      "source_mtime_ns": 1792048532138559600,
+      "canonical_source": "Graphics/Characters/Followers/GASTRODON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GASTRODON_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4834,
+      "source_mtime_ns": 1792048532139557200,
+      "canonical_source": "Graphics/Characters/Followers/GASTRODON_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GENESECT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5414,
+      "source_mtime_ns": 1792048532139557200,
+      "canonical_source": "Graphics/Characters/Followers/GENESECT.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GENESECT_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5424,
+      "source_mtime_ns": 1792048532140557200,
+      "canonical_source": "Graphics/Characters/Followers/GENESECT_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GENESECT_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5426,
+      "source_mtime_ns": 1792048532140557200,
+      "canonical_source": "Graphics/Characters/Followers/GENESECT_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GENESECT_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5426,
+      "source_mtime_ns": 1792048532140557200,
+      "canonical_source": "Graphics/Characters/Followers/GENESECT_3.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GENESECT_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5425,
+      "source_mtime_ns": 1792048532141641800,
+      "canonical_source": "Graphics/Characters/Followers/GENESECT_4.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GENGAR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4028,
+      "source_mtime_ns": 1792048532142164100,
+      "canonical_source": "Graphics/Characters/Followers/GENGAR.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GEODUDE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2244,
+      "source_mtime_ns": 1792048532142164100,
+      "canonical_source": "Graphics/Characters/Followers/GEODUDE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GEODUDE_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2915,
+      "source_mtime_ns": 1792048532142689800,
+      "canonical_source": "Graphics/Characters/Followers/GEODUDE_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GIBLE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3456,
+      "source_mtime_ns": 1792048532143206400,
+      "canonical_source": "Graphics/Characters/Followers/GIBLE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GIBLE_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3470,
+      "source_mtime_ns": 1792048532145330800,
+      "canonical_source": "Graphics/Characters/Followers/GIBLE_female.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GIGALITH.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5939,
+      "source_mtime_ns": 1792048532145852000,
+      "canonical_source": "Graphics/Characters/Followers/GIGALITH.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GIRAFARIG.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4922,
+      "source_mtime_ns": 1792048532146382400,
+      "canonical_source": "Graphics/Characters/Followers/GIRAFARIG.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GIRATINA.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 12451,
+      "source_mtime_ns": 1792048532146911900,
+      "canonical_source": "Graphics/Characters/Followers/GIRATINA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GIRATINA_1.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 11214,
+      "source_mtime_ns": 1792048532147439200,
+      "canonical_source": "Graphics/Characters/Followers/GIRATINA_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GLACEON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4332,
+      "source_mtime_ns": 1792048532147957600,
+      "canonical_source": "Graphics/Characters/Followers/GLACEON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GLALIE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3593,
+      "source_mtime_ns": 1792048532147957600,
+      "canonical_source": "Graphics/Characters/Followers/GLALIE.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

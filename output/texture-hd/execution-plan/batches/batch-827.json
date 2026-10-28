@@ -1,0 +1,507 @@
+{
+  "id": "batch-827",
+  "number": 827,
+  "priority": "P5",
+  "stage": "source96",
+  "title": "96×96 源素材集合：先核对与运行素材的关系（3/28）",
+  "status": "needs_usage_audit",
+  "action": "audit_then_enhance_if_used",
+  "method": "audit",
+  "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
+  "depends_on": [
+    "batch-826"
+  ],
+  "file_count": 48,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-827",
+  "entries": [
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/27x by bazingazenga.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1654,
+      "source_mtime_ns": 1792048525372928800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/27x by bazingazenga.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/28.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4262,
+      "source_mtime_ns": 1792048525372928800,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/28.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/28a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4723,
+      "source_mtime_ns": 1792048525392033300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/28a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/28b.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4509,
+      "source_mtime_ns": 1792048525392033300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/28b.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/29.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4190,
+      "source_mtime_ns": 1792048525393035300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/29.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/29base by Holgast#1562.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1886,
+      "source_mtime_ns": 1792048525398031600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/29base by Holgast#1562.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/30.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4652,
+      "source_mtime_ns": 1792048525399032700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/30.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/30a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4652,
+      "source_mtime_ns": 1792048525404032200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/30a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/33.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4389,
+      "source_mtime_ns": 1792048525424033000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/33.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/34-1 by papelmachekc.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3182,
+      "source_mtime_ns": 1792048525438032300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/34-1 by papelmachekc.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/34_S_TCG_151_174_by_mirc_ by mirc_.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1334,
+      "source_mtime_ns": 1792048525445030700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/34_S_TCG_151_174_by_mirc_ by mirc_.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/34aa by Mirc_#8304.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1248,
+      "source_mtime_ns": 1792048525446031600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/34aa by Mirc_#8304.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/34e by jcobe800.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 6968,
+      "source_mtime_ns": 1792048525446031600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/34e by jcobe800.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/35.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4254,
+      "source_mtime_ns": 1792048525446031600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/35.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/35a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3850,
+      "source_mtime_ns": 1792048525449032500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/35a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/35b.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3883,
+      "source_mtime_ns": 1792048525449032500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/35b.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/35c.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3658,
+      "source_mtime_ns": 1792048525449032500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/35c.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/36.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4398,
+      "source_mtime_ns": 1792048525449032500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/36.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/36a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4777,
+      "source_mtime_ns": 1792048525456031300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/36a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/36b.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4274,
+      "source_mtime_ns": 1792048525456031300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/36b.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/36c.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3839,
+      "source_mtime_ns": 1792048525456031300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/36c.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/36d.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4271,
+      "source_mtime_ns": 1792048525456031300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/36d.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38 by FollyGee#6354.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2779,
+      "source_mtime_ns": 1792048525464033100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38 by FollyGee#6354.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 5350,
+      "source_mtime_ns": 1792048525465032200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38.Rosemagwin.A by rosemagwin.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1425,
+      "source_mtime_ns": 1792048525465032200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38.Rosemagwin.A by rosemagwin.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4478,
+      "source_mtime_ns": 1792048525468486200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38b.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 6184,
+      "source_mtime_ns": 1792048525468486200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38b.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38c.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 5338,
+      "source_mtime_ns": 1792048525469008900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38c.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38d.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4106,
+      "source_mtime_ns": 1792048525469008900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38d.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/38e.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4475,
+      "source_mtime_ns": 1792048525469531600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/38e.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/39.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4243,
+      "source_mtime_ns": 1792048525469531600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/39.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/39a by aniimine.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1550,
+      "source_mtime_ns": 1792048525472143900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/39a by aniimine.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/39a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3722,
+      "source_mtime_ns": 1792048525472662400,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/39a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/39b.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4231,
+      "source_mtime_ns": 1792048525472662400,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/39b.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/39c by aniimine.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1492,
+      "source_mtime_ns": 1792048525473181600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/39c by aniimine.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/40 by funkytomate.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1667,
+      "source_mtime_ns": 1792048525479140700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/40 by funkytomate.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/40.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4444,
+      "source_mtime_ns": 1792048525479140700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/40.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/40_Emeraude by Maelmc#9965.png",
+      "size": [
+        47,
+        49
+      ],
+      "source_bytes": 762,
+      "source_mtime_ns": 1792048525483148300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/40_Emeraude by Maelmc#9965.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/42.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 5015,
+      "source_mtime_ns": 1792048525489146200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/42.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/42_96x96 by takio_.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1764,
+      "source_mtime_ns": 1792048526200668400,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/42_96x96 by takio_.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/42a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 5620,
+      "source_mtime_ns": 1792048526477586100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/42a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/42b.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4552,
+      "source_mtime_ns": 1792048526477586100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/42b.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/43.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3774,
+      "source_mtime_ns": 1792048526478579700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/43.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/43_Rubis by Maelmc#9965.png",
+      "size": [
+        29,
+        33
+      ],
+      "source_bytes": 837,
+      "source_mtime_ns": 1792048526480578500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/43_Rubis by Maelmc#9965.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/43a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 3700,
+      "source_mtime_ns": 1792048526480578500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/43a.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/44.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4362,
+      "source_mtime_ns": 1792048526481578300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/44.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/45.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4337,
+      "source_mtime_ns": 1792048526483578000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/45.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/45a.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 4218,
+      "source_mtime_ns": 1792048526483578000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/45a.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
+  ]
+}

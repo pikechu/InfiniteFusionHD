@@ -1,0 +1,28 @@
+{
+  "batch": "batch-025",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 1,
+  "entries": [
+    {
+      "source": "Graphics/Tilesets/Game Corner interior.PNG",
+      "status": "preserved",
+      "size": [
+        256,
+        960
+      ],
+      "sha256": "760ec1f57b1148634266948dc2ea9c21aeb2a1a3318454c2afe7a9c556d4f4be",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

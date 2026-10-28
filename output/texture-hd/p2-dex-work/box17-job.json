@@ -1,0 +1,9 @@
+{
+  "source": "Graphics/Pictures/box17.png",
+  "generated": "output/texture-hd/p2-dex-work/box17-generated.png",
+  "prompt": "Use case: precise-object-edit. Asset type: 324x296 game storage wallpaper; the supplied full image is the edit target. Refine the existing cyan/blue underwater abstract wallpaper and the exact same dark blue flying sea-creature silhouette. Keep its head, neck, two wings, body, feet and tail at exactly the same coordinates and pose; keep the original dark blue silhouette identity. Add only restrained blue-on-blue shading within existing regions, and subtle material/gradient detail in the existing pale cyan background. Preserve every bubble and light shaft, original colors and contrast, exact frame, empty top name panel and both arrow buttons. Never add a face, eyes, extra fins, bubbles, objects, lines or text. Do not redraw silhouette boundaries. Preserve transparent pixels. No crop, zoom or repositioning. Return a larger complete canvas with the same aspect ratio, calm enough behind creature icons.",
+  "tool": "built-in image_gen",
+  "status": "applied",
+  "reason": "Restrained interior shading adds visible material depth while silhouette, pose, bubbles/sparkles, buttons and title remain unchanged.",
+  "validation": "output/texture-hd/p2-evidence/dex/storage-native-validation.json"
+}

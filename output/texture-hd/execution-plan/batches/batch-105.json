@@ -1,0 +1,133 @@
+{
+  "id": "batch-105",
+  "number": 105,
+  "priority": "P2",
+  "stage": "titles",
+  "title": "标题、载入与启动界面（3/3）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-104"
+  ],
+  "file_count": 9,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-105",
+  "entries": [
+    {
+      "source": "Graphics/Chinese/Titles/pokelogo_v5.png",
+      "size": [
+        408,
+        240
+      ],
+      "source_bytes": 14331,
+      "source_mtime_ns": 1793075479693177200,
+      "canonical_source": "Graphics/Titles/pokelogo_v5.png",
+      "language_pair": {
+        "original": "Graphics/Titles/pokelogo_v5.png",
+        "chinese": "Graphics/Chinese/Titles/pokelogo_v5.png"
+      }
+    },
+    {
+      "source": "Graphics/Titles/pokelogo_v5.png",
+      "size": [
+        408,
+        240
+      ],
+      "source_bytes": 25248,
+      "source_mtime_ns": 1792048549974880200,
+      "canonical_source": "Graphics/Titles/pokelogo_v5.png",
+      "language_pair": {
+        "original": "Graphics/Titles/pokelogo_v5.png",
+        "chinese": "Graphics/Chinese/Titles/pokelogo_v5.png"
+      }
+    },
+    {
+      "source": "Graphics/Titles/PokemonInfiniteFusionLogo_Back_25.png",
+      "size": [
+        256,
+        199
+      ],
+      "source_bytes": 35136,
+      "source_mtime_ns": 1792048549873411000,
+      "canonical_source": "Graphics/Titles/PokemonInfiniteFusionLogo_Back_25.png"
+    },
+    {
+      "source": "Graphics/Titles/PokemonInfiniteFusionLogo_Main_25.png",
+      "size": [
+        256,
+        199
+      ],
+      "source_bytes": 56232,
+      "source_mtime_ns": 1792048549873411000,
+      "canonical_source": "Graphics/Titles/PokemonInfiniteFusionLogo_Main_25.png"
+    },
+    {
+      "source": "Graphics/Titles/pokestart.png",
+      "size": [
+        1,
+        1
+      ],
+      "source_bytes": 110,
+      "source_mtime_ns": 1792048549975398800,
+      "canonical_source": "Graphics/Titles/pokestart.png"
+    },
+    {
+      "source": "Graphics/Titles/selector.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 10461,
+      "source_mtime_ns": 1792048549975398800,
+      "canonical_source": "Graphics/Titles/selector.png"
+    },
+    {
+      "source": "Graphics/Titles/shine.png",
+      "size": [
+        392,
+        392
+      ],
+      "source_bytes": 180532,
+      "source_mtime_ns": 1792048549976959000,
+      "canonical_source": "Graphics/Titles/shine.png"
+    },
+    {
+      "source": "Graphics/Titles/splash.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 20729,
+      "source_mtime_ns": 1792048549978009600,
+      "canonical_source": "Graphics/Titles/splash.png"
+    },
+    {
+      "source": "Graphics/Titles/start.png",
+      "size": [
+        512,
+        10
+      ],
+      "source_bytes": 207,
+      "source_mtime_ns": 1792048549978526000,
+      "canonical_source": "Graphics/Titles/start.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

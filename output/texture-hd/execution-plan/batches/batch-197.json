@@ -1,0 +1,228 @@
+{
+  "id": "batch-197",
+  "number": 197,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（46/99）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-196"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-197",
+  "entries": [
+    {
+      "source": "Graphics/Characters/633.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1047,
+      "source_mtime_ns": 1792048530603761600,
+      "canonical_source": "Graphics/Characters/633.png"
+    },
+    {
+      "source": "Graphics/Characters/634.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1735,
+      "source_mtime_ns": 1792048530603761600,
+      "canonical_source": "Graphics/Characters/634.png"
+    },
+    {
+      "source": "Graphics/Characters/635.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2625,
+      "source_mtime_ns": 1792048530603761600,
+      "canonical_source": "Graphics/Characters/635.png"
+    },
+    {
+      "source": "Graphics/Characters/636.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 982,
+      "source_mtime_ns": 1792048530603761600,
+      "canonical_source": "Graphics/Characters/636.png"
+    },
+    {
+      "source": "Graphics/Characters/637.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2230,
+      "source_mtime_ns": 1792048530604762200,
+      "canonical_source": "Graphics/Characters/637.png"
+    },
+    {
+      "source": "Graphics/Characters/649.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1465,
+      "source_mtime_ns": 1792048530604762200,
+      "canonical_source": "Graphics/Characters/649.png"
+    },
+    {
+      "source": "Graphics/Characters/778.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1286,
+      "source_mtime_ns": 1792048530604762200,
+      "canonical_source": "Graphics/Characters/778.png"
+    },
+    {
+      "source": "Graphics/Characters/Agatha_OW.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1797,
+      "source_mtime_ns": 1792048530605766100,
+      "canonical_source": "Graphics/Characters/Agatha_OW.png"
+    },
+    {
+      "source": "Graphics/Characters/ALTARIA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6536,
+      "source_mtime_ns": 1792048530604762200,
+      "canonical_source": "Graphics/Characters/ALTARIA.png"
+    },
+    {
+      "source": "Graphics/Characters/band_drummer.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6204,
+      "source_mtime_ns": 1792048540699355100,
+      "canonical_source": "Graphics/Characters/band_drummer.png"
+    },
+    {
+      "source": "Graphics/Characters/band_eguitar.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7505,
+      "source_mtime_ns": 1792048540700353000,
+      "canonical_source": "Graphics/Characters/band_eguitar.png"
+    },
+    {
+      "source": "Graphics/Characters/band_eguitar-upsidedown.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 43929,
+      "source_mtime_ns": 1792048540699355100,
+      "canonical_source": "Graphics/Characters/band_eguitar-upsidedown.png"
+    },
+    {
+      "source": "Graphics/Characters/band_eguitar_noguitar.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7351,
+      "source_mtime_ns": 1792048540700353000,
+      "canonical_source": "Graphics/Characters/band_eguitar_noguitar.png"
+    },
+    {
+      "source": "Graphics/Characters/band_flutist.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6799,
+      "source_mtime_ns": 1792048540700353000,
+      "canonical_source": "Graphics/Characters/band_flutist.png"
+    },
+    {
+      "source": "Graphics/Characters/band_flutist_playing.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6531,
+      "source_mtime_ns": 1792048540700353000,
+      "canonical_source": "Graphics/Characters/band_flutist_playing.png"
+    },
+    {
+      "source": "Graphics/Characters/band_harpist.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 10358,
+      "source_mtime_ns": 1792048540701354700,
+      "canonical_source": "Graphics/Characters/band_harpist.png"
+    },
+    {
+      "source": "Graphics/Characters/band_harpist_noharp.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8791,
+      "source_mtime_ns": 1792048540701354700,
+      "canonical_source": "Graphics/Characters/band_harpist_noharp.png"
+    },
+    {
+      "source": "Graphics/Characters/band_mariachi.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6402,
+      "source_mtime_ns": 1792048540701354700,
+      "canonical_source": "Graphics/Characters/band_mariachi.png"
+    },
+    {
+      "source": "Graphics/Characters/band_mariachi_noguitar.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6561,
+      "source_mtime_ns": 1792048540702354700,
+      "canonical_source": "Graphics/Characters/band_mariachi_noguitar.png"
+    },
+    {
+      "source": "Graphics/Characters/BARREL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7369,
+      "source_mtime_ns": 1792048530605766100,
+      "canonical_source": "Graphics/Characters/BARREL.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

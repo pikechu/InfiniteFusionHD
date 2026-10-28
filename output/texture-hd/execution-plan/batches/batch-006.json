@@ -1,0 +1,268 @@
+{
+  "id": "batch-006",
+  "number": 6,
+  "priority": "P1",
+  "stage": "ground",
+  "title": "其余战斗地台：按环境合并敌我两侧与昼夜版本（1/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ground",
+  "processing_notes": "逐图 AI 补绘地面材质；敌我两侧同批，保留原始轮廓、位置与透明通道；与现有背景合成检查。",
+  "depends_on": [
+    "batch-005"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-006",
+  "entries": [
+    {
+      "source": "Graphics/Battlebacks/enemybase/blaine.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527821921400,
+      "canonical_source": "Graphics/Battlebacks/enemybase/blaine.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/blaine.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048527976968000,
+      "canonical_source": "Graphics/Battlebacks/playerbase/blaine.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/brock.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527821921400,
+      "canonical_source": "Graphics/Battlebacks/enemybase/brock.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/brock.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048527977968800,
+      "canonical_source": "Graphics/Battlebacks/playerbase/brock.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cave1.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 66692,
+      "source_mtime_ns": 1792048527828213300,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cave1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cave1.png",
+      "size": [
+        408,
+        96
+      ],
+      "source_bytes": 4936,
+      "source_mtime_ns": 1792048528033965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cave1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cave2.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 66692,
+      "source_mtime_ns": 1792048527828213300,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cave2.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cave2.png",
+      "size": [
+        408,
+        96
+      ],
+      "source_bytes": 4936,
+      "source_mtime_ns": 1792048528034965600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cave2.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cave2_water.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71483,
+      "source_mtime_ns": 1792048527829224200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cave2_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cave2_water.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 6348,
+      "source_mtime_ns": 1792048528034965600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cave2_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cave_water.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71483,
+      "source_mtime_ns": 1792048527830218600,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cave_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cave_water.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 6348,
+      "source_mtime_ns": 1792048528034965600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cave_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/caveice_water.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71483,
+      "source_mtime_ns": 1792048527831219400,
+      "canonical_source": "Graphics/Battlebacks/enemybase/caveice_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/caveice_water.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 6348,
+      "source_mtime_ns": 1792048528035965700,
+      "canonical_source": "Graphics/Battlebacks/playerbase/caveice_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/champion.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 67393,
+      "source_mtime_ns": 1792048527832218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/champion.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/champion.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 4387,
+      "source_mtime_ns": 1792048528035965700,
+      "canonical_source": "Graphics/Battlebacks/playerbase/champion.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/chuck.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 101033,
+      "source_mtime_ns": 1792048527832218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/chuck.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/chuck.png",
+      "size": [
+        408,
+        87
+      ],
+      "source_bytes": 5189,
+      "source_mtime_ns": 1792048528036966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/chuck.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/city_concrete.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 70065,
+      "source_mtime_ns": 1792048527834218100,
+      "canonical_source": "Graphics/Battlebacks/enemybase/city_concrete.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/city_concrete.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5603,
+      "source_mtime_ns": 1792048528036966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/city_concrete.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/city_dirt.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 101300,
+      "source_mtime_ns": 1792048527835218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/city_dirt.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/city_dirt.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5667,
+      "source_mtime_ns": 1792048528036966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/city_dirt.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/city_grass.png",
+      "size": [
+        270,
+        128
+      ],
+      "source_bytes": 62519,
+      "source_mtime_ns": 1792048527835218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/city_grass.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/city_grass.png",
+      "size": [
+        408,
+        93
+      ],
+      "source_bytes": 5841,
+      "source_mtime_ns": 1792048528037966100,
+      "canonical_source": "Graphics/Battlebacks/playerbase/city_grass.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
+  ],
+  "result": "output/texture-hd/batch-006/validation.json"
+}

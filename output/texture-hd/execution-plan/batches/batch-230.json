@@ -1,0 +1,228 @@
+{
+  "id": "batch-230",
+  "number": 230,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（79/99）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-229"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-230",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Overworld/121.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3079,
+      "source_mtime_ns": 1792048540312057600,
+      "canonical_source": "Graphics/Characters/Overworld/121.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/122.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3197,
+      "source_mtime_ns": 1792048540312057600,
+      "canonical_source": "Graphics/Characters/Overworld/122.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/123.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3606,
+      "source_mtime_ns": 1792048540312057600,
+      "canonical_source": "Graphics/Characters/Overworld/123.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/124.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3534,
+      "source_mtime_ns": 1792048540312057600,
+      "canonical_source": "Graphics/Characters/Overworld/124.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/125.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3214,
+      "source_mtime_ns": 1792048540313057500,
+      "canonical_source": "Graphics/Characters/Overworld/125.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/126.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3685,
+      "source_mtime_ns": 1792048540313057500,
+      "canonical_source": "Graphics/Characters/Overworld/126.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/127.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3331,
+      "source_mtime_ns": 1792048540313057500,
+      "canonical_source": "Graphics/Characters/Overworld/127.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/128.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3732,
+      "source_mtime_ns": 1792048540314057300,
+      "canonical_source": "Graphics/Characters/Overworld/128.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/129.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3229,
+      "source_mtime_ns": 1792048540314057300,
+      "canonical_source": "Graphics/Characters/Overworld/129.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/130.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5443,
+      "source_mtime_ns": 1792048540314057300,
+      "canonical_source": "Graphics/Characters/Overworld/130.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/131.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3508,
+      "source_mtime_ns": 1792048540314057300,
+      "canonical_source": "Graphics/Characters/Overworld/131.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/132.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1790,
+      "source_mtime_ns": 1792048540315057600,
+      "canonical_source": "Graphics/Characters/Overworld/132.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/133.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2437,
+      "source_mtime_ns": 1792048540315057600,
+      "canonical_source": "Graphics/Characters/Overworld/133.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/134.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3690,
+      "source_mtime_ns": 1792048540315057600,
+      "canonical_source": "Graphics/Characters/Overworld/134.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/135.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3080,
+      "source_mtime_ns": 1792048540315057600,
+      "canonical_source": "Graphics/Characters/Overworld/135.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/136.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3390,
+      "source_mtime_ns": 1792048540316057200,
+      "canonical_source": "Graphics/Characters/Overworld/136.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/137.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2473,
+      "source_mtime_ns": 1792048540316057200,
+      "canonical_source": "Graphics/Characters/Overworld/137.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/138.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2379,
+      "source_mtime_ns": 1792048540316057200,
+      "canonical_source": "Graphics/Characters/Overworld/138.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/139.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3377,
+      "source_mtime_ns": 1792048540317056900,
+      "canonical_source": "Graphics/Characters/Overworld/139.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/140.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2009,
+      "source_mtime_ns": 1792048540317056900,
+      "canonical_source": "Graphics/Characters/Overworld/140.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

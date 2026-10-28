@@ -1,0 +1,283 @@
+{
+  "id": "batch-519",
+  "number": 519,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（8/29）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-518"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-519",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/introOak.png",
+      "size": [
+        110,
+        172
+      ],
+      "source_bytes": 1170,
+      "source_mtime_ns": 1792048548395687100,
+      "canonical_source": "Graphics/Pictures/introOak.png"
+    },
+    {
+      "source": "Graphics/Pictures/item.png",
+      "size": [
+        16,
+        16
+      ],
+      "source_bytes": 149,
+      "source_mtime_ns": 1792048548396678500,
+      "canonical_source": "Graphics/Pictures/item.png"
+    },
+    {
+      "source": "Graphics/Pictures/judgment.png",
+      "size": [
+        96,
+        32
+      ],
+      "source_bytes": 242,
+      "source_mtime_ns": 1792048548396678500,
+      "canonical_source": "Graphics/Pictures/judgment.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/jukeboxbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2900,
+      "source_mtime_ns": 1793075479227260000,
+      "canonical_source": "Graphics/Pictures/jukeboxbg.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/jukeboxbg.png",
+        "chinese": "Graphics/Chinese/Pictures/jukeboxbg.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/jukeboxbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1283,
+      "source_mtime_ns": 1792048548397679400,
+      "canonical_source": "Graphics/Pictures/jukeboxbg.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/jukeboxbg.png",
+        "chinese": "Graphics/Chinese/Pictures/jukeboxbg.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/LE.PNG",
+      "size": [
+        64,
+        64
+      ],
+      "source_bytes": 1180,
+      "source_mtime_ns": 1792048547209923900,
+      "canonical_source": "Graphics/Pictures/LE.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/leftarrow.png",
+      "size": [
+        40,
+        224
+      ],
+      "source_bytes": 197,
+      "source_mtime_ns": 1792048548398678500,
+      "canonical_source": "Graphics/Pictures/leftarrow.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadbg1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 565,
+      "source_mtime_ns": 1792048548398678500,
+      "canonical_source": "Graphics/Pictures/loadbg1.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadbg2.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 565,
+      "source_mtime_ns": 1792048548399678900,
+      "canonical_source": "Graphics/Pictures/loadbg2.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadbg3.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 565,
+      "source_mtime_ns": 1792048548399678900,
+      "canonical_source": "Graphics/Pictures/loadbg3.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1627,
+      "source_mtime_ns": 1792048548398678500,
+      "canonical_source": "Graphics/Pictures/loadbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadPanels.png",
+      "size": [
+        408,
+        536
+      ],
+      "source_bytes": 1329,
+      "source_mtime_ns": 1792048548398678500,
+      "canonical_source": "Graphics/Pictures/loadPanels.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadsavepanel.png",
+      "size": [
+        384,
+        45
+      ],
+      "source_bytes": 221,
+      "source_mtime_ns": 1792048548399678900,
+      "canonical_source": "Graphics/Pictures/loadsavepanel.png"
+    },
+    {
+      "source": "Graphics/Pictures/loadsavepanel_1.png",
+      "size": [
+        384,
+        45
+      ],
+      "source_bytes": 186,
+      "source_mtime_ns": 1792048548399678900,
+      "canonical_source": "Graphics/Pictures/loadsavepanel_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/machoke.png",
+      "size": [
+        56,
+        56
+      ],
+      "source_bytes": 435,
+      "source_mtime_ns": 1792048548400678300,
+      "canonical_source": "Graphics/Pictures/machoke.png"
+    },
+    {
+      "source": "Graphics/Pictures/mail.png",
+      "size": [
+        16,
+        16
+      ],
+      "source_bytes": 137,
+      "source_mtime_ns": 1792048548400678300,
+      "canonical_source": "Graphics/Pictures/mail.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailAIRMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1046,
+      "source_mtime_ns": 1792048548400678300,
+      "canonical_source": "Graphics/Pictures/mailAIRMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailbg.png",
+      "size": [
+        8,
+        8
+      ],
+      "source_bytes": 82,
+      "source_mtime_ns": 1792048548408685700,
+      "canonical_source": "Graphics/Pictures/mailbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailBLOOMMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3511,
+      "source_mtime_ns": 1792048548400678300,
+      "canonical_source": "Graphics/Pictures/mailBLOOMMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailbox.png",
+      "size": [
+        500,
+        500
+      ],
+      "source_bytes": 441,
+      "source_mtime_ns": 1792048548408685700,
+      "canonical_source": "Graphics/Pictures/mailbox.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailBRICKMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1380,
+      "source_mtime_ns": 1792048548401679500,
+      "canonical_source": "Graphics/Pictures/mailBRICKMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailBUBBLEMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1392,
+      "source_mtime_ns": 1792048548401679500,
+      "canonical_source": "Graphics/Pictures/mailBUBBLEMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailFLAMEMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1770,
+      "source_mtime_ns": 1792048548401679500,
+      "canonical_source": "Graphics/Pictures/mailFLAMEMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailGRASSMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3467,
+      "source_mtime_ns": 1792048548402681400,
+      "canonical_source": "Graphics/Pictures/mailGRASSMAIL.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

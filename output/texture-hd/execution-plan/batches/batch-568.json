@@ -1,0 +1,508 @@
+{
+  "id": "batch-568",
+  "number": 568,
+  "priority": "P4",
+  "stage": "icons",
+  "title": "宝可梦小图标与道具图标（28/64）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "icon",
+  "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
+  "depends_on": [
+    "batch-116",
+    "batch-567"
+  ],
+  "file_count": 48,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-568",
+  "entries": [
+    {
+      "source": "Graphics/Items/FIGYBERRY.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 385,
+      "source_mtime_ns": 1792048545276517100,
+      "canonical_source": "Graphics/Items/FIGYBERRY.png"
+    },
+    {
+      "source": "Graphics/Items/FIRECRACKER.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 278,
+      "source_mtime_ns": 1792048545276517100,
+      "canonical_source": "Graphics/Items/FIRECRACKER.png"
+    },
+    {
+      "source": "Graphics/Items/FIREGEM.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545277519800,
+      "canonical_source": "Graphics/Items/FIREGEM.png"
+    },
+    {
+      "source": "Graphics/Items/FIRESTONE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 423,
+      "source_mtime_ns": 1792048545277519800,
+      "canonical_source": "Graphics/Items/FIRESTONE.png"
+    },
+    {
+      "source": "Graphics/Items/FISTPLATE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 351,
+      "source_mtime_ns": 1792048545277519800,
+      "canonical_source": "Graphics/Items/FISTPLATE.png"
+    },
+    {
+      "source": "Graphics/Items/FLAMEMAIL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 346,
+      "source_mtime_ns": 1792048545277519800,
+      "canonical_source": "Graphics/Items/FLAMEMAIL.png"
+    },
+    {
+      "source": "Graphics/Items/FLAMEORB.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545277519800,
+      "canonical_source": "Graphics/Items/FLAMEORB.png"
+    },
+    {
+      "source": "Graphics/Items/FLAMEPLATE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 351,
+      "source_mtime_ns": 1792048545278517600,
+      "canonical_source": "Graphics/Items/FLAMEPLATE.png"
+    },
+    {
+      "source": "Graphics/Items/FLOATSTONE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 331,
+      "source_mtime_ns": 1792048545278517600,
+      "canonical_source": "Graphics/Items/FLOATSTONE.png"
+    },
+    {
+      "source": "Graphics/Items/FLUFFYTAIL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 430,
+      "source_mtime_ns": 1792048545278517600,
+      "canonical_source": "Graphics/Items/FLUFFYTAIL.png"
+    },
+    {
+      "source": "Graphics/Items/FLYINGGEM.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545278517600,
+      "canonical_source": "Graphics/Items/FLYINGGEM.png"
+    },
+    {
+      "source": "Graphics/Items/FOCUSBAND.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 454,
+      "source_mtime_ns": 1792048545279518200,
+      "canonical_source": "Graphics/Items/FOCUSBAND.png"
+    },
+    {
+      "source": "Graphics/Items/FOCUSSASH.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 379,
+      "source_mtime_ns": 1792048545279518200,
+      "canonical_source": "Graphics/Items/FOCUSSASH.png"
+    },
+    {
+      "source": "Graphics/Items/FRESHWATER.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 383,
+      "source_mtime_ns": 1792048545279518200,
+      "canonical_source": "Graphics/Items/FRESHWATER.png"
+    },
+    {
+      "source": "Graphics/Items/FRIENDBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 424,
+      "source_mtime_ns": 1792048545279518200,
+      "canonical_source": "Graphics/Items/FRIENDBALL.png"
+    },
+    {
+      "source": "Graphics/Items/FROSTBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 411,
+      "source_mtime_ns": 1792048545279518200,
+      "canonical_source": "Graphics/Items/FROSTBALL.png"
+    },
+    {
+      "source": "Graphics/Items/FULLHEAL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 383,
+      "source_mtime_ns": 1792048545280517700,
+      "canonical_source": "Graphics/Items/FULLHEAL.png"
+    },
+    {
+      "source": "Graphics/Items/FULLINCENSE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 421,
+      "source_mtime_ns": 1792048545309119900,
+      "canonical_source": "Graphics/Items/FULLINCENSE.png"
+    },
+    {
+      "source": "Graphics/Items/FULLRESTORE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 400,
+      "source_mtime_ns": 1792048545309119900,
+      "canonical_source": "Graphics/Items/FULLRESTORE.png"
+    },
+    {
+      "source": "Graphics/Items/FUSIONBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 413,
+      "source_mtime_ns": 1792048545309119900,
+      "canonical_source": "Graphics/Items/FUSIONBALL.png"
+    },
+    {
+      "source": "Graphics/Items/FUSIONREPEL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 408,
+      "source_mtime_ns": 1792048545310121300,
+      "canonical_source": "Graphics/Items/FUSIONREPEL.png"
+    },
+    {
+      "source": "Graphics/Items/GANLONBERRY.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 415,
+      "source_mtime_ns": 1792048545310121300,
+      "canonical_source": "Graphics/Items/GANLONBERRY.png"
+    },
+    {
+      "source": "Graphics/Items/GASMASK.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 465,
+      "source_mtime_ns": 1792048545310121300,
+      "canonical_source": "Graphics/Items/GASMASK.png"
+    },
+    {
+      "source": "Graphics/Items/GENDERBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 391,
+      "source_mtime_ns": 1792048545311123700,
+      "canonical_source": "Graphics/Items/GENDERBALL.png"
+    },
+    {
+      "source": "Graphics/Items/GENIUSWING.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 346,
+      "source_mtime_ns": 1792048545311123700,
+      "canonical_source": "Graphics/Items/GENIUSWING.png"
+    },
+    {
+      "source": "Graphics/Items/GHOSTGEM.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545311123700,
+      "canonical_source": "Graphics/Items/GHOSTGEM.png"
+    },
+    {
+      "source": "Graphics/Items/GLITTERBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 1316,
+      "source_mtime_ns": 1792048545311123700,
+      "canonical_source": "Graphics/Items/GLITTERBALL.png"
+    },
+    {
+      "source": "Graphics/Items/GOLBATBOOTS.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 2753,
+      "source_mtime_ns": 1792048545312123600,
+      "canonical_source": "Graphics/Items/GOLBATBOOTS.png"
+    },
+    {
+      "source": "Graphics/Items/GOLDEMBLEM.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 380,
+      "source_mtime_ns": 1792048545312123600,
+      "canonical_source": "Graphics/Items/GOLDEMBLEM.png"
+    },
+    {
+      "source": "Graphics/Items/GOLDENBANANA.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 294,
+      "source_mtime_ns": 1792048545312123600,
+      "canonical_source": "Graphics/Items/GOLDENBANANA.png"
+    },
+    {
+      "source": "Graphics/Items/GOLDRING.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 2635,
+      "source_mtime_ns": 1792048545312123600,
+      "canonical_source": "Graphics/Items/GOLDRING.png"
+    },
+    {
+      "source": "Graphics/Items/GOODROD.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 354,
+      "source_mtime_ns": 1792048545312123600,
+      "canonical_source": "Graphics/Items/GOODROD.png"
+    },
+    {
+      "source": "Graphics/Items/GOOEYMULCH.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 365,
+      "source_mtime_ns": 1792048545313120800,
+      "canonical_source": "Graphics/Items/GOOEYMULCH.png"
+    },
+    {
+      "source": "Graphics/Items/GRACIDEA.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 415,
+      "source_mtime_ns": 1792048545313120800,
+      "canonical_source": "Graphics/Items/GRACIDEA.png"
+    },
+    {
+      "source": "Graphics/Items/GRASSGEM.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545313120800,
+      "canonical_source": "Graphics/Items/GRASSGEM.png"
+    },
+    {
+      "source": "Graphics/Items/GRASSMAIL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545313120800,
+      "canonical_source": "Graphics/Items/GRASSMAIL.png"
+    },
+    {
+      "source": "Graphics/Items/GRASSYSEED.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 423,
+      "source_mtime_ns": 1792048545314125200,
+      "canonical_source": "Graphics/Items/GRASSYSEED.png"
+    },
+    {
+      "source": "Graphics/Items/GREATBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 421,
+      "source_mtime_ns": 1792048545314125200,
+      "canonical_source": "Graphics/Items/GREATBALL.png"
+    },
+    {
+      "source": "Graphics/Items/GREENAPRICORN.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 381,
+      "source_mtime_ns": 1792048545314125200,
+      "canonical_source": "Graphics/Items/GREENAPRICORN.png"
+    },
+    {
+      "source": "Graphics/Items/GREENSCARF.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 392,
+      "source_mtime_ns": 1792048545314125200,
+      "canonical_source": "Graphics/Items/GREENSCARF.png"
+    },
+    {
+      "source": "Graphics/Items/GREENSHARD.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 253,
+      "source_mtime_ns": 1792048545315124900,
+      "canonical_source": "Graphics/Items/GREENSHARD.png"
+    },
+    {
+      "source": "Graphics/Items/GREPABERRY.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 380,
+      "source_mtime_ns": 1792048545315124900,
+      "canonical_source": "Graphics/Items/GREPABERRY.png"
+    },
+    {
+      "source": "Graphics/Items/GRIPCLAW.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 400,
+      "source_mtime_ns": 1792048545315124900,
+      "canonical_source": "Graphics/Items/GRIPCLAW.png"
+    },
+    {
+      "source": "Graphics/Items/GRISEOUSORB.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 441,
+      "source_mtime_ns": 1792048545315124900,
+      "canonical_source": "Graphics/Items/GRISEOUSORB.png"
+    },
+    {
+      "source": "Graphics/Items/GROUNDGEM.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 344,
+      "source_mtime_ns": 1792048545316124400,
+      "canonical_source": "Graphics/Items/GROUNDGEM.png"
+    },
+    {
+      "source": "Graphics/Items/GROWTHMULCH.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 367,
+      "source_mtime_ns": 1792048545316124400,
+      "canonical_source": "Graphics/Items/GROWTHMULCH.png"
+    },
+    {
+      "source": "Graphics/Items/GSBALL.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 353,
+      "source_mtime_ns": 1792048545316124400,
+      "canonical_source": "Graphics/Items/GSBALL.png"
+    },
+    {
+      "source": "Graphics/Items/GUARDSPEC.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 420,
+      "source_mtime_ns": 1792048545316124400,
+      "canonical_source": "Graphics/Items/GUARDSPEC.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
+  ]
+}

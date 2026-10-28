@@ -1,0 +1,228 @@
+{
+  "id": "batch-266",
+  "number": 266,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（16/62）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-265"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-266",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/DOTTLER.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3551,
+      "source_mtime_ns": 1792048531922047600,
+      "canonical_source": "Graphics/Characters/Followers/DOTTLER.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DOUBLADE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4752,
+      "source_mtime_ns": 1792048531923047100,
+      "canonical_source": "Graphics/Characters/Followers/DOUBLADE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRACOVISH.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6030,
+      "source_mtime_ns": 1792048531923047100,
+      "canonical_source": "Graphics/Characters/Followers/DRACOVISH.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRACOZOLT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7015,
+      "source_mtime_ns": 1792048531923047100,
+      "canonical_source": "Graphics/Characters/Followers/DRACOZOLT.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAGALGE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5592,
+      "source_mtime_ns": 1792048531923047100,
+      "canonical_source": "Graphics/Characters/Followers/DRAGALGE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAGAPULT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6998,
+      "source_mtime_ns": 1792048531924049500,
+      "canonical_source": "Graphics/Characters/Followers/DRAGAPULT.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAGONAIR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5543,
+      "source_mtime_ns": 1792048531924049500,
+      "canonical_source": "Graphics/Characters/Followers/DRAGONAIR.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAGONITE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5462,
+      "source_mtime_ns": 1792048531924049500,
+      "canonical_source": "Graphics/Characters/Followers/DRAGONITE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAKLOAK.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7229,
+      "source_mtime_ns": 1792048531925047900,
+      "canonical_source": "Graphics/Characters/Followers/DRAKLOAK.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAMPA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4960,
+      "source_mtime_ns": 1792048531925047900,
+      "canonical_source": "Graphics/Characters/Followers/DRAMPA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRAPION.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5916,
+      "source_mtime_ns": 1792048531925047900,
+      "canonical_source": "Graphics/Characters/Followers/DRAPION.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRATINI.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3982,
+      "source_mtime_ns": 1792048531926047300,
+      "canonical_source": "Graphics/Characters/Followers/DRATINI.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DREDNAW.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4722,
+      "source_mtime_ns": 1792048531926047300,
+      "canonical_source": "Graphics/Characters/Followers/DREDNAW.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DREEPY.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4329,
+      "source_mtime_ns": 1792048531927049900,
+      "canonical_source": "Graphics/Characters/Followers/DREEPY.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRIFBLIM.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5642,
+      "source_mtime_ns": 1792048531927049900,
+      "canonical_source": "Graphics/Characters/Followers/DRIFBLIM.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRIFLOON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3028,
+      "source_mtime_ns": 1792048531928047700,
+      "canonical_source": "Graphics/Characters/Followers/DRIFLOON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRILBUR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3583,
+      "source_mtime_ns": 1792048531928047700,
+      "canonical_source": "Graphics/Characters/Followers/DRILBUR.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRIZZILE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5074,
+      "source_mtime_ns": 1792048531928047700,
+      "canonical_source": "Graphics/Characters/Followers/DRIZZILE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DROWZEE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3361,
+      "source_mtime_ns": 1792048531929047600,
+      "canonical_source": "Graphics/Characters/Followers/DROWZEE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/DRUDDIGON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6452,
+      "source_mtime_ns": 1792048531929047600,
+      "canonical_source": "Graphics/Characters/Followers/DRUDDIGON.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

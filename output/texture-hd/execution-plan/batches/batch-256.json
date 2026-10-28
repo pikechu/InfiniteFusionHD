@@ -1,0 +1,228 @@
+{
+  "id": "batch-256",
+  "number": 256,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（6/62）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-255"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-256",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9042,
+      "source_mtime_ns": 1792048531062009200,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_1.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9121,
+      "source_mtime_ns": 1792048531062009200,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_2.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9045,
+      "source_mtime_ns": 1792048531083944500,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_3.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9167,
+      "source_mtime_ns": 1792048531083944500,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_3.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_4.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9119,
+      "source_mtime_ns": 1792048531084943700,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_4.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_5.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9100,
+      "source_mtime_ns": 1792048531084943700,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_5.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_6.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9084,
+      "source_mtime_ns": 1792048531084943700,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_6.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_7.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9096,
+      "source_mtime_ns": 1792048531085944600,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_7.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_8.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9249,
+      "source_mtime_ns": 1792048531085944600,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_8.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_10.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 8987,
+      "source_mtime_ns": 1792048531062009200,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_10.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_11.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 8955,
+      "source_mtime_ns": 1792048531062009200,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_11.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_12.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9072,
+      "source_mtime_ns": 1792048531063008800,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_12.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_13.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9123,
+      "source_mtime_ns": 1792048531063008800,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_13.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_14.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9078,
+      "source_mtime_ns": 1792048531063008800,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_14.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_15.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9065,
+      "source_mtime_ns": 1792048531064008700,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_15.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_16.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9252,
+      "source_mtime_ns": 1792048531082942200,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_16.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_17.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9036,
+      "source_mtime_ns": 1792048531082942200,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_17.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCEUS_18.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 9772,
+      "source_mtime_ns": 1792048531083944500,
+      "canonical_source": "Graphics/Characters/Followers/ARCEUS_18.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCHEN.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4271,
+      "source_mtime_ns": 1792048531085944600,
+      "canonical_source": "Graphics/Characters/Followers/ARCHEN.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ARCHEOPS.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6453,
+      "source_mtime_ns": 1792048531085944600,
+      "canonical_source": "Graphics/Characters/Followers/ARCHEOPS.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ]
+}

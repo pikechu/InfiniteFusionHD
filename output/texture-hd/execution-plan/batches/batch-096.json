@@ -1,0 +1,371 @@
+{
+  "id": "batch-096",
+  "number": 96,
+  "priority": "P2",
+  "stage": "ui_map",
+  "title": "地区地图、导航、帮助与训练师卡（3/9）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-095"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-096",
+  "entries": [
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog1.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 336930,
+      "source_mtime_ns": 1793075474204658700,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog1.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog1.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog1.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog1.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 336574,
+      "source_mtime_ns": 1792048548425817600,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog1.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog1.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog1.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog2.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 337894,
+      "source_mtime_ns": 1793075476252181500,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog2.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog2.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog2.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 337438,
+      "source_mtime_ns": 1792048548439586700,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog2.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog2.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog3.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 338872,
+      "source_mtime_ns": 1793075476815662400,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog3.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog3.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog3.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog3.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 338427,
+      "source_mtime_ns": 1792048548441588400,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog3.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog3.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog3.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog4.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 339310,
+      "source_mtime_ns": 1793075477022921000,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog4.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog4.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog4.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog4.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 338874,
+      "source_mtime_ns": 1792048548443587800,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog4.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog4.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog4.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog5.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 340987,
+      "source_mtime_ns": 1793075477224289200,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog5.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog5.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog5.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog5.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 340551,
+      "source_mtime_ns": 1792048548445587200,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog5.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog5.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog5.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog6.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 341932,
+      "source_mtime_ns": 1793075477424025500,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog6.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog6.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog6.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog6.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 341545,
+      "source_mtime_ns": 1792048548449588400,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog6.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog6.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog6.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog7.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 343019,
+      "source_mtime_ns": 1793075477653145900,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog7.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog7.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog7.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog7.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 342634,
+      "source_mtime_ns": 1792048548451587700,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog7.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog7.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog7.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog8.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 343444,
+      "source_mtime_ns": 1793075477868818800,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog8.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog8.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog8.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog8.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 343022,
+      "source_mtime_ns": 1792048548453588800,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog8.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog8.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog8.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog9.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 343971,
+      "source_mtime_ns": 1793075478262618000,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog9.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog9.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog9.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog9.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 343531,
+      "source_mtime_ns": 1792048548455589400,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog9.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog9.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog9.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog10.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 344452,
+      "source_mtime_ns": 1793075474732778000,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog10.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog10.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog10.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog10.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 344016,
+      "source_mtime_ns": 1792048548427904600,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog10.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog10.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog10.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog11.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 347680,
+      "source_mtime_ns": 1793075474942582600,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog11.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog11.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog11.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog11.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 347092,
+      "source_mtime_ns": 1792048548430013600,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog11.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog11.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog11.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog12.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 349590,
+      "source_mtime_ns": 1793075475271735300,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog12.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog12.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog12.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog12.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 349082,
+      "source_mtime_ns": 1792048548432077600,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog12.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog12.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog12.png"
+      }
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ]
+}

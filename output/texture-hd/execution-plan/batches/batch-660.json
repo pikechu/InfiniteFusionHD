@@ -1,0 +1,107 @@
+{
+  "id": "batch-660",
+  "number": 660,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（39/116）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-659"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-660",
+  "entries": [
+    {
+      "source": "Graphics/Animations/PRAS- Baton Pass.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 1222,
+      "source_mtime_ns": 1792048522368374800,
+      "canonical_source": "Graphics/Animations/PRAS- Baton Pass.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Bide.png",
+      "size": [
+        960,
+        768
+      ],
+      "source_bytes": 2508,
+      "source_mtime_ns": 1792048522368374800,
+      "canonical_source": "Graphics/Animations/PRAS- Bide.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Bite.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 2376,
+      "source_mtime_ns": 1792048522368892900,
+      "canonical_source": "Graphics/Animations/PRAS- Bite.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Black BG.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 113,
+      "source_mtime_ns": 1792048522368892900,
+      "canonical_source": "Graphics/Animations/PRAS- Black BG.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Black Hole Eclipse BG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13631,
+      "source_mtime_ns": 1792048522369415000,
+      "canonical_source": "Graphics/Animations/PRAS- Black Hole Eclipse BG.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Black Hole Eclipse Opp BG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13813,
+      "source_mtime_ns": 1792048522369934200,
+      "canonical_source": "Graphics/Animations/PRAS- Black Hole Eclipse Opp BG.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Black Hole Eclipse.png",
+      "size": [
+        960,
+        768
+      ],
+      "source_bytes": 4846,
+      "source_mtime_ns": 1792048522369934200,
+      "canonical_source": "Graphics/Animations/PRAS- Black Hole Eclipse.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Blaze Kick.png",
+      "size": [
+        576,
+        192
+      ],
+      "source_bytes": 567,
+      "source_mtime_ns": 1792048522370449900,
+      "canonical_source": "Graphics/Animations/PRAS- Blaze Kick.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ]
+}

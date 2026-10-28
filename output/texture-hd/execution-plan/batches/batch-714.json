@@ -1,0 +1,107 @@
+{
+  "id": "batch-714",
+  "number": 714,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（93/116）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-713"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-714",
+  "entries": [
+    {
+      "source": "Graphics/Animations/scratchbattle.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 9394,
+      "source_mtime_ns": 1792048522857077400,
+      "canonical_source": "Graphics/Animations/scratchbattle.png"
+    },
+    {
+      "source": "Graphics/Animations/shadow.png",
+      "size": [
+        960,
+        960
+      ],
+      "source_bytes": 39918,
+      "source_mtime_ns": 1792048522857596500,
+      "canonical_source": "Graphics/Animations/shadow.png"
+    },
+    {
+      "source": "Graphics/Animations/shadowball.png",
+      "size": [
+        960,
+        960
+      ],
+      "source_bytes": 101936,
+      "source_mtime_ns": 1792048522858114700,
+      "canonical_source": "Graphics/Animations/shadowball.png"
+    },
+    {
+      "source": "Graphics/Animations/sleep.png",
+      "size": [
+        960,
+        960
+      ],
+      "source_bytes": 21015,
+      "source_mtime_ns": 1792048522858633300,
+      "canonical_source": "Graphics/Animations/sleep.png"
+    },
+    {
+      "source": "Graphics/Animations/Special5.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 225929,
+      "source_mtime_ns": 1792048522702780600,
+      "canonical_source": "Graphics/Animations/Special5.png"
+    },
+    {
+      "source": "Graphics/Animations/State1.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 109875,
+      "source_mtime_ns": 1792048522703806000,
+      "canonical_source": "Graphics/Animations/State1.png"
+    },
+    {
+      "source": "Graphics/Animations/Struggle.png",
+      "size": [
+        768,
+        192
+      ],
+      "source_bytes": 390,
+      "source_mtime_ns": 1792048522704309800,
+      "canonical_source": "Graphics/Animations/Struggle.png"
+    },
+    {
+      "source": "Graphics/Animations/surf-wave.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 2900,
+      "source_mtime_ns": 1792048522859138000,
+      "canonical_source": "Graphics/Animations/surf-wave.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ]
+}

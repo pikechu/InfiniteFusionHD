@@ -1,0 +1,85 @@
+{
+  "id": "batch-116",
+  "number": 116,
+  "priority": "P2",
+  "stage": "pokemon_pilot",
+  "title": "默认宝可梦试制：妙蛙种子、小火龙、杰尼龟",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "pokemon",
+  "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
+  "depends_on": [],
+  "file_count": 6,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-116",
+  "entries": [
+    {
+      "source": "Graphics/BaseSprites/1.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1679,
+      "source_mtime_ns": 1792048523017202200,
+      "canonical_source": "Graphics/BaseSprites/1.png"
+    },
+    {
+      "source": "Graphics/Battlers/1/1.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1679,
+      "source_mtime_ns": 1792048528798464700,
+      "canonical_source": "Graphics/Battlers/1/1.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/4.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1371,
+      "source_mtime_ns": 1792048524455793500,
+      "canonical_source": "Graphics/BaseSprites/4.png"
+    },
+    {
+      "source": "Graphics/Battlers/4/4.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1371,
+      "source_mtime_ns": 1792048529278655900,
+      "canonical_source": "Graphics/Battlers/4/4.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/7.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1421,
+      "source_mtime_ns": 1792048524673016700,
+      "canonical_source": "Graphics/BaseSprites/7.png"
+    },
+    {
+      "source": "Graphics/Battlers/7/7.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1421,
+      "source_mtime_ns": 1792048529340164200,
+      "canonical_source": "Graphics/Battlers/7/7.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "output\\texture-hd\\execution-plan\\batches\\batch-800.json",
+  "object": "25e71e1b443216332137811c9a4648e014b415f1",
+  "results": [
+    {
+      "operation": "exists",
+      "seconds": 0.016,
+      "exit": 128,
+      "stdout": "",
+      "stderr": "fatal: git cat-file: could not get object info\n"
+    },
+    {
+      "operation": "write",
+      "seconds": 0.203,
+      "exit": 0,
+      "stdout": "25e71e1b443216332137811c9a4648e014b415f1\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "batch-781",
+  "number": 781,
+  "priority": "P4",
+  "stage": "animated",
+  "title": "长动画条、动态精灵与 GIF（12/47）",
+  "status": "planned",
+  "action": "enhance_with_validation",
+  "method": "animated",
+  "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
+  "depends_on": [
+    "batch-116",
+    "batch-780"
+  ],
+  "file_count": 2,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-781",
+  "entries": [
+    {
+      "source": "Graphics/Animated Sprites/137.326a.png",
+      "size": [
+        36288,
+        288
+      ],
+      "source_bytes": 594883,
+      "source_mtime_ns": 1792048521445567300,
+      "canonical_source": "Graphics/Animated Sprites/137.326a.png",
+      "layout_must_be_read_from_loader": true
+    },
+    {
+      "source": "Graphics/Animated Sprites/137.406.png",
+      "size": [
+        26496,
+        288
+      ],
+      "source_bytes": 183982,
+      "source_mtime_ns": 1792048521447078900,
+      "canonical_source": "Graphics/Animated Sprites/137.406.png",
+      "layout_must_be_read_from_loader": true
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
+  ]
+}
