@@ -15,6 +15,8 @@ load File.join(ROOT, "Data/Scripts/050_Outfits/wrappers/001_Outfit.rb")
 load File.join(ROOT, "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitsGlobal.rb")
 load File.join(ROOT, "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitsSearch.rb")
 load File.join(ROOT, "Data/Scripts/050_Outfits/001_OutfitsMain/OutfitSelector.rb")
+class Trainer; end
+load File.join(ROOT, "Data/Scripts/015_Trainers and player/004_Player.rb")
 checks = 0
 check = lambda { |value, name| raise "FAIL #{name}" unless value; checks += 1; puts "PASS #{name}" }
 class SelectorFixture < OutfitSelector
@@ -55,6 +57,15 @@ Dir.mktmpdir("outfit-catalog-", File.join(ROOT, "temp")) do |directory|
   check.call(HTTPLite::JSON.calls == 3, "three item lookups parse each source catalog once")
   check.call((1..100).all? { get_hat_by_id("fixture").equal?(hat) }, "unchanged catalog objects are reused across repeated lookups")
   check.call(HTTPLite::JSON.calls == 3, "repeated stock lookups never reparse unchanged JSON")
+  player = Player.allocate
+  calls = HTTPLite::JSON.calls
+  3.times do
+    player.unlock_clothes("fixture",true)
+    player.unlock_hat("fixture",true)
+    player.unlock_hair("fixture",true)
+  end
+  check.call(HTTPLite::JSON.calls == calls, "outfit rewards and starting grants reuse the same validated catalogs")
+  check.call(player.unlocked_clothes == ["fixture"] && player.unlocked_hats == ["fixture"] && player.unlocked_hairstyles == ["fixture"], "cached grants preserve each category and prevent duplicate unlocks")
   check.call($PokemonGlobal.instance_variables.sort == [:@hats_data,:@hairstyles_data,:@clothes_data].sort, "cache adds no fields to player metadata")
   File.write(Settings::HATS_DATA_PATH, JSON.generate([{id:"new-hat",name:"updated",description:"test",price:20,tags:"pewter"}]))
   check.call(get_hat_by_id("new-hat").name == "updated", "changing a catalog refreshes the shared data")
