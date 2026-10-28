@@ -45,7 +45,7 @@ class Window_UnformattedTextPokemon
   def dispose; @disposed = true; end
   def disposed?; !!@disposed; end
 end
-$PokemonSystem = Struct.new(:sprite_sheet_mode, :download_sprites).new(1, 0)
+$PokemonSystem = Struct.new(:sprite_sheet_mode, :download_sprites, :language).new(1, 0, 0)
 def pbMessage(*); end
 def _INTL(text, *); text; end
 checks = 0
@@ -156,6 +156,12 @@ Dir.mktmpdir("offline-resources-", File.join(ROOT, "temp")) do |directory|
     resources.install(packed_entry, packed)
     check.call(resources.valid_file?(packed_entry, true), "compressed dex downloads install and verify the merged local dex")
     check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], dex[0]['entry']], "cached dex lookup preserves local and upstream descriptions")
+    translated = dex[0].merge('source' => dex[0]['entry'], 'entry' => "\u4e2d\u6587\u8bf4\u660e")
+    File.write(KIF::PokedexEntries::CHINESE_PATH, JSON.generate([translated]))
+    $PokemonSystem.language = 2
+    check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], translated['entry']], "resource contract supports the Chinese dex and untranslated local entries")
+    $PokemonSystem.language = 0
+    check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], dex[0]['entry']], "switching back to English refreshes the resource lookup cache")
     reject.call("corrupt compressed dex preserves the active descriptions") { resources.install(packed_entry, packed[0...-1]) }
     original_limit = KIF::PokedexEntries::MAX_BYTES
     KIF::PokedexEntries.send(:remove_const, :MAX_BYTES)
