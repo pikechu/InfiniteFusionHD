@@ -1,7 +1,7 @@
 {
   "date": "2026-10-28",
   "baseline_main": "cf24c7bd8f9f13638453c011611b682e97a24278",
-  "integrated_main": "c272fe68734a7b3fa6869c123b0e9f6ed4cca2b8",
+  "integrated_main": "9790431fb21d3aac71e234a28f61dae71d7d21e0",
   "dex_records": 82207,
   "dex_unique_english_sources": 75444,
   "dex_new_unique_reviewed": 61021,
@@ -42,7 +42,14 @@
     "version_name": "0.20.8-android.15",
     "phone_core_sha256": "6f90fabcb227eafa2a5b3a8967dbe34368cec06efab5cd3e709f538003186232",
     "emulator_variant": false,
-    "built": false
+    "built": true,
+    "source_commit": "9790431fb21d3aac71e234a28f61dae71d7d21e0",
+    "apk": "InfiniteFusionHD-0.20.8-android.15-arm64-network-test.apk",
+    "bytes": 796383536,
+    "sha256": "0d32551b45245f09e019f9629133c961ae0bd456e5a915021f10ebee72909587",
+    "same_signer_as_android14": true,
+    "payload_verified": true,
+    "real_android_device_checked": false
   },
   "limits": [
     "Static audit does not execute every map condition or dynamic script.",
