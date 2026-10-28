@@ -1,13 +1,7 @@
 class OutfitSelector
-  attr_reader :clothes_list
-  attr_reader :hats_list
-  attr_reader :hairstyles_list
-
-  def initialize()
-    @clothes_list = parse_clothes_folder()
-    @hats_list = parse_hats_folder()
-    @hairstyles_list =parse_hairstyles_folder()
-  end
+  def clothes_list; @clothes_list ||= parse_clothes_folder; end
+  def hats_list; @hats_list ||= parse_hats_folder; end
+  def hairstyles_list; @hairstyles_list ||= parse_hairstyles_folder; end
 
 
   def parse_clothes_folder
@@ -139,7 +133,7 @@ class OutfitSelector
 
     currentOutfit = $Trainer.clothes
     currentOutfit = 0 if !currentOutfit
-    nextOutfit = selectNextOutfit(currentOutfit, incr, @clothes_list, [], false,nil,$Trainer.unlocked_clothes,all_unlocked)
+    nextOutfit = selectNextOutfit(currentOutfit, incr, clothes_list, [], false,nil,$Trainer.unlocked_clothes,all_unlocked)
     $Trainer.clothes = nextOutfit
     $Trainer.clothes_color = 0
     echoln $Trainer.clothes
@@ -151,7 +145,7 @@ class OutfitSelector
 
     currentHat = $Trainer.hat
     currentHat = 0 if !currentHat
-    nextOutfit = selectNextOutfit(currentHat, incr, @hats_list, [], true, "hat",$Trainer.unlocked_hats,all_unlocked)
+    nextOutfit = selectNextOutfit(currentHat, incr, hats_list, [], true, "hat",$Trainer.unlocked_hats,all_unlocked)
     $Trainer.hat = nextOutfit
     $Trainer.hat_color = 0
     echoln $Trainer.hat
@@ -163,7 +157,7 @@ class OutfitSelector
 
     currentHair = $Trainer.hair
     currentHair = 0 if !currentHair
-    nextOutfit = selectNextOutfit(currentHair, incr, @hairstyles_list, ["a", "b", "c", "d"], true,nil,$Trainer.unlocked_hairstyles,all_unlocked)
+    nextOutfit = selectNextOutfit(currentHair, incr, hairstyles_list, ["a", "b", "c", "d"], true,nil,$Trainer.unlocked_hairstyles,all_unlocked)
     $Trainer.hair_color = 0
     $Trainer.hair = nextOutfit
     echoln $Trainer.hair

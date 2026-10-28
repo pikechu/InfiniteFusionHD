@@ -68,8 +68,19 @@ def update_global_clothes_list()
 end
 
 def update_global_outfit_lists()
+  fields = [:hats_data, :hairstyles_data, :clothes_data]
+  stamp = [Settings::HATS_DATA_PATH, Settings::HAIRSTYLE_DATA_PATH, Settings::CLOTHES_DATA_PATH].map do |path|
+    stat = File.stat(path)
+    [path, stat.size, stat.mtime, stat.ctime]
+  end
+  tables = fields.map { |field| $PokemonGlobal.send(field) }
+  signature = [$PokemonGlobal.object_id, stamp, tables.map(&:object_id)]
+  return if PokemonGlobalMetadata.instance_variable_get(:@outfit_catalog_signature) == signature && tables.all? { |table| table.is_a?(Hash) }
   update_global_hats_list
   update_global_hairstyles_list
   update_global_clothes_list
+  # Cache belongs to the process; do not add derived state to player saves.
+  signature[2] = fields.map { |field| $PokemonGlobal.send(field).object_id }
+  PokemonGlobalMetadata.instance_variable_set(:@outfit_catalog_signature, signature)
 end
 
