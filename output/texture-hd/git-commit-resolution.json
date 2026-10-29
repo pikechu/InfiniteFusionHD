@@ -1,0 +1,18 @@
+{
+  "status": "resolved_and_committed",
+  "branch": "codex/texture-hd-p2",
+  "commit": "a7208cf53c3193ffc19e57790f81e13232140dad",
+  "observed_bottleneck": "Single git add for thousands of new artifact objects repeatedly exceeded deadlines. The trace showed continued file processing; no unknown terminal input was needed.",
+  "diagnostic_seconds": {
+    "runtime_images_262": 0.329,
+    "single_large_image": 0.187,
+    "new_small_object_write": 0.203
+  },
+  "resolution": "Git native fast-import writes the exact scoped files as a packed stream. Shared worktree HEAD/index remain untouched. All committed blob IDs match local bytes.",
+  "files_verified": 6867,
+  "applied_images": 262,
+  "elapsed_seconds": 42.3,
+  "pushed": false,
+  "cleanup": "All task-owned diagnostic trace/index directories removed in finally; no raw diagnostic logs retained.",
+  "p2_resume": "batch-094; no further optimization performed in this submission-repair turn."
+}

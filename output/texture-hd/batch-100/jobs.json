@@ -1,0 +1,198 @@
+{
+  "batch": "100",
+  "method": "Built-in image_gen; shared bounded material fields; protected text/geometry/alpha; native acceptance.",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/SILVER.png",
+      "decision": "applied",
+      "reason": "内置 image_gen 提案经过保护区回填及原生前后验收；水面仅增加海水内部细节，或卡面仅增加共同材质明暗。原尺寸、透明通道、路线/水印、文字覆盖区、人物和状态差值均保持。",
+      "prompt": "Use case: precise-object-edit. Asset type: existing 512x384 RPG trainer-card background. The supplied silver card is the edit target. Refine the flat cool pale silver/blue-gray card into a restrained satin/brushed-silver surface with fine gentle material shading. Preserve exactly the original cool gray palette, pale circular watermark, all ring gaps, ring thickness and coordinates, the card rectangle and transparent outer border. Keep the watermark flat and understated. Leave quiet low-contrast space for overlaid dark text, badges and a trainer portrait. Do not add text, bevels, borders, shine streaks, icons, logos, scratches or new objects. No crop, zoom, changed margins or layout. Return the complete canvas with the original aspect ratio. Only subtle surface texture and soft tonal depth; preserve transparent regions.",
+      "generated": "output/texture-hd/p2-region-work/silver-generated.png",
+      "generation_status": "accepted_applied"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/SOULBADGE.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/STORMBADGE.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/THUNDERBADGE.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/VENUSAUR.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/VOLCANOBADGE.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/ZEKROM.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/ZEPHYRBADGE.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/500000_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BEEDRILL_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BIDOOF_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BULBASAUR_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BUNEARY_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/BUTTERFREE_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHANDELURE_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHARMANDER_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CHINCHOU_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CLEFABLE_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CLEFFA_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/COFAGRIGUS_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CORSOLA_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/CRESSELIA_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/DARKRAI_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/Trainer Card/backgrounds/flags/DIGLETT_FLAG.png",
+      "decision": "preserved",
+      "reason": "原有卡面画作、精灵剪影、徽章、文字或旗帜图案清楚，原生卡面预览已复核；继续加纹理无明确清晰度收益，保留原像素及人物姿态。",
+      "prompt": null,
+      "generated": null,
+      "generation_status": "not_generated_no_expected_gain"
+    }
+  ]
+}

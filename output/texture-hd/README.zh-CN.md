@@ -1,33 +1,34 @@
-# 游戏贴图高清化进度（2026-10-28）
+# 游戏贴图高清化进度（2026-10-29）
 
 ## 当前进度
 
-**P2 第 58～93 批已完成：783 / 2,223 张，10 张已应用、773 张保留原图，剩余 1,440 张；下一批为第 94 批。** 本轮完成第 77～93 批共 374 张，新增应用 4 张、保留 370 张。P1 和此前 P2 的已完成结果继续保留。
+**P2 第 58～102 批已完成：985 / 2,223 张，15 张已应用、970 张保留原图，剩余 1,238 张；下一批为第 103 批。** 本轮第 94～102 批共 202 张，新增应用 5 张、保留 197 张。P1 及此前 P2 的已完成结果继续保留。
 
 | P2 范围 | 完成数 | 已应用 | 保留原图 |
 | --- | ---: | ---: | ---: |
 | 第 58～63 批：战斗界面 | 121 | 6 | 115 |
 | 第 64～76 批：队伍、背包、摘要与通用菜单 | 288 | 0 | 288 |
 | 第 77～93 批：图鉴、仓库与命名界面 | 374 | 4 | 370 |
-| 合计 | 783 | 10 | 773 |
+| 第 94～102 批：地区地图、导航、帮助与训练师卡 | 202 | 5 | 197 |
+| 合计 | 985 | 15 | 970 |
 
-全局 18,665 张：**262 张已应用、867 张保留、17,536 张待处理**。候选待验收为 0；第 94～151 批及 P3～P5 保留在后续计划。没有后台生成或定时任务。
+全局 18,665 张：**267 张已应用、1,064 张保留、17,334 张待处理**。候选待验收为 0；第 103～151 批及 P3～P5 保留在后续计划。没有后台生成或定时任务。
 
-本轮使用内置 `image_gen` 编辑 3 张壁纸，原始提案、完整提示词、尺寸/透明通道/轮廓验证保存在 `p2-dex-work/box*-job.json`、`box*-generated.png` 和 [壁纸结构检查](p2-dex-work/wallpaper-validation.json)。火鸟和水系剪影只引入内部柔和明暗，标题、按钮、边框、姿态、强轮廓和气泡/星点原位保留。已应用 `Graphics/Pictures/box16.png`、`box17.png` 与逐像素同源的 `Graphics/Pictures/Storage/box_32.png`、`box_33.png`；对应第 77、85 批，单通道变化不超过 12/255。草地提案主要改变亮度，未改善辨识度，连同在用副本共 2 张保留原图，候选已归档。
+本轮内置 `image_gen` 编辑了地图与金/银/铜三种卡面，共 4 份原始生成图。地图结果制作成通关前、通关后两张交付图；仅增加海水内部细节，路线、城市、地形和海岸像素受保护，两状态的有符号像素差值完全保持。三种卡面共用细微材质明暗，并保护圆形水印、文字区、徽章区和透明边界；三种原配色之间的差值保持。交付仍为原尺寸，地图单通道变化最多 8/255，卡面最多 12/255。
 
-- [仓库原生前后验收](p2-evidence/dex/storage-native-validation.json)：两种语言各显示 200 种壁纸，并断言实际加载编号；498 组前后截图和动画/交互轨迹比对通过。壁纸内部以外的像素完全一致，光标 40 次更新、1,000ms 完整循环；抓取/放置各 17 次更新，换箱、队伍面板开关和壁纸淡入淡出轨迹相同。
-- [在用壁纸原尺寸对比](p2-evidence/dex/wallpaper-native-comparison.png)，左为原图、右为交付；[完整光标循环对比](p2-evidence/dex/storage-cursor-loop-comparison.gif)。
-- [图鉴与命名验收](p2-evidence/dex/dex-naming-validation.json)：146 张中英文原生截图，包含 16 组命名标签状态、首尾返回、三种光标区域、仓库命名图标、图鉴列表、七类搜索参数、资料和形态页。当前引擎跳过图鉴分布页，旧深色主题/分布页/兼容图只做用途、解码和布局复核并保留原图，不宣称当前场景实际加载。
-- 111 张中文图片校验通过，关联表未被本轮修改。新增的 4 张均无中文配套映射。其他保留素材的逐文件理由见 [审查决定](p2-evidence/dex/review-decisions.json)及第 77～93 批 `validation.json`。
-- [恢复点复核](p2-evidence/dex/checkpoint-verification.json)：2,223 张 P2 源文件、783 张已完成项和本轮 374 张交付副本哈希核对通过。进度继续由已完成批次的 `validation.json` 汇总。
+已应用文件为 `Graphics/Pictures/map/map.png`、`map_postgame.png`，以及 `Graphics/Pictures/Trainer Card/backgrounds/BRONZE.png`、`GOLD.png`、`SILVER.png`。本轮五张均没有中文图片映射，关联表无需改写。其余 197 张保留理由见逐批 `validation.json` 和 [审查决定](p2-evidence/region/review-decisions.json)。
 
-第 77、85 批 `manifest.json` 仅列已应用结果；原图在 `originals/`，生成图在 `generated/`，应用候选在 `ready/`，最终交付副本在 `delivery/`。第 77、83 批另有 `candidate-manifest.json` 保存已拒绝草地候选，不能计为已应用。其他批次 `jobs.json` 记录未生成的具体理由。
+- [原生场景验收](p2-evidence/region/native-validation.json)：688 组原图/候选画面对比，保护区域像素完全一致；覆盖 93 种卡面、中英文、男女、通关前后、16 枚徽章、导航选中与循环、帮助四页及 Tutor.net 四种样式。
+- [真实人物叠穿对比](p2-evidence/region/trainer-card-native-comparison.png)：48 组画面、16 组实际外观组合，包含 Red/Leaf 与初始睡衣。身体、服装、头发合成的肖像像素及锚点前后一致。主场景测试的新游戏默认临时服装另外由此补测覆盖；未将其当作完整换装动作验收。
+- [地图原尺寸对比](p2-evidence/region/map-native-comparison.png)：四组地图运行，每组 802 次更新。完整组合动画循环为 480 次更新（按 40fps 标称 12 秒）；光标 24 次/600ms、飞行点 40 次/1,000ms、边缘箭头 32 次/800ms。前后帧序、周期、滚动与锚点轨迹一致，详见 `before-review.json` / `candidate-review.json`。这份完整循环证据是原生轨迹记录，不是 480 张逐帧截图。
+- 15 组旧地图进度资源及中英文版本逐字节保留。Tutor.net 的四格 PNG 在当前界面中只绘制第一格，不伪称已播放四帧动画。旧申请表、旧地图和其他兼容布局按用途/原尺寸复核并保留，未宣称完成全部事件流程。
+- 111 张中文图片校验通过。[最终恢复点复核](p2-evidence/region/checkpoint-verification.json)核对全部 2,223 张 P2 源文件、985 张已完成项及本轮 202 张交付副本。每轮隐藏原生测试均已退出，临时原始日志和配置由 `finally` 清理；必要截图与有界失败摘要保留。
 
-原生测试每轮使用独立 Profile、隐藏窗口和隔离存档，设置超时，stdout/stderr 直接丢弃；每轮 `finally` 清理临时日志和配置，保留可复用的只读运行文件与存档。早期壁纸验收因缓存未刷新作废，修正并加断言后重跑；仅最终带 `-final`/`-verified` 的清理及验收记录用于交付。正式证据保存在约定输出目录。
+完整提示词和生成来源见 [卡面记录](p2-region-work/card-jobs.json)、[地图记录](p2-region-work/map-job.json)。各批原图在 `originals/`、生成提案在 `generated/`、应用候选在 `ready/`、交付副本在 `delivery/`；`manifest.json` 记录已应用文件。逐批 `jobs.json` 也明确记录未生成素材的保留原因。
 
-此前背包 32 份候选因无可见收益归档，仍未应用；[背包原生验收](p2-evidence/bag-native-validation.json)的 280 组对比、8 帧/800ms 箭头循环，以及 [战斗 UI 验收](p2-evidence/ui-native-validation.json)的 120 种指令状态和 12 组 HP/EXP 动画轨迹继续有效。中文摘要学习招式页原有的文字/精灵区域重叠记录继续保留。
+此前第 77～93 批的 498 组仓库画面对比、200 种壁纸和图鉴/命名记录在 [上一阶段验收](p2-evidence/dex/checkpoint-verification.json)。背包 32 份候选因无可见收益仍未应用，见 [背包验收](p2-evidence/bag-native-validation.json)；战斗 UI 的 120 种状态及 12 组 HP/EXP 动画证据见 [战斗验收](p2-evidence/ui-native-validation.json)。中文摘要学习招式页的原有文字/精灵区域重叠记录继续保留。
 
-**完整游玩、人物/服装叠穿、Android 实机与发布包验证尚未完成。** 当前恢复点为 [p2-progress.json](p2-progress.json)、[p2-work/resume.json](p2-work/resume.json)、[本阶段恢复记录](p2-dex-work/resume.json)。
+**完整游玩、人物/服装全部地图动作与叠穿、Android 实机及发布包验证尚未完成。** 当前恢复点为 [p2-progress.json](p2-progress.json)、[p2-work/resume.json](p2-work/resume.json)及 [本轮恢复记录](p2-region-work/resume.json)。Git 特性分支为 `codex/texture-hd-p2`；本地提交回执保存在 `commit-receipt.json`。
 
 ## P1 第 5～57 批（已完成）
 
