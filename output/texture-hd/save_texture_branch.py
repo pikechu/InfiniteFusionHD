@@ -48,15 +48,22 @@ def main():
  for e in applied:assert digest(ROOT/e['source'])==e['after_sha256'],e['source']
  parent_blobs={e.split(b'\t',1)[1].decode('utf-8'):e.split(b'\t',1)[0].split()[2].decode() for e in git('ls-tree','-r','-z',base).split(b'\0') if e}
  parent_time=int(git('show','-s','--format=%ct',base).decode().strip())
- candidates=[]
- for file in OUT.rglob('*'):
-  if not file.is_file() or '__pycache__' in file.parts or file.name=='commit-receipt.json':continue
-  path=file.relative_to(ROOT).as_posix()
-  if path not in parent_blobs or file.stat().st_mtime>=parent_time-2:candidates.append(path)
- core={'README.zh-CN.md','inventory.json','p2-audit.json','p2-progress.json','commit-scope.json','commit-paths.txt','save_texture_branch.py',
+ # Previous archive folders are inherited; inspect new stage folders and the saved path journal only.
+ prior=json.loads(git('show',base+':output/texture-hd/p2-progress.json').decode('utf-8')) if existing else {'completed_batches':[]}
+ first=max([int(n[6:]) for n in prior['completed_batches']]+[0])+1
+ candidates={p for p in (OUT/'commit-paths.txt').read_text(encoding='utf-8').splitlines() if p not in parent_blobs}
+ roots=[OUT/f'batch-{n:03}' for n in range(first,last+1)]
+ roots += [OUT/'p2-region-work',OUT/'p2-evidence/region']
+ for folder in roots:
+  assert folder.is_relative_to(OUT)
+  if folder.exists():candidates.update(p.relative_to(ROOT).as_posix() for p in folder.rglob('*') if p.is_file() and '__pycache__' not in p.parts)
+ candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*region*.py'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*region*.rb'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-region-*20261029-cleanup.json'))
+ candidates.update(f'output/texture-hd/execution-plan/batches/batch-{n:03}.json' for n in range(first,last+1))
+ core={'README.zh-CN.md','inventory.json','p2-audit.json','p2-progress.json','commit-scope.json','commit-paths.txt','save_texture_branch.py','git-incremental-save-recovery.json',
        'p2-work/resume.json','execution-plan/plan.json','execution-plan/README.zh-CN.md','execution-plan/stage-summary.zh-CN.md','execution-plan/batch-index.zh-CN.md'}
- paths=sorted(set(candidates)|{e['source'] for e in applied}|{'scripts/graphics/texture_batch.py'}|{'output/texture-hd/'+p for p in core})
-
+ paths=sorted(candidates|{e['source'] for e in applied}|{'scripts/graphics/texture_batch.py'}|{'output/texture-hd/'+p for p in core})
  allowed={e['source'] for e in applied}
  assert all(p.startswith('output/texture-hd/') or p=='scripts/graphics/texture_batch.py' or p in allowed for p in paths)
  report.update(branch=BRANCH,base_commit=base,total_files=len(paths),record_files=len(paths)-len(applied)-1,paths=paths,
