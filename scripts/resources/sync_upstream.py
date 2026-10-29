@@ -5,10 +5,12 @@ import argparse
 import csv
 import gzip
 import hashlib
+import http.client
 import io
 import json
 import re
 import struct
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -43,7 +45,9 @@ def download(url, limit, probe=False):
                     if not match or int(match[1]) + 1 != len(body) or int(match[2]) != len(body):
                         raise ValueError("Incomplete range response: " + url)
                 return body, response.headers.get("ETag", "")
-        except (urllib.error.URLError, TimeoutError):
+        except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.IncompleteRead) as error:
+            print("Download failed (%d/3): %s [%s: %s]" %
+                  (attempt + 1, url, type(error).__name__, error), file=sys.stderr, flush=True)
             if attempt == 2:
                 raise
             time.sleep(2 ** attempt)

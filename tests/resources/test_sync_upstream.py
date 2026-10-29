@@ -1,18 +1,84 @@
 from pathlib import Path
 import gzip
 import hashlib
+import http.client
+import io
 import json
 import shutil
 import struct
 import sys
 import unittest
 import urllib.error
-from unittest.mock import patch
+from unittest.mock import call, patch
 import uuid
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts/resources"))
 import sync_upstream as sync
+
+
+class DownloadTests(unittest.TestCase):
+    def test_disconnects_are_retried_and_report_the_image_url(self):
+        url = sync.CDN + "spritesheets/spritesheets_custom/1/1a.png"
+        for error_type in (http.client.RemoteDisconnected, ConnectionResetError):
+            for probe in (False, True):
+                with self.subTest(error=error_type.__name__, probe=probe), \
+                        patch.object(sync.urllib.request, "urlopen") as urlopen, \
+                        patch.object(sync.time, "sleep") as sleep, \
+                        patch("sys.stderr", new_callable=io.StringIO) as errors:
+                    response = urlopen.return_value.__enter__.return_value
+                    response.read.return_value = b"image"
+                    response.headers = {"ETag": '"fixture"'}
+                    urlopen.side_effect = [error_type("connection closed"), urlopen.return_value]
+                    self.assertEqual(sync.download(url, 8, probe), (b"image", '"fixture"'))
+                    self.assertEqual(urlopen.call_count, 2)
+                    sleep.assert_called_once_with(1)
+                    self.assertIn(url, errors.getvalue())
+                    self.assertIn("1/3", errors.getvalue())
+                    self.assertIn(error_type.__name__, errors.getvalue())
+
+    def test_incomplete_response_bodies_are_retried(self):
+        url = sync.CDN + "spritesheets/spritesheets_base/1.png"
+        with patch.object(sync.urllib.request, "urlopen") as urlopen, \
+                patch.object(sync.time, "sleep") as sleep, \
+                patch("sys.stderr", new_callable=io.StringIO) as errors:
+            response = urlopen.return_value.__enter__.return_value
+            response.read.side_effect = [http.client.IncompleteRead(b"part", 4), b"complete"]
+            response.headers = {}
+            self.assertEqual(sync.download(url, 8), (b"complete", ""))
+            self.assertEqual(urlopen.call_count, 2)
+            sleep.assert_called_once_with(1)
+            self.assertIn(url, errors.getvalue())
+            self.assertIn("IncompleteRead", errors.getvalue())
+
+    def test_retries_stop_after_three_attempts_and_preserve_the_error(self):
+        url = sync.CDN + "spritesheets/spritesheets_base/1.png"
+        for error in (http.client.RemoteDisconnected("connection closed"),
+                      TimeoutError("timed out"), urllib.error.URLError("unavailable")):
+            with self.subTest(error=type(error).__name__), \
+                    patch.object(sync.urllib.request, "urlopen", side_effect=error) as urlopen, \
+                    patch.object(sync.time, "sleep") as sleep, \
+                    patch("sys.stderr", new_callable=io.StringIO) as errors:
+                with self.assertRaises(type(error)) as raised:
+                    sync.download(url, 8)
+                self.assertIs(raised.exception, error)
+                self.assertEqual(urlopen.call_count, 3)
+                self.assertEqual(sleep.call_args_list, [call(1), call(2)])
+                lines = errors.getvalue().splitlines()
+                self.assertEqual(len(lines), 3)
+                for attempt, line in enumerate(lines, 1):
+                    self.assertIn(url, line)
+                    self.assertIn("%d/3" % attempt, line)
+                    self.assertIn(type(error).__name__, line)
+
+    def test_invalid_response_is_rejected_without_retrying(self):
+        with patch.object(sync.urllib.request, "urlopen") as urlopen, \
+                patch.object(sync.time, "sleep") as sleep:
+            urlopen.return_value.__enter__.return_value.read.return_value = b"too large"
+            with self.assertRaisesRegex(ValueError, "Resource exceeds limit"):
+                sync.download(sync.CDN + "spritesheets/spritesheets_base/1.png", 8)
+            urlopen.assert_called_once()
+            sleep.assert_not_called()
 
 
 class UpstreamSyncTests(unittest.TestCase):
