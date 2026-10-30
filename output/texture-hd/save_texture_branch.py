@@ -54,6 +54,12 @@ def main():
  candidates={p for p in (OUT/'commit-paths.txt').read_text(encoding='utf-8').splitlines() if p not in parent_blobs}
  roots=[OUT/f'batch-{n:03}' for n in range(first,last+1)]
  roots += [OUT/'p2-region-work',OUT/'p2-evidence/region',OUT/'p2-title-work',OUT/'p2-evidence/titles']
+ roots += [OUT/'p2-remaining-work',OUT/'p2-evidence/remaining']
+ repairs=OUT/'p2-evidence/remaining/archive-repairs.json'
+ if repairs.exists():
+  for repair in read(repairs)['entries']:
+   assert repair['batch'] in {f'batch-{n:03}' for n in range(58,152)}
+   roots.append(OUT/repair['batch'])
  for folder in roots:
   assert folder.is_relative_to(OUT)
   if folder.exists():candidates.update(p.relative_to(ROOT).as_posix() for p in folder.rglob('*') if p.is_file() and '__pycache__' not in p.parts)
@@ -61,8 +67,11 @@ def main():
  candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*region*.rb'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*title*.py'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*title*.rb'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*remaining*.py'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*remaining*.rb'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-region-*20261029-cleanup.json'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-title-*20261030-cleanup.json'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-remaining-*20261030-cleanup.json'))
  candidates.update(f'output/texture-hd/execution-plan/batches/batch-{n:03}.json' for n in range(first,last+1))
  core={'README.zh-CN.md','inventory.json','p2-audit.json','p2-progress.json','commit-scope.json','commit-paths.txt','save_texture_branch.py','git-incremental-save-recovery.json',
        'p2-work/resume.json','execution-plan/plan.json','execution-plan/README.zh-CN.md','execution-plan/stage-summary.zh-CN.md','execution-plan/batch-index.zh-CN.md'}

@@ -1,0 +1,2486 @@
+{
+  "batch": "batch-111",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "candidate_pending_review": 0,
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/bike_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 21224,
+      "source_mtime_ns": 1792048540757804800,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/bike_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "a890b336bbf666ab73f82fc5d60ed60b7894ad7a27017789f89913c61659d330",
+      "pixel_sha256": "c811e8730ac90a3765aaa8c1d76dee788a57ec9c2414dc7d1e81add2bee96c39",
+      "colors": 23,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3689b973b6670f51c9bfa2b30bde1b5b1ec75b8f61601f19f13dd0364d211bea",
+      "bounds": [
+        18,
+        22,
+        302,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          24,
+          22,
+          60,
+          76
+        ],
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          20,
+          22,
+          56,
+          76
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          20,
+          22,
+          56,
+          76
+        ],
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          24,
+          22,
+          60,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/dive_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 18919,
+      "source_mtime_ns": 1792048540757804800,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/dive_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "874a2bab00497701b2784bdc962802b971835671af1ad7a2f80ae94867395f0f",
+      "pixel_sha256": "05cce6e184f05b396fe46b9177f6645505657582b1f533de6e9a586ba2ec847b",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "d47072a59b2adc8984f08ad783bd6a54b8481454cc9ec420f96b3911cf94c7bc",
+      "bounds": [
+        14,
+        18,
+        306,
+        308
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          62
+        ],
+        [
+          14,
+          16,
+          50,
+          58
+        ],
+        [
+          14,
+          16,
+          50,
+          58
+        ],
+        [
+          14,
+          16,
+          50,
+          58
+        ],
+        [
+          14,
+          16,
+          50,
+          62
+        ],
+        [
+          22,
+          22,
+          58,
+          66
+        ],
+        [
+          22,
+          22,
+          58,
+          68
+        ],
+        [
+          22,
+          22,
+          58,
+          66
+        ],
+        [
+          22,
+          22,
+          58,
+          68
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/fish_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 20841,
+      "source_mtime_ns": 1792048540758805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/fish_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "72d2434ecec2017f8d41d4401e6ff2720bcd8c64c665b9c07f7bbfba4fdcc744",
+      "pixel_sha256": "36b2f5dbdc182070ece74a694ff5787cdb372208b6b4672299f7a7b34115d88d",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "6336115ed4d268857574eeb3b87370dc7b36ee48a858b8cbe5376784b5748802",
+      "bounds": [
+        0,
+        4,
+        314,
+        306
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          18,
+          58,
+          80
+        ],
+        [
+          22,
+          20,
+          58,
+          80
+        ],
+        [
+          20,
+          4,
+          58,
+          66
+        ],
+        [
+          22,
+          8,
+          60,
+          66
+        ],
+        [
+          0,
+          16,
+          54,
+          66
+        ],
+        [
+          0,
+          16,
+          48,
+          66
+        ],
+        [
+          26,
+          4,
+          56,
+          66
+        ],
+        [
+          28,
+          8,
+          72,
+          66
+        ],
+        [
+          26,
+          16,
+          80,
+          66
+        ],
+        [
+          32,
+          16,
+          80,
+          66
+        ],
+        [
+          24,
+          4,
+          54,
+          66
+        ],
+        [
+          8,
+          8,
+          52,
+          66
+        ],
+        [
+          22,
+          4,
+          58,
+          66
+        ],
+        [
+          22,
+          6,
+          58,
+          66
+        ],
+        [
+          22,
+          16,
+          66,
+          66
+        ],
+        [
+          24,
+          16,
+          74,
+          66
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/run_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 20313,
+      "source_mtime_ns": 1792048540758805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/run_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "7a0556868424f31566b5ec0226f0ca46a3b129b62e1dea7d6ec41115071c87bc",
+      "pixel_sha256": "e64ceea78360829704a93b3819b54555e31c3ffe03b208a71b0929e1ff979e16",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "11e65cb9d6c3c1f6c4854532e332c82d2746f437bd6a7769965f93ca17b1623a",
+      "bounds": [
+        22,
+        26,
+        298,
+        314
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          26,
+          58,
+          72
+        ],
+        [
+          22,
+          28,
+          58,
+          76
+        ],
+        [
+          22,
+          26,
+          58,
+          72
+        ],
+        [
+          22,
+          28,
+          58,
+          76
+        ],
+        [
+          24,
+          22,
+          52,
+          72
+        ],
+        [
+          24,
+          20,
+          58,
+          70
+        ],
+        [
+          24,
+          22,
+          52,
+          72
+        ],
+        [
+          24,
+          20,
+          56,
+          68
+        ],
+        [
+          28,
+          22,
+          56,
+          72
+        ],
+        [
+          22,
+          20,
+          56,
+          70
+        ],
+        [
+          28,
+          22,
+          56,
+          72
+        ],
+        [
+          24,
+          20,
+          56,
+          68
+        ],
+        [
+          22,
+          22,
+          58,
+          72
+        ],
+        [
+          22,
+          20,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          72
+        ],
+        [
+          22,
+          20,
+          58,
+          74
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/surf_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 18263,
+      "source_mtime_ns": 1792048540758805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/surf_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "657368995442e02c2e75f1b894df218acb24d5e01075696577cb9f81c0a9967b",
+      "pixel_sha256": "7e7f8956de241151ef369cfdb4026eb32a2900d72e8e222e46ee4f1ba4934f90",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "ad9626ddf5fc2ca3239b8764c1baa4313c7a1591e8ba11c6cf2184f07fe70f03",
+      "bounds": [
+        22,
+        18,
+        298,
+        300
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          22,
+          14,
+          58,
+          60
+        ],
+        [
+          22,
+          14,
+          58,
+          60
+        ],
+        [
+          22,
+          14,
+          58,
+          60
+        ],
+        [
+          22,
+          14,
+          58,
+          60
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/walk_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 30610,
+      "source_mtime_ns": 1792048540759806500,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/walk_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "2cd1834e34ce07fdeff7f009c11a030634b49f01a12e0a6fa484144ccc578577",
+      "pixel_sha256": "4f125e4b283498f4a977f4994021359b7bc5bd52bfc2b4aea2a19cc9ff176c80",
+      "colors": 9,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "211f695e0499093a1f9c233a5e5b30454800ebc01e608cbdbbfcf65e6ef19ec9",
+      "bounds": [
+        22,
+        22,
+        298,
+        314
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ],
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ],
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/trainer/trainer_6.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 4498,
+      "source_mtime_ns": 1792048540764805200,
+      "canonical_source": "Graphics/Characters/player/base/trainer/trainer_6.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "23cdd83af2b69e9a4e79429ea5eca08718594e61e075910da2c436764b8a4945",
+      "pixel_sha256": "acb8e3b52fed09680b2d8e3ddd8123342b6981365c5f0f8a6028f4480020123e",
+      "colors": 17,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "a7ce38b35158cccb4a846e7368e41e24e03d44eb3cc0ce22849ed8fa2972223a",
+      "bounds": [
+        50,
+        26,
+        110,
+        158
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/bike_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 10392,
+      "source_mtime_ns": 1792048540759806500,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/bike_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "24604e4d6ad38643d28801200e9c36b295188b83db41ccf5d3d3a9bc2e7f9a64",
+      "pixel_sha256": "fe4b230b50f308a961299198e92f6ee104b8a0f6a8ef45c540e5df3fb2abaebf",
+      "colors": 22,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3689b973b6670f51c9bfa2b30bde1b5b1ec75b8f61601f19f13dd0364d211bea",
+      "bounds": [
+        18,
+        22,
+        302,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          24,
+          22,
+          60,
+          76
+        ],
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          20,
+          22,
+          56,
+          76
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          18,
+          20,
+          62,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          20,
+          22,
+          56,
+          76
+        ],
+        [
+          22,
+          22,
+          58,
+          76
+        ],
+        [
+          24,
+          22,
+          60,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/dive_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7860,
+      "source_mtime_ns": 1792048540759806500,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/dive_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "e769d214ae244217144246fbaf6640bb6609aafe1e7ed23b7ca4de0d80132e8d",
+      "pixel_sha256": "50a0baef6c022ad54c7d1c898779aee47c421ba6eb94f0c1a6cdff6501e3359f",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "d47072a59b2adc8984f08ad783bd6a54b8481454cc9ec420f96b3911cf94c7bc",
+      "bounds": [
+        14,
+        18,
+        306,
+        308
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          58
+        ],
+        [
+          30,
+          16,
+          66,
+          62
+        ],
+        [
+          14,
+          16,
+          50,
+          58
+        ],
+        [
+          14,
+          16,
+          50,
+          58
+        ],
+        [
+          14,
+          16,
+          50,
+          58
+        ],
+        [
+          14,
+          16,
+          50,
+          62
+        ],
+        [
+          22,
+          22,
+          58,
+          66
+        ],
+        [
+          22,
+          22,
+          58,
+          68
+        ],
+        [
+          22,
+          22,
+          58,
+          66
+        ],
+        [
+          22,
+          22,
+          58,
+          68
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/fish_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7853,
+      "source_mtime_ns": 1792048540760805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/fish_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "662a4d4460e7d2aa6e489be3b878aad55efb882e52d47361b679d4513dcbf2ce",
+      "pixel_sha256": "b56baa88f64a1c0229aee7b5936f4c3d1401873e647a02a9b3bdc9af1d9fec63",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "959889d4bfee2302c2c48e2620d17cc7d08745c61ed6fe536cb5e4b257b40570",
+      "bounds": [
+        0,
+        4,
+        314,
+        306
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          18,
+          58,
+          80
+        ],
+        [
+          22,
+          20,
+          58,
+          80
+        ],
+        [
+          20,
+          4,
+          58,
+          66
+        ],
+        [
+          22,
+          8,
+          60,
+          66
+        ],
+        [
+          0,
+          16,
+          80,
+          66
+        ],
+        [
+          0,
+          16,
+          48,
+          66
+        ],
+        [
+          26,
+          4,
+          56,
+          66
+        ],
+        [
+          28,
+          8,
+          72,
+          66
+        ],
+        [
+          26,
+          16,
+          80,
+          66
+        ],
+        [
+          32,
+          16,
+          80,
+          66
+        ],
+        [
+          0,
+          4,
+          54,
+          66
+        ],
+        [
+          8,
+          8,
+          52,
+          66
+        ],
+        [
+          22,
+          4,
+          58,
+          66
+        ],
+        [
+          22,
+          6,
+          58,
+          66
+        ],
+        [
+          22,
+          16,
+          66,
+          66
+        ],
+        [
+          24,
+          16,
+          74,
+          66
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/run_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7427,
+      "source_mtime_ns": 1792048540760805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/run_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "a4f52a7b78070cffc76df26509ba2d86ece0a593cabf87a9ba131b892d4e4721",
+      "pixel_sha256": "adaed4c3e97fbaf853292dbf5d394fdf598545e34beb324d50d6d19b2e5448e3",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "11e65cb9d6c3c1f6c4854532e332c82d2746f437bd6a7769965f93ca17b1623a",
+      "bounds": [
+        22,
+        26,
+        298,
+        314
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          26,
+          58,
+          72
+        ],
+        [
+          22,
+          28,
+          58,
+          76
+        ],
+        [
+          22,
+          26,
+          58,
+          72
+        ],
+        [
+          22,
+          28,
+          58,
+          76
+        ],
+        [
+          24,
+          22,
+          52,
+          72
+        ],
+        [
+          24,
+          20,
+          58,
+          70
+        ],
+        [
+          24,
+          22,
+          52,
+          72
+        ],
+        [
+          24,
+          20,
+          56,
+          68
+        ],
+        [
+          28,
+          22,
+          56,
+          72
+        ],
+        [
+          22,
+          20,
+          56,
+          70
+        ],
+        [
+          28,
+          22,
+          56,
+          72
+        ],
+        [
+          24,
+          20,
+          56,
+          68
+        ],
+        [
+          22,
+          22,
+          58,
+          72
+        ],
+        [
+          22,
+          20,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          72
+        ],
+        [
+          22,
+          20,
+          58,
+          74
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/surf_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7083,
+      "source_mtime_ns": 1792048540761806300,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/surf_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "be5174b3ca6ed772e64eef19295ac27ac77efaf8e3caddb93933fb396a8a0174",
+      "pixel_sha256": "4147e2d4e3b93b5bac6751079e9f5cde398cd4c8fe83499c548f02fc39e80174",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "288ce4ff495f8407a166626ad8d92a0b3da47bb0f303a71c4bd397347abf2f02",
+      "bounds": [
+        22,
+        18,
+        298,
+        302
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          24,
+          14,
+          56,
+          58
+        ],
+        [
+          22,
+          18,
+          58,
+          62
+        ],
+        [
+          22,
+          18,
+          58,
+          62
+        ],
+        [
+          22,
+          18,
+          58,
+          62
+        ],
+        [
+          22,
+          18,
+          58,
+          62
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/walk_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 9206,
+      "source_mtime_ns": 1792048540761806300,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/walk_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "c3b82f6e4af7c916c7a3423a87dea86dd07cfda34846f3c1b7e766ea9ff51e92",
+      "pixel_sha256": "f3bea5b2e663e195b9747838b9006ad30f286267d3e6c30092bdc263eb53dc9f",
+      "colors": 12,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "211f695e0499093a1f9c233a5e5b30454800ebc01e608cbdbbfcf65e6ef19ec9",
+      "bounds": [
+        22,
+        22,
+        298,
+        314
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ],
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          26,
+          24,
+          54,
+          74
+        ],
+        [
+          26,
+          22,
+          54,
+          74
+        ],
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ],
+        [
+          22,
+          24,
+          58,
+          74
+        ],
+        [
+          22,
+          22,
+          58,
+          74
+        ]
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/base/trainer/trainer_default.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 4360,
+      "source_mtime_ns": 1792048540764805200,
+      "canonical_source": "Graphics/Characters/player/base/trainer/trainer_default.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "cb217bfb0ae26aa4640df5e6e0f61f021ce7f1a2faa2b93eff06e61089880599",
+      "pixel_sha256": "09dcb12b890d5a288b318805ac98b3eb90c856baf04b9e5eb49a75b0bbdb2a8a",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "a7ce38b35158cccb4a846e7368e41e24e03d44eb3cc0ce22849ed8fa2972223a",
+      "bounds": [
+        50,
+        26,
+        110,
+        158
+      ],
+      "status": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Bipedal.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6568,
+      "source_mtime_ns": 1792048542425507200,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Bipedal.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "82b633172d1dbfef224029644cebfcd1249d95f351218f2617d1bd5c4cfd7774",
+      "pixel_sha256": "8e47e540a1847a1542420e255f704ae96f6ecb2275ab017cd7f3a68eb815b10a",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3c11522e5f0891d254e4d3ed4d9867c096c064e3359efcf9a78fd7aa86af8ae6",
+      "bounds": [
+        16,
+        40,
+        304,
+        318
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          42,
+          58,
+          76
+        ],
+        [
+          22,
+          40,
+          58,
+          74
+        ],
+        [
+          22,
+          42,
+          58,
+          76
+        ],
+        [
+          22,
+          40,
+          58,
+          74
+        ],
+        [
+          20,
+          42,
+          64,
+          78
+        ],
+        [
+          20,
+          42,
+          64,
+          76
+        ],
+        [
+          20,
+          42,
+          64,
+          78
+        ],
+        [
+          20,
+          42,
+          64,
+          76
+        ],
+        [
+          16,
+          42,
+          60,
+          78
+        ],
+        [
+          16,
+          42,
+          60,
+          76
+        ],
+        [
+          16,
+          42,
+          60,
+          78
+        ],
+        [
+          16,
+          42,
+          60,
+          76
+        ],
+        [
+          20,
+          42,
+          60,
+          78
+        ],
+        [
+          20,
+          42,
+          60,
+          76
+        ],
+        [
+          20,
+          42,
+          60,
+          78
+        ],
+        [
+          20,
+          42,
+          60,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_BipedalTail.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6605,
+      "source_mtime_ns": 1792048542426035600,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_BipedalTail.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "3cd60df770f5ec14a51dc8764902dd289f118c9a0427893421732c15f93b0c33",
+      "pixel_sha256": "fbf67b35762927f4228eb0233357df218c7674bbb89a4749a573b46052f94f01",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "d0292b6f0f4a5920e92ab9eefdab87bea16787c26ea05286a68c0a73268dad95",
+      "bounds": [
+        10,
+        42,
+        310,
+        320
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          42,
+          58,
+          76
+        ],
+        [
+          22,
+          42,
+          58,
+          74
+        ],
+        [
+          22,
+          42,
+          58,
+          76
+        ],
+        [
+          22,
+          42,
+          58,
+          74
+        ],
+        [
+          20,
+          42,
+          70,
+          76
+        ],
+        [
+          20,
+          42,
+          70,
+          72
+        ],
+        [
+          20,
+          42,
+          70,
+          76
+        ],
+        [
+          20,
+          42,
+          70,
+          72
+        ],
+        [
+          10,
+          42,
+          60,
+          76
+        ],
+        [
+          10,
+          42,
+          60,
+          72
+        ],
+        [
+          10,
+          42,
+          60,
+          76
+        ],
+        [
+          10,
+          42,
+          60,
+          72
+        ],
+        [
+          20,
+          42,
+          60,
+          80
+        ],
+        [
+          20,
+          42,
+          60,
+          80
+        ],
+        [
+          20,
+          42,
+          60,
+          80
+        ],
+        [
+          20,
+          42,
+          60,
+          80
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Finned.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6823,
+      "source_mtime_ns": 1792048542427155700,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Finned.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "5a8bb48dfb4b2ad8c43859a5bc4bee214c9c75ac07cade8a0c8b155904afc1a4",
+      "pixel_sha256": "3f176ee280d066af6fbee0feed84b11d2f3b324e8bbb8401d1f17cd00b5ee16c",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "da5032d6b8e18bcaadc50a2d03979a5802f92468f4a1b5e9aab7b02792420e41",
+      "bounds": [
+        12,
+        32,
+        306,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          32,
+          58,
+          72
+        ],
+        [
+          22,
+          32,
+          58,
+          72
+        ],
+        [
+          22,
+          32,
+          58,
+          72
+        ],
+        [
+          22,
+          32,
+          58,
+          72
+        ],
+        [
+          24,
+          44,
+          68,
+          72
+        ],
+        [
+          24,
+          44,
+          66,
+          72
+        ],
+        [
+          24,
+          44,
+          68,
+          72
+        ],
+        [
+          24,
+          44,
+          66,
+          72
+        ],
+        [
+          12,
+          44,
+          56,
+          72
+        ],
+        [
+          14,
+          44,
+          56,
+          72
+        ],
+        [
+          12,
+          44,
+          56,
+          72
+        ],
+        [
+          14,
+          44,
+          56,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          74
+        ],
+        [
+          22,
+          42,
+          58,
+          76
+        ],
+        [
+          22,
+          42,
+          58,
+          74
+        ],
+        [
+          22,
+          42,
+          58,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Head.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6032,
+      "source_mtime_ns": 1792048542427688800,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Head.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "5111fb28f17054e4425a8f8a1f06d4d93deb0fbf84f270f0d8ce449c8c5b29d6",
+      "pixel_sha256": "d1281e66c26b1e4948b265e1b242762330ccc9707776b2932e4a490b21484be1",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "ad4cf79e7712a88b5ede746dce0ac39373acafcebd7a16b4b1e2319ca42406fd",
+      "bounds": [
+        20,
+        44,
+        300,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          70
+        ],
+        [
+          22,
+          42,
+          58,
+          70
+        ],
+        [
+          22,
+          42,
+          58,
+          70
+        ],
+        [
+          22,
+          42,
+          58,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_HeadArms.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6302,
+      "source_mtime_ns": 1792048542428222200,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_HeadArms.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "9b5646c3dced9e89144fb6d217616c4a222491893ef31eced7e18f850611d644",
+      "pixel_sha256": "cf631b78f86849430537b723e95913cec652b99a54fe456e31f7a5f2017c31ae",
+      "colors": 9,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "1292cbf68e1b343cc2b5eb0f3f0ce82c44cc06575c6e0444ecdc0ac55fc9fcec",
+      "bounds": [
+        18,
+        44,
+        302,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          74
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          74
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          22,
+          44,
+          60,
+          74
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          22,
+          44,
+          60,
+          74
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          58,
+          74
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          20,
+          40,
+          60,
+          70
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          20,
+          40,
+          60,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_HeadBase.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6358,
+      "source_mtime_ns": 1792048542428760000,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_HeadBase.png",
+      "batch": "batch-111",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "f52e191c2082c63cab900e241e7c1160bd74408b4e7f54917c43108498bf4df0",
+      "pixel_sha256": "0d7cd0d456bd4caf7be585c02b89ab4d85e223d2bdd171e45c7670324618a14d",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3f678d19ba4e31e92e8c8a2e45707528f0f54ed213da815246689591faa8bedc",
+      "bounds": [
+        16,
+        38,
+        310,
+        318
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          40,
+          58,
+          72
+        ],
+        [
+          22,
+          38,
+          58,
+          72
+        ],
+        [
+          22,
+          40,
+          58,
+          72
+        ],
+        [
+          22,
+          38,
+          58,
+          72
+        ],
+        [
+          24,
+          44,
+          64,
+          72
+        ],
+        [
+          24,
+          44,
+          70,
+          72
+        ],
+        [
+          24,
+          44,
+          64,
+          72
+        ],
+        [
+          24,
+          44,
+          70,
+          72
+        ],
+        [
+          16,
+          44,
+          56,
+          72
+        ],
+        [
+          10,
+          44,
+          56,
+          72
+        ],
+        [
+          16,
+          44,
+          56,
+          72
+        ],
+        [
+          10,
+          44,
+          56,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          74
+        ],
+        [
+          22,
+          42,
+          58,
+          78
+        ],
+        [
+          22,
+          42,
+          58,
+          74
+        ],
+        [
+          22,
+          42,
+          58,
+          78
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p2-evidence/remaining/player-review.json",
+    "output/texture-hd/p2-remaining-work/visual-review.json"
+  ],
+  "validation_scope": "Original retained sheets only. Actual Sprite_Player clothing/hair/hat crop and offsets across every direction/frame and action switch, all starting hair/hat variations and skin-tone/outfit combinations; all surf base shapes through Sprite_SurfBase. Timing uses actual Game_Character update_pattern at four speeds. Neutral tint, fixed pose driver; not all gameplay movement/roof/water event flows.",
+  "byte_identity_guarantee": "Source and delivery equal the audited original. Therefore every frame, state, tint input and consumer output remains identical for the same engine inputs; native checks additionally inspect the relevant actual consumers. No accepted redraw in this batch."
+}

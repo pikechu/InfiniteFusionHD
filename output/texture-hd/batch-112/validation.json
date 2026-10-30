@@ -1,0 +1,2698 @@
+{
+  "batch": "batch-112",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "candidate_pending_review": 0,
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_HeadLegs.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6366,
+      "source_mtime_ns": 1792048542429287100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_HeadLegs.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "579063fb7fcf310eb2a4a938edfe4d335da6d893a3304ed12f8a5f17251bb55d",
+      "pixel_sha256": "fa5ecd8e09c781ebcc00cb0a74b3cbd681d6bff91238c0355e61904d7150b236",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "c37196fe691e14b2cb80774b83739f5a042f4b4a5fc9a4d9ff75c89fed1844ea",
+      "bounds": [
+        16,
+        44,
+        302,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          22,
+          44,
+          58,
+          72
+        ],
+        [
+          24,
+          44,
+          64,
+          72
+        ],
+        [
+          24,
+          44,
+          62,
+          72
+        ],
+        [
+          24,
+          44,
+          64,
+          72
+        ],
+        [
+          24,
+          44,
+          62,
+          72
+        ],
+        [
+          16,
+          44,
+          56,
+          72
+        ],
+        [
+          18,
+          44,
+          56,
+          72
+        ],
+        [
+          16,
+          44,
+          56,
+          72
+        ],
+        [
+          18,
+          44,
+          56,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          72
+        ],
+        [
+          22,
+          42,
+          58,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Insectoid.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6643,
+      "source_mtime_ns": 1792048542429287100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Insectoid.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "5dfa9fccfd4417fb5bf7c6b8f27cbb725d35523e13722d37f62f91a956cdcfac",
+      "pixel_sha256": "47f66168d89d902b29a3557bb0dce8090bb8efbaacdcbcfe2eabbd6bf3b6306f",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "32c17b606639a99aa6c92b3e111cd90d4f115183f64b9291b0e9e9c524348c10",
+      "bounds": [
+        18,
+        44,
+        302,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          62,
+          70
+        ],
+        [
+          24,
+          44,
+          62,
+          68
+        ],
+        [
+          24,
+          44,
+          62,
+          70
+        ],
+        [
+          24,
+          44,
+          62,
+          68
+        ],
+        [
+          18,
+          44,
+          56,
+          70
+        ],
+        [
+          18,
+          44,
+          56,
+          68
+        ],
+        [
+          18,
+          44,
+          56,
+          70
+        ],
+        [
+          18,
+          44,
+          56,
+          68
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_MultiBody.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6257,
+      "source_mtime_ns": 1792048542429810100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_MultiBody.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "59b52ee04ca935c9d057e4a3aa8fbb4a7e52df607000282b9a5b9fd7d9601991",
+      "pixel_sha256": "f578f16f2303ba185e6801e7f167f960183890604de6ae64a1fe8051031eebc6",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "93ae8420660a55b9598e95d678c7b97ac4b3ef3d7dd32f09fdcb55a6eae80377",
+      "bounds": [
+        12,
+        36,
+        310,
+        314
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          14,
+          38,
+          66,
+          76
+        ],
+        [
+          14,
+          36,
+          66,
+          76
+        ],
+        [
+          14,
+          38,
+          66,
+          76
+        ],
+        [
+          14,
+          36,
+          66,
+          76
+        ],
+        [
+          14,
+          38,
+          62,
+          72
+        ],
+        [
+          14,
+          38,
+          62,
+          72
+        ],
+        [
+          14,
+          38,
+          62,
+          72
+        ],
+        [
+          14,
+          38,
+          62,
+          72
+        ],
+        [
+          12,
+          38,
+          68,
+          72
+        ],
+        [
+          16,
+          38,
+          70,
+          72
+        ],
+        [
+          12,
+          38,
+          68,
+          72
+        ],
+        [
+          16,
+          38,
+          70,
+          72
+        ],
+        [
+          16,
+          34,
+          66,
+          74
+        ],
+        [
+          16,
+          34,
+          66,
+          72
+        ],
+        [
+          16,
+          34,
+          66,
+          74
+        ],
+        [
+          16,
+          34,
+          66,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Multiped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6768,
+      "source_mtime_ns": 1792048542430335800,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Multiped.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "d10a6bc9505988b83e90c3f638a4269d1f78f296d53e4d53d107aa03bdde9701",
+      "pixel_sha256": "84f3bbfd28b5fe128b78119eec69fc411c3418c70c2901e62c2eb38cafb538fd",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "b47778444000a168f776189914abd83349ee897a9cc25527985d864451ca026d",
+      "bounds": [
+        16,
+        44,
+        306,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          60,
+          78
+        ],
+        [
+          20,
+          44,
+          62,
+          78
+        ],
+        [
+          18,
+          44,
+          60,
+          78
+        ],
+        [
+          20,
+          44,
+          62,
+          78
+        ],
+        [
+          20,
+          44,
+          64,
+          78
+        ],
+        [
+          20,
+          44,
+          66,
+          76
+        ],
+        [
+          20,
+          44,
+          64,
+          78
+        ],
+        [
+          20,
+          44,
+          66,
+          76
+        ],
+        [
+          16,
+          44,
+          60,
+          78
+        ],
+        [
+          14,
+          44,
+          60,
+          76
+        ],
+        [
+          16,
+          44,
+          60,
+          78
+        ],
+        [
+          14,
+          44,
+          60,
+          76
+        ],
+        [
+          20,
+          42,
+          62,
+          76
+        ],
+        [
+          18,
+          42,
+          60,
+          76
+        ],
+        [
+          20,
+          42,
+          62,
+          76
+        ],
+        [
+          18,
+          42,
+          60,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_MultiWinged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6499,
+      "source_mtime_ns": 1792048542429810100,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_MultiWinged.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "0afc6dbc9ef1cf5a0cf84d930cbde3503dc3714c6584c3abf52e366c56a1e7f0",
+      "pixel_sha256": "5930c70fc2ee844482162c930e086a9fca2ae65370fe658f9b8bb10f00f88e67",
+      "colors": 9,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "6ec062bc446e1ec957b9f44503c2f864c601f30e285a895956ce5b7bd23623a3",
+      "bounds": [
+        10,
+        44,
+        310,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          10,
+          44,
+          70,
+          72
+        ],
+        [
+          10,
+          44,
+          70,
+          72
+        ],
+        [
+          10,
+          44,
+          70,
+          72
+        ],
+        [
+          10,
+          44,
+          70,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          78
+        ],
+        [
+          24,
+          44,
+          60,
+          74
+        ],
+        [
+          24,
+          44,
+          60,
+          78
+        ],
+        [
+          24,
+          44,
+          60,
+          74
+        ],
+        [
+          20,
+          44,
+          56,
+          78
+        ],
+        [
+          20,
+          44,
+          56,
+          74
+        ],
+        [
+          20,
+          44,
+          56,
+          78
+        ],
+        [
+          20,
+          44,
+          56,
+          74
+        ],
+        [
+          10,
+          42,
+          70,
+          70
+        ],
+        [
+          10,
+          42,
+          70,
+          70
+        ],
+        [
+          10,
+          42,
+          70,
+          70
+        ],
+        [
+          10,
+          42,
+          70,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Quadruped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6146,
+      "source_mtime_ns": 1792048542430335800,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Quadruped.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "a107c01b84dec2dfcaa30b0df136bba2351b1106bc509838db2c015cf6f93818",
+      "pixel_sha256": "e897af273529c02f54e18f8c58d3de4f1d3ccb7b42fd2fcb7dc8ce36e6d6d4c2",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "40d2abbb8507e8da65fcf67ea95a6b252a953fc6a94429e59c52937b1514cdf7",
+      "bounds": [
+        20,
+        44,
+        300,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          24,
+          44,
+          60,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          44,
+          56,
+          72
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Serpentine.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6899,
+      "source_mtime_ns": 1792048542430862600,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Serpentine.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "dd7de134bfc651ad54296473b09fec13295116d9c9e12cef5d2bbf3df58a819e",
+      "pixel_sha256": "1cf60026988636462407fe2885e32cafefa20a9cfe999bfe0472dc901e9b8704",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "ecd1e6cb3fff2d0f50a1281a1499b4daf8ebe8a48e39f7e961a494a7e505df61",
+      "bounds": [
+        8,
+        24,
+        312,
+        320
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          24,
+          58,
+          76
+        ],
+        [
+          22,
+          24,
+          58,
+          76
+        ],
+        [
+          22,
+          24,
+          58,
+          76
+        ],
+        [
+          22,
+          24,
+          58,
+          76
+        ],
+        [
+          16,
+          46,
+          72,
+          72
+        ],
+        [
+          16,
+          46,
+          72,
+          72
+        ],
+        [
+          16,
+          46,
+          72,
+          72
+        ],
+        [
+          16,
+          46,
+          72,
+          72
+        ],
+        [
+          8,
+          46,
+          64,
+          72
+        ],
+        [
+          6,
+          46,
+          62,
+          72
+        ],
+        [
+          8,
+          46,
+          64,
+          72
+        ],
+        [
+          6,
+          46,
+          62,
+          72
+        ],
+        [
+          22,
+          38,
+          58,
+          80
+        ],
+        [
+          22,
+          38,
+          58,
+          80
+        ],
+        [
+          22,
+          38,
+          58,
+          80
+        ],
+        [
+          22,
+          38,
+          58,
+          80
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Winged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 5795,
+      "source_mtime_ns": 1792048542431389700,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Winged.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "7df6c388c7d42b0fe7ee96793456d59e597eb5483896bcce822d32de52ed5865",
+      "pixel_sha256": "58e5562100af1b8b90f6a64c1fcb648326921dd29eabd1a9c0d33a8b6f7b3461",
+      "colors": 11,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "4d77b5f45da5281a78d17d716b9ced4f2846fafcad58ee1d4cf15c7374c090e2",
+      "bounds": [
+        14,
+        44,
+        306,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          20,
+          44,
+          60,
+          80
+        ],
+        [
+          20,
+          44,
+          60,
+          80
+        ],
+        [
+          20,
+          44,
+          60,
+          80
+        ],
+        [
+          20,
+          44,
+          60,
+          80
+        ],
+        [
+          14,
+          44,
+          62,
+          74
+        ],
+        [
+          14,
+          44,
+          62,
+          74
+        ],
+        [
+          14,
+          44,
+          62,
+          74
+        ],
+        [
+          14,
+          44,
+          62,
+          74
+        ],
+        [
+          18,
+          44,
+          66,
+          74
+        ],
+        [
+          18,
+          44,
+          66,
+          74
+        ],
+        [
+          18,
+          44,
+          66,
+          74
+        ],
+        [
+          18,
+          44,
+          66,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Bipedal.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6783,
+      "source_mtime_ns": 1792048542431389700,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Bipedal.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "eb54947d577feeefea8b524860c29e4baef8e5d6eb07345f4995ae35b2960137",
+      "pixel_sha256": "e7b225355d497a8ca066be7b62cb2cfb8cb84803e470814b1625319f8151effd",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "fd08156885db0a8ad97b3544978edc4c0c7168a5a33d676732274cdd5f23368b",
+      "bounds": [
+        14,
+        40,
+        308,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          40,
+          60,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          40,
+          60,
+          74
+        ],
+        [
+          18,
+          42,
+          66,
+          74
+        ],
+        [
+          20,
+          42,
+          68,
+          76
+        ],
+        [
+          18,
+          42,
+          66,
+          74
+        ],
+        [
+          20,
+          42,
+          68,
+          76
+        ],
+        [
+          14,
+          42,
+          62,
+          74
+        ],
+        [
+          12,
+          42,
+          60,
+          76
+        ],
+        [
+          14,
+          42,
+          62,
+          74
+        ],
+        [
+          12,
+          42,
+          60,
+          76
+        ],
+        [
+          16,
+          42,
+          64,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          76
+        ],
+        [
+          16,
+          42,
+          64,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_BipedalTail.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6731,
+      "source_mtime_ns": 1792048542431913900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_BipedalTail.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "c7f35decdd68355e16c19b643e474a924eb5c11ae56dff813e70acbcc5cd6f96",
+      "pixel_sha256": "debdb21ca0dd4ec998439323a35f386b434d508b7d2525db39cbc9f02670a7b9",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "e1e051604800b7d91f4cd237c1a43cb7801e55fa4c79bd744507a5c37e8a9d0a",
+      "bounds": [
+        4,
+        42,
+        312,
+        320
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          74
+        ],
+        [
+          18,
+          42,
+          76,
+          74
+        ],
+        [
+          20,
+          42,
+          72,
+          72
+        ],
+        [
+          18,
+          42,
+          76,
+          74
+        ],
+        [
+          20,
+          42,
+          72,
+          72
+        ],
+        [
+          4,
+          42,
+          62,
+          74
+        ],
+        [
+          8,
+          42,
+          60,
+          72
+        ],
+        [
+          4,
+          42,
+          62,
+          74
+        ],
+        [
+          8,
+          42,
+          60,
+          72
+        ],
+        [
+          16,
+          42,
+          64,
+          80
+        ],
+        [
+          18,
+          42,
+          62,
+          80
+        ],
+        [
+          16,
+          42,
+          64,
+          80
+        ],
+        [
+          18,
+          42,
+          62,
+          80
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_board.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7921,
+      "source_mtime_ns": 1792048542437977800,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_board.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "e7bc6162ace63da2a5668346560a012bdac9092c2f9904f7ff1040d57e4f3b11",
+      "pixel_sha256": "0696e60cb795d17623c6cd00c2b37d5c133e12663ac7def64663bfc66ea05ef5",
+      "colors": 16,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "0fd36f96a35a53d883244d675c8931ab8c45e4c07b0e29f8dd314b557313613e",
+      "bounds": [
+        8,
+        16,
+        312,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          22,
+          20,
+          58,
+          72
+        ],
+        [
+          20,
+          16,
+          60,
+          72
+        ],
+        [
+          22,
+          20,
+          58,
+          72
+        ],
+        [
+          20,
+          16,
+          60,
+          72
+        ],
+        [
+          8,
+          44,
+          72,
+          64
+        ],
+        [
+          8,
+          42,
+          72,
+          66
+        ],
+        [
+          8,
+          44,
+          72,
+          64
+        ],
+        [
+          8,
+          42,
+          72,
+          66
+        ],
+        [
+          8,
+          44,
+          72,
+          64
+        ],
+        [
+          8,
+          42,
+          72,
+          66
+        ],
+        [
+          8,
+          44,
+          72,
+          64
+        ],
+        [
+          8,
+          42,
+          72,
+          66
+        ],
+        [
+          22,
+          30,
+          58,
+          72
+        ],
+        [
+          20,
+          30,
+          60,
+          72
+        ],
+        [
+          22,
+          30,
+          58,
+          72
+        ],
+        [
+          20,
+          30,
+          60,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Finned.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7093,
+      "source_mtime_ns": 1792048542432441000,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Finned.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "d7415e68c01ed40a2efb45771667fec96bd9daa706f46a5a855017150cc41b27",
+      "pixel_sha256": "e16fc93c5885442e833a783df9f3cc00d31ae2e59abc841355b5a9fa25193082",
+      "colors": 16,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "b1e8844b50a1c64e0dd08de988f3fe0580dc242b312f44c1c513de996d4d479f",
+      "bounds": [
+        8,
+        32,
+        308,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          32,
+          62,
+          72
+        ],
+        [
+          20,
+          32,
+          60,
+          74
+        ],
+        [
+          18,
+          32,
+          62,
+          72
+        ],
+        [
+          20,
+          32,
+          60,
+          74
+        ],
+        [
+          20,
+          44,
+          72,
+          76
+        ],
+        [
+          22,
+          44,
+          68,
+          74
+        ],
+        [
+          20,
+          44,
+          72,
+          76
+        ],
+        [
+          22,
+          44,
+          68,
+          74
+        ],
+        [
+          8,
+          44,
+          60,
+          76
+        ],
+        [
+          12,
+          44,
+          58,
+          74
+        ],
+        [
+          8,
+          44,
+          60,
+          76
+        ],
+        [
+          12,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          76
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Head.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 5945,
+      "source_mtime_ns": 1792048542432976000,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Head.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "4c0f1b76dbf3c4e75ba7eb6b7d82583fb2598b9a5de020e303a8cd96899241d9",
+      "pixel_sha256": "2394280a7accf6803e590970a32581d8945e4ea7cc86e0c0112c7c709f21569d",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "d13fd30a75c876de74a2ce9d629bbcf9b49fa106a5dded5314a33e1f04cd86c2",
+      "bounds": [
+        16,
+        44,
+        302,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          74
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          74
+        ],
+        [
+          20,
+          44,
+          64,
+          72
+        ],
+        [
+          22,
+          44,
+          62,
+          74
+        ],
+        [
+          20,
+          44,
+          64,
+          72
+        ],
+        [
+          22,
+          44,
+          62,
+          74
+        ],
+        [
+          16,
+          44,
+          60,
+          72
+        ],
+        [
+          18,
+          44,
+          58,
+          74
+        ],
+        [
+          16,
+          44,
+          60,
+          72
+        ],
+        [
+          18,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_HeadArms.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6400,
+      "source_mtime_ns": 1792048542432976000,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_HeadArms.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "d69311230c172c2c42eef84c7cecf35a53879dd0f81cc0139c7d8bed9d9e5d94",
+      "pixel_sha256": "91213958f20bf1e418e0e204769bf5930e8cfa6bddb1f43c84ad69073b42c776",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3c8cdd7d884312814387efc385fba20fa718a8c6b2743ac17019311bb321e5f6",
+      "bounds": [
+        16,
+        44,
+        302,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          74
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          74
+        ],
+        [
+          22,
+          44,
+          64,
+          74
+        ],
+        [
+          20,
+          44,
+          62,
+          76
+        ],
+        [
+          22,
+          44,
+          64,
+          74
+        ],
+        [
+          20,
+          44,
+          62,
+          76
+        ],
+        [
+          16,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          44,
+          60,
+          76
+        ],
+        [
+          16,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          44,
+          60,
+          76
+        ],
+        [
+          16,
+          42,
+          64,
+          70
+        ],
+        [
+          18,
+          40,
+          62,
+          72
+        ],
+        [
+          16,
+          42,
+          64,
+          70
+        ],
+        [
+          18,
+          40,
+          62,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_HeadBase.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6293,
+      "source_mtime_ns": 1792048542433505900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_HeadBase.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "7a2f402eca10afee5cb8fe9ae87ca01c9de3da5b79ff38a2f52ec1960faff750",
+      "pixel_sha256": "3e694a18aa3adabe8d6a5c0cb090705a3c2aee85eeb71db8e7edcfa250eac75b",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "885199c318ca17eb5ed7506e7b1db8ad8fde3fa935e346e6bd50cdd3c2d90aa9",
+      "bounds": [
+        14,
+        38,
+        312,
+        318
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          40,
+          62,
+          72
+        ],
+        [
+          20,
+          38,
+          60,
+          74
+        ],
+        [
+          18,
+          40,
+          62,
+          72
+        ],
+        [
+          20,
+          38,
+          60,
+          74
+        ],
+        [
+          20,
+          44,
+          66,
+          72
+        ],
+        [
+          22,
+          44,
+          72,
+          74
+        ],
+        [
+          20,
+          44,
+          66,
+          72
+        ],
+        [
+          22,
+          44,
+          72,
+          74
+        ],
+        [
+          14,
+          44,
+          60,
+          72
+        ],
+        [
+          8,
+          44,
+          58,
+          74
+        ],
+        [
+          14,
+          44,
+          60,
+          72
+        ],
+        [
+          8,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          78
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          78
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_HeadLegs.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6193,
+      "source_mtime_ns": 1792048542433505900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_HeadLegs.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "2526826932488380fb425a4bad8073df038b93cff8627d119382f067d3668491",
+      "pixel_sha256": "c503c53745497a0b9391d370bb68715c6f6a4d2623b42eeadac586dddbf9e7bf",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "0fb5fd11783761afb9e4a70ed1569f65617755145c3af7681a6630c1c89d2fa2",
+      "bounds": [
+        14,
+        44,
+        302,
+        314
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          74
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          20,
+          44,
+          60,
+          74
+        ],
+        [
+          20,
+          44,
+          66,
+          72
+        ],
+        [
+          22,
+          44,
+          62,
+          74
+        ],
+        [
+          20,
+          44,
+          66,
+          72
+        ],
+        [
+          22,
+          44,
+          62,
+          74
+        ],
+        [
+          14,
+          44,
+          60,
+          72
+        ],
+        [
+          18,
+          44,
+          58,
+          74
+        ],
+        [
+          14,
+          44,
+          60,
+          72
+        ],
+        [
+          18,
+          44,
+          58,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ],
+        [
+          18,
+          42,
+          62,
+          74
+        ],
+        [
+          20,
+          42,
+          60,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Insectoid.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6585,
+      "source_mtime_ns": 1792048542434041100,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Insectoid.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "09bb67bde820bc87a30606d1bba4706bf31050a2c205acb9933fc9b48ce60c1b",
+      "pixel_sha256": "a2aa5b0ad2c23e94c18943aef45bc0ac06d7cc4e5ebe924950285b63f36e5c02",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "2f2e0bc33de5d77eb23d73f2c7ba3445f28ba5184f632ccefc5438135244ac2e",
+      "bounds": [
+        16,
+        44,
+        304,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          16,
+          44,
+          64,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          16,
+          44,
+          64,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          20,
+          44,
+          64,
+          72
+        ],
+        [
+          22,
+          44,
+          64,
+          70
+        ],
+        [
+          20,
+          44,
+          64,
+          72
+        ],
+        [
+          22,
+          44,
+          64,
+          70
+        ],
+        [
+          16,
+          44,
+          60,
+          72
+        ],
+        [
+          16,
+          44,
+          58,
+          70
+        ],
+        [
+          16,
+          44,
+          60,
+          72
+        ],
+        [
+          16,
+          44,
+          58,
+          70
+        ],
+        [
+          16,
+          42,
+          64,
+          70
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          16,
+          42,
+          64,
+          70
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_MultiBody.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7528,
+      "source_mtime_ns": 1792048542434568200,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_MultiBody.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "be418ec42e21c57008dedc2aa154caa924d8eb920c0bd7c67449ef7515cf2cbe",
+      "pixel_sha256": "8ca69228f06cb4db82e42dca573530cfb052b285e953cc14b806228602541770",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "6f0cf12c71bf7f365d34001309918f7410a2ecaace7c6dd8d855c0016e7004a4",
+      "bounds": [
+        10,
+        36,
+        312,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          12,
+          38,
+          68,
+          76
+        ],
+        [
+          12,
+          36,
+          68,
+          76
+        ],
+        [
+          12,
+          38,
+          68,
+          76
+        ],
+        [
+          12,
+          36,
+          68,
+          76
+        ],
+        [
+          12,
+          38,
+          64,
+          72
+        ],
+        [
+          12,
+          38,
+          64,
+          74
+        ],
+        [
+          12,
+          38,
+          64,
+          72
+        ],
+        [
+          12,
+          38,
+          64,
+          74
+        ],
+        [
+          10,
+          38,
+          70,
+          72
+        ],
+        [
+          14,
+          38,
+          72,
+          72
+        ],
+        [
+          10,
+          38,
+          70,
+          72
+        ],
+        [
+          14,
+          38,
+          72,
+          72
+        ],
+        [
+          12,
+          34,
+          70,
+          76
+        ],
+        [
+          14,
+          34,
+          68,
+          76
+        ],
+        [
+          12,
+          34,
+          70,
+          76
+        ],
+        [
+          14,
+          34,
+          68,
+          76
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Multiped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6445,
+      "source_mtime_ns": 1792048542435100200,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Multiped.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "193c09aa158ae82db5ef059790a3626c1512ac013ee9cbd74c23a22f3532171b",
+      "pixel_sha256": "8b232855359088632a8f6dfbf0a8946d7ffd19c702eeb409ec5788e7de5e3b7a",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "00bd92dfcfc3a899959b081cb9e28670f09795c304dd99e6c9c1ea4bbe005392",
+      "bounds": [
+        16,
+        44,
+        302,
+        316
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          78
+        ],
+        [
+          20,
+          44,
+          60,
+          76
+        ],
+        [
+          18,
+          44,
+          62,
+          78
+        ],
+        [
+          20,
+          44,
+          60,
+          76
+        ],
+        [
+          20,
+          44,
+          64,
+          78
+        ],
+        [
+          22,
+          44,
+          62,
+          76
+        ],
+        [
+          20,
+          44,
+          64,
+          78
+        ],
+        [
+          22,
+          44,
+          62,
+          76
+        ],
+        [
+          16,
+          44,
+          60,
+          78
+        ],
+        [
+          18,
+          44,
+          58,
+          76
+        ],
+        [
+          16,
+          44,
+          60,
+          78
+        ],
+        [
+          18,
+          44,
+          58,
+          76
+        ],
+        [
+          18,
+          42,
+          62,
+          76
+        ],
+        [
+          20,
+          42,
+          60,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          76
+        ],
+        [
+          20,
+          42,
+          60,
+          74
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_MultiWinged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7150,
+      "source_mtime_ns": 1792048542434568200,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_MultiWinged.png",
+      "batch": "batch-112",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "c7b7512d201ea39f4fb5af3b8777e45ce915aa800a8cd5f6b39ee68f80d0d97e",
+      "pixel_sha256": "7960b030f479bae822810ef2871771ce5f2865b2fc297de18a6dc7077b878023",
+      "colors": 16,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "1497bafa154b33afc7394843bc12467e8e256e22248687468bba4879f56ef492",
+      "bounds": [
+        8,
+        44,
+        310,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          8,
+          44,
+          72,
+          72
+        ],
+        [
+          10,
+          44,
+          70,
+          74
+        ],
+        [
+          8,
+          44,
+          72,
+          72
+        ],
+        [
+          10,
+          44,
+          70,
+          74
+        ],
+        [
+          20,
+          44,
+          64,
+          80
+        ],
+        [
+          22,
+          44,
+          62,
+          74
+        ],
+        [
+          20,
+          44,
+          64,
+          80
+        ],
+        [
+          22,
+          44,
+          62,
+          74
+        ],
+        [
+          16,
+          44,
+          60,
+          80
+        ],
+        [
+          18,
+          44,
+          58,
+          74
+        ],
+        [
+          16,
+          44,
+          60,
+          80
+        ],
+        [
+          18,
+          44,
+          58,
+          74
+        ],
+        [
+          8,
+          42,
+          72,
+          70
+        ],
+        [
+          10,
+          42,
+          70,
+          72
+        ],
+        [
+          8,
+          42,
+          72,
+          70
+        ],
+        [
+          10,
+          42,
+          70,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p2-evidence/remaining/player-review.json",
+    "output/texture-hd/p2-remaining-work/visual-review.json"
+  ],
+  "validation_scope": "Original retained sheets only. Actual Sprite_Player clothing/hair/hat crop and offsets across every direction/frame and action switch, all starting hair/hat variations and skin-tone/outfit combinations; all surf base shapes through Sprite_SurfBase. Timing uses actual Game_Character update_pattern at four speeds. Neutral tint, fixed pose driver; not all gameplay movement/roof/water event flows.",
+  "byte_identity_guarantee": "Source and delivery equal the audited original. Therefore every frame, state, tint input and consumer output remains identical for the same engine inputs; native checks additionally inspect the relevant actual consumers. No accepted redraw in this batch."
+}

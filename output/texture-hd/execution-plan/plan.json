@@ -8,7 +8,7 @@
   "already_applied_images": 86,
   "remaining_images": 18579,
   "batch_count": 853,
-  "next_batch": "batch-104",
+  "next_batch": "batch-152",
   "priorities": [
     {
       "priority": "P1",
@@ -22,7 +22,10 @@
       "files": 2223,
       "batches": 94,
       "first": "batch-058",
-      "last": "batch-151"
+      "last": "batch-151",
+      "status": "completed",
+      "applied_files": 15,
+      "preserved_files": 2208
     },
     {
       "priority": "P3",
@@ -195,7 +198,10 @@
         "batch-061",
         "batch-062",
         "batch-063"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 6,
+      "preserved_files": 115
     },
     {
       "stage": "ui_party",
@@ -217,7 +223,10 @@
         "batch-074",
         "batch-075",
         "batch-076"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 288
     },
     {
       "stage": "ui_dex",
@@ -243,7 +252,10 @@
         "batch-091",
         "batch-092",
         "batch-093"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 4,
+      "preserved_files": 370
     },
     {
       "stage": "ui_map",
@@ -261,7 +273,10 @@
         "batch-100",
         "batch-101",
         "batch-102"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 5,
+      "preserved_files": 197
     },
     {
       "stage": "titles",
@@ -273,7 +288,10 @@
         "batch-103",
         "batch-104",
         "batch-105"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 49
     },
     {
       "stage": "panorama",
@@ -284,7 +302,10 @@
       "batch_ids": [
         "batch-106",
         "batch-107"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 17
     },
     {
       "stage": "player_pilot",
@@ -294,7 +315,10 @@
       "files": 8,
       "batch_ids": [
         "batch-108"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "stage": "player_body",
@@ -308,7 +332,10 @@
         "batch-111",
         "batch-112",
         "batch-113"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 74
     },
     {
       "stage": "starter",
@@ -319,7 +346,10 @@
       "batch_ids": [
         "batch-114",
         "batch-115"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 43
     },
     {
       "stage": "pokemon_pilot",
@@ -329,7 +359,10 @@
       "files": 6,
       "batch_ids": [
         "batch-116"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 6
     },
     {
       "stage": "pokemon_main",
@@ -367,7 +400,10 @@
         "batch-143",
         "batch-144",
         "batch-145"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 911
     },
     {
       "stage": "trainer",
@@ -382,7 +418,10 @@
         "batch-149",
         "batch-150",
         "batch-151"
-      ]
+      ],
+      "status": "completed",
+      "applied_files": 0,
+      "preserved_files": 130
     },
     {
       "stage": "npc",
@@ -4323,7 +4362,7 @@
       "priority": "P2",
       "stage": "titles",
       "title": "标题、载入与启动界面（2/3）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "ui",
       "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
@@ -4348,7 +4387,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-104/validation.json",
+      "applied_files": 0,
+      "preserved_files": 20
     },
     {
       "id": "batch-105",
@@ -4356,7 +4398,7 @@
       "priority": "P2",
       "stage": "titles",
       "title": "标题、载入与启动界面（3/3）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "ui",
       "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
@@ -4381,7 +4423,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-105/validation.json",
+      "applied_files": 0,
+      "preserved_files": 9
     },
     {
       "id": "batch-106",
@@ -4389,7 +4434,7 @@
       "priority": "P2",
       "stage": "panorama",
       "title": "全景与场景背景（1/2）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "background",
       "processing_notes": "先核对是否滚动或重复平铺，再以原图补绘；保护构图、地平线与平铺接缝。",
@@ -4406,7 +4451,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对场景构图与滚动/平铺接缝，若带文字须保护原文字。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-106/validation.json",
+      "applied_files": 0,
+      "preserved_files": 12
     },
     {
       "id": "batch-107",
@@ -4414,7 +4462,7 @@
       "priority": "P2",
       "stage": "panorama",
       "title": "全景与场景背景（2/2）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "background",
       "processing_notes": "先核对是否滚动或重复平铺，再以原图补绘；保护构图、地平线与平铺接缝。",
@@ -4431,7 +4479,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对场景构图与滚动/平铺接缝，若带文字须保护原文字。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-107/validation.json",
+      "applied_files": 0,
+      "preserved_files": 5
     },
     {
       "id": "batch-108",
@@ -4439,7 +4490,7 @@
       "priority": "P2",
       "stage": "player_pilot",
       "title": "主角身体试制：1 号身体全动作及训练师图",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -4454,7 +4505,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-108/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-109",
@@ -4462,7 +4516,7 @@
       "priority": "P2",
       "stage": "player_body",
       "title": "其余主角身体与冲浪底层（1/5）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -4479,7 +4533,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-109/validation.json",
+      "applied_files": 0,
+      "preserved_files": 17
     },
     {
       "id": "batch-110",
@@ -4487,7 +4544,7 @@
       "priority": "P2",
       "stage": "player_body",
       "title": "其余主角身体与冲浪底层（2/5）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -4505,7 +4562,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-110/validation.json",
+      "applied_files": 0,
+      "preserved_files": 14
     },
     {
       "id": "batch-111",
@@ -4513,7 +4573,7 @@
       "priority": "P2",
       "stage": "player_body",
       "title": "其余主角身体与冲浪底层（3/5）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -4531,7 +4591,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-111/validation.json",
+      "applied_files": 0,
+      "preserved_files": 20
     },
     {
       "id": "batch-112",
@@ -4539,7 +4602,7 @@
       "priority": "P2",
       "stage": "player_body",
       "title": "其余主角身体与冲浪底层（4/5）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -4557,7 +4620,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-112/validation.json",
+      "applied_files": 0,
+      "preserved_files": 20
     },
     {
       "id": "batch-113",
@@ -4565,7 +4631,7 @@
       "priority": "P2",
       "stage": "player_body",
       "title": "其余主角身体与冲浪底层（5/5）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -4583,7 +4649,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-113/validation.json",
+      "applied_files": 0,
+      "preserved_files": 3
     },
     {
       "id": "batch-114",
@@ -4591,7 +4660,7 @@
       "priority": "P2",
       "stage": "starter",
       "title": "初始睡衣、Red/Leaf 发型与配套服装（1/2）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "wearable",
       "processing_notes": "同一套衣服、头发或帽子的全部动作作为一组；用原主角身体叠穿验收，保护 80×80 等实际分格及偏移。",
@@ -4612,7 +4681,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "同套动作图逐帧叠穿，核对头发/帽子/衣服/身体遮挡和偏移；商城图同步核对校验清单。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-114/validation.json",
+      "applied_files": 0,
+      "preserved_files": 21
     },
     {
       "id": "batch-115",
@@ -4620,7 +4692,7 @@
       "priority": "P2",
       "stage": "starter",
       "title": "初始睡衣、Red/Leaf 发型与配套服装（2/2）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "wearable",
       "processing_notes": "同一套衣服、头发或帽子的全部动作作为一组；用原主角身体叠穿验收，保护 80×80 等实际分格及偏移。",
@@ -4642,7 +4714,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "同套动作图逐帧叠穿，核对头发/帽子/衣服/身体遮挡和偏移；商城图同步核对校验清单。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-115/validation.json",
+      "applied_files": 0,
+      "preserved_files": 22
     },
     {
       "id": "batch-116",
@@ -4650,7 +4725,7 @@
       "priority": "P2",
       "stage": "pokemon_pilot",
       "title": "默认宝可梦试制：妙蛙种子、小火龙、杰尼龟",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4665,7 +4740,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-116/validation.json",
+      "applied_files": 0,
+      "preserved_files": 6
     },
     {
       "id": "batch-117",
@@ -4673,7 +4751,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（1/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4690,7 +4768,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-117/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-118",
@@ -4698,7 +4779,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（2/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4716,7 +4797,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-118/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-119",
@@ -4724,7 +4808,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（3/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4742,7 +4826,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-119/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-120",
@@ -4750,7 +4837,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（4/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4768,7 +4855,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-120/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-121",
@@ -4776,7 +4866,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（5/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4794,7 +4884,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-121/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-122",
@@ -4802,7 +4895,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（6/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4820,7 +4913,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-122/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-123",
@@ -4828,7 +4924,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（7/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4846,7 +4942,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-123/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-124",
@@ -4854,7 +4953,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（8/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4872,7 +4971,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-124/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-125",
@@ -4880,7 +4982,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（9/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4898,7 +5000,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-125/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-126",
@@ -4906,7 +5011,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（10/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4924,7 +5029,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-126/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-127",
@@ -4932,7 +5040,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（11/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4950,7 +5058,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-127/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-128",
@@ -4958,7 +5069,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（12/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -4976,7 +5087,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-128/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-129",
@@ -4984,7 +5098,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（13/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5002,7 +5116,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-129/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-130",
@@ -5010,7 +5127,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（14/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5028,7 +5145,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-130/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-131",
@@ -5036,7 +5156,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（15/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5054,7 +5174,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-131/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-132",
@@ -5062,7 +5185,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（16/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5080,7 +5203,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-132/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-133",
@@ -5088,7 +5214,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（17/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5106,7 +5232,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-133/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-134",
@@ -5114,7 +5243,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（18/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5132,7 +5261,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-134/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-135",
@@ -5140,7 +5272,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（19/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5158,7 +5290,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-135/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-136",
@@ -5166,7 +5301,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（20/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5184,7 +5319,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-136/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-137",
@@ -5192,7 +5330,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（21/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5210,7 +5348,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-137/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-138",
@@ -5218,7 +5359,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（22/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5236,7 +5377,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-138/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-139",
@@ -5244,7 +5388,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（23/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5262,7 +5406,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-139/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-140",
@@ -5270,7 +5417,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（24/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5288,7 +5435,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-140/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-141",
@@ -5296,7 +5446,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（25/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5314,7 +5464,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-141/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-142",
@@ -5322,7 +5475,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（26/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5340,7 +5493,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-142/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-143",
@@ -5348,7 +5504,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（27/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5366,7 +5522,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-143/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-144",
@@ -5374,7 +5533,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（28/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5392,7 +5551,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-144/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-145",
@@ -5400,7 +5562,7 @@
       "priority": "P2",
       "stage": "pokemon_main",
       "title": "默认宝可梦战斗图：按编号推进（29/29）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "pokemon",
       "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -5418,7 +5580,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-145/validation.json",
+      "applied_files": 0,
+      "preserved_files": 15
     },
     {
       "id": "batch-146",
@@ -5426,7 +5591,7 @@
       "priority": "P2",
       "stage": "trainer",
       "title": "训练师战斗立绘与背面图（1/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -5443,7 +5608,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-146/validation.json",
+      "applied_files": 0,
+      "preserved_files": 24
     },
     {
       "id": "batch-147",
@@ -5451,7 +5619,7 @@
       "priority": "P2",
       "stage": "trainer",
       "title": "训练师战斗立绘与背面图（2/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -5469,7 +5637,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-147/validation.json",
+      "applied_files": 0,
+      "preserved_files": 24
     },
     {
       "id": "batch-148",
@@ -5477,7 +5648,7 @@
       "priority": "P2",
       "stage": "trainer",
       "title": "训练师战斗立绘与背面图（3/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -5495,7 +5666,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-148/validation.json",
+      "applied_files": 0,
+      "preserved_files": 24
     },
     {
       "id": "batch-149",
@@ -5503,7 +5677,7 @@
       "priority": "P2",
       "stage": "trainer",
       "title": "训练师战斗立绘与背面图（4/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -5521,7 +5695,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-149/validation.json",
+      "applied_files": 0,
+      "preserved_files": 24
     },
     {
       "id": "batch-150",
@@ -5529,7 +5706,7 @@
       "priority": "P2",
       "stage": "trainer",
       "title": "训练师战斗立绘与背面图（5/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -5547,7 +5724,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-150/validation.json",
+      "applied_files": 0,
+      "preserved_files": 24
     },
     {
       "id": "batch-151",
@@ -5555,7 +5735,7 @@
       "priority": "P2",
       "stage": "trainer",
       "title": "训练师战斗立绘与背面图（6/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "character",
       "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -5573,7 +5753,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-151/validation.json",
+      "applied_files": 0,
+      "preserved_files": 10
     },
     {
       "id": "batch-152",
@@ -31418,5 +31601,10 @@
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
       ]
     }
-  ]
+  ],
+  "completed_priorities": [
+    "P1",
+    "P2"
+  ],
+  "execution_updated_date": "2026-10-30"
 }

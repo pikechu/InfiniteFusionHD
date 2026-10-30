@@ -1,0 +1,60 @@
+{
+  "batch": "108",
+  "method": "Original-sized visual review and source-specific native validation; preserve originals where no visible benefit.",
+  "pilot_records": [
+    "output/texture-hd/p2-remaining-work/pilot-jobs.json",
+    "output/texture-hd/p2-remaining-work/charmander-job.json"
+  ],
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/bike_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/dive_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/fish_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/run_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/surf_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/trainer_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/1/walk_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "rejected_geometry_and_continuity",
+      "prompt": "Use case: precise-object-edit. Asset type: transparent pixel RPG 4-column by 4-row walk sprite sheet, original canvas 320x320, sixteen 80x80 cells. Edit target: provided sheet. Very subtly refine only shading on the existing dark-skinned bald base character, preserving the exact pose, facial identity, skin tone, direction and silhouette of every individual frame. Four directions remain in the exact row order and all four movement frames remain in exact column order. Keep all feet, hands, head and body anchors pixel-aligned in their existing cells. No clothing, hair, accessories or new features; this base must be overlaid with existing game clothes and hair. Keep all empty and transparent areas transparent, all original margins, cell dimensions, alignment and duplicated frames. Do not move, resize, merge, add or remove any frame. Retain the small pixel-art style and original palette. The same shading should remain consistent through the entire walking loop.",
+      "generated": "output/texture-hd/batch-108/generated/Graphics/Characters/player/base/overworld/1/walk_1.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/trainer/trainer_1.png",
+      "decision": "preserved",
+      "reason": "80×80 动作格中的可见身体仅占少量像素，原有平涂、姿态与面部清楚；行走 AI 试制改变了 16 格锚点，拒绝推广。保留原身体全部动作、肤色、脚底和叠穿位置；当前加载器的缺失动作回退另列证据。",
+      "generation_status": "not_generated_no_expected_gain"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "batch": "batch-113",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 3,
+  "candidate_pending_review": 0,
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Quadruped.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6444,
+      "source_mtime_ns": 1792048542436158900,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Quadruped.png",
+      "batch": "batch-113",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "6e953d28a261ac760e65eccd656dfb74698bd6357b7fb31adf4a42ac00cf7a26",
+      "pixel_sha256": "994f0964c1b85ae9db175e20473c11f161e00e6cdd223db716cee18d203c729a",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "cb4177d06f0f9f9a29c261a2fbc5d3f0ed4911b13c59701ea99becec5ead509f",
+      "bounds": [
+        16,
+        44,
+        304,
+        310
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          18,
+          44,
+          62,
+          72
+        ],
+        [
+          20,
+          44,
+          64,
+          74
+        ],
+        [
+          22,
+          44,
+          64,
+          72
+        ],
+        [
+          20,
+          44,
+          64,
+          74
+        ],
+        [
+          22,
+          44,
+          64,
+          72
+        ],
+        [
+          16,
+          44,
+          60,
+          74
+        ],
+        [
+          16,
+          44,
+          58,
+          72
+        ],
+        [
+          16,
+          44,
+          60,
+          74
+        ],
+        [
+          16,
+          44,
+          58,
+          72
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ],
+        [
+          18,
+          42,
+          62,
+          70
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Serpentine.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7144,
+      "source_mtime_ns": 1792048542436699400,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Serpentine.png",
+      "batch": "batch-113",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "d5e7847e68056a36ae7b4041698b7d0e1d4bde3e1bb3719a6cbb86025dac2c4b",
+      "pixel_sha256": "e9e8d92c212086b86d6c155fdfc602f7e8e4c2e222122c1bfd44467f66be656b",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "bb223e0465c3f8e843939dbced79a3310922dd534c265ad3f2e2bc843c5c366f",
+      "bounds": [
+        6,
+        24,
+        314,
+        320
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          24,
+          62,
+          78
+        ],
+        [
+          18,
+          24,
+          60,
+          78
+        ],
+        [
+          18,
+          24,
+          62,
+          78
+        ],
+        [
+          18,
+          24,
+          60,
+          78
+        ],
+        [
+          14,
+          46,
+          74,
+          72
+        ],
+        [
+          14,
+          46,
+          74,
+          72
+        ],
+        [
+          14,
+          46,
+          74,
+          72
+        ],
+        [
+          14,
+          46,
+          74,
+          72
+        ],
+        [
+          6,
+          46,
+          66,
+          72
+        ],
+        [
+          4,
+          46,
+          64,
+          72
+        ],
+        [
+          6,
+          46,
+          66,
+          72
+        ],
+        [
+          4,
+          46,
+          64,
+          72
+        ],
+        [
+          20,
+          38,
+          60,
+          80
+        ],
+        [
+          20,
+          38,
+          60,
+          80
+        ],
+        [
+          20,
+          38,
+          60,
+          80
+        ],
+        [
+          20,
+          38,
+          60,
+          80
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/surfmon_Winged.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6454,
+      "source_mtime_ns": 1792048542437225300,
+      "canonical_source": "Graphics/Characters/player/surf_base/surfmon_Winged.png",
+      "batch": "batch-113",
+      "stage": "player_body",
+      "method": "character",
+      "sha256": "b2a235cdb43990db765b38ac4f348667352b481cedcd7b9b692b1dc2ebb62dba",
+      "pixel_sha256": "8f882869d9e52e9c811e37d54dc3ea672b081624d60e63b9bacafd733dee9acb",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "d34520df25b6c6db943e251894888c1dc643c117680e5e95c28722d5c74bbef4",
+      "bounds": [
+        14,
+        44,
+        306,
+        312
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "cell_alpha_bounds": [
+        [
+          18,
+          44,
+          62,
+          80
+        ],
+        [
+          20,
+          44,
+          60,
+          80
+        ],
+        [
+          18,
+          44,
+          62,
+          80
+        ],
+        [
+          20,
+          44,
+          60,
+          80
+        ],
+        [
+          14,
+          44,
+          66,
+          74
+        ],
+        [
+          14,
+          44,
+          62,
+          74
+        ],
+        [
+          14,
+          44,
+          66,
+          74
+        ],
+        [
+          14,
+          44,
+          62,
+          74
+        ],
+        [
+          14,
+          44,
+          66,
+          74
+        ],
+        [
+          18,
+          44,
+          66,
+          74
+        ],
+        [
+          14,
+          44,
+          66,
+          74
+        ],
+        [
+          18,
+          44,
+          66,
+          74
+        ],
+        [
+          18,
+          42,
+          62,
+          72
+        ],
+        [
+          18,
+          42,
+          62,
+          72
+        ],
+        [
+          18,
+          42,
+          62,
+          72
+        ],
+        [
+          18,
+          42,
+          62,
+          72
+        ]
+      ],
+      "status": "preserved",
+      "reason": "冲浪/潜水底层是四方向四格的小型轮廓与水线，现有几何清楚；新增噪声无清晰度收益。经真实 Sprite_SurfBase 的全部方向/格位与叠合偏移检查，保留原图。"
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p2-evidence/remaining/player-review.json",
+    "output/texture-hd/p2-remaining-work/visual-review.json"
+  ],
+  "validation_scope": "Original retained sheets only. Actual Sprite_Player clothing/hair/hat crop and offsets across every direction/frame and action switch, all starting hair/hat variations and skin-tone/outfit combinations; all surf base shapes through Sprite_SurfBase. Timing uses actual Game_Character update_pattern at four speeds. Neutral tint, fixed pose driver; not all gameplay movement/roof/water event flows.",
+  "byte_identity_guarantee": "Source and delivery equal the audited original. Therefore every frame, state, tint input and consumer output remains identical for the same engine inputs; native checks additionally inspect the relevant actual consumers. No accepted redraw in this batch."
+}
