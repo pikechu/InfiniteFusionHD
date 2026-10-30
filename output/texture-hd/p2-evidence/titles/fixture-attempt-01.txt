@@ -1,0 +1,12 @@
+TITLE_BEGIN phase=before
+TITLE_FAIL NoMethodError: undefined method `src_rect' for #<AnimatedPlane>
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:44:in `block (2 levels) in <top (required)>'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:43:in `to_h'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:43:in `block in <top (required)>'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:57:in `update'
+./Data/Scripts/052_AddOns/IntroScreen.rb:493:in `block in wait'
+./Data/Scripts/052_AddOns/IntroScreen.rb:489:in `times'
+./Data/Scripts/052_AddOns/IntroScreen.rb:489:in `wait'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:68:in `wait'
+./Data/Scripts/052_AddOns/IntroScreen.rb:308:in `intro'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:113:in `block in <top (required)>'

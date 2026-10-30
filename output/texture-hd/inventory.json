@@ -1,7 +1,7 @@
 {
   "total": 18665,
   "applied": 267,
-  "pending": 17334,
+  "pending": 17314,
   "by_kind": {
     "animation_or_sprite": 13648,
     "background": 664,
@@ -23112,201 +23112,241 @@
       "path": "Graphics/Titles/gen3_poke2.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "现有角色层/剪影/面颊光亮属于分层素材，原轮廓和姿态清楚。Gen1 当前由物种加载器动态选择精灵，Gen3 两角色层用于叠合闪亮；重绘无明确收益，逐字节保留。"
     },
     {
       "path": "Graphics/Titles/gen3_poke1.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "现有角色层/剪影/面颊光亮属于分层素材，原轮廓和姿态清楚。Gen1 当前由物种加载器动态选择精灵，Gen3 两角色层用于叠合闪亮；重绘无明确收益，逐字节保留。"
     },
     {
       "path": "Graphics/Titles/gen3_effect.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "平铺运动特效保持透明边界与接缝。Gen1 横向特效当前被设为隐藏，Gen3 为兼容风格；不为隐藏/已有清楚几何的功能层加纹理。"
     },
     {
       "path": "Graphics/Titles/gen3_bg.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "兼容标题背景是平滑渐变并带署名，保持渐变与文字原像素；加纹理没有清晰度收益。原有 Reset 时刻另外记录，延长循环仅限测试夹具。"
     },
     {
       "path": "Graphics/Titles/gen1_poke.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "现有角色层/剪影/面颊光亮属于分层素材，原轮廓和姿态清楚。Gen1 当前由物种加载器动态选择精灵，Gen3 两角色层用于叠合闪亮；重绘无明确收益，逐字节保留。"
     },
     {
       "path": "Graphics/Titles/gen1_effect.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "平铺运动特效保持透明边界与接缝。Gen1 横向特效当前被设为隐藏，Gen3 为兼容风格；不为隐藏/已有清楚几何的功能层加纹理。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_yellow.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_v5.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_red (1).png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_logo.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_litup_yellow.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_litup_red.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_litup_green.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_litup_blue.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_litup.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_green.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg_blue.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
     },
     {
       "path": "Graphics/Titles/gen1_bg.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "已用内置 image_gen 生成并完成原生前后验收。结构保护后的星云局部出现暗块，原尺寸清晰度没有改善；完整原始生成提案也新增细星点，因此拒绝候选并保留原图。"
     },
     {
       "path": "Graphics/Titles/gen1_bars.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "标题滑入横条包含署名文字与透明区域，原尺寸边界清楚；保留原图以保持横向移动、文字、锚点及遮挡。"
     },
     {
       "path": "Graphics/Titles/credits1.png",
       "category": "Titles",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         384
-      ]
+      ],
+      "batch": "batch-103",
+      "reason": "当前片尾背景为黑底与低对比装饰，文字由游戏滚动绘制；增加纹理会干扰片尾文字。实测前 160 次滚动更新和正常跳过，当前背景切换代码已禁用，不宣称五背景轮播。"
     },
     {
       "path": "Graphics/Animations/dragon claw.png",
@@ -188789,5 +188829,5 @@
       ]
     }
   ],
-  "preserved": 1064
+  "preserved": 1084
 }

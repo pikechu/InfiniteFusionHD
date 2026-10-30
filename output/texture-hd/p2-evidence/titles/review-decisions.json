@@ -1,0 +1,427 @@
+{
+  "status": "reviewed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Titles/credits1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4710,
+      "source_mtime_ns": 1792048549873411000,
+      "canonical_source": "Graphics/Titles/credits1.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "264a87eb7aea2d9d5bc22347025f452c6902d26de17842349fb6c12756e6c3b3",
+      "pixel_sha256": "4507a06bbd4d848489910b5120085d210854599b37bc6107db8c14635f80f71e",
+      "colors": 259,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "当前片尾背景为黑底与低对比装饰，文字由游戏滚动绘制；增加纹理会干扰片尾文字。实测前 160 次滚动更新和正常跳过，当前背景切换代码已禁用，不宣称五背景轮播。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bars.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 61703,
+      "source_mtime_ns": 1792048549882946300,
+      "canonical_source": "Graphics/Titles/gen1_bars.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "7c80c50901a170bef10d5d684e89e5e960161b4f69678f0123f01d3733af9a96",
+      "pixel_sha256": "91094cb9baae8453812fde6e9e8a263326e8e4e08dfcacbd70a49db1e3b21853",
+      "colors": 333,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "31376761f112f0fb0a11993fd0bafde9c5bba2363d6d8b062034c42ad3e30c29",
+      "status": "preserved",
+      "reason": "标题滑入横条包含署名文字与透明区域，原尺寸边界清楚；保留原图以保持横向移动、文字、锚点及遮挡。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 165076,
+      "source_mtime_ns": 1792048549883945800,
+      "canonical_source": "Graphics/Titles/gen1_bg.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "32d913a5e329043e11be7ce082be324d9ae3bad32d349cf014b82450c0afc4c1",
+      "pixel_sha256": "284414a96708f43a2b2b41310e6163f2773484e112a64e8f599c49c718d19333",
+      "colors": 63456,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "已用内置 image_gen 生成并完成原生前后验收。结构保护后的星云局部出现暗块，原尺寸清晰度没有改善；完整原始生成提案也新增细星点，因此拒绝候选并保留原图。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 26631,
+      "source_mtime_ns": 1792048549883945800,
+      "canonical_source": "Graphics/Titles/gen1_bg_blue.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "59c562b49f59fd31d048efc6dfac7a8751b08297d0c77d80ea5bb2eaee59efed",
+      "pixel_sha256": "823d590e56df89ab600fc620e94467012e8a0af3031790d6245b3ea1056c565d",
+      "colors": 1421,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_green.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 23319,
+      "source_mtime_ns": 1792048549883945800,
+      "canonical_source": "Graphics/Titles/gen1_bg_green.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "b3b71777ecadd5a99e8966a056c51517c7647c4426e21b8fa68ff0cee58af77b",
+      "pixel_sha256": "416fbd019c7e05d52dd90938dd18b73527df1b56c61d934bb7f31938ea212dc6",
+      "colors": 1421,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15652,
+      "source_mtime_ns": 1792048549884946700,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "a9f65825e5ad1dd00de14d1398082477695243a2453136f42bdddeaa5c42fd07",
+      "pixel_sha256": "8a97fb74dc473937f9cb50f9e1331326c606dabbf945c7e7a65e9bf69ac37b3c",
+      "colors": 179,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 73163,
+      "source_mtime_ns": 1792048549884946700,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_blue.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "a6b60d340627f897c617af9f5a0452dc73fcfce2d69ec135580c484e12f6ba6f",
+      "pixel_sha256": "d0de0f52f61155536d28dfaa5440e6b5497a7a10476b422291e73af6d70e411f",
+      "colors": 8678,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_green.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 69469,
+      "source_mtime_ns": 1792048549885946000,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_green.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "8d1fe2f7a135eb9160a6b9c8ab31e235dae7639b0561b577b6801ef729e5b149",
+      "pixel_sha256": "0d261256abafbbfdcb1b8e00127f176c741cf291ea8d1565f15cff9cba26abdd",
+      "colors": 8678,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_red.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 105477,
+      "source_mtime_ns": 1792048549885946000,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_red.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "d9d569362ebe370552611f3729455a14c9139b487d77b77cd549680c2b959fb1",
+      "pixel_sha256": "4b5cf79cdf00b6cf9566651b1f99403e632fd7fbced525064c79dc6701cfcfd0",
+      "colors": 6985,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_yellow.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 87810,
+      "source_mtime_ns": 1792048549886945600,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_yellow.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "de0a28855d09d758fac6026813b9d198173119dfb6d7f17c2ed9dba8a76f53f0",
+      "pixel_sha256": "56660a796b5b44162384f712dfb131dc6f3d2a84f84ecf87f57b3899a535c9de",
+      "colors": 5870,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_logo.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 179336,
+      "source_mtime_ns": 1792048549887946200,
+      "canonical_source": "Graphics/Titles/gen1_bg_logo.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "f8fc554ab0aeb57bda02ce96dd1494f20ff49d2232088db7730e4c9b9e02ebda",
+      "pixel_sha256": "f3ad41253a83c7b93ea703cbbeafb64cd77925b7fc75db622be8ed239554f178",
+      "colors": 67039,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_red (1).png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15845,
+      "source_mtime_ns": 1792048549887946200,
+      "canonical_source": "Graphics/Titles/gen1_bg_red (1).png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "00c7478cda57c630d77e0b31cbb4333e420e830aae9391e99caed10bd60b355a",
+      "pixel_sha256": "bc50d454bae44e1888f46c17f36285da13ea6106c179a84556955e66dc8e4c09",
+      "colors": 193,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_v5.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 147439,
+      "source_mtime_ns": 1792048549888947000,
+      "canonical_source": "Graphics/Titles/gen1_bg_v5.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "579f323599c1af6a8dd302dd288be746f752e2f80317876fda7683ed3763f7ac",
+      "pixel_sha256": "75bd39176fa8cff684ddcf699e9a8c69533230cac43ca711727ce26a113aecbe",
+      "colors": 84745,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_yellow.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 26310,
+      "source_mtime_ns": 1792048549888947000,
+      "canonical_source": "Graphics/Titles/gen1_bg_yellow.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "321d097f471b569376503642d2dcf5356809650f4365d913425deacc55b2aa6d",
+      "pixel_sha256": "ad3d5d47a28fafa13926d8837eb1fb6d3ef03d28cdcb6503b5ebf61368097f1f",
+      "colors": 829,
+      "encoded_frames": 1,
+      "mode": "RGB",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "备用色、发光、预合成 logo 或旧版背景未被当前 GenOne 标题加载；已有渐变/插画清楚，不用当前场景解码冒充这些备用画面的完整播放验收。保留原图及各版本的全部差值。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_effect.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14301,
+      "source_mtime_ns": 1792048549889946700,
+      "canonical_source": "Graphics/Titles/gen1_effect.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "e0b9a1e17347ed8976d67f611a847c5124747a712754d24daee51f6dea4eaa8b",
+      "pixel_sha256": "64059f36a8ce41558bde985ebc1dd7a95ee4075d9db30c0415256f0ccc4d1ba4",
+      "colors": 43,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "fb69ace32514402723f48abefd1c48a64d9ce5c5da70675220e46553056a8491",
+      "status": "preserved",
+      "reason": "平铺运动特效保持透明边界与接缝。Gen1 横向特效当前被设为隐藏，Gen3 为兼容风格；不为隐藏/已有清楚几何的功能层加纹理。"
+    },
+    {
+      "source": "Graphics/Titles/gen1_poke.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 88542,
+      "source_mtime_ns": 1792048549889946700,
+      "canonical_source": "Graphics/Titles/gen1_poke.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "a1cc4c340dd5670f8150401a9f71bae869e7cadcbc89734cc28a551a0a14384d",
+      "pixel_sha256": "5d4a95f582568fb166233ef9fb4bf16f923b3f606d53dba9456ef63597b67d10",
+      "colors": 2568,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "a34136f8fbf0b34c2b69eeb7cdd6bbd9350d0036650ca73de31c3da0e96d34c5",
+      "status": "preserved",
+      "reason": "现有角色层/剪影/面颊光亮属于分层素材，原轮廓和姿态清楚。Gen1 当前由物种加载器动态选择精灵，Gen3 两角色层用于叠合闪亮；重绘无明确收益，逐字节保留。"
+    },
+    {
+      "source": "Graphics/Titles/gen3_bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 63594,
+      "source_mtime_ns": 1792048549929946500,
+      "canonical_source": "Graphics/Titles/gen3_bg.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "04293bbc094b430f40e211c56482d723ec30f39dd33b03eeb2f610b324d7b0cd",
+      "pixel_sha256": "b17e38600687634ce48a377fa6dc87225bcc80c3a879290515f3c56bd16e3d56",
+      "colors": 654,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+      "status": "preserved",
+      "reason": "兼容标题背景是平滑渐变并带署名，保持渐变与文字原像素；加纹理没有清晰度收益。原有 Reset 时刻另外记录，延长循环仅限测试夹具。"
+    },
+    {
+      "source": "Graphics/Titles/gen3_effect.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 59218,
+      "source_mtime_ns": 1792048549930948200,
+      "canonical_source": "Graphics/Titles/gen3_effect.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "04fc93618c7c9c27925871168722d12fd599bfb20a766673f870af2b22d34135",
+      "pixel_sha256": "5f410761e5a04959a5c8332dd2e173d0610d49ba54aab96237c23727ac2e3a12",
+      "colors": 17,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "a86dcc489b461a1043f376bf8074ec17eaa060fe3622bf7d22c037f3dd2dc2f7",
+      "status": "preserved",
+      "reason": "平铺运动特效保持透明边界与接缝。Gen1 横向特效当前被设为隐藏，Gen3 为兼容风格；不为隐藏/已有清楚几何的功能层加纹理。"
+    },
+    {
+      "source": "Graphics/Titles/gen3_poke1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 58065,
+      "source_mtime_ns": 1792048549930948200,
+      "canonical_source": "Graphics/Titles/gen3_poke1.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "92c15fbc56b0ddbc5cac8329fbafde8c26fe8c36c3214aed9c5f3e8a82f6d865",
+      "pixel_sha256": "cd3d487705c8746fefde8a2c0d2f35c97888898859a57e4d82117f18c46b8047",
+      "colors": 62,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "948a66bc1aa57e55581f48550a032ae6521c1ec8400b837281e418bff64b1e4d",
+      "status": "preserved",
+      "reason": "现有角色层/剪影/面颊光亮属于分层素材，原轮廓和姿态清楚。Gen1 当前由物种加载器动态选择精灵，Gen3 两角色层用于叠合闪亮；重绘无明确收益，逐字节保留。"
+    },
+    {
+      "source": "Graphics/Titles/gen3_poke2.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 56996,
+      "source_mtime_ns": 1792048549931945800,
+      "canonical_source": "Graphics/Titles/gen3_poke2.png",
+      "batch": "batch-103",
+      "stage": "titles",
+      "method": "ui",
+      "sha256": "017adfa0c3a4757d67d927701b93f0923388b21fb3194838fe5ea83b3cf73fc1",
+      "pixel_sha256": "c173dd586b8e3419ccaa4efa128167a0589338712e25a61edafd238188d129e1",
+      "colors": 17,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "alpha_sha256": "0e2a4e5f36030a818c76be8478ae006295708973e991e6cba0dac76f8ab95bcf",
+      "status": "preserved",
+      "reason": "现有角色层/剪影/面颊光亮属于分层素材，原轮廓和姿态清楚。Gen1 当前由物种加载器动态选择精灵，Gen3 两角色层用于叠合闪亮；重绘无明确收益，逐字节保留。"
+    }
+  ]
+}

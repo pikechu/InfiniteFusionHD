@@ -1,0 +1,22 @@
+{
+  "status": "rejected_no_visible_gain",
+  "entries": [
+    {
+      "source": "Graphics/Titles/gen1_bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "before_sha256": "32d913a5e329043e11be7ce082be324d9ae3bad32d349cf014b82450c0afc4c1",
+      "after_sha256": "40627c15e3bfea092706179bf6e1e51ab1704e907bf1ba3727ffb23f4f408025",
+      "generated_sha256": "96c2a475ba2887b51d357f38edcfef0f090ee3002708c7ae977f1f5575d9418b",
+      "status": "candidate_pending_review"
+    }
+  ],
+  "changed_pixels": 24355,
+  "max_channel_delta": 14,
+  "alpha_identical": true,
+  "grid_text_disc_and_strong_edges_identical": true,
+  "geometry": "Original RGB plus one bounded common luminance delta; no resampling of original pixels.",
+  "native_validation": "output/texture-hd/p2-evidence/titles/native-validation.json"
+}
