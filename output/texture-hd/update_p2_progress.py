@@ -1,12 +1,13 @@
-"""Summarize completed P2 receipts; prepared manifests never count as completion."""
+"""Summarize completed texture receipts by priority; candidates never count."""
 from pathlib import Path
 import json
 
 OUT = Path(__file__).resolve().parent
 
 
-def summarize(plan, receipts):
-    batches = [row for row in plan['batch_index'] if row['priority'] == 'P2']
+def summarize(plan, receipts, priority='P2'):
+    batches = [row for row in plan['batch_index'] if row['priority'] == priority]
+    assert batches, 'Unknown priority: ' + priority
     done = [row for row in batches if row['status'] == 'completed']
     applied = preserved = 0
     for row in done:
@@ -21,7 +22,8 @@ def summarize(plan, receipts):
         applied += a
         preserved += p
     total = sum(row['file_count'] for row in batches)
-    return {'authorized_scope': 'P2 batches 058-151', 'status': 'completed' if len(done) == len(batches) else 'in_progress',
+    scope = f"{priority} batches {batches[0]['id'].removeprefix('batch-')}-{batches[-1]['id'].removeprefix('batch-')}"
+    return {'authorized_scope': scope, 'status': 'completed' if len(done) == len(batches) else 'in_progress',
             'total_files': total, 'completed_batches': [row['id'] for row in done],
             'completed_files': applied + preserved, 'applied_files': applied, 'preserved_files': preserved,
             'remaining_files': total - applied - preserved,
@@ -29,14 +31,15 @@ def summarize(plan, receipts):
             'animation_requirement': 'Preserve frame geometry, order, timing and alpha; validate complete loops before application.'}
 
 
-def update_progress():
+def update_progress(priority='P2'):
     plan = json.loads((OUT / 'execution-plan/plan.json').read_text(encoding='utf-8'))
     receipts = {row['id']: json.loads((OUT / row['id'] / 'validation.json').read_text(encoding='utf-8'))
-                for row in plan['batch_index'] if row['priority'] == 'P2' and row['status'] == 'completed'}
-    progress = summarize(plan, receipts)
-    temporary = OUT / 'p2-progress.json.tmp'
+                for row in plan['batch_index'] if row['priority'] == priority and row['status'] == 'completed'}
+    progress = summarize(plan, receipts, priority)
+    destination = OUT / f'{priority.lower()}-progress.json'
+    temporary = destination.with_suffix('.json.tmp')
     temporary.write_text(json.dumps(progress, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    temporary.replace(OUT / 'p2-progress.json')
+    temporary.replace(destination)
     return progress
 
 
@@ -58,6 +61,11 @@ def self_check():
         pass
     else:
         raise AssertionError('An unreviewed candidate must not count as completed')
+    plan['batch_index'].append({'id':'c','priority':'P3','status':'planned','file_count':3})
+    third = summarize(plan, {}, 'P3')
+    assert (third['completed_files'],third['remaining_files'],third['next_batch']) == (0,3,'c')
+    receipts['b']['entries'][0]['status'] = 'preserved'
+    assert summarize(plan,receipts)['completed_files'] == 3
 
 
 if __name__ == '__main__':

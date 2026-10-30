@@ -1,7 +1,7 @@
 {
   "total": 18665,
   "applied": 267,
-  "pending": 16096,
+  "pending": 16076,
   "by_kind": {
     "animation_or_sprite": 13648,
     "background": 664,
@@ -23104,11 +23104,13 @@
       "path": "Graphics/Alternate Trainers/Chase/Pictures/introBoy.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         80,
         160
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "备用训练师/开场/VS 静态图，现有姿态与服装色块清楚；未发现当前代码/序列化资源的直接路径引用，增加纹理无明确游戏内收益，保留原画和透明通道。"
     },
     {
       "path": "Graphics/Battlers/118/118.png",
@@ -23126,81 +23128,97 @@
       "path": "Graphics/Alternate Trainers/Chase/Characters/trchar000.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "内置 image_gen 试制的 16 格边界/头脚锚点均改变，帽子和手部细节偏离原图；缩回网格或回填透明通道不能恢复内部姿态，拒绝候选。现有小型像素画清楚，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/trback100.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         640,
         128
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版备用五格背面条图，原有姿态和衣物清楚。实际 PictureEx 投掷帧序 1→2→3→4→0 已完整检查；当前主角仍使用现代换装系统，不把兼容预览当作当前入场流程。保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/trainer000.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         160,
         160
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "备用训练师/开场/VS 静态图，现有姿态与服装色块清楚；未发现当前代码/序列化资源的直接路径引用，增加纹理无明确游戏内收益，保留原画和透明通道。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/boy_surf_offset.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/boy_run.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/boy_fish_offset.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         384,
         320
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 96×80，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/boy_dive_offset.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/Chase/Characters/boy_bike.png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Battlers/117/117.png",
@@ -23776,11 +23794,13 @@
       "path": "Graphics/Alternate Trainers/base/Transitions/vsTrainer0 (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         128
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "备用训练师/开场/VS 静态图，现有姿态与服装色块清楚；未发现当前代码/序列化资源的直接路径引用，增加纹理无明确游戏内收益，保留原画和透明通道。"
     },
     {
       "path": "Graphics/Pictures/Trainer Card/backgrounds/flags/XATU_FLAG.png",
@@ -24564,11 +24584,13 @@
       "path": "Graphics/Alternate Trainers/base/Characters/trchar000_10 (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Battlers/114/114.png",
@@ -24586,91 +24608,109 @@
       "path": "Graphics/Alternate Trainers/base/Characters/trchar000 (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/trainer093 (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         160,
         160
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "备用训练师/开场/VS 静态图，现有姿态与服装色块清楚；未发现当前代码/序列化资源的直接路径引用，增加纹理无明确游戏内收益，保留原画和透明通道。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/trainer000 (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         160,
         160
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "备用训练师/开场/VS 静态图，现有姿态与服装色块清楚；未发现当前代码/序列化资源的直接路径引用，增加纹理无明确游戏内收益，保留原画和透明通道。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/boy_surf_offset (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/boy_run (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/boy_fish_offset (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         384,
         320
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 96×80，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/boy_fishsurf_offset (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         384,
         320
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 96×80，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/boy_dive_offset (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Alternate Trainers/base/Characters/boy_bike (original).png",
       "category": "Alternate Trainers",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         256,
         256
-      ]
+      ],
+      "batch": "batch-152",
+      "reason": "旧版完整着装角色帧表，每格 64×64，原有轮廓、衣物和动作清楚；额外细纹理没有原尺寸收益。实际 Sprite_Character 全四方向/四格及动作切换已检查。当前代码/序列化地图与元数据未发现该备用路径的直接引用，保留原图。"
     },
     {
       "path": "Graphics/Animations/Anima (1).png",
@@ -191265,5 +191305,5 @@
       ]
     }
   ],
-  "preserved": 2302
+  "preserved": 2322
 }

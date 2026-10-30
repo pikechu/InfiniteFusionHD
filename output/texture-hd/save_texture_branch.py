@@ -38,6 +38,9 @@ def self_check():
 def main():
  self_check()
  report=read(OUT/'commit-scope.json');progress=read(OUT/'p2-progress.json');inventory=read(OUT/'inventory.json')
+ priority='P2'
+ if (OUT/'p3-progress.json').exists() and read(OUT/'p3-progress.json')['completed_batches']:
+  priority='P3';progress=read(OUT/'p3-progress.json')
  last=max(int(name[6:]) for name in progress['completed_batches'])
  existing=git('for-each-ref','--format=%(objectname)',f'refs/heads/{BRANCH}').decode().strip()
  base=existing or report['base_commit']
@@ -49,12 +52,14 @@ def main():
  parent_blobs={e.split(b'\t',1)[1].decode('utf-8'):e.split(b'\t',1)[0].split()[2].decode() for e in git('ls-tree','-r','-z',base).split(b'\0') if e}
  parent_time=int(git('show','-s','--format=%ct',base).decode().strip())
  # Previous archive folders are inherited; inspect new stage folders and the saved path journal only.
- prior=json.loads(git('show',base+':output/texture-hd/p2-progress.json').decode('utf-8')) if existing else {'completed_batches':[]}
- first=max([int(n[6:]) for n in prior['completed_batches']]+[0])+1
+ progress_path=f'output/texture-hd/{priority.lower()}-progress.json'
+ prior=json.loads(git('show',base+':'+progress_path).decode('utf-8')) if existing and progress_path in parent_blobs else {'completed_batches':[]}
+ first=max([int(n[6:]) for n in prior['completed_batches']]+[151 if priority=='P3' else 0])+1
  candidates={p for p in (OUT/'commit-paths.txt').read_text(encoding='utf-8').splitlines() if p not in parent_blobs}
  roots=[OUT/f'batch-{n:03}' for n in range(first,last+1)]
  roots += [OUT/'p2-region-work',OUT/'p2-evidence/region',OUT/'p2-title-work',OUT/'p2-evidence/titles']
  roots += [OUT/'p2-remaining-work',OUT/'p2-evidence/remaining']
+ roots += [OUT/'p3-work',OUT/'p3-evidence']
  repairs=OUT/'p2-evidence/remaining/archive-repairs.json'
  if repairs.exists():
   for repair in read(repairs)['entries']:
@@ -69,12 +74,16 @@ def main():
  candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*title*.rb'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*remaining*.py'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*remaining*.rb'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*p3*.py'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in OUT.glob('*p3*.rb'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-region-*20261029-cleanup.json'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-title-*20261030-cleanup.json'))
  candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-remaining-*20261030-cleanup.json'))
+ candidates.update(p.relative_to(ROOT).as_posix() for p in (OUT/'p2-evidence/dex').glob('texture-p2-dex-p3-*20261030-cleanup.json'))
  candidates.update(f'output/texture-hd/execution-plan/batches/batch-{n:03}.json' for n in range(first,last+1))
  core={'README.zh-CN.md','inventory.json','p2-audit.json','p2-progress.json','commit-scope.json','commit-paths.txt','save_texture_branch.py','git-incremental-save-recovery.json',
-       'p2-work/resume.json','execution-plan/plan.json','execution-plan/README.zh-CN.md','execution-plan/stage-summary.zh-CN.md','execution-plan/batch-index.zh-CN.md'}
+       'p2-work/resume.json','update_p2_progress.py','execution-plan/plan.json','execution-plan/README.zh-CN.md','execution-plan/stage-summary.zh-CN.md','execution-plan/batch-index.zh-CN.md'}
+ if (OUT/'p3-progress.json').exists():core.update({'p3-progress.json','p3-audit.json'})
  paths=sorted(candidates|{e['source'] for e in applied}|{'scripts/graphics/texture_batch.py'}|{'output/texture-hd/'+p for p in core})
  allowed={e['source'] for e in applied}
  assert all(p.startswith('output/texture-hd/') or p=='scripts/graphics/texture_batch.py' or p in allowed for p in paths)
@@ -96,9 +105,9 @@ def main():
   if kind=='blob':known.add(oid)
  print(f'INCREMENTAL changed={len(changes)} verified={len(paths)} existing_objects={len(set(ids)&known)}',flush=True)
 
- message=(f'feat(graphics): checkpoint HD textures through P2 batch {last:03}\n\n'
+ message=(f'feat(graphics): checkpoint HD textures through {priority} batch {last:03}\n\n'
   f'Save {len(applied)} applied textures with originals, generated proposals, prompts, delivery hashes and native engine evidence.\n'
-  f"P2 reviewed {progress['completed_files']}/2223 files ({progress['applied_files']} applied, {progress['preserved_files']} preserved).\n"
+  f"{priority} reviewed {progress['completed_files']}/{progress['total_files']} files ({progress['applied_files']} applied, {progress['preserved_files']} preserved).\n"
   'Only texture-owned paths; preserve concurrent source/localization/build edits.\n').encode('utf-8')
  temporary=Path(tempfile.mkdtemp(prefix='texture-packed-commit-',dir=ROOT/'temp')).resolve()
  assert temporary.is_relative_to(ROOT/'temp')

@@ -1,0 +1,18 @@
+{
+  "batch": "152",
+  "status": "rejected_geometry_and_pose",
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/Chase/Characters/trchar000.png",
+      "size": [
+        256,
+        256
+      ],
+      "before_sha256": "f2faadb4ad1b1349306f9a8a6a63a126afbede489af4e24313aeb0d7231b4f7f",
+      "generated_sha256": "43ac0873faf3734c72c68bec182f614a9b333c5f8565ec5906ca9460415f7605",
+      "generated": "output/texture-hd/batch-152/generated/Graphics/Alternate Trainers/Chase/Characters/trchar000.png",
+      "ready": null,
+      "reason": "缩回固定 4×4 网格后仍改变多格头脚边界、手部姿态和帽子标记；回填透明通道不能恢复内部姿态，未形成可应用候选。"
+    }
+  ]
+}
