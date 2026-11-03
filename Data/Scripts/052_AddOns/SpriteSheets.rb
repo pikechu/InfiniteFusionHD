@@ -86,7 +86,7 @@ module KIF
         return saved if File.file?(saved)
         return path if File.file?(path)
         installed = !@test_root && defined?(KIF::OfflineResources) && KIF::OfflineResources.installed?
-        if installed && download && downloadAllowed?() && KIF::OfflineResources.entries.key?(path)
+        if !@test_root && mode != 0 && download && downloadAllowed?() && defined?(KIF::OfflineResources) && KIF::OfflineResources.entries.key?(path)
           return KIF::OfflineResources.missing(path) ? path : nil
         end
         @attempted ||= {}

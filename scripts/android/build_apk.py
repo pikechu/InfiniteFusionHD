@@ -13,7 +13,7 @@ import subprocess
 import zipfile
 import sys
 sys.dont_write_bytecode = True
-from package_game import ROOT, write_payload, refresh_ruby_payload, validate_payload
+from package_game import ROOT, write_payload, refresh_ruby_payload, validate_payload, add_offline_resources
 
 ORIGINAL_RUNTIME_SHA256 = "6f90fabcb227eafa2a5b3a8967dbe34368cec06efab5cd3e709f538003186232"
 EMULATOR_RUNTIME_SHA256 = "90bee3c7406d62ca903ffb64798bca3f6da009e4b94402a580cb37a8f7ae0d23"
@@ -25,10 +25,18 @@ def source_snapshot():
     paths = set((ROOT / "android/app/src/main").rglob("*.java"))
     paths.update((ROOT / "android/ruby").glob("*.rb"))
     paths.update((ROOT / "Data/Scripts").rglob("*.rb"))
+    shop_catalog = ROOT / "Data/shop/catalog.json"
+    if shop_catalog.is_file():
+        paths.add(shop_catalog)
+        paths.update(ROOT / name for name in json.loads(shop_catalog.read_text(encoding="utf-8"))["assets"])
     paths.update((ROOT / "temp/android-generated/java").rglob("*.java"))
+    resources = {}
+    add_offline_resources(resources, ROOT)
+    paths.update(resources.values())
     for name in ("Game.ini", "Data/multiplayer-build.json", "Data/resource-download.ps1", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
                  "android/native/kif_android_bridge.c", "scripts/android/build_bridge.ps1",
-                 "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py"):
+                 "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py",
+                 "scripts/resources/build_manifest.py"):
         path = ROOT / name
         if path.is_file():
             paths.add(path)
@@ -41,6 +49,12 @@ def assert_sources_unchanged(expected):
         raise SystemExit("Source files changed during build; finish edits and rebuild: " + ", ".join(changed[:8]))
 
 def validate_staged_scripts(manifest):
+    resources = {}
+    add_offline_resources(resources, ROOT)
+    for name, path in resources.items():
+        expected = manifest["files"].get(name)
+        if expected is None or hashlib.sha256(path.read_bytes()).hexdigest() != expected["sha256"]:
+            raise SystemExit("Staged offline resource differs from current source; use --refresh-ruby: " + name)
     for name, expected in manifest["files"].items():
         if name == "Game.ini" or name in ("Data/multiplayer-build.json", "Data/resource-download.ps1") or name.startswith("Data/Scripts/"):
             path = ROOT / name
@@ -163,6 +177,8 @@ def main():
     parser.add_argument("--refresh-ruby", action="store_true", help="Reuse the verified asset snapshot, refreshing Ruby and config only")
     parser.add_argument("--runtime-only", action="store_true", help="Build a clearly labeled runtime probe without the game")
     parser.add_argument("--asset-root", type=Path, help="Read tracked base assets from another checkout when using a sparse source worktree")
+    parser.add_argument("--work-dir", type=Path, help="Use a separate build directory for an isolated feature build")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "temp/artifacts")
     parser.add_argument("--with-network", action="store_true", help="Enable the helper's optional Android TLS transport and INTERNET permission")
     parser.add_argument("--emulator-compatible", action="store_true", help="Opt into the separately SHA-pinned old ARM translator workaround; never use this variant for phone acceptance")
     args = parser.parse_args()
@@ -179,6 +195,8 @@ def main():
     work = ROOT / ("temp/android-network-build" if args.runtime_only and args.with_network else "temp/android-smoke-build" if args.runtime_only else "temp/android-build-network" if args.with_network else "temp/android-build")
     if args.emulator_compatible:
         work = work.with_name(work.name + "-emulator")
+    if args.work_dir:
+        work = args.work_dir.resolve()
     work.mkdir(parents=True, exist_ok=True)
     assets = work / "assets"
     # Check before reading/rebuilding a large payload or starting Java/D8 work.
@@ -248,8 +266,8 @@ def main():
     env = dict(os.environ, KIF_TEST_KEY_PASSWORD="android")
     if not key.is_file():
         run([jdk / "bin/keytool.exe", "-genkeypair", "-noprompt", "-keystore", key, "-storepass:env", "KIF_TEST_KEY_PASSWORD", "-keypass:env", "KIF_TEST_KEY_PASSWORD", "-alias", "androiddebugkey", "-keyalg", "RSA", "-keysize", "2048", "-validity", "10000", "-dname", "CN=KIF Local Test,O=Kuray,C=CN"], env=env)
-    output = ROOT / "temp/artifacts"
-    output.mkdir(exist_ok=True)
+    output = args.output_dir.resolve()
+    output.mkdir(parents=True, exist_ok=True)
     final = output / output_name(args.runtime_only, args.with_network, args.emulator_compatible)
     signer = [jdk / "bin/java.exe", "-Xmx256m", "-jar", tools / "lib/apksigner.jar"]
     assert_sources_unchanged(source_hashes)
@@ -267,7 +285,11 @@ def main():
                 or hashlib.sha256(apk.read(input_bridge_record["path"])).hexdigest() != input_bridge_record["sha256"]):
             raise SystemExit("Signed APK is missing the required virtual input helper or its hash differs")
     run([tools / "aapt2.exe", "dump", "badging", final], stdout=(work / "apk-badging.txt").open("w", encoding="utf-8"))
-    sha = hashlib.file_digest(final.open("rb"), "sha256").hexdigest()
+    checksum = hashlib.sha256()
+    with final.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            checksum.update(chunk)
+    sha = checksum.hexdigest()
     (output / (final.name + ".sha256")).write_text(sha + "  " + final.name + "\n", encoding="utf-8")
     assert_sources_unchanged(source_hashes)
     record = {"apk": final.name, "sha256": sha, "bytes": final.stat().st_size, "runtime": json.loads((ROOT / "android/runtime.lock.json").read_text()), "payload": manifest["id"], "runtimeOnly": manifest.get("runtimeOnly", False), "networkBridge": args.with_network, "sources": source_hashes, "compileSdk": 35, "buildTools": "35.0.0", "status": "built; gameplay validation pending"}

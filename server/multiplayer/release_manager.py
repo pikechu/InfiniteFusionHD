@@ -14,11 +14,19 @@ from production_data import Config, atomic_bytes
 VERSION = re.compile(r"[a-f0-9]{12}-[a-f0-9]{12}")
 
 
+def release_path_allowed(name):
+    return (name.startswith(("server/multiplayer/", "wheels/")) or name in ("Data/shop/catalog.json", "Data/sprites/Sprite Credits.csv")
+            or name == "Data/VERSION" or name.startswith("Data/Scripts/") and name.endswith(".rb")
+            or re.fullmatch(r"Data/[A-Za-z0-9_]+\.dat", name) is not None
+            or re.fullmatch(r"Data/(?:Map[0-9]+|MapInfos|System|Tilesets|CommonEvents)\.rxdata", name) is not None
+            or re.fullmatch(r"Data/outfits/[A-Za-z0-9_.-]+\.json", name) is not None)
+
+
 def validate_inventory(root, metadata):
     if metadata.get("format") != "kif-mmo-release-v1" or not VERSION.fullmatch(metadata.get("version", "")):
         raise RuntimeError("Unsupported release manifest")
     files = metadata.get("files")
-    if not isinstance(files, dict) or not 5 <= len(files) <= 256:
+    if not isinstance(files, dict) or not 5 <= len(files) <= 4096:
         raise RuntimeError("Invalid release inventory")
     fingerprint = hashlib.sha256(json.dumps(files, sort_keys=True).encode()).hexdigest()
     if fingerprint != metadata.get("source_sha256") or not metadata["version"].endswith(fingerprint[:12]):
@@ -26,7 +34,7 @@ def validate_inventory(root, metadata):
     for name, item in files.items():
         parts = PurePosixPath(name).parts
         if (not parts or PurePosixPath(name).as_posix() != name or any(part in (".", "..") for part in parts) or "\\" in name or name.startswith("/") or
-                not (name.startswith("server/multiplayer/") or name.startswith("wheels/"))):
+                not release_path_allowed(name)):
             raise RuntimeError("Unsafe release member")
         path = root / name
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()) or not path.is_file():
@@ -48,12 +56,12 @@ def stage(archive_path, releases):
         for member in archive:
             parts = PurePosixPath(member.name).parts
             total += member.size
-            if (not member.isfile() or member.name in names or len(names) >= 257 or total > 32 * 1024 * 1024 or
-                    member.size < 0 or member.size > 10 * 1024 * 1024 or not parts or
+            if (not member.isfile() or member.name in names or len(names) >= 4097 or total > 128 * 1024 * 1024 or
+                    member.size < 0 or member.size > (40 if member.name == "Data/messages.dat" else 10) * 1024 * 1024 or not parts or
                     PurePosixPath(member.name).as_posix() != member.name or any(part in (".", "..") for part in parts) or member.name.startswith("/") or "\\" in member.name or
-                    not re.fullmatch(r"[A-Za-z0-9_./-]+", member.name)):
+                    not re.fullmatch(r"[A-Za-z0-9_./ '-]+", member.name)):
                 raise RuntimeError("Unsafe or oversized release archive")
-            if member.name != "release.json" and not member.name.startswith(("server/multiplayer/", "wheels/")):
+            if member.name != "release.json" and not release_path_allowed(member.name):
                 raise RuntimeError("Unexpected release archive path")
             names.add(member.name)
             target = pending / member.name

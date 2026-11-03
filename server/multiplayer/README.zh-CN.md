@@ -2,6 +2,14 @@
 
 InfiniteFusionHD 继承 KIF FORK，重点扩展高清画面和联网玩法。部署目录、`KIF_*` 环境变量、服务单元与协议标识沿用原值，保持现有部署及数据兼容。
 
+## 原版受控角色的规则版本
+
+新受控角色使用原版主线；旧 14 章 v1 仅保留历史对局和回执恢复。现有服务端 v1 资产通过明确入口迁移，历史本地存档不进入可信经济。原版市场及直接交换使用 GOLD，价格分析选择 GOLD；旧托管收藏市场仍使用 MARKET。具体入口和验收边界见 `../../docs/multiplayer-original-rules-completion.zh-CN.md`。
+
+角色整档固定绑定 `rules_hash`。生产发布包的 `release.json.native_rules_hash` 与实际 worker 加载的源码、可信数据和素材索引一致。部署时设置 `KIF_MULTIPLAYER_RULEBOOKS=/opt/kif-mmo/releases`，保留数据库中现有原版角色、检查点及未结交互引用的旧发布目录。不要只保留最新版本，或删除仍被引用的目录。
+
+服务只从该管理员配置目录下已安装的 `12位哈希-12位哈希` 发布目录查找历史规则；每个进程最多启用四套历史 worker。缺失或容量不足时明确拒绝该角色操作，不把旧私有整档交给新版本强行解释。规则目录必须只读且来自可信发布包。角色间交易要求规则哈希相同；已有服务端 v1 角色使用明确迁移入口，本地历史存档不导入。
+
 2026-10-21新增账号、云存档、主线地图同步与聊天，完整使用/验证说明见 `../../docs/multiplayer-online-world.zh-CN.md`。新端点使用Bearer身份，其中auth/register、auth/login无需身份；本节POST不使用经济操作日志，上传和聊天分别以upload_id/client_id去重。
 
 | POST路径 | 请求要点 |
@@ -18,7 +26,11 @@ InfiniteFusionHD 继承 KIF FORK，重点扩展高清画面和联网玩法。部
 | `/v1/world/leave` | `session_id` |
 | `/v1/chat/send` | `session_id,client_id,channel:map或world,text`；服务器填入真实发送者、昵称、地图范围 |
 
-云端与账号记录保存在同一SQLite事务体系中；服务器不解释游戏对象、不执行上传数据。重启清空地图在线状态，保留账号、存档及上传回执。云数据应与身份数据库一起私密备份。
+云端与账号记录保存在同一SQLite事务体系中；云接口保存受限 JSON 快照，不实例化 Ruby 对象或执行上传数据。后台摘要任务只读取白名单字段，受维护会话保护的修复器只允许已实现的字段变更。重启清空地图在线状态，保留账号、存档及上传回执。云数据应与身份数据库一起私密备份。
+
+运营后台入口为 `/admin/`，使用独立管理员账号、密码和 TOTP。创建管理员、权限与操作规则见[后台使用与验收](../../docs/multiplayer-admin-operations.zh-CN.md)。后台复用同一服务实例，不能另建 `Store` 读取运行中的数据库。
+
+新建受控在线角色使用服务端 GOLD 钱包与库存，历史主线资产不导入；现已支持资产、签到、NPC 买卖，以及[受控主线 v1 的战斗、捕获和培养结算](../../docs/multiplayer-controlled-mainline.zh-CN.md)。原 KIF 全地图剧情与房主引擎继续独立运行。后台提供双人整档回滚及基于真实扣款的市场价格分析，见[后台说明](../../docs/multiplayer-admin-operations.zh-CN.md)。
 
 第三版和后续独立玩法服务状态机位于 `backend_v3.py`，由同一 `Store` 和 SQLite 写事务协调；客户端实现与原生游戏验收见根 `docs`，不能仅因服务测试通过就宣称游戏验收通过。
 

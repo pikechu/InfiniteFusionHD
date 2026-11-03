@@ -273,7 +273,7 @@ module KIFMultiplayer
       def exact(length)
         @owner.protocol_error("HTTP body is too large") if length > MAX_RESPONSE_BYTES
         while @buffer.bytesize < length
-          @owner.protocol_error("Truncated HTTP body") unless fill
+          @owner.protocol_error("Truncated HTTP body (expected #{length}, received #{@buffer.bytesize})") unless fill
         end
         value = @buffer.byteslice(0, length)
         @buffer = @buffer.byteslice(length, @buffer.bytesize) || "".b
@@ -384,7 +384,9 @@ module KIFMultiplayer
       stream = endpoint[:scheme] == "https" ? secure(socket, endpoint, deadline) : socket
       payload = method == "GET" ? "" : (raw_payload || WireJSON.dump(body))
       raise Error.new("HTTP payload is too large", "invalid_request") unless payload.is_a?(String) && payload.bytesize <= MAX_RESPONSE_BYTES
-      request = ["#{method} #{endpoint[:path]} HTTP/1.1", "Host: #{endpoint[:authority]}", "Connection: close", "Accept: application/json", "Accept-Encoding: identity", "Content-Type: #{content_type}", "Content-Length: #{payload.bytesize}"]
+      # Close our own socket only after receiving the complete framed response.
+      # Android's emulator NAT can drop the final byte on an immediate peer FIN.
+      request = ["#{method} #{endpoint[:path]} HTTP/1.1", "Host: #{endpoint[:authority]}", "Connection: keep-alive", "Accept: application/json", "Accept-Encoding: identity", "Content-Type: #{content_type}", "Content-Length: #{payload.bytesize}"]
       raise Error.new("Invalid HTTP media type", "invalid_request") unless content_type.is_a?(String) && content_type =~ /\A[\x20-\x7e]{1,200}\z/
       raise Error.new("Invalid HTTP headers", "invalid_request") unless headers.is_a?(Hash) && headers.length <= 32
       headers.each do |key, value|

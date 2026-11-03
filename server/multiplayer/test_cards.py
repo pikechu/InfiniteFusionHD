@@ -29,7 +29,8 @@ class CardsTests(unittest.TestCase):
         self.assertEqual(own["capacity"], 6)
         self.assertEqual(own["badges"], [])
         self.assertFalse(own["show_badges"])
-        self.assertEqual(set(own), {"id", "nickname", "friend_code", "avatar", "show_badges", "badges", "showcases", "showcase_codes", "capacity"})
+        self.assertEqual(own["decoration"], {})
+        self.assertEqual(set(own), {"id", "nickname", "friend_code", "avatar", "show_badges", "badges", "showcases", "showcase_codes", "capacity", "decoration"})
         self.call(self.bob, "GET", "/v1/cards/00000000", expected=404)
         self.call(self.bob, "GET", "/v1/cards/../private", expected=404)
 

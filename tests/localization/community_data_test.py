@@ -7,7 +7,8 @@ ROOT = Path(__file__).resolve().parents[2]
 original = json.loads((ROOT / "Data/pokedex/dex.json").read_text(encoding="utf-8"))
 translated = json.loads((ROOT / "Data/pokedex/dex_zh.json").read_text(encoding="utf-8"))
 review_source = json.loads((ROOT / "Data/localization/zh-CN-dex-source.json").read_text(encoding="utf-8"))
-assert len(review_source) == len(original) == 82_207
+assert len(review_source) == 82_207
+assert 0 < len(original) <= 100_000  # Live upstream entries can grow beyond the pinned review snapshot.
 reviewed = {row["entry"] for row in review_source}
 expected = [row for row in original if row["entry"] in reviewed]
 assert len(translated) == len(expected)

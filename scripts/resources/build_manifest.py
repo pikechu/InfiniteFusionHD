@@ -28,12 +28,13 @@ def api(path, repository=UPSTREAM):
         return json.load(response)
 
 
-def bundled_data(overrides=None):
+def bundled_data(overrides=None, root=None):
+    root = ROOT if root is None else Path(root)
     overrides = overrides or {}
     files = []
     for name in DATA:
-        path = ROOT / name
-        if name == "Data/pokedex/dex.json" and ("Data/pokedex/dex.json.gz" in overrides or (ROOT / "Data/pokedex/dex.json.gz").is_file()):
+        path = root / name
+        if name == "Data/pokedex/dex.json" and ("Data/pokedex/dex.json.gz" in overrides or (root / "Data/pokedex/dex.json.gz").is_file()):
             continue
         if name in overrides:
             raw = overrides[name]
@@ -53,6 +54,15 @@ def bundled_data(overrides=None):
                       "/main/" + urllib.parse.quote(name), "size": len(raw),
                       "sha256": hashlib.sha256(raw).hexdigest(), "kind": "data"})
     return files
+
+
+def check_bundled_data(manifest, root=None):
+    current = {row["path"]: row for row in bundled_data(root=root)}
+    recorded = {row["path"]: row for row in manifest["files"] if row["kind"] == "data"}
+    changed = sorted(name for name in current.keys() | recorded.keys() if current.get(name) != recorded.get(name))
+    if changed:
+        raise ValueError("Offline resource data differs from manifest; run scripts/resources/build_manifest.py --refresh-data: " + ", ".join(changed))
+    return current
 
 
 def seal(commit, files):
@@ -102,16 +112,25 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ref", default="main")
     parser.add_argument("--output", type=Path, default=ROOT / "Data/offline-resources.json")
-    parser.add_argument("--refresh-data", action="store_true", help="Rehash local data without accessing the network")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--refresh-data", action="store_true", help="Rehash local data without accessing the network")
+    mode.add_argument("--check-data", action="store_true", help="Check bundled data without changing files or accessing the network")
     args = parser.parse_args()
-    if args.refresh_data:
+    if args.check_data:
+        manifest = json.loads(args.output.read_text(encoding="utf-8"))
+        print("RESOURCE_MANIFEST_CHECK_PASS data=%d" % len(check_bundled_data(manifest)))
+    elif args.refresh_data:
         previous = json.loads(args.output.read_text(encoding="utf-8"))
         manifest = seal(previous["upstream_commit"], [row for row in previous["files"] if row["kind"] == "image"] + bundled_data())
     else:
         manifest = build(args.ref)
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = args.output.with_suffix(".json.pending")
-    temporary.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    temporary.replace(args.output)
-    print("RESOURCE_MANIFEST_PASS files=%d bytes=%d revision=%s" % (
-        len(manifest["files"]), sum(row["size"] for row in manifest["files"]), manifest["revision"]))
+    if not args.check_data:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        temporary = args.output.with_suffix(".json.pending")
+        try:
+            temporary.write_bytes((json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
+            temporary.replace(args.output)
+        finally:
+            temporary.unlink(missing_ok=True)
+        print("RESOURCE_MANIFEST_PASS files=%d bytes=%d revision=%s" % (
+            len(manifest["files"]), sum(row["size"] for row in manifest["files"]), manifest["revision"]))

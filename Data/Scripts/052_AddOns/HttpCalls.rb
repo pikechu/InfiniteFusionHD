@@ -107,7 +107,7 @@ def download_sprite(base_path, head_id, body_id, saveLocation = "Graphics/temp",
 
     downloaded_file_name = _INTL("{1}/{2}.{3}{4}.png", saveLocation, head_id, body_id, alt_letter)
     if !body_id || body_id == ""
-      downloaded_file_name = _INTL("{1}{2}{3}.png", saveLocation, head_id, alt_letter)
+      downloaded_file_name = File.join(saveLocation, "#{head_id}#{alt_letter}.png")
     end
 
     return downloaded_file_name if pbResolveBitmap(downloaded_file_name)

@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts/android"))
 import package_game
 import build_apk
+import build_manifest
 from build_apk import validate_apk_assets
 
 
@@ -40,6 +41,60 @@ class PayloadPackageTest(unittest.TestCase):
                 writer.add(name, data)
             manifest = writer.manifest(False)
         return manifest
+
+    def test_host_check_failure_cleans_only_its_own_run_directory(self):
+        powershell = shutil.which("powershell") or shutil.which("pwsh")
+        if sys.platform != "win32" or not powershell:
+            self.skipTest("Windows PowerShell is required for the host runner")
+        fixture = self.base / "host-runner"
+        runner = fixture / "scripts/android/run_host_checks.ps1"
+        runner.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT / "scripts/android/run_host_checks.ps1", runner)
+        jdk = fixture / "temp/tools/jdk-17.0.20.1+1/bin"
+        jdk.mkdir(parents=True)
+        for name in ("java.exe", "javac.exe"):
+            (jdk / name).write_bytes(b"not executed before the injected Ruby failure")
+        ruby = fixture / "fail-ruby.cmd"
+        ruby.write_text("@echo off\nexit /b 7\n", encoding="ascii")
+        peer = fixture / "temp/host-checks/existing-run/keep.txt"
+        peer.parent.mkdir(parents=True)
+        peer.write_bytes(b"preserve another run")
+        result = package_game.subprocess.run([powershell, "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(runner),
+            "-RubyPath", str(ruby), "-PythonPath", sys.executable], cwd=fixture, capture_output=True, text=True, timeout=25)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Ruby platform contract checks failed", result.stderr)
+        self.assertIn("HOST_CHECK_CLEANUP_PASS", result.stdout)
+        self.assertEqual(list(peer.parent.parent.iterdir()), [peer.parent])
+        self.assertEqual(peer.read_bytes(), b"preserve another run")
+
+    def test_native_runtime_config_uses_utf8_without_bom(self):
+        powershell = shutil.which("powershell") or shutil.which("pwsh")
+        if sys.platform != "win32" or not powershell:
+            self.skipTest("Windows PowerShell is required for the native runtime helper")
+        fixture = self.base / "native-runtime"
+        helper = fixture / "scripts/multiplayer/prepare-runtime.ps1"
+        helper.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT / "scripts/multiplayer/prepare-runtime.ps1", helper)
+        (fixture / "Game.exe").write_bytes(b"not executed")
+        (fixture / "Game.ini").write_bytes(b"[Game]\n")
+        probe = fixture / "probe.rb"
+        probe.write_text("raise 'not executed'\n", encoding="utf-8")
+        package_game.subprocess.run([powershell, "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(helper),
+            "-Profile", "config-probe", "-CustomScript", str(probe)], cwd=fixture, capture_output=True, text=True, check=True, timeout=25)
+        raw = (fixture / "temp/multiplayer/config-probe/mkxp.json").read_bytes()
+        self.assertFalse(raw.startswith(b"\xef\xbb\xbf"), "native runtime must receive BOM-free JSON")
+        config = json.loads(raw.decode("utf-8"))
+        self.assertEqual(Path(config["gameFolder"]), fixture)
+        self.assertEqual(Path(config["customScript"]), probe)
+
+    def offline_resources(self, root):
+        for name in build_manifest.DATA:
+            path = root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(("current " + name).encode())
+        manifest = build_manifest.seal("a" * 40, build_manifest.bundled_data(root=root))
+        (root / "Data/offline-resources.json").write_text(json.dumps(manifest), encoding="utf-8")
+        return {name: root / name for name in (*build_manifest.DATA, "Data/offline-resources.json")}
 
     def test_lossless_aliases_keep_every_original_path(self):
         logical = {"Audio/canonical.ogg": b"audio bytes" * 100,
@@ -101,6 +156,7 @@ class PayloadPackageTest(unittest.TestCase):
                 (scripts / "001_Example.rb").write_bytes(b"new script\n")
                 (fixture / "Data/messages_zh.dat").write_bytes(b"Chinese language pack")
                 (fixture / "Data/resource-download.ps1").write_bytes(b"new download helper\n")
+                (fixture / "Data/resource-download.ps1").write_bytes(b"new download helper\n")
                 helpers = fixture / "android/ruby"
                 helpers.mkdir(parents=True)
                 for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb",
@@ -109,8 +165,9 @@ class PayloadPackageTest(unittest.TestCase):
                 logical = {"Graphics/canonical.png": b"image bytes" * 100,
                            "Graphics/other.png": b"image bytes" * 100,
                            "Data/Scripts/000_Platform.rb": b"old platform\n",
-                           "Data/Scripts/001_Example.rb": b"old script\n",
-                           "Data/resource-download.ps1": b"old download helper\n"}
+                           "Data/Scripts/001_Example.rb": b"old script\n", "Data/resource-download.ps1": b"old download helper\n"}
+                resources = self.offline_resources(fixture)
+                logical.update({name: b"stale resource" for name in resources})
                 path = output / "payload.zip"
                 manifest = self.write(path, logical)
                 if legacy:
@@ -127,9 +184,57 @@ class PayloadPackageTest(unittest.TestCase):
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/Scripts/001_Example.rb"), b"new script\n")
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/messages_zh.dat"), b"Chinese language pack")
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/resource-download.ps1"), b"new download helper\n")
+                    for name, file in resources.items():
+                        self.assertEqual(package_game.read_payload_file(archive, refreshed, name), file.read_bytes(), name)
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Graphics/other.png"), logical["Graphics/other.png"])
                     self.assertNotIn("Graphics/other.png", archive.namelist())
                 self.assertEqual(refreshed["archiveFormat"], 2)
+
+    def test_full_payload_uses_data_from_the_same_root_as_resource_manifest(self):
+        fixture = self.base / "full-payload"
+        resources = self.offline_resources(fixture)
+        assets = fixture / "old-assets"
+        for name in build_manifest.DATA:
+            path = assets / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(b"stale data from the asset checkout")
+        (fixture / "Game.ini").write_bytes(b"game config")
+        helpers = fixture / "android/ruby"
+        helpers.mkdir(parents=True)
+        for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb",
+                     "android-network-smoke.rb", "android-font-smoke.rb"):
+            (helpers / name).write_bytes(b"helper")
+        output = fixture / "staging"
+        inventory = ("\0".join(build_manifest.DATA) + "\0").encode()
+        with mock.patch.object(package_game, "ROOT", fixture), mock.patch.object(package_game.subprocess, "check_output", return_value=inventory):
+            manifest = package_game.write_payload(output, asset_root=assets)
+        with zipfile.ZipFile(output / "payload.zip") as archive:
+            for name, file in resources.items():
+                self.assertEqual(package_game.read_payload_file(archive, manifest, name), file.read_bytes(), name)
+
+    def test_skip_payload_rejects_stale_or_missing_offline_data(self):
+        fixture = self.base / "staged-resources"
+        resources = self.offline_resources(fixture)
+        manifest = {"files": {name: {"sha256": hashlib.sha256(path.read_bytes()).hexdigest()} for name, path in resources.items()}}
+        with mock.patch.object(build_apk, "ROOT", fixture):
+            build_apk.validate_staged_scripts(manifest)
+            manifest["files"]["Data/pokedex/dex_zh.json"]["sha256"] = "0" * 64
+            with self.assertRaisesRegex(SystemExit, "dex_zh.json"):
+                build_apk.validate_staged_scripts(manifest)
+            del manifest["files"]["Data/offline-resources.json"]
+            with self.assertRaisesRegex(SystemExit, "offline-resources.json"):
+                build_apk.validate_staged_scripts(manifest)
+
+    def test_source_snapshot_detects_resource_edits_during_build(self):
+        fixture = self.base / "resource-snapshot"
+        resources = self.offline_resources(fixture)
+        with mock.patch.object(build_apk, "ROOT", fixture):
+            snapshot = build_apk.source_snapshot()
+            resources["Data/pokedex/dex_zh.json"].write_bytes(b"new reviewed translation")
+            manifest = build_manifest.seal("a" * 40, build_manifest.bundled_data(root=fixture))
+            resources["Data/offline-resources.json"].write_text(json.dumps(manifest), encoding="utf-8")
+            with self.assertRaisesRegex(SystemExit, "dex_zh.json|offline-resources.json"):
+                build_apk.assert_sources_unchanged(snapshot)
 
     def asset_staging(self):
         assets = self.base / "assets"

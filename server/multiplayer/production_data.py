@@ -12,6 +12,10 @@ from pathlib import Path
 import re
 import sqlite3
 import uuid
+try:
+    from .admin_data import validate_admin_schema
+except ImportError:
+    from admin_data import validate_admin_schema
 
 SCHEMA_VERSION = 1
 REQUIRED_TABLES = {"accounts", "identities", "account_sessions", "cloud_saves", "cloud_uploads",
@@ -128,6 +132,7 @@ def inspect_database(path, expected_id, full=False):
         tables = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
         if not REQUIRED_TABLES <= tables:
             raise RuntimeError("Production database schema is incomplete")
+        validate_admin_schema(database)
         meta = dict(database.execute("SELECT name,value FROM deployment_meta"))
         if meta.get("schema_version") != str(SCHEMA_VERSION) or meta.get("data_id") != expected_id:
             raise RuntimeError("Production database version/identity differs from configured data disk")

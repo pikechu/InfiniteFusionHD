@@ -207,7 +207,22 @@ def restore(config, snapshot_id):
             raise RuntimeError("Snapshot does not belong to this server data identity")
         staging = config.backup_dir / ("restore-" + uuid.uuid4().hex)
         private_directory(staging)
-        restic(config, "restore", snapshot_id, "--target", str(staging), cache=False)
+        if os.name == "nt":
+            # Restore logical database bytes into our private staging directory;
+            # historical Windows ACLs can belong to another machine/account.
+            nodes = [json.loads(line) for line in restic(config,"ls",snapshot_id,"--json",cache=False).splitlines()]
+            files = {node.get("path") for node in nodes if node.get("type") == "file"}
+            manifests = [path for path in files if isinstance(path,str) and path.endswith("/manifest.json")]
+            if len(manifests) != 1:
+                raise RuntimeError("Backup must contain exactly one database manifest")
+            folder = manifests[0].rsplit("/",1)[0]
+            for name in ("manifest.json","multiplayer.sqlite3"):
+                remote = folder+"/"+name
+                if remote not in files or not remote.startswith("/") or ".." in remote.split("/") or "\\" in remote or "\x00" in remote:
+                    raise RuntimeError("Invalid backup file path")
+                restic(config,"dump",snapshot_id,remote,"--target",str(staging/name),cache=False)
+        else:
+            restic(config, "restore", snapshot_id, "--target", str(staging), cache=False)
         manifests = list(staging.rglob("manifest.json"))
         if len(manifests) != 1:
             raise RuntimeError("Backup must contain exactly one database manifest")
@@ -252,6 +267,8 @@ def restore(config, snapshot_id):
             # Revoke sessions and fence stale client outboxes. Old pending
             # uploads must not silently overwrite the operator's recovery point.
             connection.execute("DELETE FROM account_sessions")
+            if connection.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='admin_sessions'").fetchone():
+                connection.execute("DELETE FROM admin_sessions")
             connection.execute("DELETE FROM cloud_leases")
             connection.execute("DELETE FROM world_presence")
             for (owner,) in connection.execute("SELECT id FROM identities").fetchall():

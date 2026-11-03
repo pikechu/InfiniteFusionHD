@@ -211,7 +211,9 @@ class Sprite_Character < RPG::Sprite
         @charbitmap = updateCharacterBitmap()
         @charbitmap = @bitmap_override.clone if @bitmap_override
 
-        RPG::Cache.retain('Graphics/Characters/', @character_name, @character_hue) if @charbitmapAnimated = true
+        # Character sheets use AnimatedBitmap even when the image is a static PNG.
+        @charbitmapAnimated = true
+        RPG::Cache.retain('Graphics/Characters/', @character_name, @character_hue)
         @bushbitmap.dispose if @bushbitmap
         @bushbitmap = nil
         #@spriteoffset = @character_name[/offset/i]

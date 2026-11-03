@@ -77,6 +77,10 @@ sudo bash "$MANAGE" activate VERSION
 
 ## 更新和代码回滚
 
+原版受控角色需要 Ruby 3.1+，以及 `json`、`zlib`、`base64`、`digest` 标准库。Linux 部署固定使用 `/usr/bin/ruby`；`prepare` 会先检查运行时，再从刚解包的发布目录实际加载原版规则和数据，校验 680 项招式与 233 项特性。它不会从开发工作区补取缺失文件。Windows 本地服务可用 `KIF_MULTIPLAYER_RUBY` 指定经过验证的 Ruby 绝对路径；缺失时原版接口返回不可用并保留已有角色状态。
+
+原版主线的地图、规则源码和可信编译数据随发布包校验；玩家存档、数据库、测试夹具和图形资源不打入服务端代码包。私有 Ruby worker 只有标准输入输出协议，没有网络监听器，不接收玩家脚本或客户端 Marshal。原版规则哈希变化时，已有角色明确冲突；未实现迁移的规则升级不能直接覆盖在线角色。
+
 ```bash
 sudo bash "$MANAGE" prepare /绝对路径/新部署包.tar.gz
 sudo bash "$MANAGE" activate 新VERSION

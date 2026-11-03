@@ -31,7 +31,7 @@
 ./scripts/android/prepare-runtime.ps1
 # 先准备 portable NDK r25c，路径见 toolchain.md：
 ./scripts/android/build_bridge.ps1
-& '<Python 3.11+ 的完整路径>' scripts/android/build_apk.py
+& '<Python 3.9+ 的完整路径>' scripts/android/build_apk.py
 ```
 
 工具脚本固定 portable JDK、SDK 平台和 build-tools，不修改全局环境。受限网络环境需要限定下载命令的授权，脚本保留调用者代理设置。无需安装 Android Studio；Java/D8/aapt2/zipalign/apksigner 直接构建 APK，无 Gradle 在线依赖解析。环境版本与实跑证据见 [工具链](toolchain.md)。
@@ -84,7 +84,9 @@ $ruby = (Resolve-Path 'temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.
 & $ruby --disable-gems android/tests/download_write_test.rb
 ```
 
-`run_host_checks.ps1` 还执行输入桥、真实自由文本流程、桌面按键配置、独立启动说明和标题丢键回归，随后编译 Ruby 脚本并执行真实本地存档 ZIP/文件事务测试。主机测试不构成设备游玩验收。网络桥的主机测试使用 mock；落盘使用临时真实文件及断写/fsync/rename 故障注入。Windows 分支保留原 HTTP 参数透传和直接写文件行为，且不安装 Bitmap hook；真实 Windows 游戏回归仍需执行。见 [测试策略](platform-test-strategy.md)。
+`run_host_checks.ps1` 还执行输入桥、真实自由文本流程、桌面按键配置、独立启动说明和标题丢键回归，以及对战立绘、离线资源、中文图鉴和安卓打包回归，随后编译 Ruby 脚本并执行真实本地存档 ZIP/文件事务测试。每轮使用独立临时目录，并在成功或失败后清理该轮产物；其他运行目录保留。默认使用仓库内的便携 Ruby、JDK 和 NDK Python，亦可通过 `-RubyPath`、`-PythonPath` 指定解释器，主机检查需 Python 3.9+。主机测试不构成设备游玩验收。网络桥的主机测试使用 mock；落盘使用临时真实文件及断写/fsync/rename 故障注入。Windows 分支保留原 HTTP 参数透传和直接写文件行为，且不安装 Bitmap hook；真实 Windows 游戏回归仍需执行。见 [测试策略](platform-test-strategy.md)。
+
+如本机策略禁止运行本地 PowerShell 脚本，可使用 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/android/run_host_checks.ps1`，仅放行这次检查进程，不修改系统或用户级执行策略。
 
 ## 当前里程碑与后续门槛
 

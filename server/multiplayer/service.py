@@ -1,7 +1,7 @@
-"""HTTP/SQLite coordination. The room host runs the real Ruby battle engine.
+"""HTTP/SQLite coordination and the separate controlled campaign producer.
 
-The service validates envelopes, ownership and phase transitions; it does not
-claim to validate Pokemon game mechanics or to provide trusted competitive play.
+Legacy room battles still run on the Ruby host and are not trusted economic
+sources. Controlled chapters execute the published server rulebook instead.
 Only bounded JSON is accepted, never pickle/Marshal/eval or executable content.
 """
 from __future__ import annotations
@@ -429,9 +429,26 @@ try:
 except ImportError:
     from online import OnlineFeatures, bind_api as bind_online_api, MAX_CLOUD_BODY
 bind_online_api(globals())
+try:
+    from .shop import ShopFeatures, bind_api as bind_shop_api
+except ImportError:
+    from shop import ShopFeatures, bind_api as bind_shop_api
+bind_shop_api(globals())
+try:
+    from .admin_backend import AdminFeatures, bind_api as bind_admin_api
+    from .admin_data import static_response, validate_admin_schema
+except ImportError:
+    from admin_backend import AdminFeatures, bind_api as bind_admin_api
+    from admin_data import static_response, validate_admin_schema
+bind_admin_api(globals())
+try:
+    from .controlled import ControlledFeatures, bind_api as bind_controlled_api
+except ImportError:
+    from controlled import ControlledFeatures, bind_api as bind_controlled_api
+bind_controlled_api(globals())
 
 
-class Store(V3Features, OnlineFeatures):
+class Store(V3Features, OnlineFeatures, ShopFeatures, ControlledFeatures, AdminFeatures):
     def __init__(self, database, clock=time.time, heartbeat_seconds=8, reconnect_seconds=60, room_ttl=86400,
                  synchronous="NORMAL", create=True, auth_concurrency=2):
         if synchronous not in ("NORMAL", "FULL"):
@@ -451,6 +468,11 @@ class Store(V3Features, OnlineFeatures):
         target = self.database if create else Path(self.database).resolve().as_uri() + "?mode=rw"
         self._db = sqlite3.connect(target, uri=not create, timeout=10, check_same_thread=False)
         self._db.row_factory = sqlite3.Row
+        try:
+            validate_admin_schema(self._db)
+        except Exception:
+            self._db.close()
+            raise
         with self.connect() as db:
             db.execute("PRAGMA synchronous=" + synchronous)
             db.executescript("""
@@ -470,6 +492,9 @@ class Store(V3Features, OnlineFeatures):
             """)
             self.init_v3(db)
             self.init_online(db)
+            self.init_shop(db)
+            self.init_controlled(db)
+            self.init_admin(db)
             # Protocol-1 waiting rooms have no engine-instance handshake. They
             # remain readable history, but cannot be reopened by a v2 client.
             for row in db.execute("SELECT document FROM rooms").fetchall():
@@ -505,6 +530,8 @@ class Store(V3Features, OnlineFeatures):
             yield self._db
 
     def close(self):
+        self.stop_admin_worker()
+        self.original_close()
         with self.lock:
             self._db.close()
 
@@ -729,8 +756,18 @@ class Store(V3Features, OnlineFeatures):
             obj(body)
             limit = MAX_CLOUD_BODY if path == "/v1/cloud/upload" else MAX_BODY
             require(len(dumps(body).encode("utf-8")) <= limit, "body_too_large", "Request exceeds maximum size", 413)
+            if path.startswith("/admin/v1/"):
+                return self.admin_request(method, path, body, token, peer)
             if method == "POST" and path in ("/v1/auth/register", "/v1/auth/login"):
                 return self.auth_request(path, body, peer)
+            if path.startswith("/v1/controlled/characters/") and path.endswith("/original/presence"):
+                return self.original_presence_request(method, path, body, token)
+            if path.startswith("/v1/controlled/characters/") and path.split("?", 1)[0].endswith("/market"):
+                return self.original_market_request(method, path, body, token)
+            if path.startswith("/v1/controlled/characters/") and path.endswith("/trades"):
+                return self.original_trade_request(method, path, body, token)
+            if path == "/v1/controlled/original-catalog" or path.startswith("/v1/controlled/characters/") and path.endswith("/original"):
+                return self.original_request(method, path, body, token, peer)
             with self.lock, self.connect() as db:
                 db.execute("BEGIN IMMEDIATE")
                 if method == "GET" and path == "/v1/health":
@@ -743,6 +780,14 @@ class Store(V3Features, OnlineFeatures):
                 identity = dict(row) if row else self.account_identity(db, token)
                 require(identity is not None, "identity_invalid", "Missing or invalid identity token", 401)
                 owner = identity["id"]
+                economic_operation = method == "POST" and any(path == prefix or path.startswith(prefix + "/")
+                    for prefix in ("/v1/shop", "/v1/market", "/v1/trades", "/v1/collections", "/v1/pool", "/v1/controlled"))
+                # Terminal acknowledgements and cancellations must still release
+                # already committed assets when new economic actions are frozen.
+                if path.rsplit("/", 1)[-1] in ("ack", "cancel", "withdraw") or path == "/v1/shop/equipment":
+                    economic_operation = False
+                self.check_player_control(db, owner, chat=path == "/v1/chat/send",
+                    trade=economic_operation)
                 if method == "POST" and path == "/v1/auth/logout":
                     obj(body)
                     db.execute("DELETE FROM account_sessions WHERE token_hash=?", (digest(token or ""),))
@@ -768,6 +813,8 @@ class Store(V3Features, OnlineFeatures):
                         require(old["fingerprint"] == fingerprint, "request_id_conflict", "Request ID was already used with a different operation", 409)
                         return old["status"], json.loads(old["response"])
                 status, response = self.dispatch(db, identity, method, path, body)
+                if status < 300 and (path in ("/v1/world/join", "/v1/world/sync") or path.startswith("/v1/controlled/characters")):
+                    self.record_player_activity(db, owner, force_peak=path == "/v1/world/join")
                 if mutation:
                     db.execute("INSERT INTO operations VALUES(?,?,?,?,?,?)", (owner, request_id, fingerprint, status, dumps(response), self.clock()))
                 return status, response
@@ -792,6 +839,7 @@ class Store(V3Features, OnlineFeatures):
         require(body["protocol"] == PROTOCOL and type(body["protocol"]) is int, "protocol_mismatch", "Protocol version is incompatible", 409)
         row = db.execute("SELECT id,nickname,friend_code FROM identities WHERE recovery_hash=?", (digest(body["recovery_code"]),)).fetchone()
         require(row is not None, "recovery_invalid", "Recovery code is invalid", 401)
+        self.check_player_control(db, row["id"])
         if "expected_identity_id" in body:
             string(body["expected_identity_id"], 1, 80, "expected_identity_id")
             require(body["expected_identity_id"] == row["id"], "identity_switch_pending", "Resolve pending operations before switching identity", 409)
@@ -802,6 +850,12 @@ class Store(V3Features, OnlineFeatures):
     def dispatch(self, db, identity, method, path, body, internal_route_id=None):
         owner = identity["id"]
         parts = path.strip("/").split("/")
+        if parts[:2] == ["v1", "controlled"]:
+            return self.controlled_request(db, identity, method, parts, body)
+        if parts[:2] == ["v1", "shop"]:
+            return self.shop_request(db, identity, method, parts, body)
+        if parts[:2] == ["v1", "market"]:
+            return self.market_request(db, identity, method, parts, body)
         online = self.dispatch_online(db, identity, method, parts, body)
         if online is not None:
             return online
@@ -1420,6 +1474,8 @@ class Store(V3Features, OnlineFeatures):
 
 class Handler(BaseHTTPRequestHandler):
     server_version = "KurayMultiplayer/1"
+    protocol_version = "HTTP/1.1"
+    timeout = 15
 
     def do_GET(self):
         self.handle_request("GET")
@@ -1430,7 +1486,17 @@ class Handler(BaseHTTPRequestHandler):
     def handle_request(self, method):
         try:
             parsed = urlsplit(self.path)
-            require(not parsed.query and not parsed.fragment, "invalid_path", "Query strings are not supported")
+            static = static_response(method, parsed.path) if not parsed.query and not parsed.fragment else None
+            if static:
+                content, headers = static
+                self.send_response(200)
+                for name, value in headers:
+                    self.send_header(name, value)
+                self.end_headers()
+                self.wfile.write(content)
+                return
+            controlled_query = method == "GET" and re.fullmatch(r"/v1/controlled/characters/cc_[a-f0-9]{32}/market", parsed.path)
+            require(not parsed.fragment and (not parsed.query or parsed.path.startswith("/admin/v1/") or controlled_query), "invalid_path", "Query strings are not supported")
             body = {}
             if method == "POST":
                 length = int(self.headers.get("Content-Length", "0"))
@@ -1445,7 +1511,8 @@ class Handler(BaseHTTPRequestHandler):
                 body = json.loads(raw.decode("utf-8"), parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
             header = self.headers.get("Authorization", "")
             token = header[7:] if header.startswith("Bearer ") else None
-            status, response = self.server.store.request(method, parsed.path, body, token, self.client_address[0])
+            path = parsed.path + ("?" + parsed.query if parsed.query else "")
+            status, response = self.server.store.request(method, path, body, token, self.client_address[0])
         except APIError as error:
             status, response = error.status, error.response()
         except (ValueError, UnicodeError, RecursionError):
@@ -1483,6 +1550,8 @@ def make_server(host, port, store):
     server = ExclusiveHTTPServer((host, port), Handler)
     server.store = store
     server.daemon_threads = True
+    if store is not None:
+        store.start_admin_worker()
     return server
 
 
@@ -1501,6 +1570,7 @@ def main():
     try:
         with database_instance_lock(args.database):
             server.store = Store(args.database)
+            server.store.start_admin_worker()
             try:
                 LOG.info("Listening on http://%s:%s protocol=%s database=%s", args.host, server.server_port, PROTOCOL, args.database)
                 server.serve_forever(poll_interval=0.25)

@@ -204,6 +204,7 @@ end
 
 
 def get_unfused_sprite_path(dex_number_id, spriteform = nil)
+  spriteform = nil if spriteform == 0
   dex_number = dex_number_id.to_s
   spriteform_letter = spriteform ? "_" + spriteform.to_s : ""
   folder = dex_number.to_s
@@ -216,18 +217,26 @@ def get_unfused_sprite_path(dex_number_id, spriteform = nil)
   random_alt = get_random_alt_letter_for_unfused(dex_number, true) #nil if no main
   random_alt = "" if !random_alt
 
-  filename = _INTL("{1}{2}{3}.png", dex_number, spriteform_letter,random_alt)
-  path = Settings::CUSTOM_BASE_SPRITES_FOLDER + filename
-
-  if pbResolveBitmap(path)
-    record_sprite_substitution(substitution_id,path)
-    return path
+  # A credits entry is not proof that its alternative is installed.
+  [random_alt.to_s, ""].uniq.each do |alt|
+    path = Settings::CUSTOM_BASE_SPRITES_FOLDER + "#{dex_number}#{spriteform_letter}#{alt}.png"
+    path = pbResolveBitmap(path) || (!spriteform && KIF::SpriteSheets.resolve(:base, dex_number_id.to_i, nil, alt, false))
+    if path
+      record_sprite_substitution(substitution_id, path)
+      return path
+    end
   end
-  if !spriteform || spriteform == 0
-    sheet_path = KIF::SpriteSheets.resolve(:base, dex_number_id.to_i, nil, random_alt.to_s)
-    if sheet_path
-      record_sprite_substitution(substitution_id, sheet_path)
-      return sheet_path
+  fallback_filename = _INTL("{1}{2}.png", dex_number, spriteform_letter)
+  fallback_path = Settings::BATTLERS_FOLDER + folder + spriteform_letter + "/" + fallback_filename
+  return fallback_path if pbResolveBitmap(fallback_path)
+
+  if !spriteform
+    [random_alt.to_s, ""].uniq.each do |alt|
+      sheet_path = KIF::SpriteSheets.resolve(:base, dex_number_id.to_i, nil, alt)
+      if sheet_path
+        record_sprite_substitution(substitution_id, sheet_path)
+        return sheet_path
+      end
     end
   end
   downloaded_path = download_unfused_main_sprite(dex_number, random_alt)
@@ -235,8 +244,7 @@ def get_unfused_sprite_path(dex_number_id, spriteform = nil)
     record_sprite_substitution(substitution_id,downloaded_path)
     return downloaded_path
   end
-  fallback_filename = _INTL("{1}{2}.png", dex_number, spriteform_letter)
-  return Settings::BATTLERS_FOLDER + folder + spriteform_letter + "/" + fallback_filename
+  return Settings::DEFAULT_SPRITE_PATH
 end
 
 def alt_sprites_substitutions_available
@@ -277,6 +285,8 @@ end
 
 #todo: refactor into smaller methods
 def get_fusion_sprite_path(head_id, body_id, spriteform_body = nil, spriteform_head = nil)
+  spriteform_body = nil if spriteform_body == 0
+  spriteform_head = nil if spriteform_head == 0
   $PokemonGlobal.autogen_sprites_cache = {} if $PokemonGlobal && !$PokemonGlobal.autogen_sprites_cache
   #Todo: ça va chier si on fusionne une forme d'un pokemon avec une autre forme, mais pas un problème pour tout de suite
   form_suffix = ""
@@ -318,20 +328,16 @@ def get_fusion_sprite_path(head_id, body_id, spriteform_body = nil, spriteform_h
     return local_custom_path
   end
   if (!spriteform_body || spriteform_body == 0) && (!spriteform_head || spriteform_head == 0)
-    sheet_path = KIF::SpriteSheets.resolve(:custom, head_id.to_i, body_id.to_i, random_alt.to_s)
+    sheet_path = KIF::SpriteSheets.resolve(:custom, head_id.to_i, body_id.to_i, random_alt.to_s, false)
     if sheet_path
       record_sprite_substitution(substitution_id, sheet_path) if !forcingSprite
       return sheet_path
     end
   end
   #if the game has loaded an autogen earlier, no point in trying to redownload, so load that instead
-  return $PokemonGlobal.autogen_sprites_cache[substitution_id] if  $PokemonGlobal && $PokemonGlobal.autogen_sprites_cache[substitution_id]
-
-  #Try to download custom sprite if none found locally
-  downloaded_custom = download_custom_sprite(head_id, body_id, spriteform_body_letter, spriteform_head_letter, random_alt)
-  if downloaded_custom
-    record_sprite_substitution(substitution_id, downloaded_custom) if !forcingSprite
-    return downloaded_custom
+  if $PokemonGlobal && (cached = $PokemonGlobal.autogen_sprites_cache[substitution_id])
+    return cached if pbResolveBitmap(cached)
+    $PokemonGlobal.autogen_sprites_cache.delete(substitution_id)
   end
 
   #Try local generated sprite
@@ -342,11 +348,29 @@ def get_fusion_sprite_path(head_id, body_id, spriteform_body = nil, spriteform_h
   end
 
   if (!spriteform_body || spriteform_body == 0) && (!spriteform_head || spriteform_head == 0)
+    sheet_path = KIF::SpriteSheets.resolve(:autogen, head_id.to_i, body_id.to_i, "", false)
+    if sheet_path
+      add_to_autogen_cache(substitution_id, sheet_path)
+      return sheet_path
+    end
+  end
+  # Exhaust local assets before starting any network request on the battle path.
+  if (!spriteform_body || spriteform_body == 0) && (!spriteform_head || spriteform_head == 0)
+    sheet_path = KIF::SpriteSheets.resolve(:custom, head_id.to_i, body_id.to_i, random_alt.to_s)
+    if sheet_path
+      record_sprite_substitution(substitution_id, sheet_path) if !forcingSprite
+      return sheet_path
+    end
     sheet_path = KIF::SpriteSheets.resolve(:autogen, head_id.to_i, body_id.to_i)
     if sheet_path
       add_to_autogen_cache(substitution_id, sheet_path)
       return sheet_path
     end
+  end
+  downloaded_custom = download_custom_sprite(head_id, body_id, spriteform_body_letter, spriteform_head_letter, random_alt)
+  if downloaded_custom
+    record_sprite_substitution(substitution_id, downloaded_custom) if !forcingSprite
+    return downloaded_custom
   end
   #Download generated sprite if nothing else found
   autogen_path = download_autogen_sprite(head_id, body_id,spriteform_body,spriteform_head)
@@ -475,18 +499,10 @@ def map_alt_sprite_letters_for_pokemon(spriteName)
   File.foreach(Settings::CREDITS_FILE_PATH) do |line|
     row = line.split(',')
     sprite_name = row[0]
-    if sprite_name.start_with?(spriteName)
-      if sprite_name.length > spriteName.length #alt letter
-        letter = sprite_name[spriteName.length]
-        if letter.match?(/[a-zA-Z]/)
-          main_or_alt = row[2] ? row[2] : nil
-          alt_sprites[letter] = main_or_alt
-        end
-      else  #letterless
-      main_or_alt = row[2] ? row[2] : nil
-      alt_sprites[""] = main_or_alt
-      end
-    end
+    next unless sprite_name && sprite_name.start_with?(spriteName)
+    letter = sprite_name[spriteName.length..-1]
+    next unless letter.match?(/\A[a-z]*\z/i)
+    alt_sprites[letter] = row[2]&.strip
   end
   return alt_sprites
 end

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>InfiniteFusionHD 运营后台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23087e83'/%3E%3Ctext x='5' y='23' font-size='20' fill='white'%3EIF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/admin/style.css">
+  <script src="/admin/app.js" defer></script>
+</head>
+<body>
+  <section id="login-panel" class="login-panel">
+    <div class="brand-mark">IF</div><p class="eyebrow">InfiniteFusionHD</p>
+    <h1>运营管理后台</h1><p class="muted">玩家、在线世界与游戏经济</p>
+    <form id="login-form" class="login-card">
+      <label>管理员账号<input id="username" name="username" autocomplete="username" required maxlength="32"></label>
+      <label>密码<input id="password" name="password" type="password" autocomplete="current-password" required maxlength="128"></label>
+      <label>动态验证码<input id="otp" name="otp" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" required maxlength="6" placeholder="身份验证器中的 6 位数字"></label>
+      <button class="primary" type="submit">登录后台</button>
+      <p class="muted small">管理员账号由服务器本地工具创建，与游戏账号分开。</p>
+    </form>
+  </section>
+  <div id="workspace" class="workspace" hidden>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark small-mark">IF</span><div>Infinite<wbr>FusionHD<small>运营管理后台</small></div></div>
+      <nav aria-label="主导航">
+        <button data-page="overview" class="nav-button active">全服总览</button>
+        <button data-page="players" class="nav-button">玩家管理</button>
+        <button data-page="economy" class="nav-button">经济与账本</button>
+        <button data-page="prices" class="nav-button">市场价格分析</button>
+        <button data-page="transactions" class="nav-button">商城与交易记录</button>
+        <button data-page="commerce" class="nav-button">商城与市场运营</button>
+        <button data-page="controlled" class="nav-button">受控库存复核</button>
+        <button data-page="batches" class="nav-button">批量活动发放</button>
+        <button data-page="retention" class="nav-button">活跃与留存</button>
+        <button data-page="alerts" class="nav-button">风险调查</button>
+        <button data-page="exports" class="nav-button">报表导出</button>
+        <button data-page="audit" class="nav-button">操作审计</button>
+      </nav>
+      <div class="sidebar-bottom"><span id="administrator"></span><button id="logout">退出登录</button></div>
+    </aside>
+    <main>
+      <header><div><p class="eyebrow">InfiniteFusionHD · SERVER OPERATIONS</p><h1 id="page-title">全服总览</h1></div><button id="refresh">刷新数据</button></header>
+      <div id="content" aria-live="polite"></div>
+    </main>
+  </div>
+  <div id="message" role="status" hidden></div>
+  <dialog id="confirmation"><h2>确认管理操作</h2><div id="command-preview"></div><p class="muted">执行后会记录操作者、原因、变更前后状态和指令编号。</p><div class="actions"><button id="cancel-command">取消</button><button id="execute-command" class="danger">确认执行</button></div></dialog>
+</body>
+</html>
