@@ -50,6 +50,9 @@ async function main() {
   assert.equal(progress.status, 'completed');
   assert.equal(progress.next_batch, null);
   assert.equal(progress.completed_files, 5065);
+  const p5 = read('p5-progress.json');
+  assert.equal(p5.completed_files, 48);
+  assert.equal(p5.next_batch, 'batch-818');
   const base = git(['rev-parse', `refs/heads/${branch}`]);
   const sharedBranch = git(['branch', '--show-current']);
   assert.notEqual(sharedBranch, branch, 'Use the normal checkout workflow when already on the feature branch.');
@@ -57,7 +60,7 @@ async function main() {
   const initialIndex = hash(fs.readFileSync(indexPath));
   const initialHead = git(['rev-parse', 'HEAD']);
   const applied = [];
-  for (let number = 1; number <= 816; number++) {
+  for (let number = 1; number <= 817; number++) {
     const name = `batch-${String(number).padStart(3, '0')}/manifest.json`;
     if (fs.existsSync(path.join(out, name))) applied.push(...read(name).entries);
   }
@@ -77,7 +80,7 @@ async function main() {
     included_roots: ['output/texture-hd', 'scripts/graphics/texture_batch.py', 'manifest-verified applied images'],
     excluded: 'Concurrent source, localization, Android, build and multiplayer edits; raw logs, bytecode and self-referencing commit receipt.',
     preserved_catalog_deltas: 'output/texture-hd/batch-060/catalog-changes.json',
-    checkpoint: { p3: 'completed through batch-540', p4: progress }, paths
+    checkpoint: { p3: 'completed through batch-540', p4: progress, p5 }, paths
   });
   fs.writeFileSync(path.join(out, 'commit-paths.txt'), paths.join('\n') + '\n');
   const parent = tree(base);
@@ -102,7 +105,7 @@ async function main() {
     const known = new Set(parent.values());
     const author = git(['var', 'GIT_AUTHOR_IDENT']);
     const committer = git(['var', 'GIT_COMMITTER_IDENT']);
-    const message = Buffer.from('feat(graphics): complete P4 texture review and native validation\n\nP4 batches 541-816: 5065/5065 preserved with unchanged dimensions, alpha, frame data and source delays.\nSave native icon/window/effect/weather/ball evidence, 191 verified GIF frames, 5074 ordered animation units and explicit inherited compatibility findings.\nP5 remains pending at batch 817. Scope excludes concurrent source, localization, build and multiplayer edits.\n');
+    const message = Buffer.from('feat(graphics): audit and preserve P5 texture batch 817\n\nReview 48 archive/test images; preserve exact source bytes, dimensions and alpha. Save 35 decoded-pixel duplicate relationships, source/data reference audits, 41 native backdrop compositions and four complete Heat Wave animation cases.\nDistinguish declared fly-copy atlas references from actual visible cel use. Next batch is 818; 1802 P5 files remain.\nScope excludes concurrent source, localization, build and multiplayer edits.\n');
     child = cp.spawn(gitExe, ['-c', 'core.multiPackIndex=false', 'fast-import', '--quiet', '--done', '--export-marks=' + path.join(temporary, 'marks')], {
       cwd: root, windowsHide: true, stdio: ['pipe', 'ignore', 'pipe'], env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
     });
@@ -153,7 +156,8 @@ async function main() {
       status: 'committed', branch, commit, base, changed_paths: actual.length, runtime_images: applied.length,
       files_byte_verified: paths.length, shared_worktree_branch_before: sharedBranch,
       shared_worktree_branch_after: sharedBranch, shared_index_unchanged: true, shared_index_used: false,
-      pushed: false, p4_completed_through: 'batch-816', p4_next_batch: null, next_global_batch: 'batch-817',
+      pushed: false, p4_completed_through: 'batch-816', p4_next_batch: null,
+      p5_completed_through: 'batch-817', p5_next_batch: 'batch-818', next_global_batch: 'batch-818',
       method: 'Git packed import with manifest validation, exact committed-byte verification and shared HEAD/index checks'
     };
     write('commit-receipt.json', receipt);

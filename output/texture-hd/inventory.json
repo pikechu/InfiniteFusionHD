@@ -1,7 +1,7 @@
 {
   "total": 18665,
   "applied": 268,
-  "pending": 1850,
+  "pending": 1802,
   "by_kind": {
     "animation_or_sprite": 13648,
     "background": 664,
@@ -48,11 +48,13 @@
       "path": "Graphics/Battlebacks/unused_message.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         96
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "旧消息条渐变素材；当前普通背景解析和已审查数据未选择该文件。保留原渐变、透明度与尺寸，不以 unused 文件名单独判断用途，也不修改现用消息条。"
     },
     {
       "path": "Graphics/Windowskins/Windowskin.PNG",
@@ -19804,101 +19806,121 @@
       "path": "Graphics/Battlebacks/battlebg/backup/Forest_night.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Forest_eve.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Forest.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/FlyingGym.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Field_night.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Field_eve.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Field.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Erika.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/EliteD.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/EliteC.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Transitions/SunMoon/Elite/vacuum.png",
@@ -20060,311 +20082,373 @@
       "path": "Graphics/Battlebacks/battlebg/backup/EliteB.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/EliteA.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Deserty.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/DarkGym.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/DarkGym - Copy.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Cyber.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Cosmic.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/City_night.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/City_eve.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/City.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Chuck.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Champion.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/CaveIce.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/CaveDark.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Cave1.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Cave.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Brock.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Bridge_night.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Bridge_eve.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Bridge.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Blaine.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/beach_night.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/beach_eve.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/Beach.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。与现有文件或已归档历史原图逐像素一致，匹配路径与哈希另列；不据此替换已经高清化的现用版本。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgEliteD.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgEliteC.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgEliteB.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgEliteA.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgChampion.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgCave3.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Battlebacks/battlebg/backup/battlebgCave2.png",
       "category": "Battlebacks",
       "kind": "background",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         512,
         288
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "战斗背景历史备份，保留原画及原有渐变/纹理以供恢复和比较。审查范围内未发现 backup 路径选择；显式覆盖通过真实背景合成器显示，不等同于普通地图选用。"
     },
     {
       "path": "Graphics/Transitions/SunMoon/Digital/shine.png",
@@ -29482,11 +29566,13 @@
       "path": "Graphics/Animations/fly copy.png",
       "category": "Animations",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         960,
         960
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "两条热风动画在图集字段声明了此来源；四组正向/反向原生播放均完整结束，但未使用非负图格索引（cell_checks=0），未证实这张图集有可见格位被使用。保留原图格、色块和透明度，不将声明引用当作实际可见使用或强行重绘。"
     },
     {
       "path": "Graphics/Animations/Flames.png",
@@ -42824,11 +42910,13 @@
       "path": "Graphics/Autotiles/ocean-SHORE - Copie.png",
       "category": "Autotiles",
       "kind": "tiles",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         3072,
         128
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "备用海岸自动图块与现有/历史来源逐像素相同；现用 Tilesets 声明未引用该 Copie 名称。保留完整原始横向帧表，避免改写备份或虚构现用拼接验收。"
     },
     {
       "path": "Graphics/Animations/PRAS- Sand Attack.png",
@@ -59818,11 +59906,13 @@
       "path": "Graphics/paya_test.png",
       "category": "paya_test.png",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         96,
         96
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "手写 Hello、爱心和猫头测试图，审查范围内未发现现用引用。保留原作者标记、文字和像素内容。"
     },
     {
       "path": "Graphics/Pictures/ball02_open.png",
@@ -62972,11 +63062,13 @@
       "path": "Graphics/Animations/PRAS- Surf FG Opp - Copie.png",
       "category": "Animations",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         1280,
         1152
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "备用浪潮前景图，未在现用动画图集/时序声明或代码数据中发现此 Copie 名称；画面与相似命名图并不逐像素相同。保留独立版本、分片和透明边缘，不按文件名去重或替换。"
     },
     {
       "path": "Graphics/Animations/PRAS- Supersonic.png",
@@ -218038,11 +218130,13 @@
       "path": "Graphics/BaseSprites/96x96 sprites + assets/test by Supercalifragilistic#8703.png",
       "category": "BaseSprites",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         167,
         114
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "具名测试/源素材集合，含独立精灵或六格 Eevee 姿态；审查范围内未找到该完整路径或具名来源的现用选择。保留试验内容及原始布局，不赋予未确认的物种/动作绑定。"
     },
     {
       "path": "Graphics/BaseSprites/96x96 sprites + assets/TinyFlyingMurkrow by .realthree.png",
@@ -218068,11 +218162,13 @@
       "path": "Graphics/BaseSprites/96x96 sprites + assets/test by rosemagwin.png",
       "category": "BaseSprites",
       "kind": "animation_or_sprite",
-      "status": "pending",
+      "status": "preserved",
       "size": [
         57,
         78
-      ]
+      ],
+      "batch": "batch-817",
+      "reason": "具名测试/源素材集合，含独立精灵或六格 Eevee 姿态；审查范围内未找到该完整路径或具名来源的现用选择。保留试验内容及原始布局，不赋予未确认的物种/动作绑定。"
     },
     {
       "path": "Graphics/BaseSprites/96x96 sprites + assets/trchar000 by luxio.png",
@@ -219757,5 +219853,5 @@
       "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。"
     }
   ],
-  "preserved": 16547
+  "preserved": 16595
 }
