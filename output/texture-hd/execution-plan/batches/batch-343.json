@@ -4,7 +4,7 @@
   "priority": "P3",
   "stage": "outfit",
   "title": "衣服、头发、帽子与其他玩家分层素材（31/66）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "wearable",
   "processing_notes": "同一套衣服、头发或帽子的全部动作作为一组；用原主角身体叠穿验收，保护 80×80 等实际分格及偏移。",
@@ -265,5 +265,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "同套动作图逐帧叠穿，核对头发/帽子/衣服/身体遮挡和偏移；商城图同步核对校验清单。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-343/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
 }

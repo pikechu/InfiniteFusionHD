@@ -1,0 +1,898 @@
+{
+  "batch": "batch-162",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4281,
+      "source_mtime_ns": 1792048521395265400,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_dive_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8824d25909f533ea6338ad21c50224fd7a921443fe1c23eda0859bd0e0eb10fe",
+      "git_blob": "35d8392ee70b904ce4a7f0050611fb790d650142",
+      "reference_blob": "35d8392ee70b904ce4a7f0050611fb790d650142",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "015e33d17b8a3cb05d02b65bed800e947a97cac772aec162bb08d44bb1880817",
+      "alpha_sha256": "d44ff7c4e3cb4b648b815fab535b990cc22acbaa9aebee3694158ecc25aad12a",
+      "bounds": [
+        6,
+        5,
+        250,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 13887,
+      "source_mtime_ns": 1792048521405918500,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_fish_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "afeac221fbbf302375cddc9f0cc64710c02dcd503bb0a2a9ef2977fe4bdafa85",
+      "git_blob": "4e194412d67c54c1702fcb66a647e1887d812537",
+      "reference_blob": "4e194412d67c54c1702fcb66a647e1887d812537",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4e814c522b3280b129bffc3166955ac0fecef9cb166f0c39c1885d80ecc96489",
+      "alpha_sha256": "46e220aa42913078b8bafeb7932d831472ec33e4578798a90645d1d09d095b5b",
+      "bounds": [
+        4,
+        0,
+        382,
+        310
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 14738,
+      "source_mtime_ns": 1792048521406926300,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_run.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "61bba770ceed4c0e1d06d69f8b1af7ecab4438e5f12ee78dce4d39108e49aafc",
+      "git_blob": "756c198c8c812951e60fbdff60401cbfc6d7d186",
+      "reference_blob": "756c198c8c812951e60fbdff60401cbfc6d7d186",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "da981657e37ee4a775820df6e3ce6b1c2d5aa625ea6066a97246b87cc7fbdf71",
+      "alpha_sha256": "e85960fbe975be2e837e09f6a114c7b279baecda8318e8132e099f874cde96e1",
+      "bounds": [
+        6,
+        4,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4337,
+      "source_mtime_ns": 1792048521406926300,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_surf_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "730b5f4c82fb77c68544d6a22471adfe9d513aa6fe13d27fd033d87ee74757c3",
+      "git_blob": "691aef07b54633b25c83055a7ddc0b34a752ac4a",
+      "reference_blob": "691aef07b54633b25c83055a7ddc0b34a752ac4a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "8311daffff50138b7ae08326c3523241d10f2be1eab2f9fa4795bd15f5b5538f",
+      "alpha_sha256": "e6a94db15b2f5a4962f362c2a1d1de3ebb856d0e46157632c9f7bddcad2ebd26",
+      "bounds": [
+        6,
+        5,
+        250,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trainer001.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 2715,
+      "source_mtime_ns": 1792048521407923700,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trainer001.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "222ce04fa46f4ebdc2ee2879f150cc73a8c0399b32f7267537275a0214fd1df9",
+      "git_blob": "18de10bc89f27da45f35ebac4566efcc23f0c006",
+      "reference_blob": "18de10bc89f27da45f35ebac4566efcc23f0c006",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "140d0e20e4c37d4d248674949cc38ccd4e697c1c0352bb0f39afb60637a14974",
+      "alpha_sha256": "804d461a237e30adc81a07e34a7022c92329d15d72ea7ae86f30d7d11617f1aa",
+      "bounds": [
+        30,
+        17,
+        120,
+        157
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4291,
+      "source_mtime_ns": 1792048521407923700,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/trchar001.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4f8c9da3a768f4e4d4da816b36afc627428547eae9f9124b9255b5db7a28f40b",
+      "git_blob": "72a117a48b8d30eb114ed4c9b3f0393322be3297",
+      "reference_blob": "72a117a48b8d30eb114ed4c9b3f0393322be3297",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2c77fe2c6b9a7a3d3ff13d2415a59ab33de198ad3976657f803093210c682296",
+      "alpha_sha256": "abcadbb5405e233a4fb0c9cb211a99498cb7881c524d60b08dc8de933f495e1c",
+      "bounds": [
+        6,
+        4,
+        251,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Pictures/introGirl.png",
+      "size": [
+        90,
+        160
+      ],
+      "source_bytes": 2628,
+      "source_mtime_ns": 1792048521407923700,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Pictures/introGirl.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "67c5552b741b78ff1af3b142965a33127a4673bd8447294a5477e25b441c6c15",
+      "git_blob": "c4a27e434a2571e04ead0ef33a4d564db29744d2",
+      "reference_blob": "c4a27e434a2571e04ead0ef33a4d564db29744d2",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        90,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "1772b0c82af0791fdf3b32a983af2c4c995113760f17c9eba3cec2862aacc8f5",
+      "alpha_sha256": "33d936aba6236fc03e753abf297d7318a78062b9123196195095db8f8e5d52f7",
+      "bounds": [
+        0,
+        18,
+        90,
+        158
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Transitions/vsTrainer1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3732,
+      "source_mtime_ns": 1792048521408926200,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Transitions/vsTrainer1.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b468a669b7843b34e49143823f86dd6f88bb7f21407e2daf0865e774a304f53b",
+      "git_blob": "55f393d0c48ae06c049a1a987300362764515423",
+      "reference_blob": "55f393d0c48ae06c049a1a987300362764515423",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6b1e2e1d6cf42818fdef2168c197829a42c9e24f3fd91ac471f7c84da36636ad",
+      "alpha_sha256": "40d6e725df1d9ba9b37b146c659211f4f1605e72efc50073fc880b747ba6e031",
+      "bounds": [
+        27,
+        1,
+        233,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8850,
+      "source_mtime_ns": 1792048521422856800,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_bike.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8c3c2604310e23028fdbe5edca812278191e83fa941317a7f611d0cd0f15ce2a",
+      "git_blob": "6d7435fc90f1507759f4a5dd675be14b36a03b33",
+      "reference_blob": "6d7435fc90f1507759f4a5dd675be14b36a03b33",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "912749c79c01583699d57a74027c24a5d12e77d90c654657ac8bbe377b8d1ec6",
+      "alpha_sha256": "99bdb01c2d36529967593bde20364ab4d12e56a3024a9b78081e7a6e476220b1",
+      "bounds": [
+        10,
+        0,
+        246,
+        253
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6734,
+      "source_mtime_ns": 1792048521427994000,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_dive_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a936c0d04afbb571429416a0a46faa1c1ecaf5a144eb05392c7b43400d395560",
+      "git_blob": "36162626987fdf39e27735d05ba8a89c285d5534",
+      "reference_blob": "36162626987fdf39e27735d05ba8a89c285d5534",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "1426799303e7a0276e73e7b7d2d3cb2a59749c4ff4152b6ebb652fd8a91e21bc",
+      "alpha_sha256": "259f5b2a24283a8d07baee863f77a92ba093065e6d5930a1f9743dda6b9c0671",
+      "bounds": [
+        12,
+        8,
+        244,
+        251
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 11110,
+      "source_mtime_ns": 1792048521428996200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fish_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "29054fa10e0930601cd5d14cc55d7a62f3e232cc90b8b895741b8f96ab8e8721",
+      "git_blob": "8893b88ece8252e04a57b0b2d356ec49f1ebcb26",
+      "reference_blob": "8893b88ece8252e04a57b0b2d356ec49f1ebcb26",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "74db5738555ea94905adde9307d2ad4fe2d6f24dafdab429c6a3cfa8352a800e",
+      "alpha_sha256": "c4661080af9c00d743905f6418dde77dc6459460ca6d0b09a2bf23f58a52af54",
+      "bounds": [
+        4,
+        0,
+        368,
+        309
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fishsurf_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 10464,
+      "source_mtime_ns": 1792048521428996200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_fishsurf_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "c3a93ed36652602b395444d382a8f09dc264e19fc39aa14d4f5b35a61e242274",
+      "git_blob": "2e6a2308407b2d2c17c7dfcc0fa781f7ee1a5f56",
+      "reference_blob": "2e6a2308407b2d2c17c7dfcc0fa781f7ee1a5f56",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "63d60f3efb7bb092e848d09ebc59b71edc99d83efbc972e5161086316d8373b9",
+      "alpha_sha256": "27b7ff0af73400eab2abb84d936952384d9e4f51f4ca60b071033d9332a4686f",
+      "bounds": [
+        4,
+        16,
+        368,
+        307
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8632,
+      "source_mtime_ns": 1792048521428996200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_run.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "fc21cfae8f17592c8c0b48da0e80bca943dc0238ede16f11ba3a2eded494a638",
+      "git_blob": "acbec646dd2992bc6c736c95ae4f9a3a59666924",
+      "reference_blob": "acbec646dd2992bc6c736c95ae4f9a3a59666924",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "409dcee3e7f0a3e66549a7114ff4da83fde39000c537404d007eace0668ac51f",
+      "alpha_sha256": "25f4cbfb40339caaf5e9ec6430af0bdcaa40a421b3619174cbf471ad21f74380",
+      "bounds": [
+        12,
+        3,
+        244,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7203,
+      "source_mtime_ns": 1792048521429995200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/girl_surf_offset.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8f585d97918a5c0eae304a22f86456219234c48e27906324e3c3354b0f1147e6",
+      "git_blob": "2e39c84d929bae863600fa104fa8d89bcafb7dd9",
+      "reference_blob": "2e39c84d929bae863600fa104fa8d89bcafb7dd9",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6318494c0ac64ce16fd9fd7c173d99d995eba1c86aec6e66f05c0a841eeb61f3",
+      "alpha_sha256": "5a48f512367ca74a6421454f18d9568d74fee3fcd72bf12e4a3b91307b4c534d",
+      "bounds": [
+        10,
+        10,
+        246,
+        247
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/POKEMONTRAINER_Leaf_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 10843,
+      "source_mtime_ns": 1792048521422337700,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/POKEMONTRAINER_Leaf_back.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "0ce839d7ea6144236dbf5d48ec0c6463591a7f848def1b08fec955e135830682",
+      "git_blob": "46451bae8b7dd7ea7c1346ac59999298922a0652",
+      "reference_blob": "46451bae8b7dd7ea7c1346ac59999298922a0652",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "trainer_throw",
+      "grid": [
+        5,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ac56c3b2c80a58aa91f8d778430b17eb17db19fb3caf4d87a8f50937899ae90d",
+      "alpha_sha256": "24ced530b64d80081ce1601b4d566481aff09a8c3fb045f780e185e85b1d012e",
+      "bounds": [
+        20,
+        52,
+        782,
+        160
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "旧版五格背面条图的姿态/服饰清楚，实际 PictureEx 投掷及回到首格已检查；增加纹理无明确收益，保留原帧序和所有像素。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7758,
+      "source_mtime_ns": 1792048521429995200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "e039416582fce50cee6ceba72d3f6a58344bfff9e2604fa932ba9b025ee9dc39",
+      "git_blob": "defc300d184a68104b328e852103018501e9988f",
+      "reference_blob": "defc300d184a68104b328e852103018501e9988f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4946c6282efe24259323ecc8e4b45b30d9b4c1b369f4715f6520cc4ae1ec2213",
+      "alpha_sha256": "19c0da5a70c475d946c465f1ded9f0d2f0509c0946bdf6ca2736d6f46dc13b5b",
+      "bounds": [
+        12,
+        4,
+        244,
+        251
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5209,
+      "source_mtime_ns": 1792048521429995200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Characters/trchar001_10.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a08bf97e406c692392b9242a1a2d51000657a912ed9ef5a84acd52dfa26960fb",
+      "git_blob": "d928e06ac6deb1070c655baae80ea342ca9e5eb8",
+      "reference_blob": "d928e06ac6deb1070c655baae80ea342ca9e5eb8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "9e4a2ef681c0f1486a6d69dfd421b101f10e52d4eef31254972bde7011332fdb",
+      "alpha_sha256": "1217c0f5c50c8d783d385519ce2047bdb581b56a556de9a035387fcd91537a19",
+      "bounds": [
+        0,
+        5,
+        241,
+        124
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/thornsoflight/Transitions/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3982,
+      "source_mtime_ns": 1792048521430994200,
+      "canonical_source": "Graphics/Alternate Trainers/thornsoflight/Transitions/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "f908f7ce0d400de0ad1a1630dc16936af2582c3c6ebad39b71b9ec1a8f351cf3",
+      "git_blob": "42d6ac987e4cf3ad2759c4a79f723f39e7fef840",
+      "reference_blob": "42d6ac987e4cf3ad2759c4a79f723f39e7fef840",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4693ea0c5e29b1236fd8a786b703566e956a561014f64bce8c7e51603cd49f88",
+      "alpha_sha256": "4dcfcab4960a05b057b2c64deddc3acfb2867e0978d68872b12804b230900a44",
+      "bounds": [
+        0,
+        2,
+        166,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3155,
+      "source_mtime_ns": 1792048521430994200,
+      "canonical_source": "Graphics/Alternate Trainers/trchar001.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "e81e7ef757a0122257b3c05c33216d952b8068593aa74fe5648f79f0fdddfeb1",
+      "git_blob": "d1dadffce016813a0ffec6d5fe6adf23f5b817b7",
+      "reference_blob": "d1dadffce016813a0ffec6d5fe6adf23f5b817b7",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6e57b756aadcbf61a225bce113d2d3ef187b4d9eb5eeebb6216b2576edac978e",
+      "alpha_sha256": "a1ff4e5eee82c48539939b8c02dada78ed2715e3131aa9595213f45c5e54ab4e",
+      "bounds": [
+        10,
+        30,
+        244,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/trchar001a.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3053,
+      "source_mtime_ns": 1792048521430994200,
+      "canonical_source": "Graphics/Alternate Trainers/trchar001a.png",
+      "batch": "batch-162",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "573f3e6e820d385c241fa59eaba626b9ff9af563716ccf2e9433a84826d3bdfe",
+      "git_blob": "2c3c52ff0430cd976df3f3f884cf2ca7fc0a9c08",
+      "reference_blob": "2c3c52ff0430cd976df3f3f884cf2ca7fc0a9c08",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a94b15bf569a1e8202b304872c75d3059dce6e74060b3d127c37e24d7ae9f78b",
+      "alpha_sha256": "6d99b1dd8b6736c415ad03d559aefc8c338ea29992f140d5e244202bed2c4be2",
+      "bounds": [
+        11,
+        14,
+        244,
+        244
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-162-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Current source and delivery equal the source snapshot. Frame/state/tint outputs therefore remain unchanged for identical engine inputs. This is a preservation decision, not an AI redraw claim."
+}

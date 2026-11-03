@@ -1,0 +1,898 @@
+{
+  "batch": "batch-191",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/235_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1071,
+      "source_mtime_ns": 1792048530559652500,
+      "canonical_source": "Graphics/Characters/235_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "5cba466d25e76e868f31eeacad07f0d5c162ec64a4afb955d298f5f6ca865b7e",
+      "git_blob": "5b71e3d6784243c15be15c937efa8aa441554949",
+      "reference_blob": "5b71e3d6784243c15be15c937efa8aa441554949",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "665bdc2b12e5fb52248501606ab8d5cad0860ddd5edd14284dc7ebe343b9e791",
+      "alpha_sha256": "fd7a414c4cda35a55beb7efcd7fb88d2cd533acf9c048c2de544cf819dfa2b95",
+      "bounds": [
+        10,
+        22,
+        248,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/235s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1070,
+      "source_mtime_ns": 1792048530559652500,
+      "canonical_source": "Graphics/Characters/235s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "d2618610acc2f211bee4387b846a910dd7041d8835b78a34ebbe4774bd319616",
+      "git_blob": "ba80831f57c94ca13e1b086c01686a1ee49c0693",
+      "reference_blob": "ba80831f57c94ca13e1b086c01686a1ee49c0693",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f43c552efc3e4de73d00f74ce992ceec0fffe2a938bdb648829caacbb39bc67d",
+      "alpha_sha256": "fd7a414c4cda35a55beb7efcd7fb88d2cd533acf9c048c2de544cf819dfa2b95",
+      "bounds": [
+        10,
+        22,
+        248,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/236_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 861,
+      "source_mtime_ns": 1792048530559652500,
+      "canonical_source": "Graphics/Characters/236_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a4b901023c597aba5e32d603f2c918cf45858b6ce5ca4f40f5f5fd12ac3e86cf",
+      "git_blob": "c8e50d120ed55b520668ab1b35fbf5cf1ec0037b",
+      "reference_blob": "c8e50d120ed55b520668ab1b35fbf5cf1ec0037b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e51eb078113793e246346e73d988c4e5138b62ce04339beb876b93598a579f12",
+      "alpha_sha256": "8f6dd8b89b921a73e182279ee2fb6990d481959aab420f397373e0b8f36d6896",
+      "bounds": [
+        18,
+        24,
+        238,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/236s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 855,
+      "source_mtime_ns": 1792048530560646500,
+      "canonical_source": "Graphics/Characters/236s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "95915f88cfb243aea732ee413e116a698f1d5ba3d3c62f8b4743ee741960090a",
+      "git_blob": "49cc69ebd321250738620a737a188be7caf5bd51",
+      "reference_blob": "49cc69ebd321250738620a737a188be7caf5bd51",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7e32d8ec0df2665346a971ebdf5290de1edc94cb2cde2fad6dd4053dbea6e194",
+      "alpha_sha256": "8f6dd8b89b921a73e182279ee2fb6990d481959aab420f397373e0b8f36d6896",
+      "bounds": [
+        18,
+        24,
+        238,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/237_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1023,
+      "source_mtime_ns": 1792048530560646500,
+      "canonical_source": "Graphics/Characters/237_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "6a49028f69de8864471db97fb83220c4e7023b914ecd040c4237a75e02e0b62e",
+      "git_blob": "1eb7bafb4f73bee687bcb43d532827cb1916c870",
+      "reference_blob": "1eb7bafb4f73bee687bcb43d532827cb1916c870",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "07a4783c4bfdc147228d5af94547517ab7cf02dd50ddb9cab42dda959888f6b2",
+      "alpha_sha256": "2d6afe6cc652dc978097c5dd6e6664e68f78ddecbb5d00aae3f653bf31d51e43",
+      "bounds": [
+        12,
+        18,
+        242,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/237s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1021,
+      "source_mtime_ns": 1792048530560646500,
+      "canonical_source": "Graphics/Characters/237s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b0bbd40ea27da3c08a033d681c97df797a78838ccb89248d09ad5738c3a716bb",
+      "git_blob": "272c83e066646e6d0facc3e1f3b57a840d612e0c",
+      "reference_blob": "272c83e066646e6d0facc3e1f3b57a840d612e0c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2f3c5c60130e9ccd2f01d391df5a9b441b987aeddc5885a65693db98a5b15687",
+      "alpha_sha256": "2d6afe6cc652dc978097c5dd6e6664e68f78ddecbb5d00aae3f653bf31d51e43",
+      "bounds": [
+        12,
+        18,
+        242,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/238_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 965,
+      "source_mtime_ns": 1792048530561645800,
+      "canonical_source": "Graphics/Characters/238_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b1af9cfec5490be5790bcd1c8c623f3736632fbc7a14b7e4a7338d229ee11494",
+      "git_blob": "bb1fb7aecb0d0e9109d2b83f1437e0678bdc3ffc",
+      "reference_blob": "bb1fb7aecb0d0e9109d2b83f1437e0678bdc3ffc",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7887a37ead74c074390d40c7e465be06501ca18cf3a12ac8aa6cc73ee46e7b94",
+      "alpha_sha256": "98bfe64ed77368dcefa1d930e8b8c40f4a3daae529b14c6cd919c5569e1ca191",
+      "bounds": [
+        14,
+        24,
+        242,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/238s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 964,
+      "source_mtime_ns": 1792048530561645800,
+      "canonical_source": "Graphics/Characters/238s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "bb79df9517f9ad44d0283340cd9165b8bc3835f7ea840739f89841a85ab45693",
+      "git_blob": "7bb544821675ec896d35278287475e32e2cf7bba",
+      "reference_blob": "7bb544821675ec896d35278287475e32e2cf7bba",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2c96dde6a9bfce9f8d32ef2fcb242b4f660452dd782cb5099f574061acd12df9",
+      "alpha_sha256": "98bfe64ed77368dcefa1d930e8b8c40f4a3daae529b14c6cd919c5569e1ca191",
+      "bounds": [
+        14,
+        24,
+        242,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/239_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 904,
+      "source_mtime_ns": 1792048530561645800,
+      "canonical_source": "Graphics/Characters/239_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "85b75d1ffe1e2a2583b7d2192eef958b0b95fd7159fd07f7e29fbfd3e5d8609a",
+      "git_blob": "291c9b9a0a79b6797adbba359bb52c673eeec675",
+      "reference_blob": "291c9b9a0a79b6797adbba359bb52c673eeec675",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "74c3ad194c3d9792110390a9cb2e42a0e669d949e7131e52fdcccf8be5450433",
+      "alpha_sha256": "b69cc11b73d8db5e67c45a9142b53c275c21fcd07594ccbcaa5b80e9b5704c41",
+      "bounds": [
+        10,
+        26,
+        244,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/239s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 904,
+      "source_mtime_ns": 1792048530561645800,
+      "canonical_source": "Graphics/Characters/239s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8c5647900abdca15e94723c53f2d978c64ea9b7949e5f0dcd2569b242fd46cd5",
+      "git_blob": "7a44bb349c0d7d487b94fcc9cdee2f90b9f9419a",
+      "reference_blob": "7a44bb349c0d7d487b94fcc9cdee2f90b9f9419a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "fc380404319d3e0127139e60c4fb17dff9ce2cfccb08e0fe769f1f6c8dda7988",
+      "alpha_sha256": "b69cc11b73d8db5e67c45a9142b53c275c21fcd07594ccbcaa5b80e9b5704c41",
+      "bounds": [
+        10,
+        26,
+        244,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/240_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 934,
+      "source_mtime_ns": 1792048530562647900,
+      "canonical_source": "Graphics/Characters/240_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b7b8f4383c152469d46ac85b361753f250ed57faccd007e1a268e3ab763e6bad",
+      "git_blob": "2dbedca01fae92e3f30183fd895af248c075ab15",
+      "reference_blob": "2dbedca01fae92e3f30183fd895af248c075ab15",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "33f073b8180f04bbfa69ae53fd23cfc8847f4648178e397c3ed6503785dc3c8e",
+      "alpha_sha256": "bb8200b2b2989f8ef1d467e6b21ae02f93387a4977c6ae9f37d8ca8503faf28f",
+      "bounds": [
+        18,
+        24,
+        238,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/240s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 934,
+      "source_mtime_ns": 1792048530562647900,
+      "canonical_source": "Graphics/Characters/240s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "231d6d2e683c33d335cf56f70fdfd07618a3d6be0b8e69043693557266beed93",
+      "git_blob": "f55d949d27aac33c64cf501b52faa6ec45635dbb",
+      "reference_blob": "f55d949d27aac33c64cf501b52faa6ec45635dbb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a99d56ee123f3bfc7f8ac6596ac9999ef63c1ab078d4bb9904302a7c91ba267b",
+      "alpha_sha256": "bb8200b2b2989f8ef1d467e6b21ae02f93387a4977c6ae9f37d8ca8503faf28f",
+      "bounds": [
+        18,
+        24,
+        238,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/241_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1296,
+      "source_mtime_ns": 1792048530562647900,
+      "canonical_source": "Graphics/Characters/241_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "efdb346fd0b8d81cdcebc66b19fa7569f55c64138187abdd7848df2e34afa4bd",
+      "git_blob": "395ca4dd929f571c4d04903c75a608d5aff224dd",
+      "reference_blob": "395ca4dd929f571c4d04903c75a608d5aff224dd",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d433491a734362301d851857583f23ac8058b15cc6494a87d299f8d67702447b",
+      "alpha_sha256": "8b67ecce1c4aeadbd4559a5d902f6400ce0d0c81328161c3babb1aeb707bef9a",
+      "bounds": [
+        8,
+        20,
+        248,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/241s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1297,
+      "source_mtime_ns": 1792048530562647900,
+      "canonical_source": "Graphics/Characters/241s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "bf8305965634658f304ae41635a9dd4a6f5ea620ef6aeb81eaf6d1e59230a896",
+      "git_blob": "b227843e78aabe2736e73a0e01ae470fc6bc2c26",
+      "reference_blob": "b227843e78aabe2736e73a0e01ae470fc6bc2c26",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b9ed5bc3da5388f8303a4afa52524515d45a6b032b4942ace8012eedd275f91d",
+      "alpha_sha256": "8b67ecce1c4aeadbd4559a5d902f6400ce0d0c81328161c3babb1aeb707bef9a",
+      "bounds": [
+        8,
+        20,
+        248,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/242_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1116,
+      "source_mtime_ns": 1792048530563645000,
+      "canonical_source": "Graphics/Characters/242_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a2681277670f64e151ef29d6750b4296c9b2d9556bfca2a7a59ba81317c53cf1",
+      "git_blob": "588056a118f5815c2a3ac782f3029d49c0f44b9f",
+      "reference_blob": "588056a118f5815c2a3ac782f3029d49c0f44b9f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "417ea4f63d71d94eca53603ca48249c88541d264b31d762b9625f042474d7eb0",
+      "alpha_sha256": "4eff6c5cd266b196135f662f8e7469fdfe5d19026222d76e6e0af1cab102501f",
+      "bounds": [
+        12,
+        22,
+        246,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/242s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1116,
+      "source_mtime_ns": 1792048530563645000,
+      "canonical_source": "Graphics/Characters/242s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "1e96446f75712d3fd54ae1b1661730b81f1078171836fc933afb82a699b99ee3",
+      "git_blob": "81a68b1ff80eb5c918429b5c29f8f1a76721f7b3",
+      "reference_blob": "81a68b1ff80eb5c918429b5c29f8f1a76721f7b3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ec152b0cce3e8a371da6e588fc6ed053cd9d54797b13f0ea6f83447304b9ce5b",
+      "alpha_sha256": "4eff6c5cd266b196135f662f8e7469fdfe5d19026222d76e6e0af1cab102501f",
+      "bounds": [
+        12,
+        22,
+        246,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/243_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1671,
+      "source_mtime_ns": 1792048530563645000,
+      "canonical_source": "Graphics/Characters/243_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "af50f8bb03741fcbb2f27d07fc3ac0638e26abe61e66318fdccd7a506b0f3f5e",
+      "git_blob": "cf52affa901bca4d3a3e801a3d512628c3ee8378",
+      "reference_blob": "cf52affa901bca4d3a3e801a3d512628c3ee8378",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a05667d28183aec9cec1d5f904c422b754044990fc73c5d32c5132026bec5a55",
+      "alpha_sha256": "b5947b4047dc3a3f73e3e2058cd2463bbda1f0bd768978ce65213bb1dfc7c388",
+      "bounds": [
+        2,
+        4,
+        254,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/243_245.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2793,
+      "source_mtime_ns": 1792048530563645000,
+      "canonical_source": "Graphics/Characters/243_245.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4e5c138a836d1971619c87ee081b30cf3556565350b5b0693834cf36a85dfca3",
+      "git_blob": "5e0bbeb0ed767866e05086bfb94a43802bc14cfb",
+      "reference_blob": "5e0bbeb0ed767866e05086bfb94a43802bc14cfb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f6698b0990d287a6a5faebcdb627c400b026bfff2d268406a098af2b5772a1c4",
+      "alpha_sha256": "a9a6b0988e06a3ec27a6425ce3533f699e4f2e17a5f86e119f867b8a230f6858",
+      "bounds": [
+        2,
+        0,
+        256,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/243s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1672,
+      "source_mtime_ns": 1792048530564644900,
+      "canonical_source": "Graphics/Characters/243s_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "89881cc0a0a70eba0705f75ad9fc01267b5eab0e62e8687b540bbfc0958f1386",
+      "git_blob": "b35d9f94c19d40d1f275f50223ac398e53b124ea",
+      "reference_blob": "b35d9f94c19d40d1f275f50223ac398e53b124ea",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4ef974515bbfeaa6497db70e486aa5bc58245342d97d29d5b54f96d1a5df7fa6",
+      "alpha_sha256": "b5947b4047dc3a3f73e3e2058cd2463bbda1f0bd768978ce65213bb1dfc7c388",
+      "bounds": [
+        2,
+        4,
+        254,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    },
+    {
+      "source": "Graphics/Characters/244_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1695,
+      "source_mtime_ns": 1792048530564644900,
+      "canonical_source": "Graphics/Characters/244_0.png",
+      "batch": "batch-191",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "fed0bb1c91ae4b417428cd98c6538f60e13563eff69a18d5559deafb41d7cd71",
+      "git_blob": "fd355551158bcdb949bb2c22ff82c6b424f46bdd",
+      "reference_blob": "fd355551158bcdb949bb2c22ff82c6b424f46bdd",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "cf784c21a57752135a538547401ca8d860e65a2e4ca08356c601c18c409dddcf",
+      "alpha_sha256": "61ed84f19d08ef3bfdaa28493130a6cccffcdc7370a173180433e0a80a6c831b",
+      "bounds": [
+        2,
+        6,
+        254,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-191-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Current source and delivery equal the source snapshot. Frame/state/tint outputs therefore remain unchanged for identical engine inputs. This is a preservation decision, not an AI redraw claim."
+}

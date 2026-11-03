@@ -1,0 +1,899 @@
+{
+  "batch": "batch-248",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/Team Magmaqua/characters/BW_giovanni.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3978,
+      "source_mtime_ns": 1792048540695353800,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/characters/BW_giovanni.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "fecb24c2fab9f8c02da0b91c69238b04566fcedcef0197052fc1506d9a8d7b0b",
+      "git_blob": "bd04b4046e6df8396717a6f3b8fb032d447a1419",
+      "reference_blob": "bd04b4046e6df8396717a6f3b8fb032d447a1419",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "1ba916a5aeb2b21fdf805f4914d28f0d68dfed38394fa075a0a4a34e1155c982",
+      "alpha_sha256": "65a15ab8b93636d5e42e3b443b31068ee63ff87a347ff602feacea58d81019ab",
+      "bounds": [
+        12,
+        4,
+        244,
+        256
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/characters/trainer056.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 2396,
+      "source_mtime_ns": 1792048540696354900,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/characters/trainer056.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "968959ad75a04f04c80ba1b893b66a63c450dd45b37edf42c7c610f0bd3dac1f",
+      "git_blob": "ec831a8705df3cba8975c427c477f176bcb1ab4e",
+      "reference_blob": "ec831a8705df3cba8975c427c477f176bcb1ab4e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4784c8f01b44cac9fd9a35c5c8f0a75c87583ba55a88df709f15f3bd72a0ca73",
+      "alpha_sha256": "adffcc0437dd49465a6fb8da771c100532ca5ff41615f7524ffbaa9d52593836",
+      "bounds": [
+        18,
+        13,
+        128,
+        153
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/characters/trainer057.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 2447,
+      "source_mtime_ns": 1792048540696354900,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/characters/trainer057.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "549f925b40e484def26230f8ce9ef025b64da585f3a545714fd0dd5d7f7afc49",
+      "git_blob": "3125ef923a0b1c39d1412e409d4f08e465925d99",
+      "reference_blob": "3125ef923a0b1c39d1412e409d4f08e465925d99",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b498f6aeeda61f98be155701814bf45eb746ca3c7798957effb0fdecc7e84aa3",
+      "alpha_sha256": "0c486a39f348db8b05e09cdf4be00ec4d6063f6c38f52aff6727324e62276871",
+      "bounds": [
+        25,
+        9,
+        137,
+        157
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/characters/trainer066.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 2645,
+      "source_mtime_ns": 1792048540696354900,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/characters/trainer066.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "567d6e390f3e37e723735fa65861300119205a65925a68013298f03cee8ae972",
+      "git_blob": "59464d1a1ea0f3c6b33725c44aa4d0460dc8f7a3",
+      "reference_blob": "59464d1a1ea0f3c6b33725c44aa4d0460dc8f7a3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "559a13177abab3ac3a0fce7918d5658d2ecc34bbdfe695d2df84a8719e99d4d7",
+      "alpha_sha256": "5c56252b49510ef617bb1652b72faf57bd9537f9d42044fb70fd40a260de4f61",
+      "bounds": [
+        40,
+        0,
+        128,
+        160
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/transitions/vsTrainer58.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 2749,
+      "source_mtime_ns": 1792048540697353500,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/transitions/vsTrainer58.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "eaca06c8ff0dbd2d832a05a833620482e68fc8928e1f791ab8d3debbf8aa2701",
+      "git_blob": "2ae9f2c94eb582a83dc5ffbf2d382386cf18b601",
+      "reference_blob": "2ae9f2c94eb582a83dc5ffbf2d382386cf18b601",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "219d6e5a468e06f08e7b330f5254c434b1c85a21c0c1cec6711aceec9fe7573e",
+      "alpha_sha256": "97b2de4f44209f1f57bfdb0262d6e1f10b04c76ea313e1def6784adf3282f8f7",
+      "bounds": [
+        77,
+        4,
+        233,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×32），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Team Magmaqua/transitions/vsTrainer66.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 2749,
+      "source_mtime_ns": 1792048540697353500,
+      "canonical_source": "Graphics/Characters/Team Magmaqua/transitions/vsTrainer66.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "eaca06c8ff0dbd2d832a05a833620482e68fc8928e1f791ab8d3debbf8aa2701",
+      "git_blob": "2ae9f2c94eb582a83dc5ffbf2d382386cf18b601",
+      "reference_blob": "2ae9f2c94eb582a83dc5ffbf2d382386cf18b601",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "219d6e5a468e06f08e7b330f5254c434b1c85a21c0c1cec6711aceec9fe7573e",
+      "alpha_sha256": "97b2de4f44209f1f57bfdb0262d6e1f10b04c76ea313e1def6784adf3282f8f7",
+      "bounds": [
+        77,
+        4,
+        233,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/Team Magmaqua/transitions/vsTrainer58.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×32），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/TORKOAL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4370,
+      "source_mtime_ns": 1792048540692785400,
+      "canonical_source": "Graphics/Characters/TORKOAL.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "13b971a8524ee847d460bc7383df185d253ad3811a948d2b78bb6749883f55b0",
+      "git_blob": "acdd6db805634f067fc4e55faa56527a34188d5b",
+      "reference_blob": "acdd6db805634f067fc4e55faa56527a34188d5b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5bec300f918e2774776351ea4fb75b5c11739cc230f92b1d76a9f48518b8d1ff",
+      "alpha_sha256": "6e4cdf18586d397c125dfa3fea028a970f475fa31184b3510550e032890683b1",
+      "bounds": [
+        2,
+        24,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/trainer007a.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 5203,
+      "source_mtime_ns": 1792048542449121300,
+      "canonical_source": "Graphics/Characters/trainer007a.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "dee4b0ce87534d254c7b8332d7094fe04aeae765ef8a7536921c44ff8d677c94",
+      "git_blob": "b35ecf51a3ffdb3a802198cc48c05bf1639742be",
+      "reference_blob": "b35ecf51a3ffdb3a802198cc48c05bf1639742be",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "34a536ae8687b335386f8758d2f8ddf4e59aa70fdc1ce572cc74621d380aceef",
+      "alpha_sha256": "4878ab6e5f3b40c5f3e34562dc53841094a51c49ad8fd7a8632c35d4c36f93c2",
+      "bounds": [
+        56,
+        41,
+        103,
+        121
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/trainer_POKEMONTRAINER_Leaf.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4066,
+      "source_mtime_ns": 1792048542449121300,
+      "canonical_source": "Graphics/Characters/trainer_POKEMONTRAINER_Leaf.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "380bee0d960f4d4062a8c80cf37b161c99d357481189b993938389f3a32481d5",
+      "git_blob": "9a36cc2d0ce380d74ec2393be00cf38b6693e34c",
+      "reference_blob": "9a36cc2d0ce380d74ec2393be00cf38b6693e34c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "980745c7b06e157f77ba1f6d7a5872e05148723018d544a66a82fd7d2cf4ed91",
+      "alpha_sha256": "8823d18c41014a9565f578c0272404eb8678010b2ba44871b4ca670155379bf4",
+      "bounds": [
+        10,
+        3,
+        249,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/trainer_POKEMONTRAINER_Red.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2250,
+      "source_mtime_ns": 1792048542449121300,
+      "canonical_source": "Graphics/Characters/trainer_POKEMONTRAINER_Red.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "d4cf41ab51175a19d15b2e58044c5cc54c960f5471c0013605f9e2741a0905f1",
+      "git_blob": "12d24fede6346c1abb5771219fc52245916aa0cd",
+      "reference_blob": "12d24fede6346c1abb5771219fc52245916aa0cd",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "aa491322f1b0007374814313ae6ca36494994765a8cfe406579d1434138be319",
+      "alpha_sha256": "60f0d200fb4e55bd5f85e33812de3612c003e275dfc108ecdce95e89eabed493",
+      "bounds": [
+        12,
+        5,
+        247,
+        251
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22361,
+      "source_mtime_ns": 1792048542450127900,
+      "canonical_source": "Graphics/Characters/traveller.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4046f2191dc8ed7ba0ff8a9479abbd85768e9e4f7127970c304987440eba625f",
+      "git_blob": "fbed600c8ce439bacb51dcd0161851f63d926890",
+      "reference_blob": "fbed600c8ce439bacb51dcd0161851f63d926890",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e2c18a74074184a9b293feeee88825346adc3f04fb6968332a826635e21f525f",
+      "alpha_sha256": "359f45cc4fbd5f2f4d2592564329bc969d390cae32e8700f929359bd8e8e711e",
+      "bounds": [
+        22,
+        22,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_alola.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 23611,
+      "source_mtime_ns": 1792048542450127900,
+      "canonical_source": "Graphics/Characters/traveller_alola.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4663725220b25b3f1e119222c1310795c4c948194c852994e1fa5ab44720d206",
+      "git_blob": "141d0c8050ada5cf13b2b4b39593155cc77612c3",
+      "reference_blob": "141d0c8050ada5cf13b2b4b39593155cc77612c3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "900c3d968e4b7b33735461a83bff60f39972bd8bb1deac7140f1031c75fd9731",
+      "alpha_sha256": "39bbc195d555f133a88446289f983a36cf96af702f5e37d124552c54ec597622",
+      "bounds": [
+        20,
+        14,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_hatless.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 21688,
+      "source_mtime_ns": 1792048542450127900,
+      "canonical_source": "Graphics/Characters/traveller_hatless.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "377f9f301ccc6a0e5b02996cb8e12cb89ec5dc016e693bf10b3961d39a93fc17",
+      "git_blob": "03badabef8925ad6f16590d5e134456c911a74a3",
+      "reference_blob": "03badabef8925ad6f16590d5e134456c911a74a3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "78ac58463dfd77dfc8ce07019dd668d2d7c13a55c5929a8158878c29fbaa3009",
+      "alpha_sha256": "8edcb56362fa07f4f7fda60c7ffd4a55ba54e35937f1193089ee69c3e4d252a4",
+      "bounds": [
+        20,
+        20,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_hoenn.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22542,
+      "source_mtime_ns": 1792048542451130700,
+      "canonical_source": "Graphics/Characters/traveller_hoenn.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "20a4e3f7124341e5decf37a6bd2f98198fb7ba9d1ab712839abd6190c62024b2",
+      "git_blob": "6a181a216970451c6c59eba820e3ebaae6b46167",
+      "reference_blob": "6a181a216970451c6c59eba820e3ebaae6b46167",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "533a9393de44c0bb3886e7076ba012b4180cde9c735914a58c0bdd44daeb168a",
+      "alpha_sha256": "69216d2865fdace2afe71f483dc688cc38a0f3a243f172a8cbf479ef152a7e09",
+      "bounds": [
+        20,
+        14,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_johto.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22448,
+      "source_mtime_ns": 1792048542451130700,
+      "canonical_source": "Graphics/Characters/traveller_johto.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "020715c0bd91c83373102a39c624bfc5030cf374fca40189e65833c49c595ff2",
+      "git_blob": "4d6765a187faad4cd78736a9b20392af5e09aa0f",
+      "reference_blob": "4d6765a187faad4cd78736a9b20392af5e09aa0f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "60db54e82e16c0fdb61765deaba9e06717fd0743f0419a5d7fa05476136a7de6",
+      "alpha_sha256": "87ee2e8df51b6d44e73eab8577c8a2b735698ef0d45f97f4d86ee7d37b1fd4ff",
+      "bounds": [
+        16,
+        18,
+        302,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_kalos.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22024,
+      "source_mtime_ns": 1792048542452130000,
+      "canonical_source": "Graphics/Characters/traveller_kalos.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8b6571d2c302bba60094a71b8ea847d0c999c39f9fb1233f96756b1f3a2566f3",
+      "git_blob": "b4c0458329229c51be0a6044721cd107bc9ce67e",
+      "reference_blob": "b4c0458329229c51be0a6044721cd107bc9ce67e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e82b1ce678049bf0495f062bc3f8a503dd9b8ffc2d96ed14f63a6e0705a19165",
+      "alpha_sha256": "e76f5ae9e70479af4068fe15236b299f3b086f973443f46a2274a3674e241715",
+      "bounds": [
+        18,
+        18,
+        300,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_kanto.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22170,
+      "source_mtime_ns": 1792048542452130000,
+      "canonical_source": "Graphics/Characters/traveller_kanto.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "c37f35097909cba22a144cc61c34241fcf9a0f53285a48226f12ee469a5874ff",
+      "git_blob": "bc18addfbd6f272a235b0895887150992e55637e",
+      "reference_blob": "bc18addfbd6f272a235b0895887150992e55637e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c033fbf2c5ff5343f843e30e14a851e886133327d9a12b68a66fec1ba7dce6fd",
+      "alpha_sha256": "a2f0924154dc64fbd32b0f3101e3122d1eeb4e885f1209e9df4eb8e16044afb1",
+      "bounds": [
+        18,
+        18,
+        302,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_sinnoh.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22342,
+      "source_mtime_ns": 1792048542452130000,
+      "canonical_source": "Graphics/Characters/traveller_sinnoh.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "262d3c06e3a97ddc240848ac854baa088bbbeeacfb795263f78380088bd9a328",
+      "git_blob": "b3b2d2e7efe57d3e0a464055a7f30adaa44abc19",
+      "reference_blob": "b3b2d2e7efe57d3e0a464055a7f30adaa44abc19",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2fcc1d6154e1f02af8ccf7ee81234f07af5fc33b06cc17407d4d200f284d26b7",
+      "alpha_sha256": "c902d4ee944035ed52b36a4364a1d4b0051c6a802a707d5bd8a9ddb3d2904392",
+      "bounds": [
+        20,
+        18,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/traveller_unova.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 22708,
+      "source_mtime_ns": 1792048542453129200,
+      "canonical_source": "Graphics/Characters/traveller_unova.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "6287999c49c5aa83ce3381dea936627744f1cdff80e50a73985b9684c37d0b0b",
+      "git_blob": "b97745911bac60b275c598da93327bd9296275ae",
+      "reference_blob": "b97745911bac60b275c598da93327bd9296275ae",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7297e181e2bd0def8f95240a9779a9632d55747552272e80f6d63d278aece0c6",
+      "alpha_sha256": "790b308d416229d6f7ddfde76757ddcaaa24fab7703aa01d2eb606b5a554a022",
+      "bounds": [
+        20,
+        20,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-248-01.png"
+    },
+    {
+      "source": "Graphics/Characters/trback010.png",
+      "size": [
+        640,
+        128
+      ],
+      "source_bytes": 2086,
+      "source_mtime_ns": 1792048542453129200,
+      "canonical_source": "Graphics/Characters/trback010.png",
+      "batch": "batch-248",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "7a262e40611033b9790bb1837d95a9bba42e6755d74aaa102afb73905c207e18",
+      "git_blob": "c4215558121f621b5c88cfea4eddabb2baa51e88",
+      "reference_blob": "c4215558121f621b5c88cfea4eddabb2baa51e88",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "trainer_throw",
+      "grid": [
+        5,
+        1
+      ],
+      "cell_size": [
+        128,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "49d36e47a03cffd3cb5e6fe40e4c70266138f1880a729c8ab0ddc4432439c7bb",
+      "alpha_sha256": "214b24ae5c98328b737b3ba446b808f881d71596e1827d7f42c251c5c695ea2f",
+      "bounds": [
+        26,
+        30,
+        628,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "旧版五格背面条图的姿态/服饰清楚，实际 PictureEx 投掷及回到首格已检查；增加纹理无明确收益，保留原帧序和所有像素。",
+      "visual_review_page": "review-248-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

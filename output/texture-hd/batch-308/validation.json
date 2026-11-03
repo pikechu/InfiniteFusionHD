@@ -1,0 +1,898 @@
+{
+  "batch": "batch-308",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6538,
+      "source_mtime_ns": 1792048539009309500,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "8900e9994456e7054c555220f6c1db73c4781437a86fcd17014a99b28053332b",
+      "git_blob": "e8ade90a14eafc71d6a597526f103e8eeffedae0",
+      "reference_blob": "e8ade90a14eafc71d6a597526f103e8eeffedae0",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ff7378d973eeda3ec570c08d2a1f528ee455cb69613197f093c4a9901184d2fe",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6044,
+      "source_mtime_ns": 1792048539009309500,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_1.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "ad989017fedfa54eb77aac0b746d71f5157b675565077318d7f181b28b20bb8e",
+      "git_blob": "f7d785091d9f4fb13169ef7013810b211b786592",
+      "reference_blob": "f7d785091d9f4fb13169ef7013810b211b786592",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "762247cb26f6f0cedbe3cac927a4debc8f05c89b3bbe6bfcbb40bcd474b5f500",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6251,
+      "source_mtime_ns": 1792048539012503000,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_2.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "03c8192a362f1d774675dfb453426e87284b6490bafc62be3c5f9867cbd7753d",
+      "git_blob": "55ab984df1b2d178d57ab52bf54ef03e669b81e0",
+      "reference_blob": "55ab984df1b2d178d57ab52bf54ef03e669b81e0",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "514d5e5c963b95af22ac6e5fad09cc083863897ff1ee3aec9334b7ed291b5691",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6028,
+      "source_mtime_ns": 1792048539013023500,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_3.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "cec48eaa799b9e581dbb39b43308828d6d41d7b85f98d801e27017941c8f2193",
+      "git_blob": "d9a6ab6981fc8521fb752ff76da0f16295dab024",
+      "reference_blob": "d9a6ab6981fc8521fb752ff76da0f16295dab024",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b917e303cdf63c940506631bed6d288e47423ec9878c45138b8495bd5960a21b",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6372,
+      "source_mtime_ns": 1792048539013023500,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_4.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "973c1153065211c3b688f0a908e8649764b78b1054b9e0894374baaedff392f7",
+      "git_blob": "bb291b2fa8846947e83adc7a02140dc5de07eb93",
+      "reference_blob": "bb291b2fa8846947e83adc7a02140dc5de07eb93",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2112ef02e178f5c654c48e80077bf424e6df6b34cf91591a5ae30ff20a4b7676",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_5.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5983,
+      "source_mtime_ns": 1792048539013533900,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_5.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "7348a2aed9b6489f4b643d874771ec43bc27614362ab63dbbfbcc4eaaec41231",
+      "git_blob": "2e745a61360905a2e20153d3bffa328815df48d9",
+      "reference_blob": "2e745a61360905a2e20153d3bffa328815df48d9",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "22548cea7d84422268aebc4870899fbcc61a063b369695ae0b2330bc826d847b",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_6.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5940,
+      "source_mtime_ns": 1792048539013533900,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_6.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "3739f4cd4eb655795487ed61a327d1fe5c5e897e33eb124f70554e6a7c5e84d6",
+      "git_blob": "3fd1a176b96f8f670b016437ad4a4a00d063081b",
+      "reference_blob": "3fd1a176b96f8f670b016437ad4a4a00d063081b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "1c198864c33b5fa1e908c1cee724d2cb166542c034a24af82b1fcec067e44422",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_7.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6230,
+      "source_mtime_ns": 1792048539013533900,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_7.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "31fc2daa7a58561d39058f299ffab5ec99efb5ee81c7b6d9567e1de48f49fbd4",
+      "git_blob": "78ad3b3d08cf0c6251ad46f632631d4accf35ba2",
+      "reference_blob": "78ad3b3d08cf0c6251ad46f632631d4accf35ba2",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "30ab4c306e60a4f84967a57088b73f6d96ea8054081fe78c77f368ce82f31041",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_8.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6228,
+      "source_mtime_ns": 1792048539014533300,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_8.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "995fb3f9c51859306474bfad65efba08e1d554d5b2fe39926bcaf9e50ba6f882",
+      "git_blob": "c99990d9c5ee8469068e49267e7e1613a723b214",
+      "reference_blob": "c99990d9c5ee8469068e49267e7e1613a723b214",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6ee0a996cb9f393531621f759ce443d3f705654ac171ee54799407ae76aed41f",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_9.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6010,
+      "source_mtime_ns": 1792048539014533300,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_9.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "8215fda2e716599cbeba51763a6c8fd705f620a9991dbe5886ca2f57e0adf307",
+      "git_blob": "771991064ba60a0f1db339ff232b6caed70c1724",
+      "reference_blob": "771991064ba60a0f1db339ff232b6caed70c1724",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "566f975b0163bce47647e3c4edffe58dd457e30bfdf15a07f1b3cbc67fc67aaa",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5896,
+      "source_mtime_ns": 1792048539009906100,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_10.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "b8f74961d285996efadf4ae66ed036f9049ae7e16300b3655ae068d071329e3d",
+      "git_blob": "b40f9d4eb090a94f8062e26646f2e403a2409946",
+      "reference_blob": "b40f9d4eb090a94f8062e26646f2e403a2409946",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "015d388971cea11521be7f9b143e5119ec0408a99bec756211e27415d075ad22",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_11.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6718,
+      "source_mtime_ns": 1792048539009906100,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_11.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "b0708d8848b1a9e4ab72cc848ecd39aeccf939f7b4a324bc41017f681de0bdcc",
+      "git_blob": "d0790ca868552293cdc93955c93833f795705e3c",
+      "reference_blob": "d0790ca868552293cdc93955c93833f795705e3c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0736ea567685cb6af3e55c4ba4e83cc032bc287eb9f02491eca0b70385b50e68",
+      "alpha_sha256": "cdc8d8f4c1496c9a904c665dc896ab6e47f4e940fd6b5ce750893fb1599cdfb5",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_12.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6167,
+      "source_mtime_ns": 1792048539010426300,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_12.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "893f9a17a3205db38e49d6ab9e657283084c4e55c583b427bd46cd7d24dd54ab",
+      "git_blob": "24c262576b83521846cc15189b72f001b13b45eb",
+      "reference_blob": "24c262576b83521846cc15189b72f001b13b45eb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "eca237e436185a01b36263e779abd5f47e3808d03631729949191de6f4a7690d",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_13.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6311,
+      "source_mtime_ns": 1792048539010426300,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_13.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "83b9503e84773b6fe21f690e0d3c2fe7ca651813678d93482661b6409073e10d",
+      "git_blob": "aed172325dea30fa91bd135274b6fb84277e4111",
+      "reference_blob": "aed172325dea30fa91bd135274b6fb84277e4111",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "dbaba10c48c34b431704a595f4e25578242d0cbfc9cadd1514e744d01940240c",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_14.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5925,
+      "source_mtime_ns": 1792048539010944400,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_14.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "826ee02b5581757345b88f80c1478111da80371f0e127106c6565fc238c1111f",
+      "git_blob": "d6e5dbacb54fe6422c5f6f177a5ac19958fd9921",
+      "reference_blob": "d6e5dbacb54fe6422c5f6f177a5ac19958fd9921",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "cf26e15588f7781bb15eae2db18f5d18847ed9795c3b3a64763a13fc330b4d53",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_15.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6295,
+      "source_mtime_ns": 1792048539010944400,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_15.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "6910a36b2dc2ba11465e45262908615cfe30605245816d64da82ef2136134466",
+      "git_blob": "3cdf8c55cbacf031ebb553b5f8e4255a08d8dd7a",
+      "reference_blob": "3cdf8c55cbacf031ebb553b5f8e4255a08d8dd7a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c60111953152ffcb34ddebff9ca8e1ec30f16e50e266a561e8a4421c25387777",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_16.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6237,
+      "source_mtime_ns": 1792048539011465800,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_16.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "e1acd96bf61729d33862829b8af4406e35d81b99deb6f7a353920af761815c97",
+      "git_blob": "b16e797f0cff6d6b08b5c236629dbf15f7b58eae",
+      "reference_blob": "b16e797f0cff6d6b08b5c236629dbf15f7b58eae",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "9b73e5715ef8ddd95090db05f9687c605e8dec7a4259ea1ff9053968293b1ef2",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_17.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6009,
+      "source_mtime_ns": 1792048539011465800,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_17.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "d9f8f7d8043113ab10fbf7b74148e8df94f638a7da6b8a6fe6892d93236665b8",
+      "git_blob": "8a55ef44da0e91e479c5a8bb62b03d1dd8af4e74",
+      "reference_blob": "8a55ef44da0e91e479c5a8bb62b03d1dd8af4e74",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "902455797c016a994ab6c8fed2a13fc0b60e1a3648ed37f38910ec0b2fb1bb57",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_18.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7126,
+      "source_mtime_ns": 1792048539011986000,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_18.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "1d3c0e97a29c6c5b4a3f5eb181a5594814ca80a5ff6fd53500c1749016ff26a8",
+      "git_blob": "11471cbc97221db093d3b74acf0be1ac588fca50",
+      "reference_blob": "11471cbc97221db093d3b74acf0be1ac588fca50",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d0c0d32498abba2ac2d2ee5aa1624308fd381da4d6e9fa47b931a8467857fde4",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/VIVILLON_19.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7540,
+      "source_mtime_ns": 1792048539012503000,
+      "canonical_source": "Graphics/Characters/Followers/VIVILLON_19.png",
+      "batch": "batch-308",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "0389785febd791b58504c3a4073d26d21ed910bfd5ca719b901f314a960012c7",
+      "git_blob": "a09817312bfd9260352afd7b16a29cac06af08ee",
+      "reference_blob": "a09817312bfd9260352afd7b16a29cac06af08ee",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "fc4cfc9b5c1048841f9b6dbcbda557f5aad2fb64088174d4b2e154d9e948a2f9",
+      "alpha_sha256": "c54db72cad3006b3d63ef51a0e50cecca0c20ffe4f1b502bf555b8a292db2328",
+      "bounds": [
+        4,
+        10,
+        252,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-308-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

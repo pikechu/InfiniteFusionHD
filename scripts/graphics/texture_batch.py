@@ -110,7 +110,10 @@ def install_or_verify(batch, action):
             temporary = source.with_name(source.name + ".texture-hd.tmp")
             shutil.copyfile(replacement, temporary)
             temporary.replace(source)
-        validate_image(checked_path(batch / "originals", entry["source"]), source)
+        # Restores are byte-checked against the original, which may have been a
+        # non-PNG container (the reason an encoding repair was needed).
+        if action != "restore":
+            validate_image(checked_path(batch / "originals", entry["source"]), source)
         expected = entry["before_sha256"] if action == "restore" else entry["after_sha256"]
         if digest(source) != expected:
             raise ValueError(f"Installed checksum does not match: {source}")

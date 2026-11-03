@@ -1,0 +1,907 @@
+{
+  "batch": "batch-239",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/Overworld/294.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2369,
+      "source_mtime_ns": 1792048540647353700,
+      "canonical_source": "Graphics/Characters/Overworld/294.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4527a084940e7644bfc8a6bfd1c3c3758e5ec6d8cac76113cbefa58b4e6c85d5",
+      "git_blob": "20809e9c642b48ad2d2af73c62a146c4c4a19c33",
+      "reference_blob": "20809e9c642b48ad2d2af73c62a146c4c4a19c33",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "65a9fbdaf9e4ff6a6deb7d4f830c1daccf8a84c5b8f6a7cc40002be20fab89c2",
+      "alpha_sha256": "a6878c43e5361a97ed80c1dcff0ee013574277bce73275cf17ee461d5569b9d5",
+      "bounds": [
+        10,
+        26,
+        246,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/295.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2762,
+      "source_mtime_ns": 1792048540647353700,
+      "canonical_source": "Graphics/Characters/Overworld/295.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "02ba7ecf8fa900d97cc5c705f0ae3173ae488e0514f8524d5728a6ddd0cccfca",
+      "git_blob": "b8c68ba3295e79a0d199695afbd212126db31586",
+      "reference_blob": "b8c68ba3295e79a0d199695afbd212126db31586",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "353acedcd99e7fc9f0453d23b7133f1c03ae9cb46a997f07f604a53a8c7ffdb2",
+      "alpha_sha256": "219b6a8bbc1147ee9c46da697b20717c5ce120cef524984961508c0bccdbb4fd",
+      "bounds": [
+        14,
+        24,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/296.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3443,
+      "source_mtime_ns": 1792048540647353700,
+      "canonical_source": "Graphics/Characters/Overworld/296.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "e1f3da72e3b98e7c9802ea485d9467349db66c028c6ceecff1e8cb57ff9e7aa4",
+      "git_blob": "94a32c19e443f961f570cdca5ccc82308c1f3340",
+      "reference_blob": "94a32c19e443f961f570cdca5ccc82308c1f3340",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "113e37c99d9a14b3ef34a2edf6b7354defe2607b0dbaf47e98eab0943c6c4cb7",
+      "alpha_sha256": "38408d84572f6af732eb861ba69bfdd7281bfe027088f15e0de1bc454ab75070",
+      "bounds": [
+        8,
+        12,
+        248,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/448_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-194-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/297.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2663,
+      "source_mtime_ns": 1792048540648353700,
+      "canonical_source": "Graphics/Characters/Overworld/297.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "cdbccb73f79f6958bfde79c141053fe973a4a0690d63dc85b5310ef675292d3a",
+      "git_blob": "cbdcdc102a6f3996b7a99cd44b6d95d541ff02f8",
+      "reference_blob": "cbdcdc102a6f3996b7a99cd44b6d95d541ff02f8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "426f8c499ee3af8d6a816233e585aa85a376574c3878748e6ce388ca31c37173",
+      "alpha_sha256": "fc0920a454cc9a5ee99154a284190988cd08f63518b2f371f683f7d30593b0bc",
+      "bounds": [
+        14,
+        22,
+        240,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/443_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-194-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/298.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3378,
+      "source_mtime_ns": 1792048540648353700,
+      "canonical_source": "Graphics/Characters/Overworld/298.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "d593c44197e434f6d88108e82c237387f62aea553f6a04f1dcb2fc1f31577a4e",
+      "git_blob": "bf32669cb22ddec1272549977933f2cefdf35a55",
+      "reference_blob": "bf32669cb22ddec1272549977933f2cefdf35a55",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "da720982906ee0121e6258f4bd888935e3a9d1aafc50864938a0146c3702e574",
+      "alpha_sha256": "d8a8b85f80c7237c4f4a32fa289bc534a4c3c879808d55393722acd7a7630270",
+      "bounds": [
+        8,
+        16,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/444_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-194-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/299.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4460,
+      "source_mtime_ns": 1792048540648353700,
+      "canonical_source": "Graphics/Characters/Overworld/299.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "986cde8ef150f3ee87932ff05a71448325686c1bb0f41d6f391b634b74f43f4b",
+      "git_blob": "90938206b8537f5add8badb96c3ae3b768f68c05",
+      "reference_blob": "90938206b8537f5add8badb96c3ae3b768f68c05",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6fda1cf020cb14ef6cb7fffe920006e688e5573096b7b7ad8f93196159ffb1ab",
+      "alpha_sha256": "967d2244f1abda0bf38324494f952002ba1073901d666ce007448420e40b0ef7",
+      "bounds": [
+        2,
+        6,
+        254,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/445_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-194-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/300.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3073,
+      "source_mtime_ns": 1792048540648353700,
+      "canonical_source": "Graphics/Characters/Overworld/300.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a1ff3f2ac25134465163c38a64b6489c48682b2812c0915aa3cbac2406b73ee6",
+      "git_blob": "2ace292d95b97aed240d0de2a5f89b532a0bbe87",
+      "reference_blob": "2ace292d95b97aed240d0de2a5f89b532a0bbe87",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4691ddf0e9ef6eb9630beffa60494128d686bfcb322eba15a8ca9468ac5ff5d9",
+      "alpha_sha256": "ddccdfef3985f9b2d59562238a4b2d63796d7f250cff137c3cdb18f15daf9afe",
+      "bounds": [
+        2,
+        20,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/303_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-193-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/301.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3163,
+      "source_mtime_ns": 1792048540649353200,
+      "canonical_source": "Graphics/Characters/Overworld/301.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "c0ebe41dfff92f8fcff34443a0993b27a027c39ebeec153638f2e1b596363793",
+      "git_blob": "ca8adb3e4ec1c66410c98b36801d9559971afece",
+      "reference_blob": "ca8adb3e4ec1c66410c98b36801d9559971afece",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "9d216e5b00c5f91d2b8af0de5692d5bd9ea3f2b9e981dde1e0a10333f7144853",
+      "alpha_sha256": "903f6c922aa2554aaf734301aca6d64e9ba54f042f7f0a1faeb0f329e5153d94",
+      "bounds": [
+        14,
+        20,
+        244,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/302.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4114,
+      "source_mtime_ns": 1792048540649353200,
+      "canonical_source": "Graphics/Characters/Overworld/302.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "ed8e1f532c5990004cb4b659516c20724e0ed2807a63bded39af9186b2af3ddf",
+      "git_blob": "04082fe46c16a5726815ffe166e53e8aac8f5d2b",
+      "reference_blob": "04082fe46c16a5726815ffe166e53e8aac8f5d2b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c98f989b34370e0f6829c7440727d3cc0c3df81b0e70b6b71de9a10291b6deba",
+      "alpha_sha256": "25fb0fba01aadbe5f073622b417619496be7bae34254d545176dcd7c0fa11143",
+      "bounds": [
+        8,
+        4,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/303.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3200,
+      "source_mtime_ns": 1792048540649353200,
+      "canonical_source": "Graphics/Characters/Overworld/303.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "48c4ee457af1f5ab830cd39bc2f581e5f27fde86b3fef273941d00ecb2dbae2c",
+      "git_blob": "f0940f9aadead7b5255a2474256e6902a7f0f851",
+      "reference_blob": "f0940f9aadead7b5255a2474256e6902a7f0f851",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "494fa711e2cd7661395799a46cc7709d43e156b7e93d2e88101a13987fa5f7ad",
+      "alpha_sha256": "af5dc7033a64ae913114fc79ab77c501e79af18034376bde60e1d84ece2f2adc",
+      "bounds": [
+        2,
+        20,
+        254,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/304.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4021,
+      "source_mtime_ns": 1792048540650352900,
+      "canonical_source": "Graphics/Characters/Overworld/304.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "ab4aef5605423a71683c7d26d180d8ed9e88ee0aeab13399a738d625c874595b",
+      "git_blob": "1867df0f99a160e4f781ba01636d58cc2d74d150",
+      "reference_blob": "1867df0f99a160e4f781ba01636d58cc2d74d150",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "153409a765f588fabd3c2b89bc84a7db75a4fd9a8a9e56236d3548a00a337d18",
+      "alpha_sha256": "9f8c7ea4227d26103e542694e70f8a341bf60c4169b5a6162c43053e5742d26d",
+      "bounds": [
+        2,
+        14,
+        254,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/305.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2457,
+      "source_mtime_ns": 1792048540650352900,
+      "canonical_source": "Graphics/Characters/Overworld/305.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "92b5ec607785348bbb2bae34678aad46750251e6faf833e2d35d3b34f0f31ffa",
+      "git_blob": "1c0fa46faf17154cfc16d257d75682dcf0b5c0e6",
+      "reference_blob": "1c0fa46faf17154cfc16d257d75682dcf0b5c0e6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e7a00634cb316c262272111873c5e47c552cdc703d3f415909ebf94906280480",
+      "alpha_sha256": "587f3f03d3926122a948b3e3a3edd374154ae1bf46cbd73c2cec57e7f63511d9",
+      "bounds": [
+        18,
+        24,
+        238,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/306.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3784,
+      "source_mtime_ns": 1792048540650352900,
+      "canonical_source": "Graphics/Characters/Overworld/306.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "683b382f3b754ab543d54db35ab9971d852970a13e6e0d8f7ae61f5d26fdc7fd",
+      "git_blob": "2867c4f5ab418ccdb7414c9807381c59f73962cb",
+      "reference_blob": "2867c4f5ab418ccdb7414c9807381c59f73962cb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ec453f46c1036e534f418c011356f431fb704ada5ee9f03fd67a7a29c0cdd098",
+      "alpha_sha256": "df8dc613d21370354e507872da76c1afd5ed716cc9afcd5c4db36c472d88256f",
+      "bounds": [
+        2,
+        8,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/307.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2252,
+      "source_mtime_ns": 1792048540650352900,
+      "canonical_source": "Graphics/Characters/Overworld/307.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "0cfbccff1ea0feb1fadc973655588a66f68f5d79cbff8a44192dc9fc8f1da90c",
+      "git_blob": "f4b5581fae6482f37e25591d68ef3454c716741f",
+      "reference_blob": "f4b5581fae6482f37e25591d68ef3454c716741f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "947948a994b632d0cb3e30d5ee30fd0ab2b24e3d9c558317a8601981c7ce92d1",
+      "alpha_sha256": "ab8c37deb5a7e7e443da23bf4eccdd44e026efeeefe54ba69d68b60b80dcccaf",
+      "bounds": [
+        14,
+        28,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/308.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3583,
+      "source_mtime_ns": 1792048540650352900,
+      "canonical_source": "Graphics/Characters/Overworld/308.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "ffa2f89fd5852f1470a2aca88f5467934072318ec56ea44df9ac2dc53205b4cd",
+      "git_blob": "ec0d2200d9249e99526f3d79191bd28df18c2dac",
+      "reference_blob": "ec0d2200d9249e99526f3d79191bd28df18c2dac",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a8edac7a698b75b1e9924d418fdba78d1eb742cf1d9deef645ea5c268eb68093",
+      "alpha_sha256": "1e43042c750994e92eb53fb0a576bd50d517d3b10552b047920bb4fd584ca243",
+      "bounds": [
+        6,
+        14,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/309.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4009,
+      "source_mtime_ns": 1792048540651352700,
+      "canonical_source": "Graphics/Characters/Overworld/309.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8278b6884ae73de54ba9fa39e35ef25f2b9210affa6989fcff733021e70b2483",
+      "git_blob": "14f53e3f9dae9f51836d256f84404bf3adbfbed0",
+      "reference_blob": "14f53e3f9dae9f51836d256f84404bf3adbfbed0",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0ca3036c61ecb5e0a05ce30aad8713159deae2b37d1878102e45c275967cb3e0",
+      "alpha_sha256": "4e8b4b3add3bd3b95697754a4775ca7fe227846a76d2e314ac7480cccb04d198",
+      "bounds": [
+        2,
+        6,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/289_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-193-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/310.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3434,
+      "source_mtime_ns": 1792048540651352700,
+      "canonical_source": "Graphics/Characters/Overworld/310.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "0b045e61006bf7406bb2bcdf4fdb467b25c030d5f8049f805673696e07922bd8",
+      "git_blob": "793e165e6948cfebf184c7c1caf221627a4bb80b",
+      "reference_blob": "793e165e6948cfebf184c7c1caf221627a4bb80b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "55a21d88147ec39aecfe7458c77b851d550b2719e4daa485ade2438914b630ac",
+      "alpha_sha256": "d2cf7a27bd09accc1b8f2bbc3bb5053458277d6e1e030e3334adb2b0e0433664",
+      "bounds": [
+        2,
+        10,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/359_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-193-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/311.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2403,
+      "source_mtime_ns": 1792048540651352700,
+      "canonical_source": "Graphics/Characters/Overworld/311.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "ceeaf4a6958f38d94ecc29bf4ce173d4b945976f6181d2aad01c0aa3982b2251",
+      "git_blob": "14ecc3a10228044961e212606b075ca84fdb6d1a",
+      "reference_blob": "14ecc3a10228044961e212606b075ca84fdb6d1a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c5c780a985e43126ba50bb46c74f55bac7d8d45f8a98f5f46a9e15024aab1a12",
+      "alpha_sha256": "c5719dd896339c26577842d08f736b7acb12121fb186a5fdfd725ca46aed501f",
+      "bounds": [
+        16,
+        24,
+        240,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/355_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-193-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/312.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3795,
+      "source_mtime_ns": 1792048540652352600,
+      "canonical_source": "Graphics/Characters/Overworld/312.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "3e63547fdbebe5366d139c3ad3fe72e54c3b443f260d87ff3458fec9d7abc521",
+      "git_blob": "75a7fd3655c39a9aa22325d2bd60e0416981429c",
+      "reference_blob": "75a7fd3655c39a9aa22325d2bd60e0416981429c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a5d6d0731584d5ae84d4888f9045903e2f0326529e9d4f6ba51047be1582cfcf",
+      "alpha_sha256": "f810d833b314646096c5aaa0d48173ecf80a22c051725226becab93c5b30b2a5",
+      "bounds": [
+        4,
+        12,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/356_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-193-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Overworld/313.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3826,
+      "source_mtime_ns": 1792048540652352600,
+      "canonical_source": "Graphics/Characters/Overworld/313.png",
+      "batch": "batch-239",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "86ed88f837337cf557e164eda0ac9ff317b71596feaaa8738ef106bab0375dcf",
+      "git_blob": "b72c00ea2e4368e90bb6c24a59a9adccca6b83d9",
+      "reference_blob": "b72c00ea2e4368e90bb6c24a59a9adccca6b83d9",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "225d6c10fbe5d30c543b57f6ce95de7b011fec3b7d7e3d8c0815ba7be8dc541c",
+      "alpha_sha256": "b57f790f1a30d013b782c624a9ce12588daa201a87e158d6401e00d5e558f835",
+      "bounds": [
+        2,
+        8,
+        252,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-239-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

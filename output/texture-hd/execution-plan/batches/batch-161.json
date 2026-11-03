@@ -4,7 +4,7 @@
   "priority": "P3",
   "stage": "npc",
   "title": "地图人物、NPC 与其他行走精灵（10/99）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "character",
   "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
@@ -224,5 +224,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-161/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
 }

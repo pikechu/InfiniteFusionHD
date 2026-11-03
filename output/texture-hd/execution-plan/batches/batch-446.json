@@ -4,7 +4,7 @@
   "priority": "P3",
   "stage": "pokemon_alt",
   "title": "宝可梦替换画法与其他静态战斗图（68/94）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "pokemon",
   "processing_notes": "保持物种、姿态、主体大小、定位、透明轮廓和配色；沿用试制风格，正背面、形态和闪光变色需验证。",
@@ -372,5 +372,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "在实际战斗尺寸下核对物种识别、姿态、正背面关系、配色及闪光变色；不以图片清晰度代替身份一致性。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-446/validation.json",
+  "applied_files": 0,
+  "preserved_files": 32
 }

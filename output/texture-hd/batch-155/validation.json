@@ -1,0 +1,900 @@
+{
+  "batch": "batch-155",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/Elaine/Transitions/vsTrainer1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 2609,
+      "source_mtime_ns": 1792048520619684900,
+      "canonical_source": "Graphics/Alternate Trainers/Elaine/Transitions/vsTrainer1.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "13b44d6dd2ed77cf3afaf9ad801f0f145c5966299704ff652c0d2c9b6f0c5aac",
+      "git_blob": "0d1038c79b491efc71559c055b5335c525b37ca8",
+      "reference_blob": "0d1038c79b491efc71559c055b5335c525b37ca8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "bc76093b6b5117c2989a7b063668ed09649f31d27e4f3bcbafbf618c6cbe60f0",
+      "alpha_sha256": "497932140e4d20d134a5ddc86817445455d1f8193d6594cb1cf59c5475adcdeb",
+      "bounds": [
+        17,
+        18,
+        179,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/girl_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7091,
+      "source_mtime_ns": 1792048520633381900,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/girl_bike.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "476491c1e32a96d34723b66ef9cf8e8103031bc963cdeb0d8703dadda57bca91",
+      "git_blob": "47a37b652ced45342b881ca8aeeb4774dbf42ee7",
+      "reference_blob": "47a37b652ced45342b881ca8aeeb4774dbf42ee7",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "574d65a8331f6ccf8658d3ee07a1ad3c77c2a62aa064fba23227f19442749e56",
+      "alpha_sha256": "19cadc0a3c595340ffffc09dcb5c4f61cb91bfeeef1c7a9cacd1509cc1a53516",
+      "bounds": [
+        6,
+        6,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/girl_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 21575,
+      "source_mtime_ns": 1792048520634390800,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/girl_dive_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "758561c95f53ed79c6d55d7e7a69a88227dce8d42e53896614124a1394f9050e",
+      "git_blob": "69538883cb367584f4a2ab4e6386f0b7749e7888",
+      "reference_blob": "69538883cb367584f4a2ab4e6386f0b7749e7888",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "454fd2698a10d9f89065a23b801d830b789647e821a9ee1ae5e538fdbbb2d3be",
+      "alpha_sha256": "d98a70263e7d9928a8a183c6baad30121c48ad31d5b72dbd2d216967e84637e8",
+      "bounds": [
+        8,
+        6,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/girl_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 8393,
+      "source_mtime_ns": 1792048520634390800,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/girl_fish_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "33366a9bfabd74d87b5f405369fea15e315df32055cdf61f8e8d71065f9dbc42",
+      "git_blob": "e6843576a4f785a81a062686318b3a06b605db2d",
+      "reference_blob": "e6843576a4f785a81a062686318b3a06b605db2d",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ae016f8be0f98a7062f9f810b662a07908e236c13a1d7c4a8f8ee7c98f97716c",
+      "alpha_sha256": "33a3689c0d103708ec6530207ff25270a959446d480e86b9bc52485e5c3db474",
+      "bounds": [
+        2,
+        2,
+        366,
+        309
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/girl_fishsurf_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 9645,
+      "source_mtime_ns": 1792048520634390800,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/girl_fishsurf_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "e3199f57993c9feeeac6627b9429e07d8680cf23cc07dcf425a1449938eb9909",
+      "git_blob": "afe057129862f459417fc101aad1aa4b4f7d3430",
+      "reference_blob": "afe057129862f459417fc101aad1aa4b4f7d3430",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "936fe813c5e55f282a685258d3bc16239666a04b0e0281b8f298e2e7a7d7c51f",
+      "alpha_sha256": "cf1471d0fc4cd47efdee1e9c9c87a6e497b055aeedd508697b7b6c5a23926f5c",
+      "bounds": [
+        4,
+        0,
+        366,
+        318
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/girl_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 22551,
+      "source_mtime_ns": 1792048520635390000,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/girl_run.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4f92635050a1832d0872051e583739d7d00978ee842c3e735104e0e4dc32c905",
+      "git_blob": "7ee3327eb6d112737a83ede485d5fba3c2e5f4a3",
+      "reference_blob": "7ee3327eb6d112737a83ede485d5fba3c2e5f4a3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "cd1783887c6d21f1fde42fc5829552c90b55b8950be3685a9ed1262e30495fb6",
+      "alpha_sha256": "b49fe9938e23f05239079822513d746f0772a6b5b37eb4a60028148751c15cc7",
+      "bounds": [
+        6,
+        15,
+        249,
+        255
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/girl_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 22136,
+      "source_mtime_ns": 1792048520635390000,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/girl_surf_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "7fba4dcd249cfbd59b7ec7be5894bdb26f5e214066362a1455deddf532a4c90e",
+      "git_blob": "4b06356eb27dbde0115c34b6d63f6a8e25c954c7",
+      "reference_blob": "4b06356eb27dbde0115c34b6d63f6a8e25c954c7",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0e9cee0c18e6ce6a9bcf2d0bb606ab031edda0dffead921ec0aa662270e16cfa",
+      "alpha_sha256": "4605244e9ced7467cbe5ad60bdf31deb7be0c763a8d2c69c6cca0376bcd9eeae",
+      "bounds": [
+        8,
+        4,
+        248,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/introGirl.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 12319,
+      "source_mtime_ns": 1792048520635390000,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/introGirl.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "2198320f49a2d030837eba8a7068bf68dcf16e7d8ce4f095fce5f1bd1e0f3410",
+      "git_blob": "f7838c6da9f1d08cddaabeeaa21bf215ff7cb1fd",
+      "reference_blob": "f7838c6da9f1d08cddaabeeaa21bf215ff7cb1fd",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4b4f061fe0aa891a6a17245851e8499dd641fa0f1eb6a0e550574b78c65c6fad",
+      "alpha_sha256": "86e64d58b47361266cdd3bad5f5c8892d3090b6e6a2fecc26b481b2364b55e01",
+      "bounds": [
+        21,
+        36,
+        139,
+        148
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/POKEMONTRAINER_Leaf.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 12319,
+      "source_mtime_ns": 1792048520622698400,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/POKEMONTRAINER_Leaf.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8f4a5e1ad9576bf405d5100728b85d2e631e60a708c9e9eece9092d9f48f6797",
+      "git_blob": "204051941aa0a2daed8d4438822ffcdd70b2b298",
+      "reference_blob": "204051941aa0a2daed8d4438822ffcdd70b2b298",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        40,
+        40
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4b4f061fe0aa891a6a17245851e8499dd641fa0f1eb6a0e550574b78c65c6fad",
+      "alpha_sha256": "86e64d58b47361266cdd3bad5f5c8892d3090b6e6a2fecc26b481b2364b55e01",
+      "bounds": [
+        21,
+        36,
+        139,
+        148
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Hex Maniac/introGirl.png",
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 40×40）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/POKEMONTRAINER_Leaf_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 16719,
+      "source_mtime_ns": 1792048520622698400,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/POKEMONTRAINER_Leaf_back.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "938641d622faed779dd4297fb1e3ba96f24000a6194f45c74b7cb6244125191b",
+      "git_blob": "78a61efd1b8ab61410bea30bf01e1611c5259035",
+      "reference_blob": "78a61efd1b8ab61410bea30bf01e1611c5259035",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "trainer_throw",
+      "grid": [
+        5,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "3a9b8f57a677e8e8ecc335969810548fde2ccf22e3ab7593f08188762134394c",
+      "alpha_sha256": "3d84bba2737ad21e4aae5f86269978b44c4d17b1aea4f3f8dd48dde1e1573833",
+      "bounds": [
+        0,
+        1,
+        800,
+        160
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "旧版五格背面条图的姿态/服饰清楚，实际 PictureEx 投掷及回到首格已检查；增加纹理无明确收益，保留原帧序和所有像素。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6276,
+      "source_mtime_ns": 1792048520636390100,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/trchar001.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "c0bcebc76499302234b688646483e61314f74f15157ecfb551cdbe1d4629ce9a",
+      "git_blob": "41b5a06157b41884b5c3956129cc8c91ddb99fbf",
+      "reference_blob": "41b5a06157b41884b5c3956129cc8c91ddb99fbf",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "dd01eed35ce2d1d9c5a4cdc0ecd238f551088fe02a3ad11a5d0f0995a63f7fd7",
+      "alpha_sha256": "8e59668856e5fa58bddb3fcb623cd7463a7fd95bc919a054b9c457f35fa2f63c",
+      "bounds": [
+        10,
+        8,
+        246,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/trchar001_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4616,
+      "source_mtime_ns": 1792048520636390100,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/trchar001_10.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "bcd8a22e69f8cd8bfa7efc2d4e94140f82d9eddf84584a8e47315cd6269605ba",
+      "git_blob": "722086a0d7b91f16324e0bc386053e2dcb329608",
+      "reference_blob": "722086a0d7b91f16324e0bc386053e2dcb329608",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6f8f8c3c26e05118610619074fe1904e9de64937afd0c951a693a281841d2eb0",
+      "alpha_sha256": "b4e0d3fe59997d4720717e7b3f80a41bd2087374910baa294c14013a833600a4",
+      "bounds": [
+        5,
+        6,
+        254,
+        124
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/vsTrainer1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 12906,
+      "source_mtime_ns": 1792048520636390100,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/vsTrainer1.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "91a83e7d72703db614c6022d31cbcc475c7cb7485eee9f7a58001bec9d32e47e",
+      "git_blob": "bc7f910d66c0d5e0b0115d5e94ce4cb7856ac866",
+      "reference_blob": "bc7f910d66c0d5e0b0115d5e94ce4cb7856ac866",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b69abfa260a9075a07843f82f26948c7b03226d129d1d6abd3f545d4d0e31024",
+      "alpha_sha256": "df6de3166712269eb30a03a6da9d144e9cd2c1bf78d58c7238b071e99e7e8196",
+      "bounds": [
+        0,
+        0,
+        226,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Hex Maniac/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 12905,
+      "source_mtime_ns": 1792048520637390200,
+      "canonical_source": "Graphics/Alternate Trainers/Hex Maniac/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "36094f8f1a51f8b3bab801b11e3b5e8e851fc8eabed80be13c62370151de044a",
+      "git_blob": "248d6505295a39e7f935e5078d2b568152fa0f0e",
+      "reference_blob": "248d6505295a39e7f935e5078d2b568152fa0f0e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b69abfa260a9075a07843f82f26948c7b03226d129d1d6abd3f545d4d0e31024",
+      "alpha_sha256": "df6de3166712269eb30a03a6da9d144e9cd2c1bf78d58c7238b071e99e7e8196",
+      "bounds": [
+        0,
+        0,
+        226,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Hex Maniac/vsTrainer1.png",
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8058,
+      "source_mtime_ns": 1792048520637390200,
+      "canonical_source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_bike.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b5d04fa162fccbd575677fb416ce6daf1aa54a8d7cdc7a4e21b534bedeccfdfd",
+      "git_blob": "e1503651e6db54bb16ed74eda7dbd9198d361ccc",
+      "reference_blob": "e1503651e6db54bb16ed74eda7dbd9198d361ccc",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5683b37c57186cec2e505b3149ddaaa09fe6d4365a32f94fd51cc29dc402f2a2",
+      "alpha_sha256": "ea3667b0d2455775a4af3739a865006f803992f54fa3c221ebe2c42b9f9ab42c",
+      "bounds": [
+        6,
+        2,
+        250,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 9452,
+      "source_mtime_ns": 1792048520638389500,
+      "canonical_source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_dive_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "9b19a98c584d348128383fb83d386d75876f542a620dc7cb96f4e5783a427c4f",
+      "git_blob": "e0bf810e48ad9bd4a6cc15f885cbf6166c6ecb6f",
+      "reference_blob": "e0bf810e48ad9bd4a6cc15f885cbf6166c6ecb6f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e5e36ff8538f0325668895b65f79e268eb334a99a966e72f23c305319dba3a95",
+      "alpha_sha256": "b653ef6c60230c14d9c38ee019198cde7928c02089a5113b51fc38ec40a746c0",
+      "bounds": [
+        8,
+        0,
+        250,
+        255
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 8196,
+      "source_mtime_ns": 1792048520644389600,
+      "canonical_source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_fish_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "28fae8d37409c73f4ab68d206f44c89e72c21a5ee859d4e378fc9fc364f6c4f2",
+      "git_blob": "efb70ce3e146ca24d70ea2b02cd9c39199ed5412",
+      "reference_blob": "efb70ce3e146ca24d70ea2b02cd9c39199ed5412",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ca5a10cfe2e15771ce1a58f7cd6e90fa734dec953600fc98ded654097c32fb1b",
+      "alpha_sha256": "d9f17478f1eda1c99ae014ff51b43d43ed9569837ebdd9d27f4412915923bc5a",
+      "bounds": [
+        3,
+        0,
+        372,
+        301
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5790,
+      "source_mtime_ns": 1792048520644389600,
+      "canonical_source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_run.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "553468017b666e41cca350917948316124e5d25a5c9f27dbfea15a534a0783e2",
+      "git_blob": "2dc68c0180b1d5e4bd1c31b3fce083f91b51409c",
+      "reference_blob": "2dc68c0180b1d5e4bd1c31b3fce083f91b51409c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "797d9a8e33f5d98b951e7d096bea78918b8fc7cc186a45d1f7f41e88167bb703",
+      "alpha_sha256": "e2ce33620319c9477534d3c2e30a006f1097d1969281e10f91ad4c80c6b36a3a",
+      "bounds": [
+        6,
+        0,
+        252,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 8824,
+      "source_mtime_ns": 1792048520645390300,
+      "canonical_source": "Graphics/Alternate Trainers/Jotaro/Characters/boy_surf_offset.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "d16d7a8ab69b03ee121dd2f4675258f74e0458572b288f6c3dbeab8083fa9e63",
+      "git_blob": "ecc009a11d17d9d041d8c0421574a446ce3feb5c",
+      "reference_blob": "ecc009a11d17d9d041d8c0421574a446ce3feb5c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e24f6ab7d1a3788d4e31191364c36e0a51ce223fc7ca3259713974939a982521",
+      "alpha_sha256": "bc928e67092ad4bb0916dadc2c9d0f7251e9bc59b17fb87f56eaf9783ca63466",
+      "bounds": [
+        8,
+        2,
+        246,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-155-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Jotaro/Characters/trainer000.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 4042,
+      "source_mtime_ns": 1792048520645390300,
+      "canonical_source": "Graphics/Alternate Trainers/Jotaro/Characters/trainer000.png",
+      "batch": "batch-155",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "dc1cca32e9f5cf8844b38fd10327313b60e1b1fe3032f096e68a3af81bfeed83",
+      "git_blob": "96d203d28957436d0a0f7a096c3126e9c16fd08e",
+      "reference_blob": "96d203d28957436d0a0f7a096c3126e9c16fd08e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7b9dccb753caf6da5cf5994e503b75ea28bfb79e215c032118a71d6339ba8218",
+      "alpha_sha256": "ae9e8772f143702da5f41d3d499fde06e5c1d81a342c58ab9aaff53f8ed1fdef",
+      "bounds": [
+        32,
+        16,
+        132,
+        160
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-155-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Current source and delivery equal the source snapshot. Frame/state/tint outputs therefore remain unchanged for identical engine inputs. This is a preservation decision, not an AI redraw claim."
+}
