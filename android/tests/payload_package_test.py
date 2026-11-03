@@ -42,6 +42,51 @@ class PayloadPackageTest(unittest.TestCase):
             manifest = writer.manifest(False)
         return manifest
 
+    def test_host_check_failure_cleans_only_its_own_run_directory(self):
+        powershell = shutil.which("powershell") or shutil.which("pwsh")
+        if sys.platform != "win32" or not powershell:
+            self.skipTest("Windows PowerShell is required for the host runner")
+        fixture = self.base / "host-runner"
+        runner = fixture / "scripts/android/run_host_checks.ps1"
+        runner.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT / "scripts/android/run_host_checks.ps1", runner)
+        jdk = fixture / "temp/tools/jdk-17.0.20.1+1/bin"
+        jdk.mkdir(parents=True)
+        for name in ("java.exe", "javac.exe"):
+            (jdk / name).write_bytes(b"not executed before the injected Ruby failure")
+        ruby = fixture / "fail-ruby.cmd"
+        ruby.write_text("@echo off\nexit /b 7\n", encoding="ascii")
+        peer = fixture / "temp/host-checks/existing-run/keep.txt"
+        peer.parent.mkdir(parents=True)
+        peer.write_bytes(b"preserve another run")
+        result = package_game.subprocess.run([powershell, "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(runner),
+            "-RubyPath", str(ruby), "-PythonPath", sys.executable], cwd=fixture, capture_output=True, text=True, timeout=25)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Ruby platform contract checks failed", result.stderr)
+        self.assertIn("HOST_CHECK_CLEANUP_PASS", result.stdout)
+        self.assertEqual(list(peer.parent.parent.iterdir()), [peer.parent])
+        self.assertEqual(peer.read_bytes(), b"preserve another run")
+
+    def test_native_runtime_config_uses_utf8_without_bom(self):
+        powershell = shutil.which("powershell") or shutil.which("pwsh")
+        if sys.platform != "win32" or not powershell:
+            self.skipTest("Windows PowerShell is required for the native runtime helper")
+        fixture = self.base / "native-runtime"
+        helper = fixture / "scripts/multiplayer/prepare-runtime.ps1"
+        helper.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT / "scripts/multiplayer/prepare-runtime.ps1", helper)
+        (fixture / "Game.exe").write_bytes(b"not executed")
+        (fixture / "Game.ini").write_bytes(b"[Game]\n")
+        probe = fixture / "probe.rb"
+        probe.write_text("raise 'not executed'\n", encoding="utf-8")
+        package_game.subprocess.run([powershell, "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(helper),
+            "-Profile", "config-probe", "-CustomScript", str(probe)], cwd=fixture, capture_output=True, text=True, check=True, timeout=25)
+        raw = (fixture / "temp/multiplayer/config-probe/mkxp.json").read_bytes()
+        self.assertFalse(raw.startswith(b"\xef\xbb\xbf"), "native runtime must receive BOM-free JSON")
+        config = json.loads(raw.decode("utf-8"))
+        self.assertEqual(Path(config["gameFolder"]), fixture)
+        self.assertEqual(Path(config["customScript"]), probe)
+
     def offline_resources(self, root):
         for name in build_manifest.DATA:
             path = root / name

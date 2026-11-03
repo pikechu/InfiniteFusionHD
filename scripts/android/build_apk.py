@@ -285,7 +285,11 @@ def main():
                 or hashlib.sha256(apk.read(input_bridge_record["path"])).hexdigest() != input_bridge_record["sha256"]):
             raise SystemExit("Signed APK is missing the required virtual input helper or its hash differs")
     run([tools / "aapt2.exe", "dump", "badging", final], stdout=(work / "apk-badging.txt").open("w", encoding="utf-8"))
-    sha = hashlib.file_digest(final.open("rb"), "sha256").hexdigest()
+    checksum = hashlib.sha256()
+    with final.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            checksum.update(chunk)
+    sha = checksum.hexdigest()
     (output / (final.name + ".sha256")).write_text(sha + "  " + final.name + "\n", encoding="utf-8")
     assert_sources_unchanged(source_hashes)
     record = {"apk": final.name, "sha256": sha, "bytes": final.stat().st_size, "runtime": json.loads((ROOT / "android/runtime.lock.json").read_text()), "payload": manifest["id"], "runtimeOnly": manifest.get("runtimeOnly", False), "networkBridge": args.with_network, "sources": source_hashes, "compileSdk": 35, "buildTools": "35.0.0", "status": "built; gameplay validation pending"}

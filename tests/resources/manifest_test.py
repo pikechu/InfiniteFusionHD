@@ -1,8 +1,11 @@
 """Bundled-data manifest guards use real bytes and no network."""
 from pathlib import Path
 import json
+import os
 import shutil
+import stat
 import sys
+import subprocess
 import unittest
 import uuid
 
@@ -19,7 +22,11 @@ class ManifestTest(unittest.TestCase):
 
     def tearDown(self):
         self.assertEqual(self.root.resolve().parent, self.parent)
-        shutil.rmtree(self.root)
+        def remove_readonly(function, path, error):
+            self.assertTrue(Path(path).resolve().is_relative_to(self.root.resolve()))
+            os.chmod(path, stat.S_IREAD | stat.S_IWRITE)
+            function(path)
+        shutil.rmtree(self.root, onerror=remove_readonly)
 
     def test_all_data_changes_and_missing_entries_are_detected(self):
         root = self.root
@@ -57,6 +64,26 @@ class ManifestTest(unittest.TestCase):
         self.assertEqual([row for row in after["files"] if row["kind"] == "image"], [image])
         self.assertEqual(after["upstream_commit"], before["upstream_commit"])
         check_bundled_data(after, root)
+
+    def test_git_checkout_preserves_resource_bytes_across_line_ending_settings(self):
+        root = self.root
+        (root / ".gitattributes").write_bytes((ROOT / ".gitattributes").read_bytes())
+        raw = b"first line\nsecond line\n"
+        names = (*DATA, "Data/shop/catalog.json", "Data/offline-resources.json", "Data/multiplayer-build.json")
+        for name in names:
+            path = root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(raw)
+        manifest = seal("a" * 40, bundled_data(root))
+        def git(*args):
+            return subprocess.check_output(["git", "-C", str(root), *args], stderr=subprocess.PIPE)
+        git("init", "-q")
+        git("-c", "core.autocrlf=true", "add", ".gitattributes", "Data")
+        for setting in ("false", "true"):
+            git("-c", "core.autocrlf=" + setting, "checkout-index", "-a", "-f")
+            check_bundled_data(manifest, root)
+            for name in names:
+                self.assertEqual((root / name).read_bytes(), raw, name)
 
 
 if __name__ == "__main__":

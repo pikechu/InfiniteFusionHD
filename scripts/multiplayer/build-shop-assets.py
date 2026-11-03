@@ -79,7 +79,7 @@ def main():
     catalog = {"version": 1, "currency": "RP", "base": base, "assets": assets, "entitlements": entitlements, "products": products}
     directory = ROOT / "Data/shop"
     directory.mkdir(exist_ok=True)
-    (directory / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (directory / "catalog.json").write_bytes((json.dumps(catalog, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
     print(f"SHOP_ASSETS_PASS products={len(products)} sprites={len(assets)}")
 
 

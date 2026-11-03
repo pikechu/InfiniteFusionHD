@@ -53,5 +53,6 @@ if ($CustomScript) {
     $resolvedScript = (Resolve-Path -LiteralPath $CustomScript).Path
     $configuration.customScript = $resolvedScript.Replace('\','/')
 }
-$configuration | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $stage 'mkxp.json') -Encoding utf8
+# Keep identical BOM-free JSON under Windows PowerShell and PowerShell 7.
+[IO.File]::WriteAllText((Join-Path $stage 'mkxp.json'), ($configuration | ConvertTo-Json -Depth 5), [Text.UTF8Encoding]::new($false))
 Write-Output $stage

@@ -15,6 +15,7 @@
 - 项目地址统一为 `https://github.com/pikechu/InfiniteFusionHD`，游戏版本、资源清单、神秘礼物和 Windows 更新目标均使用 `main`。资源图片固定到 IF 源仓库的具体提交，辅助数据由本仓库维护。
 - 更新 IF 资源清单：运行 `python scripts/resources/build_manifest.py`。它只读取 GitHub 文件目录和校验值，不下载 1.23 GB 图片。网络或目录截断会失败，不发布不完整清单。
 - 仅修改本地图鉴或索引后：运行 `python scripts/resources/build_manifest.py --refresh-data`，重新计算全部 6 份辅助文件的长度、SHA-256 和清单版本，不访问网络，也不修改图鉴内容或已固定的图片条目。`python scripts/resources/build_manifest.py --check-data` 只检查清单与本地数据是否一致，不写文件或联网。
+- 被校验的文本数据固定使用 LF 行尾，避免 Windows Git 检出转换使发布文件与清单哈希不一致。清单与商店目录生成器同样固定写入 LF；`tests/resources/manifest_test.py` 会在不同 `core.autocrlf` 设置下真实检出并复核校验值。
 - Android 完整打包和增量更新会将资源清单与同一源码目录的 6 份辅助数据一起打包；使用其他素材目录时也不会混入旧版辅助数据。清单过期、复用的旧 payload 漏带或保留旧数据、打包期间资源被修改，均会在构建时明确报错。先刷新清单，再更新 payload 后重试。
 - 将 `Data/offline-resources.json` 与对应的辅助文件一起提交、发布到 `main`。清单若先于对应文件发布，客户端会拒绝哈希不匹配的下载并提示重试。新资源提示以本仓库发布的清单为准，不在游玩中扫描第三方仓库。
 - Windows 包含 `Data/resource-download.ps1`、更新批处理及其 Git 工具。桌面下载使用独立、隐藏的 PowerShell HTTPS 进程，不在 Ruby 工作线程使用原生 HTTPLite。Android 使用现有异步 Java HTTPS 桥；需要带 INTERNET 权限和新版桥的网络 APK，原离线 APK 不会因本改动获得系统联网权限。

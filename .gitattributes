@@ -3,6 +3,14 @@
 /Mods/*.rb text eol=lf
 /Data/*.dat -text
 /Data/*.rxdata -text
+# Pinned resource bytes and compatibility inputs must survive Windows checkout.
+/Data/pokedex/*.json text eol=lf
+/Data/sprites/BASE_SPRITES text eol=lf
+/Data/sprites/CUSTOM_SPRITES text eol=lf
+/Data/sprites/*.csv text eol=lf
+/Data/shop/*.json text eol=lf
+/Data/offline-resources.json text eol=lf
+/Data/multiplayer-build.json text eol=lf
 /server/multiplayer/*.json text eol=lf
 /Fonts/*.otf -text
 /docs/multiplayer-functional-spec.zh-CN.md whitespace=-blank-at-eol,-blank-at-eof

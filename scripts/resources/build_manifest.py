@@ -109,7 +109,7 @@ if __name__ == "__main__":
         args.output.parent.mkdir(parents=True, exist_ok=True)
         temporary = args.output.with_suffix(".json.pending")
         try:
-            temporary.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            temporary.write_bytes((json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
             temporary.replace(args.output)
         finally:
             temporary.unlink(missing_ok=True)
