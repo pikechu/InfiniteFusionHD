@@ -400,7 +400,7 @@ class PokeBattle_Move
         multipliers[:defense_multiplier] *= 1.5
       end
     when :Hail
-      if target.pbHasType?(:ICE) && (physicalMove? || @function = "122") && ($PokemonSystem.modernhail && $PokemonSystem.modernhail != 0)
+      if target.pbHasType?(:ICE) && (physicalMove? || @function == "122") && ($PokemonSystem.modernhail && $PokemonSystem.modernhail != 0)
         multipliers[:defense_multiplier] *= 1.5
       end
     end

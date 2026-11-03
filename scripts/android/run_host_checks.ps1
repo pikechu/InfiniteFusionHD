@@ -24,7 +24,7 @@ try {
         & $RubyPath --disable-gems "android/tests/$testName.rb"
         if ($LASTEXITCODE -ne 0) { throw "Failed: $testName" }
     }
-    foreach ($test in @('wearable', 'door_events', 'outfit_cache', 'startup_downloads', 'battle_sprites')) {
+    foreach ($test in @('wearable', 'door_events', 'outfit_cache', 'startup_downloads', 'battle_sprites', 'character_bitmap', 'hail_damage')) {
         & $RubyPath --disable-gems "tests/gameplay/${test}_test.rb"
         if ($LASTEXITCODE -ne 0) { throw "Local gameplay regression failed: $test" }
     }
