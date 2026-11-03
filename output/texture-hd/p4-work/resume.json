@@ -1,32 +1,41 @@
 {
-    "status":  "saved_awaiting_user",
-    "saved_on":  "2026-11-03",
-    "completed_through":  "batch-577",
-    "next_batch":  "batch-578",
-    "completed_files":  1776,
-    "remaining_files":  3289,
-    "applied_files":  0,
-    "preserved_files":  1776,
-    "visual_review_through":  "batch-616",
-    "candidate_pending_review":  [
-
-                                 ],
-    "ready_pending_application":  [
-
-                                  ],
-    "native_proofs":  {
-                          "icons":  "passed",
-                          "windows":  "passed with recorded inherited compatibility issues",
-                          "effects":  "passed, not yet registered in native-proofs.json",
-                          "animated":  "native playback passed; external GIF pixel verification incomplete"
-                      },
-    "outstanding":  [
-                        "Resume batch receipts at 578; reviewed pages through 616 are saved, but only 541-577 are completed.",
-                        "Register effects proof after checking its consumer hashes; review effect pages and preserve out-of-sheet pattern findings.",
-                        "run_p4_animated.py failed on hidden RGB at transparent pixels in 137.94.gif frame 0; no pixel verification was accepted. Exports were deleted in finally. Review visible-RGB comparison before rerunning.",
-                        "164.267.gif has variable source frame delays; native Bitmap uses constant 20 fps. Native cycling is not proof that original timing is preserved.",
-                        "Do not treat generic donor-strip decoding as current battler animation binding or complete gameplay coverage.",
-                        "Weather, remaining visual review and later P4 batches still require work. P4 and P5 remain incomplete."
-                    ],
-    "cleanup":  "output/texture-hd/p4-evidence/checkpoint-cleanup.json"
+  "status": "completed",
+  "completed_on": "2026-11-03",
+  "completed_through": "batch-816",
+  "next_batch": null,
+  "next_global_batch": "batch-817",
+  "candidate_pending_review": [],
+  "ready_pending_application": [],
+  "completed_files": 5065,
+  "applied_files": 0,
+  "preserved_files": 5065,
+  "native_proofs": {
+    "icons": {
+      "review": "output/texture-hd/p4-evidence/icons-review.json",
+      "cleanup": "output/texture-hd/p2-evidence/dex/texture-p2-dex-p4-icons-20261102-cleanup.json"
+    },
+    "footprint": {
+      "review": "output/texture-hd/p4-evidence/icons-review.json",
+      "cleanup": "output/texture-hd/p2-evidence/dex/texture-p2-dex-p4-icons-20261102-cleanup.json"
+    },
+    "windows": {
+      "review": "output/texture-hd/p4-evidence/windows-review.json",
+      "cleanup": "output/texture-hd/p2-evidence/dex/texture-p2-dex-p4-windows-final-20261102-cleanup.json"
+    },
+    "effects": {
+      "review": "output/texture-hd/p4-evidence/effects-review.json",
+      "cleanup": "output/texture-hd/p2-evidence/dex/texture-p2-dex-p4-effects-20261102-cleanup.json"
+    },
+    "animated": {
+      "review": "output/texture-hd/p4-evidence/animated-review.json",
+      "cleanup": "output/texture-hd/p2-evidence/dex/texture-p2-dex-p4-animated-final-20261103-cleanup.json"
+    },
+    "weather": {
+      "review": "output/texture-hd/p4-evidence/weather-review.json",
+      "cleanup": "output/texture-hd/p2-evidence/dex/texture-p2-dex-p4-weather-final-20261103-cleanup.json"
+    }
+  },
+  "compatibility_findings": "See each native review and per-file preservation reasons; no game logic repaired.",
+  "verification": "output/texture-hd/p4-evidence/checkpoint-verification.json",
+  "scope_boundary": "P5 remains planned. Full gameplay, Android devices, release packaging and inactive donor binding are not certified."
 }

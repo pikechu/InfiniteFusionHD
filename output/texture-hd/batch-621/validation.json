@@ -1,0 +1,120 @@
+{
+  "batch": "batch-621",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 3,
+  "entries": [
+    {
+      "source": "Graphics/Windowskins/SpeechShow.png",
+      "size": [
+        192,
+        128
+      ],
+      "source_bytes": 286,
+      "source_mtime_ns": 1792048556225560600,
+      "canonical_source": "Graphics/Windowskins/SpeechShow.png",
+      "batch": "batch-621",
+      "stage": "windows",
+      "sha256": "333f7a5a695df77bee19270094aa3f87e26d03b7d3f27ef7e251cf63ec7abf45",
+      "git_blob": "23e4e93efc12b0c18a375ef3a9614cbac5abfc69",
+      "reference_blob": "23e4e93efc12b0c18a375ef3a9614cbac5abfc69",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "ef8a6d3fa3bc621ffed413bbe906fad644ef301eedd392d73d6bcb95c0d509e1",
+          "alpha_sha256": "2c35c1bf9896233fb21d2df4f9ac5d971b1fe2b1c697e6d368844612030ab30f",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "窗口边框、光标、箭头、文字底色与重复切片已经清楚，保留原图及侧车配置。真实窗口组件按中英文、两种尺寸、非零开合及完整暂停/光标循环检查；原有全闭窗口异常单独记录，不修改游戏代码掩盖问题。",
+      "visual_review_page": "review-621-01.png"
+    },
+    {
+      "source": "Graphics/Windowskins/Window.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 1982,
+      "source_mtime_ns": 1792048556226558700,
+      "canonical_source": "Graphics/Windowskins/Window.png",
+      "batch": "batch-621",
+      "stage": "windows",
+      "sha256": "b20bb5d5fa35f0b9e56563e8b4599bcc4c04559ea1e435e53607f32a2c75ca1e",
+      "git_blob": "9d14f8486dca179d15b4e04df810fc6164baa8ec",
+      "reference_blob": "9d14f8486dca179d15b4e04df810fc6164baa8ec",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "55cfdf319f98d726ed81345a74d2aaeaebf7425f6bc34e391bde9f22d699a29f",
+          "alpha_sha256": "c1713bb51857787abc7b23f60a16c326a10c6b7bad85f3ab419d660c4fca1177",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "窗口边框、光标、箭头、文字底色与重复切片已经清楚，保留原图及侧车配置。真实窗口组件按中英文、两种尺寸、非零开合及完整暂停/光标循环检查；原有全闭窗口异常单独记录，不修改游戏代码掩盖问题。",
+      "visual_review_page": "review-621-01.png"
+    },
+    {
+      "source": "Graphics/Windowskins/Windowskin.PNG",
+      "size": [
+        192,
+        128
+      ],
+      "source_bytes": 289,
+      "source_mtime_ns": 1792048556226558700,
+      "canonical_source": "Graphics/Windowskins/Windowskin.PNG",
+      "batch": "batch-621",
+      "stage": "windows",
+      "sha256": "e3d05f3b944f619ce3aae5a2991531c92aa77827500cb08c52f61298699f3501",
+      "git_blob": "bb52d4dc4782a8a34be11d358eed90853a9742c6",
+      "reference_blob": "bb52d4dc4782a8a34be11d358eed90853a9742c6",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "475745a653672163f2369f34cfea94ea401333f42e3c1039b2ca2542bdad0832",
+          "alpha_sha256": "e5fa24e18ce45087462a5665bafd9b3363597c090c3674b9c661031ef4a6da8e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "原有兼容问题：Uppercase PNG suffix is rejected by full-path resolver; stem resolves lowercase extension which the native virtual filesystem does not load. Explicit original-case AnimatedBitmap loads 192x128 correctly.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "visual_review_page": "review-621-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/windows-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "82 skins through SpriteWindow_Base.setSkin and one uppercase-extension compatibility source via explicit original-case AnimatedBitmap plus the same window compositor; original files retained. Actual XP/VX/custom formats and sidecars, two sizes, nonzero openness 1/128/255, scroll/cursor and complete pause/cursor cycles under a deterministic clock, in English/Chinese. Existing generic zero-openness RangeError and uppercase resolver mismatch are separately reported without changing game code. Not every dialogue/event or all text content.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

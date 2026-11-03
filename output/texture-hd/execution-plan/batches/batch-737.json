@@ -4,7 +4,7 @@
   "priority": "P4",
   "stage": "effects",
   "title": "招式与战斗特效帧表（116/116）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "effect",
   "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -73,5 +73,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-737/validation.json",
+  "applied_files": 0,
+  "preserved_files": 5
 }

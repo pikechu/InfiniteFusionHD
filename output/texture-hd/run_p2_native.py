@@ -1,9 +1,9 @@
 """Run an isolated native preview with a deadline and immediate log cleanup."""
 from pathlib import Path
-import os,re,subprocess,sys,time,json
+import os,re,subprocess,sys,time,json,shutil
 ROOT=Path(__file__).resolve().parents[2]
 OUT=Path(__file__).resolve().parent
-PWSH=Path('D:/Users/meikun.zhang/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe')
+PWSH=Path(shutil.which('pwsh') or shutil.which('powershell') or 'powershell.exe')
 
 def run(script,profile,timeout=240):
  assert re.fullmatch(r'texture-p2-dex-[a-z0-9-]+',profile),profile
@@ -15,7 +15,9 @@ def run(script,profile,timeout=240):
   stage.mkdir(parents=True,exist_ok=True)
   diagnostic=OUT/'p2-evidence/dex'/f'{profile}-entry-error.txt';diagnostic.parent.mkdir(parents=True,exist_ok=True)
   entry.write_text('begin\n load '+json.dumps(script.as_posix(),ensure_ascii=False)+'\nrescue Exception => error\n File.write('+json.dumps(diagnostic.as_posix(),ensure_ascii=False)+', "#{error.class}: #{error.message.to_s[0,1600]}\\n#{(error.backtrace || []).first(8).join("\\n")}")\n exit!(1)\nend\n',encoding='utf-8')
-  subprocess.run([str(PWSH),'-NoProfile','-File',str(ROOT/'scripts/multiplayer/prepare-runtime.ps1'),'-Profile',profile,'-CustomScript',str(entry)],cwd=ROOT,check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=60,creationflags=subprocess.CREATE_NO_WINDOW)
+  subprocess.run([str(PWSH),'-NoProfile','-ExecutionPolicy','Bypass','-File',str(ROOT/'scripts/multiplayer/prepare-runtime.ps1'),'-Profile',profile,'-CustomScript',str(entry)],cwd=ROOT,check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=60,creationflags=subprocess.CREATE_NO_WINDOW)
+  config=stage/'mkxp.json'
+  config.write_text(config.read_text(encoding='utf-8-sig'),encoding='utf-8')
   env=os.environ.copy();env.pop('ANDROID_VERBOSE',None)
   env.update(KIF_MULTIPLAYER_SAVE_DIR=str(stage/'saves'),KIF_MULTIPLAYER_PROFILE=profile,PYTHONDONTWRITEBYTECODE='1')
   process=subprocess.Popen([str(stage/'Game.exe')],cwd=stage,env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=subprocess.CREATE_NO_WINDOW)

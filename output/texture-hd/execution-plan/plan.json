@@ -8,7 +8,7 @@
   "already_applied_images": 86,
   "remaining_images": 18579,
   "batch_count": 853,
-  "next_batch": "batch-578",
+  "next_batch": "batch-817",
   "priorities": [
     {
       "priority": "P1",
@@ -45,11 +45,11 @@
       "batches": 276,
       "first": "batch-541",
       "last": "batch-816",
-      "status": "in_progress",
-      "completed_files": 1776,
+      "status": "completed",
+      "completed_files": 5065,
       "applied_files": 0,
-      "preserved_files": 1776,
-      "remaining_files": 3289
+      "preserved_files": 5065,
+      "remaining_files": 0
     },
     {
       "priority": "P5",
@@ -972,10 +972,10 @@
         "batch-603",
         "batch-604"
       ],
-      "status": "in_progress",
-      "completed_files": 1776,
+      "status": "completed",
+      "completed_files": 3066,
       "applied_files": 0,
-      "preserved_files": 1776
+      "preserved_files": 3066
     },
     {
       "stage": "footprint",
@@ -996,10 +996,10 @@
         "batch-614",
         "batch-615"
       ],
-      "status": "planned",
-      "completed_files": 0,
+      "status": "completed",
+      "completed_files": 654,
       "applied_files": 0,
-      "preserved_files": 0
+      "preserved_files": 654
     },
     {
       "stage": "windows",
@@ -1015,10 +1015,10 @@
         "batch-620",
         "batch-621"
       ],
-      "status": "planned",
-      "completed_files": 0,
+      "status": "completed",
+      "completed_files": 83,
       "applied_files": 0,
-      "preserved_files": 0
+      "preserved_files": 83
     },
     {
       "stage": "effects",
@@ -1144,10 +1144,10 @@
         "batch-736",
         "batch-737"
       ],
-      "status": "planned",
-      "completed_files": 0,
+      "status": "completed",
+      "completed_files": 925,
       "applied_files": 0,
-      "preserved_files": 0
+      "preserved_files": 925
     },
     {
       "stage": "weather",
@@ -1189,10 +1189,10 @@
         "batch-768",
         "batch-769"
       ],
-      "status": "planned",
-      "completed_files": 0,
+      "status": "completed",
+      "completed_files": 243,
       "applied_files": 0,
-      "preserved_files": 0
+      "preserved_files": 243
     },
     {
       "stage": "animated",
@@ -1249,10 +1249,10 @@
         "batch-815",
         "batch-816"
       ],
-      "status": "planned",
-      "completed_files": 0,
+      "status": "completed",
+      "completed_files": 94,
       "applied_files": 0,
-      "preserved_files": 0
+      "preserved_files": 94
     },
     {
       "stage": "archive",
@@ -22126,7 +22126,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（38/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22144,7 +22144,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-578/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-579",
@@ -22152,7 +22155,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（39/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22170,7 +22173,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-579/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-580",
@@ -22178,7 +22184,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（40/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22196,7 +22202,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-580/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-581",
@@ -22204,7 +22213,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（41/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22222,7 +22231,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-581/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-582",
@@ -22230,7 +22242,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（42/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22248,7 +22260,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-582/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-583",
@@ -22256,7 +22271,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（43/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22274,7 +22289,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-583/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-584",
@@ -22282,7 +22300,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（44/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22300,7 +22318,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-584/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-585",
@@ -22308,7 +22329,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（45/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22326,7 +22347,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-585/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-586",
@@ -22334,7 +22358,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（46/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22352,7 +22376,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-586/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-587",
@@ -22360,7 +22387,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（47/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22378,7 +22405,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-587/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-588",
@@ -22386,7 +22416,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（48/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22404,7 +22434,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-588/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-589",
@@ -22412,7 +22445,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（49/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22430,7 +22463,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-589/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-590",
@@ -22438,7 +22474,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（50/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22456,7 +22492,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-590/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-591",
@@ -22464,7 +22503,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（51/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22482,7 +22521,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-591/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-592",
@@ -22490,7 +22532,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（52/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22508,7 +22550,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-592/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-593",
@@ -22516,7 +22561,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（53/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22534,7 +22579,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-593/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-594",
@@ -22542,7 +22590,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（54/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22560,7 +22608,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-594/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-595",
@@ -22568,7 +22619,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（55/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22586,7 +22637,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-595/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-596",
@@ -22594,7 +22648,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（56/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22612,7 +22666,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-596/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-597",
@@ -22620,7 +22677,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（57/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22638,7 +22695,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-597/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-598",
@@ -22646,7 +22706,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（58/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22664,7 +22724,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-598/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-599",
@@ -22672,7 +22735,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（59/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22690,7 +22753,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-599/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-600",
@@ -22698,7 +22764,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（60/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22716,7 +22782,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-600/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-601",
@@ -22724,7 +22793,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（61/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22742,7 +22811,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-601/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-602",
@@ -22750,7 +22822,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（62/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22768,7 +22840,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-602/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-603",
@@ -22776,7 +22851,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（63/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22794,7 +22869,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-603/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-604",
@@ -22802,7 +22880,7 @@
       "priority": "P4",
       "stage": "icons",
       "title": "宝可梦小图标与道具图标（64/64）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "icon",
       "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -22820,7 +22898,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-604/validation.json",
+      "applied_files": 0,
+      "preserved_files": 42
     },
     {
       "id": "batch-605",
@@ -22828,7 +22909,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（1/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22843,7 +22924,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-605/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-606",
@@ -22851,7 +22935,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（2/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22868,7 +22952,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-606/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-607",
@@ -22876,7 +22963,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（3/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22893,7 +22980,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-607/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-608",
@@ -22901,7 +22991,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（4/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22918,7 +23008,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-608/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-609",
@@ -22926,7 +23019,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（5/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22943,7 +23036,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-609/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-610",
@@ -22951,7 +23047,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（6/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22968,7 +23064,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-610/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-611",
@@ -22976,7 +23075,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（7/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -22993,7 +23092,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-611/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-612",
@@ -23001,7 +23103,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（8/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -23018,7 +23120,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-612/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-613",
@@ -23026,7 +23131,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（9/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -23043,7 +23148,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-613/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-614",
@@ -23051,7 +23159,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（10/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -23068,7 +23176,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-614/validation.json",
+      "applied_files": 0,
+      "preserved_files": 64
     },
     {
       "id": "batch-615",
@@ -23076,7 +23187,7 @@
       "priority": "P4",
       "stage": "footprint",
       "title": "足迹、阴影、小型符号与功能遮罩（11/11）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "mask",
       "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
@@ -23093,7 +23204,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-615/validation.json",
+      "applied_files": 0,
+      "preserved_files": 14
     },
     {
       "id": "batch-616",
@@ -23101,7 +23215,7 @@
       "priority": "P4",
       "stage": "windows",
       "title": "窗口皮肤与边框切片（1/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "windowskin",
       "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -23123,7 +23237,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-616/validation.json",
+      "applied_files": 0,
+      "preserved_files": 16
     },
     {
       "id": "batch-617",
@@ -23131,7 +23248,7 @@
       "priority": "P4",
       "stage": "windows",
       "title": "窗口皮肤与边框切片（2/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "windowskin",
       "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -23154,7 +23271,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-617/validation.json",
+      "applied_files": 0,
+      "preserved_files": 16
     },
     {
       "id": "batch-618",
@@ -23162,7 +23282,7 @@
       "priority": "P4",
       "stage": "windows",
       "title": "窗口皮肤与边框切片（3/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "windowskin",
       "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -23185,7 +23305,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-618/validation.json",
+      "applied_files": 0,
+      "preserved_files": 16
     },
     {
       "id": "batch-619",
@@ -23193,7 +23316,7 @@
       "priority": "P4",
       "stage": "windows",
       "title": "窗口皮肤与边框切片（4/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "windowskin",
       "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -23216,7 +23339,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-619/validation.json",
+      "applied_files": 0,
+      "preserved_files": 16
     },
     {
       "id": "batch-620",
@@ -23224,7 +23350,7 @@
       "priority": "P4",
       "stage": "windows",
       "title": "窗口皮肤与边框切片（5/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "windowskin",
       "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -23247,7 +23373,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-620/validation.json",
+      "applied_files": 0,
+      "preserved_files": 16
     },
     {
       "id": "batch-621",
@@ -23255,7 +23384,7 @@
       "priority": "P4",
       "stage": "windows",
       "title": "窗口皮肤与边框切片（6/6）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "windowskin",
       "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -23278,7 +23407,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-621/validation.json",
+      "applied_files": 0,
+      "preserved_files": 3
     },
     {
       "id": "batch-622",
@@ -23286,7 +23418,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（1/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23301,7 +23433,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-622/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-623",
@@ -23309,7 +23444,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（2/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23326,7 +23461,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-623/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-624",
@@ -23334,7 +23472,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（3/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23351,7 +23489,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-624/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-625",
@@ -23359,7 +23500,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（4/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23376,7 +23517,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-625/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-626",
@@ -23384,7 +23528,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（5/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23401,7 +23545,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-626/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-627",
@@ -23409,7 +23556,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（6/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23426,7 +23573,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-627/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-628",
@@ -23434,7 +23584,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（7/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23451,7 +23601,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-628/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-629",
@@ -23459,7 +23612,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（8/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23476,7 +23629,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-629/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-630",
@@ -23484,7 +23640,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（9/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23501,7 +23657,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-630/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-631",
@@ -23509,7 +23668,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（10/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23526,7 +23685,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-631/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-632",
@@ -23534,7 +23696,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（11/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23551,7 +23713,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-632/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-633",
@@ -23559,7 +23724,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（12/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23576,7 +23741,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-633/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-634",
@@ -23584,7 +23752,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（13/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23601,7 +23769,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-634/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-635",
@@ -23609,7 +23780,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（14/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23626,7 +23797,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-635/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-636",
@@ -23634,7 +23808,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（15/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23651,7 +23825,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-636/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-637",
@@ -23659,7 +23836,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（16/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23676,7 +23853,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-637/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-638",
@@ -23684,7 +23864,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（17/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23701,7 +23881,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-638/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-639",
@@ -23709,7 +23892,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（18/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23726,7 +23909,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-639/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-640",
@@ -23734,7 +23920,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（19/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23751,7 +23937,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-640/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-641",
@@ -23759,7 +23948,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（20/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23776,7 +23965,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-641/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-642",
@@ -23784,7 +23976,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（21/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23801,7 +23993,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-642/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-643",
@@ -23809,7 +24004,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（22/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23826,7 +24021,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-643/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-644",
@@ -23834,7 +24032,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（23/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23851,7 +24049,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-644/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-645",
@@ -23859,7 +24060,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（24/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23876,7 +24077,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-645/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-646",
@@ -23884,7 +24088,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（25/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23901,7 +24105,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-646/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-647",
@@ -23909,7 +24116,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（26/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23926,7 +24133,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-647/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-648",
@@ -23934,7 +24144,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（27/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23951,7 +24161,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-648/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-649",
@@ -23959,7 +24172,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（28/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -23976,7 +24189,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-649/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-650",
@@ -23984,7 +24200,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（29/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24001,7 +24217,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-650/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-651",
@@ -24009,7 +24228,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（30/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24026,7 +24245,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-651/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-652",
@@ -24034,7 +24256,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（31/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24051,7 +24273,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-652/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-653",
@@ -24059,7 +24284,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（32/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24076,7 +24301,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-653/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-654",
@@ -24084,7 +24312,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（33/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24101,7 +24329,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-654/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-655",
@@ -24109,7 +24340,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（34/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24126,7 +24357,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-655/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-656",
@@ -24134,7 +24368,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（35/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24151,7 +24385,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-656/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-657",
@@ -24159,7 +24396,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（36/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24176,7 +24413,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-657/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-658",
@@ -24184,7 +24424,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（37/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24201,7 +24441,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-658/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-659",
@@ -24209,7 +24452,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（38/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24226,7 +24469,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-659/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-660",
@@ -24234,7 +24480,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（39/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24251,7 +24497,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-660/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-661",
@@ -24259,7 +24508,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（40/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24276,7 +24525,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-661/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-662",
@@ -24284,7 +24536,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（41/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24301,7 +24553,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-662/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-663",
@@ -24309,7 +24564,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（42/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24326,7 +24581,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-663/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-664",
@@ -24334,7 +24592,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（43/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24351,7 +24609,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-664/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-665",
@@ -24359,7 +24620,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（44/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24376,7 +24637,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-665/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-666",
@@ -24384,7 +24648,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（45/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24401,7 +24665,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-666/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-667",
@@ -24409,7 +24676,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（46/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24426,7 +24693,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-667/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-668",
@@ -24434,7 +24704,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（47/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24451,7 +24721,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-668/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-669",
@@ -24459,7 +24732,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（48/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24476,7 +24749,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-669/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-670",
@@ -24484,7 +24760,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（49/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24501,7 +24777,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-670/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-671",
@@ -24509,7 +24788,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（50/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24526,7 +24805,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-671/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-672",
@@ -24534,7 +24816,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（51/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24551,7 +24833,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-672/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-673",
@@ -24559,7 +24844,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（52/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24576,7 +24861,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-673/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-674",
@@ -24584,7 +24872,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（53/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24601,7 +24889,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-674/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-675",
@@ -24609,7 +24900,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（54/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24626,7 +24917,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-675/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-676",
@@ -24634,7 +24928,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（55/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24651,7 +24945,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-676/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-677",
@@ -24659,7 +24956,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（56/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24676,7 +24973,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-677/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-678",
@@ -24684,7 +24984,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（57/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24701,7 +25001,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-678/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-679",
@@ -24709,7 +25012,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（58/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24726,7 +25029,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-679/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-680",
@@ -24734,7 +25040,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（59/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24751,7 +25057,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-680/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-681",
@@ -24759,7 +25068,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（60/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24776,7 +25085,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-681/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-682",
@@ -24784,7 +25096,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（61/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24801,7 +25113,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-682/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-683",
@@ -24809,7 +25124,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（62/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24826,7 +25141,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-683/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-684",
@@ -24834,7 +25152,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（63/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24851,7 +25169,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-684/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-685",
@@ -24859,7 +25180,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（64/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24876,7 +25197,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-685/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-686",
@@ -24884,7 +25208,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（65/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24901,7 +25225,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-686/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-687",
@@ -24909,7 +25236,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（66/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24926,7 +25253,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-687/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-688",
@@ -24934,7 +25264,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（67/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24951,7 +25281,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-688/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-689",
@@ -24959,7 +25292,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（68/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -24976,7 +25309,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-689/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-690",
@@ -24984,7 +25320,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（69/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25001,7 +25337,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-690/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-691",
@@ -25009,7 +25348,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（70/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25026,7 +25365,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-691/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-692",
@@ -25034,7 +25376,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（71/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25051,7 +25393,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-692/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-693",
@@ -25059,7 +25404,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（72/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25076,7 +25421,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-693/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-694",
@@ -25084,7 +25432,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（73/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25101,7 +25449,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-694/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-695",
@@ -25109,7 +25460,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（74/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25126,7 +25477,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-695/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-696",
@@ -25134,7 +25488,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（75/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25151,7 +25505,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-696/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-697",
@@ -25159,7 +25516,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（76/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25176,7 +25533,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-697/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-698",
@@ -25184,7 +25544,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（77/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25201,7 +25561,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-698/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-699",
@@ -25209,7 +25572,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（78/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25226,7 +25589,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-699/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-700",
@@ -25234,7 +25600,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（79/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25251,7 +25617,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-700/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-701",
@@ -25259,7 +25628,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（80/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25276,7 +25645,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-701/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-702",
@@ -25284,7 +25656,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（81/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25301,7 +25673,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-702/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-703",
@@ -25309,7 +25684,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（82/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25326,7 +25701,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-703/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-704",
@@ -25334,7 +25712,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（83/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25351,7 +25729,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-704/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-705",
@@ -25359,7 +25740,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（84/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25376,7 +25757,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-705/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-706",
@@ -25384,7 +25768,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（85/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25401,7 +25785,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-706/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-707",
@@ -25409,7 +25796,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（86/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25426,7 +25813,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-707/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-708",
@@ -25434,7 +25824,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（87/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25451,7 +25841,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-708/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-709",
@@ -25459,7 +25852,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（88/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25476,7 +25869,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-709/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-710",
@@ -25484,7 +25880,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（89/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25501,7 +25897,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-710/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-711",
@@ -25509,7 +25908,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（90/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25526,7 +25925,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-711/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-712",
@@ -25534,7 +25936,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（91/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25551,7 +25953,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-712/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-713",
@@ -25559,7 +25964,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（92/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25576,7 +25981,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-713/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-714",
@@ -25584,7 +25992,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（93/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25601,7 +26009,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-714/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-715",
@@ -25609,7 +26020,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（94/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25626,7 +26037,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-715/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-716",
@@ -25634,7 +26048,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（95/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25651,7 +26065,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-716/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-717",
@@ -25659,7 +26076,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（96/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25676,7 +26093,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-717/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-718",
@@ -25684,7 +26104,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（97/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25701,7 +26121,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-718/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-719",
@@ -25709,7 +26132,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（98/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25726,7 +26149,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-719/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-720",
@@ -25734,7 +26160,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（99/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25751,7 +26177,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-720/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-721",
@@ -25759,7 +26188,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（100/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25776,7 +26205,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-721/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-722",
@@ -25784,7 +26216,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（101/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25801,7 +26233,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-722/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-723",
@@ -25809,7 +26244,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（102/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25826,7 +26261,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-723/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-724",
@@ -25834,7 +26272,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（103/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25851,7 +26289,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-724/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-725",
@@ -25859,7 +26300,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（104/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25876,7 +26317,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-725/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-726",
@@ -25884,7 +26328,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（105/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25901,7 +26345,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-726/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-727",
@@ -25909,7 +26356,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（106/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25926,7 +26373,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-727/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-728",
@@ -25934,7 +26384,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（107/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25951,7 +26401,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-728/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-729",
@@ -25959,7 +26412,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（108/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -25976,7 +26429,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-729/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-730",
@@ -25984,7 +26440,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（109/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26001,7 +26457,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-730/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-731",
@@ -26009,7 +26468,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（110/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26026,7 +26485,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-731/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-732",
@@ -26034,7 +26496,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（111/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26051,7 +26513,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-732/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-733",
@@ -26059,7 +26524,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（112/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26076,7 +26541,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-733/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-734",
@@ -26084,7 +26552,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（113/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26101,7 +26569,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-734/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-735",
@@ -26109,7 +26580,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（114/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26126,7 +26597,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-735/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-736",
@@ -26134,7 +26608,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（115/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26151,7 +26625,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-736/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-737",
@@ -26159,7 +26636,7 @@
       "priority": "P4",
       "stage": "effects",
       "title": "招式与战斗特效帧表（116/116）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26176,7 +26653,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-737/validation.json",
+      "applied_files": 0,
+      "preserved_files": 5
     },
     {
       "id": "batch-738",
@@ -26184,7 +26664,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（1/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26316,7 +26796,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-738/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-739",
@@ -26324,7 +26807,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（2/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26457,7 +26940,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-739/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-740",
@@ -26465,7 +26951,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（3/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26598,7 +27084,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-740/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-741",
@@ -26606,7 +27095,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（4/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26739,7 +27228,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-741/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-742",
@@ -26747,7 +27239,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（5/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -26880,7 +27372,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-742/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-743",
@@ -26888,7 +27383,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（6/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27021,7 +27516,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-743/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-744",
@@ -27029,7 +27527,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（7/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27162,7 +27660,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-744/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-745",
@@ -27170,7 +27671,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（8/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27303,7 +27804,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-745/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-746",
@@ -27311,7 +27815,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（9/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27444,7 +27948,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-746/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-747",
@@ -27452,7 +27959,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（10/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27585,7 +28092,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-747/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-748",
@@ -27593,7 +28103,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（11/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27726,7 +28236,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-748/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-749",
@@ -27734,7 +28247,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（12/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -27867,7 +28380,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-749/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-750",
@@ -27875,7 +28391,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（13/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28008,7 +28524,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-750/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-751",
@@ -28016,7 +28535,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（14/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28149,7 +28668,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-751/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-752",
@@ -28157,7 +28679,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（15/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28290,7 +28812,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-752/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-753",
@@ -28298,7 +28823,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（16/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28431,7 +28956,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-753/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-754",
@@ -28439,7 +28967,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（17/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28572,7 +29100,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-754/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-755",
@@ -28580,7 +29111,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（18/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28713,7 +29244,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-755/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-756",
@@ -28721,7 +29255,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（19/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28854,7 +29388,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-756/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-757",
@@ -28862,7 +29399,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（20/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -28995,7 +29532,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-757/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-758",
@@ -29003,7 +29543,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（21/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29136,7 +29676,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-758/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-759",
@@ -29144,7 +29687,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（22/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29277,7 +29820,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-759/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-760",
@@ -29285,7 +29831,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（23/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29418,7 +29964,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-760/validation.json",
+      "applied_files": 0,
+      "preserved_files": 3
     },
     {
       "id": "batch-761",
@@ -29426,7 +29975,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（24/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29559,7 +30108,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-761/validation.json",
+      "applied_files": 0,
+      "preserved_files": 6
     },
     {
       "id": "batch-762",
@@ -29567,7 +30119,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（25/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29700,7 +30252,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-762/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-763",
@@ -29708,7 +30263,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（26/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29841,7 +30396,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-763/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-764",
@@ -29849,7 +30407,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（27/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -29982,7 +30540,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-764/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-765",
@@ -29990,7 +30551,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（28/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -30123,7 +30684,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-765/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-766",
@@ -30131,7 +30695,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（29/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -30264,7 +30828,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-766/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-767",
@@ -30272,7 +30839,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（30/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -30405,7 +30972,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-767/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-768",
@@ -30413,7 +30983,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（31/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -30546,7 +31116,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-768/validation.json",
+      "applied_files": 0,
+      "preserved_files": 8
     },
     {
       "id": "batch-769",
@@ -30554,7 +31127,7 @@
       "priority": "P4",
       "stage": "weather",
       "title": "天气、雾效、背景动画与战斗转场（32/32）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "effect",
       "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
@@ -30687,7 +31260,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-769/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-770",
@@ -30695,7 +31271,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（1/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30712,7 +31288,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-770/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-771",
@@ -30720,7 +31299,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（2/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30738,7 +31317,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-771/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-772",
@@ -30746,7 +31328,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（3/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30764,7 +31346,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-772/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-773",
@@ -30772,7 +31357,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（4/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30790,7 +31375,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-773/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-774",
@@ -30798,7 +31386,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（5/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30816,7 +31404,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-774/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-775",
@@ -30824,7 +31415,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（6/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30842,7 +31433,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-775/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-776",
@@ -30850,7 +31444,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（7/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30868,7 +31462,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-776/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-777",
@@ -30876,7 +31473,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（8/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30894,7 +31491,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-777/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-778",
@@ -30902,7 +31502,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（9/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30920,7 +31520,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-778/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-779",
@@ -30928,7 +31531,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（10/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30946,7 +31549,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-779/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-780",
@@ -30954,7 +31560,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（11/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30972,7 +31578,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-780/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-781",
@@ -30980,7 +31589,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（12/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -30998,7 +31607,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-781/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-782",
@@ -31006,7 +31618,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（13/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31024,7 +31636,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-782/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-783",
@@ -31032,7 +31647,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（14/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31050,7 +31665,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-783/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-784",
@@ -31058,7 +31676,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（15/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31076,7 +31694,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-784/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-785",
@@ -31084,7 +31705,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（16/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31102,7 +31723,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-785/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-786",
@@ -31110,7 +31734,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（17/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31128,7 +31752,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-786/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-787",
@@ -31136,7 +31763,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（18/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31154,7 +31781,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-787/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-788",
@@ -31162,7 +31792,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（19/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31180,7 +31810,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-788/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-789",
@@ -31188,7 +31821,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（20/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31206,7 +31839,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-789/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-790",
@@ -31214,7 +31850,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（21/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31232,7 +31868,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-790/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-791",
@@ -31240,7 +31879,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（22/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31258,7 +31897,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-791/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-792",
@@ -31266,7 +31908,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（23/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31284,7 +31926,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-792/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-793",
@@ -31292,7 +31937,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（24/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31310,7 +31955,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-793/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-794",
@@ -31318,7 +31966,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（25/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31336,7 +31984,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-794/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-795",
@@ -31344,7 +31995,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（26/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31362,7 +32013,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-795/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-796",
@@ -31370,7 +32024,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（27/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31388,7 +32042,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-796/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-797",
@@ -31396,7 +32053,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（28/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31414,7 +32071,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-797/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-798",
@@ -31422,7 +32082,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（29/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31440,7 +32100,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-798/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-799",
@@ -31448,7 +32111,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（30/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31468,7 +32131,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-799/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-800",
@@ -31476,7 +32142,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（31/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31494,7 +32160,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-800/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-801",
@@ -31502,7 +32171,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（32/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31520,7 +32189,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-801/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-802",
@@ -31528,7 +32200,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（33/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31546,7 +32218,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-802/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-803",
@@ -31554,7 +32229,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（34/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31572,7 +32247,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-803/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-804",
@@ -31580,7 +32258,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（35/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31598,7 +32276,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-804/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-805",
@@ -31606,7 +32287,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（36/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31624,7 +32305,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-805/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-806",
@@ -31632,7 +32316,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（37/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31650,7 +32334,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-806/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-807",
@@ -31658,7 +32345,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（38/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31676,7 +32363,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-807/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-808",
@@ -31684,7 +32374,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（39/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31702,7 +32392,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-808/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-809",
@@ -31710,7 +32403,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（40/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31728,7 +32421,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-809/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-810",
@@ -31736,7 +32432,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（41/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31754,7 +32450,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-810/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-811",
@@ -31762,7 +32461,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（42/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31780,7 +32479,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-811/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-812",
@@ -31788,7 +32490,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（43/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31806,7 +32508,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-812/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-813",
@@ -31814,7 +32519,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（44/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31832,7 +32537,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-813/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-814",
@@ -31840,7 +32548,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（45/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31858,7 +32566,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-814/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-815",
@@ -31866,7 +32577,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（46/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31884,7 +32595,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-815/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-816",
@@ -31892,7 +32606,7 @@
       "priority": "P4",
       "stage": "animated",
       "title": "长动画条、动态精灵与 GIF（47/47）",
-      "status": "planned",
+      "status": "completed",
       "action": "enhance_with_validation",
       "method": "animated",
       "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -31910,7 +32624,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-816/validation.json",
+      "applied_files": 0,
+      "preserved_files": 2
     },
     {
       "id": "batch-817",

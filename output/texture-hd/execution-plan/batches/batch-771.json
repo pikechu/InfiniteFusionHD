@@ -4,7 +4,7 @@
   "priority": "P4",
   "stage": "animated",
   "title": "长动画条、动态精灵与 GIF（2/47）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "animated",
   "processing_notes": "确认帧数、帧宽、顺序与时长，逐帧补绘、原位组装；保留 PNG 条带/GIF 格式及循环信息，连续播放检查。",
@@ -46,5 +46,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "全部帧与原始时长、顺序和循环一致；完整连续播放，确认无跳帧、抖动或帧间身份变化。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-771/validation.json",
+  "applied_files": 0,
+  "preserved_files": 2
 }

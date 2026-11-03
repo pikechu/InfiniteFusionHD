@@ -1295,7 +1295,7 @@
       "bracket_frames": null,
       "bracket_delay": null,
       "status": "preserved",
-      "reason": "原有兼容素材：Current square-cell loader ignores the remaining right-side pixels。保留原始字节、布局和用途，不把原有加载差异计为新图像改动；验证边界见原生记录。",
+      "reason": "原有兼容问题：Current square-cell loader ignores the remaining right-side pixels。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
       "visual_review_page": "review-550-01.png"
     },
     {

@@ -1,0 +1,291 @@
+{
+  "batch": "batch-687",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 8,
+  "entries": [
+    {
+      "source": "Graphics/Animations/PRAS- Moonlight.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 628,
+      "source_mtime_ns": 1792048522552893000,
+      "canonical_source": "Graphics/Animations/PRAS- Moonlight.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "48800f7eaa9546bc809523299c2c93f9f043768d68d1ba7934ebf121a92c07e1",
+      "git_blob": "609e2457b5a9cfdb9411002d4a73fa76b95ebf48",
+      "reference_blob": "609e2457b5a9cfdb9411002d4a73fa76b95ebf48",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "843ae70cade519ac6142b736f5c4a8d7ef4dacafa05b1255ade78c05547ed7ed",
+          "alpha_sha256": "560c40e80b271abd897860ec8ab8475af42503f1b23f51c65d9a7d132c0a73b8",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "原有兼容问题：Existing animation-data pattern indices [1, 2, 3, 4, 5] exceed this image atlas; native players completed with original source bytes. The atlas was not enlarged or rewritten to conceal the existing data mismatch.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Mud Bomb.png",
+      "size": [
+        960,
+        192
+      ],
+      "source_bytes": 1548,
+      "source_mtime_ns": 1792048522553902800,
+      "canonical_source": "Graphics/Animations/PRAS- Mud Bomb.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "ec3446fa6eac05fd0348992631005b552061b208f80cc69d71c1148925ad445a",
+      "git_blob": "ae9f5e99adf9d3cd3298372b3649f745325787df",
+      "reference_blob": "ae9f5e99adf9d3cd3298372b3649f745325787df",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "616590be1f6dc3edda9a2f4966128ca33801964fbc628ba5943566f4b1740652",
+          "alpha_sha256": "1d40c4d00b889d92e0251fb22bbfcade23d5f7ec0dd3c7184386922a90cf1361",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Mud Shot.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 282,
+      "source_mtime_ns": 1792048522553902800,
+      "canonical_source": "Graphics/Animations/PRAS- Mud Shot.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "f5218e46eaa18ee3f0c46b298f5a5fa6238e7301a061872af70dbdaf4689b59f",
+      "git_blob": "8f6f86ddbcfaae6ef4dfca5d61000488ea7507b6",
+      "reference_blob": "8f6f86ddbcfaae6ef4dfca5d61000488ea7507b6",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "1eee2abb7b1bcf446c949741173684d850682e4b18dab3e4b20599229122aade",
+          "alpha_sha256": "ccc1afaab67a6a3680a29769688cad3f0ea4bdbf4ac84e3cf3bbac2db4dcae29",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Mud Slap.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 964,
+      "source_mtime_ns": 1792048522553902800,
+      "canonical_source": "Graphics/Animations/PRAS- Mud Slap.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "4ff7aecab04dbe8fd1395b2cdd99c4d08faefbb1d7729f02dcc572c9279fa88a",
+      "git_blob": "50deb2f8fe2f0b157ab3d58757dfe2f235bc232d",
+      "reference_blob": "50deb2f8fe2f0b157ab3d58757dfe2f235bc232d",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "9e1b39c5201154fcfffac0aa158c1943c944424804e71376b7d743baaf503a29",
+          "alpha_sha256": "800aed9a947457ead01854de3de4975dfd8fba2eb86c1c0a7d9e73c6a9661db5",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Mud Sport.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 172,
+      "source_mtime_ns": 1792048522553902800,
+      "canonical_source": "Graphics/Animations/PRAS- Mud Sport.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "2d65b2bd1428ad15278bf3b542f08df6c9e5c510159f473e75146f5a647ebe16",
+      "git_blob": "7491122501d8af346130c4a2292abd134cd4aef3",
+      "reference_blob": "7491122501d8af346130c4a2292abd134cd4aef3",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "ac02ac313ad9993923b7b44bcead4ed4dc1be2442241849aeabaaceae04f96a9",
+          "alpha_sha256": "da4142a54c90d01827c8b38e5ee23d8f5c430488d8137c3211e669905f76edbd",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Muddy Water FG Opp.png",
+      "size": [
+        1280,
+        1152
+      ],
+      "source_bytes": 15503,
+      "source_mtime_ns": 1792048522554892000,
+      "canonical_source": "Graphics/Animations/PRAS- Muddy Water FG Opp.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "0206e52bd7ae578b4733f3ac9fcae288dc23604a5b513e78583ff86d76a1ebe2",
+      "git_blob": "850e64f55022997887f5d2de979f4b8cd3553879",
+      "reference_blob": "850e64f55022997887f5d2de979f4b8cd3553879",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "d3cd95b3c8cb540ccc548a8ebec7a7c4a5b5953c5ba5f7279596f8fe3bb0551d",
+          "alpha_sha256": "5ea2f2504503e2629e858110c23abbc2e51ee787bed893f1c40ea4675eeb1647",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Muddy Water FG.png",
+      "size": [
+        1280,
+        1152
+      ],
+      "source_bytes": 36284,
+      "source_mtime_ns": 1792048522555899500,
+      "canonical_source": "Graphics/Animations/PRAS- Muddy Water FG.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "68f1b8347a1264b32bb0d1fbc1b2992ca5c5f88d14c39ac3f42e76b23a670e6a",
+      "git_blob": "0a2ca767ddc1d4f9f7527e0fb473d38668fb695c",
+      "reference_blob": "0a2ca767ddc1d4f9f7527e0fb473d38668fb695c",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "d6b5bf94e4e0ba5ba9555a2784b71182f620fa7e8ff209cf738df903f7f88586",
+          "alpha_sha256": "1fc7605f1ea90e49ffc1ef1a10dcdeb9e8fb6b13a0e48375a01ca62882ccf8bc",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Multi Attack.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 5693,
+      "source_mtime_ns": 1792048522556405500,
+      "canonical_source": "Graphics/Animations/PRAS- Multi Attack.png",
+      "batch": "batch-687",
+      "stage": "effects",
+      "sha256": "52c0c5cb11bb9767ad4b5724c320396f682304659681a1eecdc3434de4a78ca1",
+      "git_blob": "c697a1f7f466e2a5fb947b6c0ed6fb2cee3414b5",
+      "reference_blob": "c697a1f7f466e2a5fb947b6c0ed6fb2cee3414b5",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "cdbe0f95b2a1f46502b6872edd9b126ecc747227f9cb7da84020130a31946bc7",
+          "alpha_sha256": "0360f3816e2f80c5ca09912bfe7d5633cc1d392fa24605e235b544163d4ecce2",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-687-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/balls-review.json",
+    "output/texture-hd/p4-evidence/effects-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All 925 effect sources directly decode at original dimensions. All animation-data entries referencing P4 main/background/foreground images run through actual PBAnimationPlayerX in normal/reversed line fixtures to termination; 192-pixel cel crop, origin, blending, opacity, frame order and update count checked. State hashes preserve visual transform traces; audio event calls observed with sound suppressed. Out-of-sheet patterns or existing data/runtime failures are explicitly reported. Unreferenced/script-only effect images remain byte-identical and are not claimed as complete move/capture gameplay. One-shot move animations are checked to completion, not falsely looped. Supplementary balls-review.json checks actual named ball trajectory/tumbling and open/closed picture processes; it does not certify a complete capture battle.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

@@ -4,7 +4,7 @@
   "priority": "P4",
   "stage": "windows",
   "title": "窗口皮肤与边框切片（2/6）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "windowskin",
   "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
@@ -189,5 +189,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-617/validation.json",
+  "applied_files": 0,
+  "preserved_files": 16
 }

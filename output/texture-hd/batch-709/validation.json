@@ -1,0 +1,291 @@
+{
+  "batch": "batch-709",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 8,
+  "entries": [
+    {
+      "source": "Graphics/Animations/PRAS- Torment.png",
+      "size": [
+        920,
+        192
+      ],
+      "source_bytes": 877,
+      "source_mtime_ns": 1792048522689497600,
+      "canonical_source": "Graphics/Animations/PRAS- Torment.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "d3d88af951eae1101e58bf7f5b93e1f06cd78467ffe2082b364f2284b79a8c70",
+      "git_blob": "9b219f2652f3b2f8fdbeff020eff8a6ef42bbab9",
+      "reference_blob": "9b219f2652f3b2f8fdbeff020eff8a6ef42bbab9",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "60422c3828fd44817b830b53c04ee6f1098905f3947ec58227b4717ad7a19de2",
+          "alpha_sha256": "de65b3dd5d90fb5020c75b27bb29f6fbb1feb88d106ec4c814e5a33f18582c39",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "原有兼容问题：Existing animation-data pattern indices [4] exceed this image atlas; native players completed with original source bytes. The atlas was not enlarged or rewritten to conceal the existing data mismatch.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Tri Attack.png",
+      "size": [
+        960,
+        1344
+      ],
+      "source_bytes": 6640,
+      "source_mtime_ns": 1792048522689497600,
+      "canonical_source": "Graphics/Animations/PRAS- Tri Attack.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "2e74d328c0380e7951cc80f15b7a9d804442bf482844dd4948b0cdbcf3a798e7",
+      "git_blob": "009459fd4bc38ea799c09d3d0e7ca43f472bdcd3",
+      "reference_blob": "009459fd4bc38ea799c09d3d0e7ca43f472bdcd3",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "6563591a03f2df480e8e940441beb20a1998f7277ef7aeb1e9050595450a39ec",
+          "alpha_sha256": "e2383fc057455c1a602cf408ababc6da454112a616f21edf8a62c4a637b91961",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Trick Room BG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3010,
+      "source_mtime_ns": 1792048522689497600,
+      "canonical_source": "Graphics/Animations/PRAS- Trick Room BG.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "d2f1377079155dbf31c2e0aaaf1549a41aa15c9bebf1218230167665b9acf206",
+      "git_blob": "a69300a6455589c6f423bb69d8e9227b33fed854",
+      "reference_blob": "a69300a6455589c6f423bb69d8e9227b33fed854",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "772faf15d7e158f932f9b0f4181614d251b9d75ddf747f3144ffa8eafa2e3c62",
+          "alpha_sha256": "c1f7d702a80ae5e7dc52d62ef2577cbbb25c045d6dda3a49a872130518f48cc0",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Trick.png",
+      "size": [
+        576,
+        192
+      ],
+      "source_bytes": 729,
+      "source_mtime_ns": 1792048522690497400,
+      "canonical_source": "Graphics/Animations/PRAS- Trick.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "b2e7ba65ec9a2e0f8263b2a54f29c7a9ef06e2d508a9625cbc8a3c2a6ab3c64b",
+      "git_blob": "03b21dc827a159b2d8578e60a7d0bff56c525be0",
+      "reference_blob": "03b21dc827a159b2d8578e60a7d0bff56c525be0",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "42738220ebad5e50544d2621c8a6ad083959a01b7318424c20a5b8956ff04adf",
+          "alpha_sha256": "5c4e3e8ea48e792fef8014e009f62ee30f9860dab67e414c9a4852e4816dd5a7",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Trop Kick.png",
+      "size": [
+        960,
+        768
+      ],
+      "source_bytes": 2677,
+      "source_mtime_ns": 1792048522690497400,
+      "canonical_source": "Graphics/Animations/PRAS- Trop Kick.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "f5215be5e72fee352e15218b2bb2a458961b7d46989565b33597affc8541ee00",
+      "git_blob": "4db7f60413adcb27a22795b107157b30dce74825",
+      "reference_blob": "4db7f60413adcb27a22795b107157b30dce74825",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "f1e1c2622ac70c20df12c1339a50fb88ad60996f736c145f4411238abb7d7c64",
+          "alpha_sha256": "f9c3f5b1a5d32038d6c789836ca80c81edfe48902927f3844e4f405a41e0468f",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Trump card.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 661,
+      "source_mtime_ns": 1792048522690497400,
+      "canonical_source": "Graphics/Animations/PRAS- Trump card.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "8a39980f5cd718865f31bc043f62dc9212d9dfb9d7255a6961b9b6e09b8a711c",
+      "git_blob": "57087e8ac7f518c074274e7d0f406d513236e8eb",
+      "reference_blob": "57087e8ac7f518c074274e7d0f406d513236e8eb",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "7d5a16a146af04dd885e0b867346ebb585401676c7c9c362deda8578c6d4fa85",
+          "alpha_sha256": "275c9c245f0645c25dc19baf7c45c3a598f95191a02b6bf76c0e20d2e1bd6b98",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Twinkle Tackle FG.png",
+      "size": [
+        512,
+        300
+      ],
+      "source_bytes": 950,
+      "source_mtime_ns": 1792048522690497400,
+      "canonical_source": "Graphics/Animations/PRAS- Twinkle Tackle FG.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "7bae78889a8f0313956ba911d2dfa1b02edd8a9997984cde66cdb0a40ada8cfd",
+      "git_blob": "4e366c72468a90fd90c291b1388c0a853c710a6e",
+      "reference_blob": "4e366c72468a90fd90c291b1388c0a853c710a6e",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "6b3caa304cc2fb8a882fbd13c2e13d1fe1407212960b82856686df521ae44989",
+          "alpha_sha256": "c3d5a524749c45d5e2c1aff303288f67fca8654834cc1a4319a5f2faa8c1e348",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Twinkle Tackle.png",
+      "size": [
+        960,
+        960
+      ],
+      "source_bytes": 3782,
+      "source_mtime_ns": 1792048522691496500,
+      "canonical_source": "Graphics/Animations/PRAS- Twinkle Tackle.png",
+      "batch": "batch-709",
+      "stage": "effects",
+      "sha256": "69ce6bcacbeae2b71e2cb0ccd92bd891754845381a4a1129e3732db2d1fcdb14",
+      "git_blob": "eb8483509f841277541bd4070e278abb875b74ab",
+      "reference_blob": "eb8483509f841277541bd4070e278abb875b74ab",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "9a1392f08ec4b7dee844beb5d55d4239f6328bf94d8dc7571c4c271f29271789",
+          "alpha_sha256": "2c363d7b36d8654aa75a638c8a98500e61e416e5f2bd1b6c2881814174dfe465",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。",
+      "visual_review_page": "review-709-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/balls-review.json",
+    "output/texture-hd/p4-evidence/effects-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All 925 effect sources directly decode at original dimensions. All animation-data entries referencing P4 main/background/foreground images run through actual PBAnimationPlayerX in normal/reversed line fixtures to termination; 192-pixel cel crop, origin, blending, opacity, frame order and update count checked. State hashes preserve visual transform traces; audio event calls observed with sound suppressed. Out-of-sheet patterns or existing data/runtime failures are explicitly reported. Unreferenced/script-only effect images remain byte-identical and are not claimed as complete move/capture gameplay. One-shot move animations are checked to completion, not falsely looped. Supplementary balls-review.json checks actual named ball trajectory/tumbling and open/closed picture processes; it does not certify a complete capture battle.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

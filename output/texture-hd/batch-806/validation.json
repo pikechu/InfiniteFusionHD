@@ -1,0 +1,91 @@
+{
+  "batch": "batch-806",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 2,
+  "entries": [
+    {
+      "source": "Graphics/Animated Sprites/345.368a.png",
+      "size": [
+        29952,
+        288
+      ],
+      "source_bytes": 856701,
+      "source_mtime_ns": 1792048522047154800,
+      "canonical_source": "Graphics/Animated Sprites/345.368a.png",
+      "layout_must_be_read_from_loader": true,
+      "batch": "batch-806",
+      "stage": "animated",
+      "sha256": "7917e752f336500c32317ec154c2fc316a4e453dcbf317b7db3c9e1e6ee4831f",
+      "git_blob": "23049d10491f76057999bc223bc0393b462b88a1",
+      "reference_blob": "23049d10491f76057999bc223bc0393b462b88a1",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "7b4f235925fdf0e8fdb450223854fc9187d6cf3da7dbdee0f1587e3b16fa806b",
+          "alpha_sha256": "7905ef870f15609a8b5d27da38c0819f45d27a322446bef1776b678e09120bc6",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "donor_square_cells": 104,
+      "status": "preserved",
+      "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。",
+      "visual_review_page": "review-806-01.png"
+    },
+    {
+      "source": "Graphics/Animated Sprites/345.380.png",
+      "size": [
+        40896,
+        288
+      ],
+      "source_bytes": 1095501,
+      "source_mtime_ns": 1792048522051263600,
+      "canonical_source": "Graphics/Animated Sprites/345.380.png",
+      "layout_must_be_read_from_loader": true,
+      "batch": "batch-806",
+      "stage": "animated",
+      "sha256": "187375703210a0c44700345d7c83d5d2e7d6f8e2b48b3a766b1c14c918e5d699",
+      "git_blob": "75a81b46dafa2fa1b7b75e2b057e983438935249",
+      "reference_blob": "75a81b46dafa2fa1b7b75e2b057e983438935249",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "bec61f2b74a8b7b66589383395b1fb3bb168f919e82357e28fd7ff32f462a0b9",
+          "alpha_sha256": "fe6e3d598b21eae2194188f255933395f83642d8f1dbf4464dad29466700e27b",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "donor_square_cells": 142,
+      "status": "preserved",
+      "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。",
+      "visual_review_page": "review-806-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/animated-phase-review.json",
+    "output/texture-hd/p4-evidence/animated-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All P4 animated sources directly decoded at original dimensions. Eight native GIFs seek every frame and play two complete real-time cycles, preserving order and observed timing; All 191 exported frames passed exact alpha and visible-RGB verification. Original variable delays are separately compared with native constant frame rates; inherited timing mismatches are not certified as matching. Both five-cell hatch-mask copies use actual mask positioning/swing methods with deterministic scene updates. Unbracketed long PNG donor strips remain one frame in the current generic loader; no active directory consumer found. Their cells/pixels are preserved, not falsely certified as current animated battlers or assigned an invented playback duration. No full hatch dialogue/gameplay.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

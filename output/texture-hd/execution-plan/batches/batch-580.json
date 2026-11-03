@@ -4,7 +4,7 @@
   "priority": "P4",
   "stage": "icons",
   "title": "宝可梦小图标与道具图标（40/64）",
-  "status": "planned",
+  "status": "completed",
   "action": "enhance_with_validation",
   "method": "icon",
   "processing_notes": "以原尺寸可读性为目标，先试小样再补绘；保留符号含义、帧布局及透明边，不为增加纹理而强改。",
@@ -504,5 +504,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "原尺寸下确认小图可辨识、帧数和符号含义不变；没有可见收益则保留原图并记录。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-580/validation.json",
+  "applied_files": 0,
+  "preserved_files": 48
 }

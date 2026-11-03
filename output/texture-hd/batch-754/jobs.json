@@ -1,0 +1,70 @@
+{
+  "batch": "batch-754",
+  "method": "Native-sized review and corresponding native/compatibility checks; no accepted AI replacement.",
+  "entries": [
+    {
+      "source": "Graphics/Transitions/water_1.png",
+      "decision": "preserved",
+      "reason": "原有兼容问题：Existing RisingSplash divides by zero with a 40-frame duration at 001_Transitions.rb:915. The actual 40fps caller requests 1.25 seconds (50 frames), which is the completed fixture; this runtime boundary is unrelated to image bytes.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/water_2.png",
+      "decision": "preserved",
+      "reason": "原有兼容问题：Existing RisingSplash divides by zero with a 40-frame duration at 001_Transitions.rb:915. The actual 40fps caller requests 1.25 seconds (50 frames), which is the completed fixture; this runtime boundary is unrelated to image bytes.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Common/ballTransition.png",
+      "decision": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Common/glow.png",
+      "decision": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/particle.png",
+      "decision": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/ring0.png",
+      "decision": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/ring1.png",
+      "decision": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/ring2.png",
+      "decision": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "generation_status": "not_generated_no_expected_gain",
+      "prompt": null,
+      "generated": null
+    }
+  ]
+}

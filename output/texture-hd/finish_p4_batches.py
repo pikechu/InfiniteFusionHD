@@ -35,6 +35,8 @@ def main(numbers):
             evidence = proof_paths[stage]
             proof = read(ROOT / evidence['review'])
             assert proof['status'] == 'passed'
+            if stage == 'animated':
+                assert proof['native_gif_frame_pixels_verified'] == sum(g['native_frames'] for g in proof['gifs'])
             for field in ('script_sha256', 'sidecar_sha256', 'data_sha256'):
                 assert all(digest(ROOT / p) == sha for p, sha in proof.get(field, {}).items()), 'Native input changed'
             cleanup = read(ROOT / evidence['cleanup'])
@@ -62,7 +64,7 @@ def main(numbers):
             elif stage == 'windows':
                 reason = '窗口边框、光标、箭头、文字底色与重复切片已经清楚，保留原图及侧车配置。真实窗口组件按中英文、两种尺寸、非零开合及完整暂停/光标循环检查；原有全闭窗口异常单独记录，不修改游戏代码掩盖问题。'
             elif stage == 'effects':
-                reason = '现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。'
+                reason = '现有特效颜色、形状、透明渐隐和图格分隔清楚；独立重绘可能改变发光轮廓或帧间一致性，保留原图。实际动画数据、格位和适用原生播放记录见证据，精灵球另有真实翻滚、开合和复位检查；未使用来源及已有兼容异常单列，未把解码等同于所有招式实战。'
             elif stage == 'weather':
                 reason = '天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。'
             else:
@@ -81,7 +83,7 @@ def main(numbers):
         write(batch / 'jobs.json', {'batch': name, 'method': 'Native-sized review and corresponding native/compatibility checks; no accepted AI replacement.', 'entries': jobs})
         write(batch / 'validation.json', {'batch': name, 'status': 'completed', 'applied': 0, 'preserved': len(entries), 'entries': entries,
               'candidate_pending_review': 0, 'dimensions_unchanged': True, 'alpha_unchanged': True, 'layout_unchanged': True,
-              'evidence': [proof_paths[stage]['review'], 'output/texture-hd/p4-work/visual-review.json'],
+              'evidence': [proof_paths[stage]['review'], 'output/texture-hd/p4-work/visual-review.json'] + proof.get('additional_evidence', []),
               'validation_scope': proof['scope'], 'byte_identity_guarantee': 'All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes.'})
         result = f'output/texture-hd/{name}/validation.json'
         fixed.update(status='completed', result=result, applied_files=0, preserved_files=len(entries));write(path, fixed)

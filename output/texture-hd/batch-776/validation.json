@@ -1,0 +1,91 @@
+{
+  "batch": "batch-776",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 2,
+  "entries": [
+    {
+      "source": "Graphics/Animated Sprites/71.217.png",
+      "size": [
+        7488,
+        288
+      ],
+      "source_bytes": 40180,
+      "source_mtime_ns": 1792048522090850800,
+      "canonical_source": "Graphics/Animated Sprites/71.217.png",
+      "layout_must_be_read_from_loader": true,
+      "batch": "batch-776",
+      "stage": "animated",
+      "sha256": "d53d3a23ce64125155856c82f8e799606ec3bb1be6985860cd3430bc9572d599",
+      "git_blob": "310160f180de8694a794bba94d55deb9d14aee17",
+      "reference_blob": "310160f180de8694a794bba94d55deb9d14aee17",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "ac3fe75aa3c1b5c82f362012982ce6e548284cae7741ef7acbd297d42a94b9cb",
+          "alpha_sha256": "95bb7bb4d1a3cb7629500457331bab850c355c12048d257f9f62e2c8dbece8ba",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "donor_square_cells": 26,
+      "status": "preserved",
+      "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。",
+      "visual_review_page": "review-776-01.png"
+    },
+    {
+      "source": "Graphics/Animated Sprites/73.295.png",
+      "size": [
+        40896,
+        288
+      ],
+      "source_bytes": 976513,
+      "source_mtime_ns": 1792048522097931400,
+      "canonical_source": "Graphics/Animated Sprites/73.295.png",
+      "layout_must_be_read_from_loader": true,
+      "batch": "batch-776",
+      "stage": "animated",
+      "sha256": "df7732004a7ca0f263c5359170e4a9e1567548b4932c57d78adcd14f888c4c01",
+      "git_blob": "8817eef307a99aeccd20e924c2f711d2e6b628d3",
+      "reference_blob": "8817eef307a99aeccd20e924c2f711d2e6b628d3",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "57a8feaa0b927cc833a16f60b520cec89578e9ae77eb727931676385d0770924",
+          "alpha_sha256": "5f59b436a41a6a018fb76578b3aa034fbcec2a5f3e9feef6da73add52affc3a4",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "donor_square_cells": 142,
+      "status": "preserved",
+      "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。",
+      "visual_review_page": "review-776-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/animated-phase-review.json",
+    "output/texture-hd/p4-evidence/animated-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All P4 animated sources directly decoded at original dimensions. Eight native GIFs seek every frame and play two complete real-time cycles, preserving order and observed timing; All 191 exported frames passed exact alpha and visible-RGB verification. Original variable delays are separately compared with native constant frame rates; inherited timing mismatches are not certified as matching. Both five-cell hatch-mask copies use actual mask positioning/swing methods with deterministic scene updates. Unbracketed long PNG donor strips remain one frame in the current generic loader; no active directory consumer found. Their cells/pixels are preserved, not falsely certified as current animated battlers or assigned an invented playback duration. No full hatch dialogue/gameplay.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}
