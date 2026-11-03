@@ -1,0 +1,39 @@
+{
+  "batch": "batch-063",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 2,
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Summary/icon_ball_ABILITYBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "693d73483fb7b5d037157e4aedbf569e08c92e500a014e3946e5197e2de79044",
+      "status": "preserved",
+      "reason": "Original-size visual review shows crisp text, small symbols, flat fills or functional bars. Added material grain offers no useful clarity improvement and can reduce readability/state contrast; retain the original.",
+      "source_text_reference_count": 0,
+      "event_text_reference_count": 0
+    },
+    {
+      "source": "Graphics/Pictures/Summary/icon_ball_STATUSBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "0bb8b61a8c5ef3cc350b242242205580687c570c91c0186e32d65e194b7f3ac8",
+      "status": "preserved",
+      "reason": "Original-size visual review shows crisp text, small symbols, flat fills or functional bars. Added material grain offers no useful clarity improvement and can reduce readability/state contrast; retain the original.",
+      "source_text_reference_count": 0,
+      "event_text_reference_count": 0
+    }
+  ],
+  "evidence": [
+    "output/texture-hd/p2-evidence/ui-native-validation.json",
+    "output/texture-hd/p2-work/ui-validation.json"
+  ],
+  "validation_scope": "Native image decoding; original-size atlas comparison; English/Chinese text regions; 120 command states; 12 HP/EXP animation cases with identical before/after traces. No full gameplay or Android device regression.",
+  "delivery_archive_completed_date": "2026-10-30",
+  "delivery_root": "output/texture-hd/batch-063/delivery"
+}

@@ -1,0 +1,276 @@
+{
+  "id": "batch-520",
+  "number": 520,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（9/29）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-519"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-520",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/mailHEARTMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1330,
+      "source_mtime_ns": 1792048548402681400,
+      "canonical_source": "Graphics/Pictures/mailHEARTMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailMOSAICMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1463,
+      "source_mtime_ns": 1792048548402681400,
+      "canonical_source": "Graphics/Pictures/mailMOSAICMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailSNOWMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3121,
+      "source_mtime_ns": 1792048548402681400,
+      "canonical_source": "Graphics/Pictures/mailSNOWMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailSPACEMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2289,
+      "source_mtime_ns": 1792048548403679900,
+      "canonical_source": "Graphics/Pictures/mailSPACEMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailSTEELMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 992,
+      "source_mtime_ns": 1792048548403679900,
+      "canonical_source": "Graphics/Pictures/mailSTEELMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mailTUNNELMAIL.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3125,
+      "source_mtime_ns": 1792048548408685700,
+      "canonical_source": "Graphics/Pictures/mailTUNNELMAIL.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapArrowDown.png",
+      "size": [
+        38,
+        20
+      ],
+      "source_bytes": 148,
+      "source_mtime_ns": 1792048548456588400,
+      "canonical_source": "Graphics/Pictures/mapArrowDown.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapArrowLeft.png",
+      "size": [
+        20,
+        38
+      ],
+      "source_bytes": 143,
+      "source_mtime_ns": 1792048548456588400,
+      "canonical_source": "Graphics/Pictures/mapArrowLeft.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapArrowRight.png",
+      "size": [
+        20,
+        38
+      ],
+      "source_bytes": 143,
+      "source_mtime_ns": 1792048548456588400,
+      "canonical_source": "Graphics/Pictures/mapArrowRight.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapArrowUp.png",
+      "size": [
+        38,
+        20
+      ],
+      "source_bytes": 154,
+      "source_mtime_ns": 1792048548457588200,
+      "canonical_source": "Graphics/Pictures/mapArrowUp.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 649,
+      "source_mtime_ns": 1792048548465588200,
+      "canonical_source": "Graphics/Pictures/mapbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapCursor.png",
+      "size": [
+        64,
+        32
+      ],
+      "source_bytes": 156,
+      "source_mtime_ns": 1792048548457588200,
+      "canonical_source": "Graphics/Pictures/mapCursor.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapHiddenBerth.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_bytes": 288,
+      "source_mtime_ns": 1792048548457588200,
+      "canonical_source": "Graphics/Pictures/mapHiddenBerth.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapHiddenDaroxy.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_bytes": 288,
+      "source_mtime_ns": 1792048548457588200,
+      "canonical_source": "Graphics/Pictures/mapHiddenDaroxy.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapHiddenFaraday.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_bytes": 297,
+      "source_mtime_ns": 1792048548458591400,
+      "canonical_source": "Graphics/Pictures/mapHiddenFaraday.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapPlayer000.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 96,
+      "source_mtime_ns": 1792048548458591400,
+      "canonical_source": "Graphics/Pictures/mapPlayer000.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapPlayer001.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 96,
+      "source_mtime_ns": 1792048548458591400,
+      "canonical_source": "Graphics/Pictures/mapPlayer001.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapPlayerPOKEMONTRAINER_Leaf.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 236,
+      "source_mtime_ns": 1792048548459590400,
+      "canonical_source": "Graphics/Pictures/mapPlayerPOKEMONTRAINER_Leaf.png"
+    },
+    {
+      "source": "Graphics/Pictures/mapPlayerPOKEMONTRAINER_Red.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 232,
+      "source_mtime_ns": 1792048548459590400,
+      "canonical_source": "Graphics/Pictures/mapPlayerPOKEMONTRAINER_Red.png"
+    },
+    {
+      "source": "Graphics/Pictures/martScreen.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 892,
+      "source_mtime_ns": 1792048548465588200,
+      "canonical_source": "Graphics/Pictures/martScreen.png"
+    },
+    {
+      "source": "Graphics/Pictures/martScreenKuray.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 128250,
+      "source_mtime_ns": 1792048548466589400,
+      "canonical_source": "Graphics/Pictures/martScreenKuray.png"
+    },
+    {
+      "source": "Graphics/Pictures/martScreenKuray_bu.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 102987,
+      "source_mtime_ns": 1792048548471589600,
+      "canonical_source": "Graphics/Pictures/martScreenKuray_bu.png"
+    },
+    {
+      "source": "Graphics/Pictures/martScreenOutfit.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 8418,
+      "source_mtime_ns": 1792048548471589600,
+      "canonical_source": "Graphics/Pictures/martScreenOutfit.png"
+    },
+    {
+      "source": "Graphics/Pictures/martSel.png",
+      "size": [
+        312,
+        34
+      ],
+      "source_bytes": 141,
+      "source_mtime_ns": 1792048548472588100,
+      "canonical_source": "Graphics/Pictures/martSel.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-520/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

@@ -1,0 +1,196 @@
+{
+  "id": "batch-618",
+  "number": 618,
+  "priority": "P4",
+  "stage": "windows",
+  "title": "窗口皮肤与边框切片（3/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "windowskin",
+  "processing_notes": "按引擎实际边框切片区域处理；保持边距、文字背景、箭头、光标和重复边的连接。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-617"
+  ],
+  "file_count": 16,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-618",
+  "entries": [
+    {
+      "source": "Graphics/Windowskins/speech dp 18.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 211,
+      "source_mtime_ns": 1792048556235823800,
+      "canonical_source": "Graphics/Windowskins/speech dp 18.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech dp 19.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 204,
+      "source_mtime_ns": 1792048556235823800,
+      "canonical_source": "Graphics/Windowskins/speech dp 19.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech dp 20.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 212,
+      "source_mtime_ns": 1792048556236824100,
+      "canonical_source": "Graphics/Windowskins/speech dp 20.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech em.png",
+      "size": [
+        80,
+        48
+      ],
+      "source_bytes": 182,
+      "source_mtime_ns": 1792048556238824400,
+      "canonical_source": "Graphics/Windowskins/speech em.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech frlg.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_bytes": 261,
+      "source_mtime_ns": 1792048556239826200,
+      "canonical_source": "Graphics/Windowskins/speech frlg.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 1.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 438,
+      "source_mtime_ns": 1792048556239826200,
+      "canonical_source": "Graphics/Windowskins/speech hgss 1.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 2.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 432,
+      "source_mtime_ns": 1792048556254824700,
+      "canonical_source": "Graphics/Windowskins/speech hgss 2.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 3.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 428,
+      "source_mtime_ns": 1792048556255830900,
+      "canonical_source": "Graphics/Windowskins/speech hgss 3.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 4.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 428,
+      "source_mtime_ns": 1792048556255830900,
+      "canonical_source": "Graphics/Windowskins/speech hgss 4.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 5.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 430,
+      "source_mtime_ns": 1792048556255830900,
+      "canonical_source": "Graphics/Windowskins/speech hgss 5.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 6.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 429,
+      "source_mtime_ns": 1792048556256830200,
+      "canonical_source": "Graphics/Windowskins/speech hgss 6.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 7.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 426,
+      "source_mtime_ns": 1792048556256830200,
+      "canonical_source": "Graphics/Windowskins/speech hgss 7.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 8.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 536,
+      "source_mtime_ns": 1792048556257826500,
+      "canonical_source": "Graphics/Windowskins/speech hgss 8.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 9.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 549,
+      "source_mtime_ns": 1792048556257826500,
+      "canonical_source": "Graphics/Windowskins/speech hgss 9.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 10.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 451,
+      "source_mtime_ns": 1792048556239826200,
+      "canonical_source": "Graphics/Windowskins/speech hgss 10.png"
+    },
+    {
+      "source": "Graphics/Windowskins/speech hgss 11.png",
+      "size": [
+        96,
+        48
+      ],
+      "source_bytes": 440,
+      "source_mtime_ns": 1792048556239826200,
+      "canonical_source": "Graphics/Windowskins/speech hgss 11.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "小窗、大窗、多行文本窗口、选项与光标实际显示，检查所有切片边界和平铺边。"
+  ],
+  "result": "output/texture-hd/batch-618/validation.json",
+  "applied_files": 0,
+  "preserved_files": 16
+}

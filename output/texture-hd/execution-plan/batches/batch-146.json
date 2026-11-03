@@ -1,0 +1,270 @@
+{
+  "id": "batch-146",
+  "number": 146,
+  "priority": "P2",
+  "stage": "trainer",
+  "title": "训练师战斗立绘与背面图（1/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-146",
+  "entries": [
+    {
+      "source": "Graphics/Trainers/ELITEFOUR_Lance_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 3216,
+      "source_mtime_ns": 1792048549979060700,
+      "canonical_source": "Graphics/Trainers/ELITEFOUR_Lance_back.png"
+    },
+    {
+      "source": "Graphics/Trainers/LEADER_Erika_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 2172,
+      "source_mtime_ns": 1792048549979614800,
+      "canonical_source": "Graphics/Trainers/LEADER_Erika_back.png"
+    },
+    {
+      "source": "Graphics/Trainers/POKEMONTRAINER_Leaf.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 697,
+      "source_mtime_ns": 1792048549992465400,
+      "canonical_source": "Graphics/Trainers/POKEMONTRAINER_Leaf.png"
+    },
+    {
+      "source": "Graphics/Trainers/POKEMONTRAINER_Leaf_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 2216,
+      "source_mtime_ns": 1792048549992987700,
+      "canonical_source": "Graphics/Trainers/POKEMONTRAINER_Leaf_back.png"
+    },
+    {
+      "source": "Graphics/Trainers/POKEMONTRAINER_Red.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 737,
+      "source_mtime_ns": 1792048549992987700,
+      "canonical_source": "Graphics/Trainers/POKEMONTRAINER_Red.png"
+    },
+    {
+      "source": "Graphics/Trainers/POKEMONTRAINER_Red_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 2128,
+      "source_mtime_ns": 1792048549993508900,
+      "canonical_source": "Graphics/Trainers/POKEMONTRAINER_Red_back.png"
+    },
+    {
+      "source": "Graphics/Trainers/RIVAL1_back.png",
+      "size": [
+        800,
+        160
+      ],
+      "source_bytes": 123,
+      "source_mtime_ns": 1792048549993508900,
+      "canonical_source": "Graphics/Trainers/RIVAL1_back.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer000.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 737,
+      "source_mtime_ns": 1792048549994033100,
+      "canonical_source": "Graphics/Trainers/trainer000.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer001.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 697,
+      "source_mtime_ns": 1792048549994033100,
+      "canonical_source": "Graphics/Trainers/trainer001.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer002.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 751,
+      "source_mtime_ns": 1792048549994557300,
+      "canonical_source": "Graphics/Trainers/trainer002.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer003.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 827,
+      "source_mtime_ns": 1792048549994557300,
+      "canonical_source": "Graphics/Trainers/trainer003.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer004.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 801,
+      "source_mtime_ns": 1792048549995079800,
+      "canonical_source": "Graphics/Trainers/trainer004.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer005.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 622,
+      "source_mtime_ns": 1792048549995079800,
+      "canonical_source": "Graphics/Trainers/trainer005.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer006.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 719,
+      "source_mtime_ns": 1792048549995602500,
+      "canonical_source": "Graphics/Trainers/trainer006.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer007.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 808,
+      "source_mtime_ns": 1792048549995602500,
+      "canonical_source": "Graphics/Trainers/trainer007.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer008.png",
+      "size": [
+        160,
+        168
+      ],
+      "source_bytes": 1225,
+      "source_mtime_ns": 1792048549996123900,
+      "canonical_source": "Graphics/Trainers/trainer008.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer009.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 882,
+      "source_mtime_ns": 1792048549996123900,
+      "canonical_source": "Graphics/Trainers/trainer009.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer010.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 770,
+      "source_mtime_ns": 1792048550017312700,
+      "canonical_source": "Graphics/Trainers/trainer010.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer011.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 826,
+      "source_mtime_ns": 1792048550017312700,
+      "canonical_source": "Graphics/Trainers/trainer011.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer012.png",
+      "size": [
+        150,
+        150
+      ],
+      "source_bytes": 1127,
+      "source_mtime_ns": 1792048550017312700,
+      "canonical_source": "Graphics/Trainers/trainer012.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer013.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1711,
+      "source_mtime_ns": 1792048550018313100,
+      "canonical_source": "Graphics/Trainers/trainer013.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer014.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 848,
+      "source_mtime_ns": 1792048550018313100,
+      "canonical_source": "Graphics/Trainers/trainer014.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer015.png",
+      "size": [
+        172,
+        160
+      ],
+      "source_bytes": 971,
+      "source_mtime_ns": 1792048550018313100,
+      "canonical_source": "Graphics/Trainers/trainer015.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer016.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 878,
+      "source_mtime_ns": 1792048550018313100,
+      "canonical_source": "Graphics/Trainers/trainer016.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-146/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

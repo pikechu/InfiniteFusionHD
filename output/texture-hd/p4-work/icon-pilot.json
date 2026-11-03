@@ -1,0 +1,12 @@
+{
+  "method": "built-in image_gen",
+  "source": "Graphics/Icons/item001.png",
+  "source_sha256": "c8d07623d9bd73dc45ae1e3977c1f426f060c8e9658c69045b1e220c275a5ef0",
+  "status": "rejected_geometry",
+  "prompt": "Use case: precise-object-edit. Asset type: transparent RPG inventory item icon, original canvas 48 by 48 pixels. The provided local image is the edit target: a small green potion bottle with gray/silver neck, pale cap, and magenta label. Refine only restrained interior glass highlights, cap shading and label edge clarity while retaining the original small pixel-art style. Preserve the exact bottle outline, its width and height relative to the canvas, the sloping shoulders, cap shape, label shape, colors, pose, location and transparent margins. No lettering, new symbols, cast shadow, extra objects or background. Do not replace the icon with a realistic bottle or change its design. Keep the existing silhouette and alpha boundary as closely pixel-aligned as possible. This output will be reduced back to 48x48 and must visibly improve readability there without changing the original object.",
+  "generated": "output/texture-hd/p4-work/item001-generated.png",
+  "generated_sha256": "2ef10f521b84b7fd1c9a36e530ba193906d737939d77cd2ef02f9c805dbe53e6",
+  "candidate": null,
+  "reason": "Visible-content aspect error 13.8% exceeds the existing 10% fitting guard; the original red marking also changed toward pink. Rejected without forcing distorted fitting or replacing the source. The legacy numeric source is outside the current named-item resolver.",
+  "aspect_error": 0.13829938755163074
+}

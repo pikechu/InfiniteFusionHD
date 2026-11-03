@@ -1,0 +1,276 @@
+{
+  "id": "batch-516",
+  "number": 516,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（5/29）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-515"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-516",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/ballnormal.png",
+      "size": [
+        30,
+        30
+      ],
+      "source_bytes": 209,
+      "source_mtime_ns": 1792048548271586000,
+      "canonical_source": "Graphics/Pictures/ballnormal.png"
+    },
+    {
+      "source": "Graphics/Pictures/bat-icon-gold.png",
+      "size": [
+        48,
+        33
+      ],
+      "source_bytes": 317,
+      "source_mtime_ns": 1792048548272587700,
+      "canonical_source": "Graphics/Pictures/bat-icon-gold.png"
+    },
+    {
+      "source": "Graphics/Pictures/bat-icon.png",
+      "size": [
+        48,
+        33
+      ],
+      "source_bytes": 317,
+      "source_mtime_ns": 1792048548272587700,
+      "canonical_source": "Graphics/Pictures/bat-icon.png"
+    },
+    {
+      "source": "Graphics/Pictures/bbtrans.png",
+      "size": [
+        242,
+        54
+      ],
+      "source_bytes": 1253,
+      "source_mtime_ns": 1792048548280243500,
+      "canonical_source": "Graphics/Pictures/bbtrans.png"
+    },
+    {
+      "source": "Graphics/Pictures/bbtrans_opp.png",
+      "size": [
+        242,
+        54
+      ],
+      "source_bytes": 1250,
+      "source_mtime_ns": 1792048548280585800,
+      "canonical_source": "Graphics/Pictures/bbtrans_opp.png"
+    },
+    {
+      "source": "Graphics/Pictures/border.png",
+      "size": [
+        668,
+        540
+      ],
+      "source_bytes": 3678,
+      "source_mtime_ns": 1792048548280585800,
+      "canonical_source": "Graphics/Pictures/border.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille1.png",
+      "size": [
+        584,
+        95
+      ],
+      "source_bytes": 1210,
+      "source_mtime_ns": 1792048548341146300,
+      "canonical_source": "Graphics/Pictures/braille1.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille2.png",
+      "size": [
+        584,
+        95
+      ],
+      "source_bytes": 956,
+      "source_mtime_ns": 1792048548341146300,
+      "canonical_source": "Graphics/Pictures/braille2.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille3.png",
+      "size": [
+        584,
+        95
+      ],
+      "source_bytes": 883,
+      "source_mtime_ns": 1792048548341146300,
+      "canonical_source": "Graphics/Pictures/braille3.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille decoder.png",
+      "size": [
+        219,
+        109
+      ],
+      "source_bytes": 5502,
+      "source_mtime_ns": 1792048548340147900,
+      "canonical_source": "Graphics/Pictures/braille decoder.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_icesteel.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 3597,
+      "source_mtime_ns": 1792048548342146500,
+      "canonical_source": "Graphics/Pictures/braille_icesteel.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore1a.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 14072,
+      "source_mtime_ns": 1792048548342179400,
+      "canonical_source": "Graphics/Pictures/braille_lore1a.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore1b.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 13988,
+      "source_mtime_ns": 1792048548342686200,
+      "canonical_source": "Graphics/Pictures/braille_lore1b.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore2a.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 13716,
+      "source_mtime_ns": 1792048548342686200,
+      "canonical_source": "Graphics/Pictures/braille_lore2a.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore2b.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 13838,
+      "source_mtime_ns": 1792048548343693900,
+      "canonical_source": "Graphics/Pictures/braille_lore2b.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore3a.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 14193,
+      "source_mtime_ns": 1792048548343693900,
+      "canonical_source": "Graphics/Pictures/braille_lore3a.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore3b.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 14169,
+      "source_mtime_ns": 1792048548344693000,
+      "canonical_source": "Graphics/Pictures/braille_lore3b.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore4a.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 14383,
+      "source_mtime_ns": 1792048548344693000,
+      "canonical_source": "Graphics/Pictures/braille_lore4a.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore4b.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 13968,
+      "source_mtime_ns": 1792048548345692300,
+      "canonical_source": "Graphics/Pictures/braille_lore4b.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_lore5.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 908,
+      "source_mtime_ns": 1792048548345692300,
+      "canonical_source": "Graphics/Pictures/braille_lore5.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_rockice.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 3594,
+      "source_mtime_ns": 1792048548345692300,
+      "canonical_source": "Graphics/Pictures/braille_rockice.png"
+    },
+    {
+      "source": "Graphics/Pictures/braille_steelrock.png",
+      "size": [
+        252,
+        49
+      ],
+      "source_bytes": 14348,
+      "source_mtime_ns": 1792048548346715600,
+      "canonical_source": "Graphics/Pictures/braille_steelrock.png"
+    },
+    {
+      "source": "Graphics/Pictures/category.png",
+      "size": [
+        64,
+        84
+      ],
+      "source_bytes": 399,
+      "source_mtime_ns": 1792048548346715600,
+      "canonical_source": "Graphics/Pictures/category.png"
+    },
+    {
+      "source": "Graphics/Pictures/caustic1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 22118,
+      "source_mtime_ns": 1792048548347693700,
+      "canonical_source": "Graphics/Pictures/caustic1.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-516/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

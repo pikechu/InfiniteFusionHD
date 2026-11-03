@@ -1,0 +1,150 @@
+{
+  "id": "batch-857",
+  "number": 857,
+  "priority": "P5",
+  "stage": "misc",
+  "title": "杂项、素材集合与用途待确认图片（5/5）",
+  "status": "completed",
+  "action": "audit_then_enhance_if_used",
+  "method": "audit",
+  "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
+  "depends_on": [
+    "batch-856"
+  ],
+  "file_count": 12,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-857",
+  "entries": [
+    {
+      "source": "Graphics/Misc/TELEPORTERd by GasmaskBlacky#3513.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 855,
+      "source_mtime_ns": 1792048545845137200,
+      "canonical_source": "Graphics/Misc/TELEPORTERd by GasmaskBlacky#3513.png"
+    },
+    {
+      "source": "Graphics/Misc/tileset_kanto_league by NeedyNickel#2240.png",
+      "size": [
+        172,
+        88
+      ],
+      "source_bytes": 1889,
+      "source_mtime_ns": 1792048545929827000,
+      "canonical_source": "Graphics/Misc/tileset_kanto_league by NeedyNickel#2240.png"
+    },
+    {
+      "source": "Graphics/Misc/TOXICBALL by GasmaskBlacky#3513.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 799,
+      "source_mtime_ns": 1792048545845137200,
+      "canonical_source": "Graphics/Misc/TOXICBALL by GasmaskBlacky#3513.png"
+    },
+    {
+      "source": "Graphics/Misc/TRADEBALL by GasmaskBlacky#3513.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 769,
+      "source_mtime_ns": 1792048545845137200,
+      "canonical_source": "Graphics/Misc/TRADEBALL by GasmaskBlacky#3513.png"
+    },
+    {
+      "source": "Graphics/Misc/TRANSGENDERSTONE.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 1035,
+      "source_mtime_ns": 1792048545847136900,
+      "canonical_source": "Graphics/Misc/TRANSGENDERSTONE.png"
+    },
+    {
+      "source": "Graphics/Misc/vertical_splicer by Maelmc#9965.png",
+      "size": [
+        22,
+        49
+      ],
+      "source_bytes": 433,
+      "source_mtime_ns": 1792048545929827000,
+      "canonical_source": "Graphics/Misc/vertical_splicer by Maelmc#9965.png"
+    },
+    {
+      "source": "Graphics/Misc/VIRUSBALL by GasmaskBlacky#3513.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 803,
+      "source_mtime_ns": 1792048545847136900,
+      "canonical_source": "Graphics/Misc/VIRUSBALL by GasmaskBlacky#3513.png"
+    },
+    {
+      "source": "Graphics/Misc/vsTrainer_ELITEFOUR_Agatha.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1295,
+      "source_mtime_ns": 1792048545930828400,
+      "canonical_source": "Graphics/Misc/vsTrainer_ELITEFOUR_Agatha.png"
+    },
+    {
+      "source": "Graphics/Misc/vsTrainer_ELITEFOUR_Lorelei.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1652,
+      "source_mtime_ns": 1792048545930828400,
+      "canonical_source": "Graphics/Misc/vsTrainer_ELITEFOUR_Lorelei.png"
+    },
+    {
+      "source": "Graphics/Misc/vsTrainer_LEADER_Kurt.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1434,
+      "source_mtime_ns": 1792048545930828400,
+      "canonical_source": "Graphics/Misc/vsTrainer_LEADER_Kurt.png"
+    },
+    {
+      "source": "Graphics/Misc/vsTrainer_LEADER_Misty.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1640,
+      "source_mtime_ns": 1792048545931828300,
+      "canonical_source": "Graphics/Misc/vsTrainer_LEADER_Misty.png"
+    },
+    {
+      "source": "Graphics/Misc/Wishiwashi_Tuna_can_asset by CatSoup02#6873.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4905,
+      "source_mtime_ns": 1792048545848137300,
+      "canonical_source": "Graphics/Misc/Wishiwashi_Tuna_can_asset by CatSoup02#6873.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
+  ],
+  "result": "output/texture-hd/batch-857/validation.json",
+  "applied_files": 0,
+  "preserved_files": 12
+}

@@ -1,0 +1,167 @@
+{
+  "id": "batch-069",
+  "number": 69,
+  "priority": "P2",
+  "stage": "ui_party",
+  "title": "队伍、背包、摘要与通用菜单（6/13）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-068"
+  ],
+  "file_count": 13,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-069",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/bag/bg_1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548202031800,
+      "canonical_source": "Graphics/Pictures/bag/bg_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_2.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548202031800,
+      "canonical_source": "Graphics/Pictures/bag/bg_2.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_3.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548202031800,
+      "canonical_source": "Graphics/Pictures/bag/bg_3.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_4.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548203030500,
+      "canonical_source": "Graphics/Pictures/bag/bg_4.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_5.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548203030500,
+      "canonical_source": "Graphics/Pictures/bag/bg_5.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_6.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548203030500,
+      "canonical_source": "Graphics/Pictures/bag/bg_6.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_7.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548205031000,
+      "canonical_source": "Graphics/Pictures/bag/bg_7.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bg_8.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1722,
+      "source_mtime_ns": 1792048548206031200,
+      "canonical_source": "Graphics/Pictures/bag/bg_8.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/cursor.png",
+      "size": [
+        282,
+        68
+      ],
+      "source_bytes": 740,
+      "source_mtime_ns": 1792048548206031200,
+      "canonical_source": "Graphics/Pictures/bag/cursor.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/cursor_swap.png",
+      "size": [
+        282,
+        68
+      ],
+      "source_bytes": 852,
+      "source_mtime_ns": 1792048548206031200,
+      "canonical_source": "Graphics/Pictures/bag/cursor_swap.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/icon_pocket.png",
+      "size": [
+        224,
+        48
+      ],
+      "source_bytes": 1904,
+      "source_mtime_ns": 1792048548206031200,
+      "canonical_source": "Graphics/Pictures/bag/icon_pocket.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/icon_register.png",
+      "size": [
+        56,
+        48
+      ],
+      "source_bytes": 730,
+      "source_mtime_ns": 1792048548207029400,
+      "canonical_source": "Graphics/Pictures/bag/icon_register.png"
+    },
+    {
+      "source": "Graphics/Pictures/bag/icon_slider.png",
+      "size": [
+        72,
+        76
+      ],
+      "source_bytes": 802,
+      "source_mtime_ns": 1792048548207029400,
+      "canonical_source": "Graphics/Pictures/bag/icon_slider.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-069/validation.json",
+  "applied_files": 0,
+  "preserved_files": 13,
+  "candidate_files": 0
+}

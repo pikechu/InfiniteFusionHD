@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "retained_sources_byte_identical": 1218,
+  "reviewed_original_sheets": 91,
+  "title_panorama_renders": 92,
+  "panorama_offset_cases": 204,
+  "player_appearance_cases": 138,
+  "player_pose_states": 15456,
+  "surf_dive_states": 464,
+  "player_action_return_anchors_identical": true,
+  "player_pattern_periods": [
+    {
+      "move_speed": 3,
+      "period_updates": 20,
+      "nominal_ms_at_40fps": 500
+    },
+    {
+      "move_speed": 4,
+      "period_updates": 10,
+      "nominal_ms_at_40fps": 250
+    },
+    {
+      "move_speed": 5,
+      "period_updates": 16,
+      "nominal_ms_at_40fps": 400
+    },
+    {
+      "move_speed": 6,
+      "period_updates": 8,
+      "nominal_ms_at_40fps": 200
+    }
+  ],
+  "species": 470,
+  "front_back_metric_cases": 940,
+  "battler_selection_states": 47000,
+  "battler_combined_cycle_updates": 24,
+  "battler_nominal_cycle_ms_at_40fps": 600,
+  "representative_shiny_cases": 12,
+  "trainer_static_battle_renders": 121,
+  "legacy_trainer_throw_sequences": 9,
+  "sources_changed_by_this_wave": 0,
+  "candidate_pending_review": 0,
+  "limitations": [
+    "Native fixed-input component/scene checks, not complete gameplay or all map/event state transitions.",
+    "Current player-back snapshot only constructs the layered front sprite at its initial offscreen position; no full battle entrance claim.",
+    "Legacy five-frame back strips are not the active current player sprite path.",
+    "Shiny cases are representative; no exhaustive proof of every hue/hat/form combination.",
+    "No Android physical-device or final release-package test."
+  ],
+  "generation": "One built-in walk proposal rejected for all 16 changed cell anchors. Two Pokemon pilot outputs rejected by the built-in tool; no API fallback used. All remaining originals retained after individual visual review, not labeled AI-enhanced."
+}

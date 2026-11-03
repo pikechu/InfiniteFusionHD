@@ -1,0 +1,390 @@
+{
+  "batch": "068",
+  "method": "Original-size review; reuse existing built-in image_gen bag proposals; no new image generation.",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/bag/Bag5.png",
+      "source_sha256": "b1f83a9cd02656edeb353ebb0dd252983c93d71872212b1d6e89b4135f9fe2a4",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag5F.png",
+      "source_sha256": "97c93e513b71c68501fe8648dccda6f3ec098e5eac39d4c38aa98d692e3f0198",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag6.png",
+      "source_sha256": "18ce7b41cf165b8788f1e3f21d84d6b6006ad31f3148daecc0ba58729de33441",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag6F.png",
+      "source_sha256": "7ebb3d38c950b20c9a4a6dd5ba8b04c4a250ab4fbb2c4a9621041b233acb7f83",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag7.png",
+      "source_sha256": "55f1acbf351e8e71cc8fb5956f661fdd08382ca7a26efaf7cc4a6584b2e4711d",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag7F.png",
+      "source_sha256": "e34e85cb485aed15dc87b58c37b89473c21304ae2e8961b539c38947d9caf3bc",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag8.png",
+      "source_sha256": "a368b51d458e628bdb73a3d86cbbb8299641ab3f38d7e90e084c95525dbd9610",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/Bag8F.png",
+      "source_sha256": "fd6c2703e626eb2fbffc3065950aba5888de9c75c3be76055832e9f6dcc3b879",
+      "decision": "preserved",
+      "reason": "兼容目录中的旧界面版本；当前队伍、摘要和背包场景使用 Party/、Summary/、bag_ 与 bg_ 命名。原有装饰与状态差异已复核，保留兼容源图，未生成新版本。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_1.PNG",
+      "source_sha256": "23db31d95289000248aa5af9a4c719aabef91f25894bd6bd4024657461f38335",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-1-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_1.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "23db31d95289000248aa5af9a4c719aabef91f25894bd6bd4024657461f38335",
+        "after_sha256": "05402c9191fb428f73567dfeda726c25703c697f1009060f0efde682da0dec55",
+        "generated_sha256": "720f298160718f1cef1e8edbf0ad07b5cfd1ebce634565be4d2e3efd358e205b"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_1_f.PNG",
+      "source_sha256": "317c0acdc0c947794e6ff02f51d8b51e86059aea63a10417672ae174ebeb5a77",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-1-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_1_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "317c0acdc0c947794e6ff02f51d8b51e86059aea63a10417672ae174ebeb5a77",
+        "after_sha256": "59e2f6de4b7a2c82fd7fefd50d832451f36c4aa23459b70ac8a79fb15760efad",
+        "generated_sha256": "02aac72abe63d0f12e1ce5427c0d9675025bb2f5853ab2a7dd3dcbd68b277165"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_2.PNG",
+      "source_sha256": "1571923653f9f14ad44f83010e48bbe836d7dfb8be33deec6c3f280b2d83d7c3",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-2-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_2.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "1571923653f9f14ad44f83010e48bbe836d7dfb8be33deec6c3f280b2d83d7c3",
+        "after_sha256": "d3f6590b0c8bf033213a640fe3f1fb4e20eec00adda03f2c20688ecd05f12edb",
+        "generated_sha256": "6b4d09cc02947bff29d3a2719031c62c73e239ca6de120fbd43b1205c8dd4efc"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_2_f.PNG",
+      "source_sha256": "8d62d202bb57cb91b7a10a106a3ffe852ae0d91e03d667ce80746a27fbe0bba0",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-2-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_2_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "8d62d202bb57cb91b7a10a106a3ffe852ae0d91e03d667ce80746a27fbe0bba0",
+        "after_sha256": "f57f7c11edeea015acecec9a4f631e21e80c35fb2e49d298bac4c6866db65152",
+        "generated_sha256": "0b487655e400c37417fc0a4d65d4604818c610d49cc1cfc80f3149a3a720e5a3"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_3.PNG",
+      "source_sha256": "53d0b97e3b47c9f49720d9e72a143de243c23f0551598edd0fe6bccda1d4371d",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-3-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_3.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "53d0b97e3b47c9f49720d9e72a143de243c23f0551598edd0fe6bccda1d4371d",
+        "after_sha256": "8a8fb1de7fbdf1aff97932f2f74e4ec20774eff92b65fcf5b34ac484d8e4e0e6",
+        "generated_sha256": "130df4f4fb910ada6713b575c4f9b1f00b07861d20eb7c4b0fb3861fb1bbec90"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_3_f.PNG",
+      "source_sha256": "8ecaa4ea9928a5a4ca6bf87ccbfb3192b5e7ffe2410862092f1ec7b944a46249",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-3-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_3_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "8ecaa4ea9928a5a4ca6bf87ccbfb3192b5e7ffe2410862092f1ec7b944a46249",
+        "after_sha256": "3a5f53b2712492366002aaa4684a965dcb68ba1e983b96ebb962933cb0e594fb",
+        "generated_sha256": "4553212bcb72a707ed2c2a571395b2e773e6a11f51fd73c96e33c1b77ad64bd5"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_4.PNG",
+      "source_sha256": "81d8134f72b7213bc97d48abb18036805f0cfe30d5f9c927359c9f7f39cef24e",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-4-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_4.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "81d8134f72b7213bc97d48abb18036805f0cfe30d5f9c927359c9f7f39cef24e",
+        "after_sha256": "a8e1d8d90b9fa5b45e2fad93784946b52dc1cfdc6aa657737d63e212f69e35f5",
+        "generated_sha256": "00ac6869ed2bef536c04d6a67a6c2e33fc61afe392b2c6d64ccc1529d386b241"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_4_f.PNG",
+      "source_sha256": "55c6c486554a49b8114bb21fe8081f020ea30f3e5d2544ae145e95df4a1b8f1d",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-4-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_4_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "55c6c486554a49b8114bb21fe8081f020ea30f3e5d2544ae145e95df4a1b8f1d",
+        "after_sha256": "df203060c52e2eacefbd8d475fd9abfbcb976f4a43a442053d15f927f9a1b4b3",
+        "generated_sha256": "ca8eeec47c21aa7882d6937520a39cccefabd7e0637708c24eb52f3d5bfb1e70"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_5.PNG",
+      "source_sha256": "9296ac02bc2ce10c363a939369f75dcbc17eeb7cde755f57b471a318acc57199",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-5-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_5.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "9296ac02bc2ce10c363a939369f75dcbc17eeb7cde755f57b471a318acc57199",
+        "after_sha256": "2c474a62c8009faeb3acfd37d7eb93a44b0b5571a7cd976a706b9370170f5559",
+        "generated_sha256": "420fd6affa4a4d10ad7ddf35eff2fda6693d55119bcf8f316181b4e320a83dab"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_5_f.PNG",
+      "source_sha256": "f63702c80d330bc46b6f55dad276b3db4e4d6ff4659b87bd1dafe2c340896fba",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-5-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_5_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "f63702c80d330bc46b6f55dad276b3db4e4d6ff4659b87bd1dafe2c340896fba",
+        "after_sha256": "b8d0add2049cc7e616741f015ce75143757c58f9915671ef0ff8df08010fde6e",
+        "generated_sha256": "110fd21197b77c2e9673beb664c14ce8769acbf94666c76eb5ecff74d2f02d0c"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_6.PNG",
+      "source_sha256": "41307edf55773d14c50dbbc8fca3ea8947f0422e9651dba374b6f0a981dd80ad",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-6-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_6.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "41307edf55773d14c50dbbc8fca3ea8947f0422e9651dba374b6f0a981dd80ad",
+        "after_sha256": "4eeb64a2fe4e3b2aef4c7ee1ccf65c2c5a0dca8e5e41de4ea81deed2cb7fd7ee",
+        "generated_sha256": "380db644cd98da35e1de6e4c4f599b6dcf73135d8106212f6b4ebe205c28997d"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_6_f.PNG",
+      "source_sha256": "1f90094bc095250de1abc299fbd1072cda04a98f4d987184a6928e1bd7eaa0bb",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-6-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_6_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "1f90094bc095250de1abc299fbd1072cda04a98f4d987184a6928e1bd7eaa0bb",
+        "after_sha256": "c19b1919f93ec02310ad407159f80523f9ee631182a9101df82d89925971231a",
+        "generated_sha256": "5b037f8a27654de92fdb8bbb3962c50c64fcdc2fe74f6d8610df55fc856a5bc0"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_7.PNG",
+      "source_sha256": "d8a943a90fe2c55be5cf4900ea5554c34068a24b7d7e525cee6d590e01995e5d",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-7-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_7.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "d8a943a90fe2c55be5cf4900ea5554c34068a24b7d7e525cee6d590e01995e5d",
+        "after_sha256": "b9d5792afab406c2cfe2c85f739b49373db08a8c468830364d26c7833749bddc",
+        "generated_sha256": "bdd0f3ab0f86a5a5ad82a8f397a43c7dc63b6151d486984754c3797656c4b2c7"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_7_f.PNG",
+      "source_sha256": "0567d1aaf1464e84ee189c681bea5054d93251599d852c58130bc0d9a3a4c362",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-7-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_7_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "0567d1aaf1464e84ee189c681bea5054d93251599d852c58130bc0d9a3a4c362",
+        "after_sha256": "1b8fe49e38b07dacea8239136165a4677e43db44180bd10d71be15dce6111d7d",
+        "generated_sha256": "e12e4be69937b967353c2716c51548c466ce154c8da8d516ed350b2a97b2803e"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_8.PNG",
+      "source_sha256": "1687dd8127d1aa7a6341fcaf014906439bc8248c67a37cceb16046de6de941f9",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG bag icon. Refine only restrained fine surface detail on the existing white hard shell, blue seams and rim. Preserve the same shape, silhouette, outlines, all panels and straps, circular emblem, highlighted red pocket segment, original colors, lighting and drop shadow. Every original feature stays at the same relative coordinate. No new zip, stitching, logo, lines, pockets, seams, text, symbols or highlights. Keep the original pixel-art identity and orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structural identity has priority.",
+      "generated": "output/texture-hd/p2-work/bag-male-8-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_8.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "1687dd8127d1aa7a6341fcaf014906439bc8248c67a37cceb16046de6de941f9",
+        "after_sha256": "9f00fa96eaa312edb2e43db37ac9d89fe393d3310ba7e10de7124de47c5ae3cf",
+        "generated_sha256": "39be18d58d11e10ce578bb08bc0df474925f31d044551de5d8804c9b4b37751d"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    },
+    {
+      "source": "Graphics/Pictures/bag/bag_8_f.PNG",
+      "source_sha256": "9e695824f7cec7579e97c250c6ef2bfd3d7aa2925c9647279035170b58154cf6",
+      "decision": "preserved",
+      "reason": "复用已有内置 image_gen 结果完成原生前后验收；128×128 原尺寸的微小明暗没有提升轮廓或口袋辨识度，保留原图。32 份候选及提示词已归档，不计为已应用。",
+      "prompt": "Use case: precise-object-edit. Edit target: the exact supplied 128x128 technical RPG shoulder bag icon. Refine only restrained fine surface detail on the existing pale-blue/white panels, pink trim, handles, blue seams and clasps. Preserve the exact silhouette, original outline, all pockets, original panel divisions, the red highlighted pocket segment, original colors and shading. Every original feature and the bag's anchor remain at the same relative coordinates. No added stitching, logos, creases, straps, buttons, seams, text or new highlights. Keep the original pixel-art identity and front-facing orientation. No crop, zoom, changed margins or rearrangement. Preserve transparent regions. Output a larger square detail proposal aligned to the complete original canvas; original structure has priority.",
+      "generated": "output/texture-hd/p2-work/bag-female-8-generated.png",
+      "candidate": {
+        "source": "Graphics/Pictures/bag/bag_8_f.PNG",
+        "size": [
+          128,
+          128
+        ],
+        "before_sha256": "9e695824f7cec7579e97c250c6ef2bfd3d7aa2925c9647279035170b58154cf6",
+        "after_sha256": "ec601c6a87e55e40f13938caa52de8d0622dc1a44371cc995214d9318f0e65eb",
+        "generated_sha256": "d66a31b9ead0bd61f35cfe1689cc98d367ae1a99da96dead4d3b67abbe67da44"
+      },
+      "candidate_status": "rejected_no_visible_gain"
+    }
+  ]
+}

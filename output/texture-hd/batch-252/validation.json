@@ -1,0 +1,898 @@
+{
+  "batch": "batch-252",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_10.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4238,
+      "source_mtime_ns": 1792048530832023900,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_10.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "944b3c7498a18abcffdf28b522e1bbbcd78fd8d1571680ae18c029cd653e4a77",
+      "git_blob": "87b338f3f18c4db632943e67e583a03b342075da",
+      "reference_blob": "87b338f3f18c4db632943e67e583a03b342075da",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5d1662465132e0fce7bd10a224660fb13f62de84beaf36379c938c275e732b0a",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_11.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4242,
+      "source_mtime_ns": 1792048530833026200,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_11.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "27804def35f5a1a76ece5b9aa88e955c66028eae7a87288015574cc5d916f3af",
+      "git_blob": "b6ee97f8be18bb64c65b32f6cb6e59822b5cedd9",
+      "reference_blob": "b6ee97f8be18bb64c65b32f6cb6e59822b5cedd9",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "eb43058e3c1749b814e3f70d098c09cbbe2a88032869abb38d77cf1b58aa9563",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_12.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4226,
+      "source_mtime_ns": 1792048530833026200,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_12.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "58f87b1d683734f1df3bdb380604f6116c22c45f3ce21be9fa1209f87ad7e5df",
+      "git_blob": "9e35de7dfc2baf3144823d7316bddaeb0c949c69",
+      "reference_blob": "9e35de7dfc2baf3144823d7316bddaeb0c949c69",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f6b44687fceb6d80691043ab5a85b561fb8d1734329d7f588cd45331bc4b9359",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_13.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4195,
+      "source_mtime_ns": 1792048530833026200,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_13.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "dd6b144b330fba566cf31bad4aa30594bc035b314695ccbd9ce9044c6affce37",
+      "git_blob": "5a49e7c513a19f10c3051c098e38117a2c64d523",
+      "reference_blob": "5a49e7c513a19f10c3051c098e38117a2c64d523",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "de8d7f1ea245f59d15422b483f0134b3c24a287f1b2779908313dc5bad996f34",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_14.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4239,
+      "source_mtime_ns": 1792048530834023500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_14.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "ba2ef94fd45d1b81945feadd2bb339e5ea2a7df02c48aca6e4e89261742e2d7c",
+      "git_blob": "ac082f804d6b641e4133b963d5ea10c4d485d87b",
+      "reference_blob": "ac082f804d6b641e4133b963d5ea10c4d485d87b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "9653f41e11a60c9903eefd6268d5d86c86ed460562508fc3fd6fde3c01308474",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_15.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4240,
+      "source_mtime_ns": 1792048530834023500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_15.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "457615a8fb3ae1e3e1a5d72dc018bd0fc946430ad91d6b42d4f2c8445b725519",
+      "git_blob": "cc478a5430b7fe399fb2f3653a0ff8c3b1a9947f",
+      "reference_blob": "cc478a5430b7fe399fb2f3653a0ff8c3b1a9947f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "41b91a76c4e43461363c47ee5d6025525d6d6e7e3b1f76fdb45c9f9fe7f53d53",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_16.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4347,
+      "source_mtime_ns": 1792048530834023500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_16.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "9230b8dcabdc1424ca1eee403e1dbe307157287b4067dcb50c8647292c98b54d",
+      "git_blob": "896659c6a13d3f8a58ca32c5b2b2087edbe5c294",
+      "reference_blob": "896659c6a13d3f8a58ca32c5b2b2087edbe5c294",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "873859769ea13a50ce40459982ca752e1dfdbd9b5f89b19c0bf68164a54454a9",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_17.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4251,
+      "source_mtime_ns": 1792048530834023500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_17.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "5b39a5d6895216d69936e3415d6e3263e1020f75f36184df290a383fa876da66",
+      "git_blob": "19cdf9e79d0927192bd6b841479297af253caa1c",
+      "reference_blob": "19cdf9e79d0927192bd6b841479297af253caa1c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7d200ed397df7568e175ff3131e01147d1286b3c8a6aa487965b11a86a859161",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_18.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4232,
+      "source_mtime_ns": 1792048530835023300,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_18.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "4202784590e41bd47b53689e2fa36beb40bf9ba4b3f5653a91ed3088b16393f2",
+      "git_blob": "786d921c8250fff6082c65b36205867f10c3a135",
+      "reference_blob": "786d921c8250fff6082c65b36205867f10c3a135",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d2a8deed65085099aea14187cf4879eadf8aea2c0cb83a9042d33693d9044712",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_19.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4271,
+      "source_mtime_ns": 1792048530835023300,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_19.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "b28746bf5fd0548a9f56374c8a04fce770407936b3351e62f3def97ffabdc0dd",
+      "git_blob": "d4fc12ca3e6061c1048f3fad144b6d9e1e36a29e",
+      "reference_blob": "d4fc12ca3e6061c1048f3fad144b6d9e1e36a29e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "94ce49227d308c603057a63da2f4b83bba8bd975c60aa95aaa160ea83a442972",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_20.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4282,
+      "source_mtime_ns": 1792048530886605900,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_20.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "221dd2d557022e3edcac2f37f3479091fbf65c37e98bab18175f568c4fab1111",
+      "git_blob": "fc26a53b39e26dd0c2ca6d9771d7899e31a4c974",
+      "reference_blob": "fc26a53b39e26dd0c2ca6d9771d7899e31a4c974",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5fbf4654f7230d9403cd60f025a26d1458ab586c9b5a9a8c1bee2c6d1aa4e82d",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_21.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4482,
+      "source_mtime_ns": 1792048530886605900,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_21.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "c2ba6d034c4c7a4320a801a62885759d67644b5689c7d3b105d04cf73a74e0a5",
+      "git_blob": "d9c83db11b05b900c0ae3be753501cc2507491cb",
+      "reference_blob": "d9c83db11b05b900c0ae3be753501cc2507491cb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a233eada69e45e0e70dcbb53a2ca1eac2cfbfc0b1b6ad167e7f930e29c861d6d",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_22.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4444,
+      "source_mtime_ns": 1792048530887608500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_22.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "1c7ac6823529887c580113f58853c26442645d8af0f3b263351e78cb94b9d12f",
+      "git_blob": "8d8844e40c1fd269fa1eb41f5d50ca2950b5cef2",
+      "reference_blob": "8d8844e40c1fd269fa1eb41f5d50ca2950b5cef2",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "acfa4f0465fb85616f7379ec94a03e6c965d336417b7ef8466f81643962f8582",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_23.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4549,
+      "source_mtime_ns": 1792048530887608500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_23.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "11568c53a0627619ceb345e8dc6e0dc2f33fa14d803e7a08034ef888fbd064e2",
+      "git_blob": "0408cecc7e3d924ad721ad723488295883589b60",
+      "reference_blob": "0408cecc7e3d924ad721ad723488295883589b60",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0a34308d84f4e44d42abc84f0abb6dbd8634047101af5dc95fe27733204fcac1",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_24.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4507,
+      "source_mtime_ns": 1792048530887608500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_24.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "ce65ca07afb1477ce6e7c33cf7b1eb7a1ec57881d6164e06360a6eb07a438e06",
+      "git_blob": "a2aa04f9ddf748b7a9e3c88452018c4abe59283f",
+      "reference_blob": "a2aa04f9ddf748b7a9e3c88452018c4abe59283f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "48d4e3e8351f772ea69a30a4c21c2aff7a24ca60473d6c442d80af531960a35b",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_25.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4486,
+      "source_mtime_ns": 1792048530888607700,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_25.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "b5bdf6a77ffd8066df964705516f6957fd292cc1dfdc0c43ba9bf561f5680a56",
+      "git_blob": "e536ba3182d593bfd9127fbe3178d377e6bce17e",
+      "reference_blob": "e536ba3182d593bfd9127fbe3178d377e6bce17e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "db96fcd14b456c1c6164991c93c7f09d111576048945b437761c620a7cb8b27f",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_26.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4527,
+      "source_mtime_ns": 1792048530888607700,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_26.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "dee7c044b11eaeb4ccf78a928a709f37e15197df6ac51ff5f3b2c1713e0fe474",
+      "git_blob": "cf0873329f5c051da094a4cd077018733e9c399b",
+      "reference_blob": "cf0873329f5c051da094a4cd077018733e9c399b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "adc34339b885535720708819dcbcb5c4efa988e7dc0cafe6eba2d5eff04ad463",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_27.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4505,
+      "source_mtime_ns": 1792048530888607700,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_27.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "d95649e9ac105f00854d2fa70c821ebe5fd9565c5148a7c9c7c1ea916ae499b8",
+      "git_blob": "6304745e45dccc4590337a27ec661853738db084",
+      "reference_blob": "6304745e45dccc4590337a27ec661853738db084",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "62a1a1db54ca154dceb889645e87e2b6452c9f3e0b398ab125ff027915884164",
+      "alpha_sha256": "9b49cbfed369725140182a1093d7058c51b8bb274b61a41ca636b7ff23ee559b",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_28.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4535,
+      "source_mtime_ns": 1792048530888607700,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_28.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "4ee1d97e6f67f6e646839803e21c3103e3482e3f3282bd6a5bd12e791c5accbc",
+      "git_blob": "de726a739d8542bc92ea83b0b3e5cabb749bc80f",
+      "reference_blob": "de726a739d8542bc92ea83b0b3e5cabb749bc80f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "dfee48515d97bc9f8f6384afd9885bb3324cf9c3fca8ac340b1ea947b98f4ea9",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/ALCREMIE_29.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4555,
+      "source_mtime_ns": 1792048530889606500,
+      "canonical_source": "Graphics/Characters/Followers/ALCREMIE_29.png",
+      "batch": "batch-252",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "1a2b78bc11a087315259044a21c2145013086d2b55251d1db5c3a1b29a745053",
+      "git_blob": "a542ced1f58106382493194fb7807117de5c73a3",
+      "reference_blob": "a542ced1f58106382493194fb7807117de5c73a3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f1bf38e221377304f6566c252c0d6fe5ede2ddd4ce2e63be1614a2381bd486ae",
+      "alpha_sha256": "fdb5fa6fbcbdc1b5c2d2db6f46bf3f58eaf853066288c93a9fb3460328449ad6",
+      "bounds": [
+        14,
+        14,
+        242,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-252-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

@@ -1,0 +1,573 @@
+{
+  "batch": "batch-071",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 24,
+  "candidate_pending_review": 0,
+  "rejected_candidates": 0,
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel_narrow.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        112,
+        36
+      ],
+      "sha256": "3354ddd70efc7080c47bbfe9775c162fa94ba3a2c289bfb3ef89bc2672949d0e",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 2,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel_narrow_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        112,
+        36
+      ],
+      "sha256": "a31279dba2b4ae93f591186a8a4235e7c7677bc643bff3dc5eed72ee33bdafbc",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        112,
+        48
+      ],
+      "sha256": "7d1c884fccd044fbf24dee84dafba38d51c31a32880b0a4acd3181d189b78e3b",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_item.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "ecb2279ea074529d4941ff83abe6ae402b5bd8bfc34fce80fd5f4860448142a9",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "review_kind": "flat_ui_background",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_mail.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "6f23be373d3d87dda8825a3e7d826d785cafb2355a2d77a341eb68a56f84a0a5",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "review_kind": "flat_ui_background",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 4,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": false
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        96,
+        24
+      ],
+      "sha256": "8325b22a7b0a5f1fd3232f5c7af0224edd5e490224b25a5c6f8a5ba760fc43c5",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "P"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 6,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp_back.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        138,
+        14
+      ],
+      "sha256": "6db35f2887e02fd8b1fd149eeae48608e78cf3dd8d4130f1afc40c3fdbf36b02",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 3,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp_back_faint.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        138,
+        14
+      ],
+      "sha256": "c28a23e4565a8c237bdb1b2bec177b51f20c7cf957aa33cae01ea9b378e06c1d",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp_back_swap.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        138,
+        14
+      ],
+      "sha256": "f55bd0675d94986d26bf5c6cd5635dcd72c4a75fcb0a3307ddb3bed6861e7f5d",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_lv.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        22,
+        14
+      ],
+      "sha256": "ee02efa4ec546282df26f0953bacbe889cbc144f3a37c678a0695325ff32eac0",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 3,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_blank.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "93f013e2e8771bb397d710cf67347a12360ab290d2f80f6a53576731573a0966",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "a288b71800f41db6cc64c6a3b8fc0d1afe05c764152dbe82a4e3209cf49e7b76",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 7,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_faint.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "3e706c79da5692a743537421af77b81b9c1f36aedcb2aa4b0b3b30b0381b1aa9",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 2,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_faint_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "8b33969e92953e4802837ba8cd92b38477e5a9d74ff493ff8e4b8a53cf0adfa5",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "8bbf25aebdddf5929de30dbffc17e9a2fa363bb1746a0dbf42977b7985390fee",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_swap.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "853641bb8e17e5080710c007c8484078e40c495bac7c75c742b3822421e308e2",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 3,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_swap_sel2.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "46080184670ff5f2a114409e3162ac85ecb584f3dbf7bc24a439427de39f528c",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_swap_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "cca30b017125c5f46b9ce534a291ba461385eafa70a9bb252fcfdf31dbcfb887",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 2,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "7b10c1922312ddc1b200a882d6e6fb0954c0479650796d750039e062c5dfad6d",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 7,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_faint.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "3fdd1bede18bb5d9cdc331ab296d9fb20983ef3655d7afe606898cf5626bce80",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 2,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_faint_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "84dd717ad859154698e36b1bd6bcaef11cad320fafe26611078cc9b22e85bff1",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_sel.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "bd56a4dda77a16683a6dce5fe2bc9b4b98c5367fac5eb18cc06fbfab4c469377",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_swap.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "c61811d9d5bc8f1b428ffd5f3b7ed82f6077797bd50a1b48eabf310e7d25a5a1",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 3,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_swap_sel2.png",
+      "batch": "batch-071",
+      "status": "preserved",
+      "size": [
+        256,
+        98
+      ],
+      "sha256": "1f45b6b1c57d65fbe757baf0e139802ce542bec79d262254e20cd8883aba6e26",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "review_kind": "ui_state_or_slice",
+      "encoded_frames": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ],
+      "layout_rule": "State sheets and sibling state files remain byte-identical; encoded frame count alone does not imply static usage.",
+      "source_text_reference_count": 1,
+      "event_snapshot_reference_count": 0,
+      "observed_in_menu_scene": true
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "filenames_and_layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p2-evidence/resume-20261028.json",
+    "output/texture-hd/p2-evidence/bag-native-validation.json",
+    "output/texture-hd/p2-evidence/native-menu/menus-review.json",
+    "output/texture-hd/p2-evidence/menu-review-decisions.json",
+    "output/texture-hd/p2-evidence/menu-native-validation.json"
+  ],
+  "validation_scope": "288 native image decodes, 4 bag input cases and 280 before/candidate screenshot pairs, complete arrow loops, 96 English/Chinese party/summary/ready scene renders. Preserved files and delivery copies are byte-identical. Legacy/universal resources received decode, layout and usage review, not exhaustive gameplay coverage. No body/clothing, full playthrough, Android device or release-package validation.",
+  "known_findings": [
+    "Existing Chinese summary move-learning text/sprite overlap; original resources retained. See menu-native-validation.json."
+  ]
+}

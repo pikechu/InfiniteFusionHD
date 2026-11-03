@@ -1,0 +1,323 @@
+{
+  "id": "batch-094",
+  "number": 94,
+  "priority": "P2",
+  "stage": "ui_map",
+  "title": "地区地图、导航、帮助与训练师卡（1/9）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063"
+  ],
+  "file_count": 23,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-094",
+  "entries": [
+    {
+      "source": "Graphics/Chinese/Pictures/controls.png",
+      "size": [
+        611,
+        293
+      ],
+      "source_bytes": 51947,
+      "source_mtime_ns": 1793075479209247800,
+      "canonical_source": "Graphics/Pictures/controls.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/controls.png",
+        "chinese": "Graphics/Chinese/Pictures/controls.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/controls.png",
+      "size": [
+        611,
+        293
+      ],
+      "source_bytes": 20945,
+      "source_mtime_ns": 1792048548349692200,
+      "canonical_source": "Graphics/Pictures/controls.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/controls.png",
+        "chinese": "Graphics/Chinese/Pictures/controls.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/leagueForm.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 33379,
+      "source_mtime_ns": 1793075479016096900,
+      "canonical_source": "Graphics/Pictures/leagueForm.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/leagueForm.png",
+        "chinese": "Graphics/Chinese/Pictures/leagueForm.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/leagueForm.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13896,
+      "source_mtime_ns": 1792048548397679400,
+      "canonical_source": "Graphics/Pictures/leagueForm.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/leagueForm.png",
+        "chinese": "Graphics/Chinese/Pictures/leagueForm.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/leagueLetter.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 55251,
+      "source_mtime_ns": 1793075479086045600,
+      "canonical_source": "Graphics/Pictures/leagueLetter.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/leagueLetter.png",
+        "chinese": "Graphics/Chinese/Pictures/leagueLetter.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/leagueLetter.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 17439,
+      "source_mtime_ns": 1792048548397679400,
+      "canonical_source": "Graphics/Pictures/leagueLetter.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/leagueLetter.png",
+        "chinese": "Graphics/Chinese/Pictures/leagueLetter.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/mapRegion0.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 352783,
+      "source_mtime_ns": 1793075478462014900,
+      "canonical_source": "Graphics/Pictures/mapRegion0.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/mapRegion0.png",
+        "chinese": "Graphics/Chinese/Pictures/mapRegion0.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/mapRegion0.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 299299,
+      "source_mtime_ns": 1792048548460589200,
+      "canonical_source": "Graphics/Pictures/mapRegion0.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/mapRegion0.png",
+        "chinese": "Graphics/Chinese/Pictures/mapRegion0.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/mapRegion0_uncropped.png",
+      "size": [
+        896,
+        518
+      ],
+      "source_bytes": 420795,
+      "source_mtime_ns": 1793075478700107100,
+      "canonical_source": "Graphics/Pictures/mapRegion0_uncropped.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/mapRegion0_uncropped.PNG",
+        "chinese": "Graphics/Chinese/Pictures/mapRegion0_uncropped.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/mapRegion0_uncropped.PNG",
+      "size": [
+        896,
+        518
+      ],
+      "source_bytes": 356797,
+      "source_mtime_ns": 1792048548462592100,
+      "canonical_source": "Graphics/Pictures/mapRegion0_uncropped.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/mapRegion0_uncropped.PNG",
+        "chinese": "Graphics/Chinese/Pictures/mapRegion0_uncropped.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/mapRegion1-full.PNG",
+      "size": [
+        467,
+        350
+      ],
+      "source_bytes": 190444,
+      "source_mtime_ns": 1792048548463587200,
+      "canonical_source": "Graphics/Pictures/mapRegion1-full.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/mapRegion1.PNG",
+      "size": [
+        480,
+        320
+      ],
+      "source_bytes": 5024,
+      "source_mtime_ns": 1792048548463587200,
+      "canonical_source": "Graphics/Pictures/mapRegion1.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/mapRegion2.PNG",
+      "size": [
+        427,
+        320
+      ],
+      "source_bytes": 89795,
+      "source_mtime_ns": 1792048548464587700,
+      "canonical_source": "Graphics/Pictures/mapRegion2.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/mapRegionKanto.PNG",
+      "size": [
+        480,
+        320
+      ],
+      "source_bytes": 149187,
+      "source_mtime_ns": 1792048548465588200,
+      "canonical_source": "Graphics/Pictures/mapRegionKanto.PNG"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/pokegearbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4265,
+      "source_mtime_ns": 1793075473321349200,
+      "canonical_source": "Graphics/Pictures/pokegearbg.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokegearbg.png",
+        "chinese": "Graphics/Chinese/Pictures/pokegearbg.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/pokegearbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1086,
+      "source_mtime_ns": 1792048548664104700,
+      "canonical_source": "Graphics/Pictures/pokegearbg.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokegearbg.png",
+        "chinese": "Graphics/Chinese/Pictures/pokegearbg.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/pokegearbgf.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4333,
+      "source_mtime_ns": 1793075473334697000,
+      "canonical_source": "Graphics/Pictures/pokegearbgf.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokegearbgf.png",
+        "chinese": "Graphics/Chinese/Pictures/pokegearbgf.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/pokegearbgf.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1406,
+      "source_mtime_ns": 1792048548664104700,
+      "canonical_source": "Graphics/Pictures/pokegearbgf.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokegearbgf.png",
+        "chinese": "Graphics/Chinese/Pictures/pokegearbgf.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/pokegearButton.png",
+      "size": [
+        276,
+        104
+      ],
+      "source_bytes": 315,
+      "source_mtime_ns": 1792048548663104900,
+      "canonical_source": "Graphics/Pictures/pokegearButton.png"
+    },
+    {
+      "source": "Graphics/Pictures/pokegearButtonf.png",
+      "size": [
+        276,
+        104
+      ],
+      "source_bytes": 315,
+      "source_mtime_ns": 1792048548663104900,
+      "canonical_source": "Graphics/Pictures/pokegearButtonf.png"
+    },
+    {
+      "source": "Graphics/Pictures/pokegearJukebox.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 161,
+      "source_mtime_ns": 1792048548663104900,
+      "canonical_source": "Graphics/Pictures/pokegearJukebox.png"
+    },
+    {
+      "source": "Graphics/Pictures/pokegearMap.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 175,
+      "source_mtime_ns": 1792048548663104900,
+      "canonical_source": "Graphics/Pictures/pokegearMap.png"
+    },
+    {
+      "source": "Graphics/Pictures/pokegearPhone.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 144,
+      "source_mtime_ns": 1792048548664104700,
+      "canonical_source": "Graphics/Pictures/pokegearPhone.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-094/validation.json",
+  "applied_files": 0,
+  "preserved_files": 23
+}

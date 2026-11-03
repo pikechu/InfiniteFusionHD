@@ -1,0 +1,110 @@
+{
+  "id": "batch-672",
+  "number": 672,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（51/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-671"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-672",
+  "entries": [
+    {
+      "source": "Graphics/Animations/PRAS- Fly.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 1936,
+      "source_mtime_ns": 1792048522436729400,
+      "canonical_source": "Graphics/Animations/PRAS- Fly.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Focus Energy.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 572,
+      "source_mtime_ns": 1792048522436729400,
+      "canonical_source": "Graphics/Animations/PRAS- Focus Energy.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Focus Punch BG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13634,
+      "source_mtime_ns": 1792048522437728200,
+      "canonical_source": "Graphics/Animations/PRAS- Focus Punch BG.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Focus Punch Opp BG.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13583,
+      "source_mtime_ns": 1792048522437728200,
+      "canonical_source": "Graphics/Animations/PRAS- Focus Punch Opp BG.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Follow Me.png",
+      "size": [
+        768,
+        192
+      ],
+      "source_bytes": 934,
+      "source_mtime_ns": 1792048522437728200,
+      "canonical_source": "Graphics/Animations/PRAS- Follow Me.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Force Palm.png",
+      "size": [
+        768,
+        192
+      ],
+      "source_bytes": 425,
+      "source_mtime_ns": 1792048522438728100,
+      "canonical_source": "Graphics/Animations/PRAS- Force Palm.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Foresight.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 348,
+      "source_mtime_ns": 1792048522448278500,
+      "canonical_source": "Graphics/Animations/PRAS- Foresight.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Freeze Dry.png",
+      "size": [
+        384,
+        192
+      ],
+      "source_bytes": 717,
+      "source_mtime_ns": 1792048522449277900,
+      "canonical_source": "Graphics/Animations/PRAS- Freeze Dry.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-672/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

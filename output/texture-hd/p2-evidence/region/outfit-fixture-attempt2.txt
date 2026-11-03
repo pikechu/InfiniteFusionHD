@@ -1,0 +1,10 @@
+OUTFIT_BEGIN phase=before
+OUTFIT_FAIL NoMethodError: undefined method `spritesetGlobal' for #<Object>
+./Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb:150:in `refreshPlayerOutfit'
+./Data/Scripts/015_Trainers and player/004_Player.rb:125:in `clothes='
+D:/others/kurayshinyrevamp/output/texture-hd/native-p2-region-outfits.rb:26:in `block (3 levels) in <top (required)>'
+D:/others/kurayshinyrevamp/output/texture-hd/native-p2-region-outfits.rb:25:in `each'
+D:/others/kurayshinyrevamp/output/texture-hd/native-p2-region-outfits.rb:25:in `block (2 levels) in <top (required)>'
+D:/others/kurayshinyrevamp/output/texture-hd/native-p2-region-outfits.rb:23:in `each'
+D:/others/kurayshinyrevamp/output/texture-hd/native-p2-region-outfits.rb:23:in `block in <top (required)>'
+D:/others/kurayshinyrevamp/output/texture-hd/native-p2-region-outfits.rb:20:in `each'

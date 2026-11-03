@@ -1,0 +1,110 @@
+{
+  "id": "batch-643",
+  "number": 643,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（22/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-642"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-643",
+  "entries": [
+    {
+      "source": "Graphics/Animations/efftest4.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 289535,
+      "source_mtime_ns": 1792048522843278300,
+      "canonical_source": "Graphics/Animations/efftest4.png"
+    },
+    {
+      "source": "Graphics/Animations/electric1.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 4549,
+      "source_mtime_ns": 1792048522843278300,
+      "canonical_source": "Graphics/Animations/electric1.png"
+    },
+    {
+      "source": "Graphics/Animations/electric2.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 4635,
+      "source_mtime_ns": 1792048522843278300,
+      "canonical_source": "Graphics/Animations/electric2.png"
+    },
+    {
+      "source": "Graphics/Animations/element fangs.png",
+      "size": [
+        960,
+        768
+      ],
+      "source_bytes": 20275,
+      "source_mtime_ns": 1792048522844276200,
+      "canonical_source": "Graphics/Animations/element fangs.png"
+    },
+    {
+      "source": "Graphics/Animations/emo2.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 964,
+      "source_mtime_ns": 1792048522844276200,
+      "canonical_source": "Graphics/Animations/emo2.png"
+    },
+    {
+      "source": "Graphics/Animations/emo.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 759,
+      "source_mtime_ns": 1792048522844276200,
+      "canonical_source": "Graphics/Animations/emo.png"
+    },
+    {
+      "source": "Graphics/Animations/Emotion - Love.png",
+      "size": [
+        768,
+        192
+      ],
+      "source_bytes": 405,
+      "source_mtime_ns": 1792048522220582100,
+      "canonical_source": "Graphics/Animations/Emotion - Love.png"
+    },
+    {
+      "source": "Graphics/Animations/estranho.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 8229,
+      "source_mtime_ns": 1792048522844276200,
+      "canonical_source": "Graphics/Animations/estranho.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-643/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

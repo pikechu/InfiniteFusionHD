@@ -1,0 +1,294 @@
+{
+  "id": "batch-517",
+  "number": 517,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（6/29）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-516"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-517",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/caustic22.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 27254,
+      "source_mtime_ns": 1792048548347693700,
+      "canonical_source": "Graphics/Pictures/caustic22.png"
+    },
+    {
+      "source": "Graphics/Pictures/cc_selection_box.png",
+      "size": [
+        150,
+        38
+      ],
+      "source_bytes": 10962,
+      "source_mtime_ns": 1792048548347693700,
+      "canonical_source": "Graphics/Pictures/cc_selection_box.png"
+    },
+    {
+      "source": "Graphics/Pictures/changeOutfitScreen.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 9487,
+      "source_mtime_ns": 1792048548348692200,
+      "canonical_source": "Graphics/Pictures/changeOutfitScreen.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/characterForm.png",
+      "size": [
+        762,
+        564
+      ],
+      "source_bytes": 23921,
+      "source_mtime_ns": 1793075473110588100,
+      "canonical_source": "Graphics/Pictures/characterForm.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/characterForm.png",
+        "chinese": "Graphics/Chinese/Pictures/characterForm.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/characterForm.png",
+      "size": [
+        762,
+        564
+      ],
+      "source_bytes": 8209,
+      "source_mtime_ns": 1792048548348692200,
+      "canonical_source": "Graphics/Pictures/characterForm.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/characterForm.png",
+        "chinese": "Graphics/Chinese/Pictures/characterForm.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/check.png",
+      "size": [
+        27,
+        26
+      ],
+      "source_bytes": 288,
+      "source_mtime_ns": 1792048548348692200,
+      "canonical_source": "Graphics/Pictures/check.png"
+    },
+    {
+      "source": "Graphics/Pictures/choiceSel.png",
+      "size": [
+        320,
+        62
+      ],
+      "source_bytes": 1615,
+      "source_mtime_ns": 1792048548349692200,
+      "canonical_source": "Graphics/Pictures/choiceSel.png"
+    },
+    {
+      "source": "Graphics/Pictures/commandMenuButtons.png",
+      "size": [
+        464,
+        96
+      ],
+      "source_bytes": 7908,
+      "source_mtime_ns": 1792048548349692200,
+      "canonical_source": "Graphics/Pictures/commandMenuButtons.png"
+    },
+    {
+      "source": "Graphics/Pictures/darkness.png",
+      "size": [
+        640,
+        480
+      ],
+      "source_bytes": 22269,
+      "source_mtime_ns": 1792048548350693800,
+      "canonical_source": "Graphics/Pictures/darkness.png"
+    },
+    {
+      "source": "Graphics/Pictures/darkness_half2.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3873,
+      "source_mtime_ns": 1792048548351692700,
+      "canonical_source": "Graphics/Pictures/darkness_half2.png"
+    },
+    {
+      "source": "Graphics/Pictures/darkness_half.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3928,
+      "source_mtime_ns": 1792048548350693800,
+      "canonical_source": "Graphics/Pictures/darkness_half.png"
+    },
+    {
+      "source": "Graphics/Pictures/dirArrow.png",
+      "size": [
+        20,
+        96
+      ],
+      "source_bytes": 339,
+      "source_mtime_ns": 1792048548351692700,
+      "canonical_source": "Graphics/Pictures/dirArrow.png"
+    },
+    {
+      "source": "Graphics/Pictures/dna.png",
+      "size": [
+        24,
+        24
+      ],
+      "source_bytes": 339,
+      "source_mtime_ns": 1792048548351692700,
+      "canonical_source": "Graphics/Pictures/dna.png"
+    },
+    {
+      "source": "Graphics/Pictures/dna_splicers_by_peetzaahhh2010-d8oki5u.png",
+      "size": [
+        374,
+        392
+      ],
+      "source_bytes": 33623,
+      "source_mtime_ns": 1792048548352698100,
+      "canonical_source": "Graphics/Pictures/dna_splicers_by_peetzaahhh2010-d8oki5u.png"
+    },
+    {
+      "source": "Graphics/Pictures/DNAbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4217,
+      "source_mtime_ns": 1792048546910425400,
+      "canonical_source": "Graphics/Pictures/DNAbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/downarrow.PNG",
+      "size": [
+        224,
+        40
+      ],
+      "source_bytes": 203,
+      "source_mtime_ns": 1792048548352698100,
+      "canonical_source": "Graphics/Pictures/downarrow.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/evolutionbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5232,
+      "source_mtime_ns": 1792048548353693200,
+      "canonical_source": "Graphics/Pictures/evolutionbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/exparea.png",
+      "size": [
+        262,
+        64
+      ],
+      "source_bytes": 1309,
+      "source_mtime_ns": 1792048548353693200,
+      "canonical_source": "Graphics/Pictures/exparea.png"
+    },
+    {
+      "source": "Graphics/Pictures/exparea_opp.png",
+      "size": [
+        262,
+        64
+      ],
+      "source_bytes": 1300,
+      "source_mtime_ns": 1792048548353693200,
+      "canonical_source": "Graphics/Pictures/exparea_opp.png"
+    },
+    {
+      "source": "Graphics/Pictures/expbar.png",
+      "size": [
+        260,
+        68
+      ],
+      "source_bytes": 1779,
+      "source_mtime_ns": 1792048548353693200,
+      "canonical_source": "Graphics/Pictures/expbar.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/fire_r.png",
+      "size": [
+        34,
+        28
+      ],
+      "source_bytes": 647,
+      "source_mtime_ns": 1793075473375381100,
+      "canonical_source": "Graphics/Pictures/fire_r.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/fire_r.png",
+        "chinese": "Graphics/Chinese/Pictures/fire_r.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/fire_r.png",
+      "size": [
+        34,
+        28
+      ],
+      "source_bytes": 201,
+      "source_mtime_ns": 1792048548354692100,
+      "canonical_source": "Graphics/Pictures/fire_r.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/fire_r.png",
+        "chinese": "Graphics/Chinese/Pictures/fire_r.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/footset.png",
+      "size": [
+        128,
+        32
+      ],
+      "source_bytes": 178,
+      "source_mtime_ns": 1792048548354692100,
+      "canonical_source": "Graphics/Pictures/footset.png"
+    },
+    {
+      "source": "Graphics/Pictures/footsetbike.png",
+      "size": [
+        128,
+        32
+      ],
+      "source_bytes": 115,
+      "source_mtime_ns": 1792048548354692100,
+      "canonical_source": "Graphics/Pictures/footsetbike.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-517/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

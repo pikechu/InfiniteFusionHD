@@ -1,0 +1,80 @@
+{
+  "id": "batch-107",
+  "number": 107,
+  "priority": "P2",
+  "stage": "panorama",
+  "title": "全景与场景背景（2/2）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "background",
+  "processing_notes": "先核对是否滚动或重复平铺，再以原图补绘；保护构图、地平线与平铺接缝。",
+  "depends_on": [
+    "batch-106"
+  ],
+  "file_count": 5,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-107",
+  "entries": [
+    {
+      "source": "Graphics/Panoramas/pB7wMme.png",
+      "size": [
+        800,
+        640
+      ],
+      "source_bytes": 2500,
+      "source_mtime_ns": 1792048546021819000,
+      "canonical_source": "Graphics/Panoramas/pB7wMme.png"
+    },
+    {
+      "source": "Graphics/Panoramas/safari.png",
+      "size": [
+        81,
+        74
+      ],
+      "source_bytes": 583,
+      "source_mtime_ns": 1792048546021819000,
+      "canonical_source": "Graphics/Panoramas/safari.png"
+    },
+    {
+      "source": "Graphics/Panoramas/skulls.png",
+      "size": [
+        56,
+        58
+      ],
+      "source_bytes": 1374,
+      "source_mtime_ns": 1792048546022334900,
+      "canonical_source": "Graphics/Panoramas/skulls.png"
+    },
+    {
+      "source": "Graphics/Panoramas/sky_pan.png",
+      "size": [
+        256,
+        592
+      ],
+      "source_bytes": 2306,
+      "source_mtime_ns": 1792048546022334900,
+      "canonical_source": "Graphics/Panoramas/sky_pan.png"
+    },
+    {
+      "source": "Graphics/Panoramas/violetgym.png",
+      "size": [
+        468,
+        630
+      ],
+      "source_bytes": 20676,
+      "source_mtime_ns": 1792048546023369800,
+      "canonical_source": "Graphics/Panoramas/violetgym.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对场景构图与滚动/平铺接缝，若带文字须保护原文字。"
+  ],
+  "result": "output/texture-hd/batch-107/validation.json",
+  "applied_files": 0,
+  "preserved_files": 5
+}

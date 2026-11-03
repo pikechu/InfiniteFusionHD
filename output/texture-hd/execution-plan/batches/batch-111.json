@@ -1,0 +1,231 @@
+{
+  "id": "batch-111",
+  "number": 111,
+  "priority": "P2",
+  "stage": "player_body",
+  "title": "其余主角身体与冲浪底层（3/5）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-110"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-111",
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/bike_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 21224,
+      "source_mtime_ns": 1792048540757804800,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/bike_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/dive_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 18919,
+      "source_mtime_ns": 1792048540757804800,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/dive_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/fish_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 20841,
+      "source_mtime_ns": 1792048540758805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/fish_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/run_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 20313,
+      "source_mtime_ns": 1792048540758805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/run_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/surf_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 18263,
+      "source_mtime_ns": 1792048540758805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/surf_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/6/walk_6.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 30610,
+      "source_mtime_ns": 1792048540759806500,
+      "canonical_source": "Graphics/Characters/player/base/overworld/6/walk_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/trainer/trainer_6.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 4498,
+      "source_mtime_ns": 1792048540764805200,
+      "canonical_source": "Graphics/Characters/player/base/trainer/trainer_6.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/bike_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 10392,
+      "source_mtime_ns": 1792048540759806500,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/bike_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/dive_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7860,
+      "source_mtime_ns": 1792048540759806500,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/dive_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/fish_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7853,
+      "source_mtime_ns": 1792048540760805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/fish_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/run_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7427,
+      "source_mtime_ns": 1792048540760805200,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/run_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/surf_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7083,
+      "source_mtime_ns": 1792048540761806300,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/surf_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/overworld/default/walk_default.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 9206,
+      "source_mtime_ns": 1792048540761806300,
+      "canonical_source": "Graphics/Characters/player/base/overworld/default/walk_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/base/trainer/trainer_default.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 4360,
+      "source_mtime_ns": 1792048540764805200,
+      "canonical_source": "Graphics/Characters/player/base/trainer/trainer_default.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Bipedal.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6568,
+      "source_mtime_ns": 1792048542425507200,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Bipedal.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_BipedalTail.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6605,
+      "source_mtime_ns": 1792048542426035600,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_BipedalTail.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Finned.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6823,
+      "source_mtime_ns": 1792048542427155700,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Finned.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_Head.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6032,
+      "source_mtime_ns": 1792048542427688800,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_Head.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_HeadArms.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6302,
+      "source_mtime_ns": 1792048542428222200,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_HeadArms.png"
+    },
+    {
+      "source": "Graphics/Characters/player/surf_base/divemon_HeadBase.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6358,
+      "source_mtime_ns": 1792048542428760000,
+      "canonical_source": "Graphics/Characters/player/surf_base/divemon_HeadBase.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-111/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

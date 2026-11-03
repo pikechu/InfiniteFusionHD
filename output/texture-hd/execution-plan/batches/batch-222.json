@@ -1,0 +1,241 @@
+{
+  "id": "batch-222",
+  "number": 222,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（71/99）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-221"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-222",
+  "entries": [
+    {
+      "source": "Graphics/Characters/girl_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 12131,
+      "source_mtime_ns": 1792048540718354700,
+      "canonical_source": "Graphics/Characters/girl_run.png"
+    },
+    {
+      "source": "Graphics/Characters/girl_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2857,
+      "source_mtime_ns": 1792048540718354700,
+      "canonical_source": "Graphics/Characters/girl_surf_offset.png"
+    },
+    {
+      "source": "Graphics/Characters/GLALIE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3593,
+      "source_mtime_ns": 1792048539043233100,
+      "canonical_source": "Graphics/Characters/GLALIE.png"
+    },
+    {
+      "source": "Graphics/Characters/GOODRA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4739,
+      "source_mtime_ns": 1792048539043481700,
+      "canonical_source": "Graphics/Characters/GOODRA.png"
+    },
+    {
+      "source": "Graphics/Characters/gyarados_red.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3079,
+      "source_mtime_ns": 1792048540719353100,
+      "canonical_source": "Graphics/Characters/gyarados_red.png"
+    },
+    {
+      "source": "Graphics/Characters/hair.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7727,
+      "source_mtime_ns": 1792048540719353100,
+      "canonical_source": "Graphics/Characters/hair.png"
+    },
+    {
+      "source": "Graphics/Characters/hat_walk_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6419,
+      "source_mtime_ns": 1792048540719353100,
+      "canonical_source": "Graphics/Characters/hat_walk_1.png"
+    },
+    {
+      "source": "Graphics/Characters/hat_walk_5.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 6492,
+      "source_mtime_ns": 1792048540720353000,
+      "canonical_source": "Graphics/Characters/hat_walk_5.png"
+    },
+    {
+      "source": "Graphics/Characters/HAWLUCHA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5324,
+      "source_mtime_ns": 1792048539043481700,
+      "canonical_source": "Graphics/Characters/HAWLUCHA.png"
+    },
+    {
+      "source": "Graphics/Characters/Healing balls left.png",
+      "size": [
+        128,
+        192
+      ],
+      "source_bytes": 582,
+      "source_mtime_ns": 1792048539043988700,
+      "canonical_source": "Graphics/Characters/Healing balls left.png"
+    },
+    {
+      "source": "Graphics/Characters/Healing balls right.png",
+      "size": [
+        128,
+        192
+      ],
+      "source_bytes": 319,
+      "source_mtime_ns": 1792048539043988700,
+      "canonical_source": "Graphics/Characters/Healing balls right.png"
+    },
+    {
+      "source": "Graphics/Characters/hide_ugly_transitions.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2322,
+      "source_mtime_ns": 1792048540720353000,
+      "canonical_source": "Graphics/Characters/hide_ugly_transitions.png"
+    },
+    {
+      "source": "Graphics/Characters/Kurt_overworld_by_Knuckles.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1281,
+      "source_mtime_ns": 1792048539043988700,
+      "canonical_source": "Graphics/Characters/Kurt_overworld_by_Knuckles.png"
+    },
+    {
+      "source": "Graphics/Characters/Lada.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 1691,
+      "source_mtime_ns": 1792048539045078800,
+      "canonical_source": "Graphics/Characters/Lada.png"
+    },
+    {
+      "source": "Graphics/Characters/LASS_blue.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 26033,
+      "source_mtime_ns": 1792048539044998500,
+      "canonical_source": "Graphics/Characters/LASS_blue.png"
+    },
+    {
+      "source": "Graphics/Characters/leagueForm.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 13761,
+      "source_mtime_ns": 1792048540720353000,
+      "canonical_source": "Graphics/Characters/leagueForm.png",
+      "language_pair": {
+        "original": "Graphics/Characters/leagueForm.png",
+        "chinese": "Graphics/Chinese/Characters/leagueForm.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Characters/leagueForm.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 31521,
+      "source_mtime_ns": 1793075479527018200,
+      "canonical_source": "Graphics/Characters/leagueForm.png",
+      "language_pair": {
+        "original": "Graphics/Characters/leagueForm.png",
+        "chinese": "Graphics/Chinese/Characters/leagueForm.png"
+      }
+    },
+    {
+      "source": "Graphics/Characters/Light02.png",
+      "size": [
+        128,
+        256
+      ],
+      "source_bytes": 6334,
+      "source_mtime_ns": 1792048539045604000,
+      "canonical_source": "Graphics/Characters/Light02.png"
+    },
+    {
+      "source": "Graphics/Characters/lilypad.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 12588,
+      "source_mtime_ns": 1792048540720353000,
+      "canonical_source": "Graphics/Characters/lilypad.png"
+    },
+    {
+      "source": "Graphics/Characters/lunarFeather.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 19584,
+      "source_mtime_ns": 1792048540721354500,
+      "canonical_source": "Graphics/Characters/lunarFeather.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-222/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

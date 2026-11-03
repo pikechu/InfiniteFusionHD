@@ -1,0 +1,91 @@
+{
+  "batch": "batch-816",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 2,
+  "entries": [
+    {
+      "source": "Graphics/Triples/3.6.9 by Tenedranox (animated).png",
+      "size": [
+        35712,
+        288
+      ],
+      "source_bytes": 93914,
+      "source_mtime_ns": 1792048556044826500,
+      "canonical_source": "Graphics/Triples/3.6.9 by Tenedranox (animated).png",
+      "layout_must_be_read_from_loader": true,
+      "batch": "batch-816",
+      "stage": "animated",
+      "sha256": "a1712ba7d7d5e1e551e53f1aea3b017506f834c6939484fc2ee6ba268824083e",
+      "git_blob": "95c27fa709087fe61b16b9e2472de10e1d261776",
+      "reference_blob": "95c27fa709087fe61b16b9e2472de10e1d261776",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "e5788ed81388699587e95440edbc9644c24fcbcc70df912fbd916f579208b7c5",
+          "alpha_sha256": "fbb78bfb9bbbe79788c4378c38f625ef97b4f121ea8bdbcb1805e49a051c8beb",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "donor_square_cells": 124,
+      "status": "preserved",
+      "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。",
+      "visual_review_page": "review-816-01.png"
+    },
+    {
+      "source": "Graphics/Triples/278.281.284 by Tenedranox (animated).png",
+      "size": [
+        69120,
+        288
+      ],
+      "source_bytes": 309975,
+      "source_mtime_ns": 1792048555614185200,
+      "canonical_source": "Graphics/Triples/278.281.284 by Tenedranox (animated).png",
+      "layout_must_be_read_from_loader": true,
+      "batch": "batch-816",
+      "stage": "animated",
+      "sha256": "1c519e718969461fe9a0d58c21ae07f65f4c8f36e2eb170bd8398fa0a751f9e2",
+      "git_blob": "c408451b2dcb1bbc9333aea3b72a3c181de0bd42",
+      "reference_blob": "c408451b2dcb1bbc9333aea3b72a3c181de0bd42",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "0c0e015767afced6f844afefc697e6e0428f8c670c1bdae67dde9b49b7c6a340",
+          "alpha_sha256": "48afc47276151e53ebc912d0b495dc73f9816732bda3e7207741a015dd3096a9",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "donor_square_cells": 240,
+      "status": "preserved",
+      "reason": "原有长条/GIF 的姿态、主体位置、透明边界与连续运动已保持清楚；逐帧新增纹理会增加闪烁和身份漂移风险，保留完整原始编码。已确认的原生播放与尚无现用条带加载入口的兼容来源分开记录，不猜测后者的正式播放时长。",
+      "visual_review_page": "review-816-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/animated-phase-review.json",
+    "output/texture-hd/p4-evidence/animated-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All P4 animated sources directly decoded at original dimensions. Eight native GIFs seek every frame and play two complete real-time cycles, preserving order and observed timing; All 191 exported frames passed exact alpha and visible-RGB verification. Original variable delays are separately compared with native constant frame rates; inherited timing mismatches are not certified as matching. Both five-cell hatch-mask copies use actual mask positioning/swing methods with deterministic scene updates. Unbracketed long PNG donor strips remain one frame in the current generic loader; no active directory consumer found. Their cells/pixels are preserved, not falsely certified as current animated battlers or assigned an invented playback duration. No full hatch dialogue/gameplay.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

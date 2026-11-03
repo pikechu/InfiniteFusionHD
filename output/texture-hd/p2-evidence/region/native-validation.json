@@ -1,0 +1,3470 @@
+{
+  "status": "passed",
+  "images_decoded": 202,
+  "native_screen_pairs": 688,
+  "main_scene_pairs": 640,
+  "real_outfit_screen_pairs": 48,
+  "real_layered_cases": 16,
+  "portrait_pixels_and_anchors_identical": true,
+  "protected_scene_pixels_identical": true,
+  "map_traces_identical": true,
+  "map_cases": 4,
+  "map_updates_per_case": 802,
+  "combined_loop_updates": 480,
+  "combined_loop_ms": 12000,
+  "cursor_cycle_updates": 24,
+  "cursor_cycle_ms": 600,
+  "fly_point_cycle_updates": 40,
+  "fly_point_cycle_ms": 1000,
+  "edge_arrow_cycle_updates": 32,
+  "edge_arrow_cycle_ms": 800,
+  "card_backgrounds": 93,
+  "card_metal_variants_signed_difference_identical": true,
+  "map_pre_post_signed_difference_identical": true,
+  "max_rendered_rgb_delta": 12,
+  "render_changes": [
+    {
+      "label": "card-0-0-500000",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-BLACK",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-BLASTOISE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-BOULDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-0-0-CASCADEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-CHARIZARD",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-EARTHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-EEVEELUTION",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-FOGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-GALAXYMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-GLACIERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-0-0-GRAYPOLY",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-GROUDON",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-HEARTMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-HIVEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-KYOGRE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-MARSHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-MINERALBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-PIKACHU",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-PLAIN_BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-PLAIN_GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-PLAINBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-PURPLE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-RAINBOWBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-RAINBOWMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-RAYQUAZA",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-RED",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-RESHIRAM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-RISINGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-0-0-SOULBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-STORMBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-THUNDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-VENUSAUR",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-VOLCANOBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-ZEKROM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-ZEPHYRBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_500000_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_BEEDRILL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_BIDOOF_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_BULBASAUR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_BUNEARY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_BUTTERFREE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CHANDELURE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CHARMANDER_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CHINCHOU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CLEFABLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CLEFFA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_COFAGRIGUS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CORSOLA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_CRESSELIA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_DARKRAI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_DIGLETT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_DITTO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_DUSKULL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_EEVEE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_ESPEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_GENGAR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_HAPPINY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_HOOH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_JIRACHI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_JOLTIK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_KECLEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_MAGCARGO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_MAGIKARP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_MEW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_MILTANK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_MUDKIP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_NINCADA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_ODDISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_PARAS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_PIKACHU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_PORYGON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_PYUKUMUKU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_QWILFISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SABLEYE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SANDSHREW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SNEASEL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SOLOSIS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SQUIRTLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SWINUB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_SYLVEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_TOGEKISS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_TRAPINCH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_TREVENANT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_VOLCARONA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_VOLTORB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_WHIMSICOTT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-0-flags_XATU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-cycle-0-0-0",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-0-0-1",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-0-0-2",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-0-0-3",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-0-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-0-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-0-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "gear-0-0-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-0-0-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-0-0-2",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-0-0-3",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-500000",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-BLACK",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-BLASTOISE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-BOULDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-0-1-CASCADEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-CHARIZARD",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-EARTHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-EEVEELUTION",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-FOGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-GALAXYMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-GLACIERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-0-1-GRAYPOLY",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-GROUDON",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-HEARTMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-HIVEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-KYOGRE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-MARSHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-MINERALBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-PIKACHU",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-PLAIN_BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-PLAIN_GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-PLAINBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-PURPLE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-RAINBOWBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-RAINBOWMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-RAYQUAZA",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-RED",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-RESHIRAM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-RISINGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-0-1-SOULBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-STORMBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-THUNDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-VENUSAUR",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-VOLCANOBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-ZEKROM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-ZEPHYRBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_500000_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_BEEDRILL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_BIDOOF_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_BULBASAUR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_BUNEARY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_BUTTERFREE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CHANDELURE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CHARMANDER_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CHINCHOU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CLEFABLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CLEFFA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_COFAGRIGUS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CORSOLA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_CRESSELIA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_DARKRAI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_DIGLETT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_DITTO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_DUSKULL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_EEVEE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_ESPEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_GENGAR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_HAPPINY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_HOOH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_JIRACHI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_JOLTIK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_KECLEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_MAGCARGO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_MAGIKARP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_MEW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_MILTANK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_MUDKIP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_NINCADA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_ODDISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_PARAS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_PIKACHU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_PORYGON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_PYUKUMUKU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_QWILFISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SABLEYE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SANDSHREW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SNEASEL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SOLOSIS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SQUIRTLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SWINUB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_SYLVEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_TOGEKISS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_TRAPINCH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_TREVENANT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_VOLCARONA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_VOLTORB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_WHIMSICOTT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-0-1-flags_XATU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-cycle-0-1-0",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-0-1-1",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-0-1-2",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-0-1-3",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-0-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-0-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-0-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "gear-0-1-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-0-1-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-0-1-2",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-0-1-3",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "map-0-0-1",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-2",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-3",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-4",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-5",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-6",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-7",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-8",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-9",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-10",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-11",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-12",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-13",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-14",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-15",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-16",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-17",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-18",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-19",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-20",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-21",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-22",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-23",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-24",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-25",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-26",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-27",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-28",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-29",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-30",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-31",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-32",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-33",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-34",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-35",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-36",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-37",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-38",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-39",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-40",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-41",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-481",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-520",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-560",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-600",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-640",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-680",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-720",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-760",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-0-800",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-1",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-2",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-3",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-4",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-5",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-6",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-7",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-8",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-9",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-10",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-11",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-12",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-13",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-14",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-15",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-16",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-17",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-18",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-19",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-20",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-21",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-22",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-23",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-24",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-25",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-26",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-27",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-28",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-29",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-30",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-31",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-32",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-33",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-34",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-35",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-36",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-37",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-38",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-39",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-40",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-41",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-481",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-520",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-560",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-600",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-640",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-680",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-720",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-760",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-0-1-800",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "help-0-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "help-0-2",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "help-0-3",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "help-0-4",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-500000",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-BLACK",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-BLASTOISE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-BOULDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-2-0-CASCADEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-CHARIZARD",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-EARTHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-EEVEELUTION",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-FOGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-GALAXYMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-GLACIERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-2-0-GRAYPOLY",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-GROUDON",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-HEARTMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-HIVEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-KYOGRE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-MARSHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-MINERALBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-PIKACHU",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-PLAIN_BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-PLAIN_GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-PLAINBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-PURPLE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-RAINBOWBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-RAINBOWMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-RAYQUAZA",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-RED",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-RESHIRAM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-RISINGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-2-0-SOULBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-STORMBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-THUNDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-VENUSAUR",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-VOLCANOBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-ZEKROM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-ZEPHYRBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_500000_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_BEEDRILL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_BIDOOF_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_BULBASAUR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_BUNEARY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_BUTTERFREE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CHANDELURE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CHARMANDER_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CHINCHOU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CLEFABLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CLEFFA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_COFAGRIGUS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CORSOLA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_CRESSELIA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_DARKRAI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_DIGLETT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_DITTO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_DUSKULL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_EEVEE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_ESPEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_GENGAR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_HAPPINY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_HOOH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_JIRACHI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_JOLTIK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_KECLEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_MAGCARGO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_MAGIKARP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_MEW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_MILTANK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_MUDKIP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_NINCADA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_ODDISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_PARAS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_PIKACHU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_PORYGON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_PYUKUMUKU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_QWILFISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SABLEYE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SANDSHREW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SNEASEL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SOLOSIS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SQUIRTLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SWINUB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_SYLVEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_TOGEKISS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_TRAPINCH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_TREVENANT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_VOLCARONA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_VOLTORB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_WHIMSICOTT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-0-flags_XATU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-cycle-2-0-0",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-2-0-1",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-2-0-2",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-2-0-3",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-2-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-2-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-2-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "gear-2-0-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-2-0-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-2-0-2",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-2-0-3",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-500000",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-BLACK",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-BLASTOISE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-BOULDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-2-1-CASCADEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-CHARIZARD",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-EARTHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-EEVEELUTION",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-FOGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-GALAXYMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-GLACIERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-2-1-GRAYPOLY",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-GROUDON",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-HEARTMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-HIVEBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-KYOGRE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-MARSHBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-MINERALBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-PIKACHU",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-PLAIN_BLUE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-PLAIN_GREEN",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-PLAINBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-PURPLE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-RAINBOWBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-RAINBOWMAIL",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-RAYQUAZA",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-RED",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-RESHIRAM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-RISINGBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-2-1-SOULBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-STORMBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-THUNDERBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-VENUSAUR",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-VOLCANOBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-ZEKROM",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-ZEPHYRBADGE",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_500000_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_BEEDRILL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_BIDOOF_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_BULBASAUR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_BUNEARY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_BUTTERFREE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CHANDELURE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CHARMANDER_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CHINCHOU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CLEFABLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CLEFFA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_COFAGRIGUS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CORSOLA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_CRESSELIA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_DARKRAI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_DIGLETT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_DITTO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_DUSKULL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_EEVEE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_ESPEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_GENGAR_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_HAPPINY_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_HOOH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_JIRACHI_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_JOLTIK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_KECLEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_MAGCARGO_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_MAGIKARP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_MEW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_MILTANK_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_MUDKIP_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_NINCADA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_ODDISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_PARAS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_PIKACHU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_PORYGON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_PYUKUMUKU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_QWILFISH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SABLEYE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SANDSHREW_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SNEASEL_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SOLOSIS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SQUIRTLE_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SWINUB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_SYLVEON_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_TOGEKISS_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_TRAPINCH_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_TREVENANT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_VOLCARONA_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_VOLTORB_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_WHIMSICOTT_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-2-1-flags_XATU_FLAG",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "card-cycle-2-1-0",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-2-1-1",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-2-1-2",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-cycle-2-1-3",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-2-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-2-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "card-extra-2-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "gear-2-1-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-2-1-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-2-1-2",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "gear-2-1-3",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "map-2-0-1",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-2",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-3",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-4",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-5",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-6",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-7",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-8",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-9",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-10",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-11",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-12",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-13",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-14",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-15",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-16",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-17",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-18",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-19",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-20",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-21",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-22",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-23",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-24",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-25",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-26",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-27",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-28",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-29",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-30",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-31",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-32",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-33",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-34",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-35",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-36",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-37",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-38",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-39",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-40",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-41",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-481",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-520",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-560",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-600",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-640",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-680",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-720",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-760",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-0-800",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-1",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-2",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-3",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-4",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-5",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-6",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-7",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-8",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-9",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-10",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-11",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-12",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-13",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-14",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-15",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-16",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-17",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-18",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-19",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-20",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-21",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-22",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-23",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-24",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-25",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-26",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-27",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-28",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-29",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-30",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-31",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-32",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-33",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-34",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-35",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-36",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-37",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-38",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-39",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-40",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-41",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-481",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-520",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-560",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-600",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-640",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-680",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-720",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-760",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "map-2-1-800",
+      "changed": true,
+      "max_rgb_delta": 8
+    },
+    {
+      "label": "help-2-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "help-2-2",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "help-2-3",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "help-2-4",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-false-false-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-false-false-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-false-true-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-false-true-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-true-false-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-true-false-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-true-true-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-0-true-true-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-false-false-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-false-false-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-false-true-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-false-true-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-true-false-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-true-false-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-true-true-0",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "tutor-2-true-true-1",
+      "changed": false,
+      "max_rgb_delta": 0
+    },
+    {
+      "label": "outfit-0-0-red-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-red-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-red-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-red-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-red-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-red-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-pikajamas-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-pikajamas-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-pikajamas-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-pikajamas-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-pikajamas-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-0-pikajamas-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-leaf-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-leaf-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-leaf-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-leaf-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-leaf-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-leaf-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-pikajamas-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-pikajamas-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-pikajamas-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-pikajamas-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-pikajamas-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-0-1-pikajamas-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-red-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-red-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-red-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-red-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-red-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-red-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-pikajamas-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-pikajamas-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-pikajamas-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-pikajamas-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-pikajamas-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-0-pikajamas-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-leaf-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-leaf-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-leaf-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-leaf-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-leaf-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-leaf-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-pikajamas-0-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-pikajamas-0-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-pikajamas-0-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-pikajamas-1-GOLD",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-pikajamas-1-BRONZE",
+      "changed": true,
+      "max_rgb_delta": 12
+    },
+    {
+      "label": "outfit-2-1-pikajamas-1-SILVER",
+      "changed": true,
+      "max_rgb_delta": 12
+    }
+  ],
+  "tutor_scope": "Four-cell PNG; current production panel draws the first 20x28 cell without playing its AnimatedSprite. Retained unchanged.",
+  "limitations": "No full playthrough, Android device or release package check; real avatar layering is scoped to the trainer-card portrait, not all overworld actions.",
+  "timing_scope": "Cycle durations are nominal at 40fps, verified through update counts, source frame geometry and identical before/after trajectories. Screenshot redraws are not a wall-clock performance benchmark."
+}

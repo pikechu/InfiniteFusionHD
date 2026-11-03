@@ -1,0 +1,231 @@
+{
+  "id": "batch-179",
+  "number": 179,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（28/99）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-178"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-179",
+  "entries": [
+    {
+      "source": "Graphics/Characters/147.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1094,
+      "source_mtime_ns": 1792048530260208900,
+      "canonical_source": "Graphics/Characters/147.png"
+    },
+    {
+      "source": "Graphics/Characters/147s.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1094,
+      "source_mtime_ns": 1792048530260208900,
+      "canonical_source": "Graphics/Characters/147s.png"
+    },
+    {
+      "source": "Graphics/Characters/148.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1648,
+      "source_mtime_ns": 1792048530260208900,
+      "canonical_source": "Graphics/Characters/148.png"
+    },
+    {
+      "source": "Graphics/Characters/148s.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1648,
+      "source_mtime_ns": 1792048530260208900,
+      "canonical_source": "Graphics/Characters/148s.png"
+    },
+    {
+      "source": "Graphics/Characters/149.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1557,
+      "source_mtime_ns": 1792048530261206400,
+      "canonical_source": "Graphics/Characters/149.png"
+    },
+    {
+      "source": "Graphics/Characters/149s.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1554,
+      "source_mtime_ns": 1792048530261206400,
+      "canonical_source": "Graphics/Characters/149s.png"
+    },
+    {
+      "source": "Graphics/Characters/150.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1472,
+      "source_mtime_ns": 1792048530261206400,
+      "canonical_source": "Graphics/Characters/150.png"
+    },
+    {
+      "source": "Graphics/Characters/150s.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1472,
+      "source_mtime_ns": 1792048530261206400,
+      "canonical_source": "Graphics/Characters/150s.png"
+    },
+    {
+      "source": "Graphics/Characters/151.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1123,
+      "source_mtime_ns": 1792048530262207900,
+      "canonical_source": "Graphics/Characters/151.png"
+    },
+    {
+      "source": "Graphics/Characters/151s.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1123,
+      "source_mtime_ns": 1792048530262207900,
+      "canonical_source": "Graphics/Characters/151s.png"
+    },
+    {
+      "source": "Graphics/Characters/152_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 822,
+      "source_mtime_ns": 1792048530262207900,
+      "canonical_source": "Graphics/Characters/152_0.png"
+    },
+    {
+      "source": "Graphics/Characters/152s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 819,
+      "source_mtime_ns": 1792048530262207900,
+      "canonical_source": "Graphics/Characters/152s_0.png"
+    },
+    {
+      "source": "Graphics/Characters/153_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1234,
+      "source_mtime_ns": 1792048530263207100,
+      "canonical_source": "Graphics/Characters/153_0.png"
+    },
+    {
+      "source": "Graphics/Characters/153s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1234,
+      "source_mtime_ns": 1792048530263207100,
+      "canonical_source": "Graphics/Characters/153s_0.png"
+    },
+    {
+      "source": "Graphics/Characters/154_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1400,
+      "source_mtime_ns": 1792048530263207100,
+      "canonical_source": "Graphics/Characters/154_0.png"
+    },
+    {
+      "source": "Graphics/Characters/154_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1398,
+      "source_mtime_ns": 1792048530263207100,
+      "canonical_source": "Graphics/Characters/154_1.png"
+    },
+    {
+      "source": "Graphics/Characters/154s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1399,
+      "source_mtime_ns": 1792048530264208000,
+      "canonical_source": "Graphics/Characters/154s_0.png"
+    },
+    {
+      "source": "Graphics/Characters/154s_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1398,
+      "source_mtime_ns": 1792048530264208000,
+      "canonical_source": "Graphics/Characters/154s_1.png"
+    },
+    {
+      "source": "Graphics/Characters/155_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1146,
+      "source_mtime_ns": 1792048530264208000,
+      "canonical_source": "Graphics/Characters/155_0.png"
+    },
+    {
+      "source": "Graphics/Characters/155s_0.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1146,
+      "source_mtime_ns": 1792048530265207100,
+      "canonical_source": "Graphics/Characters/155s_0.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-179/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

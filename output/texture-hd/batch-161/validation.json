@@ -1,0 +1,900 @@
+{
+  "batch": "batch-161",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/Nessa/Characters/trainer001.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 2500,
+      "source_mtime_ns": 1792048521368697600,
+      "canonical_source": "Graphics/Alternate Trainers/Nessa/Characters/trainer001.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "26c9db69b29865d741104b6f995c1ac47bd1b6cd0333d7c0c2f3fd4e82b675e1",
+      "git_blob": "a1b401d91b9905ea4093b25170afc31314e4e550",
+      "reference_blob": "a1b401d91b9905ea4093b25170afc31314e4e550",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0412b35d4553975533ecdc01b949894f2f7dfcab6df4b1c967731d612c08a32e",
+      "alpha_sha256": "0a202b063a45cc90d9aa49de3a2088178b627d0bcbe7159fe030759e60cdb583",
+      "bounds": [
+        50,
+        2,
+        118,
+        156
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Nessa/Characters/trchar001.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4229,
+      "source_mtime_ns": 1792048521368697600,
+      "canonical_source": "Graphics/Alternate Trainers/Nessa/Characters/trchar001.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "395fe6e812374c6b616fccfa84681778d1bc078269ff081be759550fe6cac88a",
+      "git_blob": "9a87ab44d05e435b54a4ebb1a8a3ede536cf292e",
+      "reference_blob": "9a87ab44d05e435b54a4ebb1a8a3ede536cf292e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e1c5fde5e14c33337f001374d4b0b405f761de1dfd654361eec6b7cd991e4750",
+      "alpha_sha256": "145f99fb10c270e793061665c0778e32cdfbe2cbbdb10933f510ab3a7e39fd42",
+      "bounds": [
+        14,
+        2,
+        244,
+        254
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Nessa/Pictures/introGirl.png",
+      "size": [
+        80,
+        160
+      ],
+      "source_bytes": 2306,
+      "source_mtime_ns": 1792048521369695600,
+      "canonical_source": "Graphics/Alternate Trainers/Nessa/Pictures/introGirl.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "dcdb54d0f2076cafdb6436d2af6ea308af2bf61ec7f8f2d140eb1ee87afb4e1f",
+      "git_blob": "a1fa368945c581c2a57e8f50299a252c734f6a4b",
+      "reference_blob": "a1fa368945c581c2a57e8f50299a252c734f6a4b",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        80,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "22ad8b31a475b45529187ef5f38d9795f421735acd26924d28c9c5e0c92810a6",
+      "alpha_sha256": "4528969e7130885110ccc5e6bb5f96cca3321de31d2c5822ea29ee2c61d2ef9c",
+      "bounds": [
+        9,
+        3,
+        77,
+        157
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Nessa/Transitions/vsTrainer1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 2813,
+      "source_mtime_ns": 1792048521370115600,
+      "canonical_source": "Graphics/Alternate Trainers/Nessa/Transitions/vsTrainer1.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4dddb528316e300513b1777fe099dffe9cb37d445d05f73841f063feb15dbfac",
+      "git_blob": "cfa6b227583e099023a331f4de993d73418e4c2a",
+      "reference_blob": "cfa6b227583e099023a331f4de993d73418e4c2a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5d18cdd4f8079623505ddf1c3b5c6f982aa42e90a0ec4ea7b985f4088e4c7d10",
+      "alpha_sha256": "4fe4ed82bb39d169805eb1b879a2852c49271e6c4bdde88404668e148972636d",
+      "bounds": [
+        14,
+        0,
+        256,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3351,
+      "source_mtime_ns": 1792048521370623000,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/boy_bike.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "ae2bc24f3f26c8b988a93f7046ba3774c5c56195b3bad8c42dabead3a50c7bf3",
+      "git_blob": "9eefef26b196e3cfc3d99989bd84b0890480dd85",
+      "reference_blob": "9eefef26b196e3cfc3d99989bd84b0890480dd85",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d5eaeee1f4abd5a8e1d9be70b1a9b7a7857dfaca66d081bd9f59e4060cfbef6f",
+      "alpha_sha256": "d245199c54ba2ea2d93aba110cd7542fe3509df58665d2ae8b6ec7e8c8a792cf",
+      "bounds": [
+        2,
+        16,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3348,
+      "source_mtime_ns": 1792048521370623000,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/boy_dive_offset.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "392582b486c32e0b3434fb8465131dc4d1b656c4f87be9429fc644cd597c63da",
+      "git_blob": "ac68a2654bf5378200fc902c6547eb82c866d371",
+      "reference_blob": "ac68a2654bf5378200fc902c6547eb82c866d371",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2c73ca7cda4d3c40e0eb273fa44961858900fbbfcba7f48fabb0debf9b62cf17",
+      "alpha_sha256": "d245199c54ba2ea2d93aba110cd7542fe3509df58665d2ae8b6ec7e8c8a792cf",
+      "bounds": [
+        2,
+        16,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/boy_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 6306,
+      "source_mtime_ns": 1792048521374629200,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/boy_fish_offset.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "54ea2df2c11b0373bfe6473769ab4385de181145822a29e1e24b29c9279efef3",
+      "git_blob": "57c5cd6cebea3e07abbd5a38b2dafc214297f800",
+      "reference_blob": "57c5cd6cebea3e07abbd5a38b2dafc214297f800",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "8373a218b99920055f87b85748758b58e93a8517e37da882e47e40d4fa414ca1",
+      "alpha_sha256": "a193aac21571b571195bcbd8768b43c7f0b00ea2a81af338779baccbcd2c2fa9",
+      "bounds": [
+        16,
+        16,
+        78,
+        300
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3348,
+      "source_mtime_ns": 1792048521374629200,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/boy_run.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "392582b486c32e0b3434fb8465131dc4d1b656c4f87be9429fc644cd597c63da",
+      "git_blob": "ac68a2654bf5378200fc902c6547eb82c866d371",
+      "reference_blob": "ac68a2654bf5378200fc902c6547eb82c866d371",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2c73ca7cda4d3c40e0eb273fa44961858900fbbfcba7f48fabb0debf9b62cf17",
+      "alpha_sha256": "d245199c54ba2ea2d93aba110cd7542fe3509df58665d2ae8b6ec7e8c8a792cf",
+      "bounds": [
+        2,
+        16,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Raichu/Characters/boy_dive_offset.png",
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/boy_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5055,
+      "source_mtime_ns": 1792048521374629200,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/boy_surf_offset.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "798b88d225749b2f5de53be74781cfee8a2e585f58abd35474519eab5d8056cd",
+      "git_blob": "5af25555996edc32ff69d697abe9333ed7092930",
+      "reference_blob": "5af25555996edc32ff69d697abe9333ed7092930",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "caf3a16c26a153439506aa055c98bd70e8cf5c2956f64fc8db52196bab0da2de",
+      "alpha_sha256": "e916511109057f3f0f6ab17fcc7e8303fc1ec6a7051cb9562438545d007b8485",
+      "bounds": [
+        14,
+        8,
+        240,
+        234
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/trainer000.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 2934,
+      "source_mtime_ns": 1792048521375634000,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/trainer000.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "8b0c445fca3fac1aa9699caab94aa137fede69321d6ecde418de6a66b58e238a",
+      "git_blob": "547018daa9b77653f3844676d52aa3ee201ef05c",
+      "reference_blob": "547018daa9b77653f3844676d52aa3ee201ef05c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        128,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2152cb95480ecce39a5b41ecbb6f961be5b0b216c3877f782eb9a1a95e49ceff",
+      "alpha_sha256": "6768d55007f4e29238813bd42d9129972a3b257cf5c5ceaf14403436af5a3a2d",
+      "bounds": [
+        0,
+        2,
+        126,
+        124
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Characters/trchar000.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3348,
+      "source_mtime_ns": 1792048521375634000,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Characters/trchar000.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "392582b486c32e0b3434fb8465131dc4d1b656c4f87be9429fc644cd597c63da",
+      "git_blob": "ac68a2654bf5378200fc902c6547eb82c866d371",
+      "reference_blob": "ac68a2654bf5378200fc902c6547eb82c866d371",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2c73ca7cda4d3c40e0eb273fa44961858900fbbfcba7f48fabb0debf9b62cf17",
+      "alpha_sha256": "d245199c54ba2ea2d93aba110cd7542fe3509df58665d2ae8b6ec7e8c8a792cf",
+      "bounds": [
+        2,
+        16,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Raichu/Characters/boy_dive_offset.png",
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Raichu/Transitions/vsTrainer0.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 29922,
+      "source_mtime_ns": 1792048521376631200,
+      "canonical_source": "Graphics/Alternate Trainers/Raichu/Transitions/vsTrainer0.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "d6d3abb22dbe1f60f20df12e0c27541ea83ebd5589d1672267b4045b6c071316",
+      "git_blob": "8136e83ede1867b12cecafeb6eac50aef3ce7bc3",
+      "reference_blob": "8136e83ede1867b12cecafeb6eac50aef3ce7bc3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6b51a28e8368e0e587f49e242b933d58c6219a614cce0d2547e1ed3b1474860b",
+      "alpha_sha256": "e3c3f4396aa81cc7490a63c44a70a2942031ee32d0a3cf91b4d0ce74acbd7765",
+      "bounds": [
+        11,
+        0,
+        239,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5680,
+      "source_mtime_ns": 1792048521377630100,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/boy_bike.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "d0be37f3ab27862211e850b5d50864d942f9414070901fff220fb56897ff2782",
+      "git_blob": "d10618a19560d13e25456656be3169f6c577e280",
+      "reference_blob": "d10618a19560d13e25456656be3169f6c577e280",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7a666df44cef4da12a57b7c438b1e77ee04cc46db07ed57b54a4fc4d0f45fbd8",
+      "alpha_sha256": "84136d8bc9129f93c65a56bfe7cbc25e1574d03ebef9fa12e4cde6ac384c25d0",
+      "bounds": [
+        6,
+        2,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2837,
+      "source_mtime_ns": 1792048521377630100,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/boy_dive_offset.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "21f08fb3f818841a8fcc4e466968bfa6d08d527042f7eab6033fbe0ec7065dbb",
+      "git_blob": "29498d74622cc6aa1df4206ea30de40db2805db9",
+      "reference_blob": "29498d74622cc6aa1df4206ea30de40db2805db9",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ec72a27eef1b2ad21e2ff531295cf165b1a77658b48708b1728c30b24adb8ee1",
+      "alpha_sha256": "dfb05db5c9c469e868dbb75687dd9297e8e4d036fe959e67648112393ffff130",
+      "bounds": [
+        8,
+        5,
+        246,
+        256
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/boy_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 3990,
+      "source_mtime_ns": 1792048521390782500,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/boy_fish_offset.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "f2e27a3f076e7a1744810848da946d5abcc0404e7d937a7b0e167e92ebae305e",
+      "git_blob": "ce5fcdaffb44a9b6fdc1d2e4ba7c9c9e754db481",
+      "reference_blob": "ce5fcdaffb44a9b6fdc1d2e4ba7c9c9e754db481",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "738768a01476fedd289661ab6bdbaa1d6f36a563662f5796f7fd265dec3af428",
+      "alpha_sha256": "5b9e4a087eb412abd32aa3cde91337e8ad311a38bdd49cdd398742c3b1791617",
+      "bounds": [
+        4,
+        0,
+        368,
+        309
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3438,
+      "source_mtime_ns": 1792048521391782500,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/boy_run.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "e5feee1583d7b9ecd059c6f67fe8b06d133dced1df34ce0aa36a477212ababff",
+      "git_blob": "ba26e059f2d6b0b71ff8e6fb26024554df8d5674",
+      "reference_blob": "ba26e059f2d6b0b71ff8e6fb26024554df8d5674",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "328b92eed733bdb37b86e7afa9ac64a815878f58e7533c89fe76e886f1db8099",
+      "alpha_sha256": "23d1341c5ad0b21ec823e307a388df78ec9633b4cc1721ca98d50640461b6994",
+      "bounds": [
+        13,
+        12,
+        251,
+        256
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/boy_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2834,
+      "source_mtime_ns": 1792048521392787300,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/boy_surf_offset.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "6e32a299980113dfa0346f9ac8985b8f0188b1f31a0dc565d3d4fda7eaab55d4",
+      "git_blob": "4b277b461b829e870d438fafba7d2d3fc5e0b4a6",
+      "reference_blob": "4b277b461b829e870d438fafba7d2d3fc5e0b4a6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "467c20c465a5e7b56ca1648702ef97914d0645150369d3efd9145dd4ed9ba167",
+      "alpha_sha256": "0cc22ba34c8e529aa1976a4db43134730300e9ac0ce973da7caee9cd1590a6c7",
+      "bounds": [
+        8,
+        2,
+        246,
+        252
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/trchar000.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3201,
+      "source_mtime_ns": 1792048521392787300,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/trchar000.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "559d1c63fa0773796c3a839c0dfba071a427fb6c29cc56e09e64066f911094ef",
+      "git_blob": "c2c4d4e70e2454ed8772aca85114860ac78d8e91",
+      "reference_blob": "c2c4d4e70e2454ed8772aca85114860ac78d8e91",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ce5094f0743a55e439d8cbe6c68fcb53c62b517625ba07a307ed7cccf1ec3a24",
+      "alpha_sha256": "acd1ba9546542d1a07510287cf2024648536400412f084706c92a3f2f6659c43",
+      "bounds": [
+        12,
+        5,
+        247,
+        251
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Red (fixed)/vsTrainer0.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 2059,
+      "source_mtime_ns": 1792048521393781000,
+      "canonical_source": "Graphics/Alternate Trainers/Red (fixed)/vsTrainer0.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "6200cb38163281e9e75f3aa1a8e5024245f89bf80d88f7b100c69af4a3ca12ce",
+      "git_blob": "18ead2187b7912dbd58776944f09d6e9cf875797",
+      "reference_blob": "18ead2187b7912dbd58776944f09d6e9cf875797",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "9f13b15717546cdc2b3f47e3c266c5b6f0285d5dc3bf84cbe44d6757e3d43cbb",
+      "alpha_sha256": "4792f87755e0a9a1b7e1647019a1576fb4f76ffb0183a6bc7f4606dfaa5d09ee",
+      "bounds": [
+        0,
+        0,
+        182,
+        128
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-161-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 11013,
+      "source_mtime_ns": 1792048521393781000,
+      "canonical_source": "Graphics/Alternate Trainers/Sei Shōnagon/Characters/girl_bike.png",
+      "batch": "batch-161",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "fbf7d155992250538ad04617d2cfd83daebc44edb74d183a9dfff136ab05d0a1",
+      "git_blob": "307e43e92b5ac4bb8c59bc73e1505b268404c29c",
+      "reference_blob": "307e43e92b5ac4bb8c59bc73e1505b268404c29c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "07fd0ae3a4789517389bdd3422f6220734979c2340e935a84d4309d6e97fb97b",
+      "alpha_sha256": "228cba629e8d06c6aaaae0b2895498f447137c913a35d63f4a9b5da942b9811f",
+      "bounds": [
+        6,
+        2,
+        252,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-161-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Current source and delivery equal the source snapshot. Frame/state/tint outputs therefore remain unchanged for identical engine inputs. This is a preservation decision, not an AI redraw claim."
+}

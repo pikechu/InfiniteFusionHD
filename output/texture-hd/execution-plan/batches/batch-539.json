@@ -1,0 +1,226 @@
+{
+  "id": "batch-539",
+  "number": 539,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（28/29）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-538"
+  ],
+  "file_count": 19,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-539",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesAerodactyl_1.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1557,
+      "source_mtime_ns": 1792048547811157700,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesAerodactyl_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesAerodactyl_2.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1583,
+      "source_mtime_ns": 1792048547811157700,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesAerodactyl_2.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesAerodactyl_3.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1556,
+      "source_mtime_ns": 1792048547812157900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesAerodactyl_3.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesHooh.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1625,
+      "source_mtime_ns": 1792048547812157900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesHooh.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesHooh_1.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1667,
+      "source_mtime_ns": 1792048547812157900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesHooh_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesHooh_2.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1623,
+      "source_mtime_ns": 1792048547813162800,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesHooh_2.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesHooh_3.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1655,
+      "source_mtime_ns": 1792048547813424900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesHooh_3.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesKabuto.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1418,
+      "source_mtime_ns": 1792048547813424900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesKabuto.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesKabuto_1.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1454,
+      "source_mtime_ns": 1792048547814156600,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesKabuto_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesKabuto_2.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1478,
+      "source_mtime_ns": 1792048547814156600,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesKabuto_2.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesKabuto_3.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1462,
+      "source_mtime_ns": 1792048547814156600,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesKabuto_3.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesMew.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1422,
+      "source_mtime_ns": 1792048547814156600,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesMew.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesMew_1.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1399,
+      "source_mtime_ns": 1792048547815157500,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesMew_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesMew_2.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1403,
+      "source_mtime_ns": 1792048547817157900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesMew_2.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesMew_3.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1393,
+      "source_mtime_ns": 1792048547817157900,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesMew_3.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1604,
+      "source_mtime_ns": 1792048547818157000,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte_1.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1562,
+      "source_mtime_ns": 1792048547818157000,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte_1.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte_2.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1651,
+      "source_mtime_ns": 1792048547818157000,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte_2.png"
+    },
+    {
+      "source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte_3.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1583,
+      "source_mtime_ns": 1792048547819160500,
+      "canonical_source": "Graphics/Pictures/Tile Puzzle/tilesOmanyte_3.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-539/validation.json",
+  "applied_files": 0,
+  "preserved_files": 19
+}

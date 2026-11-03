@@ -1,0 +1,71 @@
+{
+  "id": "batch-052",
+  "number": 52,
+  "priority": "P1",
+  "stage": "auto_water",
+  "title": "动态自动图块：水面、瀑布、熔岩及水流（4/9）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "autotile",
+  "processing_notes": "先确认原拼接规则和动画帧布局，逐块或逐帧处理；检查角、边、环绕拼接和动画循环。",
+  "depends_on": [
+    "batch-044",
+    "batch-051"
+  ],
+  "file_count": 4,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-052",
+  "entries": [
+    {
+      "source": "Graphics/Autotiles/ocean-tropical.png",
+      "size": [
+        3072,
+        128
+      ],
+      "source_bytes": 15649,
+      "source_mtime_ns": 1792048523014479900,
+      "canonical_source": "Graphics/Autotiles/ocean-tropical.png"
+    },
+    {
+      "source": "Graphics/Autotiles/ocean.png",
+      "size": [
+        3072,
+        128
+      ],
+      "source_bytes": 17441,
+      "source_mtime_ns": 1792048523014479900,
+      "canonical_source": "Graphics/Autotiles/ocean.png"
+    },
+    {
+      "source": "Graphics/Autotiles/ocean_dark.png",
+      "size": [
+        3072,
+        128
+      ],
+      "source_bytes": 7152,
+      "source_mtime_ns": 1792048523015478200,
+      "canonical_source": "Graphics/Autotiles/ocean_dark.png"
+    },
+    {
+      "source": "Graphics/Autotiles/Sand shore.png",
+      "size": [
+        768,
+        128
+      ],
+      "source_bytes": 8084,
+      "source_mtime_ns": 1792048522969835800,
+      "canonical_source": "Graphics/Autotiles/Sand shore.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "检查所有拼接角边及 3×3 等相邻示例；动态资源连续播放一个完整循环。"
+  ],
+  "result": "output/texture-hd/batch-052/validation.json",
+  "applied_files": 3,
+  "preserved_files": 1
+}

@@ -1,0 +1,110 @@
+{
+  "id": "batch-705",
+  "number": 705,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（84/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-704"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-705",
+  "entries": [
+    {
+      "source": "Graphics/Animations/PRAS- Steam Eruption.png",
+      "size": [
+        960,
+        768
+      ],
+      "source_bytes": 4736,
+      "source_mtime_ns": 1792048522678496300,
+      "canonical_source": "Graphics/Animations/PRAS- Steam Eruption.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Steamroller.png",
+      "size": [
+        384,
+        192
+      ],
+      "source_bytes": 534,
+      "source_mtime_ns": 1792048522678496300,
+      "canonical_source": "Graphics/Animations/PRAS- Steamroller.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Sticky Web.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 3785,
+      "source_mtime_ns": 1792048522679496300,
+      "canonical_source": "Graphics/Animations/PRAS- Sticky Web.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Stomping Tantrum.png",
+      "size": [
+        960,
+        192
+      ],
+      "source_bytes": 720,
+      "source_mtime_ns": 1792048522679496300,
+      "canonical_source": "Graphics/Animations/PRAS- Stomping Tantrum.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Strike.png",
+      "size": [
+        960,
+        1152
+      ],
+      "source_bytes": 6417,
+      "source_mtime_ns": 1792048522679496300,
+      "canonical_source": "Graphics/Animations/PRAS- Strike.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- String Shot.png",
+      "size": [
+        384,
+        192
+      ],
+      "source_bytes": 328,
+      "source_mtime_ns": 1792048522680495900,
+      "canonical_source": "Graphics/Animations/PRAS- String Shot.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Strong Winds.png",
+      "size": [
+        512,
+        192
+      ],
+      "source_bytes": 22659,
+      "source_mtime_ns": 1792048522680495900,
+      "canonical_source": "Graphics/Animations/PRAS- Strong Winds.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Struggle Bug.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 1062,
+      "source_mtime_ns": 1792048522680495900,
+      "canonical_source": "Graphics/Animations/PRAS- Struggle Bug.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-705/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

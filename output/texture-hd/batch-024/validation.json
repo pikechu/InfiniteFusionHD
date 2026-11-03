@@ -1,0 +1,28 @@
+{
+  "batch": "batch-024",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 1,
+  "entries": [
+    {
+      "source": "Graphics/Tilesets/Factory interior.PNG",
+      "status": "preserved",
+      "size": [
+        256,
+        896
+      ],
+      "sha256": "01c95a4f3f8509e7936223fd599ab44c13aa813d9e8634bcdda2fec206317b55",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

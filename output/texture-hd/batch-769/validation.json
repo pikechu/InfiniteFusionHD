@@ -1,0 +1,86 @@
+{
+  "batch": "batch-769",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 2,
+  "entries": [
+    {
+      "source": "Graphics/Weather/storm_4.png",
+      "size": [
+        32,
+        16
+      ],
+      "source_bytes": 208,
+      "source_mtime_ns": 1792048556214562600,
+      "canonical_source": "Graphics/Weather/storm_4.png",
+      "batch": "batch-769",
+      "stage": "weather",
+      "sha256": "0b474180547e3ca0bc400d81cc6c7dc93b37669475d2093f85a3e828b76e44ec",
+      "git_blob": "a2a81919aa70ef464e9e96751ad6e9ed91f8770c",
+      "reference_blob": "a2a81919aa70ef464e9e96751ad6e9ed91f8770c",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "0cd78c61c2ad863ae5bec8d746d188748a02fbd9c4621035fb0d0b4655e36200",
+          "alpha_sha256": "31265ae5210823d10d47056901da2a6530896c30aafbc9f679477fc6013e9d53",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-769-01.png"
+    },
+    {
+      "source": "Graphics/Weather/strong_winds.png",
+      "size": [
+        512,
+        192
+      ],
+      "source_bytes": 32588,
+      "source_mtime_ns": 1792048556215558700,
+      "canonical_source": "Graphics/Weather/strong_winds.png",
+      "batch": "batch-769",
+      "stage": "weather",
+      "sha256": "b03454af333ca20a63211a7d716fb0e3ae1778c2e044ec98ce244a18248ac4d8",
+      "git_blob": "772ec4cfc26f180b8c42fcc5cf154020826f28fc",
+      "reference_blob": "772ec4cfc26f180b8c42fcc5cf154020826f28fc",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "LA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "9c417d4794cd89bb49d5c796fcb9368e46d0ae82eea965c86060bec60210ab18",
+          "alpha_sha256": "5d7ed0d746cf19f4bc2811559b522ed89b5f483bd60baab5ff9ca8b4c172369b",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-769-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/weather-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All 243 sources directly decoded at original dimensions. Actual RPG::Weather covers ten data types, three strengths, particle recycling, at least two tiled periods and completed fade-out/in with deterministic 40fps logical time. Eighteen fogs use actual AnimatedPlane wrapping boundaries and zoom. Fourteen actual particle classes run 600 updates with fixed event-screen anchors and recycling. Thirteen actual HGSS transition fixtures run to disposal. All transition sources load through actual cache; inactive SunMoon, alternate VS bars, compatibility portraits and twelve unbound battleback animation layers retain exact bytes. Cache decoding is not proof of complete VS trainer intro selection, inactive SunMoon playback, complete map events or battle gameplay.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

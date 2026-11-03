@@ -1,0 +1,948 @@
+{
+  "batch": "batch-315",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 21,
+  "entries": [
+    {
+      "source": "Graphics/Characters/player/balls/SPORTBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15133,
+      "source_mtime_ns": 1792048540736832800,
+      "canonical_source": "Graphics/Characters/player/balls/SPORTBALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "d81658dfb9aa54c6c45d20441c0442162a2f4a7af6eadcc9254ce0dc038b42ad",
+      "git_blob": "a01a15d80d584ea2f0d08416b0deb9153d2ad201",
+      "reference_blob": "a01a15d80d584ea2f0d08416b0deb9153d2ad201",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "06ec90747b1f670a1d27261bd7286b21a0fa450134a41b3b629b34b3618f5fe0",
+      "alpha_sha256": "9d02d71114b4083391428edbe78e0486ed2e71f354470e432c8c603d9e68136a",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/balls/STATUSBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15147,
+      "source_mtime_ns": 1792048540737350100,
+      "canonical_source": "Graphics/Characters/player/balls/STATUSBALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "b616e53110bca0ef98507b9f90864f0b5749070b3bb9def6fde903dc8948c3cb",
+      "git_blob": "1b34d943eb81ad62e7d8857a1c71fa1373090578",
+      "reference_blob": "1b34d943eb81ad62e7d8857a1c71fa1373090578",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4460fc4773151bad5910a6d7deeb7cafde850d609881ab54ffa8343fef34ade1",
+      "alpha_sha256": "9d02d71114b4083391428edbe78e0486ed2e71f354470e432c8c603d9e68136a",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/balls/TIMERBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15152,
+      "source_mtime_ns": 1792048540737350100,
+      "canonical_source": "Graphics/Characters/player/balls/TIMERBALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "521897b161905c5f37693af1777f41590bf2cd5e24b3dc2774a19907912ed945",
+      "git_blob": "bbe786a56c9e1b66c9ea0d7f67d260078358aba8",
+      "reference_blob": "bbe786a56c9e1b66c9ea0d7f67d260078358aba8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5e932057910f3ff15d0d6c8c3a18d95c387ef3abbeb43e1e7bce60032001b2c8",
+      "alpha_sha256": "80306974f4f16aaea2687ddd462a09489ff9ad33f2263eb5cb9228e3914f22aa",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/balls/TOXICBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15163,
+      "source_mtime_ns": 1792048540737874400,
+      "canonical_source": "Graphics/Characters/player/balls/TOXICBALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "99efb7bb241b30305e8aa5770c9ab1ed5fb381190becfa638958bdb58270b41d",
+      "git_blob": "9e7d056847f6ea0fc2ff00c2aee6c0c167a0efe5",
+      "reference_blob": "9e7d056847f6ea0fc2ff00c2aee6c0c167a0efe5",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c0f4a06276556945c21231b564a479e5ee422963e03f863f630955faca4b7d41",
+      "alpha_sha256": "9d02d71114b4083391428edbe78e0486ed2e71f354470e432c8c603d9e68136a",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/balls/TRADEBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15157,
+      "source_mtime_ns": 1792048540737874400,
+      "canonical_source": "Graphics/Characters/player/balls/TRADEBALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "97defef24ff52c13d349d260f26881fed690e4f5852347c1348d42afa92ff8d3",
+      "git_blob": "edb6ace6c6df4f5816633372567fb1f2c7f76376",
+      "reference_blob": "edb6ace6c6df4f5816633372567fb1f2c7f76376",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "de5dddad0ddb4341cf1060bd968a78d850ef8082ff1f7b68811c15524c5145fa",
+      "alpha_sha256": "9d02d71114b4083391428edbe78e0486ed2e71f354470e432c8c603d9e68136a",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/balls/ULTRABALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15159,
+      "source_mtime_ns": 1792048540738397000,
+      "canonical_source": "Graphics/Characters/player/balls/ULTRABALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "f727e19d4bbd022ff1c740644633a408636a4efc5da8d96c90fa24af37d3d76e",
+      "git_blob": "4621d1fd35c4a723f2227b6d3fe04b227171b078",
+      "reference_blob": "4621d1fd35c4a723f2227b6d3fe04b227171b078",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4d7e50534432c56c744dc065c0771d9a3f81fe6c6aafc5ae191e9c5c58155caa",
+      "alpha_sha256": "9d02d71114b4083391428edbe78e0486ed2e71f354470e432c8c603d9e68136a",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/balls/VIRUSBALL.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 15133,
+      "source_mtime_ns": 1792048540738903100,
+      "canonical_source": "Graphics/Characters/player/balls/VIRUSBALL.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "43424f757f181c0ad07909948ef4c49c0df93669bd03a2c30e7f752c1e298d64",
+      "git_blob": "1886ea7c5492af2d0f9661caad6ca6ff23f14b92",
+      "reference_blob": "1886ea7c5492af2d0f9661caad6ca6ff23f14b92",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "ball_overlay",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        32,
+        32
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0c22a4b2ffac8921cb513e9172cb257d2af764a5baf034b04197d1eeeb518026",
+      "alpha_sha256": "9d02d71114b4083391428edbe78e0486ed2e71f354470e432c8c603d9e68136a",
+      "bounds": [
+        8,
+        14,
+        22,
+        24
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_bike_activeblueF.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4295,
+      "source_mtime_ns": 1792048540787804900,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_bike_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "769b68d93c50906d10eeca1eeeb803e123a47492f738fa41badb51e8cfdd6eb2",
+      "git_blob": "816b5fda2a4b4564969493cc67f1bc12a0cde6b6",
+      "reference_blob": "816b5fda2a4b4564969493cc67f1bc12a0cde6b6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0d7378b7a4c4514d574fd09e09c0797c3f97141f29fd535094bad168b77f8fb6",
+      "alpha_sha256": "e7f0409caf52422724f3cad7b847f92d0385abb28e7c41f3c11b28ff94c15d5e",
+      "bounds": [
+        26,
+        50,
+        294,
+        308
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_dive_activeblueF.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4375,
+      "source_mtime_ns": 1792048540787804900,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_dive_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "99b0720cb8c1743124fc8f68474c4a654415368ac75da2073d9f12d942cadf97",
+      "git_blob": "776d401b631185b56891390e336d4b59299a1d8e",
+      "reference_blob": "776d401b631185b56891390e336d4b59299a1d8e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "884070bf1995fa93da85d79473356f23dd3b7c9d9a97e40b325c344584ba88d6",
+      "alpha_sha256": "ac559515107752562bbe69f62ba9e2d3c2c6a4e531e8883b860db6d9d8ac84ea",
+      "bounds": [
+        14,
+        44,
+        306,
+        308
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_fish_activeblueF.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4270,
+      "source_mtime_ns": 1792048540788806900,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_fish_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "60a34f12c19b2223bdc6d35e21d3782c04f1902c46196199d115d0eaa6e1a49f",
+      "git_blob": "4264ceabf485f77819fd4602742423a2922a81f6",
+      "reference_blob": "4264ceabf485f77819fd4602742423a2922a81f6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b31dbbeafdc474396d1c23e1cb6392a7762c1482834c4b157a4a1fd1fe706a2a",
+      "alpha_sha256": "b650442e398a27aefa8b37ce66cb63b7efaa7526ab10bb9d5aa7c4e2449d737c",
+      "bounds": [
+        28,
+        42,
+        292,
+        306
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_run_activeblueF.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4467,
+      "source_mtime_ns": 1792048540789808100,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_run_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "7649a866daea78984f9072d7861f441d7c6a67f8ec32ba9c33b203473236e203",
+      "git_blob": "65d55140921b0395fef74a633df46254ce3ea14e",
+      "reference_blob": "65d55140921b0395fef74a633df46254ce3ea14e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d89fca7b668d94c58cdc1aebd0d41befa019234f929be1eac3e067bba66e8e95",
+      "alpha_sha256": "12c395996b9444fd314a7c3273ff0415f0a779e58e9e3787fe2d24615049e093",
+      "bounds": [
+        26,
+        54,
+        294,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_surf_activeblueF.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3864,
+      "source_mtime_ns": 1792048540789808100,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_surf_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "04496ffe280e8da0e37d41852032f816538bd0428a3ef9b32827fd22f2ebbadb",
+      "git_blob": "37bdfacd4ec89f95aa155a6efc5dab15246a5627",
+      "reference_blob": "37bdfacd4ec89f95aa155a6efc5dab15246a5627",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2fcec5b629313c4f57217878773a2e7b79cca7f1b980457e0c72bc902aecd01c",
+      "alpha_sha256": "b80ad4c9fe913dea99954b523bc92617ce4fab65181674894ebd463faafe5c69",
+      "bounds": [
+        24,
+        48,
+        296,
+        298
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_trainer_activeblueF.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3394,
+      "source_mtime_ns": 1792048540789808100,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_trainer_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "aa330f8bdcc16eff3073cf39387c218a2a6d7b0f050a08188b9e6e1518797a32",
+      "git_blob": "1a67243770261166d37304f4ecef9278f546780e",
+      "reference_blob": "1a67243770261166d37304f4ecef9278f546780e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "portrait_layer",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "fc3bd66353cbe7a858777c1e440b6df0c1e3270b0fd45e82ee3689db63518a25",
+      "alpha_sha256": "919014b2cb5a302ebb0251c306d3700f84f2f1bed4b4c723ac6817756a3b5a0c",
+      "bounds": [
+        58,
+        60,
+        104,
+        156
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueF/clothes_walk_activeblueF.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4517,
+      "source_mtime_ns": 1792048540789808100,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueF/clothes_walk_activeblueF.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "6f73d6ba11b07dbe19fbe7b1ef15e28d6824891261a2134b1d29e4f77a036617",
+      "git_blob": "415b901754d851be43aa9b77ce4e5e19df42f67d",
+      "reference_blob": "415b901754d851be43aa9b77ce4e5e19df42f67d",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "52b877591b92e66fc413a3e6678acbf423eb2898abe8e74e1c73adfb90061591",
+      "alpha_sha256": "d46dea1ffcfe856b6dbc7f0b2bd830a5ee6dac82234d73cf6c56b44c9c00dfb0",
+      "bounds": [
+        28,
+        52,
+        294,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_bike_activeblueM.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4295,
+      "source_mtime_ns": 1792048540790805900,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_bike_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "769b68d93c50906d10eeca1eeeb803e123a47492f738fa41badb51e8cfdd6eb2",
+      "git_blob": "816b5fda2a4b4564969493cc67f1bc12a0cde6b6",
+      "reference_blob": "816b5fda2a4b4564969493cc67f1bc12a0cde6b6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "0d7378b7a4c4514d574fd09e09c0797c3f97141f29fd535094bad168b77f8fb6",
+      "alpha_sha256": "e7f0409caf52422724f3cad7b847f92d0385abb28e7c41f3c11b28ff94c15d5e",
+      "bounds": [
+        26,
+        50,
+        294,
+        308
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/player/clothes/activeblueF/clothes_bike_activeblueF.png",
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_dive_activeblueM.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4375,
+      "source_mtime_ns": 1792048540790805900,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_dive_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "99b0720cb8c1743124fc8f68474c4a654415368ac75da2073d9f12d942cadf97",
+      "git_blob": "776d401b631185b56891390e336d4b59299a1d8e",
+      "reference_blob": "776d401b631185b56891390e336d4b59299a1d8e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "884070bf1995fa93da85d79473356f23dd3b7c9d9a97e40b325c344584ba88d6",
+      "alpha_sha256": "ac559515107752562bbe69f62ba9e2d3c2c6a4e531e8883b860db6d9d8ac84ea",
+      "bounds": [
+        14,
+        44,
+        306,
+        308
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/player/clothes/activeblueF/clothes_dive_activeblueF.png",
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_fish_activeblueM.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4270,
+      "source_mtime_ns": 1792048540793806100,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_fish_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "60a34f12c19b2223bdc6d35e21d3782c04f1902c46196199d115d0eaa6e1a49f",
+      "git_blob": "4264ceabf485f77819fd4602742423a2922a81f6",
+      "reference_blob": "4264ceabf485f77819fd4602742423a2922a81f6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "b31dbbeafdc474396d1c23e1cb6392a7762c1482834c4b157a4a1fd1fe706a2a",
+      "alpha_sha256": "b650442e398a27aefa8b37ce66cb63b7efaa7526ab10bb9d5aa7c4e2449d737c",
+      "bounds": [
+        28,
+        42,
+        292,
+        306
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/player/clothes/activeblueF/clothes_fish_activeblueF.png",
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_run_activeblueM.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4467,
+      "source_mtime_ns": 1792048540793806100,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_run_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "7649a866daea78984f9072d7861f441d7c6a67f8ec32ba9c33b203473236e203",
+      "git_blob": "65d55140921b0395fef74a633df46254ce3ea14e",
+      "reference_blob": "65d55140921b0395fef74a633df46254ce3ea14e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d89fca7b668d94c58cdc1aebd0d41befa019234f929be1eac3e067bba66e8e95",
+      "alpha_sha256": "12c395996b9444fd314a7c3273ff0415f0a779e58e9e3787fe2d24615049e093",
+      "bounds": [
+        26,
+        54,
+        294,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/player/clothes/activeblueF/clothes_run_activeblueF.png",
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_surf_activeblueM.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 3864,
+      "source_mtime_ns": 1792048540794807500,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_surf_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "04496ffe280e8da0e37d41852032f816538bd0428a3ef9b32827fd22f2ebbadb",
+      "git_blob": "37bdfacd4ec89f95aa155a6efc5dab15246a5627",
+      "reference_blob": "37bdfacd4ec89f95aa155a6efc5dab15246a5627",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2fcec5b629313c4f57217878773a2e7b79cca7f1b980457e0c72bc902aecd01c",
+      "alpha_sha256": "b80ad4c9fe913dea99954b523bc92617ce4fab65181674894ebd463faafe5c69",
+      "bounds": [
+        24,
+        48,
+        296,
+        298
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/player/clothes/activeblueF/clothes_surf_activeblueF.png",
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_trainer_activeblueM.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 3396,
+      "source_mtime_ns": 1792048540794807500,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_trainer_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "1d09bb75b5fbbd5b317ebc078ac8178a607201c490cae8aaea2940b9a172b5c3",
+      "git_blob": "b40c20d7bb5a73d5bef1626e83c7db3e20d137d1",
+      "reference_blob": "b40c20d7bb5a73d5bef1626e83c7db3e20d137d1",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "portrait_layer",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "54c8f9281c3e0505af27187e0305282eec53c67a2750a60ad9bccc0442e62d97",
+      "alpha_sha256": "5a3008a04af2740a17e807edbd90c8b271e812ef50cebabc3f0944f230976563",
+      "bounds": [
+        58,
+        60,
+        104,
+        156
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    },
+    {
+      "source": "Graphics/Characters/player/clothes/activeblueM/clothes_walk_activeblueM.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 4517,
+      "source_mtime_ns": 1792048540794807500,
+      "canonical_source": "Graphics/Characters/player/clothes/activeblueM/clothes_walk_activeblueM.png",
+      "batch": "batch-315",
+      "stage": "outfit",
+      "method": "wearable",
+      "sha256": "6f73d6ba11b07dbe19fbe7b1ef15e28d6824891261a2134b1d29e4f77a036617",
+      "git_blob": "415b901754d851be43aa9b77ce4e5e19df42f67d",
+      "reference_blob": "415b901754d851be43aa9b77ce4e5e19df42f67d",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "clothing",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "52b877591b92e66fc413a3e6678acbf423eb2898abe8e74e1c73adfb90061591",
+      "alpha_sha256": "d46dea1ffcfe856b6dbc7f0b2bd830a5ee6dac82234d73cf6c56b44c9c00dfb0",
+      "bounds": [
+        28,
+        52,
+        294,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/player/clothes/activeblueF/clothes_walk_activeblueF.png",
+      "status": "preserved",
+      "reason": "服装、发型、帽子或手持物属于精确覆盖的小型像素层；现有颜色边界清楚，额外纹理不改善原尺寸辨识。保留透明轮廓与所有动作；匹配当前命名的资源经过真实 Sprite_Player/Sprite_Wearable 或训练师肖像合成路径，所有路由/尺寸例外单独列明。未宣称穷尽全部衣柜笛卡尔组合。",
+      "visual_review_page": "review-315-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/outfits-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "All remaining clothing/hair/hat/held-ball sources decoded. Sources matching current filename routes exercised through actual Sprite_Player/Sprite_Wearable or portrait compositor, four directions/motion cells; hair/hats through seven action/return states, clothing in its own action. Fixed baseline appearance, not all Cartesian combinations or map events. Existing route mismatches and nonstandard sheets listed separately and retained unchanged.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

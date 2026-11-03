@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "sources": 20,
+  "charsets": 14,
+  "charset_pose_states": 224,
+  "action_switches": 16,
+  "static_renders": 5,
+  "trainer_throw_sequences": 1,
+  "animation_periods": [
+    {
+      "speed": 3,
+      "period_updates": 20,
+      "nominal_ms_at_40fps": 500
+    },
+    {
+      "speed": 4,
+      "period_updates": 10,
+      "nominal_ms_at_40fps": 250
+    },
+    {
+      "speed": 5,
+      "period_updates": 16,
+      "nominal_ms_at_40fps": 400
+    },
+    {
+      "speed": 6,
+      "period_updates": 8,
+      "nominal_ms_at_40fps": 200
+    }
+  ],
+  "alpha_dimensions_and_all_original_bytes_unchanged": true,
+  "candidate_pending_review": 0,
+  "no_direct_usage_references_found": true,
+  "layering_scope": "Legacy fully clothed 64x64/96x80 sprites are flat composites; modern 80x80 clothing overlays do not consume them. No replacement or clothing-layer change was made.",
+  "limitations": "Compatibility fixtures with neutral lighting and shadowless test events. No complete gameplay, map-event movement/roof occlusion, current player costume selection, Android physical-device or release-package test.",
+  "evidence": [
+    "output/texture-hd/p3-evidence/batch-152/native-review.json",
+    "output/texture-hd/p3-evidence/batch-152/pilot-validation.json"
+  ]
+}

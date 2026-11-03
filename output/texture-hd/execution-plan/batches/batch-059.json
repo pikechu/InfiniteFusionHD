@@ -1,0 +1,328 @@
+{
+  "id": "batch-059",
+  "number": 59,
+  "priority": "P2",
+  "stage": "ui_battle",
+  "title": "战斗界面、血条、按钮、状态与属性图（2/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-059",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/battlePlayerSafari.png",
+      "size": [
+        232,
+        78
+      ],
+      "source_bytes": 457,
+      "source_mtime_ns": 1792048548278592700,
+      "canonical_source": "Graphics/Pictures/battlePlayerSafari.png"
+    },
+    {
+      "source": "Graphics/Pictures/battleRock.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 96,
+      "source_mtime_ns": 1792048548278592700,
+      "canonical_source": "Graphics/Pictures/battleRock.png"
+    },
+    {
+      "source": "Graphics/Pictures/battleShadow.PNG",
+      "size": [
+        64,
+        16
+      ],
+      "source_bytes": 129,
+      "source_mtime_ns": 1792048548279590000,
+      "canonical_source": "Graphics/Pictures/battleShadow.PNG"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/battleStatuses.png",
+      "size": [
+        44,
+        80
+      ],
+      "source_bytes": 3531,
+      "source_mtime_ns": 1793075472999109600,
+      "canonical_source": "Graphics/Pictures/battleStatuses.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/battleStatuses.png",
+        "chinese": "Graphics/Chinese/Pictures/battleStatuses.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/battleStatuses.png",
+      "size": [
+        44,
+        80
+      ],
+      "source_bytes": 359,
+      "source_mtime_ns": 1792048548279590000,
+      "canonical_source": "Graphics/Pictures/battleStatuses.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/battleStatuses.png",
+        "chinese": "Graphics/Chinese/Pictures/battleStatuses.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/moveSelButtons.png",
+      "size": [
+        214,
+        1760
+      ],
+      "source_bytes": 47545,
+      "source_mtime_ns": 1793075472937463700,
+      "canonical_source": "Graphics/Pictures/moveSelButtons.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/moveSelButtons.png",
+        "chinese": "Graphics/Chinese/Pictures/moveSelButtons.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/moveSelButtons.png",
+      "size": [
+        214,
+        1760
+      ],
+      "source_bytes": 22292,
+      "source_mtime_ns": 1792048548473587800,
+      "canonical_source": "Graphics/Pictures/moveSelButtons.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/moveSelButtons.png",
+        "chinese": "Graphics/Chinese/Pictures/moveSelButtons.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/newBattleMessageBox.png",
+      "size": [
+        512,
+        96
+      ],
+      "source_bytes": 881,
+      "source_mtime_ns": 1792048548487586500,
+      "canonical_source": "Graphics/Pictures/newBattleMessageBox.png"
+    },
+    {
+      "source": "Graphics/Pictures/newBattleMessageSmall.png",
+      "size": [
+        512,
+        36
+      ],
+      "source_bytes": 1145,
+      "source_mtime_ns": 1792048548487586500,
+      "canonical_source": "Graphics/Pictures/newBattleMessageSmall.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/newStatuses.png",
+      "size": [
+        52,
+        85
+      ],
+      "source_bytes": 4142,
+      "source_mtime_ns": 1793075473019291000,
+      "canonical_source": "Graphics/Pictures/newStatuses.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/newStatuses.png",
+        "chinese": "Graphics/Chinese/Pictures/newStatuses.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/newStatuses.png",
+      "size": [
+        52,
+        85
+      ],
+      "source_bytes": 1861,
+      "source_mtime_ns": 1792048548488587300,
+      "canonical_source": "Graphics/Pictures/newStatuses.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/newStatuses.png",
+        "chinese": "Graphics/Chinese/Pictures/newStatuses.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/pokedexTypes2.png",
+      "size": [
+        96,
+        608
+      ],
+      "source_bytes": 32012,
+      "source_mtime_ns": 1793075472785086100,
+      "canonical_source": "Graphics/Pictures/pokedexTypes2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokedexTypes2.png",
+        "chinese": "Graphics/Chinese/Pictures/pokedexTypes2.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/pokedexTypes2.png",
+      "size": [
+        96,
+        608
+      ],
+      "source_bytes": 3344,
+      "source_mtime_ns": 1792048548662104400,
+      "canonical_source": "Graphics/Pictures/pokedexTypes2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokedexTypes2.png",
+        "chinese": "Graphics/Chinese/Pictures/pokedexTypes2.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/pokedexTypes.png",
+      "size": [
+        96,
+        608
+      ],
+      "source_bytes": 22811,
+      "source_mtime_ns": 1793075472724541800,
+      "canonical_source": "Graphics/Pictures/pokedexTypes.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokedexTypes.png",
+        "chinese": "Graphics/Chinese/Pictures/pokedexTypes.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/pokedexTypes.png",
+      "size": [
+        96,
+        608
+      ],
+      "source_bytes": 3022,
+      "source_mtime_ns": 1792048548662104400,
+      "canonical_source": "Graphics/Pictures/pokedexTypes.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/pokedexTypes.png",
+        "chinese": "Graphics/Chinese/Pictures/pokedexTypes.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/statuses.png",
+      "size": [
+        44,
+        112
+      ],
+      "source_bytes": 5055,
+      "source_mtime_ns": 1793075472984576000,
+      "canonical_source": "Graphics/Pictures/statuses.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/statuses.PNG",
+        "chinese": "Graphics/Chinese/Pictures/statuses.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/statuses.PNG",
+      "size": [
+        44,
+        112
+      ],
+      "source_bytes": 559,
+      "source_mtime_ns": 1792048548671105000,
+      "canonical_source": "Graphics/Pictures/statuses.PNG",
+      "language_pair": {
+        "original": "Graphics/Pictures/statuses.PNG",
+        "chinese": "Graphics/Chinese/Pictures/statuses.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/summarymovesel.PNG",
+      "size": [
+        252,
+        148
+      ],
+      "source_bytes": 223,
+      "source_mtime_ns": 1792048548695082900,
+      "canonical_source": "Graphics/Pictures/summarymovesel.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/TypeIcons_FairyGodmother.png",
+      "size": [
+        24,
+        520
+      ],
+      "source_bytes": 11353,
+      "source_mtime_ns": 1792048548111916800,
+      "canonical_source": "Graphics/Pictures/TypeIcons_FairyGodmother.png"
+    },
+    {
+      "source": "Graphics/Pictures/TypeIcons_Lolpy1.png",
+      "size": [
+        24,
+        520
+      ],
+      "source_bytes": 7905,
+      "source_mtime_ns": 1792048548112910000,
+      "canonical_source": "Graphics/Pictures/TypeIcons_Lolpy1.png"
+    },
+    {
+      "source": "Graphics/Pictures/TypeIcons_Square.png",
+      "size": [
+        24,
+        520
+      ],
+      "source_bytes": 23444,
+      "source_mtime_ns": 1792048548137907400,
+      "canonical_source": "Graphics/Pictures/TypeIcons_Square.png"
+    },
+    {
+      "source": "Graphics/Pictures/TypeIcons_TCG.png",
+      "size": [
+        24,
+        520
+      ],
+      "source_bytes": 11706,
+      "source_mtime_ns": 1792048548138907300,
+      "canonical_source": "Graphics/Pictures/TypeIcons_TCG.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/types2.png",
+      "size": [
+        64,
+        672
+      ],
+      "source_bytes": 15029,
+      "source_mtime_ns": 1793075472608260100,
+      "canonical_source": "Graphics/Pictures/types2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/types2.png",
+        "chinese": "Graphics/Chinese/Pictures/types2.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/types2.png",
+      "size": [
+        64,
+        672
+      ],
+      "source_bytes": 2996,
+      "source_mtime_ns": 1792048548701080900,
+      "canonical_source": "Graphics/Pictures/types2.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/types2.png",
+        "chinese": "Graphics/Chinese/Pictures/types2.png"
+      }
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-059/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

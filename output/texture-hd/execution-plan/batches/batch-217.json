@@ -1,0 +1,231 @@
+{
+  "id": "batch-217",
+  "number": 217,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（66/99）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-216"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-217",
+  "entries": [
+    {
+      "source": "Graphics/Characters/BWGymMan.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1691,
+      "source_mtime_ns": 1792048530767588800,
+      "canonical_source": "Graphics/Characters/BWGymMan.png"
+    },
+    {
+      "source": "Graphics/Characters/BWHarlequin.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2389,
+      "source_mtime_ns": 1792048530768587200,
+      "canonical_source": "Graphics/Characters/BWHarlequin.png"
+    },
+    {
+      "source": "Graphics/Characters/BWHiker.PNG",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2035,
+      "source_mtime_ns": 1792048530768587200,
+      "canonical_source": "Graphics/Characters/BWHiker.PNG"
+    },
+    {
+      "source": "Graphics/Characters/BWJanitor.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1873,
+      "source_mtime_ns": 1792048530768587200,
+      "canonical_source": "Graphics/Characters/BWJanitor.png"
+    },
+    {
+      "source": "Graphics/Characters/BWLady.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1736,
+      "source_mtime_ns": 1792048530768587200,
+      "canonical_source": "Graphics/Characters/BWLady.png"
+    },
+    {
+      "source": "Graphics/Characters/BWLeaderMisty.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2398,
+      "source_mtime_ns": 1792048530769587500,
+      "canonical_source": "Graphics/Characters/BWLeaderMisty.png"
+    },
+    {
+      "source": "Graphics/Characters/BWMan1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1645,
+      "source_mtime_ns": 1792048530769587500,
+      "canonical_source": "Graphics/Characters/BWMan1.png"
+    },
+    {
+      "source": "Graphics/Characters/BWMan2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1746,
+      "source_mtime_ns": 1792048530769587500,
+      "canonical_source": "Graphics/Characters/BWMan2.png"
+    },
+    {
+      "source": "Graphics/Characters/BWNurse.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1732,
+      "source_mtime_ns": 1792048530769587500,
+      "canonical_source": "Graphics/Characters/BWNurse.png"
+    },
+    {
+      "source": "Graphics/Characters/BWOak.png",
+      "size": [
+        104,
+        136
+      ],
+      "source_bytes": 1515,
+      "source_mtime_ns": 1792048530785191400,
+      "canonical_source": "Graphics/Characters/BWOak.png"
+    },
+    {
+      "source": "Graphics/Characters/BWObjects.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3135,
+      "source_mtime_ns": 1792048530786186200,
+      "canonical_source": "Graphics/Characters/BWObjects.png"
+    },
+    {
+      "source": "Graphics/Characters/BWOldMan.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1196,
+      "source_mtime_ns": 1792048530786186200,
+      "canonical_source": "Graphics/Characters/BWOldMan.png"
+    },
+    {
+      "source": "Graphics/Characters/BWOldWoman.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1449,
+      "source_mtime_ns": 1792048530786186200,
+      "canonical_source": "Graphics/Characters/BWOldWoman.png"
+    },
+    {
+      "source": "Graphics/Characters/BWParasolLady.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2095,
+      "source_mtime_ns": 1792048530786186200,
+      "canonical_source": "Graphics/Characters/BWParasolLady.png"
+    },
+    {
+      "source": "Graphics/Characters/BWPlasma_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1621,
+      "source_mtime_ns": 1792048530787211600,
+      "canonical_source": "Graphics/Characters/BWPlasma_female.png"
+    },
+    {
+      "source": "Graphics/Characters/BWPlasma_male.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1633,
+      "source_mtime_ns": 1792048530787211600,
+      "canonical_source": "Graphics/Characters/BWPlasma_male.png"
+    },
+    {
+      "source": "Graphics/Characters/BWPokeball.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1321,
+      "source_mtime_ns": 1792048530787211600,
+      "canonical_source": "Graphics/Characters/BWPokeball.png"
+    },
+    {
+      "source": "Graphics/Characters/BWPoliceman.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1632,
+      "source_mtime_ns": 1792048530787211600,
+      "canonical_source": "Graphics/Characters/BWPoliceman.png"
+    },
+    {
+      "source": "Graphics/Characters/BWPunkGirl.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2516,
+      "source_mtime_ns": 1792048530788212200,
+      "canonical_source": "Graphics/Characters/BWPunkGirl.png"
+    },
+    {
+      "source": "Graphics/Characters/BWPunkGuy.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2011,
+      "source_mtime_ns": 1792048530788212200,
+      "canonical_source": "Graphics/Characters/BWPunkGuy.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-217/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

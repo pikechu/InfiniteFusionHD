@@ -1,0 +1,110 @@
+{
+  "id": "batch-734",
+  "number": 734,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（113/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-733"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-734",
+  "entries": [
+    {
+      "source": "Graphics/Battle animations/ball_SHINYBALL_open.png",
+      "size": [
+        32,
+        64
+      ],
+      "source_bytes": 383,
+      "source_mtime_ns": 1792048527552885700,
+      "canonical_source": "Graphics/Battle animations/ball_SHINYBALL_open.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_SPARKBALL.png",
+      "size": [
+        256,
+        64
+      ],
+      "source_bytes": 972,
+      "source_mtime_ns": 1792048527552885700,
+      "canonical_source": "Graphics/Battle animations/ball_SPARKBALL.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_SPARKBALL_open.png",
+      "size": [
+        32,
+        64
+      ],
+      "source_bytes": 391,
+      "source_mtime_ns": 1792048527552885700,
+      "canonical_source": "Graphics/Battle animations/ball_SPARKBALL_open.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_SPORTBALL.png",
+      "size": [
+        256,
+        64
+      ],
+      "source_bytes": 867,
+      "source_mtime_ns": 1792048527556895500,
+      "canonical_source": "Graphics/Battle animations/ball_SPORTBALL.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_SPORTBALL_open.png",
+      "size": [
+        32,
+        64
+      ],
+      "source_bytes": 373,
+      "source_mtime_ns": 1792048527556895500,
+      "canonical_source": "Graphics/Battle animations/ball_SPORTBALL_open.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_STATUSBAL.png",
+      "size": [
+        32,
+        64
+      ],
+      "source_bytes": 795,
+      "source_mtime_ns": 1792048527556895500,
+      "canonical_source": "Graphics/Battle animations/ball_STATUSBAL.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_STATUSBALL.png",
+      "size": [
+        256,
+        64
+      ],
+      "source_bytes": 2650,
+      "source_mtime_ns": 1792048527556895500,
+      "canonical_source": "Graphics/Battle animations/ball_STATUSBALL.png"
+    },
+    {
+      "source": "Graphics/Battle animations/ball_STATUSBALL_open.png",
+      "size": [
+        32,
+        64
+      ],
+      "source_bytes": 7788,
+      "source_mtime_ns": 1792048527557885500,
+      "canonical_source": "Graphics/Battle animations/ball_STATUSBALL_open.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-734/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

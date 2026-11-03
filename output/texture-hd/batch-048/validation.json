@@ -1,0 +1,52 @@
+{
+  "batch": "batch-048",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 3,
+  "entries": [
+    {
+      "source": "Graphics/Autotiles/White cave floor.png",
+      "status": "preserved",
+      "size": [
+        96,
+        128
+      ],
+      "sha256": "6572c861d5c5fa46d4730211ea5a3f207f9887bdbe122a0b3c262de37c95a7c3",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/White cave highlight.png",
+      "status": "preserved",
+      "size": [
+        96,
+        128
+      ],
+      "sha256": "4f86a1c54ba8cc603b6a10b65ac8be85673146a1c75a4f0fb7aafb38c0bd5e36",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    },
+    {
+      "source": "Graphics/Autotiles/White path.png",
+      "status": "preserved",
+      "size": [
+        96,
+        128
+      ],
+      "sha256": "749e54bd7f4e2ab0406f7c30b3ff0538ee7958cfddd07f478299cb5f6834bf0f",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

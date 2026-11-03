@@ -1,0 +1,146 @@
+{
+  "id": "batch-005",
+  "number": 5,
+  "priority": "P1",
+  "stage": "ground_pilot",
+  "title": "战斗地台试制：桥面、山地、沼泽、暗洞、冰洞、水下",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ground",
+  "processing_notes": "逐图 AI 补绘地面材质；敌我两侧同批，保留原始轮廓、位置与透明通道；与现有背景合成检查。",
+  "depends_on": [],
+  "file_count": 12,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-005",
+  "entries": [
+    {
+      "source": "Graphics/Battlebacks/enemybase/bridge.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 3140,
+      "source_mtime_ns": 1792048527821921400,
+      "canonical_source": "Graphics/Battlebacks/enemybase/bridge.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/bridge.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5603,
+      "source_mtime_ns": 1792048527977968800,
+      "canonical_source": "Graphics/Battlebacks/playerbase/bridge.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cavedark.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 66692,
+      "source_mtime_ns": 1792048527830218600,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cavedark.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cavedark.png",
+      "size": [
+        408,
+        96
+      ],
+      "source_bytes": 4936,
+      "source_mtime_ns": 1792048528034965600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cavedark.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/caveice.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 10142,
+      "source_mtime_ns": 1792048527830218600,
+      "canonical_source": "Graphics/Battlebacks/enemybase/caveice.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/caveice.png",
+      "size": [
+        408,
+        96
+      ],
+      "source_bytes": 5841,
+      "source_mtime_ns": 1792048528035965700,
+      "canonical_source": "Graphics/Battlebacks/playerbase/caveice.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/mountain.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 66692,
+      "source_mtime_ns": 1792048527872702900,
+      "canonical_source": "Graphics/Battlebacks/enemybase/mountain.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/mountain.png",
+      "size": [
+        408,
+        96
+      ],
+      "source_bytes": 4936,
+      "source_mtime_ns": 1792048528158969500,
+      "canonical_source": "Graphics/Battlebacks/playerbase/mountain.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/swamp.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 79632,
+      "source_mtime_ns": 1792048527972965700,
+      "canonical_source": "Graphics/Battlebacks/enemybase/swamp.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/swamp.png",
+      "size": [
+        408,
+        96
+      ],
+      "source_bytes": 4936,
+      "source_mtime_ns": 1792048528304965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/swamp.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/underwater.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71016,
+      "source_mtime_ns": 1792048527973965000,
+      "canonical_source": "Graphics/Battlebacks/enemybase/underwater.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/underwater.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 4977,
+      "source_mtime_ns": 1792048528305966600,
+      "canonical_source": "Graphics/Battlebacks/playerbase/underwater.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
+  ],
+  "result": "output/texture-hd/batch-005/validation.json"
+}

@@ -1,0 +1,231 @@
+{
+  "id": "batch-276",
+  "number": 276,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（26/62）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-275"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-276",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/HIPPOPOTAS_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3796,
+      "source_mtime_ns": 1792048532168295700,
+      "canonical_source": "Graphics/Characters/Followers/HIPPOPOTAS_female.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HIPPOWDON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3884,
+      "source_mtime_ns": 1792048532169293700,
+      "canonical_source": "Graphics/Characters/Followers/HIPPOWDON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HIPPOWDON_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3831,
+      "source_mtime_ns": 1792048532169293700,
+      "canonical_source": "Graphics/Characters/Followers/HIPPOWDON_female.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HITMONCHAN.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3530,
+      "source_mtime_ns": 1792048532169293700,
+      "canonical_source": "Graphics/Characters/Followers/HITMONCHAN.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HITMONLEE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3642,
+      "source_mtime_ns": 1792048532170296500,
+      "canonical_source": "Graphics/Characters/Followers/HITMONLEE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HITMONTOP.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3601,
+      "source_mtime_ns": 1792048532170296500,
+      "canonical_source": "Graphics/Characters/Followers/HITMONTOP.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HONCHKROW.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4448,
+      "source_mtime_ns": 1792048532170296500,
+      "canonical_source": "Graphics/Characters/Followers/HONCHKROW.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HONEDGE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3808,
+      "source_mtime_ns": 1792048532171296000,
+      "canonical_source": "Graphics/Characters/Followers/HONEDGE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOOH.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 12341,
+      "source_mtime_ns": 1792048532171296000,
+      "canonical_source": "Graphics/Characters/Followers/HOOH.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOOPA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5132,
+      "source_mtime_ns": 1792048532171296000,
+      "canonical_source": "Graphics/Characters/Followers/HOOPA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOOPA_1.png",
+      "size": [
+        512,
+        512
+      ],
+      "source_bytes": 15925,
+      "source_mtime_ns": 1792048532172294500,
+      "canonical_source": "Graphics/Characters/Followers/HOOPA_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOOTHOOT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3627,
+      "source_mtime_ns": 1792048532172294500,
+      "canonical_source": "Graphics/Characters/Followers/HOOTHOOT.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOPPIP.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3547,
+      "source_mtime_ns": 1792048532172294500,
+      "canonical_source": "Graphics/Characters/Followers/HOPPIP.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HORSEA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3160,
+      "source_mtime_ns": 1792048532173295600,
+      "canonical_source": "Graphics/Characters/Followers/HORSEA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOUNDOOM.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4512,
+      "source_mtime_ns": 1792048532173295600,
+      "canonical_source": "Graphics/Characters/Followers/HOUNDOOM.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HOUNDOUR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3601,
+      "source_mtime_ns": 1792048532173295600,
+      "canonical_source": "Graphics/Characters/Followers/HOUNDOUR.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HUNTAIL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5467,
+      "source_mtime_ns": 1792048532173295600,
+      "canonical_source": "Graphics/Characters/Followers/HUNTAIL.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HYDREIGON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7487,
+      "source_mtime_ns": 1792048532174295200,
+      "canonical_source": "Graphics/Characters/Followers/HYDREIGON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/HYPNO.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3993,
+      "source_mtime_ns": 1792048532174295200,
+      "canonical_source": "Graphics/Characters/Followers/HYPNO.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/IGGLYBUFF.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2755,
+      "source_mtime_ns": 1792048532174295200,
+      "canonical_source": "Graphics/Characters/Followers/IGGLYBUFF.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-276/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

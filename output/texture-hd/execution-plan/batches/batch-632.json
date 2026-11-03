@@ -1,0 +1,110 @@
+{
+  "id": "batch-632",
+  "number": 632,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（11/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-631"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-632",
+  "entries": [
+    {
+      "source": "Graphics/Animations/eb164.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 210,
+      "source_mtime_ns": 1792048522732173000,
+      "canonical_source": "Graphics/Animations/eb164.png"
+    },
+    {
+      "source": "Graphics/Animations/eb175.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 4639,
+      "source_mtime_ns": 1792048522732173000,
+      "canonical_source": "Graphics/Animations/eb175.png"
+    },
+    {
+      "source": "Graphics/Animations/eb175_1.png",
+      "size": [
+        24,
+        24
+      ],
+      "source_bytes": 173,
+      "source_mtime_ns": 1792048522732173000,
+      "canonical_source": "Graphics/Animations/eb175_1.png"
+    },
+    {
+      "source": "Graphics/Animations/eb175_2.png",
+      "size": [
+        32,
+        16
+      ],
+      "source_bytes": 546,
+      "source_mtime_ns": 1792048522733173700,
+      "canonical_source": "Graphics/Animations/eb175_2.png"
+    },
+    {
+      "source": "Graphics/Animations/eb175_3.png",
+      "size": [
+        92,
+        92
+      ],
+      "source_bytes": 843,
+      "source_mtime_ns": 1792048522733173700,
+      "canonical_source": "Graphics/Animations/eb175_3.png"
+    },
+    {
+      "source": "Graphics/Animations/eb175_4.png",
+      "size": [
+        52,
+        52
+      ],
+      "source_bytes": 1984,
+      "source_mtime_ns": 1792048522733173700,
+      "canonical_source": "Graphics/Animations/eb175_4.png"
+    },
+    {
+      "source": "Graphics/Animations/eb176.png",
+      "size": [
+        96,
+        128
+      ],
+      "source_bytes": 2490,
+      "source_mtime_ns": 1792048522746173100,
+      "canonical_source": "Graphics/Animations/eb176.png"
+    },
+    {
+      "source": "Graphics/Animations/eb176_2.png",
+      "size": [
+        12,
+        12
+      ],
+      "source_bytes": 230,
+      "source_mtime_ns": 1792048522746173100,
+      "canonical_source": "Graphics/Animations/eb176_2.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-632/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

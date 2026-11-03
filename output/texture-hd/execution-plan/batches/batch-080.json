@@ -1,0 +1,166 @@
+{
+  "id": "batch-080",
+  "number": 80,
+  "priority": "P2",
+  "stage": "ui_dex",
+  "title": "图鉴、仓库与命名界面（4/17）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-079"
+  ],
+  "file_count": 12,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-080",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/boxes/box1.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 189204,
+      "source_mtime_ns": 1792048548288588300,
+      "canonical_source": "Graphics/Pictures/boxes/box1.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box5 (1).png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 54101,
+      "source_mtime_ns": 1792048548334147900,
+      "canonical_source": "Graphics/Pictures/boxes/box5 (1).png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box5.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 50258,
+      "source_mtime_ns": 1792048548334147900,
+      "canonical_source": "Graphics/Pictures/boxes/box5.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box9.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 70455,
+      "source_mtime_ns": 1792048548335146000,
+      "canonical_source": "Graphics/Pictures/boxes/box9.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box10 (1).png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 40633,
+      "source_mtime_ns": 1792048548289584600,
+      "canonical_source": "Graphics/Pictures/boxes/box10 (1).png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box10.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 49173,
+      "source_mtime_ns": 1792048548289584600,
+      "canonical_source": "Graphics/Pictures/boxes/box10.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box13.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 108037,
+      "source_mtime_ns": 1792048548290586300,
+      "canonical_source": "Graphics/Pictures/boxes/box13.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box20.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 96186,
+      "source_mtime_ns": 1792048548290586300,
+      "canonical_source": "Graphics/Pictures/boxes/box20.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/box23.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 7916,
+      "source_mtime_ns": 1792048548333146100,
+      "canonical_source": "Graphics/Pictures/boxes/box23.png"
+    },
+    {
+      "source": "Graphics/Pictures/boxes/boxpartytab.png",
+      "size": [
+        172,
+        352
+      ],
+      "source_bytes": 11173,
+      "source_mtime_ns": 1792048548335146000,
+      "canonical_source": "Graphics/Pictures/boxes/boxpartytab.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/boxes/boxsides.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 9578,
+      "source_mtime_ns": 1793075473438448800,
+      "canonical_source": "Graphics/Pictures/boxes/boxsides.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/boxes/boxsides.png",
+        "chinese": "Graphics/Chinese/Pictures/boxes/boxsides.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/boxes/boxsides.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 3380,
+      "source_mtime_ns": 1792048548335146000,
+      "canonical_source": "Graphics/Pictures/boxes/boxsides.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/boxes/boxsides.png",
+        "chinese": "Graphics/Chinese/Pictures/boxes/boxsides.png"
+      }
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-080/validation.json",
+  "applied_files": 0,
+  "preserved_files": 12
+}

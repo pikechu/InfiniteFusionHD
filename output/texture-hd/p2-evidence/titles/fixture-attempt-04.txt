@@ -1,0 +1,12 @@
+TITLE_BEGIN phase=before
+TITLE_FAIL ArgumentError: wrong number of arguments (given 2, expected 1)
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:91:in `pbChoose'
+./Data/Scripts/052_AddOns/MultiSaves.rb:486:in `block (2 levels) in pbStartLoadScreen'
+./Data/Scripts/052_AddOns/MultiSaves.rb:484:in `loop'
+./Data/Scripts/052_AddOns/MultiSaves.rb:484:in `block in pbStartLoadScreen'
+./Data/Scripts/052_AddOns/MultiSaves.rb:425:in `loop'
+./Data/Scripts/052_AddOns/MultiSaves.rb:425:in `pbStartLoadScreen'
+./Data/Scripts/054_Multiplayer/019_OnlineMode.rb:152:in `pbStartLoadScreen'
+./Data/Scripts/052_AddOns/IntroScreen.rb:124:in `closeTitle'
+./Data/Scripts/052_AddOns/IntroScreen.rb:83:in `update'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p2-title-preview.rb:135:in `block (2 levels) in <top (required)>'

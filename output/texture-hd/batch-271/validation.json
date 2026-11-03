@@ -1,0 +1,904 @@
+{
+  "batch": "batch-271",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/FROSLASS.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4620,
+      "source_mtime_ns": 1792048532131560400,
+      "canonical_source": "Graphics/Characters/Followers/FROSLASS.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "8b6077ce915eac9418af26758eba17d6e75c44e84596915d527fd475c7590af3",
+      "git_blob": "c3449e8c4031a046ee05e16780908142877c31cc",
+      "reference_blob": "c3449e8c4031a046ee05e16780908142877c31cc",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ddbfb0e8a366b8fa59fb6235ced94debbb6f424d1251a8ded5e7294fd862a9ae",
+      "alpha_sha256": "cfc6a7bd30b7ee832025c7fcc7e2383b178f6cc73f14a1e852778dd7f79b97ff",
+      "bounds": [
+        14,
+        18,
+        242,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/FROSLASS.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-221-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FROSMOTH.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5873,
+      "source_mtime_ns": 1792048532132558500,
+      "canonical_source": "Graphics/Characters/Followers/FROSMOTH.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "d35196a4776c1b7c49cdf0d7af27b026e195fb3985c29fae5eb7d8966fbd2fcb",
+      "git_blob": "83f9febf817b5716921b9f504bcaaa7380dbe2c3",
+      "reference_blob": "83f9febf817b5716921b9f504bcaaa7380dbe2c3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f97b9a4e257dba0a39e298fe2219ced47e85b92ee04f98dc4655feec1220f495",
+      "alpha_sha256": "2f78c0887a04ad1311bc9ec6003803b05e550fd06c88d59aca7c3319391e022d",
+      "bounds": [
+        0,
+        10,
+        250,
+        248
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4086,
+      "source_mtime_ns": 1792048532132558500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "56bcb7cbefcc59b5b97e07ac4a66ccb139081fe0217e84222ec44ed32c6af063",
+      "git_blob": "5198024a71794029ab7d00941b4608608993cead",
+      "reference_blob": "5198024a71794029ab7d00941b4608608993cead",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "eb8c80bf93bf4d4a550ea0919a9f8a1a8a8f0b8e93a2f0ad9bff88d6d81d79c4",
+      "alpha_sha256": "2f0211320b8c319979e06aeaaf8111b84b71acf1a43fe7cee1628e1bc8069478",
+      "bounds": [
+        6,
+        14,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5194,
+      "source_mtime_ns": 1792048532132558500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_1.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "111268bbd870f62581dc5d7547e132d63fab4e48533cb2d11f40bd60705501cd",
+      "git_blob": "e4828526b0f98a71a1b295dd13b3b236d5c226c3",
+      "reference_blob": "e4828526b0f98a71a1b295dd13b3b236d5c226c3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "cbe878d7e718ffdd7ea91ffa577a39e97ab7e1320b49d705e48ffeccf3036cf2",
+      "alpha_sha256": "a9a883e4a1352e84bd061a3abf1ebcfadc8e210a6b170c6178694940d6576ba3",
+      "bounds": [
+        2,
+        10,
+        256,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5517,
+      "source_mtime_ns": 1792048532133556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_2.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "5cbf20ab87583bcccd792d870ef49ade97bf7b2a7c0db34226829cc7f3a61a12",
+      "git_blob": "7151c1a0a675937f429bb91f7c0a61f81aba7ce2",
+      "reference_blob": "7151c1a0a675937f429bb91f7c0a61f81aba7ce2",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ac6c627bddc92dbc6a5d2e38da9f392823f5bddcf2b2a5240246e78862a0a527",
+      "alpha_sha256": "76c6e38ecfe544cce640d608e870a72d98e370b6a0a4c53e90c6135ecdd14084",
+      "bounds": [
+        6,
+        10,
+        252,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5095,
+      "source_mtime_ns": 1792048532133556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_3.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "42ae0272b2275a350dc4312587c889b0794d2358d0ec7056b94df645e23c4902",
+      "git_blob": "e4e1bb94b5fcd27fa2b4a5689b2fcb20504e1afb",
+      "reference_blob": "e4e1bb94b5fcd27fa2b4a5689b2fcb20504e1afb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "a25dd51049b4aa829769468b5cf8a908dded5328ddd46a1fdb0897694ef75fb8",
+      "alpha_sha256": "73ec8c89bfa9de7f123ed1417453ca2cfd16f2682032228f933f91f7bd02fb2b",
+      "bounds": [
+        6,
+        10,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5329,
+      "source_mtime_ns": 1792048532133556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_4.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "796d67fae3288904ac4f35be13e4e9791ff30824d32b7b198c209c1d4d3cd4e2",
+      "git_blob": "4837b28de1609704efa7e4f1776bf50929fb756a",
+      "reference_blob": "4837b28de1609704efa7e4f1776bf50929fb756a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "3671df71b2137c2978d232edc6ab0015de29fea0540f5f2ea86d414414f90359",
+      "alpha_sha256": "a43a4b959ea832c54702bba5f602aaf34224e8aea5add30bea2d5ed9e5d6e452",
+      "bounds": [
+        6,
+        14,
+        252,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_5.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5209,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_5.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "448b91cf0b3396ad2610997a7ca3fd88bae2ca0cf2d023c726a4eb0289420f83",
+      "git_blob": "bea524aab789fc50a3ea82033b41c3a80128cc83",
+      "reference_blob": "bea524aab789fc50a3ea82033b41c3a80128cc83",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e41d76bf83eafcc09812cbccd25a37e1dc5e8f6fa391257977d13232df0c5c61",
+      "alpha_sha256": "cfbe25e39af35c0887db6bd65fe77c38e06b441ee11b407926e52276ff626b0d",
+      "bounds": [
+        6,
+        14,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_6.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5157,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_6.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "a0c613ce5b7796bbef2b1ef301ff615bb641e7bf53874c3cf0be02ae2f723c5a",
+      "git_blob": "3c55359ca84337a59e811501e27e047e4c94c805",
+      "reference_blob": "3c55359ca84337a59e811501e27e047e4c94c805",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "8dfcb727af3ab6e33613361b4b097a25dbc634ae93821057c4d30536efd81adf",
+      "alpha_sha256": "71b14318e31acc9179072a6fff20af7a019147625526eef1fd46fdb979a4ebb0",
+      "bounds": [
+        4,
+        10,
+        252,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_7.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5306,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_7.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "3f784296a7f1d5e09d05027a103313b031b661db34fe501ef1981ad35334870c",
+      "git_blob": "44f1483082c46d93ceda486b8c6d204e7102dcbb",
+      "reference_blob": "44f1483082c46d93ceda486b8c6d204e7102dcbb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5f1a50c6549c637c8ee118f8bdcfe3b11fcc4edd1267d8339b89755dbbea42fb",
+      "alpha_sha256": "48f5584cfc0f42c3eaa20acf3c539fe2efb03205c1ba55f061c9129aea68d88a",
+      "bounds": [
+        4,
+        10,
+        252,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_8.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5197,
+      "source_mtime_ns": 1792048532134557700,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_8.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "33474773a0472bff3042e2021519015520e3578c4812797d2f2b1fc5ac48d396",
+      "git_blob": "d8fbd4325a6135fd2c08201c0345f6f0e043ec16",
+      "reference_blob": "d8fbd4325a6135fd2c08201c0345f6f0e043ec16",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "28c6bd5e751da4c02e7dba04a713f9cc0ed3f85b110def33d3205249ba8512fe",
+      "alpha_sha256": "753b3781131df18c4dc8917629ec6dfeef28655193befb6031552ded04c97da0",
+      "bounds": [
+        6,
+        14,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURFROU_9.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5401,
+      "source_mtime_ns": 1792048532135556500,
+      "canonical_source": "Graphics/Characters/Followers/FURFROU_9.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "6a05c2a6ab4c863cc761f1f9a032d8b9802a65557d1e04b63f7192ef02560b41",
+      "git_blob": "e705cbb569cd1aeae9566755b3c785ea1da3736a",
+      "reference_blob": "e705cbb569cd1aeae9566755b3c785ea1da3736a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7e734e0bddb01bd15ad35f695899a92cca0257e52339c6fbe3c8109f9aeaaf82",
+      "alpha_sha256": "0c32a683f568d3b00edf79cbeccd471be6292fc2dd01d2b58733e56fe3d48c2a",
+      "bounds": [
+        4,
+        12,
+        252,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FURRET.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4181,
+      "source_mtime_ns": 1792048532135556500,
+      "canonical_source": "Graphics/Characters/Followers/FURRET.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "c55889903f5c74d33b8e9eb7766193bb70e0fa5ba2d85676c346ac34c42ccc3d",
+      "git_blob": "cd240fede5540cf78780d145d1a74f5799674360",
+      "reference_blob": "cd240fede5540cf78780d145d1a74f5799674360",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "de17be7fe6f39dd807efa4b9f21b0c9b967c6d8bd90b26d35324e8d7349bc6ff",
+      "alpha_sha256": "75c5a8df6d35f703e540b44d986957a8fe8e4547c71615d2e5e78362933c11c2",
+      "bounds": [
+        2,
+        8,
+        254,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/162_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-180-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GABITE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4748,
+      "source_mtime_ns": 1792048532135556500,
+      "canonical_source": "Graphics/Characters/Followers/GABITE.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "d82676dbd7a72281a6835997f9801d07897284850e03b3243589cbad14a0f7e1",
+      "git_blob": "665f204c2665cf0e8c7dbf05f9eb3db1e55f629a",
+      "reference_blob": "665f204c2665cf0e8c7dbf05f9eb3db1e55f629a",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "da720982906ee0121e6258f4bd888935e3a9d1aafc50864938a0146c3702e574",
+      "alpha_sha256": "d8a8b85f80c7237c4f4a32fa289bc534a4c3c879808d55393722acd7a7630270",
+      "bounds": [
+        8,
+        16,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/444_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-194-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GABITE_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4745,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GABITE_female.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "8007d974cde5e18fd8e8f48dfd950f72239d76af40e0afd2b5e04edaf5b63ada",
+      "git_blob": "95155aaef8f8947b20bffed7b130de78523ad1cd",
+      "reference_blob": "95155aaef8f8947b20bffed7b130de78523ad1cd",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "3f769e12ce46b5c69ed7c7171a3bc6324769c7e772fd18e416f4e416c834405e",
+      "alpha_sha256": "d8a8b85f80c7237c4f4a32fa289bc534a4c3c879808d55393722acd7a7630270",
+      "bounds": [
+        8,
+        16,
+        248,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GALLADE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4927,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GALLADE.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "39b7f045de24d31e544abb6c7cb9e16f931cf25f0ff0f9bd1a3e949d92374077",
+      "git_blob": "702aa2eaede5b712bc175213e073b8b134d8e2c3",
+      "reference_blob": "702aa2eaede5b712bc175213e073b8b134d8e2c3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "05ade6a98195f131059850413cc95037d250916789307f49d2511534ebd4ddda",
+      "alpha_sha256": "f723530484cfc535845d86404d3f8d9bd4bf62bc0fd79dc94f00f158d437f6ea",
+      "bounds": [
+        14,
+        10,
+        244,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/Overworld/288.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-238-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GALVANTULA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6112,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GALVANTULA.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "c3f5b0d60ce6be81f1bd62990ae4f13d9597cca137ece95a68862dd768a43147",
+      "git_blob": "6ecf631a7f30f410daf06d3a9d7fa2620e01dd27",
+      "reference_blob": "6ecf631a7f30f410daf06d3a9d7fa2620e01dd27",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "9206ba2e375a69208792adc1eedc424ae0a7dd569aca06f0e2b86b8e9f8f437b",
+      "alpha_sha256": "3b0ea62693645eb2b554b1969d73a1c27197e7bc6f48b05606b6e348c29a965e",
+      "bounds": [
+        0,
+        6,
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/596.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-196-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GARBODOR.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6072,
+      "source_mtime_ns": 1792048532136556500,
+      "canonical_source": "Graphics/Characters/Followers/GARBODOR.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "d81aa6fc2cce31c99394ccb508da6165b5b9638906127ac53d6fb0a3f3636821",
+      "git_blob": "68472a3ae8b7801de04bec89ce81363c71d65b1f",
+      "reference_blob": "68472a3ae8b7801de04bec89ce81363c71d65b1f",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "2639a52ba89f69f9161c584c8d1458a6602a432a42fd075cc7c5ac571a89722a",
+      "alpha_sha256": "4c47a7a3ea225a6447349f5eeb24e13ac70cd95cae73614c13a117e43808822c",
+      "bounds": [
+        0,
+        6,
+        256,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GARCHOMP.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6046,
+      "source_mtime_ns": 1792048532137557500,
+      "canonical_source": "Graphics/Characters/Followers/GARCHOMP.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "2f59456a7e55ca2bd28d24b383cff714bf52275b327256297c48833dbb0c71df",
+      "git_blob": "a59603f44495107a9ffa4a63ee6424d0bc69b9f8",
+      "reference_blob": "a59603f44495107a9ffa4a63ee6424d0bc69b9f8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "6fda1cf020cb14ef6cb7fffe920006e688e5573096b7b7ad8f93196159ffb1ab",
+      "alpha_sha256": "967d2244f1abda0bf38324494f952002ba1073901d666ce007448420e40b0ef7",
+      "bounds": [
+        2,
+        6,
+        254,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Characters/445_0.png",
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-194-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/GARCHOMP_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6042,
+      "source_mtime_ns": 1792048532137557500,
+      "canonical_source": "Graphics/Characters/Followers/GARCHOMP_female.png",
+      "batch": "batch-271",
+      "stage": "follower",
+      "method": "character",
+      "sha256": "8d4cbd399057fb7440a92b24fa69c7ad29eb8acc48a9a7e7e143ce8fc6de00db",
+      "git_blob": "a0d189d1b09e999d51cbcd4e74a05bc379479353",
+      "reference_blob": "a0d189d1b09e999d51cbcd4e74a05bc379479353",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "84d7d50f6f559954cdbddc8b02f0a0e3bd4f653d9271ec5cb08acc3790fa90a5",
+      "alpha_sha256": "3b850ce483c41c3e12ca183606127f1b503ef10b3e139e17462e60ff110f3491",
+      "bounds": [
+        2,
+        6,
+        254,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-271-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

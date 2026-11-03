@@ -1,0 +1,670 @@
+{
+  "id": "batch-610",
+  "number": 610,
+  "priority": "P4",
+  "stage": "footprint",
+  "title": "足迹、阴影、小型符号与功能遮罩（6/11）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "mask",
+  "processing_notes": "先识别足迹、阴影和遮罩用途；默认保留语义、透明度和灰阶，只有存在可见问题且有依据时才修复。",
+  "depends_on": [
+    "batch-609"
+  ],
+  "file_count": 64,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-610",
+  "entries": [
+    {
+      "source": "Graphics/Icons/Footprints/footprint321.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542963384800,
+      "canonical_source": "Graphics/Icons/Footprints/footprint321.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint322.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 122,
+      "source_mtime_ns": 1792048542964384600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint322.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint323.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 160,
+      "source_mtime_ns": 1792048542964384600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint323.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint324.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 143,
+      "source_mtime_ns": 1792048542964384600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint324.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint325.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542964384600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint325.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint326.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 130,
+      "source_mtime_ns": 1792048542965385400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint326.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint327.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 124,
+      "source_mtime_ns": 1792048542965385400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint327.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint328.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 125,
+      "source_mtime_ns": 1792048542965385400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint328.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint329.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 123,
+      "source_mtime_ns": 1792048542965385400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint329.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint330.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 132,
+      "source_mtime_ns": 1792048542966383500,
+      "canonical_source": "Graphics/Icons/Footprints/footprint330.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint331.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 110,
+      "source_mtime_ns": 1792048542966383500,
+      "canonical_source": "Graphics/Icons/Footprints/footprint331.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint332.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 122,
+      "source_mtime_ns": 1792048542966383500,
+      "canonical_source": "Graphics/Icons/Footprints/footprint332.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint333.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 114,
+      "source_mtime_ns": 1792048542966383500,
+      "canonical_source": "Graphics/Icons/Footprints/footprint333.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint334.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 146,
+      "source_mtime_ns": 1792048542966383500,
+      "canonical_source": "Graphics/Icons/Footprints/footprint334.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint335.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 135,
+      "source_mtime_ns": 1792048542978382600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint335.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint336.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542978382600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint336.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint337.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542978382600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint337.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint338.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542979386300,
+      "canonical_source": "Graphics/Icons/Footprints/footprint338.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint339.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542979386300,
+      "canonical_source": "Graphics/Icons/Footprints/footprint339.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint340.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542979386300,
+      "canonical_source": "Graphics/Icons/Footprints/footprint340.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint341.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 138,
+      "source_mtime_ns": 1792048542979386300,
+      "canonical_source": "Graphics/Icons/Footprints/footprint341.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint342.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 144,
+      "source_mtime_ns": 1792048542980384400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint342.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint343.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 97,
+      "source_mtime_ns": 1792048542980384400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint343.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint344.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 110,
+      "source_mtime_ns": 1792048542980384400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint344.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint345.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 141,
+      "source_mtime_ns": 1792048542980384400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint345.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint346.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 148,
+      "source_mtime_ns": 1792048542981383700,
+      "canonical_source": "Graphics/Icons/Footprints/footprint346.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint347.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542981383700,
+      "canonical_source": "Graphics/Icons/Footprints/footprint347.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint348.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 141,
+      "source_mtime_ns": 1792048542981383700,
+      "canonical_source": "Graphics/Icons/Footprints/footprint348.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint349.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542981383700,
+      "canonical_source": "Graphics/Icons/Footprints/footprint349.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint350.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542981383700,
+      "canonical_source": "Graphics/Icons/Footprints/footprint350.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint351.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542982384100,
+      "canonical_source": "Graphics/Icons/Footprints/footprint351.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint352.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 130,
+      "source_mtime_ns": 1792048542982384100,
+      "canonical_source": "Graphics/Icons/Footprints/footprint352.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint353.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542982384100,
+      "canonical_source": "Graphics/Icons/Footprints/footprint353.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint354.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 113,
+      "source_mtime_ns": 1792048542982384100,
+      "canonical_source": "Graphics/Icons/Footprints/footprint354.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint355.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542983383600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint355.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint356.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 159,
+      "source_mtime_ns": 1792048542983477900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint356.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint357.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 145,
+      "source_mtime_ns": 1792048542983477900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint357.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint358.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542983994000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint358.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint359.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 146,
+      "source_mtime_ns": 1792048542983994000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint359.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint360.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 118,
+      "source_mtime_ns": 1792048542983994000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint360.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint361.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 125,
+      "source_mtime_ns": 1792048542983994000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint361.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint362.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542984993200,
+      "canonical_source": "Graphics/Icons/Footprints/footprint362.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint363.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542984993200,
+      "canonical_source": "Graphics/Icons/Footprints/footprint363.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint364.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542984993200,
+      "canonical_source": "Graphics/Icons/Footprints/footprint364.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint365.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 96,
+      "source_mtime_ns": 1792048542984993200,
+      "canonical_source": "Graphics/Icons/Footprints/footprint365.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint366.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542985992400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint366.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint367.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542985992400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint367.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint368.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542985992400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint368.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint369.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542985992400,
+      "canonical_source": "Graphics/Icons/Footprints/footprint369.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint370.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542986993000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint370.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint371.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 125,
+      "source_mtime_ns": 1792048542986993000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint371.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint372.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 120,
+      "source_mtime_ns": 1792048542986993000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint372.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint373.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 148,
+      "source_mtime_ns": 1792048542986993000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint373.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint374.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 111,
+      "source_mtime_ns": 1792048542986993000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint374.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint375.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 125,
+      "source_mtime_ns": 1792048542987992600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint375.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint376.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 134,
+      "source_mtime_ns": 1792048542987992600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint376.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint377.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 142,
+      "source_mtime_ns": 1792048542987992600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint377.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint378.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 97,
+      "source_mtime_ns": 1792048542987992600,
+      "canonical_source": "Graphics/Icons/Footprints/footprint378.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint379.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 146,
+      "source_mtime_ns": 1792048542988991900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint379.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint380.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 140,
+      "source_mtime_ns": 1792048542988991900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint380.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint381.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 141,
+      "source_mtime_ns": 1792048542988991900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint381.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint382.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 142,
+      "source_mtime_ns": 1792048542988991900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint382.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint383.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 152,
+      "source_mtime_ns": 1792048542988991900,
+      "canonical_source": "Graphics/Icons/Footprints/footprint383.png"
+    },
+    {
+      "source": "Graphics/Icons/Footprints/footprint384.png",
+      "size": [
+        32,
+        32
+      ],
+      "source_bytes": 83,
+      "source_mtime_ns": 1792048542989994000,
+      "canonical_source": "Graphics/Icons/Footprints/footprint384.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对足迹/阴影/遮罩的灰阶、透明度和实际渲染用途；不将功能图添加装饰纹理。"
+  ],
+  "result": "output/texture-hd/batch-610/validation.json",
+  "applied_files": 0,
+  "preserved_files": 64
+}

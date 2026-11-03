@@ -1,0 +1,290 @@
+{
+  "batch": "batch-754",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 8,
+  "entries": [
+    {
+      "source": "Graphics/Transitions/water_1.png",
+      "size": [
+        640,
+        640
+      ],
+      "source_bytes": 3331,
+      "source_mtime_ns": 1792048551149329300,
+      "canonical_source": "Graphics/Transitions/water_1.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "139edda8e7fd9507c77bb72538edccfc00dd8b2b57526e75d71bb2eb6940f754",
+      "git_blob": "fda5fb7e2eff4aa1620a18c44c30a55e97da373f",
+      "reference_blob": "fda5fb7e2eff4aa1620a18c44c30a55e97da373f",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "44001486d2964cd4fb59d0c1bf9c16529051bdd958a4425eb3b3a23ef1fb96e1",
+          "alpha_sha256": "8ef934de56f61fd6b5c0f155db3dee59dea9e7a03139ee81f79150bcc268f847",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "原有兼容问题：Existing RisingSplash divides by zero with a 40-frame duration at 001_Transitions.rb:915. The actual 40fps caller requests 1.25 seconds (50 frames), which is the completed fixture; this runtime boundary is unrelated to image bytes.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/water_2.png",
+      "size": [
+        512,
+        640
+      ],
+      "source_bytes": 3556,
+      "source_mtime_ns": 1792048551149329300,
+      "canonical_source": "Graphics/Transitions/water_2.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "0666280e6139e109db4e3c3f398da47387c44a62916c28819ac1f47c263faedd",
+      "git_blob": "6430008f403a1576c07ddab38bf6aeff6ade9ba8",
+      "reference_blob": "6430008f403a1576c07ddab38bf6aeff6ade9ba8",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "9273591d8f66cb7c6b7fe7773cacf10aa4f3770194d06559598a90ac6264b782",
+          "alpha_sha256": "4714804cf2d0885194d687d0a52fb8b27557f54adf1f07358c06ede9aff69f2e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "原有兼容问题：Existing RisingSplash divides by zero with a 40-frame duration at 001_Transitions.rb:915. The actual 40fps caller requests 1.25 seconds (50 frames), which is the completed fixture; this runtime boundary is unrelated to image bytes.。保留原文件全部字节，未通过修改图片掩盖既有逻辑或数据差异。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Common/ballTransition.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 57503,
+      "source_mtime_ns": 1792048550984489800,
+      "canonical_source": "Graphics/Transitions/SunMoon/Common/ballTransition.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "ff17ded4c36f9d368d98ace3367055af168c508a31b2992a72a8db90eb4b5bd4",
+      "git_blob": "75fff7acbe076ebafe626fdb7cc88577cfd9a8bd",
+      "reference_blob": "75fff7acbe076ebafe626fdb7cc88577cfd9a8bd",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "1656fd5defd63aa1e6e68ed5a5b42eb29ee6737a44c9724a4f1f3e9f97446963",
+          "alpha_sha256": "b3f27d273886fc54b21ea760298a062eeedc675c7f3de33eb8202eb583d26c55",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Common/glow.png",
+      "size": [
+        392,
+        392
+      ],
+      "source_bytes": 180532,
+      "source_mtime_ns": 1792048550985492000,
+      "canonical_source": "Graphics/Transitions/SunMoon/Common/glow.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "e354a7eead91cc52bb752369e710150e14c7b57821a2170504f38d60bd0b9d24",
+      "git_blob": "2e0026ca20b51e3ab4be723b5fd550d545ae9260",
+      "reference_blob": "2e0026ca20b51e3ab4be723b5fd550d545ae9260",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "4543b4fc22a643caa9de3f9e81089e371d4fd3e8058265f4866d115473115fac",
+          "alpha_sha256": "227ce2fd5f830e880d2a586b16dba5ac912f53f869eeb26510f4252eded26071",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/particle.png",
+      "size": [
+        44,
+        44
+      ],
+      "source_bytes": 42829,
+      "source_mtime_ns": 1792048550986489000,
+      "canonical_source": "Graphics/Transitions/SunMoon/Crazy/particle.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "d987b4204dce3619c206fe85e59e78a3877303cb52549777333facc31892c223",
+      "git_blob": "1a2741567ef033408e0c4bfa10b0a1ba28c4710d",
+      "reference_blob": "1a2741567ef033408e0c4bfa10b0a1ba28c4710d",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "dffd795e7ff4ddeb6b13ff1f1d24c244ddf14eae3ef249b0987d51d244b8e694",
+          "alpha_sha256": "dace1e70f90e354c6606cf6c51ac07671642f8b946cb6f72763c71d476b96c65",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/ring0.png",
+      "size": [
+        608,
+        619
+      ],
+      "source_bytes": 1345358,
+      "source_mtime_ns": 1792048550993489300,
+      "canonical_source": "Graphics/Transitions/SunMoon/Crazy/ring0.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "2f3559ab9ad74e686cf1e8e4b699dec8a0c9ecddad5f1a044c1483caceced5e1",
+      "git_blob": "be6f456abf65f65f07da7a853392731d0f61b221",
+      "reference_blob": "be6f456abf65f65f07da7a853392731d0f61b221",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "923e3d567354adad609aee57fa2a6bb83743d8eeb16af749f4ee3f795e0c75c8",
+          "alpha_sha256": "d6a3491666f9ff8742283de7586a41bde9c3f10138a4f2f436c938b3de9ac95e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/ring1.png",
+      "size": [
+        596,
+        609
+      ],
+      "source_bytes": 1113319,
+      "source_mtime_ns": 1792048550999489700,
+      "canonical_source": "Graphics/Transitions/SunMoon/Crazy/ring1.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "09d9d740108dff230b6b3c4ff317c32c70a566e967f3dcd69d901aabc0d105f8",
+      "git_blob": "2f33777bf8ebcdfee435b33f2d42068468d47364",
+      "reference_blob": "2f33777bf8ebcdfee435b33f2d42068468d47364",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "1a9d4e4ee12d2adc07c5f82b13234f0d10395a04712c8440efbb96aa8a5cc7ee",
+          "alpha_sha256": "344f7cdcccfdadab8bf75285322021495496436ab3141067586c0dfb704fe780",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-754-01.png"
+    },
+    {
+      "source": "Graphics/Transitions/SunMoon/Crazy/ring2.png",
+      "size": [
+        596,
+        609
+      ],
+      "source_bytes": 636167,
+      "source_mtime_ns": 1792048551002489100,
+      "canonical_source": "Graphics/Transitions/SunMoon/Crazy/ring2.png",
+      "batch": "batch-754",
+      "stage": "weather",
+      "sha256": "7e9bcc89b26ad9d3d551389519fa8dba2483a05cd316fd35e182caa802cafd0a",
+      "git_blob": "e512c8792402a68221c200ac154f4d674c104674",
+      "reference_blob": "e512c8792402a68221c200ac154f4d674c104674",
+      "external_change": false,
+      "review_status": "not_started",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "920c7fb5c9b31ba28a51b91a7877b8a2bcbd606ba30c8472b00b24ada54e74f7",
+          "alpha_sha256": "45cae371451746e1078b8e5a8e5985615bfffde0a326696168a0193e1ac31ea3",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "bracket_frames": null,
+      "bracket_delay": null,
+      "status": "preserved",
+      "reason": "天气/雾效/转场的图格、功能遮罩、渐变及循环纹理按原样保留，添加细节无明确可读性收益。现用与兼容来源的消费路径及动画检查范围见证据，不以静态解码冒充完整转场或天气事件验证。",
+      "visual_review_page": "review-754-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p4-evidence/weather-review.json",
+    "output/texture-hd/p4-work/visual-review.json"
+  ],
+  "validation_scope": "All 243 sources directly decoded at original dimensions. Actual RPG::Weather covers ten data types, three strengths, particle recycling, at least two tiled periods and completed fade-out/in with deterministic 40fps logical time. Eighteen fogs use actual AnimatedPlane wrapping boundaries and zoom. Fourteen actual particle classes run 600 updates with fixed event-screen anchors and recycling. Thirteen actual HGSS transition fixtures run to disposal. All transition sources load through actual cache; inactive SunMoon, alternate VS bars, compatibility portraits and twelve unbound battleback animation layers retain exact bytes. Cache decoding is not proof of complete VS trainer intro selection, inactive SunMoon playback, complete map events or battle gameplay.",
+  "byte_identity_guarantee": "All retained game images, backups and deliveries are byte-identical; no frame, alpha, timing or image content changes."
+}

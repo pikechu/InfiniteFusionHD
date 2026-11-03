@@ -1,0 +1,231 @@
+{
+  "id": "batch-270",
+  "number": 270,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（20/62）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-269"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-270",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/FLOETTE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5014,
+      "source_mtime_ns": 1792048532124556600,
+      "canonical_source": "Graphics/Characters/Followers/FLOETTE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLOETTE_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5003,
+      "source_mtime_ns": 1792048532124556600,
+      "canonical_source": "Graphics/Characters/Followers/FLOETTE_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLOETTE_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4918,
+      "source_mtime_ns": 1792048532124556600,
+      "canonical_source": "Graphics/Characters/Followers/FLOETTE_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLOETTE_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4945,
+      "source_mtime_ns": 1792048532125556800,
+      "canonical_source": "Graphics/Characters/Followers/FLOETTE_3.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLOETTE_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4859,
+      "source_mtime_ns": 1792048532125556800,
+      "canonical_source": "Graphics/Characters/Followers/FLOETTE_4.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLOETTE_5.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5323,
+      "source_mtime_ns": 1792048532126558000,
+      "canonical_source": "Graphics/Characters/Followers/FLOETTE_5.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLORGES.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6242,
+      "source_mtime_ns": 1792048532126558000,
+      "canonical_source": "Graphics/Characters/Followers/FLORGES.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLORGES_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6198,
+      "source_mtime_ns": 1792048532126558000,
+      "canonical_source": "Graphics/Characters/Followers/FLORGES_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLORGES_2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6275,
+      "source_mtime_ns": 1792048532127558900,
+      "canonical_source": "Graphics/Characters/Followers/FLORGES_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLORGES_3.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6196,
+      "source_mtime_ns": 1792048532127558900,
+      "canonical_source": "Graphics/Characters/Followers/FLORGES_3.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLORGES_4.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5843,
+      "source_mtime_ns": 1792048532127558900,
+      "canonical_source": "Graphics/Characters/Followers/FLORGES_4.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FLYGON.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5630,
+      "source_mtime_ns": 1792048532128562400,
+      "canonical_source": "Graphics/Characters/Followers/FLYGON.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FOMANTIS.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4643,
+      "source_mtime_ns": 1792048532128562400,
+      "canonical_source": "Graphics/Characters/Followers/FOMANTIS.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FOONGUS.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3383,
+      "source_mtime_ns": 1792048532129557200,
+      "canonical_source": "Graphics/Characters/Followers/FOONGUS.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FORRETRESS.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4064,
+      "source_mtime_ns": 1792048532129557200,
+      "canonical_source": "Graphics/Characters/Followers/FORRETRESS.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FRAXURE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5227,
+      "source_mtime_ns": 1792048532129557200,
+      "canonical_source": "Graphics/Characters/Followers/FRAXURE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FRILLISH.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4179,
+      "source_mtime_ns": 1792048532130557400,
+      "canonical_source": "Graphics/Characters/Followers/FRILLISH.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FRILLISH_female.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4016,
+      "source_mtime_ns": 1792048532130557400,
+      "canonical_source": "Graphics/Characters/Followers/FRILLISH_female.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FROAKIE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3287,
+      "source_mtime_ns": 1792048532131560400,
+      "canonical_source": "Graphics/Characters/Followers/FROAKIE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/FROGADIER.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3919,
+      "source_mtime_ns": 1792048532131560400,
+      "canonical_source": "Graphics/Characters/Followers/FROGADIER.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-270/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

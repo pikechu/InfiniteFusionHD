@@ -1,0 +1,231 @@
+{
+  "id": "batch-159",
+  "number": 159,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（8/99）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-158"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-159",
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/May/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 4092,
+      "source_mtime_ns": 1792048521080854800,
+      "canonical_source": "Graphics/Alternate Trainers/May/vsTrainer_POKEMONTRAINER_Leaf.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6814,
+      "source_mtime_ns": 1792048521081381300,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_bike.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5534,
+      "source_mtime_ns": 1792048521081906000,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_dive_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 6831,
+      "source_mtime_ns": 1792048521322352000,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fish_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fishsurf_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 7468,
+      "source_mtime_ns": 1792048521322786300,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fishsurf_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4479,
+      "source_mtime_ns": 1792048521322786300,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_run.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5534,
+      "source_mtime_ns": 1792048521323292700,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_surf_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/trchar000.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3909,
+      "source_mtime_ns": 1792048521323292700,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/trchar000.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/trainer000.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1340,
+      "source_mtime_ns": 1792048521340080100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/trainer000.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/trainer_POKEMONTRAINER_Red.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3909,
+      "source_mtime_ns": 1792048521340618400,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/trainer_POKEMONTRAINER_Red.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1340,
+      "source_mtime_ns": 1792048521324302100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red_back.png",
+      "size": [
+        640,
+        128
+      ],
+      "source_bytes": 3557,
+      "source_mtime_ns": 1792048521324302100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red_back.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Transitions/vsTrainer0.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3534,
+      "source_mtime_ns": 1792048521325300000,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Transitions/vsTrainer0.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/trback100.png",
+      "size": [
+        640,
+        128
+      ],
+      "source_bytes": 3529,
+      "source_mtime_ns": 1792048521341124100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/trback100.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/vsTrainer_POKEMONTRAINER_Red.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3534,
+      "source_mtime_ns": 1792048521341124100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/vsTrainer_POKEMONTRAINER_Red.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5231,
+      "source_mtime_ns": 1792048521342132800,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_bike.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7468,
+      "source_mtime_ns": 1792048521343134100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_dive_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fish_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4724,
+      "source_mtime_ns": 1792048521345132600,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fish_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fishsurf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5528,
+      "source_mtime_ns": 1792048521346132900,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fishsurf_offset.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5046,
+      "source_mtime_ns": 1792048521346132900,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_run.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-159/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

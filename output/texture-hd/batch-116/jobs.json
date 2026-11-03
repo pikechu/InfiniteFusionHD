@@ -1,0 +1,52 @@
+{
+  "batch": "116",
+  "method": "Original-sized visual review and source-specific native validation; preserve originals where no visible benefit.",
+  "pilot_records": [
+    "output/texture-hd/p2-remaining-work/pilot-jobs.json",
+    "output/texture-hd/p2-remaining-work/charmander-job.json"
+  ],
+  "entries": [
+    {
+      "source": "Graphics/BaseSprites/1.png",
+      "decision": "preserved",
+      "reason": "编号 1 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。 该编号的一次内置图像提案被工具拒绝，失败状态单独保存；本项保留依据为原尺寸视觉审查，未把失败结果当作生成成功。",
+      "generation_status": "tool_rejected_original_preserved_after_visual_review",
+      "prompt": "Use case: precise-object-edit. Asset type: transparent game battle sprite. Edit the provided exact Bulbasaur sprite, original 288x288 canvas. Improve only restrained interior shading/detail while preserving its original pixel-art identity, green/turquoise palette, red eyes, crouched pose, green bulb and the two long curling vine loops exactly as shown. Preserve the exact silhouette, alpha contour, visible size, feet, face, vine paths, body position and empty margins. No new pose, limbs, leaves, markings, particles, cast shadow, backdrop, text or objects. Keep the same subject at the same coordinates on a transparent canvas, with the same original pixel boundaries. The original custom pose and curling vine loops are essential; do not substitute a generic Bulbasaur drawing.",
+      "generated": null,
+      "error": "Image tool output moderation_blocked; request 444aecd4-45b7-4127-b36f-f78b0fed1e2a"
+    },
+    {
+      "source": "Graphics/Battlers/1/1.png",
+      "decision": "preserved",
+      "reason": "编号 1 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。 该编号的一次内置图像提案被工具拒绝，失败状态单独保存；本项保留依据为原尺寸视觉审查，未把失败结果当作生成成功。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/BaseSprites/4.png",
+      "decision": "preserved",
+      "reason": "编号 4 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。 该编号的一次内置图像提案被工具拒绝，失败状态单独保存；本项保留依据为原尺寸视觉审查，未把失败结果当作生成成功。",
+      "generation_status": "tool_rejected_original_preserved_after_visual_review",
+      "prompt": "Use case: precise-object-edit. Asset type: transparent pixel-art RPG battle sprite. The supplied 288x288 image is the complete edit target. Refine only restrained interior color shading on this exact small orange lizard sprite. Preserve the original pixel-art style, orange body and pale-yellow belly, blue eye, red/yellow flame on its raised curved tail, upright pose, facial expression, feet and arms. Keep the whole silhouette, alpha boundary, body proportions, position, size and empty margins exactly as in the supplied image. No extra limbs, claws, markings, particles, glow, backdrop, text or cast shadow. Keep all outlines pixel-aligned and every existing feature in its exact place; no crop, zoom or repositioning. Background remains fully transparent.",
+      "generated": null,
+      "error": "Image tool output moderation_blocked; request c89fc62e-63eb-4f0f-829a-8a69e22b6189"
+    },
+    {
+      "source": "Graphics/Battlers/4/4.png",
+      "decision": "preserved",
+      "reason": "编号 4 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。 该编号的一次内置图像提案被工具拒绝，失败状态单独保存；本项保留依据为原尺寸视觉审查，未把失败结果当作生成成功。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/BaseSprites/7.png",
+      "decision": "preserved",
+      "reason": "编号 7 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。",
+      "generation_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Battlers/7/7.png",
+      "decision": "preserved",
+      "reason": "编号 7 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。",
+      "generation_status": "not_generated_no_expected_gain"
+    }
+  ]
+}

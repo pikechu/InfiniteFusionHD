@@ -1,0 +1,231 @@
+{
+  "id": "batch-214",
+  "number": 214,
+  "priority": "P3",
+  "stage": "npc",
+  "title": "地图人物、NPC 与其他行走精灵（63/99）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-213"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-214",
+  "entries": [
+    {
+      "source": "Graphics/Characters/BW_Chuck.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2498,
+      "source_mtime_ns": 1792048530794210400,
+      "canonical_source": "Graphics/Characters/BW_Chuck.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Clair.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1590,
+      "source_mtime_ns": 1792048530795211200,
+      "canonical_source": "Graphics/Characters/BW_Clair.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_colress.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1835,
+      "source_mtime_ns": 1792048530799213900,
+      "canonical_source": "Graphics/Characters/BW_colress.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Erika.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2543,
+      "source_mtime_ns": 1792048530795211200,
+      "canonical_source": "Graphics/Characters/BW_Erika.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Falkner.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2175,
+      "source_mtime_ns": 1792048530795211200,
+      "canonical_source": "Graphics/Characters/BW_Falkner.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_giovanni.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2345,
+      "source_mtime_ns": 1792048530799213900,
+      "canonical_source": "Graphics/Characters/BW_giovanni.png"
+    },
+    {
+      "source": "Graphics/Characters/bw_giovanni_overworlds_by_segesi-d42c38v.png",
+      "size": [
+        69,
+        69
+      ],
+      "source_bytes": 698,
+      "source_mtime_ns": 1792048540705355100,
+      "canonical_source": "Graphics/Characters/bw_giovanni_overworlds_by_segesi-d42c38v.png"
+    },
+    {
+      "source": "Graphics/Characters/bw_gold.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2327,
+      "source_mtime_ns": 1792048540705355100,
+      "canonical_source": "Graphics/Characters/bw_gold.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Janine.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 4791,
+      "source_mtime_ns": 1792048530795211200,
+      "canonical_source": "Graphics/Characters/BW_Janine.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Jasmine.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1417,
+      "source_mtime_ns": 1792048530796209600,
+      "canonical_source": "Graphics/Characters/BW_Jasmine.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_jeanette.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2146,
+      "source_mtime_ns": 1792048530799213900,
+      "canonical_source": "Graphics/Characters/BW_jeanette.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_kimono.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2738,
+      "source_mtime_ns": 1792048530799213900,
+      "canonical_source": "Graphics/Characters/BW_kimono.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_koga.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 26207,
+      "source_mtime_ns": 1792048530800211700,
+      "canonical_source": "Graphics/Characters/BW_koga.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_koga2.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 25064,
+      "source_mtime_ns": 1792048530800211700,
+      "canonical_source": "Graphics/Characters/BW_koga2.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Lance.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3021,
+      "source_mtime_ns": 1792048530796209600,
+      "canonical_source": "Graphics/Characters/BW_Lance.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Lorelei.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3530,
+      "source_mtime_ns": 1792048530796209600,
+      "canonical_source": "Graphics/Characters/BW_Lorelei.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Morty.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1907,
+      "source_mtime_ns": 1792048530796209600,
+      "canonical_source": "Graphics/Characters/BW_Morty.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_oldman-drunk.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1360,
+      "source_mtime_ns": 1792048530800211700,
+      "canonical_source": "Graphics/Characters/BW_oldman-drunk.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_Pryce.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 1447,
+      "source_mtime_ns": 1792048530797210900,
+      "canonical_source": "Graphics/Characters/BW_Pryce.png"
+    },
+    {
+      "source": "Graphics/Characters/BW_rocksmash.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 834,
+      "source_mtime_ns": 1792048530801211300,
+      "canonical_source": "Graphics/Characters/BW_rocksmash.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-214/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

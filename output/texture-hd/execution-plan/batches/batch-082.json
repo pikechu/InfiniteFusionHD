@@ -1,0 +1,302 @@
+{
+  "id": "batch-082",
+  "number": 82,
+  "priority": "P2",
+  "stage": "ui_dex",
+  "title": "图鉴、仓库与命名界面（6/17）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-081"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-082",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_list.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1411,
+      "source_mtime_ns": 1792048547383489600,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_list.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_listsearch.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1411,
+      "source_mtime_ns": 1792048547383489600,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_listsearch.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Pokedex/bg_menu.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5900,
+      "source_mtime_ns": 1793075473344602300,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_menu.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Pokedex/bg_menu.png",
+        "chinese": "Graphics/Chinese/Pictures/Pokedex/bg_menu.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_menu.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1059,
+      "source_mtime_ns": 1792048547383489600,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_menu.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Pokedex/bg_menu.png",
+        "chinese": "Graphics/Chinese/Pictures/Pokedex/bg_menu.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_search.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1410,
+      "source_mtime_ns": 1792048547383489600,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_search.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_search_color.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1181,
+      "source_mtime_ns": 1792048547384487400,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_search_color.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_search_name.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1289,
+      "source_mtime_ns": 1792048547384487400,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_search_name.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_search_order.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1082,
+      "source_mtime_ns": 1792048547384487400,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_search_order.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_search_shape.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1111,
+      "source_mtime_ns": 1792048547384487400,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_search_shape.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/bg_search_size.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 1184,
+      "source_mtime_ns": 1792048547385488000,
+      "canonical_source": "Graphics/Pictures/Pokedex/bg_search_size.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/cursor_list.png",
+      "size": [
+        244,
+        44
+      ],
+      "source_bytes": 609,
+      "source_mtime_ns": 1792048547386490300,
+      "canonical_source": "Graphics/Pictures/Pokedex/cursor_list.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/cursor_search.png",
+      "size": [
+        252,
+        520
+      ],
+      "source_bytes": 2412,
+      "source_mtime_ns": 1792048547386490300,
+      "canonical_source": "Graphics/Pictures/Pokedex/cursor_search.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_hw.png",
+      "size": [
+        64,
+        88
+      ],
+      "source_bytes": 607,
+      "source_mtime_ns": 1792048547386490300,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_hw.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_menuseenown.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 650,
+      "source_mtime_ns": 1792048547398107900,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_menuseenown.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_own.png",
+      "size": [
+        28,
+        28
+      ],
+      "source_bytes": 418,
+      "source_mtime_ns": 1792048547398107900,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_own.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_searchsel.png",
+      "size": [
+        184,
+        200
+      ],
+      "source_bytes": 1031,
+      "source_mtime_ns": 1792048547399108000,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_searchsel.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Pokedex/icon_searchslider.png",
+      "size": [
+        120,
+        236
+      ],
+      "source_bytes": 4399,
+      "source_mtime_ns": 1793075480084742500,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_searchslider.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Pokedex/icon_searchslider.png",
+        "chinese": "Graphics/Chinese/Pictures/Pokedex/icon_searchslider.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_searchslider.png",
+      "size": [
+        120,
+        236
+      ],
+      "source_bytes": 1830,
+      "source_mtime_ns": 1792048547399108000,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_searchslider.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Pokedex/icon_searchslider.png",
+        "chinese": "Graphics/Chinese/Pictures/Pokedex/icon_searchslider.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_seen.png",
+      "size": [
+        28,
+        28
+      ],
+      "source_bytes": 322,
+      "source_mtime_ns": 1792048547399108000,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_seen.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_shapes.png",
+      "size": [
+        60,
+        840
+      ],
+      "source_bytes": 3108,
+      "source_mtime_ns": 1792048547400106900,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_shapes.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/icon_slider.png",
+      "size": [
+        80,
+        60
+      ],
+      "source_bytes": 788,
+      "source_mtime_ns": 1792048547400106900,
+      "canonical_source": "Graphics/Pictures/Pokedex/icon_slider.png"
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/Pokedex/load_more_sprites.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 6291,
+      "source_mtime_ns": 1793075480070126400,
+      "canonical_source": "Graphics/Pictures/Pokedex/load_more_sprites.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Pokedex/load_more_sprites.png",
+        "chinese": "Graphics/Chinese/Pictures/Pokedex/load_more_sprites.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/load_more_sprites.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 12569,
+      "source_mtime_ns": 1792048547400106900,
+      "canonical_source": "Graphics/Pictures/Pokedex/load_more_sprites.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/Pokedex/load_more_sprites.png",
+        "chinese": "Graphics/Chinese/Pictures/Pokedex/load_more_sprites.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokedex/overlay_area.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2059,
+      "source_mtime_ns": 1792048547402106100,
+      "canonical_source": "Graphics/Pictures/Pokedex/overlay_area.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-082/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

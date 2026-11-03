@@ -1,0 +1,269 @@
+{
+  "id": "batch-007",
+  "number": 7,
+  "priority": "P1",
+  "stage": "ground",
+  "title": "其余战斗地台：按环境合并敌我两侧与昼夜版本（2/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ground",
+  "processing_notes": "逐图 AI 补绘地面材质；敌我两侧同批，保留原始轮廓、位置与透明通道；与现有背景合成检查。",
+  "depends_on": [
+    "batch-005",
+    "batch-006"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-007",
+  "entries": [
+    {
+      "source": "Graphics/Battlebacks/enemybase/city_sand.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 78532,
+      "source_mtime_ns": 1792048527836218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/city_sand.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/city_sand.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5406,
+      "source_mtime_ns": 1792048528037966100,
+      "canonical_source": "Graphics/Battlebacks/playerbase/city_sand.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/city_water.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71483,
+      "source_mtime_ns": 1792048527837219200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/city_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/city_water.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 6348,
+      "source_mtime_ns": 1792048528037966100,
+      "canonical_source": "Graphics/Battlebacks/playerbase/city_water.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cosmic.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 69872,
+      "source_mtime_ns": 1792048527837219200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cosmic.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cosmic.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5019,
+      "source_mtime_ns": 1792048528037966100,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cosmic.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/cyber.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 77098,
+      "source_mtime_ns": 1792048527838221400,
+      "canonical_source": "Graphics/Battlebacks/enemybase/cyber.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/cyber.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 4422,
+      "source_mtime_ns": 1792048528038966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/cyber.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/darkgym.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527838221400,
+      "canonical_source": "Graphics/Battlebacks/enemybase/darkgym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/darkgym.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048528038966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/darkgym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/elitea.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 69872,
+      "source_mtime_ns": 1792048527839219500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/elitea.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/elitea.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5019,
+      "source_mtime_ns": 1792048528038966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/elitea.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/eliteb.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 71523,
+      "source_mtime_ns": 1792048527839219500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/eliteb.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/eliteb.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5827,
+      "source_mtime_ns": 1792048528038966200,
+      "canonical_source": "Graphics/Battlebacks/playerbase/eliteb.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/elitec.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 68809,
+      "source_mtime_ns": 1792048527840218900,
+      "canonical_source": "Graphics/Battlebacks/enemybase/elitec.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/elitec.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 4955,
+      "source_mtime_ns": 1792048528039965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/elitec.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/elited.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 67894,
+      "source_mtime_ns": 1792048527841218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/elited.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/elited.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 4578,
+      "source_mtime_ns": 1792048528039965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/elited.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/erika.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048527841218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/erika.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/erika.png",
+      "size": [
+        378,
+        75
+      ],
+      "source_bytes": 4167,
+      "source_mtime_ns": 1792048528039965400,
+      "canonical_source": "Graphics/Battlebacks/playerbase/erika.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_eve.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 101033,
+      "source_mtime_ns": 1792048527847219500,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_night.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 101033,
+      "source_mtime_ns": 1792048527848218200,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_night.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/enemybase/field_concrete.png",
+      "size": [
+        272,
+        128
+      ],
+      "source_bytes": 70806,
+      "source_mtime_ns": 1792048527845218300,
+      "canonical_source": "Graphics/Battlebacks/enemybase/field_concrete.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/playerbase/field_concrete.png",
+      "size": [
+        408,
+        75
+      ],
+      "source_bytes": 5603,
+      "source_mtime_ns": 1792048528080976500,
+      "canonical_source": "Graphics/Battlebacks/playerbase/field_concrete.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
+  ],
+  "result": "output/texture-hd/batch-007/validation.json"
+}

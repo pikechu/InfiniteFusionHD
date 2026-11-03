@@ -1,0 +1,10 @@
+P3_152_BEGIN
+P3_152_FAIL NoMethodError: undefined method `name' for #<Game_Character>
+./Data/Scripts/005_Sprites/003_Sprite_Character.rb:87:in `checkModifySpriteGraphics'
+./Data/Scripts/005_Sprites/003_Sprite_Character.rb:82:in `initialize'
+./Data/Scripts/005_Sprites/009_Sprite_DynamicShadows.rb:131:in `initialize'
+./Data/Scripts/052_AddOns/Footprints.rb:87:in `initialize'
+./Data/Scripts/052_AddOns/OverworldShadows.rb:186:in `initialize'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p3-152.rb:17:in `new'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p3-152.rb:17:in `block in <main>'
+C:/newproj/others/kurayshinyrevamp/output/texture-hd/native-p3-152.rb:14:in `each'

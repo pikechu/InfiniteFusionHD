@@ -1,0 +1,231 @@
+{
+  "id": "batch-286",
+  "number": 286,
+  "priority": "P3",
+  "stage": "follower",
+  "title": "跟随宝可梦：按物种与形态分组（36/62）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-285"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-286",
+  "entries": [
+    {
+      "source": "Graphics/Characters/Followers/MUSHARNA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5142,
+      "source_mtime_ns": 1792048538521732600,
+      "canonical_source": "Graphics/Characters/Followers/MUSHARNA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NAGANADEL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6010,
+      "source_mtime_ns": 1792048538521732600,
+      "canonical_source": "Graphics/Characters/Followers/NAGANADEL.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NATU.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2903,
+      "source_mtime_ns": 1792048538522729900,
+      "canonical_source": "Graphics/Characters/Followers/NATU.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NECROZMA.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6308,
+      "source_mtime_ns": 1792048538522729900,
+      "canonical_source": "Graphics/Characters/Followers/NECROZMA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NECROZMA_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7943,
+      "source_mtime_ns": 1792048538522729900,
+      "canonical_source": "Graphics/Characters/Followers/NECROZMA_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NECROZMA_2.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 9367,
+      "source_mtime_ns": 1792048538523728500,
+      "canonical_source": "Graphics/Characters/Followers/NECROZMA_2.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NICKIT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3997,
+      "source_mtime_ns": 1792048538523728500,
+      "canonical_source": "Graphics/Characters/Followers/NICKIT.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIDOKING.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4416,
+      "source_mtime_ns": 1792048538523728500,
+      "canonical_source": "Graphics/Characters/Followers/NIDOKING.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIDOQUEEN.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4594,
+      "source_mtime_ns": 1792048538523728500,
+      "canonical_source": "Graphics/Characters/Followers/NIDOQUEEN.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIDORANfE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2816,
+      "source_mtime_ns": 1792048538524729000,
+      "canonical_source": "Graphics/Characters/Followers/NIDORANfE.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIDORANmA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 2864,
+      "source_mtime_ns": 1792048538524729000,
+      "canonical_source": "Graphics/Characters/Followers/NIDORANmA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIDORINA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3558,
+      "source_mtime_ns": 1792048538524729000,
+      "canonical_source": "Graphics/Characters/Followers/NIDORINA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIDORINO.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3779,
+      "source_mtime_ns": 1792048538525736100,
+      "canonical_source": "Graphics/Characters/Followers/NIDORINO.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NIHILEGO.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5574,
+      "source_mtime_ns": 1792048538525736100,
+      "canonical_source": "Graphics/Characters/Followers/NIHILEGO.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NINCADA.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3851,
+      "source_mtime_ns": 1792048538525736100,
+      "canonical_source": "Graphics/Characters/Followers/NINCADA.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NINETALES.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4217,
+      "source_mtime_ns": 1792048538526735700,
+      "canonical_source": "Graphics/Characters/Followers/NINETALES.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NINETALES_1.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4646,
+      "source_mtime_ns": 1792048538526735700,
+      "canonical_source": "Graphics/Characters/Followers/NINETALES_1.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NINJASK.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4099,
+      "source_mtime_ns": 1792048538526735700,
+      "canonical_source": "Graphics/Characters/Followers/NINJASK.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NOCTOWL.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5623,
+      "source_mtime_ns": 1792048538527729100,
+      "canonical_source": "Graphics/Characters/Followers/NOCTOWL.png"
+    },
+    {
+      "source": "Graphics/Characters/Followers/NOIBAT.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4099,
+      "source_mtime_ns": 1792048538527729100,
+      "canonical_source": "Graphics/Characters/Followers/NOIBAT.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-286/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

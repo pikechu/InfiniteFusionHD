@@ -1,0 +1,110 @@
+{
+  "id": "batch-682",
+  "number": 682,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（61/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-681"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-682",
+  "entries": [
+    {
+      "source": "Graphics/Animations/PRAS- Lock On.png",
+      "size": [
+        960,
+        768
+      ],
+      "source_bytes": 2842,
+      "source_mtime_ns": 1792048522472279000,
+      "canonical_source": "Graphics/Animations/PRAS- Lock On.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Love.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 2835,
+      "source_mtime_ns": 1792048522472334700,
+      "canonical_source": "Graphics/Animations/PRAS- Love.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- LTBTS BG1.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 29590,
+      "source_mtime_ns": 1792048522468278900,
+      "canonical_source": "Graphics/Animations/PRAS- LTBTS BG1.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- LTBTS BG2.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 12049,
+      "source_mtime_ns": 1792048522469278600,
+      "canonical_source": "Graphics/Animations/PRAS- LTBTS BG2.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- LTBTS BG3.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 101861,
+      "source_mtime_ns": 1792048522469278600,
+      "canonical_source": "Graphics/Animations/PRAS- LTBTS BG3.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Lucky Chant.png",
+      "size": [
+        960,
+        192
+      ],
+      "source_bytes": 666,
+      "source_mtime_ns": 1792048522472842300,
+      "canonical_source": "Graphics/Animations/PRAS- Lucky Chant.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Luster Purge.png",
+      "size": [
+        960,
+        386
+      ],
+      "source_bytes": 3136,
+      "source_mtime_ns": 1792048522472842300,
+      "canonical_source": "Graphics/Animations/PRAS- Luster Purge.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Magic Coat.png",
+      "size": [
+        1152,
+        384
+      ],
+      "source_bytes": 2450,
+      "source_mtime_ns": 1792048522539897200,
+      "canonical_source": "Graphics/Animations/PRAS- Magic Coat.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-682/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

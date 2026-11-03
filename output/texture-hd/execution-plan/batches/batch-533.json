@@ -1,0 +1,276 @@
+{
+  "id": "batch-533",
+  "number": 533,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（22/29）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-532"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-533",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-164.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 31543,
+      "source_mtime_ns": 1792048547153280100,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-164.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-165.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 31478,
+      "source_mtime_ns": 1792048547154310900,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-165.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-166.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 31181,
+      "source_mtime_ns": 1792048547154310900,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-166.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-167.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 31710,
+      "source_mtime_ns": 1792048547155284000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-167.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-168.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 32230,
+      "source_mtime_ns": 1792048547155284000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-168.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-169.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 32014,
+      "source_mtime_ns": 1792048547155284000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-169.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-170.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 42875,
+      "source_mtime_ns": 1792048547156310800,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-170.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-171.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 87121,
+      "source_mtime_ns": 1792048547157373300,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-171.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-172.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 125270,
+      "source_mtime_ns": 1792048547157917000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-172.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-173.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 112462,
+      "source_mtime_ns": 1792048547158955500,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-173.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-174.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 112272,
+      "source_mtime_ns": 1792048547159953400,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-174.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-175.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 112250,
+      "source_mtime_ns": 1792048547160924700,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-175.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-176.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 112937,
+      "source_mtime_ns": 1792048547160924700,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-176.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-177.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 112859,
+      "source_mtime_ns": 1792048547161925000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-177.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-178.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 114106,
+      "source_mtime_ns": 1792048547162923600,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-178.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-179.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 115834,
+      "source_mtime_ns": 1792048547163923200,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-179.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-180.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116201,
+      "source_mtime_ns": 1792048547164957000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-180.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-181.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116757,
+      "source_mtime_ns": 1792048547165953800,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-181.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-182.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116613,
+      "source_mtime_ns": 1792048547166924000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-182.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-183.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116461,
+      "source_mtime_ns": 1792048547167954700,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-183.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-184.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116205,
+      "source_mtime_ns": 1792048547167954700,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-184.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-185.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116990,
+      "source_mtime_ns": 1792048547168926900,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-185.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-186.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116854,
+      "source_mtime_ns": 1792048547169925300,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-186.png"
+    },
+    {
+      "source": "Graphics/Pictures/Intro/INTRO-187.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 116862,
+      "source_mtime_ns": 1792048547170926000,
+      "canonical_source": "Graphics/Pictures/Intro/INTRO-187.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-533/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

@@ -1,0 +1,271 @@
+{
+  "id": "batch-147",
+  "number": 147,
+  "priority": "P2",
+  "stage": "trainer",
+  "title": "训练师战斗立绘与背面图（2/6）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "character",
+  "processing_notes": "先核对实际动作/方向/帧布局，逐帧补绘并回填；锁定脚底、主体锚点、方向和动作，连续播放验收。",
+  "depends_on": [
+    "batch-108",
+    "batch-146"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-147",
+  "entries": [
+    {
+      "source": "Graphics/Trainers/trainer017.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 658,
+      "source_mtime_ns": 1792048550019312200,
+      "canonical_source": "Graphics/Trainers/trainer017.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer018.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1048,
+      "source_mtime_ns": 1792048550019312200,
+      "canonical_source": "Graphics/Trainers/trainer018.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer019.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 952,
+      "source_mtime_ns": 1792048550019312200,
+      "canonical_source": "Graphics/Trainers/trainer019.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer020.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 834,
+      "source_mtime_ns": 1792048550455898900,
+      "canonical_source": "Graphics/Trainers/trainer020.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer021.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 612,
+      "source_mtime_ns": 1792048550458528000,
+      "canonical_source": "Graphics/Trainers/trainer021.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer022.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 991,
+      "source_mtime_ns": 1792048550459054500,
+      "canonical_source": "Graphics/Trainers/trainer022.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer023.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 786,
+      "source_mtime_ns": 1792048550459054500,
+      "canonical_source": "Graphics/Trainers/trainer023.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer024.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 860,
+      "source_mtime_ns": 1792048550459579400,
+      "canonical_source": "Graphics/Trainers/trainer024.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer025.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 925,
+      "source_mtime_ns": 1792048550460102000,
+      "canonical_source": "Graphics/Trainers/trainer025.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer026.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 841,
+      "source_mtime_ns": 1792048550460636900,
+      "canonical_source": "Graphics/Trainers/trainer026.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer027.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 716,
+      "source_mtime_ns": 1792048550460636900,
+      "canonical_source": "Graphics/Trainers/trainer027.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer028.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 775,
+      "source_mtime_ns": 1792048550461168100,
+      "canonical_source": "Graphics/Trainers/trainer028.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer029.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 874,
+      "source_mtime_ns": 1792048550461695000,
+      "canonical_source": "Graphics/Trainers/trainer029.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer030.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 812,
+      "source_mtime_ns": 1792048550462228300,
+      "canonical_source": "Graphics/Trainers/trainer030.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer031.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 859,
+      "source_mtime_ns": 1792048550462228300,
+      "canonical_source": "Graphics/Trainers/trainer031.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer032.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 722,
+      "source_mtime_ns": 1792048550462745500,
+      "canonical_source": "Graphics/Trainers/trainer032.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer033.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 949,
+      "source_mtime_ns": 1792048550463274100,
+      "canonical_source": "Graphics/Trainers/trainer033.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer034.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1376,
+      "source_mtime_ns": 1792048550606662800,
+      "canonical_source": "Graphics/Trainers/trainer034.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer035.png",
+      "size": [
+        160,
+        178
+      ],
+      "source_bytes": 681,
+      "source_mtime_ns": 1792048550606662800,
+      "canonical_source": "Graphics/Trainers/trainer035.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer036.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 876,
+      "source_mtime_ns": 1792048550607661500,
+      "canonical_source": "Graphics/Trainers/trainer036.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer037.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 682,
+      "source_mtime_ns": 1792048550607661500,
+      "canonical_source": "Graphics/Trainers/trainer037.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer038.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 771,
+      "source_mtime_ns": 1792048550607661500,
+      "canonical_source": "Graphics/Trainers/trainer038.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer039.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 915,
+      "source_mtime_ns": 1792048550607661500,
+      "canonical_source": "Graphics/Trainers/trainer039.png"
+    },
+    {
+      "source": "Graphics/Trainers/trainer040.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 856,
+      "source_mtime_ns": 1792048550608660800,
+      "canonical_source": "Graphics/Trainers/trainer040.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对全部方向与动作，连续播放；脚底锚点和各格位置不变，穿戴层叠合正确。"
+  ],
+  "result": "output/texture-hd/batch-147/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

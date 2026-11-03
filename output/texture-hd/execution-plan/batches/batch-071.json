@@ -1,0 +1,277 @@
+{
+  "id": "batch-071",
+  "number": 71,
+  "priority": "P2",
+  "stage": "ui_party",
+  "title": "队伍、背包、摘要与通用菜单（8/13）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-070"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-071",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel_narrow.png",
+      "size": [
+        112,
+        36
+      ],
+      "source_bytes": 464,
+      "source_mtime_ns": 1792048547328788800,
+      "canonical_source": "Graphics/Pictures/Party/icon_cancel_narrow.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel_narrow_sel.png",
+      "size": [
+        112,
+        36
+      ],
+      "source_bytes": 453,
+      "source_mtime_ns": 1792048547328788800,
+      "canonical_source": "Graphics/Pictures/Party/icon_cancel_narrow_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_cancel_sel.png",
+      "size": [
+        112,
+        48
+      ],
+      "source_bytes": 483,
+      "source_mtime_ns": 1792048547329308500,
+      "canonical_source": "Graphics/Pictures/Party/icon_cancel_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_item.png",
+      "size": [
+        16,
+        16
+      ],
+      "source_bytes": 368,
+      "source_mtime_ns": 1792048547329308500,
+      "canonical_source": "Graphics/Pictures/Party/icon_item.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/icon_mail.png",
+      "size": [
+        16,
+        16
+      ],
+      "source_bytes": 325,
+      "source_mtime_ns": 1792048547329827000,
+      "canonical_source": "Graphics/Pictures/Party/icon_mail.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp.png",
+      "size": [
+        96,
+        24
+      ],
+      "source_bytes": 128,
+      "source_mtime_ns": 1792048547329827000,
+      "canonical_source": "Graphics/Pictures/Party/overlay_hp.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp_back.png",
+      "size": [
+        138,
+        14
+      ],
+      "source_bytes": 460,
+      "source_mtime_ns": 1792048547329827000,
+      "canonical_source": "Graphics/Pictures/Party/overlay_hp_back.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp_back_faint.png",
+      "size": [
+        138,
+        14
+      ],
+      "source_bytes": 458,
+      "source_mtime_ns": 1792048547330346600,
+      "canonical_source": "Graphics/Pictures/Party/overlay_hp_back_faint.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_hp_back_swap.png",
+      "size": [
+        138,
+        14
+      ],
+      "source_bytes": 457,
+      "source_mtime_ns": 1792048547330346600,
+      "canonical_source": "Graphics/Pictures/Party/overlay_hp_back_swap.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/overlay_lv.png",
+      "size": [
+        22,
+        14
+      ],
+      "source_bytes": 328,
+      "source_mtime_ns": 1792048547330865700,
+      "canonical_source": "Graphics/Pictures/Party/overlay_lv.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_blank.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 721,
+      "source_mtime_ns": 1792048547330865700,
+      "canonical_source": "Graphics/Pictures/Party/panel_blank.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 707,
+      "source_mtime_ns": 1792048547331383800,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_faint.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 713,
+      "source_mtime_ns": 1792048547331383800,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect_faint.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_faint_sel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 720,
+      "source_mtime_ns": 1792048547346979500,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect_faint_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_sel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 719,
+      "source_mtime_ns": 1792048547346979500,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_swap.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 701,
+      "source_mtime_ns": 1792048547346979500,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect_swap.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_swap_sel2.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 738,
+      "source_mtime_ns": 1792048547347985300,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect_swap_sel2.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_rect_swap_sel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 728,
+      "source_mtime_ns": 1792048547347985300,
+      "canonical_source": "Graphics/Pictures/Party/panel_rect_swap_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 942,
+      "source_mtime_ns": 1792048547347985300,
+      "canonical_source": "Graphics/Pictures/Party/panel_round.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_faint.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 962,
+      "source_mtime_ns": 1792048547347985300,
+      "canonical_source": "Graphics/Pictures/Party/panel_round_faint.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_faint_sel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 893,
+      "source_mtime_ns": 1792048547348987800,
+      "canonical_source": "Graphics/Pictures/Party/panel_round_faint_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_sel.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 893,
+      "source_mtime_ns": 1792048547348987800,
+      "canonical_source": "Graphics/Pictures/Party/panel_round_sel.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_swap.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 873,
+      "source_mtime_ns": 1792048547357905900,
+      "canonical_source": "Graphics/Pictures/Party/panel_round_swap.png"
+    },
+    {
+      "source": "Graphics/Pictures/Party/panel_round_swap_sel2.png",
+      "size": [
+        256,
+        98
+      ],
+      "source_bytes": 927,
+      "source_mtime_ns": 1792048547358428200,
+      "canonical_source": "Graphics/Pictures/Party/panel_round_swap_sel2.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-071/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24,
+  "candidate_files": 0
+}

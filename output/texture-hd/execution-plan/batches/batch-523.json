@@ -1,0 +1,276 @@
+{
+  "id": "batch-523",
+  "number": 523,
+  "priority": "P3",
+  "stage": "ui_other",
+  "title": "小游戏、开场、装饰与其他界面（12/29）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-522"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-523",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/shiny.png",
+      "size": [
+        14,
+        16
+      ],
+      "source_bytes": 137,
+      "source_mtime_ns": 1792048548668104800,
+      "canonical_source": "Graphics/Pictures/shiny.png"
+    },
+    {
+      "source": "Graphics/Pictures/shiny_black.png",
+      "size": [
+        14,
+        16
+      ],
+      "source_bytes": 114,
+      "source_mtime_ns": 1792048548669105800,
+      "canonical_source": "Graphics/Pictures/shiny_black.png"
+    },
+    {
+      "source": "Graphics/Pictures/shinyNO.png",
+      "size": [
+        14,
+        16
+      ],
+      "source_bytes": 349,
+      "source_mtime_ns": 1792048548669105800,
+      "canonical_source": "Graphics/Pictures/shinyNO.png"
+    },
+    {
+      "source": "Graphics/Pictures/silph_logo.jpg",
+      "size": [
+        652,
+        809
+      ],
+      "source_bytes": 45814,
+      "source_mtime_ns": 1792048548670107000,
+      "canonical_source": "Graphics/Pictures/silph_logo.jpg"
+    },
+    {
+      "source": "Graphics/Pictures/silph_logoPNG.png",
+      "size": [
+        652,
+        809
+      ],
+      "source_bytes": 83177,
+      "source_mtime_ns": 1792048548670107000,
+      "canonical_source": "Graphics/Pictures/silph_logoPNG.png"
+    },
+    {
+      "source": "Graphics/Pictures/spotilight.png",
+      "size": [
+        464,
+        352
+      ],
+      "source_bytes": 2515,
+      "source_mtime_ns": 1792048548671105000,
+      "canonical_source": "Graphics/Pictures/spotilight.png"
+    },
+    {
+      "source": "Graphics/Pictures/teamFlagFrame.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14060,
+      "source_mtime_ns": 1792048548696082100,
+      "canonical_source": "Graphics/Pictures/teamFlagFrame.png"
+    },
+    {
+      "source": "Graphics/Pictures/telescope1png.png",
+      "size": [
+        524,
+        394
+      ],
+      "source_bytes": 5536,
+      "source_mtime_ns": 1792048548696082100,
+      "canonical_source": "Graphics/Pictures/telescope1png.png"
+    },
+    {
+      "source": "Graphics/Pictures/telescope2.png",
+      "size": [
+        524,
+        394
+      ],
+      "source_bytes": 5224,
+      "source_mtime_ns": 1792048548696082100,
+      "canonical_source": "Graphics/Pictures/telescope2.png"
+    },
+    {
+      "source": "Graphics/Pictures/testback.PNG",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 703,
+      "source_mtime_ns": 1792048548696082100,
+      "canonical_source": "Graphics/Pictures/testback.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/testfront.PNG",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1228,
+      "source_mtime_ns": 1792048548697081300,
+      "canonical_source": "Graphics/Pictures/testfront.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/testscreen.PNG",
+      "size": [
+        640,
+        512
+      ],
+      "source_bytes": 7172,
+      "source_mtime_ns": 1792048548697081300,
+      "canonical_source": "Graphics/Pictures/testscreen.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/tradebg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 5232,
+      "source_mtime_ns": 1792048548697081300,
+      "canonical_source": "Graphics/Pictures/tradebg.png"
+    },
+    {
+      "source": "Graphics/Pictures/trainercard.PNG",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2568,
+      "source_mtime_ns": 1792048548698080400,
+      "canonical_source": "Graphics/Pictures/trainercard.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/trainercardbg.png",
+      "size": [
+        8,
+        8
+      ],
+      "source_bytes": 74,
+      "source_mtime_ns": 1792048548698080400,
+      "canonical_source": "Graphics/Pictures/trainercardbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/trainercardbgf.png",
+      "size": [
+        8,
+        8
+      ],
+      "source_bytes": 74,
+      "source_mtime_ns": 1792048548699080000,
+      "canonical_source": "Graphics/Pictures/trainercardbgf.png"
+    },
+    {
+      "source": "Graphics/Pictures/trainercardf.PNG",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2569,
+      "source_mtime_ns": 1792048548699080000,
+      "canonical_source": "Graphics/Pictures/trainercardf.PNG"
+    },
+    {
+      "source": "Graphics/Pictures/trainerNearby.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 614,
+      "source_mtime_ns": 1792048548697081300,
+      "canonical_source": "Graphics/Pictures/trainerNearby.png"
+    },
+    {
+      "source": "Graphics/Pictures/triad_bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 628,
+      "source_mtime_ns": 1792048548699080000,
+      "canonical_source": "Graphics/Pictures/triad_bg.png"
+    },
+    {
+      "source": "Graphics/Pictures/triad_card_opponent.png",
+      "size": [
+        80,
+        96
+      ],
+      "source_bytes": 168,
+      "source_mtime_ns": 1792048548699080000,
+      "canonical_source": "Graphics/Pictures/triad_card_opponent.png"
+    },
+    {
+      "source": "Graphics/Pictures/triad_card_player.png",
+      "size": [
+        80,
+        96
+      ],
+      "source_bytes": 168,
+      "source_mtime_ns": 1792048548699080000,
+      "canonical_source": "Graphics/Pictures/triad_card_player.png"
+    },
+    {
+      "source": "Graphics/Pictures/triad_numbers.png",
+      "size": [
+        176,
+        16
+      ],
+      "source_bytes": 233,
+      "source_mtime_ns": 1792048548700082200,
+      "canonical_source": "Graphics/Pictures/triad_numbers.png"
+    },
+    {
+      "source": "Graphics/Pictures/triadbg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 606,
+      "source_mtime_ns": 1792048548700082200,
+      "canonical_source": "Graphics/Pictures/triadbg.png"
+    },
+    {
+      "source": "Graphics/Pictures/tv.png",
+      "size": [
+        500,
+        500
+      ],
+      "source_bytes": 658,
+      "source_mtime_ns": 1792048548700082200,
+      "canonical_source": "Graphics/Pictures/tv.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-523/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

@@ -1,0 +1,235 @@
+{
+  "id": "batch-103",
+  "number": 103,
+  "priority": "P2",
+  "stage": "titles",
+  "title": "标题、载入与启动界面（1/3）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063"
+  ],
+  "file_count": 20,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-103",
+  "entries": [
+    {
+      "source": "Graphics/Titles/credits1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 4710,
+      "source_mtime_ns": 1792048549873411000,
+      "canonical_source": "Graphics/Titles/credits1.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bars.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 61703,
+      "source_mtime_ns": 1792048549882946300,
+      "canonical_source": "Graphics/Titles/gen1_bars.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 165076,
+      "source_mtime_ns": 1792048549883945800,
+      "canonical_source": "Graphics/Titles/gen1_bg.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 26631,
+      "source_mtime_ns": 1792048549883945800,
+      "canonical_source": "Graphics/Titles/gen1_bg_blue.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_green.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 23319,
+      "source_mtime_ns": 1792048549883945800,
+      "canonical_source": "Graphics/Titles/gen1_bg_green.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15652,
+      "source_mtime_ns": 1792048549884946700,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_blue.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 73163,
+      "source_mtime_ns": 1792048549884946700,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_blue.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_green.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 69469,
+      "source_mtime_ns": 1792048549885946000,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_green.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_red.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 105477,
+      "source_mtime_ns": 1792048549885946000,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_red.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_litup_yellow.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 87810,
+      "source_mtime_ns": 1792048549886945600,
+      "canonical_source": "Graphics/Titles/gen1_bg_litup_yellow.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_logo.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 179336,
+      "source_mtime_ns": 1792048549887946200,
+      "canonical_source": "Graphics/Titles/gen1_bg_logo.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_red (1).png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 15845,
+      "source_mtime_ns": 1792048549887946200,
+      "canonical_source": "Graphics/Titles/gen1_bg_red (1).png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_v5.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 147439,
+      "source_mtime_ns": 1792048549888947000,
+      "canonical_source": "Graphics/Titles/gen1_bg_v5.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_bg_yellow.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 26310,
+      "source_mtime_ns": 1792048549888947000,
+      "canonical_source": "Graphics/Titles/gen1_bg_yellow.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_effect.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 14301,
+      "source_mtime_ns": 1792048549889946700,
+      "canonical_source": "Graphics/Titles/gen1_effect.png"
+    },
+    {
+      "source": "Graphics/Titles/gen1_poke.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 88542,
+      "source_mtime_ns": 1792048549889946700,
+      "canonical_source": "Graphics/Titles/gen1_poke.png"
+    },
+    {
+      "source": "Graphics/Titles/gen3_bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 63594,
+      "source_mtime_ns": 1792048549929946500,
+      "canonical_source": "Graphics/Titles/gen3_bg.png"
+    },
+    {
+      "source": "Graphics/Titles/gen3_effect.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 59218,
+      "source_mtime_ns": 1792048549930948200,
+      "canonical_source": "Graphics/Titles/gen3_effect.png"
+    },
+    {
+      "source": "Graphics/Titles/gen3_poke1.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 58065,
+      "source_mtime_ns": 1792048549930948200,
+      "canonical_source": "Graphics/Titles/gen3_poke1.png"
+    },
+    {
+      "source": "Graphics/Titles/gen3_poke2.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 56996,
+      "source_mtime_ns": 1792048549931945800,
+      "canonical_source": "Graphics/Titles/gen3_poke2.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-103/validation.json",
+  "applied_files": 0,
+  "preserved_files": 20
+}

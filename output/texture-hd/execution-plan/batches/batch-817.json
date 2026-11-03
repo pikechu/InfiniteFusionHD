@@ -1,0 +1,508 @@
+{
+  "id": "batch-817",
+  "number": 817,
+  "priority": "P5",
+  "stage": "archive",
+  "title": "备份、旧版、备用与测试目录：先核对用途（1/8）",
+  "status": "completed",
+  "action": "audit_then_enhance_if_used",
+  "method": "audit",
+  "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
+  "depends_on": [],
+  "file_count": 48,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-817",
+  "entries": [
+    {
+      "source": "Graphics/paya_test.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 812,
+      "source_mtime_ns": 1792048556271009500,
+      "canonical_source": "Graphics/paya_test.png"
+    },
+    {
+      "source": "Graphics/Animations/fly copy.png",
+      "size": [
+        960,
+        960
+      ],
+      "source_bytes": 101814,
+      "source_mtime_ns": 1792048522849275400,
+      "canonical_source": "Graphics/Animations/fly copy.png"
+    },
+    {
+      "source": "Graphics/Animations/PRAS- Surf FG Opp - Copie.png",
+      "size": [
+        1280,
+        1152
+      ],
+      "source_bytes": 15387,
+      "source_mtime_ns": 1792048522682495900,
+      "canonical_source": "Graphics/Animations/PRAS- Surf FG Opp - Copie.png"
+    },
+    {
+      "source": "Graphics/Autotiles/ocean-SHORE - Copie.png",
+      "size": [
+        3072,
+        128
+      ],
+      "source_bytes": 23701,
+      "source_mtime_ns": 1792048523013480900,
+      "canonical_source": "Graphics/Autotiles/ocean-SHORE - Copie.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/test by rosemagwin.png",
+      "size": [
+        57,
+        78
+      ],
+      "source_bytes": 566,
+      "source_mtime_ns": 1792048527020245000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/test by rosemagwin.png"
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/test by Supercalifragilistic#8703.png",
+      "size": [
+        167,
+        114
+      ],
+      "source_bytes": 2800,
+      "source_mtime_ns": 1792048527019728000,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/test by Supercalifragilistic#8703.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused_message.png",
+      "size": [
+        512,
+        96
+      ],
+      "source_bytes": 578,
+      "source_mtime_ns": 1792048528794463000,
+      "canonical_source": "Graphics/Battlebacks/unused_message.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgCave2.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 22369,
+      "source_mtime_ns": 1792048527631400600,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgCave2.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgCave3.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 8307,
+      "source_mtime_ns": 1792048527632400500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgCave3.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgChampion.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 9012,
+      "source_mtime_ns": 1792048527632400500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgChampion.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteA.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 16335,
+      "source_mtime_ns": 1792048527632400500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteA.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteB.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 17670,
+      "source_mtime_ns": 1792048527633400400,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteB.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteC.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 17975,
+      "source_mtime_ns": 1792048527641399500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteC.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteD.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 17284,
+      "source_mtime_ns": 1792048527642400600,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/battlebgEliteD.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Beach.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 60063,
+      "source_mtime_ns": 1792048527578888100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Beach.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/beach_eve.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 20647,
+      "source_mtime_ns": 1792048527642400600,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/beach_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/beach_night.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 46561,
+      "source_mtime_ns": 1792048527649402800,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/beach_night.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Blaine.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 66761,
+      "source_mtime_ns": 1792048527579888100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Blaine.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Bridge.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 69640,
+      "source_mtime_ns": 1792048527579888100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Bridge.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Bridge_eve.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 72654,
+      "source_mtime_ns": 1792048527580887500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Bridge_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Bridge_night.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 70798,
+      "source_mtime_ns": 1792048527585884100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Bridge_night.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Brock.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 49173,
+      "source_mtime_ns": 1792048527586885200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Brock.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Cave1.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 57834,
+      "source_mtime_ns": 1792048527587885600,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Cave1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Cave.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 57834,
+      "source_mtime_ns": 1792048527586885200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Cave.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/CaveDark.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 43493,
+      "source_mtime_ns": 1792048527587885600,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/CaveDark.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/CaveIce.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 60626,
+      "source_mtime_ns": 1792048527588886200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/CaveIce.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Champion.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 68601,
+      "source_mtime_ns": 1792048527588886200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Champion.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Chuck.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 30568,
+      "source_mtime_ns": 1792048527588886200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Chuck.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/City.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 19216,
+      "source_mtime_ns": 1792048527589885900,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/City.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/City_eve.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 21638,
+      "source_mtime_ns": 1792048527589885900,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/City_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/City_night.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 36140,
+      "source_mtime_ns": 1792048527590885000,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/City_night.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Cosmic.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 17326,
+      "source_mtime_ns": 1792048527591280500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Cosmic.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Cyber.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 148738,
+      "source_mtime_ns": 1792048527591850100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Cyber.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/DarkGym - Copy.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 38451,
+      "source_mtime_ns": 1792048527592369700,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/DarkGym - Copy.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/DarkGym.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 38450,
+      "source_mtime_ns": 1792048527592900500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/DarkGym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Deserty.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 25769,
+      "source_mtime_ns": 1792048527593405200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Deserty.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/EliteA.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 77985,
+      "source_mtime_ns": 1792048527593979200,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/EliteA.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/EliteB.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 71915,
+      "source_mtime_ns": 1792048527594502100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/EliteB.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/EliteC.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 75541,
+      "source_mtime_ns": 1792048527595024700,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/EliteC.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/EliteD.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 73345,
+      "source_mtime_ns": 1792048527595547500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/EliteD.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Erika.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 93191,
+      "source_mtime_ns": 1792048527596069500,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Erika.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Field.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 65039,
+      "source_mtime_ns": 1792048527596585900,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Field.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Field_eve.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 70276,
+      "source_mtime_ns": 1792048527597104300,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Field_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Field_night.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 53364,
+      "source_mtime_ns": 1792048527597649700,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Field_night.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/FlyingGym.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 35920,
+      "source_mtime_ns": 1792048527598169100,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/FlyingGym.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Forest.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 61282,
+      "source_mtime_ns": 1792048527598722900,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Forest.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Forest_eve.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 58178,
+      "source_mtime_ns": 1792048527601653600,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Forest_eve.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/battlebg/backup/Forest_night.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 63550,
+      "source_mtime_ns": 1792048527602179300,
+      "canonical_source": "Graphics/Battlebacks/battlebg/backup/Forest_night.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
+  ],
+  "result": "output/texture-hd/batch-817/validation.json",
+  "applied_files": 0,
+  "preserved_files": 48
+}

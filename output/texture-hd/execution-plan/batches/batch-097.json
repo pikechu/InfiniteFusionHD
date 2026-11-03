@@ -1,0 +1,192 @@
+{
+  "id": "batch-097",
+  "number": 97,
+  "priority": "P2",
+  "stage": "ui_map",
+  "title": "地区地图、导航、帮助与训练师卡（4/9）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-096"
+  ],
+  "file_count": 13,
+  "catalogs_to_check_and_update": [
+    "Data/localization/zh-CN-images.json"
+  ],
+  "destination": "output/texture-hd/batch-097",
+  "entries": [
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog13.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 351235,
+      "source_mtime_ns": 1793075475480857200,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog13.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog13.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog13.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog13.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 350545,
+      "source_mtime_ns": 1792048548433587100,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog13.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog13.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog13.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog14.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 352316,
+      "source_mtime_ns": 1793075475682773500,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog14.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog14.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog14.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog14.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 351571,
+      "source_mtime_ns": 1792048548435589800,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog14.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog14.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog14.png"
+      }
+    },
+    {
+      "source": "Graphics/Chinese/Pictures/map/mapRegion0_prog15.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 352783,
+      "source_mtime_ns": 1793075476013996800,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog15.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog15.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog15.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/map/mapRegion0_prog15.png",
+      "size": [
+        736,
+        512
+      ],
+      "source_bytes": 351977,
+      "source_mtime_ns": 1792048548437586700,
+      "canonical_source": "Graphics/Pictures/map/mapRegion0_prog15.png",
+      "language_pair": {
+        "original": "Graphics/Pictures/map/mapRegion0_prog15.png",
+        "chinese": "Graphics/Chinese/Pictures/map/mapRegion0_prog15.png"
+      }
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/bg.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2552,
+      "source_mtime_ns": 1792048547404105600,
+      "canonical_source": "Graphics/Pictures/Pokegear/bg.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/bg_f.png",
+      "size": [
+        512,
+        384
+      ],
+      "source_bytes": 2555,
+      "source_mtime_ns": 1792048547404105600,
+      "canonical_source": "Graphics/Pictures/Pokegear/bg_f.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/icon_button.png",
+      "size": [
+        276,
+        104
+      ],
+      "source_bytes": 961,
+      "source_mtime_ns": 1792048547404105600,
+      "canonical_source": "Graphics/Pictures/Pokegear/icon_button.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/icon_button_f.png",
+      "size": [
+        276,
+        104
+      ],
+      "source_bytes": 970,
+      "source_mtime_ns": 1792048547405109400,
+      "canonical_source": "Graphics/Pictures/Pokegear/icon_button_f.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/icon_jukebox.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 412,
+      "source_mtime_ns": 1792048547411106100,
+      "canonical_source": "Graphics/Pictures/Pokegear/icon_jukebox.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/icon_map.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 453,
+      "source_mtime_ns": 1792048547412110100,
+      "canonical_source": "Graphics/Pictures/Pokegear/icon_map.png"
+    },
+    {
+      "source": "Graphics/Pictures/Pokegear/icon_phone.png",
+      "size": [
+        40,
+        32
+      ],
+      "source_bytes": 386,
+      "source_mtime_ns": 1792048547412110100,
+      "canonical_source": "Graphics/Pictures/Pokegear/icon_phone.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-097/validation.json",
+  "applied_files": 0,
+  "preserved_files": 13
+}

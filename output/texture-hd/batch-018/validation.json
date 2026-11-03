@@ -1,0 +1,28 @@
+{
+  "batch": "batch-018",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 1,
+  "entries": [
+    {
+      "source": "Graphics/Tilesets/Bike shop interior.PNG",
+      "status": "preserved",
+      "size": [
+        256,
+        320
+      ],
+      "sha256": "985fa8bc621c943a77a3c878c2239e1016ae45697bf48aabd8e57f110657a363",
+      "reason": "No reference in any of the 809 production maps. Preserve this inactive source; no visible gameplay clarity benefit.",
+      "assigned_map_count": 0,
+      "actual_map_count": 0
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p1-evidence/map-scope-audit.json",
+    "output/texture-hd/p1-evidence/native-maps/after-result.txt",
+    "output/texture-hd/p1-evidence/native-autotiles/result.txt"
+  ],
+  "validation_scope": "Original-size visual comparison; 27 native map views; 15 autotile sources, 269 frames and 48 assembly patterns per frame. No complete gameplay or Android device regression."
+}

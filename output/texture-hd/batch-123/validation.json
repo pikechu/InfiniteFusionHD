@@ -1,0 +1,914 @@
+{
+  "batch": "batch-123",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 32,
+  "candidate_pending_review": 0,
+  "entries": [
+    {
+      "source": "Graphics/BaseSprites/100.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4244,
+      "source_mtime_ns": 1792048523018201700,
+      "canonical_source": "Graphics/BaseSprites/100.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "93fb52874d5a823e44b849b86649337c6f23dc35f1607a2f45f84400a57d43a6",
+      "pixel_sha256": "ef79ac769c6e5531a7df00be2d50ecdd12fe315ab8a19a6a7bf90eea39ec0709",
+      "colors": 12,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "79473c7c725c00760ce7c8d3f39247c9c5a36969bd56dfaf4f9c9c9f8a9a4c60",
+      "bounds": [
+        105,
+        105,
+        183,
+        183
+      ],
+      "status": "preserved",
+      "reason": "编号 100 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/100/100.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4244,
+      "source_mtime_ns": 1792048528799463700,
+      "canonical_source": "Graphics/Battlers/100/100.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "93fb52874d5a823e44b849b86649337c6f23dc35f1607a2f45f84400a57d43a6",
+      "pixel_sha256": "ef79ac769c6e5531a7df00be2d50ecdd12fe315ab8a19a6a7bf90eea39ec0709",
+      "colors": 12,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "79473c7c725c00760ce7c8d3f39247c9c5a36969bd56dfaf4f9c9c9f8a9a4c60",
+      "bounds": [
+        105,
+        105,
+        183,
+        183
+      ],
+      "status": "preserved",
+      "reason": "编号 100 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/101.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4449,
+      "source_mtime_ns": 1792048523030221400,
+      "canonical_source": "Graphics/BaseSprites/101.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "bd7a49940637ddea9180a5367b03bbd17a1b5cab272c145fbf3a30c2b8d3007d",
+      "pixel_sha256": "47a5b21521356b1e86376b79c008fe4f259badd746fed5928448a6f4c226d734",
+      "colors": 12,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "33167e534d25522dbe09f13ed0291b369df49317d8ac714a2e38f9a9517effd3",
+      "bounds": [
+        75,
+        75,
+        213,
+        213
+      ],
+      "status": "preserved",
+      "reason": "编号 101 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/101/101.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4449,
+      "source_mtime_ns": 1792048528799463700,
+      "canonical_source": "Graphics/Battlers/101/101.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "bd7a49940637ddea9180a5367b03bbd17a1b5cab272c145fbf3a30c2b8d3007d",
+      "pixel_sha256": "47a5b21521356b1e86376b79c008fe4f259badd746fed5928448a6f4c226d734",
+      "colors": 12,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "33167e534d25522dbe09f13ed0291b369df49317d8ac714a2e38f9a9517effd3",
+      "bounds": [
+        75,
+        75,
+        213,
+        213
+      ],
+      "status": "preserved",
+      "reason": "编号 101 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/102.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4476,
+      "source_mtime_ns": 1792048523031241100,
+      "canonical_source": "Graphics/BaseSprites/102.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "5896796988c7a5a5ebb08f20e704085ba69959c0fa6ec3a0364c940bcf245b02",
+      "pixel_sha256": "26b1d1d6816e92982dd222ca845fa99fa7757cc77f50a6483f9a087f503d7362",
+      "colors": 11,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "100371abb1902a4e4c4af187c40d83953e6b44dcedef69c428802b847e45d7eb",
+      "bounds": [
+        69,
+        85,
+        219,
+        202
+      ],
+      "status": "preserved",
+      "reason": "编号 102 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/102/102.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4476,
+      "source_mtime_ns": 1792048528799463700,
+      "canonical_source": "Graphics/Battlers/102/102.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "5896796988c7a5a5ebb08f20e704085ba69959c0fa6ec3a0364c940bcf245b02",
+      "pixel_sha256": "26b1d1d6816e92982dd222ca845fa99fa7757cc77f50a6483f9a087f503d7362",
+      "colors": 11,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "100371abb1902a4e4c4af187c40d83953e6b44dcedef69c428802b847e45d7eb",
+      "bounds": [
+        69,
+        85,
+        219,
+        202
+      ],
+      "status": "preserved",
+      "reason": "编号 102 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/103.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4900,
+      "source_mtime_ns": 1792048523033242000,
+      "canonical_source": "Graphics/BaseSprites/103.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "ed6c2d3ce692fc4b7eed49ecb1185f5d9f732729665f2891366bef8014db27ab",
+      "pixel_sha256": "e329bcf1517b9c92445ab156fdb5605be31e3138a68020c72584b79d454eadd5",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "d90b5dea248f65a46a793cb8891ffd74602bf19782b82e9e9a60bbae1de19272",
+      "bounds": [
+        51,
+        45,
+        240,
+        255
+      ],
+      "status": "preserved",
+      "reason": "编号 103 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/103/103.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4900,
+      "source_mtime_ns": 1792048528800464900,
+      "canonical_source": "Graphics/Battlers/103/103.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "ed6c2d3ce692fc4b7eed49ecb1185f5d9f732729665f2891366bef8014db27ab",
+      "pixel_sha256": "e329bcf1517b9c92445ab156fdb5605be31e3138a68020c72584b79d454eadd5",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "d90b5dea248f65a46a793cb8891ffd74602bf19782b82e9e9a60bbae1de19272",
+      "bounds": [
+        51,
+        45,
+        240,
+        255
+      ],
+      "status": "preserved",
+      "reason": "编号 103 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/104.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4851,
+      "source_mtime_ns": 1792048523035281800,
+      "canonical_source": "Graphics/BaseSprites/104.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "2ca96b0f3f7fb92338041d3041f603735b189d7c38b05fb2a8f2f7394245c0f9",
+      "pixel_sha256": "3ca4b430b6bb7d28d11ede68376f81db978800578e7e4ed3f9c3ba6efa8c3cee",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "f7ffa35b680fcf8a8be7f7402bfbfa2e44e9ad2154c669cfe52ab5a586b2f94b",
+      "bounds": [
+        90,
+        102,
+        186,
+        216
+      ],
+      "status": "preserved",
+      "reason": "编号 104 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/104/104.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4851,
+      "source_mtime_ns": 1792048528800464900,
+      "canonical_source": "Graphics/Battlers/104/104.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "2ca96b0f3f7fb92338041d3041f603735b189d7c38b05fb2a8f2f7394245c0f9",
+      "pixel_sha256": "3ca4b430b6bb7d28d11ede68376f81db978800578e7e4ed3f9c3ba6efa8c3cee",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "f7ffa35b680fcf8a8be7f7402bfbfa2e44e9ad2154c669cfe52ab5a586b2f94b",
+      "bounds": [
+        90,
+        102,
+        186,
+        216
+      ],
+      "status": "preserved",
+      "reason": "编号 104 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/105.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3289,
+      "source_mtime_ns": 1792048523047676400,
+      "canonical_source": "Graphics/BaseSprites/105.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "46ef23ab18665e50bafe1d780615fa586cf83888dbd801edb31ddfdbd6e865af",
+      "pixel_sha256": "30000cefe6a715dbb886b244d558d6fe7b2bb849ba23a57764cab87b470f3899",
+      "colors": 30,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "fc53a8488b00930a52ea8b1abdc550323a1976695f29864b35e4b0ff37e392f5",
+      "bounds": [
+        57,
+        40,
+        225,
+        226
+      ],
+      "status": "preserved",
+      "reason": "编号 105 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/105/105.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3289,
+      "source_mtime_ns": 1792048528817754900,
+      "canonical_source": "Graphics/Battlers/105/105.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "46ef23ab18665e50bafe1d780615fa586cf83888dbd801edb31ddfdbd6e865af",
+      "pixel_sha256": "30000cefe6a715dbb886b244d558d6fe7b2bb849ba23a57764cab87b470f3899",
+      "colors": 30,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "fc53a8488b00930a52ea8b1abdc550323a1976695f29864b35e4b0ff37e392f5",
+      "bounds": [
+        57,
+        40,
+        225,
+        226
+      ],
+      "status": "preserved",
+      "reason": "编号 105 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/106.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4798,
+      "source_mtime_ns": 1792048523049412000,
+      "canonical_source": "Graphics/BaseSprites/106.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "2159cb9f7a27d272235e21a873c7b56fd4af0dc5b55596f0673748894739babf",
+      "pixel_sha256": "d31f42ed0e9147126b71a179ea346ba5a64a2e8a705fdd696461218421cf6ff1",
+      "colors": 16,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "188d637e6e255f2e84390f4101492e29bdbe74c3b371cd9d3b26217bc05c34ca",
+      "bounds": [
+        66,
+        78,
+        225,
+        240
+      ],
+      "status": "preserved",
+      "reason": "编号 106 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/106/106.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4798,
+      "source_mtime_ns": 1792048528818755700,
+      "canonical_source": "Graphics/Battlers/106/106.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "2159cb9f7a27d272235e21a873c7b56fd4af0dc5b55596f0673748894739babf",
+      "pixel_sha256": "d31f42ed0e9147126b71a179ea346ba5a64a2e8a705fdd696461218421cf6ff1",
+      "colors": 16,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "188d637e6e255f2e84390f4101492e29bdbe74c3b371cd9d3b26217bc05c34ca",
+      "bounds": [
+        66,
+        78,
+        225,
+        240
+      ],
+      "status": "preserved",
+      "reason": "编号 106 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/107.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4425,
+      "source_mtime_ns": 1792048523051639600,
+      "canonical_source": "Graphics/BaseSprites/107.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "70ddd001ca2f4b7db25646389b27753c9cbb518af059a63f20e41f4c4346aa4e",
+      "pixel_sha256": "464c2744e6f46cd3d8aaee66ac866652abbc866ab8f8052c0f369ff903d7c50c",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "c751c7c34c6f57e3321c42317feca662fafa2a5c89aa6d441fcf692d27d9cb32",
+      "bounds": [
+        81,
+        60,
+        210,
+        228
+      ],
+      "status": "preserved",
+      "reason": "编号 107 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/107/107.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4425,
+      "source_mtime_ns": 1792048528819755200,
+      "canonical_source": "Graphics/Battlers/107/107.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "70ddd001ca2f4b7db25646389b27753c9cbb518af059a63f20e41f4c4346aa4e",
+      "pixel_sha256": "464c2744e6f46cd3d8aaee66ac866652abbc866ab8f8052c0f369ff903d7c50c",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "c751c7c34c6f57e3321c42317feca662fafa2a5c89aa6d441fcf692d27d9cb32",
+      "bounds": [
+        81,
+        60,
+        210,
+        228
+      ],
+      "status": "preserved",
+      "reason": "编号 107 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/108.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2153,
+      "source_mtime_ns": 1792048523057057900,
+      "canonical_source": "Graphics/BaseSprites/108.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "6ff2b72cdffefc7ddc5efe3f382dece09fc4e3f686ba8aff0d3951a39980f942",
+      "pixel_sha256": "7addfb5d26a4e6cb38d2dbc4389c0904a8ae53efa0c5932b605966894d5801da",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "f5c08b9661a983fb55ba21fbc46507f42d34dc4f4e9c5847f36bf53ad34278f2",
+      "bounds": [
+        57,
+        57,
+        228,
+        231
+      ],
+      "status": "preserved",
+      "reason": "编号 108 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/108/108.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2153,
+      "source_mtime_ns": 1792048528819755200,
+      "canonical_source": "Graphics/Battlers/108/108.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "6ff2b72cdffefc7ddc5efe3f382dece09fc4e3f686ba8aff0d3951a39980f942",
+      "pixel_sha256": "7addfb5d26a4e6cb38d2dbc4389c0904a8ae53efa0c5932b605966894d5801da",
+      "colors": 15,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "f5c08b9661a983fb55ba21fbc46507f42d34dc4f4e9c5847f36bf53ad34278f2",
+      "bounds": [
+        57,
+        57,
+        228,
+        231
+      ],
+      "status": "preserved",
+      "reason": "编号 108 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/109.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4758,
+      "source_mtime_ns": 1792048523059058500,
+      "canonical_source": "Graphics/BaseSprites/109.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "79a8dbae33df89fa734db9418d748b4ae6b56f2629c317a3422385cbdbf8f3c7",
+      "pixel_sha256": "9720d814a97b6defec19d987f5bc7d5bec6abce5e76680a5ec6e0bd5b7bf7e03",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "dbb98201f428ac457b0ec088f762d03253d81d9de9359aaf7b2f72825f8a3712",
+      "bounds": [
+        45,
+        63,
+        240,
+        222
+      ],
+      "status": "preserved",
+      "reason": "编号 109 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/109/109.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4758,
+      "source_mtime_ns": 1792048528819755200,
+      "canonical_source": "Graphics/Battlers/109/109.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "79a8dbae33df89fa734db9418d748b4ae6b56f2629c317a3422385cbdbf8f3c7",
+      "pixel_sha256": "9720d814a97b6defec19d987f5bc7d5bec6abce5e76680a5ec6e0bd5b7bf7e03",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "dbb98201f428ac457b0ec088f762d03253d81d9de9359aaf7b2f72825f8a3712",
+      "bounds": [
+        45,
+        63,
+        240,
+        222
+      ],
+      "status": "preserved",
+      "reason": "编号 109 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/110.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 5371,
+      "source_mtime_ns": 1792048523069903000,
+      "canonical_source": "Graphics/BaseSprites/110.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "dc8824d73ce71607d77e61d443c289558d61320484efc432e91e37ee73365f61",
+      "pixel_sha256": "18bc325613b0ded14de21d398effc1b4dd886a411f241f35be87ab618039297d",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3c83bc342c4c2d8e9ed0022e955dbce7dce01fbaaa4e1d28bab8b6d37cc97418",
+      "bounds": [
+        63,
+        66,
+        222,
+        222
+      ],
+      "status": "preserved",
+      "reason": "编号 110 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/110/110.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 5371,
+      "source_mtime_ns": 1792048528820756300,
+      "canonical_source": "Graphics/Battlers/110/110.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "dc8824d73ce71607d77e61d443c289558d61320484efc432e91e37ee73365f61",
+      "pixel_sha256": "18bc325613b0ded14de21d398effc1b4dd886a411f241f35be87ab618039297d",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "3c83bc342c4c2d8e9ed0022e955dbce7dce01fbaaa4e1d28bab8b6d37cc97418",
+      "bounds": [
+        63,
+        66,
+        222,
+        222
+      ],
+      "status": "preserved",
+      "reason": "编号 110 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/111.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 5757,
+      "source_mtime_ns": 1792048523071967400,
+      "canonical_source": "Graphics/BaseSprites/111.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "139263c895807439da1cba0b5abd3c627bc6a0cbcbfe37a317694e4b8ba151f1",
+      "pixel_sha256": "aa63d4d5e28415d5406c0989a193d6a00fc56e84d221d06ac7e75b360341b40b",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "cc831426a5427f12457426a9540af27de24f70da4b64ae81c87e7213290ac18e",
+      "bounds": [
+        54,
+        81,
+        246,
+        273
+      ],
+      "status": "preserved",
+      "reason": "编号 111 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/111/111.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 5757,
+      "source_mtime_ns": 1792048528820756300,
+      "canonical_source": "Graphics/Battlers/111/111.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "139263c895807439da1cba0b5abd3c627bc6a0cbcbfe37a317694e4b8ba151f1",
+      "pixel_sha256": "aa63d4d5e28415d5406c0989a193d6a00fc56e84d221d06ac7e75b360341b40b",
+      "colors": 10,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "cc831426a5427f12457426a9540af27de24f70da4b64ae81c87e7213290ac18e",
+      "bounds": [
+        54,
+        81,
+        246,
+        273
+      ],
+      "status": "preserved",
+      "reason": "编号 111 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/112.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2996,
+      "source_mtime_ns": 1792048523072486500,
+      "canonical_source": "Graphics/BaseSprites/112.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "44074e94ee291d612ecb8fef859f9810324af46a66f7f4e8eb04edcdd8c5dd65",
+      "pixel_sha256": "85e5b7d97c42cc667e516489c4ea9b457caf8587829740d6863b1c6ff4651872",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "812cc8306b56aba2d3b08ec082fe030c7a0a59f078792fce2efb89d51ad60464",
+      "bounds": [
+        21,
+        42,
+        267,
+        246
+      ],
+      "status": "preserved",
+      "reason": "编号 112 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/112/112.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4094,
+      "source_mtime_ns": 1792048528821754900,
+      "canonical_source": "Graphics/Battlers/112/112.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "d309ae34b8f34f42b9415b4b53dfd7ed9761c7347ef0e09f1c150d849ad73b2c",
+      "pixel_sha256": "2eeef225764b96466b9a439eb70e6b7b277f7a45131b8e9a8d212439cf0d5d91",
+      "colors": 22,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "2b3215e5146ab9d04aaf9030daf4482d65d4694a9c4c09da2244d4753704d3b1",
+      "bounds": [
+        21,
+        42,
+        267,
+        246
+      ],
+      "status": "preserved",
+      "reason": "编号 112 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/113.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2295,
+      "source_mtime_ns": 1792048523073523800,
+      "canonical_source": "Graphics/BaseSprites/113.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "e3c1163e8bc8cbea7125083ce3ba41298d507f2d736e2941e7933e6b5aebb5b9",
+      "pixel_sha256": "3c57d243ac6678e104047eb5aaa1c6de7e960138025485d747fa378fcb8e47c6",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "88c9232c821e884fbb9f040de7d83e9409a717c3aaba2acab79b77adda329bd8",
+      "bounds": [
+        66,
+        108,
+        219,
+        237
+      ],
+      "status": "preserved",
+      "reason": "编号 113 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/113/113.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2295,
+      "source_mtime_ns": 1792048528821754900,
+      "canonical_source": "Graphics/Battlers/113/113.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "e3c1163e8bc8cbea7125083ce3ba41298d507f2d736e2941e7933e6b5aebb5b9",
+      "pixel_sha256": "3c57d243ac6678e104047eb5aaa1c6de7e960138025485d747fa378fcb8e47c6",
+      "colors": 13,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "88c9232c821e884fbb9f040de7d83e9409a717c3aaba2acab79b77adda329bd8",
+      "bounds": [
+        66,
+        108,
+        219,
+        237
+      ],
+      "status": "preserved",
+      "reason": "编号 113 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/114.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 5810,
+      "source_mtime_ns": 1792048523097143100,
+      "canonical_source": "Graphics/BaseSprites/114.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "e34a172a736ba01aa61920464f621082e04ebfea4b4f7a826b258ddadd341f0d",
+      "pixel_sha256": "795cddeeb4d4455b4cdef188624c180293b6d73659b1a06a1c417ba367beaf31",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "57ed83c859dca410ecfd5cafed8d6a84a4de0b17428de10d6f0c5ff662de58e4",
+      "bounds": [
+        75,
+        72,
+        213,
+        219
+      ],
+      "status": "preserved",
+      "reason": "编号 114 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/114/114.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 5810,
+      "source_mtime_ns": 1792048528822756000,
+      "canonical_source": "Graphics/Battlers/114/114.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "e34a172a736ba01aa61920464f621082e04ebfea4b4f7a826b258ddadd341f0d",
+      "pixel_sha256": "795cddeeb4d4455b4cdef188624c180293b6d73659b1a06a1c417ba367beaf31",
+      "colors": 14,
+      "encoded_frames": 1,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_sha256": "57ed83c859dca410ecfd5cafed8d6a84a4de0b17428de10d6f0c5ff662de58e4",
+      "bounds": [
+        75,
+        72,
+        213,
+        219
+      ],
+      "status": "preserved",
+      "reason": "编号 114 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/BaseSprites/115.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3032,
+      "source_mtime_ns": 1792048523118265000,
+      "canonical_source": "Graphics/BaseSprites/115.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "e60616a35913d0282b25aeacc38ee523816ccf0b869351a81dc12abd725f67c3",
+      "pixel_sha256": "91bf5b4dad2f9ffad8e478f6110f8892d8850666772efc9913dd6623bbd4345c",
+      "colors": 17,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "f1f43e4fbea60177eabc9f3a07d125643ab0a293ca8d45ad1d6bd5287fe3bb27",
+      "bounds": [
+        18,
+        21,
+        255,
+        261
+      ],
+      "status": "preserved",
+      "reason": "编号 115 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    },
+    {
+      "source": "Graphics/Battlers/115/115.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3032,
+      "source_mtime_ns": 1792048528822756000,
+      "canonical_source": "Graphics/Battlers/115/115.png",
+      "batch": "batch-123",
+      "stage": "pokemon_main",
+      "method": "pokemon",
+      "sha256": "e60616a35913d0282b25aeacc38ee523816ccf0b869351a81dc12abd725f67c3",
+      "pixel_sha256": "91bf5b4dad2f9ffad8e478f6110f8892d8850666772efc9913dd6623bbd4345c",
+      "colors": 17,
+      "encoded_frames": 1,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_sha256": "f1f43e4fbea60177eabc9f3a07d125643ab0a293ca8d45ad1d6bd5287fe3bb27",
+      "bounds": [
+        18,
+        21,
+        255,
+        261
+      ],
+      "status": "preserved",
+      "reason": "编号 115 的默认物种图已逐张查看；原尺寸有限调色像素画的轮廓、配色和姿态清楚。逐像素透明轮廓约束下，新增内部纹理不能消除原有像素边界，且可能产生错误物种细节，因此保留原图。实际前/后面加载、指标锚点、镜像及完整选择/闪烁周期见原生记录；两个目录分别记账，相同像素副本复用审查，不同像素版本分别查看。它们不被假定为正背面配对。"
+    }
+  ],
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p2-evidence/remaining/battle-review.json",
+    "output/texture-hd/p2-remaining-work/visual-review.json"
+  ],
+  "validation_scope": "All 917 default Pokemon source files and 130 trainer files unchanged. Actual PokemonBattlerSprite front/back metrics, mirror, complete 24-update selection bob/target blink cycles; representative existing shiny conversion. Native trainer sheet decodes and full legacy throwing PictureEx sequence; current player uses a layered front portrait. Not a complete battle/move-effect playthrough or all shiny settings.",
+  "byte_identity_guarantee": "Source and delivery equal the audited original. Therefore every frame, state, tint input and consumer output remains identical for the same engine inputs; native checks additionally inspect the relevant actual consumers. No accepted redraw in this batch."
+}

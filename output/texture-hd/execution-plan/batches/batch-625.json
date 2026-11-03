@@ -1,0 +1,110 @@
+{
+  "id": "batch-625",
+  "number": 625,
+  "priority": "P4",
+  "stage": "effects",
+  "title": "招式与战斗特效帧表（4/116）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "effect",
+  "processing_notes": "核对帧格、切片、透明度、色调与混合方式，逐帧增强；验收播放速度、闪烁、遮挡与循环。",
+  "depends_on": [
+    "batch-624"
+  ],
+  "file_count": 8,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-625",
+  "entries": [
+    {
+      "source": "Graphics/Animations/block.png",
+      "size": [
+        960,
+        384
+      ],
+      "source_bytes": 15231,
+      "source_mtime_ns": 1792048522719173700,
+      "canonical_source": "Graphics/Animations/block.png"
+    },
+    {
+      "source": "Graphics/Animations/bw_cut_anim.png",
+      "size": [
+        768,
+        609
+      ],
+      "source_bytes": 3028,
+      "source_mtime_ns": 1792048522719173700,
+      "canonical_source": "Graphics/Animations/bw_cut_anim.png"
+    },
+    {
+      "source": "Graphics/Animations/confused.png",
+      "size": [
+        960,
+        960
+      ],
+      "source_bytes": 16966,
+      "source_mtime_ns": 1792048522720174200,
+      "canonical_source": "Graphics/Animations/confused.png"
+    },
+    {
+      "source": "Graphics/Animations/Cosmo-01.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 409652,
+      "source_mtime_ns": 1792048522211143300,
+      "canonical_source": "Graphics/Animations/Cosmo-01.png"
+    },
+    {
+      "source": "Graphics/Animations/Crunch.png",
+      "size": [
+        768,
+        960
+      ],
+      "source_bytes": 7501,
+      "source_mtime_ns": 1792048522211143300,
+      "canonical_source": "Graphics/Animations/Crunch.png"
+    },
+    {
+      "source": "Graphics/Animations/Divine_Smash.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 224635,
+      "source_mtime_ns": 1792048522212697400,
+      "canonical_source": "Graphics/Animations/Divine_Smash.png"
+    },
+    {
+      "source": "Graphics/Animations/dragon claw.png",
+      "size": [
+        960,
+        576
+      ],
+      "source_bytes": 8692,
+      "source_mtime_ns": 1792048522720174200,
+      "canonical_source": "Graphics/Animations/dragon claw.png"
+    },
+    {
+      "source": "Graphics/Animations/Dragon_Claw.png",
+      "size": [
+        768,
+        960
+      ],
+      "source_bytes": 8403,
+      "source_mtime_ns": 1792048522213212200,
+      "canonical_source": "Graphics/Animations/Dragon_Claw.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对格数、顺序、混合与透明度；实际播放检查闪烁、速度、遮挡和循环。"
+  ],
+  "result": "output/texture-hd/batch-625/validation.json",
+  "applied_files": 0,
+  "preserved_files": 8
+}

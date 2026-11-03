@@ -1,0 +1,276 @@
+{
+  "id": "batch-089",
+  "number": 89,
+  "priority": "P2",
+  "stage": "ui_dex",
+  "title": "图鉴、仓库与命名界面（13/17）",
+  "status": "completed",
+  "action": "enhance_with_validation",
+  "method": "ui",
+  "processing_notes": "先识别文字、按钮、图标和切片区，保护文字原像素与布局，仅增强背景和装饰；中文与原版同步检查。",
+  "depends_on": [
+    "batch-058",
+    "batch-059",
+    "batch-060",
+    "batch-061",
+    "batch-062",
+    "batch-063",
+    "batch-088"
+  ],
+  "file_count": 24,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-089",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/Storage/box_126.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 42043,
+      "source_mtime_ns": 1792048547456003100,
+      "canonical_source": "Graphics/Pictures/Storage/box_126.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_127.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 109860,
+      "source_mtime_ns": 1792048547456518100,
+      "canonical_source": "Graphics/Pictures/Storage/box_127.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_128.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 97385,
+      "source_mtime_ns": 1792048547457033300,
+      "canonical_source": "Graphics/Pictures/Storage/box_128.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_129.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 58049,
+      "source_mtime_ns": 1792048547457581300,
+      "canonical_source": "Graphics/Pictures/Storage/box_129.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_130.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 25519,
+      "source_mtime_ns": 1792048547458642800,
+      "canonical_source": "Graphics/Pictures/Storage/box_130.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_131.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 139288,
+      "source_mtime_ns": 1792048547461193600,
+      "canonical_source": "Graphics/Pictures/Storage/box_131.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_132.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 11415,
+      "source_mtime_ns": 1792048547461193600,
+      "canonical_source": "Graphics/Pictures/Storage/box_132.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_133.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 115434,
+      "source_mtime_ns": 1792048547462198800,
+      "canonical_source": "Graphics/Pictures/Storage/box_133.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_134.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 118032,
+      "source_mtime_ns": 1792048547463198900,
+      "canonical_source": "Graphics/Pictures/Storage/box_134.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_135.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 21758,
+      "source_mtime_ns": 1792048547463198900,
+      "canonical_source": "Graphics/Pictures/Storage/box_135.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_136.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 57985,
+      "source_mtime_ns": 1792048547463198900,
+      "canonical_source": "Graphics/Pictures/Storage/box_136.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_137.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 18141,
+      "source_mtime_ns": 1792048547464198100,
+      "canonical_source": "Graphics/Pictures/Storage/box_137.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_138.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 17631,
+      "source_mtime_ns": 1792048547464198100,
+      "canonical_source": "Graphics/Pictures/Storage/box_138.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_139.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 18489,
+      "source_mtime_ns": 1792048547464198100,
+      "canonical_source": "Graphics/Pictures/Storage/box_139.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_140.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 17548,
+      "source_mtime_ns": 1792048547465199800,
+      "canonical_source": "Graphics/Pictures/Storage/box_140.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_141.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 27708,
+      "source_mtime_ns": 1792048547465199800,
+      "canonical_source": "Graphics/Pictures/Storage/box_141.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_142.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 28006,
+      "source_mtime_ns": 1792048547466199800,
+      "canonical_source": "Graphics/Pictures/Storage/box_142.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_143.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 155772,
+      "source_mtime_ns": 1792048547466199800,
+      "canonical_source": "Graphics/Pictures/Storage/box_143.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_144.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 198167,
+      "source_mtime_ns": 1792048547467198000,
+      "canonical_source": "Graphics/Pictures/Storage/box_144.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_145.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 139062,
+      "source_mtime_ns": 1792048547468197500,
+      "canonical_source": "Graphics/Pictures/Storage/box_145.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_146.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 165891,
+      "source_mtime_ns": 1792048547469197700,
+      "canonical_source": "Graphics/Pictures/Storage/box_146.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_147.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 128617,
+      "source_mtime_ns": 1792048547470198500,
+      "canonical_source": "Graphics/Pictures/Storage/box_147.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_148.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 103321,
+      "source_mtime_ns": 1792048547470198500,
+      "canonical_source": "Graphics/Pictures/Storage/box_148.png"
+    },
+    {
+      "source": "Graphics/Pictures/Storage/box_149.png",
+      "size": [
+        324,
+        296
+      ],
+      "source_bytes": 118197,
+      "source_mtime_ns": 1792048547471197300,
+      "canonical_source": "Graphics/Pictures/Storage/box_149.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "核对文字逐字内容、字号与位置、按钮区域、光标、选中状态和深浅主题；中英文分别显示。"
+  ],
+  "result": "output/texture-hd/batch-089/validation.json",
+  "applied_files": 0,
+  "preserved_files": 24
+}

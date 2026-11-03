@@ -1,0 +1,510 @@
+{
+  "id": "batch-821",
+  "number": 821,
+  "priority": "P5",
+  "stage": "archive",
+  "title": "备份、旧版、备用与测试目录：先核对用途（5/8）",
+  "status": "completed",
+  "action": "audit_then_enhance_if_used",
+  "method": "audit",
+  "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
+  "depends_on": [
+    "batch-820"
+  ],
+  "file_count": 48,
+  "catalogs_to_check_and_update": [],
+  "destination": "output/texture-hd/batch-821",
+  "entries": [
+    {
+      "source": "Graphics/Battlebacks/unused/elite1_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4730,
+      "source_mtime_ns": 1792048528640659300,
+      "canonical_source": "Graphics/Battlebacks/unused/elite1_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite2_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 505,
+      "source_mtime_ns": 1792048528641206200,
+      "canonical_source": "Graphics/Battlebacks/unused/elite2_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite2_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 654,
+      "source_mtime_ns": 1792048528641206200,
+      "canonical_source": "Graphics/Battlebacks/unused/elite2_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite2_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4830,
+      "source_mtime_ns": 1792048528641726900,
+      "canonical_source": "Graphics/Battlebacks/unused/elite2_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite3_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 505,
+      "source_mtime_ns": 1792048528641726900,
+      "canonical_source": "Graphics/Battlebacks/unused/elite3_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite3_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 635,
+      "source_mtime_ns": 1792048528660857600,
+      "canonical_source": "Graphics/Battlebacks/unused/elite3_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite3_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4676,
+      "source_mtime_ns": 1792048528662848900,
+      "canonical_source": "Graphics/Battlebacks/unused/elite3_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite4_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 505,
+      "source_mtime_ns": 1792048528664852100,
+      "canonical_source": "Graphics/Battlebacks/unused/elite4_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite4_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 655,
+      "source_mtime_ns": 1792048528665899600,
+      "canonical_source": "Graphics/Battlebacks/unused/elite4_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite4_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 5071,
+      "source_mtime_ns": 1792048528666832600,
+      "canonical_source": "Graphics/Battlebacks/unused/elite4_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite5_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 489,
+      "source_mtime_ns": 1792048528666832600,
+      "canonical_source": "Graphics/Battlebacks/unused/elite5_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite5_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 635,
+      "source_mtime_ns": 1792048528666832600,
+      "canonical_source": "Graphics/Battlebacks/unused/elite5_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite5_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 5110,
+      "source_mtime_ns": 1792048528666832600,
+      "canonical_source": "Graphics/Battlebacks/unused/elite5_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite6_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 489,
+      "source_mtime_ns": 1792048528667832500,
+      "canonical_source": "Graphics/Battlebacks/unused/elite6_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite6_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 635,
+      "source_mtime_ns": 1792048528716277400,
+      "canonical_source": "Graphics/Battlebacks/unused/elite6_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite6_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4887,
+      "source_mtime_ns": 1792048528717248300,
+      "canonical_source": "Graphics/Battlebacks/unused/elite6_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite7_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 489,
+      "source_mtime_ns": 1792048528717248300,
+      "canonical_source": "Graphics/Battlebacks/unused/elite7_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite7_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 635,
+      "source_mtime_ns": 1792048528717248300,
+      "canonical_source": "Graphics/Battlebacks/unused/elite7_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite7_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4824,
+      "source_mtime_ns": 1792048528718250500,
+      "canonical_source": "Graphics/Battlebacks/unused/elite7_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite8_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 489,
+      "source_mtime_ns": 1792048528718250500,
+      "canonical_source": "Graphics/Battlebacks/unused/elite8_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite8_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 635,
+      "source_mtime_ns": 1792048528718250500,
+      "canonical_source": "Graphics/Battlebacks/unused/elite8_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/elite8_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 5071,
+      "source_mtime_ns": 1792048528718250500,
+      "canonical_source": "Graphics/Battlebacks/unused/elite8_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 685,
+      "source_mtime_ns": 1792048528719250000,
+      "canonical_source": "Graphics/Battlebacks/unused/field_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 708,
+      "source_mtime_ns": 1792048528721248900,
+      "canonical_source": "Graphics/Battlebacks/unused/field_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 2696,
+      "source_mtime_ns": 1792048528721248900,
+      "canonical_source": "Graphics/Battlebacks/unused/field_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_eve_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 685,
+      "source_mtime_ns": 1792048528722249700,
+      "canonical_source": "Graphics/Battlebacks/unused/field_eve_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_eve_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 705,
+      "source_mtime_ns": 1792048528722249700,
+      "canonical_source": "Graphics/Battlebacks/unused/field_eve_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_eve_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 2236,
+      "source_mtime_ns": 1792048528722249700,
+      "canonical_source": "Graphics/Battlebacks/unused/field_eve_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_night_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 685,
+      "source_mtime_ns": 1792048528722249700,
+      "canonical_source": "Graphics/Battlebacks/unused/field_night_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_night_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 702,
+      "source_mtime_ns": 1792048528723248900,
+      "canonical_source": "Graphics/Battlebacks/unused/field_night_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/field_night_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 2166,
+      "source_mtime_ns": 1792048528723248900,
+      "canonical_source": "Graphics/Battlebacks/unused/field_night_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/forest_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 878,
+      "source_mtime_ns": 1792048528723248900,
+      "canonical_source": "Graphics/Battlebacks/unused/forest_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/forest_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 911,
+      "source_mtime_ns": 1792048528735485600,
+      "canonical_source": "Graphics/Battlebacks/unused/forest_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/forest_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 5130,
+      "source_mtime_ns": 1792048528735485600,
+      "canonical_source": "Graphics/Battlebacks/unused/forest_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/forest_eve_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4739,
+      "source_mtime_ns": 1792048528735485600,
+      "canonical_source": "Graphics/Battlebacks/unused/forest_eve_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/forest_night_bg.png",
+      "size": [
+        512,
+        288
+      ],
+      "source_bytes": 4147,
+      "source_mtime_ns": 1792048528736485900,
+      "canonical_source": "Graphics/Battlebacks/unused/forest_night_bg.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/glass1_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 405,
+      "source_mtime_ns": 1792048528736485900,
+      "canonical_source": "Graphics/Battlebacks/unused/glass1_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/glass1_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 505,
+      "source_mtime_ns": 1792048528736485900,
+      "canonical_source": "Graphics/Battlebacks/unused/glass1_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/glass2_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 658,
+      "source_mtime_ns": 1792048528736485900,
+      "canonical_source": "Graphics/Battlebacks/unused/glass2_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/glass2_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 691,
+      "source_mtime_ns": 1792048528737485800,
+      "canonical_source": "Graphics/Battlebacks/unused/glass2_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/grass_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 899,
+      "source_mtime_ns": 1792048528737485800,
+      "canonical_source": "Graphics/Battlebacks/unused/grass_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/grass_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 820,
+      "source_mtime_ns": 1792048528737485800,
+      "canonical_source": "Graphics/Battlebacks/unused/grass_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/grass_eve_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 898,
+      "source_mtime_ns": 1792048528737485800,
+      "canonical_source": "Graphics/Battlebacks/unused/grass_eve_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/grass_eve_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 821,
+      "source_mtime_ns": 1792048528738483200,
+      "canonical_source": "Graphics/Battlebacks/unused/grass_eve_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/grass_night_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 898,
+      "source_mtime_ns": 1792048528738483200,
+      "canonical_source": "Graphics/Battlebacks/unused/grass_night_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/grass_night_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 821,
+      "source_mtime_ns": 1792048528738483200,
+      "canonical_source": "Graphics/Battlebacks/unused/grass_night_base1.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/green1_base0.png",
+      "size": [
+        512,
+        64
+      ],
+      "source_bytes": 405,
+      "source_mtime_ns": 1792048528738483200,
+      "canonical_source": "Graphics/Battlebacks/unused/green1_base0.png"
+    },
+    {
+      "source": "Graphics/Battlebacks/unused/green1_base1.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 505,
+      "source_mtime_ns": 1792048528739483700,
+      "canonical_source": "Graphics/Battlebacks/unused/green1_base1.png"
+    }
+  ],
+  "acceptance": [
+    "核对本批全部来源文件、计划时尺寸及修改记录；发现外部变动先核对差异，不能覆盖后续工作。",
+    "每张保留原文件名、原始宽高、格式用途和逐像素透明通道；先保存原图 SHA-256、备份与生成记录。",
+    "逐张查看原尺寸前后对比；不新增、移除或移动原有主体、文字、按钮、图块与帧。",
+    "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
+    "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
+    "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
+  ],
+  "result": "output/texture-hd/batch-821/validation.json",
+  "applied_files": 0,
+  "preserved_files": 48
+}

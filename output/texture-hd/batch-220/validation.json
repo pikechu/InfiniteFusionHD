@@ -1,0 +1,898 @@
+{
+  "batch": "batch-220",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Characters/DHELMISE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5342,
+      "source_mtime_ns": 1792048530820396200,
+      "canonical_source": "Graphics/Characters/DHELMISE.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4a69b2c7d8c3fb6a2ed2a0bb1b69654d3f366639dbbe3d1914ac679edbd259c7",
+      "git_blob": "dd8cd58c76c01576a87b3f00ffe4845d614d0a08",
+      "reference_blob": "dd8cd58c76c01576a87b3f00ffe4845d614d0a08",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5bfd65901f53a7ea223dd877d7df6da163d5451cd0e9f3c366cd73bf5dac8df4",
+      "alpha_sha256": "edc930572231b016ece830679bd4c044f76db4c1d6a14ad3854cbe8b6d7f494f",
+      "bounds": [
+        10,
+        0,
+        246,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/DIANCIE.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5064,
+      "source_mtime_ns": 1792048530820912800,
+      "canonical_source": "Graphics/Characters/DIANCIE.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "e525038653aa5f65dd270f453835d25882b25066ce2b80580e5b5604c9684573",
+      "git_blob": "51c74d3f7c61a2d9a6edbc330de6c10de550d0b3",
+      "reference_blob": "51c74d3f7c61a2d9a6edbc330de6c10de550d0b3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f230035f8a22e2ef632b87eb68e0cd90eb43db9ee454863ca3ad74c15eaf8fbd",
+      "alpha_sha256": "3aa6fb38dfb6fcc6f1092178834863668457448aa58a50941b0e84bea1080bad",
+      "bounds": [
+        11,
+        10,
+        245,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/Elm_overworld_by_Knuckles.png",
+      "size": [
+        272,
+        288
+      ],
+      "source_bytes": 2406,
+      "source_mtime_ns": 1792048530820912800,
+      "canonical_source": "Graphics/Characters/Elm_overworld_by_Knuckles.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "2d2c81ddadd6bdde5465edff0be8258def46ece43aab346df4782bd3dc88973d",
+      "git_blob": "a51ff098065efde5ff59d2c7c5848a11e5d45b55",
+      "reference_blob": "a51ff098065efde5ff59d2c7c5848a11e5d45b55",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        68,
+        72
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d8ceae66e24fc6c641f48665b104eeb3adc3b7c5aa2f391d707f9f5b925688c2",
+      "alpha_sha256": "de16026a2279113cb16a6f5f7b74dd431c78df3f5c6dfe3d39cd63e0d9cc59b3",
+      "bounds": [
+        14,
+        6,
+        258,
+        284
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（68×72），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-bug.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 8711,
+      "source_mtime_ns": 1792048540707356200,
+      "canonical_source": "Graphics/Characters/expert-bug.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "f5009d1470120e34b23059ffafb907ad867e9591b6ba1641ecec6fbf36205c75",
+      "git_blob": "ba20f4974052458d2c174df1978b02a1f9440ff7",
+      "reference_blob": "ba20f4974052458d2c174df1978b02a1f9440ff7",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "f4a8e1279fa8bfc1ecaf8591c926d8168278c8339acb827d0fe63e767e7fd80c",
+      "alpha_sha256": "d9851ee56ee8d69f88128d2e2224caaeb3d681c0026aa77c40cde5a94be7be70",
+      "bounds": [
+        14,
+        18,
+        308,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-dark.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 20276,
+      "source_mtime_ns": 1792048540708353400,
+      "canonical_source": "Graphics/Characters/expert-dark.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "092ae52ebceee7ef6022ad5e2951c16475e94c40b3c54cc28b0e077043ae0796",
+      "git_blob": "fdb4caeb7b8209fc73500c1e1f21d6ae8cee065e",
+      "reference_blob": "fdb4caeb7b8209fc73500c1e1f21d6ae8cee065e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "3724f2906c4963c8cdbe5ff4811e8c518e49d244dea5781bb833db492683db5c",
+      "alpha_sha256": "e91832a0ee19f283d409c3c5eb2a676a7888150a7a5641524ba1433822d3a4b4",
+      "bounds": [
+        20,
+        20,
+        300,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-electric.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7909,
+      "source_mtime_ns": 1792048540708353400,
+      "canonical_source": "Graphics/Characters/expert-electric.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "3f8f70322219d230c936fa38af9b0e82a0c67c8e4eff8be66dacf4670c1a2a7e",
+      "git_blob": "94f852dd0aa79139b3e16ee441b8c69433ce6449",
+      "reference_blob": "94f852dd0aa79139b3e16ee441b8c69433ce6449",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "e89e67059ab4cf033cf151c2ab0481f8ac7c8910d2879f826bf069ccd189e0db",
+      "alpha_sha256": "508729a65cfcc19bc1bf620085f84bdb6c4d5ee2070f0fbb01a864bf932cff32",
+      "bounds": [
+        18,
+        15,
+        302,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-fairy.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 9127,
+      "source_mtime_ns": 1792048540708353400,
+      "canonical_source": "Graphics/Characters/expert-fairy.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "7a65968d5acc7b4b3712012090dfd54af1879ed80afffa0dd5986761e3578378",
+      "git_blob": "49b6a1f3147f82307921fc6e4a3d68e978e71663",
+      "reference_blob": "49b6a1f3147f82307921fc6e4a3d68e978e71663",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c0b2ae357a12bdbd39a670f761a222c5409b7104d77f3f91a4038354782fe830",
+      "alpha_sha256": "a3a91a3dfd8968a9c0483e2bc34d5c82b1f1997cb739a1cc75f2f893d4a3153e",
+      "bounds": [
+        14,
+        18,
+        308,
+        316
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-normal.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 8345,
+      "source_mtime_ns": 1792048540708353400,
+      "canonical_source": "Graphics/Characters/expert-normal.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "da83a6ae40aad9c24c9991f03ae493a1295f6e4372ee7293340af5cd5d225d1e",
+      "git_blob": "7e89109e7dc8dcbde6475e113069f17913126a86",
+      "reference_blob": "7e89109e7dc8dcbde6475e113069f17913126a86",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "fc069b8d8a00eabfab5d532f7473fd55c277bbe788b1676f19b615bc77e05bc4",
+      "alpha_sha256": "1047509ed8c751ca06b1fbe02592b7a12f1b6edd81f9464d8284b2a627de2050",
+      "bounds": [
+        22,
+        14,
+        298,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-poison.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 24096,
+      "source_mtime_ns": 1792048540709353300,
+      "canonical_source": "Graphics/Characters/expert-poison.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b528af69a7990cdf54282aca50598eb611433d50f40e8b15613d11d6b21fa575",
+      "git_blob": "86926004ef5eae4055b5fcc097051adf17cb7b25",
+      "reference_blob": "86926004ef5eae4055b5fcc097051adf17cb7b25",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5ee0807a866c57ce3d6a5b032d20a4effa8a6eec4164d9f7b09052636939fc28",
+      "alpha_sha256": "2749b6794c81b85f2a37972351ea88e3502c140221150fbf63818cbb7685ceaa",
+      "bounds": [
+        22,
+        18,
+        298,
+        314
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert-steel.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 6568,
+      "source_mtime_ns": 1792048540709353300,
+      "canonical_source": "Graphics/Characters/expert-steel.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "47fbc2eccdbc5affe4d8c4ba897c6ec9309a0e8b92fc0e91884cef7982d43e50",
+      "git_blob": "7c23a33767300487b5dca939d1c7a97d563404e4",
+      "reference_blob": "7c23a33767300487b5dca939d1c7a97d563404e4",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "99277c5d60e43023caa90114604c4cee05c170e6f7af24cc61badb6e92d8417a",
+      "alpha_sha256": "7505a62b5a1570b990c3ce383cb7cd8c39cc601e18a083fc1fe83e228ab65118",
+      "bounds": [
+        16,
+        16,
+        304,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert_fighting.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7823,
+      "source_mtime_ns": 1792048540709353300,
+      "canonical_source": "Graphics/Characters/expert_fighting.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "b87ba956e9f2515cac14e37136278356604ac979748092df9f91979d2c8b1f13",
+      "git_blob": "dd09c38658c6cbdbf123ee53137810c57502bc6e",
+      "reference_blob": "dd09c38658c6cbdbf123ee53137810c57502bc6e",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "19a468cc2ace9fea0c6babb94f181fe76787d1a623420b675ea52a66628d065f",
+      "alpha_sha256": "1bbb8cde35cb5204c2b44d819748718a8e004a96c438b2ed7851bf104789ed22",
+      "bounds": [
+        20,
+        22,
+        300,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/expert_ground.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 7206,
+      "source_mtime_ns": 1792048540709353300,
+      "canonical_source": "Graphics/Characters/expert_ground.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "ca583897eddfb704ed9ec2b5032eab4b036da42e6b02b245c8aec5f4c68d612e",
+      "git_blob": "199250fdcd96c9488a0933fc52489e9f1eed0012",
+      "reference_blob": "199250fdcd96c9488a0933fc52489e9f1eed0012",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "71775f7b7c0759ce70dc8ee338ce2157283f370fc6ce745220d84a4b31f6d2c3",
+      "alpha_sha256": "3d02d4fb55b4c0de6177f862d5ff46a1567aa602fd0d363dc704a53fec80614c",
+      "bounds": [
+        22,
+        12,
+        298,
+        314
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/FENNEKIN.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4527,
+      "source_mtime_ns": 1792048530821431100,
+      "canonical_source": "Graphics/Characters/FENNEKIN.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "757539102bfa573c07f1f98b4867f86856510442e9815d360645017e9e8ba457",
+      "git_blob": "7090817c71e161274bbeb3e16b7c51b5943c6aa8",
+      "reference_blob": "7090817c71e161274bbeb3e16b7c51b5943c6aa8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "730d1f9e5b324fc563eb157bcc02599b16476d4f28747a5dfdd1a7296a6d8074",
+      "alpha_sha256": "9aacac7dcfe203dd1b985c248e9cab0347172dfa8f758e4d4f4da53d001f9e92",
+      "bounds": [
+        10,
+        22,
+        248,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（64×64），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fisherman-fishing.png",
+      "size": [
+        320,
+        320
+      ],
+      "source_bytes": 32774,
+      "source_mtime_ns": 1792048540710353000,
+      "canonical_source": "Graphics/Characters/fisherman-fishing.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "f6a5185dd93a743de484fa59c28ee7fa2274d3f539018f56e91ace6b8f4f31c2",
+      "git_blob": "04ad9660dc6e4b47f524e179008f821b76dd7b4c",
+      "reference_blob": "04ad9660dc6e4b47f524e179008f821b76dd7b4c",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        80,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "ed30a90e4f33239be27a32fd829a7ea1d183bf1cd35d70f2836b4dee91613944",
+      "alpha_sha256": "ab9645ccab91aaf4dcb3a5fe645321fc72cc630206e89530350d09674cfc1c25",
+      "bounds": [
+        9,
+        8,
+        306,
+        310
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有角色/物件的加载器四方向四格布局（80×80），可见色块与透明/空白区域保持原样；细窄部件不适合额外纹理。真实 Sprite_Character 裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fixes/trainer012.png",
+      "size": [
+        150,
+        150
+      ],
+      "source_bytes": 3699,
+      "source_mtime_ns": 1792048540710353000,
+      "canonical_source": "Graphics/Characters/fixes/trainer012.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "850eacf487868ef70200d28026fd4ecd1877152150afd212a8f3083244669b58",
+      "git_blob": "7cabdda82fff2300f01f21e0d71a067555b8b114",
+      "reference_blob": "7cabdda82fff2300f01f21e0d71a067555b8b114",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        150,
+        150
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "d163ab9a7a70806727a25b7d1b5feccb439f9f9855d088a3ca221b5d69dddd24",
+      "alpha_sha256": "8970b672e2fddecc8adfb354a0490cde2ceda80449f61606c012b4281f951087",
+      "bounds": [
+        30,
+        10,
+        120,
+        148
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fixes/trainer060.png",
+      "size": [
+        160,
+        160
+      ],
+      "source_bytes": 1985,
+      "source_mtime_ns": 1792048540711354300,
+      "canonical_source": "Graphics/Characters/fixes/trainer060.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "289d89cf3856060224631059b93fde3003b153627231729cc5d1de785ae78a9e",
+      "git_blob": "fc86387d8307dac8b429f479883fd8969d7c0908",
+      "reference_blob": "fc86387d8307dac8b429f479883fd8969d7c0908",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        160,
+        160
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "48e10683f3fcf0f468a97605a99d1b202c37c465273e4135f6c3789333cb9413",
+      "alpha_sha256": "5ab272e38abeac0a96219dfde9bb9b1fc29c32bfe90e3c4ea9417c8526c785af",
+      "bounds": [
+        41,
+        8,
+        113,
+        150
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fixes/trainer072.png",
+      "size": [
+        136,
+        136
+      ],
+      "source_bytes": 2589,
+      "source_mtime_ns": 1792048540711354300,
+      "canonical_source": "Graphics/Characters/fixes/trainer072.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "89825fa0a7f62239b8270c2d7786ca808b7e8e3a99468532774dfe2284e11ce3",
+      "git_blob": "684b65c230042f05194ff5a67d1717164fb93b32",
+      "reference_blob": "684b65c230042f05194ff5a67d1717164fb93b32",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        136,
+        136
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4e59cba10924a9ad0df75c9744aeb600bc2545f2b6279c420089c791bc5fbc1d",
+      "alpha_sha256": "bd70834fedf51cd893048a4a0568cfe2b66cfab132649c652354b8d0ee8b606b",
+      "bounds": [
+        36,
+        0,
+        88,
+        136
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fixes/trainer075.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 2586,
+      "source_mtime_ns": 1792048540713353400,
+      "canonical_source": "Graphics/Characters/fixes/trainer075.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "f73aa88c05e9b2cf8c0a42a9191d3d22fd7ba2bfe137039807c9f794aa6d2d0e",
+      "git_blob": "170270e5320eebbb37d5b1d1f5495a00b928be4d",
+      "reference_blob": "170270e5320eebbb37d5b1d1f5495a00b928be4d",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        128,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "716284030ddf3c009d6330d52d0e6ce1a8028a6fedb63db2b0da6ac67144f3ed",
+      "alpha_sha256": "88dd30e36819e970e975fc0df140c90c3eeb80cd9268270aa4ee4046ba167cd9",
+      "bounds": [
+        16,
+        22,
+        114,
+        126
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fixes/trainer076.png",
+      "size": [
+        140,
+        140
+      ],
+      "source_bytes": 2925,
+      "source_mtime_ns": 1792048540713353400,
+      "canonical_source": "Graphics/Characters/fixes/trainer076.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a457e452dbd424ff8b00ab4c7f0100036c780a67341f26b9a89da2ea667ed704",
+      "git_blob": "53ea6aa76e4cbde5648779011fa199c4d716ab92",
+      "reference_blob": "53ea6aa76e4cbde5648779011fa199c4d716ab92",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        140,
+        140
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "3a5563a5aa3b16592814999a0e6c366531aba10efb2ca62fc7355ed6041a5250",
+      "alpha_sha256": "45bc4b4c4f375d3fa68cd065889749e6b91d73b9babdc423e80e6d67d744373f",
+      "bounds": [
+        24,
+        0,
+        102,
+        140
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-220-01.png"
+    },
+    {
+      "source": "Graphics/Characters/fixes/trainer077.png",
+      "size": [
+        128,
+        128
+      ],
+      "source_bytes": 2154,
+      "source_mtime_ns": 1792048540713353400,
+      "canonical_source": "Graphics/Characters/fixes/trainer077.png",
+      "batch": "batch-220",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "bb8434376bb34a5d94c2a8e62056f87aa84c7f552e517c849ec03da5d6750f41",
+      "git_blob": "74fbb0d524d2daca86b5e76ba3084b60dfd43eb8",
+      "reference_blob": "74fbb0d524d2daca86b5e76ba3084b60dfd43eb8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        128,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c94e53c7a6c4283f311ff34f8041a558b087232140043e73ac1d6d994bf714aa",
+      "alpha_sha256": "1b10d8c17b34629d31ad6910ab8cf38423241f7fc32f208b73ff7993ab4be613",
+      "bounds": [
+        34,
+        42,
+        94,
+        126
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-220-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Preserved sources/deliveries are byte-identical to the snapshot. Applied container repair is decoded-RGBA-identical and now natively readable; no pose, frame, alpha or timing change. No AI redraw claim."
+}

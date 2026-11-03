@@ -1,0 +1,902 @@
+{
+  "batch": "batch-159",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 20,
+  "entries": [
+    {
+      "source": "Graphics/Alternate Trainers/May/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 4092,
+      "source_mtime_ns": 1792048521080854800,
+      "canonical_source": "Graphics/Alternate Trainers/May/vsTrainer_POKEMONTRAINER_Leaf.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "6bd2bb50cc4d15ab86f403aaed1a05a4c026cf5c62506b707b61c29263644c86",
+      "git_blob": "04608e019f79066df5d865662303d1501162cb00",
+      "reference_blob": "04608e019f79066df5d865662303d1501162cb00",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "1414ec341b69200f8066e112f3722dc75355bd64ad0a57b467acaaedd140be72",
+      "alpha_sha256": "42ea23ecd5a34b846839cd4e5047f590a0d0b5ed6e99a9f1db36213af6ef62f5",
+      "bounds": [
+        0,
+        2,
+        210,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 6814,
+      "source_mtime_ns": 1792048521081381300,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_bike.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "10847d7ca74bee22b0613b20e5cbe99980d19607e11e39bb79fc274f47234880",
+      "git_blob": "d74c0a852f1cd28a6f8423b193cb66282a64363d",
+      "reference_blob": "d74c0a852f1cd28a6f8423b193cb66282a64363d",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "3c0caf3463503d353718e0185ae23e237d2e7749e74c84c3dabc7981067fd1a9",
+      "alpha_sha256": "3aa7fc3c74bbe4c4fcd7571f7552593f4aa8a1e1d68df8a16fd5d2dd3dc411b8",
+      "bounds": [
+        7,
+        2,
+        249,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5534,
+      "source_mtime_ns": 1792048521081906000,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_dive_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "420b612d65a851f3adba5fae6b31f94a5a9844155a1bec6566c2cb7eee34377c",
+      "git_blob": "1cd229babf915b7a4810716d546c794e60ac24ee",
+      "reference_blob": "1cd229babf915b7a4810716d546c794e60ac24ee",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "459f698983d8b198f843b9f0f1c03d95a8d1a0bb63d3c8c56731cbc075167a7a",
+      "alpha_sha256": "e3e63ca100a97b5a5e97e0d262c3febfc9d4a951ce5d8d78e3e94c6925d8f249",
+      "bounds": [
+        6,
+        0,
+        248,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fish_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 6831,
+      "source_mtime_ns": 1792048521322352000,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fish_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "69ad7b3e0e6d996ca32b66a6e784c413f8435a9f2954e11d0b7420183360e14e",
+      "git_blob": "9c7b1e840c4b335f968d80dfa16c13f7d34d65f7",
+      "reference_blob": "9c7b1e840c4b335f968d80dfa16c13f7d34d65f7",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "8b22c96b1f6dd01e582258f03b1c027c60902ad9a63442f1508aea8e563ce35e",
+      "alpha_sha256": "cd9d38be3fc7918562975e2257271e73affa8ed4536da90d1aafc312c52b9fd0",
+      "bounds": [
+        5,
+        3,
+        367,
+        309
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fishsurf_offset.png",
+      "size": [
+        384,
+        320
+      ],
+      "source_bytes": 7468,
+      "source_mtime_ns": 1792048521322786300,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_fishsurf_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "862e34da26ad7871f5ea1af530a854c5b771f720daa78b94a23baf51d456068d",
+      "git_blob": "4610c15299947350c8dc73ccf768c929375c8cc8",
+      "reference_blob": "4610c15299947350c8dc73ccf768c929375c8cc8",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        96,
+        80
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "c6eea8b5528781712c078f6b65074d4f588d349f154c893ec5078406443ea98a",
+      "alpha_sha256": "fb521f686c93af8dc7d57bfeab99853953ba36db37ef85574687ac1f0bf459e7",
+      "bounds": [
+        6,
+        2,
+        368,
+        316
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 96×80）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4479,
+      "source_mtime_ns": 1792048521322786300,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_run.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "217a1376196f4c6118fcd19bab658bdd0851f6b4699a436fdf613477019078e2",
+      "git_blob": "c4f0f965587bfa1fe6aa12f170f600e90f685792",
+      "reference_blob": "c4f0f965587bfa1fe6aa12f170f600e90f685792",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4a9f322bec96a14b0157ea7cd9273fc1be4f1128b2ebf112f6690f61dc46a342",
+      "alpha_sha256": "847077b673c9c3c532db038e93bfaa50fb3d1b7766b0bae816432af6542b5f88",
+      "bounds": [
+        6,
+        6,
+        248,
+        250
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_surf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5534,
+      "source_mtime_ns": 1792048521323292700,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_surf_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "420b612d65a851f3adba5fae6b31f94a5a9844155a1bec6566c2cb7eee34377c",
+      "git_blob": "1cd229babf915b7a4810716d546c794e60ac24ee",
+      "reference_blob": "1cd229babf915b7a4810716d546c794e60ac24ee",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "459f698983d8b198f843b9f0f1c03d95a8d1a0bb63d3c8c56731cbc075167a7a",
+      "alpha_sha256": "e3e63ca100a97b5a5e97e0d262c3febfc9d4a951ce5d8d78e3e94c6925d8f249",
+      "bounds": [
+        6,
+        0,
+        248,
+        252
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Mewtwo 2/Characters/boy_dive_offset.png",
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/trchar000.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3909,
+      "source_mtime_ns": 1792048521323292700,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Characters/trchar000.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "476d8ab1328e094aaf69fc5dca7c5193f99a25ff8493f2e72f3c76dda9decf5a",
+      "git_blob": "19841215a61cdbe333156492d4cccbf13040d8cb",
+      "reference_blob": "19841215a61cdbe333156492d4cccbf13040d8cb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "fe7eb2666af85b3231b43696f5229310c91d7221f72a5d6523fb5cd22472a6d4",
+      "alpha_sha256": "d6a971e91747ddc657c330c9e0b467478780e85c62da2fe5aaf4b4acecbf769a",
+      "bounds": [
+        6,
+        6,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/trainer000.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1340,
+      "source_mtime_ns": 1792048521340080100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/trainer000.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "3d2a7a27672159de3721dd8cd2de120d5c4244e304c65e831468b05d06613f54",
+      "git_blob": "4f2ae11df3c47cbbdd4af8a33549dd793b841a72",
+      "reference_blob": "4f2ae11df3c47cbbdd4af8a33549dd793b841a72",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        192,
+        192
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5c0d2b3d8126227c85132365ea7f8de6110ffc5d3d77164717bbe0d2fe73ffa7",
+      "alpha_sha256": "8dd8c0195c8e3d7005917faae8d368274afb67764d5c144b0efd094829990132",
+      "bounds": [
+        34,
+        36,
+        170,
+        166
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/trainer_POKEMONTRAINER_Red.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 3909,
+      "source_mtime_ns": 1792048521340618400,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/trainer_POKEMONTRAINER_Red.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "476d8ab1328e094aaf69fc5dca7c5193f99a25ff8493f2e72f3c76dda9decf5a",
+      "git_blob": "19841215a61cdbe333156492d4cccbf13040d8cb",
+      "reference_blob": "19841215a61cdbe333156492d4cccbf13040d8cb",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        256
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "fe7eb2666af85b3231b43696f5229310c91d7221f72a5d6523fb5cd22472a6d4",
+      "alpha_sha256": "d6a971e91747ddc657c330c9e0b467478780e85c62da2fe5aaf4b4acecbf769a",
+      "bounds": [
+        6,
+        6,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Mewtwo 2/Characters/trchar000.png",
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red.png",
+      "size": [
+        192,
+        192
+      ],
+      "source_bytes": 1340,
+      "source_mtime_ns": 1792048521324302100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "3d2a7a27672159de3721dd8cd2de120d5c4244e304c65e831468b05d06613f54",
+      "git_blob": "4f2ae11df3c47cbbdd4af8a33549dd793b841a72",
+      "reference_blob": "4f2ae11df3c47cbbdd4af8a33549dd793b841a72",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        48,
+        48
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5c0d2b3d8126227c85132365ea7f8de6110ffc5d3d77164717bbe0d2fe73ffa7",
+      "alpha_sha256": "8dd8c0195c8e3d7005917faae8d368274afb67764d5c144b0efd094829990132",
+      "bounds": [
+        34,
+        36,
+        170,
+        166
+      ],
+      "mode": "P",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Mewtwo 2/trainer000.png",
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 48×48）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red_back.png",
+      "size": [
+        640,
+        128
+      ],
+      "source_bytes": 3557,
+      "source_mtime_ns": 1792048521324302100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Trainers/POKEMONTRAINER_Red_back.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "26d72ed6c8bfca34948938658f04e9821d704afc7f0169faad09c2f4f25a0862",
+      "git_blob": "d9e044c5ae800c69a78bdc0b26a89fba3a1ce306",
+      "reference_blob": "d9e044c5ae800c69a78bdc0b26a89fba3a1ce306",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "trainer_throw",
+      "grid": [
+        5,
+        1
+      ],
+      "cell_size": [
+        128,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5cd9393a11fa83d7ac2ceac21c204a15fedb68b1130cfbd6a994f64035fe7c1f",
+      "alpha_sha256": "990ddab7ea3591d21609a142a15f8b9dd8b051d75a5cdbdfcae845ca4fe5ed32",
+      "bounds": [
+        17,
+        26,
+        632,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "旧版五格背面条图的姿态/服饰清楚，实际 PictureEx 投掷及回到首格已检查；增加纹理无明确收益，保留原帧序和所有像素。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/Transitions/vsTrainer0.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3534,
+      "source_mtime_ns": 1792048521325300000,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/Transitions/vsTrainer0.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "873f79ab61ffb68f3fc550455ae9f61da62235eed5dcca54d9b839fca433eacb",
+      "git_blob": "419ad5a034dfaf9b93693b8f08f102f8f7fa16bc",
+      "reference_blob": "419ad5a034dfaf9b93693b8f08f102f8f7fa16bc",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4f0f549ff9e3316f02ea044565598435d9c72ef2132babf78e0cb6c933f42e5e",
+      "alpha_sha256": "f2ab6583a7f4b0f2111148fa4a82bf6484c13c09eb3f6d622daebfe7d5928888",
+      "bounds": [
+        0,
+        0,
+        188,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/trback100.png",
+      "size": [
+        640,
+        128
+      ],
+      "source_bytes": 3529,
+      "source_mtime_ns": 1792048521341124100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/trback100.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "162ca256bbe548e44d51a22c76d828afd4a6abe801ebdbf4b0f3f876687828f4",
+      "git_blob": "7483dba98ff3326cb66c0f91fb9d0739b073d9b5",
+      "reference_blob": "7483dba98ff3326cb66c0f91fb9d0739b073d9b5",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "trainer_throw",
+      "grid": [
+        5,
+        1
+      ],
+      "cell_size": [
+        128,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "edc49fbb9254c89c5fdfdb1bcbec3bcbe7ccc6db0c80ca4de8d47c8b74b6b093",
+      "alpha_sha256": "77b6867ea3d890aafbbf68a65f5ba61d31edbf7ade0928da64cc55c33998757f",
+      "bounds": [
+        20,
+        26,
+        626,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "旧版五格背面条图的姿态/服饰清楚，实际 PictureEx 投掷及回到首格已检查；增加纹理无明确收益，保留原帧序和所有像素。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo 2/vsTrainer_POKEMONTRAINER_Red.png",
+      "size": [
+        256,
+        128
+      ],
+      "source_bytes": 3534,
+      "source_mtime_ns": 1792048521341124100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo 2/vsTrainer_POKEMONTRAINER_Red.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "873f79ab61ffb68f3fc550455ae9f61da62235eed5dcca54d9b839fca433eacb",
+      "git_blob": "419ad5a034dfaf9b93693b8f08f102f8f7fa16bc",
+      "reference_blob": "419ad5a034dfaf9b93693b8f08f102f8f7fa16bc",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "static",
+      "grid": [
+        1,
+        1
+      ],
+      "cell_size": [
+        256,
+        128
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "4f0f549ff9e3316f02ea044565598435d9c72ef2132babf78e0cb6c933f42e5e",
+      "alpha_sha256": "f2ab6583a7f4b0f2111148fa4a82bf6484c13c09eb3f6d622daebfe7d5928888",
+      "bounds": [
+        0,
+        0,
+        188,
+        128
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "same_pixels_as": "Graphics/Alternate Trainers/Mewtwo 2/Transitions/vsTrainer0.png",
+      "status": "preserved",
+      "reason": "目录中的静态训练师/开场/表单/VS 图，按单张图片保留，未误切成动作。现有线条、文字或构图清楚；新增表面细节没有辨识度收益。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_bike.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5231,
+      "source_mtime_ns": 1792048521342132800,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_bike.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "a93ca54425de56e21bd0fcbb61f9686d7ab41d40426a7f98159a571f19f70571",
+      "git_blob": "3fed638b874d84503d61f018564df8aa5242ba00",
+      "reference_blob": "3fed638b874d84503d61f018564df8aa5242ba00",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "953c56578e2645012b9b14bd9f77ff70aee2e7506b1cb27258e7316ec593715c",
+      "alpha_sha256": "c6fdd5ab686780f86de8b12acb1ef58779c104e53f08e5070dff09f9df13e59a",
+      "bounds": [
+        2,
+        2,
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_dive_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 7468,
+      "source_mtime_ns": 1792048521343134100,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_dive_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "3cfc79879218cad057a209a380ae8402664e42697d066ba0da5bdafeaf1136bf",
+      "git_blob": "7607288d8473c0c72aea24b0f4528e66821cfba3",
+      "reference_blob": "7607288d8473c0c72aea24b0f4528e66821cfba3",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "5a4cbb71489fae36fa78a98b91f710729a1d8b5be9d59f4beee89fefc1b654d9",
+      "alpha_sha256": "9d3d730cfd7d815c0f1b09055c6e2dae63077a1b570c6a7d1645f7d6e1f4c236",
+      "bounds": [
+        0,
+        0,
+        254,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fish_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 4724,
+      "source_mtime_ns": 1792048521345132600,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fish_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "fcd3312e1a5a7bfdbdb48ec50c77fbb0db1f5697fb091082aa034fe916eb61a4",
+      "git_blob": "d4bcf1f3e0d09e297628d176a7ef7c4308935ac6",
+      "reference_blob": "d4bcf1f3e0d09e297628d176a7ef7c4308935ac6",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "7610a71e73647ecc695d4b98ee2afac2f0fa6011e553929c2e10776f1a6dde48",
+      "alpha_sha256": "402d9706a93dbe372adc382b788c46f84a7b76edf25544392079313dbcb13696",
+      "bounds": [
+        6,
+        8,
+        250,
+        254
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fishsurf_offset.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5528,
+      "source_mtime_ns": 1792048521346132900,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_fishsurf_offset.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "4131c54875b126b1ff0b798a5950488cafcc235793773ff084dd2ebc11da82cf",
+      "git_blob": "92fb1cd7c68a33efe310502151892a3f94058e61",
+      "reference_blob": "92fb1cd7c68a33efe310502151892a3f94058e61",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "59933010ae4dcb7b3b12d3ef95769dd103748c53103a8fceba043480124515aa",
+      "alpha_sha256": "2be3c030d9e0850097b67c6bd04890ddef91efc582d144ac976cccdb66a2b9d2",
+      "bounds": [
+        4,
+        6,
+        252,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    },
+    {
+      "source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_run.png",
+      "size": [
+        256,
+        256
+      ],
+      "source_bytes": 5046,
+      "source_mtime_ns": 1792048521346132900,
+      "canonical_source": "Graphics/Alternate Trainers/Mewtwo/Characters/boy_run.png",
+      "batch": "batch-159",
+      "stage": "npc",
+      "method": "character",
+      "sha256": "df0dab6d36ee5e64b38569f4e5ee77aba2dfc8dd652ef7086010f24794960163",
+      "git_blob": "b1416387a9530f2d5c8a114f88289697970e83e0",
+      "reference_blob": "b1416387a9530f2d5c8a114f88289697970e83e0",
+      "external_change": false,
+      "review_status": "not_started",
+      "kind": "charset",
+      "grid": [
+        4,
+        4
+      ],
+      "cell_size": [
+        64,
+        64
+      ],
+      "encoded_frames": 1,
+      "pixel_sha256": "8f1aa72bd022aa1ee351a77b2fe2877d22b2c35026f2f4d5274738ccc9c95e3f",
+      "alpha_sha256": "e9be7f3f391d8049a12b62b6dab47338e2050bd78f076d4fb71e5cb049c1d4c8",
+      "bounds": [
+        4,
+        4,
+        252,
+        256
+      ],
+      "mode": "RGBA",
+      "grid_remainder": [
+        0,
+        0
+      ],
+      "status": "preserved",
+      "reason": "原有四方向帧表（加载器格位 64×64）轮廓和色块清楚，细窄部件不适合额外纹理。保留完整画格、普通/异色关系与脚底位置；真实 Sprite_Character 的裁切、原点、资源切换和四速度动画计数已检查，兼容预览不冒充全部地图/跟随逻辑。",
+      "visual_review_page": "review-159-01.png"
+    }
+  ],
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "evidence": [
+    "output/texture-hd/p3-evidence/remaining/characters-review.json",
+    "output/texture-hd/p3-work/visual-review.json"
+  ],
+  "validation_scope": "Unchanged NPC/legacy/follower sources. Native Sprite_Character default four-direction/four-column crop, original origins, resource switches, timing at four speeds, and actual PictureEx throwing for five-cell legacy strips. Fixed shadowless neutral fixtures are compatibility rendering; not proof of every map-event/follower AI or roof/water interaction.",
+  "byte_identity_guarantee": "Current source and delivery equal the source snapshot. Frame/state/tint outputs therefore remain unchanged for identical engine inputs. This is a preservation decision, not an AI redraw claim."
+}

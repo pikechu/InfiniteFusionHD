@@ -1,0 +1,246 @@
+{
+  "batch": "066",
+  "method": "Original-size review; reuse existing built-in image_gen bag proposals; no new image generation.",
+  "entries": [
+    {
+      "source": "Graphics/Pictures/partyPanelRoundSelSwap.png",
+      "source_sha256": "33bbe8ef14c65c09ce3085f1af6a87130ee63f4522140b5f7d0cf5ed1584cf9f",
+      "decision": "preserved",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/partyPanelRoundSwap.png",
+      "source_sha256": "4839869fdc2e3eb8e97095ef0e2b94f81d60d9bfe2f8fe011231c9991724dbc1",
+      "decision": "preserved",
+      "reason": "文字、血条、边框、切片或选中/交换/濒死状态表；核对原生对应状态后，现有边界与色块清晰，添加材质无明确收益，保留全部切片及状态像素。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary1.png",
+      "source_sha256": "f54d0a94eefb5ca8a2be0f25a639c5139372d404933821aac952ec8175e16009",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary2.PNG",
+      "source_sha256": "dfe72b5dac88cafda9e7e3a64e98c3c366a01acc9c0436692cae496c5b873071",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary3.PNG",
+      "source_sha256": "e0622addd8b3bbdbaf981f73e1741a4d6ae453fea2c26212441a06ba8fc09b74",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary4.png",
+      "source_sha256": "8d0fdfd69d6ac01f395b11069b78a10adc4f85bbead107254d0b029f0ace1660",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary4details.PNG",
+      "source_sha256": "cdf7fe19b7ed545305fafa78e4292779006087f2f359e7ba4722e34aab195544",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary4learning.PNG",
+      "source_sha256": "c21d16839a7717f4200cb413c84099b9f78f3e6c37d7da83a6dd2ca6130aa424",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summary5.png",
+      "source_sha256": "e5da9c566c2df2ec1c5029e05b007f898006591d5d492c5340c318b54dfcda7c",
+      "decision": "preserved",
+      "reason": "布局背景以纯色色块和文字留白区为主，边框及图标清晰；已核对界面显示或兼容路径，新增纹理无原尺寸清晰度收益，保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball00.png",
+      "source_sha256": "9f964cf524e19b93caba5d85a885fb9dfa93911e758fcd07437444d0c8baec54",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball01.png",
+      "source_sha256": "09bd92ac577196dfbaa254f79eac7e7178767529c1cf5e2ae78aede56f5d90d2",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball02.png",
+      "source_sha256": "21a618d9cc6a30c1d498d23dc147b4eedae61313aa974408c50b11bacf01d79c",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball03.png",
+      "source_sha256": "df6d6370ed43490663427400eaa46d2443a2c172638aef790f312a2aacd710a6",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball04.png",
+      "source_sha256": "b2944cd029ec80ada1a332fee9460f5981679d7277d9b106a5a55c54af03fb7d",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball05.png",
+      "source_sha256": "a5b75ab41d93f8acdb6a5e22e8a5626b9db40a93f58232c2694dafd56a552cb4",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball06.png",
+      "source_sha256": "365fc5d415b8276547202222967c5a289ea5b6bbdeec594bb04856fcdfcf869f",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball07.png",
+      "source_sha256": "7b25eaf9127b41c742e8fecf9ad73b044638c3aca91e8a96fe88abe904f6a92f",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball08.png",
+      "source_sha256": "26413cc8b208de5f41040eb4d240bfe5ffbda612e49893498c51091ad9c3723f",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball09.png",
+      "source_sha256": "4d4c579c5f2d5a4f6fcac881294060521497f5ecbda64adea35712a5e16b99a4",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball10.png",
+      "source_sha256": "7c53f6260713281b51be6550874e2bb22bce48915f923075af6e1e439af70fa2",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball11.png",
+      "source_sha256": "10abb49c247dd8e91275baec2ea5cdacd248f62c7e249dd43434115659d19ecc",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball12.png",
+      "source_sha256": "4f66e7add4217456f80e451a8a4172235c81d23020b9b02889c60503e861bafd",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball13.png",
+      "source_sha256": "4357442f580394d228f7fc15e0b08c6cdeb83bfbe9d219954d163b62beee4e26",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    },
+    {
+      "source": "Graphics/Pictures/summaryball14.png",
+      "source_sha256": "598050e4b254287355ba23a0e8d536dd5a815980c022988f86b3843898dd93d8",
+      "decision": "preserved",
+      "reason": "小型符号、标记、功能填充或明确的选中状态；原像素可辨识。新增纹理不能改善原尺寸识别，反而可能改变符号和状态对比，逐字节保留原图。",
+      "prompt": null,
+      "generated": null,
+      "candidate": null,
+      "candidate_status": "not_generated_no_expected_gain"
+    }
+  ]
+}
