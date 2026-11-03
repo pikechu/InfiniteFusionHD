@@ -4,7 +4,7 @@
   "priority": "P5",
   "stage": "source96",
   "title": "96×96 源素材集合：先核对与运行素材的关系（14/28）",
-  "status": "needs_usage_audit",
+  "status": "completed",
   "action": "audit_then_enhance_if_used",
   "method": "audit",
   "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -503,5 +503,8 @@
     "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
     "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
     "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-  ]
+  ],
+  "result": "output/texture-hd/batch-838/validation.json",
+  "applied_files": 0,
+  "preserved_files": 48
 }

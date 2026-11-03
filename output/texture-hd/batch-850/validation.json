@@ -1,0 +1,2054 @@
+{
+  "batch": "batch-850",
+  "status": "completed",
+  "applied": 0,
+  "preserved": 48,
+  "candidate_pending_review": 0,
+  "dimensions_unchanged": true,
+  "alpha_unchanged": true,
+  "layout_unchanged": true,
+  "entries": [
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/pixil-frame-0_11 by 8xviktor.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2200,
+      "source_mtime_ns": 1792048526839138200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/pixil-frame-0_11 by 8xviktor.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "d8de240eba1d6fa70b3137f0d61edbb5eb790310058000e95dece7a7c4990ed3",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "d6223b18b46f09be46ec32a1e34127abd17624c01d60f4bd85d236560088d511",
+          "alpha_sha256": "5aed36a4034bb6bf47050d9f5fbed0ed79cf1dda8e864e43c94f1d16f02278ec",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "d6223b18b46f09be46ec32a1e34127abd17624c01d60f4bd85d236560088d511",
+      "alpha_sha256": "5aed36a4034bb6bf47050d9f5fbed0ed79cf1dda8e864e43c94f1d16f02278ec",
+      "current_bytes": 2200,
+      "current_mtime_ns": 1792048526839138200,
+      "nearest_neighbor_3x_rgba_sha256": "047dbeb6c00e0bb5e8595a571b52d37150fdecbd683e291e095f74c2ee270c7c",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/134n.png",
+          "status": "preserved",
+          "sha256": "a76d712f8e9509ba6b31c7836f85185cdb1e6b541004bd41aa17a75a86a862c7"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/pixil-frame-0_11 by 8xviktor.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/pixil-frame-06 by rezza#0028.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2140,
+      "source_mtime_ns": 1792048526838132900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/pixil-frame-06 by rezza#0028.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "0d057e008689f10bb1a89ca7bb18783ccce81b2e0fe831f3c1a7f6831eb81327",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "d4290283528c52b162ab7ed6b0deaaa7b56b49b92c0927b0bbcd2dca887030cc",
+          "alpha_sha256": "35bc2dc83a0c142d6a934addd886c1962fc0faba504f8ecb58dc8ffb35906b5e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "d4290283528c52b162ab7ed6b0deaaa7b56b49b92c0927b0bbcd2dca887030cc",
+      "alpha_sha256": "35bc2dc83a0c142d6a934addd886c1962fc0faba504f8ecb58dc8ffb35906b5e",
+      "current_bytes": 2140,
+      "current_mtime_ns": 1792048526838132900,
+      "nearest_neighbor_3x_rgba_sha256": "1aaad1f51432e815e18fae88b4847c7e8ab20632f6c69718063ec2d08c629127",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/pixil-frame-06 by rezza#0028.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/plup_heads by gasmaskblacky.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 7458,
+      "source_mtime_ns": 1792048526839138200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/plup_heads by gasmaskblacky.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "fe9c65915e6937774bb9adbb37df6d09d9c1e32e2e7da13af8e0627b723e47f4",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "448c373baffd38b55a8310cbb99fa1d8a3675b5c5d7eeadec4ebec45bf9622d9",
+          "alpha_sha256": "5ba864595c4d227e84f6ed95fcafd25e1febe00d69468e30b6e6d4afb3c5177d",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "448c373baffd38b55a8310cbb99fa1d8a3675b5c5d7eeadec4ebec45bf9622d9",
+      "alpha_sha256": "5ba864595c4d227e84f6ed95fcafd25e1febe00d69468e30b6e6d4afb3c5177d",
+      "current_bytes": 7458,
+      "current_mtime_ns": 1792048526839138200,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/plup_heads by gasmaskblacky.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/poliwhirl_parts by VoxPoss#7070.png",
+      "size": [
+        169,
+        126
+      ],
+      "source_bytes": 10049,
+      "source_mtime_ns": 1792048526839138200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/poliwhirl_parts by VoxPoss#7070.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "f581dec460f1a3f6759bdaa9ae23147f2f74e90ed2423bbe6288cb55195ee844",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "aed2c0674f0e091cd033d4d74baa00322588ec4d0228b8932c802be4f54d2f45",
+          "alpha_sha256": "adb850fc952ade0a1b38beaf66e3941c4e732f58c6078ec38bb955f05f0a4718",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "aed2c0674f0e091cd033d4d74baa00322588ec4d0228b8932c802be4f54d2f45",
+      "alpha_sha256": "adb850fc952ade0a1b38beaf66e3941c4e732f58c6078ec38bb955f05f0a4718",
+      "current_bytes": 10049,
+      "current_mtime_ns": 1792048526839138200,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/poliwhirl_parts by VoxPoss#7070.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/pollencloud by Toadette X Mushina#7019.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2294,
+      "source_mtime_ns": 1792048526840135600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/pollencloud by Toadette X Mushina#7019.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "c3b6b1adc24b4bfb5d994c7532688bd6763b1ab646af21b4f94249b0f4854d08",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "596cf3902148af9fd9b6ee44384d10599e2db8aec028eb820a436a3a998363cb",
+          "alpha_sha256": "fc07ac0577cba867656ac99fd90bc28f6974134571b5da7abe33e12df6ccd77d",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "596cf3902148af9fd9b6ee44384d10599e2db8aec028eb820a436a3a998363cb",
+      "alpha_sha256": "fc07ac0577cba867656ac99fd90bc28f6974134571b5da7abe33e12df6ccd77d",
+      "current_bytes": 2294,
+      "current_mtime_ns": 1792048526840135600,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/pollencloud by Toadette X Mushina#7019.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/ponyta-galar by Bubba-Rottweiler#7322.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 6208,
+      "source_mtime_ns": 1792048526840135600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/ponyta-galar by Bubba-Rottweiler#7322.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "8c4506f143aa90fd8236099f5da10a8d75e0418ac435775de44ce4e210d65887",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "92ae03b2ab9c06a2a6a0fe1cb6e1abe120ef16837ead131d71969e108751cbc5",
+          "alpha_sha256": "b68c68cb3efd4a84499aeb7955af213018963b5a2257fb7c4d77c0126addf45f",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "92ae03b2ab9c06a2a6a0fe1cb6e1abe120ef16837ead131d71969e108751cbc5",
+      "alpha_sha256": "b68c68cb3efd4a84499aeb7955af213018963b5a2257fb7c4d77c0126addf45f",
+      "current_bytes": 6208,
+      "current_mtime_ns": 1792048526840135600,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/ponyta-galar by Bubba-Rottweiler#7322.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Poppy by .head_empty..png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3516,
+      "source_mtime_ns": 1792048526774500500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Poppy by .head_empty..png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "36f9e4c2ae28877b78ce16251dabab62bb47891271830b615b90aed62b98cc6f",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "5c3f14e0bea9eb1e53b292126e365954804b26addc587b2120198b3c47c84ff0",
+          "alpha_sha256": "97bce2df1c1304ef32bd3c00e15a928061229d25fbc79c6a6b67a59019c2c663",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "5c3f14e0bea9eb1e53b292126e365954804b26addc587b2120198b3c47c84ff0",
+      "alpha_sha256": "97bce2df1c1304ef32bd3c00e15a928061229d25fbc79c6a6b67a59019c2c663",
+      "current_bytes": 3516,
+      "current_mtime_ns": 1792048526774500500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Poppy by .head_empty..png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/probopass_nose by ptfn.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3941,
+      "source_mtime_ns": 1792048526840135600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/probopass_nose by ptfn.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "3f3039e47907805db877ad6bb344a1811a308c022a9779bd6928d4026af8c0bd",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "8ca76080d7c5056989bbf223c2fc61250cbf552317bac4644add214e97602ca8",
+          "alpha_sha256": "b52f7e9e1ff93ae6168e0530a923f1c439df97a1dbaea70da589fbe514ca5d72",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "8ca76080d7c5056989bbf223c2fc61250cbf552317bac4644add214e97602ca8",
+      "alpha_sha256": "b52f7e9e1ff93ae6168e0530a923f1c439df97a1dbaea70da589fbe514ca5d72",
+      "current_bytes": 3941,
+      "current_mtime_ns": 1792048526840135600,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/probopass_nose by ptfn.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/pyuku_hands by ThornsofLight#3245.png",
+      "size": [
+        234,
+        266
+      ],
+      "source_bytes": 6338,
+      "source_mtime_ns": 1792048526841134100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/pyuku_hands by ThornsofLight#3245.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "da19f5a8b9481f9b4bda6d1ee1c1e0933e0a65bc2a1b87236bb0782e0c1ee4ec",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "576c5b928ad4bb72145eda9661ab9c1f101120da94cdac77e42af6fd55d19d1e",
+          "alpha_sha256": "e52a44bbc30fa2d035b07f94871e8ba3a0d8ce54ffa8fde127e1354b99e9d7fc",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "576c5b928ad4bb72145eda9661ab9c1f101120da94cdac77e42af6fd55d19d1e",
+      "alpha_sha256": "e52a44bbc30fa2d035b07f94871e8ba3a0d8ce54ffa8fde127e1354b99e9d7fc",
+      "current_bytes": 6338,
+      "current_mtime_ns": 1792048526841134100,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/pyuku_hands by ThornsofLight#3245.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/pyuku_tail by luxio#0321.png",
+      "size": [
+        32,
+        54
+      ],
+      "source_bytes": 10302,
+      "source_mtime_ns": 1792048526841134100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/pyuku_tail by luxio#0321.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "c3b2f8de4ed0ef3fc4e4ce967576a5f8ea5c7c7778a18da30c3cdd47a9ad0af5",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "3553519b7a7dcc84b9f20337768778ded508b6b4e1c87cafa8b884c0ad2117b2",
+          "alpha_sha256": "6ec5f74a2caec0ba3f3d290951fa6dd8edd7402c08f5ef5624e309d4bbc36ee5",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "3553519b7a7dcc84b9f20337768778ded508b6b4e1c87cafa8b884c0ad2117b2",
+      "alpha_sha256": "6ec5f74a2caec0ba3f3d290951fa6dd8edd7402c08f5ef5624e309d4bbc36ee5",
+      "current_bytes": 10302,
+      "current_mtime_ns": 1792048526841134100,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/pyuku_tail by luxio#0321.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/QR_CODE by tomatosalad.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 753,
+      "source_mtime_ns": 1792048526775499900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/QR_CODE by tomatosalad.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "e50c9764b4dc913ca39cb7b083eb4047f6c4390cc2a9bb59198f4202fb3eba64",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "6104a75bf472ecaab5153008ff8b403a18f713331f03048bd2f2d007c7864772",
+          "alpha_sha256": "299be18ffe2ef59e129d14168257139951f052abb27a9c97499f00d8f8678330",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "6104a75bf472ecaab5153008ff8b403a18f713331f03048bd2f2d007c7864772",
+      "alpha_sha256": "299be18ffe2ef59e129d14168257139951f052abb27a9c97499f00d8f8678330",
+      "current_bytes": 753,
+      "current_mtime_ns": 1792048526775499900,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/QR_CODE by tomatosalad.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2-96x by xenellia.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 6650,
+      "source_mtime_ns": 1792048526776501500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2-96x by xenellia.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "0e9202c8d08815fb7a0325b0ddd087ffb987a74f4cd167cc6ef509527097c405",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "25d34871377d0abdc25c6667310ff317d34ee079dd8d9f884072dd5c9d24c1e1",
+          "alpha_sha256": "f4246b4920a128e28e4faea7bcc464310f2c31a418157d25e80880a81b780512",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "25d34871377d0abdc25c6667310ff317d34ee079dd8d9f884072dd5c9d24c1e1",
+      "alpha_sha256": "f4246b4920a128e28e4faea7bcc464310f2c31a418157d25e80880a81b780512",
+      "current_bytes": 6650,
+      "current_mtime_ns": 1792048526776501500,
+      "nearest_neighbor_3x_rgba_sha256": "f86939b2f13a0291f33fd23059bef6cc47b535f884d2f48aaacf8cdfbc0bb661",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2-96x by xenellia.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a by xenellia.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 6537,
+      "source_mtime_ns": 1792048526776501500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a by xenellia.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "f21a9afcc0209235e59b78d982b84ea0edc7d62b7adb9a0430e41d94affe3536",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "0b8dfc49dae9b4e9901dd36b5c94df6feac25fa06b23f026579b3ca5309948b5",
+          "alpha_sha256": "bda5b1b9e9cf56c079fd85d19368dc212618dd819970f1d4e665d9c943a71005",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "0b8dfc49dae9b4e9901dd36b5c94df6feac25fa06b23f026579b3ca5309948b5",
+      "alpha_sha256": "bda5b1b9e9cf56c079fd85d19368dc212618dd819970f1d4e665d9c943a71005",
+      "current_bytes": 6537,
+      "current_mtime_ns": 1792048526776501500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a by xenellia.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a-96x by xenellia.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 5146,
+      "source_mtime_ns": 1792048526776501500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a-96x by xenellia.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "5c05a07cbbc20d434c40102ddf7547215e6cd8276f89db6e0675183919639bec",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "3b46255c47b9dab7d6afec25ac7265990956ec4cb394bdbdaf1bb5532f3fcaaf",
+          "alpha_sha256": "47048416aa6680778d49e0ef0ba7434c191351e47a567eb42d3119588b3deca4",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "3b46255c47b9dab7d6afec25ac7265990956ec4cb394bdbdaf1bb5532f3fcaaf",
+      "alpha_sha256": "47048416aa6680778d49e0ef0ba7434c191351e47a567eb42d3119588b3deca4",
+      "current_bytes": 5146,
+      "current_mtime_ns": 1792048526776501500,
+      "nearest_neighbor_3x_rgba_sha256": "0b8dfc49dae9b4e9901dd36b5c94df6feac25fa06b23f026579b3ca5309948b5",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a by xenellia.png",
+          "status": "pending",
+          "sha256": "f21a9afcc0209235e59b78d982b84ea0edc7d62b7adb9a0430e41d94affe3536"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base2a-96x by xenellia.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base-96x by xenellia.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 6500,
+      "source_mtime_ns": 1792048526775499900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base-96x by xenellia.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "1139111ed6a9cac1445b73ed2284e7774f37fc00b91965d54fa139ce9c735a36",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "1d2d8d509f7870aa87b047e0ed766492f7d9c1772c6a8429dba4d498fab50e71",
+          "alpha_sha256": "0e394986d24d32362a11505e1411dae7e5e9bee04add037b612894909b3027ee",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "1d2d8d509f7870aa87b047e0ed766492f7d9c1772c6a8429dba4d498fab50e71",
+      "alpha_sha256": "0e394986d24d32362a11505e1411dae7e5e9bee04add037b612894909b3027ee",
+      "current_bytes": 6500,
+      "current_mtime_ns": 1792048526775499900,
+      "nearest_neighbor_3x_rgba_sha256": "232f3673028ba3709ec2e33e44b8831c5a5456b2f6e43274060dca40827770cc",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/78j.png",
+          "status": "preserved",
+          "sha256": "f2e6d945871c890fa171d8a25b1f6933740d6f33e508130bcca5b7da3c15aea1"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Rapidash-alt_base-96x by xenellia.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/RED-BLUE_meowth_2 by teddyo.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1517,
+      "source_mtime_ns": 1792048526775499900,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/RED-BLUE_meowth_2 by teddyo.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "2a81f7252485e254f45b9324072511ad81e4fa5a1d10b16f7bac4c1d13717ca5",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "55b8c69c51e3b955ba933e23b359a86c4daf44f8196e45d41fef0cc89f37d461",
+          "alpha_sha256": "52eb217618dcbcd9ed6a3eb5f48932041a86bc738c2c3b9d74b2415622dbd237",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "55b8c69c51e3b955ba933e23b359a86c4daf44f8196e45d41fef0cc89f37d461",
+      "alpha_sha256": "52eb217618dcbcd9ed6a3eb5f48932041a86bc738c2c3b9d74b2415622dbd237",
+      "current_bytes": 1517,
+      "current_mtime_ns": 1792048526775499900,
+      "nearest_neighbor_3x_rgba_sha256": "d2009f5171da1d25fb6f6941b3a28c3e9311c4751b0267cca2f1eab918350e53",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/RED-BLUE_meowth_2 by teddyo.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Reshiram_Anisheet by Toadette X Mushina#7019.png",
+      "size": [
+        213,
+        183
+      ],
+      "source_bytes": 6403,
+      "source_mtime_ns": 1792048526777502500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Reshiram_Anisheet by Toadette X Mushina#7019.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "32cd4a9114e83a0e7cb096b12ebda704c1d3b6495c99a06d0752a43579157d43",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "1f3005ea6cf5e08a3affc5b4cef829caa51e90293cd5949bac37ded7a54edaad",
+          "alpha_sha256": "0975a072f7dc73ee8adf3085aadd5cad8abb261dd909663b37d47122bfa495f3",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "1f3005ea6cf5e08a3affc5b4cef829caa51e90293cd5949bac37ded7a54edaad",
+      "alpha_sha256": "0975a072f7dc73ee8adf3085aadd5cad8abb261dd909663b37d47122bfa495f3",
+      "current_bytes": 6403,
+      "current_mtime_ns": 1792048526777502500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Reshiram_Anisheet by Toadette X Mushina#7019.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/reshizek_tails by toadettexmushina.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2732,
+      "source_mtime_ns": 1792048526841134100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/reshizek_tails by toadettexmushina.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "654303d5f348d336b70bd4764aa0906c0575a4a054f9fa14acc1c2e30f232ecf",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "f5296b143529210587422266642de7fe0df9343e1ecfa8337b6530ad84744193",
+          "alpha_sha256": "2ce0ee290ede3575f45416de982abf3862fa65aa8ebf68468988ed71f3e2bd31",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "f5296b143529210587422266642de7fe0df9343e1ecfa8337b6530ad84744193",
+      "alpha_sha256": "2ce0ee290ede3575f45416de982abf3862fa65aa8ebf68468988ed71f3e2bd31",
+      "current_bytes": 2732,
+      "current_mtime_ns": 1792048526841134100,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/reshizek_tails by toadettexmushina.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Reuniclus_Assets by lordjoostmeister.png",
+      "size": [
+        196,
+        196
+      ],
+      "source_bytes": 8639,
+      "source_mtime_ns": 1792048526777502500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Reuniclus_Assets by lordjoostmeister.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "a0099cf2d4a650a7d78f5a941b38f472df1fb58bd26a77525ea4a553ab4e40ee",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "37910966ea7a36378f52be3aeaf27ec34e011e900e97a9d20fc302d5d4b35e64",
+          "alpha_sha256": "34cc86d0d0b277aea15e904d366f15f28f3039c20450361b7d3515ae658e63fd",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "37910966ea7a36378f52be3aeaf27ec34e011e900e97a9d20fc302d5d4b35e64",
+      "alpha_sha256": "34cc86d0d0b277aea15e904d366f15f28f3039c20450361b7d3515ae658e63fd",
+      "current_bytes": 8639,
+      "current_mtime_ns": 1792048526777502500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Reuniclus_Assets by lordjoostmeister.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339 by ceciliavonjoy.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1645,
+      "source_mtime_ns": 1792048526842135300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339 by ceciliavonjoy.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "c61b40ba8364c5e1d3cec44027c2d87d6e15630d7b6b818854689ce717ac7698",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "087ebf18cfe4c280eb555d1661c3389cc9ec5e4153690fd4a11ced1a259fbf7a",
+          "alpha_sha256": "5804bc3953b6d10a410d06a97da33b44b1b6d560be2e42e478835bc80647180c",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "087ebf18cfe4c280eb555d1661c3389cc9ec5e4153690fd4a11ced1a259fbf7a",
+      "alpha_sha256": "5804bc3953b6d10a410d06a97da33b44b1b6d560be2e42e478835bc80647180c",
+      "current_bytes": 1645,
+      "current_mtime_ns": 1792048526842135300,
+      "nearest_neighbor_3x_rgba_sha256": "7df0b49bc159072acd198d31a9c96bfeb7ccc2502f2a7f9a71cd9f9c6245de42",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339_-_big by ceciliavonjoy.png",
+          "status": "pending",
+          "sha256": "28e8403968e57fa2ecbd3c5c7df58b0b83809e0deed918c9eea6bad02fc85a5e"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339 by ceciliavonjoy.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339_-_big by ceciliavonjoy.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2461,
+      "source_mtime_ns": 1792048526842135300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339_-_big by ceciliavonjoy.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "28e8403968e57fa2ecbd3c5c7df58b0b83809e0deed918c9eea6bad02fc85a5e",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "7df0b49bc159072acd198d31a9c96bfeb7ccc2502f2a7f9a71cd9f9c6245de42",
+          "alpha_sha256": "4ba361e87c7802cae62cda652fa79d2a146a44a3af7533c889baaefa1c3d47dd",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "7df0b49bc159072acd198d31a9c96bfeb7ccc2502f2a7f9a71cd9f9c6245de42",
+      "alpha_sha256": "4ba361e87c7802cae62cda652fa79d2a146a44a3af7533c889baaefa1c3d47dd",
+      "current_bytes": 2461,
+      "current_mtime_ns": 1792048526842135300,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/ribbonless_sylveon_339_-_big by ceciliavonjoy.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Rose by .head_empty..png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4171,
+      "source_mtime_ns": 1792048526778500500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Rose by .head_empty..png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "fbdaf8f385a146d0a07de1f1223f797bab4c3c0df1d47cc00088a3f0183049ab",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "b7768a5b59a7eb7e7d63e1cc10b493a2e2c1a089204f2c0cfe8f5f3bfde69f50",
+          "alpha_sha256": "ed42b4ad15cc1e52d47768a66e992b9e2bdc9e7fef3ad0ca3563d92c97504f96",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "b7768a5b59a7eb7e7d63e1cc10b493a2e2c1a089204f2c0cfe8f5f3bfde69f50",
+      "alpha_sha256": "ed42b4ad15cc1e52d47768a66e992b9e2bdc9e7fef3ad0ca3563d92c97504f96",
+      "current_bytes": 4171,
+      "current_mtime_ns": 1792048526778500500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Rose by .head_empty..png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/roto_bases by NPC-ARTS#8564.png",
+      "size": [
+        250,
+        150
+      ],
+      "source_bytes": 6925,
+      "source_mtime_ns": 1792048526842135300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/roto_bases by NPC-ARTS#8564.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "38067fcde7b87e154e7a3e0cebee38ab6ee3ac15418de931089bac1e851002c3",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "5182c6428afecce7625b0f0b3d951e79199852246be7c84e31828fef9c8e2701",
+          "alpha_sha256": "0abc7e504c8c270918103c49052304963a7e9e0b77e064698e4a1b70ee1dde80",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "5182c6428afecce7625b0f0b3d951e79199852246be7c84e31828fef9c8e2701",
+      "alpha_sha256": "0abc7e504c8c270918103c49052304963a7e9e0b77e064698e4a1b70ee1dde80",
+      "current_bytes": 6925,
+      "current_mtime_ns": 1792048526842135300,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/roto_bases by NPC-ARTS#8564.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/roto_bases_3x by NPC-ARTS#8564.png",
+      "size": [
+        750,
+        450
+      ],
+      "source_bytes": 14283,
+      "source_mtime_ns": 1792048526843138600,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/roto_bases_3x by NPC-ARTS#8564.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "5579adace74b7f1734953e25417c8db321a9fcd04c4baf9f8084ba8728a8c03e",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "2128982778a7c853d947c0e836cad60b6d35295df6532f0c05fd24c70ace20f4",
+          "alpha_sha256": "8721096e19e5589e693c463b9b9277b71ac88d67be50e21df3655ca17795500b",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "2128982778a7c853d947c0e836cad60b6d35295df6532f0c05fd24c70ace20f4",
+      "alpha_sha256": "8721096e19e5589e693c463b9b9277b71ac88d67be50e21df3655ca17795500b",
+      "current_bytes": 14283,
+      "current_mtime_ns": 1792048526843138600,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/roto_bases_3x by NPC-ARTS#8564.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/rotos by NPC-ARTS#8564.png",
+      "size": [
+        250,
+        150
+      ],
+      "source_bytes": 7835,
+      "source_mtime_ns": 1792048526844135500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/rotos by NPC-ARTS#8564.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "5763eb5564a1c9f0ccd106024876e6b33f1ad3b8d08356240b6cd739fd6c6ab4",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "e5b1e0edf2918fe4a6a17c9b52d2f9dd5be4d8e864c3010c0eba4b8f5fc2a6a1",
+          "alpha_sha256": "0abc7e504c8c270918103c49052304963a7e9e0b77e064698e4a1b70ee1dde80",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "e5b1e0edf2918fe4a6a17c9b52d2f9dd5be4d8e864c3010c0eba4b8f5fc2a6a1",
+      "alpha_sha256": "0abc7e504c8c270918103c49052304963a7e9e0b77e064698e4a1b70ee1dde80",
+      "current_bytes": 7835,
+      "current_mtime_ns": 1792048526844135500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/rotos by NPC-ARTS#8564.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/rotos_3x by NPC-ARTS#8564.png",
+      "size": [
+        750,
+        450
+      ],
+      "source_bytes": 15763,
+      "source_mtime_ns": 1792048526844135500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/rotos_3x by NPC-ARTS#8564.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "8de598acfa0b895744042f3e0374f4844677291c32435360c03a6d7d639ae96c",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "df5ba76706626edd70a5cf21fa65d89031896fab5c305bc9c9f330de827783e3",
+          "alpha_sha256": "8721096e19e5589e693c463b9b9277b71ac88d67be50e21df3655ca17795500b",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "df5ba76706626edd70a5cf21fa65d89031896fab5c305bc9c9f330de827783e3",
+      "alpha_sha256": "8721096e19e5589e693c463b9b9277b71ac88d67be50e21df3655ca17795500b",
+      "current_bytes": 15763,
+      "current_mtime_ns": 1792048526844135500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/rotos_3x by NPC-ARTS#8564.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/sableye_custom_base by notfound.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1393,
+      "source_mtime_ns": 1792048526844135500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/sableye_custom_base by notfound.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "5f309fd397218ceca042c8c8339881907e72108f98816a5a5a8dbcc139762752",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "06049ccbd0134cfa02d766f9a95baaa65329c1fd73fcd969445fdb645f9fb217",
+          "alpha_sha256": "d669d82184eafe959da3ce78a4e2aa34b77811bf050f3676e0c1a0a9481b3106",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "06049ccbd0134cfa02d766f9a95baaa65329c1fd73fcd969445fdb645f9fb217",
+      "alpha_sha256": "d669d82184eafe959da3ce78a4e2aa34b77811bf050f3676e0c1a0a9481b3106",
+      "current_bytes": 1393,
+      "current_mtime_ns": 1792048526844135500,
+      "nearest_neighbor_3x_rgba_sha256": "525af40012c2e2e7740267a2af9c133863ae0ce42c3fed0d026b146729a58580",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/sableye_custom_base by notfound.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Scyther_body_parts by lathspell93.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 4290,
+      "source_mtime_ns": 1792048526779499300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Scyther_body_parts by lathspell93.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "9221342074b0b8cf396f906086378684af90d6bc084002a9f7127a6a9364d3a7",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "69754ca4f908e296c3bf272498f2e60798acf7967ed7ab5ac9798b89db5b4048",
+          "alpha_sha256": "fdb43ae6c30f9c32b4895e1bad19e3a84e5b3cab56365d1e7c88e7e64e82b187",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "69754ca4f908e296c3bf272498f2e60798acf7967ed7ab5ac9798b89db5b4048",
+      "alpha_sha256": "fdb43ae6c30f9c32b4895e1bad19e3a84e5b3cab56365d1e7c88e7e64e82b187",
+      "current_bytes": 4290,
+      "current_mtime_ns": 1792048526779499300,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Scyther_body_parts by lathspell93.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/SEADRAFINN by nerdymonk316.png",
+      "size": [
+        48,
+        48
+      ],
+      "source_bytes": 11961,
+      "source_mtime_ns": 1792048526778500500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/SEADRAFINN by nerdymonk316.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "ddd8dc0a40f8af82158ad2420d8fea7345721eee68a931315bb26ef0fcb26aaa",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "0ecc81c0248ae30ee3531093bf04ed09af1ee6631aaf0145926d9d03bdfaf1df",
+          "alpha_sha256": "512c2243b26f86d0bab20477bfe5f68ae747738433d343b0e8e0d0fd67d1b6bd",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "0ecc81c0248ae30ee3531093bf04ed09af1ee6631aaf0145926d9d03bdfaf1df",
+      "alpha_sha256": "512c2243b26f86d0bab20477bfe5f68ae747738433d343b0e8e0d0fd67d1b6bd",
+      "current_bytes": 11961,
+      "current_mtime_ns": 1792048526778500500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/SEADRAFINN by nerdymonk316.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Sentret_96 by Supercalifragilistic#8703.png",
+      "size": [
+        201,
+        165
+      ],
+      "source_bytes": 4311,
+      "source_mtime_ns": 1792048526779499300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Sentret_96 by Supercalifragilistic#8703.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "078604420d260e548c79acbb1fb52f0b58f54a683ceb212b0d1a0fe0750b88d3",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "3964b3eb1c82d55979cbfaace038cbacc2826ab713295dc1ef4b9116a45d4035",
+          "alpha_sha256": "41d660a9fd1372d1d6ec9cbf483bdc2835833324e782e88a0adbd5c228ae7320",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "3964b3eb1c82d55979cbfaace038cbacc2826ab713295dc1ef4b9116a45d4035",
+      "alpha_sha256": "41d660a9fd1372d1d6ec9cbf483bdc2835833324e782e88a0adbd5c228ae7320",
+      "current_bytes": 4311,
+      "current_mtime_ns": 1792048526779499300,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Sentret_96 by Supercalifragilistic#8703.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_big by el_gord0.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3861,
+      "source_mtime_ns": 1792048526845135200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_big by el_gord0.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "5694e8e058cf06e58be31e35677df21512d8c32519468125edb1732d403ccb04",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "3069db883f694676f4109313c9e4b2449566733460e0084191acede9d5657a10",
+          "alpha_sha256": "6b9d71d038816e4c213695b7d5b5371bb7a8e813cd6ab72e095771e36db5fa2a",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "3069db883f694676f4109313c9e4b2449566733460e0084191acede9d5657a10",
+      "alpha_sha256": "6b9d71d038816e4c213695b7d5b5371bb7a8e813cd6ab72e095771e36db5fa2a",
+      "current_bytes": 3861,
+      "current_mtime_ns": 1792048526845135200,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_big by el_gord0.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_big by el_gord0.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2909,
+      "source_mtime_ns": 1792048526845135200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_big by el_gord0.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "ebbade63027f747dab1780868f1f4a2173c645423c5f5f8d74a9d55688afad56",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "3ddae6e3e90be53f44757716309ff656323e72ff9a864f6a9bfabb1a8587672e",
+          "alpha_sha256": "c3dbc3c754089a6dfc8ad552b7a080558a89653f3b8e94375102c07c2c1ca8df",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "3ddae6e3e90be53f44757716309ff656323e72ff9a864f6a9bfabb1a8587672e",
+      "alpha_sha256": "c3dbc3c754089a6dfc8ad552b7a080558a89653f3b8e94375102c07c2c1ca8df",
+      "current_bytes": 2909,
+      "current_mtime_ns": 1792048526845135200,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_big by el_gord0.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_small by el_gord0.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1816,
+      "source_mtime_ns": 1792048526845135200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_small by el_gord0.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "e871a567b1fa9cd1c1ec22b7a46063aca8dbef149791e32835e96fe1b3720027",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "ddba15f2b991199b5093753500530819128d7bf5613238ceb277e2cc23c7ee47",
+          "alpha_sha256": "0d9901d01ecbf6d3fa5d7553a5c5a32767ddd7a38e85342a2ccd927d8ec8313c",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "ddba15f2b991199b5093753500530819128d7bf5613238ceb277e2cc23c7ee47",
+      "alpha_sha256": "0d9901d01ecbf6d3fa5d7553a5c5a32767ddd7a38e85342a2ccd927d8ec8313c",
+      "current_bytes": 1816,
+      "current_mtime_ns": 1792048526845135200,
+      "nearest_neighbor_3x_rgba_sha256": "3ddae6e3e90be53f44757716309ff656323e72ff9a864f6a9bfabb1a8587672e",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_big by el_gord0.png",
+          "status": "pending",
+          "sha256": "ebbade63027f747dab1780868f1f4a2173c645423c5f5f8d74a9d55688afad56"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_nakey_small by el_gord0.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_small by el_gord0.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2608,
+      "source_mtime_ns": 1792048526845135200,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_small by el_gord0.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "10af8508255edb8074fea987bed25b9ad0409c44f59979643cfe4d9bcd42d2af",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "d359664de12c1caf9352a670f9a5d7fd49066b246448fe41186718bdf8668fc4",
+          "alpha_sha256": "1767fcde015293821726207d79c4717b3ae5bac33c544f3572cc1bbc7fa1f9e2",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "d359664de12c1caf9352a670f9a5d7fd49066b246448fe41186718bdf8668fc4",
+      "alpha_sha256": "1767fcde015293821726207d79c4717b3ae5bac33c544f3572cc1bbc7fa1f9e2",
+      "current_bytes": 2608,
+      "current_mtime_ns": 1792048526845135200,
+      "nearest_neighbor_3x_rgba_sha256": "3069db883f694676f4109313c9e4b2449566733460e0084191acede9d5657a10",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_big by el_gord0.png",
+          "status": "pending",
+          "sha256": "5694e8e058cf06e58be31e35677df21512d8c32519468125edb1732d403ccb04"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/seviper_small by el_gord0.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Sharpedo_Gen3_recolor by fciv.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1741,
+      "source_mtime_ns": 1792048526779499300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Sharpedo_Gen3_recolor by fciv.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "ed0d5cc8b4fd03e6297fb915c60f56ab071bb65556830ddc0f0460379c2e044a",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "a150332ff71151e26612a73364f538be6aba3fddb7581304fbf714f7a48b68c1",
+          "alpha_sha256": "eed11cbda51127762d7b573e53c1c40285f4c9d943baa02402d3c247ebe422cc",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "a150332ff71151e26612a73364f538be6aba3fddb7581304fbf714f7a48b68c1",
+      "alpha_sha256": "eed11cbda51127762d7b573e53c1c40285f4c9d943baa02402d3c247ebe422cc",
+      "current_bytes": 1741,
+      "current_mtime_ns": 1792048526779499300,
+      "nearest_neighbor_3x_rgba_sha256": "d6e7c835fb82e766d43c4ce836f4167c9cc5a91466ec1c8ecba02ced1431caf0",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Sharpedo_Gen3_recolor by fciv.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Sharpedo_Gen4_recolor by fciv.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2037,
+      "source_mtime_ns": 1792048526779499300,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Sharpedo_Gen4_recolor by fciv.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "7e6d4ddbdbc7071004303b707865368a598b4242112a287efa6153aa6374a227",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "b91783535ac947e4897006c0249efe71895e867931038bf0e97a5dae1ddbd901",
+          "alpha_sha256": "9be9bd7e3d5c4c0d863a2bc72051221d6482e48bea01f36948c8a398306ca083",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "b91783535ac947e4897006c0249efe71895e867931038bf0e97a5dae1ddbd901",
+      "alpha_sha256": "9be9bd7e3d5c4c0d863a2bc72051221d6482e48bea01f36948c8a398306ca083",
+      "current_bytes": 2037,
+      "current_mtime_ns": 1792048526779499300,
+      "nearest_neighbor_3x_rgba_sha256": "89a08a1bfd18bfc7d57ac67f9d19bd22860d03b0c6f7ce1d23dce86e649823d6",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Sharpedo_Gen4_recolor by fciv.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/shell1 by Toadette X Mushina#7019.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1901,
+      "source_mtime_ns": 1792048526846138500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/shell1 by Toadette X Mushina#7019.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "83b1319aebb3094db44b9d246801cdb585aa4afaa2b382e8244cca3bb5d1f121",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "ae52ac2e242a5169a5903afdd1cbcc44655ac5cf368a1bdf4750c9ef2433af34",
+          "alpha_sha256": "d268748c836bd977382d7c3e4625d934aec00126c0cb45106b1c6022240d6b8e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "ae52ac2e242a5169a5903afdd1cbcc44655ac5cf368a1bdf4750c9ef2433af34",
+      "alpha_sha256": "d268748c836bd977382d7c3e4625d934aec00126c0cb45106b1c6022240d6b8e",
+      "current_bytes": 1901,
+      "current_mtime_ns": 1792048526846138500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/shell1 by Toadette X Mushina#7019.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/shell2 by Toadette X Mushina#7019.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 2162,
+      "source_mtime_ns": 1792048526846138500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/shell2 by Toadette X Mushina#7019.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "34395177fa3ca86314d8faf15023c6e33f42410e9b997d16cf60bca92d774326",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "12cc97fbcd215307c7c065eaf1358585930b49e644c90ec18eeaa04439339100",
+          "alpha_sha256": "d268748c836bd977382d7c3e4625d934aec00126c0cb45106b1c6022240d6b8e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "12cc97fbcd215307c7c065eaf1358585930b49e644c90ec18eeaa04439339100",
+      "alpha_sha256": "d268748c836bd977382d7c3e4625d934aec00126c0cb45106b1c6022240d6b8e",
+      "current_bytes": 2162,
+      "current_mtime_ns": 1792048526846138500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/shell2 by Toadette X Mushina#7019.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/shell3 by Toadette X Mushina#7019.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1243,
+      "source_mtime_ns": 1792048526846138500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/shell3 by Toadette X Mushina#7019.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "f79c20f09bf36ef06e250753f68a1c4382df9393a60d6a430db9991688c8cc52",
+      "format": "PNG",
+      "mode": "P",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "cc13125ca05ada00455a3d83ec4582344fcf40190ca2bcf234b114370be1e4d8",
+          "alpha_sha256": "7152adcaf05b2dfea2a23e94e7330a399f33b192f68fe1cfe6626b2b7994739b",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "cc13125ca05ada00455a3d83ec4582344fcf40190ca2bcf234b114370be1e4d8",
+      "alpha_sha256": "7152adcaf05b2dfea2a23e94e7330a399f33b192f68fe1cfe6626b2b7994739b",
+      "current_bytes": 1243,
+      "current_mtime_ns": 1792048526846138500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/shell3 by Toadette X Mushina#7019.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/shell by holgast.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 1132,
+      "source_mtime_ns": 1792048526846138500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/shell by holgast.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "d1a531b69f34552ee52bd77f84e97bd72f19420c228691a39dc78bec3fe45583",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "90a234ee693864e61b187b4745ac94a29e9d17c2d2eb386a233360a7a893c4f7",
+          "alpha_sha256": "607a0208c7f75b676b3521ae1db765c978b80e7e1ad394a4f641974bec915c2d",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "90a234ee693864e61b187b4745ac94a29e9d17c2d2eb386a233360a7a893c4f7",
+      "alpha_sha256": "607a0208c7f75b676b3521ae1db765c978b80e7e1ad394a4f641974bec915c2d",
+      "current_bytes": 1132,
+      "current_mtime_ns": 1792048526846138500,
+      "nearest_neighbor_3x_rgba_sha256": "c1fbe19b9944d01047969f7fbe664755d3145cb4ceeb8060ee309091daead5e7",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/shell by holgast.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/sideways_doublade by bookwyrm77.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 3292,
+      "source_mtime_ns": 1792048526847136700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/sideways_doublade by bookwyrm77.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "0b71944a0b71d5df3988a136b4520e99d07b7781eef71b2c8798670576326223",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "d12aba10aeb1b476e6f662a5eab2039b892cd0058d1ef81e8a7df72d28604743",
+          "alpha_sha256": "cfb0d7d80447594878316ff958b0c4955c25bb2c3696962d8415367787b0787f",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "d12aba10aeb1b476e6f662a5eab2039b892cd0058d1ef81e8a7df72d28604743",
+      "alpha_sha256": "cfb0d7d80447594878316ff958b0c4955c25bb2c3696962d8415367787b0787f",
+      "current_bytes": 3292,
+      "current_mtime_ns": 1792048526847136700,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/sideways_doublade by bookwyrm77.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/silver_gen_5_edit by Znacczlipper#8111.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2318,
+      "source_mtime_ns": 1792048526847136700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/silver_gen_5_edit by Znacczlipper#8111.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "30a3523c9b65637219e3f766bc9d55bebc98531f6aa3b4035826c834f5c0e6cd",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "cc64d0ab982dade3aa196cecc8127c98aeb09c69506dab412ce765664f3c10ef",
+          "alpha_sha256": "4cbd973f754b4f119d3faedbd90eaf547f3530e21a64593cce8476758ac42b9e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "cc64d0ab982dade3aa196cecc8127c98aeb09c69506dab412ce765664f3c10ef",
+      "alpha_sha256": "4cbd973f754b4f119d3faedbd90eaf547f3530e21a64593cce8476758ac42b9e",
+      "current_bytes": 2318,
+      "current_mtime_ns": 1792048526847136700,
+      "nearest_neighbor_3x_rgba_sha256": "cf5a5a0a21d0d74def598fbed6d76a63bd593db66c3b2eb68f9fbad5d0e4b182",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/silver_gen_5_edit by Znacczlipper#8111.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/skateboard2 by quote.lass.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 31008,
+      "source_mtime_ns": 1792048526848134500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/skateboard2 by quote.lass.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "3e907be84b4c5633c85ebbe77d17c84998ff16221516211cd7e7da1fdd65e786",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "18619e47b3414e87942528b1098718c1ae0ffea73316576e32c1f10f751ba356",
+          "alpha_sha256": "60d038b07c3607927de807a704092c9d7aa43d4bc5985b6fcfa1062404be984b",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "18619e47b3414e87942528b1098718c1ae0ffea73316576e32c1f10f751ba356",
+      "alpha_sha256": "60d038b07c3607927de807a704092c9d7aa43d4bc5985b6fcfa1062404be984b",
+      "current_bytes": 31008,
+      "current_mtime_ns": 1792048526848134500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/skateboard2 by quote.lass.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/skateboard by quote.lass.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 31315,
+      "source_mtime_ns": 1792048526848134500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/skateboard by quote.lass.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "86b43d9048628314cc211000a6d994e71c87f2d9491d03beee5d24f369862c4e",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "9f0ff335fc392318fa3a47d25bd03f73559267b8769eb543814bb2bd34c5d04b",
+          "alpha_sha256": "f616c6d1e6a3feaca9731a6d2800b1fb8a4e936db4e3f5429eb7f9cc0cbc6371",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "9f0ff335fc392318fa3a47d25bd03f73559267b8769eb543814bb2bd34c5d04b",
+      "alpha_sha256": "f616c6d1e6a3feaca9731a6d2800b1fb8a4e936db4e3f5429eb7f9cc0cbc6371",
+      "current_bytes": 31315,
+      "current_mtime_ns": 1792048526848134500,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/skateboard by quote.lass.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Skulls by Howls#4468.png",
+      "size": [
+        375,
+        240
+      ],
+      "source_bytes": 28158,
+      "source_mtime_ns": 1792048526780498700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Skulls by Howls#4468.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "4d6d9eb25c261bda7486f47569ae9aa89e834709af3c9c090034484ac3edda75",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "5c0a05c90f96b45ffaefea6ae60560fa0956748a1c0993ef340f5a45611185ec",
+          "alpha_sha256": "a3ca047c14b76a180c5330159d4003ae7904f835ddb09e3a2ba6bcd67c326763",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "5c0a05c90f96b45ffaefea6ae60560fa0956748a1c0993ef340f5a45611185ec",
+      "alpha_sha256": "a3ca047c14b76a180c5330159d4003ae7904f835ddb09e3a2ba6bcd67c326763",
+      "current_bytes": 28158,
+      "current_mtime_ns": 1792048526780498700,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Skulls by Howls#4468.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Slowpoke_tiny by monoski1.png",
+      "size": [
+        288,
+        288
+      ],
+      "source_bytes": 1272,
+      "source_mtime_ns": 1792048526780498700,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Slowpoke_tiny by monoski1.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "223d9d2a964accff60431f11516f9614f69d108da6f32575b04de00f1ca5c049",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "ff6500a830209fc5fd5bb72ca30f15ab15225e84ff0de3044e01c211ababf3b4",
+          "alpha_sha256": "fd16473991dab8e9b302eac94ec5666b903b616e8d530e6a70a39644b28fe94d",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "ff6500a830209fc5fd5bb72ca30f15ab15225e84ff0de3044e01c211ababf3b4",
+      "alpha_sha256": "fd16473991dab8e9b302eac94ec5666b903b616e8d530e6a70a39644b28fe94d",
+      "current_bytes": 1272,
+      "current_mtime_ns": 1792048526780498700,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "署名或变体的方形源精灵，保留各自身份、姿态、画风和原配色。真实自定义文件前后面显示、镜像、底部/中心锚点和完整选择/目标周期已检查；显式兼容物种使用固定基线，不虚构该来源的正式物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Slowpoke_tiny by monoski1.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/Slugma_base by CoramSun#0274.png",
+      "size": [
+        144,
+        288
+      ],
+      "source_bytes": 11401,
+      "source_mtime_ns": 1792048526781499100,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/Slugma_base by CoramSun#0274.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "206caba1a4ae98cda457ced405fb8c43f58068be31b3cc13e3f33d632a1b42cc",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "8ab279fd57fad849361c9394907db7f85db2233bca4c638ca4107f3c040281f3",
+          "alpha_sha256": "751a41b252949b65afdd077e4b095e1ba0d57bf29922f4a2d49f05b85d2e8b5f",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "8ab279fd57fad849361c9394907db7f85db2233bca4c638ca4107f3c040281f3",
+      "alpha_sha256": "751a41b252949b65afdd077e4b095e1ba0d57bf29922f4a2d49f05b85d2e8b5f",
+      "current_bytes": 11401,
+      "current_mtime_ns": 1792048526781499100,
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [],
+      "status": "preserved",
+      "reason": "源素材集合中的独立尺寸画稿、部件或图集，不能当作标准 96×96 单帧精灵。保留完整画布、署名、全部图格/部件和透明边界；通用兼容加载及适用的阶段样本另列，不猜测动画帧宽、时钟或物种绑定。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/Slugma_base by CoramSun#0274.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    },
+    {
+      "source": "Graphics/BaseSprites/96x96 sprites + assets/small by GREEN#2016.png",
+      "size": [
+        96,
+        96
+      ],
+      "source_bytes": 2717,
+      "source_mtime_ns": 1792048526848134500,
+      "canonical_source": "Graphics/BaseSprites/96x96 sprites + assets/small by GREEN#2016.png",
+      "batch": "batch-850",
+      "stage": "source96",
+      "sha256": "9f71032db1e3795af6b21d07fd714113294d3e8502de630a11d396de87877a4d",
+      "format": "PNG",
+      "mode": "RGBA",
+      "encoded_frames": 1,
+      "encoded_loop": null,
+      "frames": [
+        {
+          "rgba_sha256": "a3525b10867feff347383c0b1a9b4b246c11f8c013238a76294ebbeeddb6b539",
+          "alpha_sha256": "347f02b185d7391a6d3bc7a6d81ed5ff6ab44d2bae5cc76842096694aac09c7e",
+          "duration_ms": null,
+          "disposal": null
+        }
+      ],
+      "rgba_sha256": "a3525b10867feff347383c0b1a9b4b246c11f8c013238a76294ebbeeddb6b539",
+      "alpha_sha256": "347f02b185d7391a6d3bc7a6d81ed5ff6ab44d2bae5cc76842096694aac09c7e",
+      "current_bytes": 2717,
+      "current_mtime_ns": 1792048526848134500,
+      "nearest_neighbor_3x_rgba_sha256": "b4d1ee4b7be7fe336bb74c1d6afe539c11eba4c883fdc5ab00aa5bc08bbb2185",
+      "pixel_matches": [],
+      "nearest_neighbor_3x_matches": [
+        {
+          "kind": "current_file",
+          "source": "Graphics/BaseSprites/380q.png",
+          "status": "preserved",
+          "sha256": "1528eafab658029aa48cc92cb84fe7ed29ac78d6b87712fc116017d76d0e9a7c"
+        }
+      ],
+      "status": "preserved",
+      "reason": "作者署名的 96×96 源精灵，细小轮廓、物种特征和原配色已有清晰像素。真实自定义文件工厂与前后面组件已检查，并逐像素核对原生 3 倍最近邻输出；这是运行时像素缩放，不是 AI 高清化，也不证明作者源目录被默认物种解析选中。保留原始源稿。 已记录与现有文件逐像素一致的 3 倍最近邻关系，未计为新增高清化。",
+      "reference_audit": {
+        "source": "Graphics/BaseSprites/96x96 sprites + assets/small by GREEN#2016.png",
+        "qualified_path_files": 0,
+        "name_hint_files": 0,
+        "hits": []
+      },
+      "native_compatibility_issue": null,
+      "validation_scope": "All 1754 sources directly decode at original dimensions. Recognized 96/288 square artist sources exercise actual custom-file front/back battler factories, bottom-center origins, mirroring and a complete selection/target period. Resolver fallbacks are explicitly marked as unbound source cases, with separate explicit-case loads. All 1032 native 96-to-288 source exports passed exact alpha and visible-RGB comparison with integer nearest-neighbor scaling. Resolver fallbacks use separately verified explicit-case loaders and are not certified as successful current custom-file bindings. Scaling is not AI enhancement or automatic species binding. Old backdrop/base overrides retain exact canvas/margins and applicable anchors. Both old walking sheets cover all direction/cell crops. Actual SpritePositioner builds in English/Chinese and selects Bulbasaur without metric edits or saves. Other atlases, PNG strips, large tiles and miscellaneous art are explicit compatibility loads; no automatic species binding, unspecified animation duration, map seam, ordinary archive selection or complete gameplay is certified."
+    }
+  ],
+  "evidence": [
+    "output/texture-hd/p5-evidence/remaining/reference-audit.json",
+    "output/texture-hd/p5-evidence/remaining/reference-native-review.json",
+    "output/texture-hd/p5-evidence/remaining/media-native-review.json",
+    "output/texture-hd/p5-evidence/remaining/collection-phase-review.json",
+    "output/texture-hd/p5-evidence/batch-850/review-01.png",
+    "output/texture-hd/p2-evidence/dex/texture-p2-dex-p5-remaining-audit-20261103-cleanup.json",
+    "output/texture-hd/p2-evidence/dex/texture-p2-dex-p5-remaining-media-final-20261103-cleanup.json"
+  ],
+  "limits": "Retained original bytes and specified native/component compatibility only. No full gameplay, default species binding of author sources, arbitrary save override, unbound animation timing or unreferenced atlas seam certification."
+}

@@ -58,7 +58,17 @@ async function main() {
   const checkpoint = read(`p5-evidence/${lastBatch}/checkpoint-verification.json`);
   assert.equal(checkpoint.status, 'passed');
   assert.equal(checkpoint.next_batch, p5.next_batch);
+  const allComplete = p5.status === 'completed';
+  if (allComplete) {
+    const finalReport = read('p5-evidence/checkpoint-verification.json');
+    assert.equal(lastNumber, 857);
+    assert.equal(p5.completed_files, 1850);
+    assert.equal(finalReport.status, 'passed');
+    assert.equal(finalReport.remaining, 0);
+    assert.equal(read('execution-plan/plan.json').status, 'completed');
+  }
   const base = git(['rev-parse', `refs/heads/${branch}`]);
+  const parent = tree(base);
   const sharedBranch = git(['branch', '--show-current']);
   assert.notEqual(sharedBranch, branch, 'Use the normal checkout workflow when already on the feature branch.');
   const indexPath = path.resolve(root, git(['rev-parse', '--git-path', 'index']));
@@ -70,25 +80,41 @@ async function main() {
     if (fs.existsSync(path.join(out, name))) applied.push(...read(name).entries);
   }
   assert.equal(applied.length, read('inventory.json').applied);
+  const drift = read('p5-evidence/prior-phase-worktree-drift.json');
+  const driftBySource = new Map(drift.entries.map(entry => [entry.source, entry]));
+  const inheritedApplied = new Map();
   for (const entry of applied) {
     assert(entry.source.startsWith('Graphics/') || entry.source.startsWith('Data/localization/'));
-    assert.equal(hash(fs.readFileSync(path.join(root, entry.source))), entry.after_sha256, entry.source);
+    const current = hash(fs.readFileSync(path.join(root, entry.source)));
+    if (current === entry.after_sha256) continue;
+    const observed = driftBySource.get(entry.source);
+    assert(observed, 'Unrecorded runtime image difference: ' + entry.source);
+    assert.equal(current, observed.observed_worktree_sha256, entry.source);
+    assert.equal(entry.before_sha256, current, entry.source);
+    assert.equal(entry.after_sha256, observed.accepted_sha256, entry.source);
+    assert(observed.accepted_archive.startsWith('output/texture-hd/batch-060/ready/'));
+    const accepted = fs.readFileSync(path.join(root, observed.accepted_archive));
+    assert.equal(hash(accepted), entry.after_sha256, entry.source);
+    assert.equal(parent.get(entry.source), blobId(accepted), 'Parent accepted image differs: ' + entry.source);
+    inheritedApplied.set(entry.source, parent.get(entry.source));
   }
+  assert.equal(inheritedApplied.size, drift.entries.length);
   const excluded = new Set(['output/texture-hd/commit-receipt.json']);
   const files = walk(out).map(p => path.relative(root, p).replaceAll('\\', '/')).filter(p => !excluded.has(p));
-  const paths = [...new Set([...files, ...applied.map(e => e.source), 'scripts/graphics/texture_batch.py'])].sort();
+  const paths = [...new Set([...files, ...applied.filter(e => !inheritedApplied.has(e.source)).map(e => e.source), 'scripts/graphics/texture_batch.py'])].sort();
   const allowed = new Set(applied.map(e => e.source));
   assert(paths.every(p => p.startsWith('output/texture-hd/') || p === 'scripts/graphics/texture_batch.py' || allowed.has(p)));
   write('commit-scope.json', {
     branch, base_commit: base, shared_worktree_branch: sharedBranch, runtime_images: applied.length,
-    record_files: paths.length - applied.length - 1, total_files: paths.length,
+    record_files: paths.length - (applied.length - inheritedApplied.size) - 1, total_files: paths.length,
+    inherited_accepted_runtime_images: [...inheritedApplied.keys()],
+    preserved_worktree_drift: 'output/texture-hd/p5-evidence/prior-phase-worktree-drift.json',
     included_roots: ['output/texture-hd', 'scripts/graphics/texture_batch.py', 'manifest-verified applied images'],
     excluded: 'Concurrent source, localization, Android, build and multiplayer edits; raw logs, bytecode and self-referencing commit receipt.',
     preserved_catalog_deltas: 'output/texture-hd/batch-060/catalog-changes.json',
     checkpoint: { p3: 'completed through batch-540', p4: progress, p5 }, paths
   });
   fs.writeFileSync(path.join(out, 'commit-paths.txt'), paths.join('\n') + '\n');
-  const parent = tree(base);
   const expected = new Map();
   let byteCount = 0;
   console.log(`VERIFYING_BYTES files=${paths.length}`);
@@ -110,7 +136,9 @@ async function main() {
     const known = new Set(parent.values());
     const author = git(['var', 'GIT_AUTHOR_IDENT']);
     const committer = git(['var', 'GIT_COMMITTER_IDENT']);
-    const message = Buffer.from(`feat(graphics): audit and preserve P5 texture batch ${lastNumber}\n\nReview ${checkpoint.files} archive images: ${checkpoint.applied} applied, ${checkpoint.preserved} preserved with exact source bytes, dimensions and alpha. Save ${checkpoint.pixel_match_sources} decoded-pixel duplicate relationships, source/data reference audits and native compatibility evidence.\nExplicit archive rendering does not certify ordinary map selection or substitution for current cropped assets. Next batch is ${p5.next_batch}; ${p5.remaining_files} P5 files remain.\nScope excludes concurrent source, localization, build and multiplayer edits.\n`);
+    const message = Buffer.from(allComplete
+      ? 'feat(graphics): complete P5 texture audit and recovery validation\n\nComplete batches 817-857: 1850 preserved, no new image replacements or pending candidates. Save exact pixel/alpha backups and deliveries, reference audits, 1032 verified native integer-scale outputs, 2384 battler cases, 119200 selection states, archive/editor checks and explicit filename-resolution compatibility findings.\nAll 18665 planned images are resolved on the accepted feature branch: 267 enhancements, one container-only repair, 18397 preserved, zero pending. Inherit six accepted P2 image blobs while preserving the shared worktree originals and recording that difference.\nFull gameplay and Android device/release validation remain outside this result. Concurrent source/localization/build edits and the shared HEAD/index are preserved; no push.\n'
+      : `feat(graphics): audit and preserve P5 texture batch ${lastNumber}\n\nReview ${checkpoint.files} archive images: ${checkpoint.applied} applied, ${checkpoint.preserved} preserved with exact source bytes, dimensions and alpha. Save ${checkpoint.pixel_match_sources} decoded-pixel duplicate relationships, source/data reference audits and native compatibility evidence.\nExplicit archive rendering does not certify ordinary map selection or substitution for current cropped assets. Next batch is ${p5.next_batch}; ${p5.remaining_files} P5 files remain.\nScope excludes concurrent source, localization, build and multiplayer edits.\n`);
     child = cp.spawn(gitExe, ['-c', 'core.multiPackIndex=false', 'fast-import', '--quiet', '--done', '--export-marks=' + path.join(temporary, 'marks')], {
       cwd: root, windowsHide: true, stdio: ['pipe', 'ignore', 'pipe'], env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
     });
@@ -152,6 +180,10 @@ async function main() {
       assert.equal(committed.get(name), expected.get(name), 'Committed bytes differ: ' + name);
       assert.equal(blobId(fs.readFileSync(path.join(root, name))), expected.get(name), 'Working bytes changed: ' + name);
     }
+    for (const [name, oid] of inheritedApplied) {
+      assert.equal(committed.get(name), oid, 'Inherited accepted image differs: ' + name);
+      assert.equal(hash(fs.readFileSync(path.join(root, name))), driftBySource.get(name).observed_worktree_sha256, 'Preserved working image changed: ' + name);
+    }
     const actual = git(['diff-tree', '--no-commit-id', '-r', '--name-only', '-z', base, commit]).split('\0').filter(Boolean).sort();
     assert.deepEqual(actual, changes);
     assert.equal(git(['branch', '--show-current']), sharedBranch);
@@ -159,6 +191,7 @@ async function main() {
     assert.equal(hash(fs.readFileSync(indexPath)), initialIndex);
     const receipt = {
       status: 'committed', branch, commit, base, changed_paths: actual.length, runtime_images: applied.length,
+      inherited_accepted_runtime_images: inheritedApplied.size, worktree_image_differences_preserved: inheritedApplied.size,
       files_byte_verified: paths.length, shared_worktree_branch_before: sharedBranch,
       shared_worktree_branch_after: sharedBranch, shared_index_unchanged: true, shared_index_used: false,
       pushed: false, p4_completed_through: 'batch-816', p4_next_batch: null,

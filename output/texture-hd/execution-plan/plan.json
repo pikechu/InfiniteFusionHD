@@ -2,20 +2,25 @@
   "version": 1,
   "created_date": "2026-10-27",
   "timezone": "Asia/Shanghai",
-  "status": "in_progress",
+  "status": "completed",
   "inventory_sha256": "c32ca345143d8662f9694f4bfa59517e271bbe0d32056942ac59b3968d8cc8fe",
   "total_images": 18665,
   "already_applied_images": 86,
   "remaining_images": 18579,
   "batch_count": 853,
-  "next_batch": "batch-819",
+  "next_batch": null,
   "priorities": [
     {
       "priority": "P1",
       "files": 260,
       "batches": 53,
       "first": "batch-005",
-      "last": "batch-057"
+      "last": "batch-057",
+      "status": "completed",
+      "completed_files": 260,
+      "applied_files": 166,
+      "preserved_files": 94,
+      "remaining_files": 0
     },
     {
       "priority": "P2",
@@ -25,7 +30,9 @@
       "last": "batch-151",
       "status": "completed",
       "applied_files": 15,
-      "preserved_files": 2208
+      "preserved_files": 2208,
+      "completed_files": 2223,
+      "remaining_files": 0
     },
     {
       "priority": "P3",
@@ -57,11 +64,11 @@
       "batches": 41,
       "first": "batch-817",
       "last": "batch-857",
-      "status": "in_progress",
-      "completed_files": 96,
+      "status": "completed",
+      "completed_files": 1850,
       "applied_files": 0,
-      "preserved_files": 96,
-      "remaining_files": 1754
+      "preserved_files": 1850,
+      "remaining_files": 0
     }
   ],
   "priority_basis": "按可见收益、与已完成素材的配套关系和结构风险排序；未宣称完成运行频次统计。",
@@ -74,7 +81,11 @@
       "files": 12,
       "batch_ids": [
         "batch-005"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 12,
+      "applied_files": 12,
+      "preserved_files": 0
     },
     {
       "stage": "ground",
@@ -89,7 +100,11 @@
         "batch-009",
         "batch-010",
         "batch-011"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 130,
+      "applied_files": 130,
+      "preserved_files": 0
     },
     {
       "stage": "message",
@@ -100,7 +115,11 @@
       "batch_ids": [
         "batch-012",
         "batch-013"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 27,
+      "applied_files": 0,
+      "preserved_files": 27
     },
     {
       "stage": "tiles_pilot",
@@ -110,7 +129,11 @@
       "files": 1,
       "batch_ids": [
         "batch-014"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 1,
+      "applied_files": 0,
+      "preserved_files": 1
     },
     {
       "stage": "tiles_core",
@@ -122,7 +145,11 @@
         "batch-015",
         "batch-016",
         "batch-017"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 3,
+      "applied_files": 3,
+      "preserved_files": 0
     },
     {
       "stage": "tiles_other",
@@ -157,7 +184,11 @@
         "batch-041",
         "batch-042",
         "batch-043"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 26,
+      "applied_files": 7,
+      "preserved_files": 19
     },
     {
       "stage": "auto_pilot",
@@ -167,7 +198,11 @@
       "files": 4,
       "batch_ids": [
         "batch-044"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 4,
+      "applied_files": 0,
+      "preserved_files": 4
     },
     {
       "stage": "auto_ground",
@@ -180,7 +215,11 @@
         "batch-046",
         "batch-047",
         "batch-048"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 21,
+      "applied_files": 0,
+      "preserved_files": 21
     },
     {
       "stage": "auto_water",
@@ -198,7 +237,11 @@
         "batch-055",
         "batch-056",
         "batch-057"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 36,
+      "applied_files": 14,
+      "preserved_files": 22
     },
     {
       "stage": "ui_battle",
@@ -216,7 +259,8 @@
       ],
       "status": "completed",
       "applied_files": 6,
-      "preserved_files": 115
+      "preserved_files": 115,
+      "completed_files": 121
     },
     {
       "stage": "ui_party",
@@ -241,7 +285,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 288
+      "preserved_files": 288,
+      "completed_files": 288
     },
     {
       "stage": "ui_dex",
@@ -270,7 +315,8 @@
       ],
       "status": "completed",
       "applied_files": 4,
-      "preserved_files": 370
+      "preserved_files": 370,
+      "completed_files": 374
     },
     {
       "stage": "ui_map",
@@ -291,7 +337,8 @@
       ],
       "status": "completed",
       "applied_files": 5,
-      "preserved_files": 197
+      "preserved_files": 197,
+      "completed_files": 202
     },
     {
       "stage": "titles",
@@ -306,7 +353,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 49
+      "preserved_files": 49,
+      "completed_files": 49
     },
     {
       "stage": "panorama",
@@ -320,7 +368,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 17
+      "preserved_files": 17,
+      "completed_files": 17
     },
     {
       "stage": "player_pilot",
@@ -333,7 +382,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 8
+      "preserved_files": 8,
+      "completed_files": 8
     },
     {
       "stage": "player_body",
@@ -350,7 +400,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 74
+      "preserved_files": 74,
+      "completed_files": 74
     },
     {
       "stage": "starter",
@@ -364,7 +415,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 43
+      "preserved_files": 43,
+      "completed_files": 43
     },
     {
       "stage": "pokemon_pilot",
@@ -377,7 +429,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 6
+      "preserved_files": 6,
+      "completed_files": 6
     },
     {
       "stage": "pokemon_main",
@@ -418,7 +471,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 911
+      "preserved_files": 911,
+      "completed_files": 911
     },
     {
       "stage": "trainer",
@@ -436,7 +490,8 @@
       ],
       "status": "completed",
       "applied_files": 0,
-      "preserved_files": 130
+      "preserved_files": 130,
+      "completed_files": 130
     },
     {
       "stage": "npc",
@@ -1275,10 +1330,10 @@
         "batch-823",
         "batch-824"
       ],
-      "status": "in_progress",
-      "completed_files": 96,
+      "status": "completed",
+      "completed_files": 366,
       "applied_files": 0,
-      "preserved_files": 96
+      "preserved_files": 366
     },
     {
       "stage": "source96",
@@ -1315,7 +1370,11 @@
         "batch-850",
         "batch-851",
         "batch-852"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 1344,
+      "applied_files": 0,
+      "preserved_files": 1344
     },
     {
       "stage": "misc",
@@ -1329,7 +1388,11 @@
         "batch-855",
         "batch-856",
         "batch-857"
-      ]
+      ],
+      "status": "completed",
+      "completed_files": 140,
+      "applied_files": 0,
+      "preserved_files": 140
     }
   ],
   "methods": {
@@ -1371,7 +1434,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-005/validation.json"
+      "result": "output/texture-hd/batch-005/validation.json",
+      "applied_files": 12,
+      "preserved_files": 0
     },
     {
       "id": "batch-006",
@@ -1397,7 +1462,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-006/validation.json"
+      "result": "output/texture-hd/batch-006/validation.json",
+      "applied_files": 24,
+      "preserved_files": 0
     },
     {
       "id": "batch-007",
@@ -1424,7 +1491,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-007/validation.json"
+      "result": "output/texture-hd/batch-007/validation.json",
+      "applied_files": 24,
+      "preserved_files": 0
     },
     {
       "id": "batch-008",
@@ -1451,7 +1520,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-008/validation.json"
+      "result": "output/texture-hd/batch-008/validation.json",
+      "applied_files": 23,
+      "preserved_files": 0
     },
     {
       "id": "batch-009",
@@ -1478,7 +1549,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-009/validation.json"
+      "result": "output/texture-hd/batch-009/validation.json",
+      "applied_files": 24,
+      "preserved_files": 0
     },
     {
       "id": "batch-010",
@@ -1505,7 +1578,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-010/validation.json"
+      "result": "output/texture-hd/batch-010/validation.json",
+      "applied_files": 23,
+      "preserved_files": 0
     },
     {
       "id": "batch-011",
@@ -1532,7 +1607,9 @@
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "敌我两侧与原背景合成，核对地台锚点、透明轮廓、覆盖区域和环境配色。"
       ],
-      "result": "output/texture-hd/batch-011/validation.json"
+      "result": "output/texture-hd/batch-011/validation.json",
+      "applied_files": 12,
+      "preserved_files": 0
     },
     {
       "id": "batch-012",
@@ -1562,7 +1639,9 @@
       "outcome": {
         "applied": 0,
         "preserved": 16
-      }
+      },
+      "applied_files": 0,
+      "preserved_files": 16
     },
     {
       "id": "batch-013",
@@ -1593,7 +1672,9 @@
       "outcome": {
         "applied": 0,
         "preserved": 11
-      }
+      },
+      "applied_files": 0,
+      "preserved_files": 11
     },
     {
       "id": "batch-014",
@@ -32698,7 +32779,7 @@
       "priority": "P5",
       "stage": "archive",
       "title": "备份、旧版、备用与测试目录：先核对用途（3/8）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32715,7 +32796,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-819/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-820",
@@ -32723,7 +32807,7 @@
       "priority": "P5",
       "stage": "archive",
       "title": "备份、旧版、备用与测试目录：先核对用途（4/8）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32740,7 +32824,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-820/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-821",
@@ -32748,7 +32835,7 @@
       "priority": "P5",
       "stage": "archive",
       "title": "备份、旧版、备用与测试目录：先核对用途（5/8）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32765,7 +32852,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-821/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-822",
@@ -32773,7 +32863,7 @@
       "priority": "P5",
       "stage": "archive",
       "title": "备份、旧版、备用与测试目录：先核对用途（6/8）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32790,7 +32880,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-822/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-823",
@@ -32798,7 +32891,7 @@
       "priority": "P5",
       "stage": "archive",
       "title": "备份、旧版、备用与测试目录：先核对用途（7/8）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32817,7 +32910,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-823/validation.json",
+      "applied_files": 0,
+      "preserved_files": 47
     },
     {
       "id": "batch-824",
@@ -32825,7 +32921,7 @@
       "priority": "P5",
       "stage": "archive",
       "title": "备份、旧版、备用与测试目录：先核对用途（8/8）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32844,7 +32940,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-824/validation.json",
+      "applied_files": 0,
+      "preserved_files": 31
     },
     {
       "id": "batch-825",
@@ -32852,7 +32951,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（1/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32867,7 +32966,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-825/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-826",
@@ -32875,7 +32977,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（2/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32892,7 +32994,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-826/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-827",
@@ -32900,7 +33005,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（3/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32917,7 +33022,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-827/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-828",
@@ -32925,7 +33033,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（4/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32942,7 +33050,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-828/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-829",
@@ -32950,7 +33061,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（5/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32967,7 +33078,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-829/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-830",
@@ -32975,7 +33089,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（6/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -32992,7 +33106,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-830/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-831",
@@ -33000,7 +33117,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（7/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33017,7 +33134,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-831/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-832",
@@ -33025,7 +33145,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（8/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33042,7 +33162,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-832/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-833",
@@ -33050,7 +33173,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（9/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33067,7 +33190,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-833/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-834",
@@ -33075,7 +33201,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（10/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33092,7 +33218,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-834/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-835",
@@ -33100,7 +33229,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（11/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33117,7 +33246,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-835/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-836",
@@ -33125,7 +33257,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（12/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33142,7 +33274,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-836/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-837",
@@ -33150,7 +33285,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（13/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33167,7 +33302,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-837/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-838",
@@ -33175,7 +33313,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（14/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33192,7 +33330,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-838/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-839",
@@ -33200,7 +33341,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（15/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33217,7 +33358,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-839/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-840",
@@ -33225,7 +33369,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（16/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33242,7 +33386,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-840/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-841",
@@ -33250,7 +33397,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（17/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33267,7 +33414,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-841/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-842",
@@ -33275,7 +33425,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（18/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33292,7 +33442,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-842/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-843",
@@ -33300,7 +33453,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（19/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33317,7 +33470,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-843/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-844",
@@ -33325,7 +33481,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（20/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33342,7 +33498,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-844/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-845",
@@ -33350,7 +33509,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（21/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33367,7 +33526,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-845/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-846",
@@ -33375,7 +33537,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（22/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33392,7 +33554,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-846/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-847",
@@ -33400,7 +33565,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（23/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33417,7 +33582,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-847/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-848",
@@ -33425,7 +33593,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（24/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33442,7 +33610,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-848/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-849",
@@ -33450,7 +33621,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（25/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33467,7 +33638,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-849/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-850",
@@ -33475,7 +33649,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（26/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33492,7 +33666,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-850/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-851",
@@ -33500,7 +33677,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（27/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33517,7 +33694,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-851/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-852",
@@ -33525,7 +33705,7 @@
       "priority": "P5",
       "stage": "source96",
       "title": "96×96 源素材集合：先核对与运行素材的关系（28/28）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33542,7 +33722,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-852/validation.json",
+      "applied_files": 0,
+      "preserved_files": 48
     },
     {
       "id": "batch-853",
@@ -33550,7 +33733,7 @@
       "priority": "P5",
       "stage": "misc",
       "title": "杂项、素材集合与用途待确认图片（1/5）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33565,7 +33748,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-853/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-854",
@@ -33573,7 +33759,7 @@
       "priority": "P5",
       "stage": "misc",
       "title": "杂项、素材集合与用途待确认图片（2/5）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33592,7 +33778,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-854/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-855",
@@ -33600,7 +33789,7 @@
       "priority": "P5",
       "stage": "misc",
       "title": "杂项、素材集合与用途待确认图片（3/5）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33617,7 +33806,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-855/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-856",
@@ -33625,7 +33817,7 @@
       "priority": "P5",
       "stage": "misc",
       "title": "杂项、素材集合与用途待确认图片（4/5）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33642,7 +33834,10 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-856/validation.json",
+      "applied_files": 0,
+      "preserved_files": 32
     },
     {
       "id": "batch-857",
@@ -33650,7 +33845,7 @@
       "priority": "P5",
       "stage": "misc",
       "title": "杂项、素材集合与用途待确认图片（5/5）",
-      "status": "needs_usage_audit",
+      "status": "completed",
       "action": "audit_then_enhance_if_used",
       "method": "audit",
       "processing_notes": "先追踪运行/地图/界面引用并比对重复图；确有使用才选择对应处理流程，未使用或无收益则保留并记录依据，不删除原图。",
@@ -33667,12 +33862,29 @@
         "使用相应游戏场景或连续动画验收；仅能加载图片不能替代交互、拼接或动画验证。",
         "核对应用文件与清单 SHA-256，更新库存和本批结果；保留无收益素材时记录原因，不伪称已重绘。",
         "保存引用/重复关系证据；需要时沿对应方法改造，不使用或无收益时原样保留，不删除、不擅自替换备份。"
-      ]
+      ],
+      "result": "output/texture-hd/batch-857/validation.json",
+      "applied_files": 0,
+      "preserved_files": 12
     }
   ],
   "completed_priorities": [
     "P1",
-    "P2"
+    "P2",
+    "P3",
+    "P4",
+    "P5"
   ],
-  "execution_updated_date": "2026-10-30"
+  "execution_updated_date": "2026-11-03",
+  "execution_inventory_sha256": "499f9a66b9dfa709140c6df24440eab2c058b065eda1dbc1389b936cf8cc37bc",
+  "execution_summary": {
+    "total": 18665,
+    "applied": 268,
+    "enhanced": 267,
+    "container_repaired_only": 1,
+    "preserved": 18397,
+    "pending": 0,
+    "scope": "Accepted texture feature-branch records; six prior P2 worktree originals are preserved separately"
+  },
+  "planning_snapshot_note": "already_applied_images, remaining_images and inventory_sha256 retain the original planning snapshot; current totals are execution_summary and per-batch receipts."
 }
