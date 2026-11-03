@@ -13,6 +13,8 @@ WorkingDirectory=/opt/kif-mmo/current/server/multiplayer
 Environment=KIF_CONFIG=/etc/kif-mmo/production.json
 Environment=PYTHONDONTWRITEBYTECODE=1
 Environment=PYTHONUNBUFFERED=1
+Environment=KIF_MULTIPLAYER_RUBY=/usr/bin/ruby
+Environment=KIF_MULTIPLAYER_RULEBOOKS=/opt/kif-mmo/releases
 ExecStart=/opt/kif-mmo/current/venv/bin/gunicorn --config /opt/kif-mmo/current/server/multiplayer/deploy/gunicorn.conf.py
 Restart=on-failure
 RestartSec=5

@@ -4,11 +4,14 @@ import argparse
 import json
 import zipfile
 import subprocess
+import sys
 from concurrent.futures import ThreadPoolExecutor
 from collections import deque
 from payload_format import PayloadWriter, validate_payload, read_payload_file
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts/resources"))
+from build_manifest import check_bundled_data
 BASE_CONFIG = {
     "rgssVersion": 1, "defScreenW": 512, "defScreenH": 384,
     "fixedFramerate": 40, "fixedAspectRatio": True, "fullscreen": True,
@@ -23,6 +26,33 @@ BASE_CONFIG = {
     "fontHeightReporting": 1,
     "fontSub": ["Arial>Liberation Sans"],
 }
+
+
+def add_offline_resources(sources, root=None):
+    root = Path(root) if root is not None else ROOT
+    path = root / "Data/offline-resources.json"
+    if not path.is_file():
+        return
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    data = check_bundled_data(manifest, root)
+    sources["Data/offline-resources.json"] = path
+    sources.update({name: root / name for name in data})
+
+
+def add_chinese_assets(sources):
+    import hashlib
+    for name in ("Data/pokedex/dex_zh.json", "Data/localization/zh-CN-images.json"):
+        path = ROOT / name
+        if path.is_file(): sources[name] = path
+    manifest = ROOT / "Data/localization/zh-CN-images.json"
+    if manifest.is_file():
+        for row in json.loads(manifest.read_text(encoding="utf-8"))["images"].values():
+            path = (ROOT / row["path"]).resolve()
+            if not path.is_relative_to(ROOT / "Graphics/Chinese") or path.suffix != ".png":
+                raise ValueError("Invalid Chinese asset path")
+            if hashlib.sha256(path.read_bytes()).hexdigest() != row["sha256"]:
+                raise ValueError("Chinese asset checksum mismatch: " + row["path"])
+            sources[row["path"]] = path
 
 def write_payload(output: Path, runtime_only=False, asset_root=None):
     output.mkdir(parents=True, exist_ok=True)
@@ -47,8 +77,24 @@ def write_payload(output: Path, runtime_only=False, asset_root=None):
             sources[name] = file
         for file in (ROOT / "Data/Scripts").rglob("*.rb"):
             sources[file.relative_to(ROOT).as_posix()] = file
-        for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat", "Data/localization/source-notice.zh-CN.txt"):
+        for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat",
+                     "Data/offline-resources.json",
+                     "Data/localization/source-notice.zh-CN.txt"):
             if (ROOT / name).is_file(): sources[name] = ROOT / name
+        add_chinese_assets(sources)
+        add_offline_resources(sources)
+        shop_catalog = ROOT / "Data/shop/catalog.json"
+        if shop_catalog.is_file():
+            sources["Data/shop/catalog.json"] = shop_catalog
+            catalog = json.loads(shop_catalog.read_text(encoding="utf-8"))
+            for name, expected in catalog["assets"].items():
+                import hashlib
+                path = (ROOT / name).resolve()
+                if not path.is_relative_to(ROOT / "Graphics/Characters/player") or path.suffix != ".png":
+                    raise ValueError("Invalid shop asset path")
+                if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+                    raise ValueError("Shop asset checksum mismatch: " + name)
+                sources[name] = path
     sources["Game.ini"] = ROOT / "Game.ini"
     sources["kif_android_preload.rb"] = ROOT / "android/ruby/kif_android_preload.rb"
     sources["android-runtime-smoke.rb"] = ROOT / "android/ruby/android-runtime-smoke.rb"
@@ -107,8 +153,20 @@ def refresh_ruby_payload(output: Path):
     tracked = subprocess.check_output(["git", "-C", str(ROOT), "ls-files", "-z", "--", "Data/Scripts"]).decode("utf-8").split("\0")
     scripts = {name: ROOT / name for name in filter(None, tracked)}
     scripts.update({p.relative_to(ROOT).as_posix(): p for p in (ROOT / "Data/Scripts").rglob("*.rb")})
-    for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat", "Data/localization/source-notice.zh-CN.txt"):
+    for name in ("Data/multiplayer-build.json", "Data/analytics.json", "Data/messages_zh.dat",
+                 "Data/localization/source-notice.zh-CN.txt"):
         if (ROOT / name).is_file(): scripts[name] = ROOT / name
+    add_chinese_assets(scripts)
+    add_offline_resources(scripts)
+    shop_catalog = ROOT / "Data/shop/catalog.json"
+    if shop_catalog.is_file():
+        import hashlib
+        scripts["Data/shop/catalog.json"] = shop_catalog
+        for name, sha in json.loads(shop_catalog.read_text(encoding="utf-8"))["assets"].items():
+            path = (ROOT / name).resolve()
+            if not path.is_relative_to(ROOT / "Graphics/Characters/player") or path.suffix != ".png" or hashlib.sha256(path.read_bytes()).hexdigest() != sha:
+                raise ValueError("Invalid or changed shop asset: " + name)
+            scripts[name] = path
     for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb", "android-network-smoke.rb", "android-font-smoke.rb"):
         scripts[name] = ROOT / "android/ruby" / name
     if (ROOT / "android/ruby/kif_android_http.rb").is_file():

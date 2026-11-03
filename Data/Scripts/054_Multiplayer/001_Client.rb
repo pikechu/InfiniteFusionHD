@@ -5,7 +5,7 @@ module KIFMultiplayer
   RULES_VERSION = "friendly-singles-v1"
   CLIENT_BUILD = "multiplayer-0.3.0-dev"
   MAX_RESPONSE_BYTES = 2 * 1024 * 1024
-  NON_JOURNALED_POST = /\A\/v1\/(?:replays\/[A-Za-z0-9_-]+\/download|battles\/[A-Za-z0-9_-]+\/heartbeat|(?:auth|cloud|world|chat)\/[a-z]+)\z/
+  NON_JOURNALED_POST = /\A\/v1\/(?:replays\/[A-Za-z0-9_-]+\/download|battles\/[A-Za-z0-9_-]+\/heartbeat|controlled\/characters\/cc_[a-f0-9]{32}\/original\/presence|(?:auth|cloud|world|chat)\/[a-z]+)\z/
 
   class Error < StandardError
     attr_reader :code, :details
@@ -136,7 +136,7 @@ module KIFMultiplayer
 
   module WireJSON
     MAX_DEPTH = 32
-    MAX_NODES = 100_000
+    MAX_NODES = 300_000 # A full original PC appears in both the view and its selection prompt.
 
     # mkxp's native JSON encoder truncates/rejects unsigned 32-bit Pokemon IDs.
     # Keep wire integers as Ruby Integers and parse only the JSON grammar; no
@@ -410,7 +410,18 @@ module KIFMultiplayer
            end
     plugin = File.join(root, "Data", "PluginScripts.rxdata")
     mods << plugin if File.file?(plugin)
-    (scripts + data + mods).map do |path|
+    shop = []
+    shop_directory = File.join(root, "Data", "shop")
+    if File.directory?(shop_directory)
+      shop = Dir.entries(shop_directory).select { |name| name.end_with?(".json") }.map { |name| File.join(shop_directory, name) }
+      catalog = File.join(shop_directory, "catalog.json")
+      if File.file?(catalog)
+        assets = WireJSON.parse(File.binread(catalog))["assets"]
+        raise Error, "商城素材清单无效。" unless assets.is_a?(Hash) && assets.keys.all? { |name| name =~ /\AGraphics\/Characters\/player\/(clothes|hat|hair)\/shop[a-z]+\/[a-z0-9_]+\.png\z/ }
+        shop += assets.keys.map { |name| File.join(root, name) }
+      end
+    end
+    (scripts + data + mods + shop).map do |path|
       File.expand_path(path).tr("\\", "/").sub(/\A#{Regexp.escape(absolute_root)}/, "")
     end.uniq.sort
   end
@@ -783,7 +794,7 @@ module KIFMultiplayer
       end
       require "digest/sha2"
       files.each_with_index do |(relative, metadata), index|
-        unless relative.is_a?(String) && relative =~ /\A(?:Data|Mods)\/[^\\:\x00-\x1f]+\z/ && !relative.split("/").include?("..") && metadata.is_a?(Hash)
+        unless relative.is_a?(String) && relative =~ /\A(?:Data|Mods|Graphics\/Characters\/player)\/[^\\:\x00-\x1f]+\z/ && !relative.split("/").include?("..") && metadata.is_a?(Hash)
           raise Error.new("Invalid build manifest file", "missing_build")
         end
         unless File.file?(relative) && File.size(relative) == metadata["size"] && KIFMultiplayer.file_digest(relative) == metadata["sha256"]

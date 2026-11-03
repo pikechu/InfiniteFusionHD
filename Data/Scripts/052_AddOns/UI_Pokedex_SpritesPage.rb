@@ -126,8 +126,8 @@ class PokemonPokedexInfo_Scene
   def pbGetAvailableForms(species=nil)
     chosen_species = species != nil ? species : @species
     dex_num = getDexNumberForSpecies(chosen_species)
-    if KIF::SpriteSheets.mode == 2
-      # Online sheets are resolved only for the alternatives on screen.
+    if KIF::SpriteSheets.mode == 2 || (defined?(KIF::OfflineResources) && KIF::OfflineResources.installed?)
+      # Resolve only the visible alternatives; installed packs need no probing.
     elsif dex_num <= NB_POKEMON
       download_all_unfused_alt_sprites(dex_num)
     else
@@ -374,10 +374,10 @@ class PokemonPokedexInfo_Scene
     if @available.length > 1
       if is_main_sprite()
         if brief
-          pbMessage("This sprite will remain the displayed sprite")
+          pbMessage(_INTL("This sprite will remain the displayed sprite"))
           return true
         else
-          pbMessage("This sprite is already the displayed sprite")
+          pbMessage(_INTL("This sprite is already the displayed sprite"))
         end
       else
         if @forms_list.length > 0
@@ -391,7 +391,7 @@ class PokemonPokedexInfo_Scene
         end
       end
     else
-      pbMessage("This is the only sprite available for this Pokémon!")
+      pbMessage(_INTL("This is the only sprite available for this Pokémon!"))
     end
     return false
   end

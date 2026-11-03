@@ -23,11 +23,6 @@ final class AssetInstaller {
             return out.toString("UTF-8");
         }
     }
-    private static String hex(byte[] bytes) {
-        StringBuilder b = new StringBuilder();
-        for (byte value : bytes) b.append(String.format(java.util.Locale.ROOT, "%02x", value & 255));
-        return b.toString();
-    }
     private static File safeChild(File root, String path) throws IOException {
         File file = new File(root, path);
         if (!file.getCanonicalPath().startsWith(root.getCanonicalPath() + File.separator))
@@ -53,7 +48,7 @@ final class AssetInstaller {
             byte[] buffer = new byte[262144]; int n;
             while ((n = in.read(buffer)) != -1) digest.update(buffer, 0, n);
         }
-        return hex(digest.digest());
+        return PayloadArchive.hex(digest.digest());
     }
     private static void migrateGraphics(File previous, File current, File oldRoot) throws Exception {
         File oldManifest = new File(oldRoot, ".base-files.json");

@@ -13,6 +13,7 @@ import time
 
 from production_data import Config, inspect_database
 from service import Store, MAX_BODY, MAX_CLOUD_BODY, database_instance_lock, dumps
+from admin_data import static_response
 
 LOG = logging.getLogger("multiplayer.production")
 
@@ -52,6 +53,7 @@ class Application:
         self.closed = False
         self.capacity = threading.BoundedSemaphore(8)
         self.budget = RateBudget()
+        self.store.start_admin_worker()
         atexit.register(self.close)
 
     def close(self):
@@ -62,6 +64,11 @@ class Application:
             atexit.unregister(self.close)
 
     def __call__(self, environ, start_response):
+        static = static_response(environ.get("REQUEST_METHOD"), environ.get("PATH_INFO")) if not environ.get("QUERY_STRING") else None
+        if static:
+            content, headers = static
+            start_response("200 OK", headers)
+            return [content]
         started = time.monotonic()
         status, response, path = 500, {"ok": False}, "invalid"
         acquired = self.capacity.acquire(blocking=False)
@@ -116,8 +123,10 @@ class Application:
         method, path = environ.get("REQUEST_METHOD", ""), environ.get("PATH_INFO", "")
         if method not in ("GET", "POST"):
             return reject(405, "invalid_method", "Use GET or POST")
-        if (len(path) > 2048 or not re.fullmatch(r"/v1/[A-Za-z0-9_/-]+", path) or
-                "//" in path or environ.get("QUERY_STRING")):
+        admin = path.startswith("/admin/v1/")
+        controlled_query = method == "GET" and re.fullmatch(r"/v1/controlled/characters/cc_[a-f0-9]{32}/market", path)
+        if (len(path) > 2048 or not re.fullmatch(r"/(?:admin/)?v1/[A-Za-z0-9_/-]+", path) or
+                "//" in path or environ.get("QUERY_STRING") and not (admin or controlled_query)):
             return reject(400, "invalid_path", "Invalid API path")
         authorization = environ.get("HTTP_AUTHORIZATION", "")
         if len(authorization) > 520:
@@ -148,7 +157,8 @@ class Application:
             body = json.loads(raw.decode("utf-8"), parse_constant=lambda _: (_ for _ in ()).throw(ValueError()))
         elif environ.get("CONTENT_LENGTH", "") not in ("", "0"):
             return reject(400, "unexpected_body", "GET body is not supported")
-        status, response = self.store.request(method, path, body, token, peer)
+        route = path + ("?" + environ["QUERY_STRING"] if (admin or controlled_query) and environ.get("QUERY_STRING") else "")
+        status, response = self.store.request(method, route, body, token, peer)
         return status, response, path
 
 

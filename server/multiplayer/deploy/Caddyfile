@@ -12,7 +12,7 @@
 }
 
 if.pikastairs.cc {
-	@api path /v1/*
+	@api path /v1/* /admin /admin/*
 	handle @api {
 		request_body {
 			max_size 2MiB

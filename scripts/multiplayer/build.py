@@ -24,7 +24,11 @@ def inputs(root=ROOT):
     plugin = root / "Data/PluginScripts.rxdata"
     if plugin.exists():
         mods.append(plugin)
-    return scripts + data, mods
+    shop = sorted(p for p in (root / "Data/shop").glob("*.json") if p.is_file())
+    if shop:
+        catalog = json.loads((root / "Data/shop/catalog.json").read_text(encoding="utf-8"))
+        shop += [root / name for name in sorted(catalog["assets"])]
+    return scripts + data + shop, mods
 
 
 def entry(path, root):

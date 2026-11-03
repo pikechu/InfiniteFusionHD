@@ -34,6 +34,7 @@ class TilemapRenderer
       @bitmaps      = {}
       @bitmap_wraps = {}   # Whether each tileset is a mega texture and has multiple columns
       @load_counts  = {}
+      @unused       = []
       @changed      = true
     end
 
@@ -52,6 +53,7 @@ class TilemapRenderer
       return if nil_or_empty?(filename)
       if @bitmaps[filename]
         @load_counts[filename] += 1
+        @unused.delete(filename)
         return
       end
       bitmap = pbGetTileset(filename)
@@ -72,10 +74,44 @@ class TilemapRenderer
         @load_counts[filename] -= 1
         return
       end
-      @bitmaps[filename].dispose
-      @bitmaps.delete(filename)
+      return if @load_counts[filename] == 0
+      @load_counts[filename] = 0
+      @unused << filename
+      # Keep recent rooms decoded, with a fixed budget for inactive textures.
+      bytes = @unused.sum { |name| @bitmaps[name].width * @bitmaps[name].height * 4 }
+      while bytes > cache_limit
+        name = @unused.shift
+        bytes -= @bitmaps[name].width * @bitmaps[name].height * 4
+        unload(name)
+      end
+    end
+
+    def cache_limit
+      return 96 * 1024 * 1024
+    end
+
+    def unload(filename)
+      @bitmaps.delete(filename).dispose
       @bitmap_wraps.delete(filename)
       @load_counts.delete(filename)
+    end
+
+    def blt_tile(destination, filename, rect)
+      bitmap = @bitmaps.fetch(filename)
+      if !@bitmap_wraps[filename]
+        destination.blt(0, 0, bitmap, rect)
+        return
+      end
+      # Tile events can cross the boundary between two folded atlas columns.
+      (0...rect.height).step(SOURCE_TILE_HEIGHT) do |offset|
+        y = rect.y + offset
+        next if y < 0
+        column, row = y.divmod(bitmap.height)
+        width = [rect.width, TILESET_TILES_PER_ROW * SOURCE_TILE_WIDTH - rect.x].min
+        source = Rect.new(column * TILESET_TILES_PER_ROW * SOURCE_TILE_WIDTH + rect.x,
+                          row, width, [SOURCE_TILE_HEIGHT, rect.height - offset].min)
+        destination.blt(0, offset, bitmap, source)
+      end
     end
 
     def set_src_rect(tile, tile_id)
@@ -119,6 +155,7 @@ class TilemapRenderer
       return if nil_or_empty?(filename)
       if @bitmaps[filename]
         @load_counts[filename] += 1
+        @unused.delete(filename)
         return
       end
       orig_bitmap = pbGetAutotile(filename)
@@ -137,9 +174,12 @@ class TilemapRenderer
       @load_counts[filename] = 1
     end
 
-    def remove(filename)
+    def cache_limit
+      return 32 * 1024 * 1024
+    end
+
+    def unload(filename)
       super
-      return if @load_counts[filename] && @load_counts[filename] > 0
       @frame_counts.delete(filename)
       @current_frames.delete(filename)
       @frame_durations.delete(filename)

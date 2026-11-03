@@ -10,6 +10,16 @@ import java.util.zip.ZipInputStream;
 
 /** The actual payload restore implementation; pure Java so host tests exercise device code. */
 final class PayloadArchive {
+    private static final int ARCHIVE_BUFFER = 262144;
+    private static final class PayloadZipStream extends ZipInputStream {
+        PayloadZipStream(InputStream source) {
+            super(new BufferedInputStream(source, ARCHIVE_BUFFER));
+            // ZipInputStream defaults to 512-byte inflater reads. Keep its
+            // pushback capacity in step when enlarging the protected buffer.
+            buf = new byte[ARCHIVE_BUFFER];
+            in = new PushbackInputStream(in, ARCHIVE_BUFFER);
+        }
+    }
     static final class Entry {
         final long size;
         final String sha256, source;
@@ -51,10 +61,15 @@ final class PayloadArchive {
         return total;
     }
 
-    private static String hex(byte[] bytes) {
-        StringBuilder result = new StringBuilder();
-        for (byte value : bytes) result.append(String.format(Locale.ROOT, "%02x", value & 255));
-        return result.toString();
+    static String hex(byte[] bytes) {
+        final String digits = "0123456789abcdef";
+        char[] result = new char[bytes.length * 2];
+        for (int i = 0; i < bytes.length; i++) {
+            int value = bytes[i] & 255;
+            result[i * 2] = digits.charAt(value >>> 4);
+            result[i * 2 + 1] = digits.charAt(value & 15);
+        }
+        return new String(result);
     }
 
     private static boolean matches(File file, Entry expected) throws Exception {
@@ -109,7 +124,7 @@ final class PayloadArchive {
         for (Entry entry : entries.values()) if (entry.source == null) canonicalCount++;
         HashSet<String> seen = new HashSet<>();
         // Old manifests have no source fields and follow this same extraction path.
-        try (ZipInputStream zip = new ZipInputStream(archive)) {
+        try (ZipInputStream zip = new PayloadZipStream(archive)) {
             ZipEntry item;
             while ((item = zip.getNextEntry()) != null) {
                 String name = item.getName();

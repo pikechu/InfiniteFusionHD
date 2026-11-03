@@ -340,6 +340,7 @@ class PokemonLoadScreen
   end
 
   def checkEnableSpritesDownload
+    return if defined?(KIF::OfflineResources) && KIF::OfflineResources.installed?
     if $PokemonSystem.download_sprites && $PokemonSystem.download_sprites != 0
       customSprites = getCustomSpeciesList
       if !customSprites
@@ -377,14 +378,7 @@ class PokemonLoadScreen
   end
 
   def pbStartLoadScreen
-    updateHttpSettingsFile
-    # Should be able to replace updateHttpSettingsFile with the following:
-    # Try later though.
-    # updateKurayJsonSettings
-    # Settings::performKurayJsonSettingsOverrides()
-    updateCreditsFile
-    updateCustomDexFile
-    updateOnlineCustomSpritesFile
+    KIF::OfflineResources.startup
     newer_version = find_newer_available_version
     if newer_version
       if KIF::Platform.desktop_tools? && File.file?('.\INSTALL_OR_UPDATE.bat')
@@ -394,7 +388,7 @@ class PokemonLoadScreen
           exit
         end
       else
-        pbMessage(_INTL("Version {1} is now available! Please check the game's official page to download the newest version.", newer_version))
+        pbMessage(_INTL("Version {1} is now available. Download the update from:\n{2}", newer_version, Settings::GAME_REPOSITORY_URL))
       end
     end
 
@@ -464,6 +458,7 @@ class PokemonLoadScreen
       if new_game_plus
         commands[cmd_new_game_plus = commands.length] = _INTL('New Game +')
       end
+      commands[cmd_resources = commands.length] = KIF::OfflineResources.menu_label
       commands[cmd_options = commands.length] = _INTL('Options')
       commands[cmd_discord = commands.length]     = _INTL('KIF Discord')
       commands[cmd_doc = commands.length]     = _INTL('KIF Documentation (Obsolete)')
@@ -492,6 +487,8 @@ class PokemonLoadScreen
         pbPlayDecisionSE if command != cmd_quit
 
         case command
+        when cmd_resources
+          pbFadeOutIn { KIFMultiplayer.with_ui_fonts { KIF::OfflineResources.open_menu } }
         when cmd_continue
           @scene.pbEndScene
           Game.load(KIF::Platform.prepare_loaded_save(@save_data, @selected_file))

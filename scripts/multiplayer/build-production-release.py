@@ -12,11 +12,37 @@ import tarfile
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def native_rules_hash(inventory):
+    names = sorted(name for name in inventory if name.startswith(("Data/Scripts/", "Data/outfits/", "Data/sprites/", "server/multiplayer/native/"))
+                   or name.startswith("Data/") and name != "Data/shop/catalog.json" and name.count("/") == 1)
+    return hashlib.sha256("\n".join(name+"\0"+inventory[name]["sha256"] for name in names).encode()).hexdigest()
+
+
 def build(output, wheel_dir):
     service = ROOT / "server/multiplayer"
-    modules = ("service.py", "online.py", "backend_v3.py", "production.py", "production_data.py", "production_ops.py", "release_manager.py")
+    modules = ("service.py", "online.py", "backend_v3.py", "production.py", "production_data.py", "production_ops.py", "release_manager.py",
+               "admin_data.py", "admin_backend.py", "admin_economy.py", "admin_jobs.py", "admin_saves.py", "admin_rollback.py", "admin_original_rollback.py", "admin_market.py", "admin_commerce.py", "admin_controlled.py", "controlled.py", "controlled_original.py", "controlled_commerce.py", "native_rules.py", "native_rulebooks.py", "controlled_adventure.py", "controlled_engine.py", "admin_cli.py", "shop.py", "shop_admin.py")
     sources = {"server/multiplayer/" + name: service / name for name in modules}
+    sources.update({"server/multiplayer/admin_web/" + name: service / "admin_web" / name
+                    for name in ("index.html", "app.js", "style.css")})
     sources.update({path.relative_to(ROOT).as_posix(): path for path in service.glob("catalog-*.json")})
+    sources["Data/shop/catalog.json"] = ROOT / "Data/shop/catalog.json"
+    sources["Data/sprites/Sprite Credits.csv"] = ROOT / "Data/sprites/Sprite Credits.csv"
+    native = service / "native"
+    sources.update({path.relative_to(ROOT).as_posix(): path for path in native.iterdir() if path.suffix in (".rb", ".json")})
+    for name in json.loads((native / "source-files.json").read_text(encoding="utf-8")):
+        path = ROOT / "Data/Scripts" / name
+        if not path.resolve().is_relative_to((ROOT / "Data/Scripts").resolve()) or path.suffix != ".rb":
+            raise ValueError("Unsafe native rules source")
+        sources[path.relative_to(ROOT).as_posix()] = path
+    data_names = ("VERSION", "types.dat", "abilities.dat", "moves.dat", "items.dat", "berry_plants.dat", "species.dat", "ribbons.dat",
+                  "encounters.dat", "encounters_remix.dat", "encounters_randomized.dat", "trainer_types.dat", "trainers.dat",
+                  "trainers_remix.dat", "trainers_expert.dat", "trainers_challenge.dat", "metadata.dat", "map_metadata.dat",
+                  "messages.dat", "regional_dexes.dat", "map_connections.dat", "connections.dat", "shadow_movesets.dat",
+                  "phone.dat", "town_map.dat", "trainer_lists.dat", "System.rxdata", "Tilesets.rxdata", "CommonEvents.rxdata")
+    maps = [path for path in (ROOT / "Data").glob("Map*.rxdata") if re.fullmatch(r"Map(?:[0-9]+|Infos)\.rxdata", path.name)]
+    for path in [ROOT / "Data" / name for name in data_names] + maps + list((ROOT / "Data/outfits").glob("*.json")):
+        sources[path.relative_to(ROOT).as_posix()] = path
     templates = {"production.json", "gunicorn.conf.py", "Caddyfile", "manage.sh", "install-tools.py", "tools.lock.json", "backup-credentials.example.json", "README.md"}
     sources.update({path.relative_to(ROOT).as_posix(): path for path in (service / "deploy").iterdir()
                     if path.is_file() and (path.name in templates or path.name.startswith("kif-mmo-") and path.suffix in (".service", ".timer"))})
@@ -38,12 +64,11 @@ def build(output, wheel_dir):
     inventory = {name: {"sha256": hashlib.sha256(data).hexdigest(), "size": len(data)} for name, data in contents.items()}
     fingerprint = hashlib.sha256(json.dumps(inventory, sort_keys=True).encode()).hexdigest()
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-    dirty = bool(subprocess.check_output(["git", "status", "--porcelain", "--"] +
-                                        [name for name in sources if name.startswith("server/")], cwd=ROOT).strip())
+    dirty = bool(subprocess.check_output(["git", "status", "--porcelain", "--", "server/multiplayer", "Data"], cwd=ROOT).strip())
     version = commit[:12] + "-" + fingerprint[:12]
     release = {"format": "kif-mmo-release-v1", "version": version, "commit": commit,
                "source_worktree_dirty": dirty, "source_state": "content-hashed-working-tree-snapshot",
-               "source_sha256": fingerprint, "files": inventory,
+               "source_sha256": fingerprint, "files": inventory, "native_rules_hash": native_rules_hash(inventory),
                "catalog_compatibility": json.loads(contents["server/multiplayer/catalog-rental-v1.json"])["compatibility"]}
     contents["release.json"] = (json.dumps(release, sort_keys=True, indent=2) + "\n").encode()
     output.mkdir(parents=True, exist_ok=True)

@@ -281,7 +281,7 @@ def changeHiddenAbility2(abilityList, scene, poke)
   abilName2 = PBAbilities.getName(abID1)
   abilName3 = PBAbilities.getName(abID2)
 
-  if (Kernel.pbMessage("Choose an ability.", [_INTL("{1}", abilName2), _INTL("{1}", abilName3)], 2)) == 0
+  if (Kernel.pbMessage(_INTL("Choose an ability."), [_INTL("{1}", abilName2), _INTL("{1}", abilName3)], 2)) == 0
     poke.setAbility(2)
     scene.pbDisplay(_INTL("{1}'s ability was changed to {2}!", poke.name, abilName2))
   else
@@ -370,8 +370,8 @@ ItemHandlers::UseFromBag.add(:DEBUGGER, proc { |item|
 
 def useSleepingBag()
   currentSecondsValue = pbGet(UnrealTime::EXTRA_SECONDS)
-  choices = ["1 hour", "6 hours", "12 hours", "24 hours", "Cancel"]
-  choice = Kernel.pbMessage("Sleep for how long?", choices, choices.length)
+  choices = ["1 hour", "6 hours", "12 hours", "24 hours", "Cancel"].map { |text| _INTL(text) }
+  choice = Kernel.pbMessage(_INTL("Sleep for how long?"), choices, choices.length)
   echoln choice
   return 0 if choice == choices.length-1
   oldDay = getDayOfTheWeek()
@@ -458,7 +458,7 @@ ItemHandlers::UseFromBag.add(:ODDKEYSTONE, proc { |item|
   else
     Kernel.pbMessage(_INTL("The Odd Keystone appears to be moving on its own."))
     Kernel.pbMessage(_INTL("It seems as if some poweful energy is trying to escape from it."))
-    if (Kernel.pbMessage("Let it out?", ["No", "Yes"], 0)) == 1
+    if (Kernel.pbMessage(_INTL("Let it out?"), ["No", "Yes"], 0)) == 1
       pbWildBattle(:SPIRITOMB, 27)
       pbSet(VAR_ODDKEYSTONE_NB, 0)
     end
@@ -1271,7 +1271,7 @@ def changeHiddenAbility2(abilityList, scene, poke)
   abilName2 = PBAbilities.getName(abID1)
   abilName3 = PBAbilities.getName(abID2)
 
-  if (Kernel.pbMessage("Choose an ability.", [_INTL("{1}", abilName2), _INTL("{1}", abilName3)], 2)) == 0
+  if (Kernel.pbMessage(_INTL("Choose an ability."), [_INTL("{1}", abilName2), _INTL("{1}", abilName3)], 2)) == 0
     poke.setAbility(2)
     scene.pbDisplay(_INTL("{1}'s ability was changed to {2}!", poke.name, abilName2))
   else
@@ -1639,7 +1639,7 @@ def pbUnfuse(pokemon, scene, supersplicers, pcPosition = nil)
       keepInParty = 0
       if $Trainer.party.length >= 6 && !pcPosition
         scene.pbDisplay(_INTL("Your party is full! Keep which Pokémon in party?"))
-        choice = Kernel.pbMessage("Select a Pokémon to keep in your party.", [_INTL("{1}", PBSpecies.getName(bodyPoke)), _INTL("{1}", PBSpecies.getName(headPoke)), "Cancel"], 2)
+        choice = Kernel.pbMessage(_INTL("Select a Pokémon to keep in your party."), [_INTL("{1}", PBSpecies.getName(bodyPoke)), _INTL("{1}", PBSpecies.getName(headPoke)), "Cancel"], 2)
         if choice == 2
           return false
         else
@@ -2217,7 +2217,7 @@ ItemHandlers::UseInField.add(:BOXLINK, proc { |item|
     304,306,307       #Victory road
   ]
   if blacklisted_maps.include?($game_map.map_id)
-    Kernel.pbMessage("There doesn't seem to be any network coverage here...")
+    Kernel.pbMessage(_INTL("There doesn't seem to be any network coverage here..."))
   else
     $game_temp.fromkurayshop = 1
     pbFadeOutIn {

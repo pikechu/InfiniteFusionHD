@@ -88,6 +88,7 @@ class OnlineFeatures:
                     # the result computed from the old credentials.
                     require(current is not None and dict(current) == row, "login_invalid", "Account credentials changed; log in again", 401)
                     owner = row["owner"]
+                self.check_player_control(db, owner)
                 token = secrets.token_urlsafe(32)
                 issued = self.clock()
                 expires = issued + 7 * 86400
@@ -218,7 +219,7 @@ class OnlineFeatures:
     def world_position(self, position):
         if position is None:
             return None
-        obj(position, {"map_id", "map_hash", "width", "height", "x", "y", "direction", "character_id", "moving"}, {"map_id", "map_hash", "width", "height", "x", "y", "direction", "character_id", "moving"})
+        obj(position, {"map_id", "map_hash", "width", "height", "x", "y", "direction", "character_id", "moving", "appearance"}, {"map_id", "map_hash", "width", "height", "x", "y", "direction", "character_id", "moving"})
         integer(position["map_id"], 1, 99999, "map_id")
         string(position["map_hash"], 64, 64, "map_hash", r"[a-f0-9]{64}")
         integer(position["width"], 1, 2000, "width")
@@ -257,6 +258,8 @@ class OnlineFeatures:
         if seq > member["seq"]:
             map_key = digest(dumps([member["compatibility"], position["map_id"], position["map_hash"], position["width"], position["height"]])) if position else None
             document = dict(position or {}, id=owner, nickname=identity["nickname"], seq=seq)
+            if position and "appearance" in position:
+                document["appearance"] = self.shop_appearance(db, owner, position["appearance"])
             db.execute("UPDATE world_presence SET map_key=?,document=?,seq=?,updated=? WHERE owner=?", (map_key, dumps(document), seq, now, owner))
             member = self.world_member(db, owner, session)
         players = [json.loads(row["document"]) for row in db.execute("SELECT document FROM world_presence WHERE map_key=? AND owner!=? AND updated>? ORDER BY owner LIMIT 128", (member["map_key"], owner, now - 20))] if member["map_key"] else []

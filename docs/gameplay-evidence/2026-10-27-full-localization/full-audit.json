@@ -1,0 +1,1287 @@
+{
+  "data": {
+    "items": [
+
+    ],
+    "moves": [
+
+    ],
+    "abilities": [
+
+    ],
+    "types": [
+
+    ],
+    "species": [
+      {
+        "id": "DEOXYS",
+        "slot": 380,
+        "section": 2,
+        "english": "DNA",
+        "translation": null
+      }
+    ]
+  },
+  "script_missing": {
+    "Windows XP": [
+      "Data/Scripts/014_Pokemon/001_Pokemon-related/004_PokemonStorage.rb"
+    ],
+    "DNA": [
+      "Data/Scripts/016_UI/015_UI_Options.rb"
+    ],
+    "TCG": [
+      "Data/Scripts/016_UI/015_UI_Options.rb"
+    ],
+    "FGM": [
+      "Data/Scripts/016_UI/015_UI_Options.rb"
+    ]
+  },
+  "raw_ui": {
+  },
+  "dynamic": [
+    {
+      "path": "Data/Scripts/001_Technical/001_Debugging/005_Deprecation.rb",
+      "line": null,
+      "shape": "string_concat"
+    },
+    {
+      "path": "Data/Scripts/010_Data/002_PBS data/006_Item.rb",
+      "line": 89,
+      "shape": "ifop"
+    },
+    {
+      "path": "Data/Scripts/010_Data/002_PBS data/006_Item.rb",
+      "line": 95,
+      "shape": "ifop"
+    },
+    {
+      "path": "Data/Scripts/010_Data/002_PBS data/006_Item.rb",
+      "line": 101,
+      "shape": "ifop"
+    },
+    {
+      "path": "Data/Scripts/016_UI/017_UI_PokemonStorage.rb",
+      "line": 1917,
+      "shape": "call"
+    },
+    {
+      "path": "Data/Scripts/048_Fusion/FusionMenu.rb",
+      "line": 82,
+      "shape": "call"
+    },
+    {
+      "path": "Data/Scripts/050_Outfits/utils/OutfitFilenameUtils.rb",
+      "line": 32,
+      "shape": "binary"
+    },
+    {
+      "path": "Data/Scripts/050_Outfits/utils/OutfitFilenameUtils.rb",
+      "line": 80,
+      "shape": "binary"
+    },
+    {
+      "path": "Data/Scripts/050_Outfits/utils/OutfitFilenameUtils.rb",
+      "line": 95,
+      "shape": "binary"
+    },
+    {
+      "path": "Data/Scripts/050_Outfits/utils/OutfitFilenameUtils.rb",
+      "line": 109,
+      "shape": "binary"
+    },
+    {
+      "path": "Data/Scripts/050_Outfits/utils/OutfitFilenameUtils.rb",
+      "line": 117,
+      "shape": "binary"
+    },
+    {
+      "path": "Data/Scripts/052_AddOns/DisplayText.rb",
+      "line": 28,
+      "shape": "call"
+    },
+    {
+      "path": "Data/Scripts/052_AddOns/DoubleAbilities_UI.rb",
+      "line": 101,
+      "shape": "call"
+    }
+  ],
+  "story_missing": [
+    {
+      "map": 1,
+      "event": 26,
+      "text": "Brozzzt?"
+    },
+    {
+      "map": 42,
+      "event": 1,
+      "text": "Mooooooooo!"
+    },
+    {
+      "map": 42,
+      "event": 24,
+      "text": "Mooooooooo!"
+    },
+    {
+      "map": 42,
+      "event": 26,
+      "text": "Sluuuuuurp!"
+    },
+    {
+      "map": 42,
+      "event": 21,
+      "text": "Mooooooooo!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": ".... Shashahh!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Bark! Bark!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Cheep!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Aaargh!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Meaaargh!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Chah!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Screeeeeech!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Rarrrrgh!!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Klang!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Whomp!"
+    },
+    {
+      "map": 47,
+      "event": 3,
+      "text": "Warhh!"
+    },
+    {
+      "map": 55,
+      "event": 8,
+      "text": "Auwahwah!"
+    },
+    {
+      "map": 60,
+      "event": 25,
+      "text": "Hissssss!"
+    },
+    {
+      "map": 74,
+      "event": 7,
+      "text": "Sluuuuurp!"
+    },
+    {
+      "map": 80,
+      "event": 15,
+      "text": "Graah!"
+    },
+    {
+      "map": 82,
+      "event": 8,
+      "text": "Faaaaah!"
+    },
+    {
+      "map": 82,
+      "event": 8,
+      "text": "Braaaagh!"
+    },
+    {
+      "map": 82,
+      "event": 9,
+      "text": "Meeeeow!"
+    },
+    {
+      "map": 87,
+      "event": 8,
+      "text": "Hummmmmm... Hummmmmm..."
+    },
+    {
+      "map": 87,
+      "event": 10,
+      "text": "Grrrarah Ghagrraaaah!"
+    },
+    {
+      "map": 98,
+      "event": 42,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 110,
+      "event": 9,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 115,
+      "event": 17,
+      "text": "Gaahhh!"
+    },
+    {
+      "map": 118,
+      "event": 7,
+      "text": "Clef! Cleffa!"
+    },
+    {
+      "map": 118,
+      "event": 7,
+      "text": "Ghaaa hgaaaah!"
+    },
+    {
+      "map": 118,
+      "event": 37,
+      "text": "\\C[1]\\V[5]/Game.rxdata"
+    },
+    {
+      "map": 135,
+      "event": 10,
+      "text": "Gaah gaaugah!"
+    },
+    {
+      "map": 144,
+      "event": 27,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 146,
+      "event": 5,
+      "text": "Bleeeergh!"
+    },
+    {
+      "map": 146,
+      "event": 6,
+      "text": "Bleeeergh!"
+    },
+    {
+      "map": 146,
+      "event": 7,
+      "text": "Bleeeergh!"
+    },
+    {
+      "map": 146,
+      "event": 8,
+      "text": "Bleeeerghh! Blaaaaerh!"
+    },
+    {
+      "map": 159,
+      "event": 31,
+      "text": "Gauhh!"
+    },
+    {
+      "map": 170,
+      "event": 9,
+      "text": "Gagaugh!"
+    },
+    {
+      "map": 170,
+      "event": 9,
+      "text": "Braaarah!"
+    },
+    {
+      "map": 181,
+      "event": 26,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 182,
+      "event": 16,
+      "text": "Hmmmmmmmm..."
+    },
+    {
+      "map": 182,
+      "event": 17,
+      "text": "Hmmmmmmmm..."
+    },
+    {
+      "map": 182,
+      "event": 18,
+      "text": "Hmmmmmmmm..."
+    },
+    {
+      "map": 182,
+      "event": 19,
+      "text": "Hmmmmmmmm..."
+    },
+    {
+      "map": 182,
+      "event": 20,
+      "text": "Hmmmmmmmm..."
+    },
+    {
+      "map": 191,
+      "event": 18,
+      "text": "Taa!"
+    },
+    {
+      "map": 191,
+      "event": 15,
+      "text": "Hooh!"
+    },
+    {
+      "map": 192,
+      "event": 13,
+      "text": "Hoo!"
+    },
+    {
+      "map": 230,
+      "event": 17,
+      "text": "Grahh!"
+    },
+    {
+      "map": 261,
+      "event": 16,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 261,
+      "event": 13,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 261,
+      "event": 14,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 261,
+      "event": 15,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 262,
+      "event": 27,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 262,
+      "event": 28,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 262,
+      "event": 23,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 262,
+      "event": 24,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 262,
+      "event": 25,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 262,
+      "event": 26,
+      "text": "Gauuhgh!"
+    },
+    {
+      "map": 266,
+      "event": 38,
+      "text": "Zzz..."
+    },
+    {
+      "map": 266,
+      "event": 33,
+      "text": "Mimimi..."
+    },
+    {
+      "map": 266,
+      "event": 39,
+      "text": "Zzz..."
+    },
+    {
+      "map": 266,
+      "event": 7,
+      "text": ".... Shashahh!"
+    },
+    {
+      "map": 266,
+      "event": 35,
+      "text": "Mimimi..."
+    },
+    {
+      "map": 266,
+      "event": 36,
+      "text": "Zzz..."
+    },
+    {
+      "map": 266,
+      "event": 20,
+      "text": ".... Shashahh!"
+    },
+    {
+      "map": 266,
+      "event": 37,
+      "text": "Zzz..."
+    },
+    {
+      "map": 266,
+      "event": 32,
+      "text": "Zzz..."
+    },
+    {
+      "map": 279,
+      "event": 7,
+      "text": "Schwaah!"
+    },
+    {
+      "map": 281,
+      "event": 7,
+      "text": "Fwahh!"
+    },
+    {
+      "map": 290,
+      "event": 1,
+      "text": "Haaahraaan!"
+    },
+    {
+      "map": 290,
+      "event": 1,
+      "text": "Bazazazzash!"
+    },
+    {
+      "map": 308,
+      "event": 8,
+      "text": "Froosh!"
+    },
+    {
+      "map": 312,
+      "event": 7,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 338,
+      "event": 17,
+      "text": "Brrrahh!"
+    },
+    {
+      "map": 356,
+      "event": 2,
+      "text": "GRAAAAH!!!"
+    },
+    {
+      "map": 365,
+      "event": 5,
+      "text": "Meowow!"
+    },
+    {
+      "map": 365,
+      "event": 12,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 365,
+      "event": 7,
+      "text": "Gyaaas!"
+    },
+    {
+      "map": 365,
+      "event": 13,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 365,
+      "event": 8,
+      "text": "Shaoooh!"
+    },
+    {
+      "map": 365,
+      "event": 14,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 365,
+      "event": 9,
+      "text": "Bleeb!"
+    },
+    {
+      "map": 365,
+      "event": 15,
+      "text": "Liiiii!"
+    },
+    {
+      "map": 365,
+      "event": 4,
+      "text": "Meow!"
+    },
+    {
+      "map": 368,
+      "event": 9,
+      "text": "Grrrrah!"
+    },
+    {
+      "map": 371,
+      "event": 9,
+      "text": "Heeee! Haaah Ah!!"
+    },
+    {
+      "map": 376,
+      "event": 1,
+      "text": "Dodogyuuun!"
+    },
+    {
+      "map": 378,
+      "event": 17,
+      "text": "Hmm..."
+    },
+    {
+      "map": 380,
+      "event": 52,
+      "text": "Hmm..."
+    },
+    {
+      "map": 392,
+      "event": 11,
+      "text": "Ooh ooh!"
+    },
+    {
+      "map": 413,
+      "event": 28,
+      "text": "Kazaaah!"
+    },
+    {
+      "map": 460,
+      "event": 11,
+      "text": "dfg"
+    },
+    {
+      "map": 472,
+      "event": 78,
+      "text": "Fraaah!"
+    },
+    {
+      "map": 476,
+      "event": 9,
+      "text": "Achoo!"
+    },
+    {
+      "map": 478,
+      "event": 8,
+      "text": "Seeeee! Seeeseesee!"
+    },
+    {
+      "map": 485,
+      "event": 38,
+      "text": "Creesh!"
+    },
+    {
+      "map": 485,
+      "event": 33,
+      "text": "Creesh!"
+    },
+    {
+      "map": 487,
+      "event": 11,
+      "text": "Digdig!"
+    },
+    {
+      "map": 487,
+      "event": 11,
+      "text": "Tchrtchr!"
+    },
+    {
+      "map": 487,
+      "event": 11,
+      "text": "Grrrrh!"
+    },
+    {
+      "map": 487,
+      "event": 12,
+      "text": "Digdig!"
+    },
+    {
+      "map": 487,
+      "event": 12,
+      "text": "Tchrtchr!"
+    },
+    {
+      "map": 487,
+      "event": 12,
+      "text": "Grrrrh!"
+    },
+    {
+      "map": 487,
+      "event": 13,
+      "text": "Digdig!"
+    },
+    {
+      "map": 487,
+      "event": 13,
+      "text": "Tchrtchr!"
+    },
+    {
+      "map": 487,
+      "event": 13,
+      "text": "Grrrrh!"
+    },
+    {
+      "map": 487,
+      "event": 14,
+      "text": "Digdig!"
+    },
+    {
+      "map": 487,
+      "event": 14,
+      "text": "Tchrtchr!"
+    },
+    {
+      "map": 487,
+      "event": 14,
+      "text": "Grrrrh!"
+    },
+    {
+      "map": 487,
+      "event": 10,
+      "text": "Digdig!"
+    },
+    {
+      "map": 487,
+      "event": 10,
+      "text": "Tchrtchr!"
+    },
+    {
+      "map": 487,
+      "event": 10,
+      "text": "Grrrrh!"
+    },
+    {
+      "map": 488,
+      "event": 5,
+      "text": "Shaaash!"
+    },
+    {
+      "map": 488,
+      "event": 11,
+      "text": "Chughh!"
+    },
+    {
+      "map": 488,
+      "event": 6,
+      "text": "Shaaash!"
+    },
+    {
+      "map": 488,
+      "event": 12,
+      "text": "Chughh!"
+    },
+    {
+      "map": 488,
+      "event": 7,
+      "text": "Shaaash!"
+    },
+    {
+      "map": 488,
+      "event": 13,
+      "text": "Chughh!"
+    },
+    {
+      "map": 488,
+      "event": 8,
+      "text": "Chughh!"
+    },
+    {
+      "map": 488,
+      "event": 9,
+      "text": "Chughh!"
+    },
+    {
+      "map": 488,
+      "event": 10,
+      "text": "Vraahhbrbrbr!"
+    },
+    {
+      "map": 494,
+      "event": 5,
+      "text": "Clef?"
+    },
+    {
+      "map": 494,
+      "event": 5,
+      "text": "Cle! Clefairy!"
+    },
+    {
+      "map": 494,
+      "event": 5,
+      "text": "Clef clef!"
+    },
+    {
+      "map": 494,
+      "event": 6,
+      "text": "Clef?"
+    },
+    {
+      "map": 494,
+      "event": 6,
+      "text": "Cle! Clefairy!"
+    },
+    {
+      "map": 494,
+      "event": 6,
+      "text": "Clef clef!"
+    },
+    {
+      "map": 517,
+      "event": 27,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 33,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 28,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 29,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 30,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 31,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 26,
+      "text": "Boo!"
+    },
+    {
+      "map": 517,
+      "event": 32,
+      "text": "Boo!"
+    },
+    {
+      "map": 521,
+      "event": 8,
+      "text": "Grrrrah!"
+    },
+    {
+      "map": 521,
+      "event": 10,
+      "text": "Riiih!"
+    },
+    {
+      "map": 526,
+      "event": 14,
+      "text": "Pih pah!"
+    },
+    {
+      "map": 528,
+      "event": 22,
+      "text": "Meee!!"
+    },
+    {
+      "map": 528,
+      "event": 23,
+      "text": "Meee!!"
+    },
+    {
+      "map": 528,
+      "event": 24,
+      "text": "Meee!!"
+    },
+    {
+      "map": 528,
+      "event": 25,
+      "text": "Meee!!"
+    },
+    {
+      "map": 528,
+      "event": 4,
+      "text": "Meeeeee!!"
+    },
+    {
+      "map": 533,
+      "event": 10,
+      "text": "Hah!"
+    },
+    {
+      "map": 534,
+      "event": 5,
+      "text": "Squawk!"
+    },
+    {
+      "map": 534,
+      "event": 11,
+      "text": "Slurrrrp!"
+    },
+    {
+      "map": 534,
+      "event": 6,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 534,
+      "event": 8,
+      "text": "Roooooar!"
+    },
+    {
+      "map": 534,
+      "event": 9,
+      "text": "Bahruuu!"
+    },
+    {
+      "map": 534,
+      "event": 10,
+      "text": "Glaugh!"
+    },
+    {
+      "map": 545,
+      "event": 11,
+      "text": "Squish!"
+    },
+    {
+      "map": 545,
+      "event": 12,
+      "text": "Squish!"
+    },
+    {
+      "map": 545,
+      "event": 12,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 545,
+      "event": 13,
+      "text": "Squish!"
+    },
+    {
+      "map": 545,
+      "event": 13,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 545,
+      "event": 14,
+      "text": "Squish!"
+    },
+    {
+      "map": 545,
+      "event": 14,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 545,
+      "event": 9,
+      "text": "Squish!"
+    },
+    {
+      "map": 545,
+      "event": 10,
+      "text": "Squish!"
+    },
+    {
+      "map": 560,
+      "event": 5,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 560,
+      "event": 17,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 560,
+      "event": 6,
+      "text": "Shaaash!"
+    },
+    {
+      "map": 560,
+      "event": 7,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 560,
+      "event": 13,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 560,
+      "event": 8,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 560,
+      "event": 9,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 560,
+      "event": 4,
+      "text": "Shaaash!"
+    },
+    {
+      "map": 588,
+      "event": 1,
+      "text": "KYAAAAH!!!"
+    },
+    {
+      "map": 592,
+      "event": 5,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 5,
+      "text": "Meowow!"
+    },
+    {
+      "map": 592,
+      "event": 11,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 12,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 12,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 592,
+      "event": 7,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 7,
+      "text": "Gyaaas!"
+    },
+    {
+      "map": 592,
+      "event": 13,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 13,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 592,
+      "event": 8,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 8,
+      "text": "Shaoooh!"
+    },
+    {
+      "map": 592,
+      "event": 14,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 14,
+      "text": "Graaawh!"
+    },
+    {
+      "map": 592,
+      "event": 9,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 15,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 15,
+      "text": "Liiiii!"
+    },
+    {
+      "map": 592,
+      "event": 4,
+      "text": "Squish!"
+    },
+    {
+      "map": 592,
+      "event": 4,
+      "text": "Meow!"
+    },
+    {
+      "map": 592,
+      "event": 10,
+      "text": "Squish!"
+    },
+    {
+      "map": 670,
+      "event": 70,
+      "text": "Uraaghh"
+    },
+    {
+      "map": 678,
+      "event": 5,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 679,
+      "event": 5,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 683,
+      "event": 9,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 684,
+      "event": 5,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 684,
+      "event": 4,
+      "text": "Gauuugh!"
+    },
+    {
+      "map": 707,
+      "event": 1,
+      "text": "Gyaughaugh!"
+    },
+    {
+      "map": 739,
+      "event": 26,
+      "text": "Brozzzt?"
+    },
+    {
+      "map": 783,
+      "event": 4,
+      "text": "Gruauhuaugh!"
+    },
+    {
+      "map": 785,
+      "event": 27,
+      "text": "Gaagaugh!"
+    },
+    {
+      "map": 797,
+      "event": 1,
+      "text": "Gyaughaugh!"
+    },
+    {
+      "map": 798,
+      "event": 1,
+      "text": "Gyaughaugh!"
+    },
+    {
+      "map": 802,
+      "event": 1,
+      "text": "Linooo!"
+    },
+    {
+      "map": 805,
+      "event": 3,
+      "text": "Shrrrrr... Ziiiing!"
+    },
+    {
+      "map": 823,
+      "event": 21,
+      "text": "Cresssa!!"
+    },
+    {
+      "map": 824,
+      "event": 28,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 19,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 29,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 20,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 21,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 22,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 13,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 23,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 33,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 24,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 15,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 34,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 25,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 44,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 35,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 16,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 26,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 45,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 17,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 27,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 46,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 824,
+      "event": 18,
+      "text": "Bahhh!"
+    },
+    {
+      "map": 825,
+      "event": 2,
+      "text": "Tee flee ee!"
+    }
+  ],
+  "event_script_missing": {
+  },
+  "dialogue_missing": {
+    "15": [
+
+    ],
+    "16": [
+
+    ],
+    "17": [
+
+    ],
+    "22": [
+
+    ],
+    "23": [
+
+    ]
+  },
+  "community_dex": {
+    "records": 15005,
+    "without_chinese": 15005
+  },
+  "preserved": [
+    "DNA",
+    "TCG",
+    "FGM",
+    "Windows XP"
+  ],
+  "coverage": {
+    "script_files": 452,
+    "parse_failures": [
+
+    ],
+    "map_files": 808,
+    "common_events": 109
+  }
+}

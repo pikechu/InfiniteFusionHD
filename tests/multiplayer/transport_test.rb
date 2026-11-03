@@ -224,7 +224,19 @@ begin
     value = adapter.call("POST", url + "/v1/rooms", {"nickname" => "中文"}, "local-test-token", positive_fixture_timeout)
     assert.call(KIFMultiplayer::WireJSON.parse(value[:body])["ok"], "real loopback partial response succeeds")
     assert.call(requests[0][0].include?("Authorization: Bearer local-test-token\r\n") && requests[0][0].include?("Accept-Encoding: identity\r\n"), "own connection receives explicit authorization and identity encoding")
+    assert.call(requests[0][0].include?("Connection: keep-alive\r\n"),"client receives the framed body before closing its own connection")
     assert.call(KIFMultiplayer::WireJSON.parse(requests[0][1])["nickname"] == "中文", "actual POST request uses UTF-8 byte Content-Length")
+  end
+  bare_adapter = KIFMultiplayer::SocketHTTP.new
+  def bare_adapter.connect(*arguments)
+    socket = super
+    socket.singleton_class.undef_method(:recv_nonblock) if socket.respond_to?(:recv_nonblock)
+    socket
+  end
+  large = '{"ok":true,"text":"' + '中文' * 12000 + '"}'
+  serve.call([response.call(large)]) do |url,_|
+    result = bare_adapter.call("GET",url+"/v1/probe",{},nil,positive_fixture_timeout)
+    assert.call(result[:body] == large,"bare socket.so receives large Unicode body including its final byte")
   end
   serve.call([response.call('{"ok":true}')]) do |url, _|
     local_url = url.sub("127.0.0.1", "localhost")

@@ -4,6 +4,38 @@ module KIF
   module PokedexEntries
     MAX_BYTES = 8 * 1024 * 1024
     MAX_ENTRIES = 100_000
+    CHINESE_PATH = "Data/pokedex/dex_zh.json"
+
+    def self.file_stamp(path)
+      File.file?(path) ? [path, File.size(path), File.mtime(path)] : [path, nil]
+    end
+
+    def self.entries_for(sprite)
+      path = Settings::CUSTOM_DEX_ENTRIES_PATH
+      chinese = $PokemonSystem && $PokemonSystem.language == 2
+      stamp = [file_stamp(path), chinese ? file_stamp(CHINESE_PATH) : nil]
+      if @display_stamp != stamp
+        records = File.file?(path) ? parse(File.binread(path)).select { |row| valid?(row) } : []
+        translations = {}
+        if chinese && File.file?(CHINESE_PATH)
+          begin
+            parse(File.binread(CHINESE_PATH)).each do |row|
+              next unless valid?(row) && row["source"].is_a?(String)
+              translations[[row["sprite"], row["source"], row["author"]]] = row["entry"]
+            end
+          rescue StandardError, MKXPError
+            # A damaged optional language file must not hide the source dex.
+          end
+        end
+        @display_index = {}
+        records.each do |row|
+          text = translations[[row["sprite"], row["entry"], row["author"]]] || row["entry"]
+          (@display_index[row["sprite"]] ||= []) << text
+        end
+        @display_stamp = stamp
+      end
+      @display_index[sprite]
+    end
 
     def self.parse(text)
       raise ArgumentError, "Invalid custom dex size" unless text.is_a?(String) && text.bytesize <= MAX_BYTES

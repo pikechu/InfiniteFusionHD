@@ -12,7 +12,7 @@ def selectHairstyle(all_unlocked = false)
   selector = OutfitSelector.new
   display_outfit_preview()
   hat = $Trainer.hat
-  commands = ["Next style", "Previous style", "Toggle hat", "Back"]
+  commands = ["Next style", "Previous style", "Toggle hat", "Back"].map { |text| _INTL(text) }
   previous_input = 0
   # To enable turning the common event that lets you turn around while in the dialog box
   while (true)
@@ -50,7 +50,7 @@ def selectHairColor
   $game_map.update
   display_outfit_preview()
   hat = $Trainer.hat
-  commands = ["Shift up", "Shift down", "Toggle hat", "Reset", "Confirm", "Never Mind"]
+  commands = ["Shift up", "Shift down", "Toggle hat", "Reset", "Confirm", "Never Mind"].map { |text| _INTL(text) }
   previous_input = 0
 
   while (true)
@@ -100,7 +100,7 @@ end
 def selectHatColor
   original_color = $Trainer.hat_color
   display_outfit_preview()
-  commands = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"]
+  commands = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"].map { |text| _INTL(text) }
   previous_input = 0
   while (true)
     choice = pbShowCommands(nil, commands, commands.length, previous_input)
@@ -138,7 +138,7 @@ end
 def selectClothesColor
   original_color = $Trainer.clothes_color
   display_outfit_preview()
-  commands = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"]
+  commands = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"].map { |text| _INTL(text) }
   previous_input = 0
   ret = false
   while (true)
@@ -177,7 +177,7 @@ end
 def selectHat(all_unlocked = false)
   selector = OutfitSelector.new
   display_outfit_preview()
-  commands = ["Next hat", "Previous hat", "Remove hat", "Back"]
+  commands = ["Next hat", "Previous hat", "Remove hat", "Back"].map { |text| _INTL(text) }
   previous_input = 0
   while (true)
     choice = pbShowCommands(nil, commands, commands.length, previous_input)
@@ -210,10 +210,10 @@ end
 def selectClothes(all_unlocked = false)
   selector = OutfitSelector.new
   display_outfit_preview()
-  commands = ["Next", "Previous"]
+  commands = ["Next", "Previous"].map { |text| _INTL(text) }
   #commands << "Remove clothes (DEBUG)" if $DEBUG
-  commands << "Remove" if $DEBUG
-  commands << "Back"
+  commands << _INTL("Remove") if $DEBUG
+  commands << _INTL("Back")
   previous_input = 0
   while (true)
     choice = pbShowCommands(nil, commands, commands.length, previous_input)

@@ -1,6 +1,6 @@
 # Android toolchain
 
-Updated 2026-10-16. All downloaded archives, extracted development tools, AVD data,
+Updated 2026-10-28. All downloaded archives, extracted development tools, AVD data,
 and build intermediates belong under `temp/`; none are source dependencies to commit.
 The bootstrap does not install Android Studio, change `PATH` permanently, change
 Windows features, or run the game's updater.
@@ -115,27 +115,79 @@ The `-CreateAvd` option writes the offline `kif_api30` configuration under
 and a requested 4 GiB data partition (the image's own minimum may enlarge it).
 It leaves an existing AVD and its test saves intact. `avdmanager` was avoided
 after its local metadata scan stalled; direct emulator boot verified this
-offline configuration. To start it in a
-hidden background helper process, after applying the process environment above:
+offline configuration. To start it in a hidden background helper process, apply
+the process environment above and use the lifecycle skeleton below. Fill the
+`try` block with boot polling and the selected test commands, each with an explicit
+timeout; a test round must not leave its emulator running:
 
 ```powershell
 $emulator = "$env:ANDROID_HOME/emulator/emulator.exe"
+$adb = "$env:ANDROID_HOME/platform-tools/adb.exe"
+$env:ANDROID_VERBOSE = $null
 & $emulator -accel-check
 $process = Start-Process -FilePath $emulator -ArgumentList @(
     '-avd', 'kif_api30', '-port', '5554', '-no-window', '-no-audio',
-    '-no-snapshot', '-no-boot-anim', '-no-metrics', '-gpu', 'swiftshader_indirect'
-) -WindowStyle Hidden -PassThru `
-    -RedirectStandardOutput ./temp/logs/emulator.stdout.log `
-    -RedirectStandardError ./temp/logs/emulator.stderr.log
-& "$env:ANDROID_HOME/platform-tools/adb.exe" -s emulator-5554 wait-for-device
-& "$env:ANDROID_HOME/platform-tools/adb.exe" -s emulator-5554 shell getprop sys.boot_completed
-& "$env:ANDROID_HOME/platform-tools/adb.exe" -s emulator-5554 shell getprop ro.product.cpu.abilist
+    '-no-snapshot', '-no-boot-anim', '-no-metrics', '-gpu', 'swiftshader_indirect',
+    '-debug', '-all', '-logcat', '*:s'
+) -WindowStyle Hidden -PassThru
+try {
+    # Poll sys.boot_completed with a deadline, then run this round's tests here.
+    # Apply a timeout to every adb/test command; do not wait-for-device indefinitely.
+} finally {
+    if (!$process.HasExited) {
+        $stop = $null
+        try {
+            $stop = Start-Process -FilePath $adb -ArgumentList @(
+                '-s', 'emulator-5554', 'emu', 'kill'
+            ) -WindowStyle Hidden -PassThru
+            if (!$stop.WaitForExit(10000)) { $stop.Kill($true) }
+        } finally {
+            if (!$process.WaitForExit(15000)) {
+                $process.Kill($true)
+                if (!$process.WaitForExit(5000)) { throw 'Test emulator did not exit' }
+            }
+            if ($null -ne $stop -and !$stop.HasExited) {
+                if (!$stop.WaitForExit(5000)) { throw 'Emulator shutdown command did not exit' }
+            }
+        }
+    }
+}
 ```
 
+Use a dedicated, currently unused AVD and port for this lifecycle; tests attaching
+to an existing emulator must leave that shared process under its owner's control.
 `wait-for-device` alone does not mean Android has completed booting: wait until
 `sys.boot_completed` is `1` before installing or driving a test APK. Preserve
 the AVD between upgrade and save-restart tests; create a separate AVD or use
 explicitly authorized data cleanup for clean-install tests.
+
+### Logging defaults
+
+Normal test launches do not redirect emulator stdout/stderr to files. Do not enable
+`-verbose`, `-debug all`, `-show-kernel`, `-log-nofilter` or console metrics for
+routine tests. Clear inherited `ANDROID_VERBOSE` and explicitly silence guest
+log forwarding with `-logcat '*:s'`. For a host emulator startup failure, use
+a short, bounded stdout/stderr capture with a hard 50 MiB limit per file.
+
+Capture Android warnings/errors on demand, for example:
+
+```powershell
+& $adb -s emulator-5554 logcat -d -t 1000 '*:W'
+```
+
+Keep required INFO-level PASS/FAIL tags enabled for probes that parse those markers.
+The guest logcat filter does not bound host emulator or QEMU output. Any continuous
+diagnostic capture still needs rotation or a hard size cap, a deadline and cleanup
+after both passing and failing tests. See the repository's [test cleanup rules](../../AGENTS.md).
+
+The 2026-10-28 cleanup inventory recorded `temp/original-emulator.stdout.log` at
+510,811,049,237 bytes (475.73 GiB), created on October 23 at 21:52 and last written
+on October 27 at 14:13. The file was deleted before this investigation, so the
+repeated message and its severity cannot be verified. Remaining comparable launch
+logs are about 8 KiB; routine initialization output alone does not explain this size.
+
+References: [emulator debug/logcat options](https://developer.android.com/studio/run/emulator-commandline),
+[emulator logging environment variables](https://developer.android.com/tools/variables).
 
 ## Publisher references
 

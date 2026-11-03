@@ -26,7 +26,7 @@ class ClothesShopPresenter < PokemonMartScreen
     options << "Remove dye" if remove_dye_option_available
     options << "Cancel"
     #if $Trainer.hat_color != 0
-    choice = pbMessage("What would you like to do?",options,-1)
+    choice = pbMessage(_INTL("What would you like to do?"),options,-1)
     if choice == 0
       if is_player_hat #remove
         @adapter.doSpecialItemAction(:REMOVE)
@@ -55,7 +55,7 @@ class ClothesShopPresenter < PokemonMartScreen
     options << "Wear"
     options << "Remove dye" if $Trainer.clothes_color != 0
     options << "Cancel"
-    choice = pbMessage("What would you like to do?",options,-1)
+    choice = pbMessage(_INTL("What would you like to do?"),options,-1)
     if choice == 0
         putOnClothes(item)
         $Trainer.clothes_color = @adapter.get_dye_color(item)

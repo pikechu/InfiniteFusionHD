@@ -16,6 +16,8 @@ preflight() {
     [[ $EUID == 0 ]] || die 'Run host-management actions as root.'
     for command in python3 systemctl runuser curl ss; do command -v "$command" >/dev/null || die "Missing prerequisite: $command"; done
     python3 -c 'import sys; assert sys.version_info >= (3,12), "Python 3.12+ required"'
+    [[ -x /usr/bin/ruby ]] || die 'Install Ruby 3.1+ at /usr/bin/ruby before preparing this release.'
+    /usr/bin/ruby --disable-gems -rjson -rzlib -rbase64 -rdigest -e 'abort "Ruby 3.1+ required" if (RUBY_VERSION.split(".").map(&:to_i) <=> [3,1,0]) < 0'
     [[ -x /opt/kif-mmo/tools/caddy && -x /opt/kif-mmo/tools/restic ]] || die 'Run the explicit install-tools.py prerequisite first.'
 }
 release_path() {
@@ -69,6 +71,7 @@ for key,value in runpy.run_path(sys.argv[1]).items():
 assert c.workers==1 and not c.preload_app and not c.reload
 print('GUNICORN_SETTINGS_VALID')
 PY
+    printf '%s' '{"protocol":1,"operation":"catalog"}' | /usr/bin/ruby --disable-gems "$release/server/multiplayer/native/worker.rb" | "$release/venv/bin/python" -c 'import json,sys; v=json.load(sys.stdin); assert v["ok"] and len(v["result"]["moves"])==680 and v["result"]["abilities"]==233; print("NATIVE_RULES_PACKAGE_VALID "+v["rules_hash"])' >&2
     printf '%s\n' "$release"
 )
 setup() {

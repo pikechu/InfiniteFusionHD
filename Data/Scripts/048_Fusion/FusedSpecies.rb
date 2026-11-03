@@ -16,6 +16,13 @@ module GameData
       return split_and_combine_text(@body_pokemon.category, @head_pokemon.category, " ")
     end
 
+    def pokedex_entry
+      return super unless $PokemonSystem && $PokemonSystem.language == 2
+      body = @body_pokemon.pokedex_entry.gsub(@body_pokemon.name, name)
+      head = @head_pokemon.pokedex_entry.gsub(@head_pokemon.name, name)
+      return split_and_combine_text(body, head, "。")
+    end
+
     def initialize(id)
       if id.is_a?(Integer)
         body_id = getBodyID(id)
@@ -372,6 +379,7 @@ module GameData
     end
 
     def get_random_dex_entry()
+      return pokedex_entry if $PokemonSystem && $PokemonSystem.language == 2
       begin
         file_path = Settings::POKEDEX_ENTRIES_PATH
         json_data = File.read(file_path)

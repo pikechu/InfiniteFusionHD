@@ -77,7 +77,7 @@ def main():
         tls_port = available.getsockname()[1]
     source = (ROOT / "server/multiplayer/deploy/Caddyfile").read_text(encoding="utf-8")
     local = source.replace("admin 127.0.0.1:2020", "admin off\n    auto_https disable_redirects\n    skip_install_trust")
-    local = local.replace("if.pikastairs.cc {", "https://localhost:" + str(tls_port) + " {\n    bind 127.0.0.1\n    tls internal")
+    local = local.replace("if.pikastairs.cc {", "https://127.0.0.1:" + str(tls_port) + " {\n    bind 127.0.0.1\n    tls internal")
     local = local.replace("127.0.0.1:8765", "127.0.0.1:" + str(server.server_port))
     proxy_config = evidence / "Caddyfile"
     proxy_config.write_text(local, encoding="utf-8")
@@ -106,7 +106,8 @@ def main():
         if ca is None:
             raise RuntimeError("Local-only Caddy CA did not initialize")
         context = ssl.create_default_context(cafile=str(ca))
-        origin = "https://localhost:" + str(tls_port)
+        # Match the IPv4-only test listener without a Windows IPv6 retry delay.
+        origin = "https://127.0.0.1:" + str(tls_port)
         def request(path, body=None, token=None, expected=200, headers=None, host=None):
             metadata = {"Content-Type": "application/json", **(headers or {})}
             if token:

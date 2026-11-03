@@ -14,6 +14,9 @@ module Settings
   # Read the VERSION file inside Data folder to get the version number
   GAME_VERSION_NUMBER = File.read("Data/VERSION").strip
 
+  GAME_REPOSITORY_URL = "https://github.com/pikechu/InfiniteFusionHD"
+  OFFLINE_RESOURCES_URL = "https://raw.githubusercontent.com/pikechu/InfiniteFusionHD/main/Data/offline-resources.json"
+
   GAME_REMOTE_SETTINGS_URL = "https://raw.githubusercontent.com/pikechu/InfiniteFusionHD/main/Data/REMOTE_SETTINGS.json"
   GAME_REMOTE_SETTINGS_FILE_PATH = "Data/DOWNLOADED_SETTINGS.json"
 
@@ -74,8 +77,8 @@ module Settings
 
   STARTUP_MESSAGES = ""
   
-  MYSTERY_GIFT_KURAY_URL = "https://raw.githubusercontent.com/kurayamiblackheart/kurayshinyrevamp/main/Data/MysteryGift.txt"
-  MYSTERY_GIFT_KURAY_PATH = "MysteryGift.txt"
+  MYSTERY_GIFT_KURAY_URL = "https://raw.githubusercontent.com/pikechu/InfiniteFusionHD/main/Data/MysteryGift.txt"
+  MYSTERY_GIFT_KURAY_PATH = "Data/MysteryGift.txt"
 
   # MIGHT_NOT_NEED84x
   # LEVEL_CAPS=[12,22,26,35,38,45,51,54,58,62,63,64,64,65,67,68]
@@ -145,9 +148,6 @@ module Settings
   KURAY_CHESTS_ID = 3000
 
   MAPS_WITHOUT_SURF_MUSIC = [762]
-
-  WONDERTRADE_BASE_URL = "http://localhost:8080"
-  WONDERTRADE_PUBLIC_KEY = "http://localhost:8080"
 
   MAX_NB_OUTFITS=99
 

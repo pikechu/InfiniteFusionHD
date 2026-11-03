@@ -106,7 +106,7 @@ class V3Features:
                 badges.append({key: reward[key] for key in ("id", "kind", "boss_id", "gym_code", "dungeon_id") if key in reward})
                 if len(badges) == 64:
                     break
-        return {"id": identity["id"], "nickname": identity["nickname"], "friend_code": identity["friend_code"], "avatar": settings["avatar"], "show_badges": settings["show_badges"], "badges": badges, "showcases": showcases, "showcase_codes": [showcase["code"] for showcase in showcases], "capacity": 6}
+        return {"id": identity["id"], "nickname": identity["nickname"], "friend_code": identity["friend_code"], "avatar": settings["avatar"], "show_badges": settings["show_badges"], "badges": badges, "showcases": showcases, "showcase_codes": [showcase["code"] for showcase in showcases], "capacity": 6, "decoration": self.shop_card_decoration(db, identity["id"])}
 
     def cards_request(self, db, identity, method, parts, body):
         require(len(parts) == 3, "not_found", "Unknown trainer-card endpoint", 404)
@@ -141,6 +141,7 @@ class V3Features:
         return json.loads(row["document"])
 
     def lock_asset(self, db, asset_id, owner, reference):
+        self.check_player_control(db, owner, trade=True)
         asset = self.asset(db, asset_id, owner)
         old = self.refresh_asset_lock(db, asset_id)
         require(old is None or old["reference"] == reference, "asset_locked", "Hosted asset is already committed to another operation", 409)
@@ -148,6 +149,7 @@ class V3Features:
         return asset
 
     def refresh_asset_lock(self, db, asset_id):
+        self.market_expire(db)
         old = db.execute("SELECT reference FROM asset_locks WHERE asset_id=?", (asset_id,)).fetchone()
         if old and old["reference"].startswith("trade:"):
             self.trade_document(db, old["reference"].split(":", 1)[1])
@@ -156,6 +158,8 @@ class V3Features:
         return db.execute("SELECT reference FROM asset_locks WHERE asset_id=?", (asset_id,)).fetchone()
 
     def transfer_asset(self, db, asset_id, old_owner, new_owner, reference):
+        self.check_player_control(db, old_owner, trade=True)
+        self.check_player_control(db, new_owner, trade=True)
         asset = self.asset(db, asset_id, old_owner)
         locked = db.execute("SELECT reference FROM asset_locks WHERE asset_id=?", (asset_id,)).fetchone()
         require(locked is not None and locked["reference"] == reference, "asset_lock_lost", "Hosted asset has no matching authority lock", 409)

@@ -40,6 +40,7 @@ class ProductionReleaseTests(unittest.TestCase):
     def test_offline_release_is_allowlisted_hash_verified_and_idempotent(self):
         installed = stage(self.archive, self.releases)
         metadata = json.loads((installed / "release.json").read_text())
+        self.assertEqual(len(metadata["native_rules_hash"]),64)
         validate_inventory(installed, metadata)
         self.assertEqual(stage(self.archive, self.releases), installed)
         self.assertFalse(list(self.releases.glob(".partial-*")))
@@ -55,6 +56,26 @@ class ProductionReleaseTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             stage(self.archive, self.releases)
         self.assertEqual((self.root / "account-data-preserve").read_bytes(), b"unchanged")
+
+    def test_native_worker_uses_only_packaged_rules(self):
+        from native_rules import NativeRules
+        ruby = self.workspace / "temp/tools/ruby-3.2.9/rubyinstaller-3.2.9-1-x64/bin/ruby.exe"
+        if not ruby.is_file():
+            self.skipTest("Standalone Ruby required for packaged rules validation")
+        installed = stage(self.archive, self.releases)
+        self.assertFalse((installed / "Graphics").exists())
+        engine = NativeRules(ruby=ruby, root=installed)
+        self.addCleanup(engine.close)
+        catalog = engine.call("catalog")
+        metadata = json.loads((installed/"release.json").read_text(encoding="utf-8"))
+        self.assertEqual(catalog["rules_hash"],metadata["native_rules_hash"])
+        self.assertEqual(len(catalog["result"]["moves"]), 680)
+        created = engine.call("world_create", time=1792713600, seed=100, name="Release", money=1000)
+        result = engine.call("world_step", rules_hash=catalog["rules_hash"], world={
+            "initial": created["result"]["state"], "seed": 200, "time": 1792713600,
+            "action": {"kind": "wait"}, "inputs": []})["result"]
+        self.assertEqual(result["prompt"]["kind"], "choice")
+        self.assertEqual(result["view"]["party"], [])
 
     def test_archive_traversal_alias_and_symlink_are_rejected(self):
         for number, name in enumerate(("../escape", "server/multiplayer/../escape", "server//multiplayer/service.py")):

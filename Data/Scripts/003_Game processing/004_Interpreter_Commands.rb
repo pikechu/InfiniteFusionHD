@@ -211,7 +211,8 @@ class Interpreter
   #-----------------------------------------------------------------------------
   def command_102
     @message_waiting = true
-    command = pbShowCommands(nil, @list[@index].parameters[0], @list[@index].parameters[1])
+    commands = @list[@index].parameters[0].map { |text| _MAPINTL($game_map.map_id, text) }
+    command = pbShowCommands(nil, commands, @list[@index].parameters[1])
     @message_waiting = false
     @branch[@list[@index].indent] = command
     Input.update   # Must call Input.update again to avoid extra triggers

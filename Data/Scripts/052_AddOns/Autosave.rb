@@ -120,7 +120,7 @@ class AutosaveOptionsScene < PokemonOption_Scene
     params.setCancelValue(0)
     val = Kernel.pbMessageChooseNumber(_INTL("Autosave every how many steps?"),params)
     if val < 200
-      Kernel.pbMessage("Warning: Choosing a low number of steps may decrease performance.")
+      Kernel.pbMessage(_INTL("Warning: Choosing a low number of steps may decrease performance."))
     end
     if val == 0
       val = 1

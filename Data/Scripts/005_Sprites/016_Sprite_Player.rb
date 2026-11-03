@@ -20,11 +20,28 @@ class Sprite_Player < Sprite_Character
 
   def updateCharacterBitmap
     skinTone = $Trainer.skin_tone ? $Trainer.skin_tone : 0
-    baseBitmapFilename = getBaseOverworldSpriteFilename(@character_name, skinTone)
-    if !pbResolveBitmap(baseBitmapFilename)
-      baseBitmapFilename = Settings::PLAYER_GRAPHICS_FOLDER + @character_name
+    appearance = [skinTone, @character_hue]
+    if @base_appearance != appearance
+      disposeBaseBitmaps
+      @base_appearance = appearance
     end
-    AnimatedBitmap.new(baseBitmapFilename, @character_hue)
+    @base_bitmaps ||= {}
+    unless @base_bitmaps[@character_name]
+      path = getBaseOverworldSpriteFilename(@character_name, skinTone)
+      path = Settings::PLAYER_GRAPHICS_FOLDER + @character_name if !pbResolveBitmap(path)
+      @base_bitmaps[@character_name] = [path, AnimatedBitmap.new(path, @character_hue)]
+    end
+    path, owner = @base_bitmaps[@character_name]
+    # Keep one reference while Sprite_Character releases its current action.
+    # Map transfers can clear RPG::Cache; restore this still-owned entry there.
+    key = @character_hue == 0 ? path : [path, @character_hue]
+    RPG::Cache.setKey(key, owner.bitmap)
+    AnimatedBitmap.new(path, @character_hue)
+  end
+
+  def disposeBaseBitmaps
+    @base_bitmaps&.each_value { |_, bitmap| bitmap.dispose }
+    @base_bitmaps = {}
   end
 
   def applyDayNightTone
@@ -40,19 +57,35 @@ class Sprite_Player < Sprite_Character
   end
 
   def getClothedPlayerSprite(forceUpdate=false)
-    if @previous_action != @character_name || forceUpdate
-      @current_bitmap = generateClothedBitmap
+    appearance = [$Trainer.skin_tone, $Trainer.clothes, $Trainer.hair, $Trainer.hat,
+                  $Trainer.clothes_color, $Trainer.hair_color, $Trainer.hat_color, @character_hue]
+    if forceUpdate || @outfit_appearance != appearance
+      disposeOutfitBitmaps
+      @outfit_appearance = appearance
     end
+    # Keep only the action sheets for the current appearance, owned by this
+    # sprite. Walking/running switches reuse them instead of decoding again.
+    @outfit_bitmaps ||= {}
+    @current_bitmap = @outfit_bitmaps[@character_name] ||= generateClothedBitmap
     @previous_action = @character_name
-    @hair.animate(@character_name) if @hair
-    @hat.animate(@character_name) if @hat
     return @current_bitmap
   end
 
+  def disposeOutfitBitmaps
+    @outfit_bitmaps&.each_value { |bitmap| bitmap.dispose unless bitmap.disposed? }
+    @outfit_bitmaps = {}
+  end
+
+  def refreshOutfit
+    @outfit_appearance = nil
+    @base_appearance = nil
+    @manual_refresh = true
+  end
 
   def generateClothedBitmap()
-    @charbitmap.bitmap.clone #nekkid sprite
-    baseBitmap = @charbitmap.bitmap.clone #nekkid sprite
+    # BitmapWrapper#copy resets reference ownership; clone inherits the source's
+    # cache refcount and cannot be fully released with a single dispose.
+    baseBitmap = @charbitmap.bitmap.copy
 
     outfitFilename = getOverworldOutfitFilename($Trainer.clothes, @character_name) #
     outfitFilename = getOverworldOutfitFilename(Settings::PLAYER_TEMP_OUTFIT_FALLBACK) if !pbResolveBitmap(outfitFilename)
@@ -77,6 +110,11 @@ class Sprite_Player < Sprite_Character
     baseBitmap.blt(0, 0, outfitBitmap.bitmap, outfitBitmap.bitmap.rect) if outfitBitmap
     @previous_action = @character_name
     return baseBitmap
+  rescue Exception
+    baseBitmap.dispose if baseBitmap && !baseBitmap.disposed?
+    raise
+  ensure
+    outfitBitmap.dispose if outfitBitmap
   end
 
 
@@ -84,10 +122,15 @@ class Sprite_Player < Sprite_Character
 
   def update
     super
+    # Character.update places/hides the body after resolving its bitmap.
+    @hair.animate(@character_name) if @hair
+    @hat.animate(@character_name) if @hat
   end
 
   def dispose
     super
+    disposeOutfitBitmaps
+    disposeBaseBitmaps
     @hat.dispose if @hat
     @hair.dispose if @hair
   end

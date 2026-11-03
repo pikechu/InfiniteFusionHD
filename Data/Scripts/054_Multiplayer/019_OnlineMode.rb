@@ -81,7 +81,7 @@ module KIFMultiplayer
         KIFMultiplayer.with_ui_fonts do
           ui = UI.new(KIFMultiplayer.client)
           loop do
-            choice = ui.choose("选择游戏模式", ["在线模式（登录与云存档）", "离线模式（本地存档）", "设置服务器", "退出游戏"])
+            choice = ui.choose("选择游戏模式", ["在线模式（登录与云存档）", "离线模式（本地存档）", "设置服务器", "原版受控在线角色", "退出游戏"])
             case choice
             when 0
               return true if login(ui)
@@ -93,6 +93,8 @@ module KIFMultiplayer
                 url = ui.enter("服务器地址", KIFMultiplayer.client.server, 120)
                 KIFMultiplayer.client.profile.server = url unless url.empty?
               end
+            when 3
+              login(ui) { |client| OriginalUI.new(client).main; true }
             else
               return false
             end
@@ -126,7 +128,7 @@ module KIFMultiplayer
               client.authenticate(action, username, password, nickname && !nickname.empty? ? nickname : nil)
               password = confirm = nil
             end
-            start(client)
+            block_given? ? yield(client) : start(client)
           end
           return true if value
         end

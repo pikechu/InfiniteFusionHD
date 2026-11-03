@@ -38,6 +38,7 @@ module RPG
     #KurayX - KURAYX_ABOUT_SHINIES
     def self.load_bitmap(folder_name, filename, hue = 0, rcode=0, gcode=1, bcode=2, pifshiny=0, kifshiny=0)
       path = folder_name + filename
+      path = GameLanguage.bitmap_path(path) if defined?(GameLanguage)
       cached = true
       ret = fromCache(path)
       if !ret
@@ -74,6 +75,7 @@ module RPG
 
     #KurayX - KURAYX_ABOUT_SHINIES
     def self.load_bitmap_path(path, hue = 0, rcode=0, gcode=1, bcode=2, pifshiny=0, kifshiny=0)
+      path = GameLanguage.bitmap_path(path) if defined?(GameLanguage)
       cached = true
       ret = fromCache(path)
       if !ret
@@ -114,9 +116,14 @@ module RPG
         ret = BitmapWrapper.new(32 * width, 32 * height)
         x = (tile_id - 384) % 8 * 32
         y = (((tile_id - 384) / 8) - height + 1) * 32
-        tileset = yield(filename)
-        ret.blt(0, 0, tileset, Rect.new(x, y, 32 * width, 32 * height))
-        tileset.dispose
+        renderer = $scene.map_renderer if $scene.respond_to?(:map_renderer)
+        if renderer && !renderer.disposed? && renderer.tilesets[filename]
+          renderer.tilesets.blt_tile(ret, filename, Rect.new(x, y, 32 * width, 32 * height))
+        else
+          tileset = yield(filename)
+          ret.blt(0, 0, tileset, Rect.new(x, y, 32 * width, 32 * height))
+          tileset.dispose
+        end
         ret.hue_change(hue) if hue != 0
         @cache[key] = ret
       end
@@ -133,6 +140,7 @@ module RPG
 
     def self.retain(folder_name, filename = "", hue = 0)
       path = folder_name + filename
+      path = GameLanguage.bitmap_path(path) if defined?(GameLanguage)
       ret = fromCache(path)
       if hue > 0
         key = [path, hue]

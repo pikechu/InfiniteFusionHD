@@ -241,11 +241,15 @@ class FightMenuDisplay < BattleMenuBase
   #     displayed.
   USE_GRAPHICS     = true
   TYPE_ICON_HEIGHT = 28
+  MOVE_BACKGROUND_COLOR      = Color.new(236,240,244)
+  SELECTED_BACKGROUND_COLOR  = Color.new(32,56,88)
+  SELECTED_TEXT_BASE_COLOR   = Color.new(248,248,248)
+  SELECTED_TEXT_SHADOW_COLOR = Color.new(8,20,40)
   # Text colours of PP of selected move
   PP_COLORS = [
-     Color.new(248,72,72),Color.new(136,48,48),    # Red, zero PP
-     Color.new(248,136,32),Color.new(144,72,24),   # Orange, 1/4 of total PP or less
-     Color.new(248,192,0),Color.new(144,104,0),    # Yellow, 1/2 of total PP or less
+     Color.new(176,32,48),Color.new(248,224,224),  # Red, zero PP
+     Color.new(160,72,8),Color.new(248,232,208),   # Orange, 1/4 of total PP or less
+     Color.new(128,88,0),Color.new(248,240,208),   # Amber, 1/2 of total PP or less
      TEXT_BASE_COLOR,TEXT_SHADOW_COLOR             # Black, more than 1/2 of total PP
   ]
 
@@ -285,12 +289,14 @@ class FightMenuDisplay < BattleMenuBase
       @overlay.x = self.x
       @overlay.y = self.y
       pbSetNarrowFont(@overlay.bitmap)
+      @overlay.bitmap.font.size = 24 if GameLanguage.font_name
       addSprite("overlay",@overlay)
       # Create overlay for selected move's info (shows move's PP)
       @infoOverlay = BitmapSprite.new(Graphics.width,Graphics.height-self.y,viewport)
       @infoOverlay.x = self.x
       @infoOverlay.y = self.y
-      pbSetNarrowFont(@infoOverlay.bitmap)
+      pbSetSmallFont(@infoOverlay.bitmap)
+      @infoOverlay.bitmap.font.size = 22 if GameLanguage.font_name
       addSprite("infoOverlay",@infoOverlay)
       # Create type icon
       @typeIcon = SpriteWrapper.new(viewport)
@@ -352,13 +358,15 @@ class FightMenuDisplay < BattleMenuBase
   def battler=(value)
     @battler = value
     refresh
-    refreshButtonNames
   end
 
   def shiftMode=(value)
     oldValue = @shiftMode
     @shiftMode = value
-    refreshShiftButton if @shiftMode!=oldValue
+    if @shiftMode!=oldValue
+      refreshShiftButton
+      refreshMegaEvolutionButton
+    end
   end
 
   def refreshButtonNames
@@ -374,23 +382,22 @@ class FightMenuDisplay < BattleMenuBase
     end
     # Draw move names onto overlay
     @overlay.bitmap.clear
-    textPos = []
     @buttons.each_with_index do |button,i|
       next if !@visibility["button_#{i}"]
-      x = button.x-self.x+button.src_rect.width/2
-      y = button.y-self.y+2
-      moveNameBase = TEXT_BASE_COLOR
-      if moves[i].type
-        # NOTE: This takes a colour from a particular pixel in the button
-        #       graphic and makes the move name's base colour that same colour.
-        #       The pixel is at coordinates 10,34 in the button box. If you
-        #       change the graphic, you may want to change/remove the below line
-        #       of code to ensure the font is an appropriate colour.
-        moveNameBase = button.bitmap.get_pixel(10,button.src_rect.y+34)
-      end
-      textPos.push([moves[i].name,x,y,2,moveNameBase,TEXT_SHADOW_COLOR])
+      x = button.x-self.x+22
+      y = button.y-self.y+8
+      width = button.src_rect.width-44
+      height = BUTTON_HEIGHT-16
+      selected = (i==@index)
+      background = selected ? SELECTED_BACKGROUND_COLOR : MOVE_BACKGROUND_COLOR
+      moveNameBase = selected ? SELECTED_TEXT_BASE_COLOR : TEXT_BASE_COLOR
+      moveNameShadow = selected ? SELECTED_TEXT_SHADOW_COLOR : MessageConfig::LIGHT_TEXT_MAIN_COLOR
+      # Keep the type border; bound long labels to the rounded inner panel.
+      @overlay.bitmap.fill_rect(x+2,y,width-4,height,background)
+      @overlay.bitmap.fill_rect(x,y+2,width,height-4,background)
+      pbDrawShadowText(@overlay.bitmap,x+2,y-4,width-4,height,
+         moves[i].name,moveNameBase,moveNameShadow,1)
     end
-    pbDrawTextPositions(@overlay.bitmap,textPos)
   end
 
   def refreshSelection
@@ -435,17 +442,22 @@ class FightMenuDisplay < BattleMenuBase
     # PP text
     if move.total_pp>0
       ppFraction = [(4.0*move.pp/move.total_pp).ceil,3].min
-      textPos = []
-      textPos.push([_INTL("PP: {1}/{2}",move.pp,move.total_pp),
-         448,44,2,PP_COLORS[ppFraction*2],PP_COLORS[ppFraction*2+1]])
-      pbDrawTextPositions(@infoOverlay.bitmap,textPos)
+      ppText = _INTL("PP: {1}/{2}",move.pp,move.total_pp)
+      ppBase, ppShadow = PP_COLORS[ppFraction*2,2]
+    else
+      ppText = _INTL("PP: ---")
+      ppBase, ppShadow = TEXT_BASE_COLOR, TEXT_SHADOW_COLOR
     end
+    pbDrawShadowText(@infoOverlay.bitmap,394,44,108,28,ppText,ppBase,ppShadow,1)
   end
 
   def refreshMegaEvolutionButton
     return if !USE_GRAPHICS
     @megaButton.src_rect.y    = (@mode - 1) * @megaEvoBitmap.height / 2
-    @megaButton.x             = self.x + ((@shiftMode > 0) ? 204 : 120)
+    @megaButton.x             = self.x + 120
+    @megaButton.y             = self.y - @megaEvoBitmap.height / 2
+    # Keep both action buttons clear of triple-battle data boxes.
+    @megaButton.y            -= @shiftBitmap.height + 4 if @shiftMode > 0
     @megaButton.z             = self.z - 1
     @visibility["megaButton"] = (@mode > 0)
   end
@@ -460,6 +472,7 @@ class FightMenuDisplay < BattleMenuBase
   def refresh
     return if !@battler
     refreshSelection
+    refreshButtonNames
     refreshMegaEvolutionButton
     refreshShiftButton
   end

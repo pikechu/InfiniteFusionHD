@@ -158,7 +158,7 @@ class CharacterSelectionMenuView
     baseColor= baseColor ? baseColor : Color.new(72,72,72)
     shadowColor= shadowColor ? shadowColor : Color.new(160,160,160)
     @textValues[spriteId] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
-    text1=_INTL(text)
+    text1 = spriteId == CharacterSelectMenuPresenter::NAME_TEXT_ID ? text : _INTL(text)
     textPosition=[
       [text1,xposition,yposition,2,baseColor,shadowColor],
     ]

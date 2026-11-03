@@ -115,7 +115,7 @@ module KIFMultiplayer
         heading = "联机 #{CLIENT_BUILD}\n#{text(@client.server)}\n"
         heading += identity ? "#{text(identity['nickname'])} · #{text(identity['friend_code'])}" : "尚未连接"
         heading += @client.profile.account["connected"] ? "（已连接）" : "（已断开）"
-        commands = ["服务器与身份", "创建好友单打房间", "加入房间", "恢复当前房间", "训练师名片与精灵展示", "合作 Boss / 固定副本", "道馆挑战与回放", "交换与托管收藏", "租借杯与走动大厅", "地图与世界聊天", "返回"]
+        commands = ["服务器与身份", "创建好友单打房间", "加入房间", "恢复当前房间", "训练师名片与精灵展示", "合作 Boss / 固定副本", "道馆挑战与回放", "交换与托管收藏", "租借杯与走动大厅", "地图与世界聊天", "商城", "返回"]
         command = choose(heading, commands)
         break if command < 0 || command == commands.length - 1
         perform do
@@ -164,6 +164,8 @@ module KIFMultiplayer
             KIFMultiplayer.open_hall_menu(@client) if mode == 1
           when 9
             KIFMultiplayer.open_chat
+          when 10
+            KIFMultiplayer.open_shop
           end
         end
       end
