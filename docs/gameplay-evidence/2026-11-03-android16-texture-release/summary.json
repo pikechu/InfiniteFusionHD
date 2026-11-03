@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "version": "0.20.8-android.16",
+  "versionCode": 16,
+  "abi": "arm64-v8a",
+  "build_source_main_commit": "54becf20",
+  "texture_merge_commit": "a900c07b",
+  "texture_feature_commit": "ef38cb23",
+  "apks": [
+    {
+      "apk": "InfiniteFusionHD-0.20.8-android.16-arm64-network-test.apk",
+      "sha256": "e8fdc3783305d460051d4190e70ff85397cffa8a701cb51c2427006f0071074e",
+      "bytes": 818817328,
+      "payload_sha256": "830d9223ebfbdd177319fa73854c227eadbceb18fc9185fc83792ae4d0f11823",
+      "logical_files": 23385,
+      "accepted_images": 268,
+      "P5_originals": 1850,
+      "payload_id": "0179f18c369f8c41902cac31",
+      "emulator_only": false,
+      "status": "passed"
+    },
+    {
+      "apk": "InfiniteFusionHD-0.20.8-android.16-arm64-emulator-network-test.apk",
+      "sha256": "5408b07ec22db66189800b616c1d02d904479889138f2d4ed093714ecabe634e",
+      "bytes": 818817328,
+      "payload_sha256": "830d9223ebfbdd177319fa73854c227eadbceb18fc9185fc83792ae4d0f11823",
+      "logical_files": 23385,
+      "accepted_images": 268,
+      "P5_originals": 1850,
+      "payload_id": "0179f18c369f8c41902cac31",
+      "emulator_only": true,
+      "status": "passed"
+    }
+  ],
+  "payload_canonical_bytes_verified": true,
+  "accepted_enhancements": 267,
+  "container_only_repairs": 1,
+  "P5_preserved": 1850,
+  "localized_pairs_verified": 111,
+  "emulator_phases": {
+    "ui": {
+      "passed": true,
+      "elapsed_ms": 182313.00000000192,
+      "source": "output\\texture-main-release-20261103\\emulator\\ui-171123-ecf2eb\\result.json",
+      "result_sha256": "f2b0f23444be3a0c717b6680df2c8b5c6038c1d182a972af245d6980a1f904cc"
+    },
+    "map": {
+      "passed": true,
+      "elapsed_ms": 83360.00000000058,
+      "source": "output\\texture-main-release-20261103\\emulator\\map-172156-52a902\\result.json",
+      "result_sha256": "0c128ee3b6243564d04951c088f5943b4ae111716d33965a8a93a8ef2545d822"
+    },
+    "textures": {
+      "passed": true,
+      "elapsed_ms": 102250.0,
+      "source": "output\\texture-main-release-20261103\\emulator\\textures-172553-39dd4d\\result.json",
+      "result_sha256": "f92d1642bb24c3d10e66844e89dfa3d3234502300726720eefc9deb650d993bb"
+    },
+    "launcher": {
+      "passed": true,
+      "elapsed_ms": 215890.99999999962,
+      "source": "output\\texture-main-release-20261103\\emulator\\launcher-174757-3e473a\\result.json",
+      "result_sha256": "cba4b68ae17f2df4057ff484c6c4e6c39bf60a81252685d973de5e2025712d1b"
+    },
+    "input": {
+      "passed": true,
+      "elapsed_ms": 14500.0,
+      "source": "output\\texture-main-release-20261103\\emulator\\input-175823-20acbe\\result.json",
+      "result_sha256": "71b44cb5ad14b520485eabdc0310ae3fc9c4c49bb7591ae3da5a2c8db548fa05"
+    }
+  },
+  "command_states": 120,
+  "HP_EXP_cases": 12,
+  "map_transfers": 12,
+  "event_tile_pixel_cases": 5,
+  "physical_touch_codes_received": [
+    2,
+    13,
+    12
+  ],
+  "visual_review": {
+    "normal_startup_reached": true,
+    "normal_startup_scope": "First language-selection UI and intro visually confirmed; a full new-game playthrough was not performed.",
+    "normal_startup_screenshot": "output/texture-main-release-20261103/emulator/launcher-174757-3e473a/launcher-150.png",
+    "battle_and_map_reviewed": true,
+    "reviewed_frames": [
+      "ui-171123-ecf2eb/options-zh.png",
+      "ui-171123-ecf2eb/summary-zh.png",
+      "map-172156-52a902/map-42.png",
+      "map-172156-52a902/map-79.png",
+      "textures-172553-39dd4d/command-0-0-0.png",
+      "textures-172553-39dd4d/command-2-0-0.png",
+      "textures-172553-39dd4d/command-2-0-1.png",
+      "textures-172553-39dd4d/bars-2.png",
+      "launcher-174757-3e473a/launcher-150.png"
+    ],
+    "input_delivery": "Separate native input phase verified Android touch -> production JNI/Ruby input codes [2,13,12].",
+    "frame_sha256": {
+      "ui-171123-ecf2eb/options-zh.png": "6a95d889462d8c0d77f47687d6b9fe45cf1d8141ce6c137c47686c5f6afcbf79",
+      "ui-171123-ecf2eb/summary-zh.png": "f3392c26a3af2c7cbde3a0502943529d6557518e3f4a182638b7c928662927c6",
+      "map-172156-52a902/map-42.png": "4e6f9564752ad5a2fdfdf36ed36c275b3f45db85ce4adbfbeb468a949641264e",
+      "map-172156-52a902/map-79.png": "004553f0dc188343148efe62f9ca0fab6152bf23bfa1ae75d44bcb03bb14ff21",
+      "textures-172553-39dd4d/command-0-0-0.png": "0825256acc605f3f44844f5ce82a2752b86b8f76c32a40276cc128e977c18e11",
+      "textures-172553-39dd4d/command-2-0-0.png": "aa8b862097ca1512ecaae356cb9c1d3571e159ca2ca256058a6d0923dc68fe70",
+      "textures-172553-39dd4d/command-2-0-1.png": "2c49fd38053b34fa6a9b861c9574a109d9f626992bd9cd7377df1b4bcb5cc59b",
+      "textures-172553-39dd4d/bars-2.png": "43e5fe1fb0522b2ce71ad47c5c16d18c4d2c513f74a67d23ecc7017eca31f66e",
+      "launcher-174757-3e473a/launcher-150.png": "7a6b0d3eb912f80048e8ce9c498fcb3dcf2742b95f57e33d88abc48f0e14d296"
+    }
+  },
+  "busy_adb_ownership_regression": "passed",
+  "host_driver": {
+    "AEHD": "2.2",
+    "user_authorized": true,
+    "signed_by": "Google LLC",
+    "state": "Running"
+  },
+  "cleanup": {
+    "old_files_removed": 3481,
+    "old_bytes_removed": 49594097,
+    "build_work_removed": true,
+    "emulator_and_private_adb_exited": true,
+    "temporary_logs_remaining": 0
+  },
+  "limits": "Android 11/API30 x86_64 with ARM64 translation and the separately identified emulator runtime. No physical ARM phone, complete game playthrough or other Android-version matrix."
+}

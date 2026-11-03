@@ -1,0 +1,60 @@
+{
+  "phase": "ui",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks  Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 35904  12040344   1% /data/user/0",
+  "apk_sha256": "5408b07ec22db66189800b616c1d02d904479889138f2d4ed093714ecabe634e",
+  "exact_installed_apk_reused": false,
+  "content_id": "0179f18c369f8c41902cac31",
+  "test_source_sha256": {
+    "scripts/multiplayer/runtime-preload.rb": "fb6880cb5f0fb33c859be183060797d82dc499346090f8550e06b9f5093a6957",
+    "scripts/multiplayer/test-bootstrap.rb": "a9f8262200330679e60f0038832f1e989ee8ba8f7f45ce3a5525c1dcb96ce290",
+    "tests/gameplay/map_transfer_game.rb": "4b4bfd0d6fb15a3b53185f8d9aeb3c8d72927b695fd42ca308420278358606fe",
+    "tests/localization/android_legacy_read.rb": "9b74ceb9bfff32535d2218c29522624f750274ee0347d47bf21e1c57c64d031f",
+    "tests/localization/android_legacy_write.rb": "a1871e91b82b09105bacdeaa234849ecc7346e07d23fefc29b7e52c2f89df9bd",
+    "tests/localization/android_map_transfer_game.rb": "79a3ab6c7ebb5c77f4d51d9587d480f7ba2b81116240db29089d5e975a189688",
+    "tests/localization/android_scenarios.rb": "a9695576dc1994f7f74d696987ad376b80ca0452f0032c2987dfcb9c15736625",
+    "tests/localization/custom_dex_game.rb": "b0ab52f3d5bcc3330352a2c90485bbe956b09a340bb2f0e4ae4d47f72d08f315",
+    "tests/localization/game_smoke.rb": "a18857383d4a06bfa6882ce18dfc8fb36fcb81b32e0f1b0dda609a447dcf557a",
+    "tests/localization/quest_dialogue_game.rb": "0318ab664efe39768e0137bd568d2ade5362f5725c30c1b97cbc01195b6555a8"
+  },
+  "probe_sha256": "fcca660d87736f4156ea3a7dd05b27e80b8b8b5a025b8fe23e2f19af18ae7881",
+  "native": {
+    "complete": true,
+    "events": "2026-11-03 09:14:20 UTC BEGIN pid=6427 profile=android15-ui ruby=3.4.10\n2026-11-03 09:14:30 UTC SOURCE_LOADED count=473 modules=/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/001_Client.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/002_UI.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/003_Battle.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/004_Boss.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/005_Gym.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/006_Trade.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/007_Rental.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/008_Hall.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/009_Pool.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/010_Collections.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/011_Dungeon.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/012_Replay.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/013_Cards.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/014_GuestScene.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/015_Transport.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/016_CloudCodec.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/017_OnlineClient.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/018_World.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/019_OnlineMode.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/020_AndroidNetwork.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/021_Shop.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/022_ShopScene.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/023_ShopWorld.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/024_ControlledCharacters.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/024_Market.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/025_ControlledAdventure.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/026_OriginalCharacters.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/027_OriginalWorld.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/028_OriginalBattle.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/029_OriginalUI.rb,/data/data/org.kuray.kif/files/content/0179f18c369f8c41902cac31/Data/Scripts/054_Multiplayer/030_OriginalCommerce.rb\n2026-11-03 09:15:12 UTC PASS production Chinese pack is installed\n2026-11-03 09:15:12 UTC PASS bundled Chinese font is registered by Game.exe\n2026-11-03 09:15:18 UTC PASS live settings switch to Chinese and refresh labels\n2026-11-03 09:15:18 UTC PASS rebuilt options remain interactive\n2026-11-03 09:15:18 UTC PASS base and fusion names use Chinese without replacing species data\n2026-11-03 09:15:18 UTC PASS player nicknames are preserved\n2026-11-03 09:15:18 UTC PASS moves use the production Chinese table\n2026-11-03 09:15:18 UTC PASS items use the production Chinese table\n2026-11-03 09:15:18 UTC PASS species entries use the production Chinese table\n2026-11-03 09:15:18 UTC PASS battle prompt retains its argument\n2026-11-03 09:15:18 UTC PASS language switches leave Pokemon, stats and cached species data unchanged\n2026-11-03 09:15:33 UTC PASS saved language and Chinese font restore together\n2026-11-03 09:15:33 UTC PASS KIF settings use supplementary translations\n2026-11-03 09:15:33 UTC PASS preset names remain untouched in translated prompts\n2026-11-03 09:15:34 UTC PASS native mom dialogue uses Chinese\n2026-11-03 09:15:34 UTC PASS formatted Chinese dialogue wraps within its window\n2026-11-03 09:15:34 UTC PASS native oak dialogue uses Chinese\n2026-11-03 09:15:34 UTC PASS native rival dialogue uses Chinese\n2026-11-03 09:15:39 UTC QUEST_PACK sha256=e32567edb40d57d450d28f201b059c005576211149534cd9c1dbcb39b592ed9b\n2026-11-03 09:15:40 UTC PASS all77 native quest fields translated without changing saved definitions\n2026-11-03 09:15:40 UTC PASS old saved expert progress is preserved\n2026-11-03 09:15:41 UTC PASS actual quest UI leaves legacy saved English fields and progress unchanged\n2026-11-03 09:15:41 UTC PASS weather tracker description matches its source\n2026-11-03 09:15:41 UTC PASS six-stage item shows the correct rank\n2026-11-03 09:16:07 UTC PASS standard HM code is preserved\n2026-11-03 09:16:07 UTC PASS raw event pbMessage reaches the Chinese table\n2026-11-03 09:16:08 UTC PASS translated shared commands retain their selected branch\n2026-11-03 09:16:08 UTC PASS direct help array uses translated text with the same branch\n2026-11-03 09:16:08 UTC PASS shared menus preserve frozen source arrays\n2026-11-03 09:16:08 UTC PASS saved Hall of Fame mode is localized only for display\n2026-11-03 09:16:08 UTC PASS single-species history uses the localized species name\n2026-11-03 09:16:08 UTC PASS translated splicer label still returns INFINITESPLICERS2\n2026-11-03 09:16:08 UTC PASS translated splicer label still returns SUPERSPLICERS\n2026-11-03 09:16:08 UTC PASS translated splicer label still returns DNASPLICERS\n2026-11-03 09:16:08 UTC PASS original infinite splicer fallback is preserved\n2026-11-03 09:16:08 UTC PASS credits preserve original static author list\n2026-11-03 09:16:08 UTC CREDITS_LAYOUT_PASS min_font_size=27\n2026-11-03 09:16:37 UTC PASS native English quest labels restore immediately\n2026-11-03 09:16:37 UTC PASS credits restore original English without cached Chinese\n2026-11-03 09:16:40 UTC PASS native language switches preserve all quest definitions\n2026-11-03 09:16:40 UTC QUEST_DIALOGUE_NATIVE_PASS quests=77 outfit_fields=510 normal_player_saves=false\n2026-11-03 09:16:47 UTC PASS native French language data\n2026-11-03 09:17:14 UTC PASS KIF settings restore original English labels\n2026-11-03 09:17:14 UTC PASS English species and fusion names restore immediately\n2026-11-03 09:17:14 UTC PASS native English language data restored\n2026-11-03 09:17:15 UTC LANGUAGE_NATIVE_PASS normal_player_saves=false production_chinese_pack=true\n",
+    "passed": true,
+    "phase": "ui",
+    "rss_kib": 962580,
+    "ruby": "3.4.10"
+  },
+  "passed": true,
+  "elapsed_ms": 182313.00000000192,
+  "last_stage": "ruby-started",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 34
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 351
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

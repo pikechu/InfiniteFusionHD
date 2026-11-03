@@ -52,7 +52,7 @@ rescue Exception => error
 end
 '''
 def make_support(folder):
-    for name in ['scripts/multiplayer/runtime-preload.rb','scripts/multiplayer/test-bootstrap.rb','tests/localization/game_smoke.rb','tests/localization/quest_dialogue_game.rb','tests/localization/custom_dex_game.rb','tests/gameplay/map_transfer_game.rb','tests/localization/android_map_transfer_game.rb','tests/localization/android_legacy_write.rb','tests/localization/android_legacy_read.rb','tests/localization/android_scenarios.rb']:
+    for name in ['scripts/multiplayer/runtime-preload.rb','scripts/multiplayer/test-bootstrap.rb','tests/localization/game_smoke.rb','tests/localization/quest_dialogue_game.rb','tests/localization/custom_dex_game.rb','tests/gameplay/map_transfer_game.rb','tests/localization/android_map_transfer_game.rb','tests/localization/android_legacy_write.rb','tests/localization/android_legacy_read.rb','tests/localization/android_scenarios.rb','tests/gameplay/android_texture_release.rb','tests/gameplay/android_touch_bridge.rb']:
         text=(ROOT/name).read_text(encoding='utf-8')
         text=text.replace('load "scripts/multiplayer/test-bootstrap.rb"','load File.join(ENV.fetch("KIF_QA_SUPPORT"),"scripts/multiplayer/test-bootstrap.rb")')
         text=text.replace('load "tests/localization/quest_dialogue_game.rb"','load File.join(ENV.fetch("KIF_QA_SUPPORT"),"tests/localization/quest_dialogue_game.rb")')
@@ -62,18 +62,19 @@ def make_support(folder):
         target=folder/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(text.encode())
 def main():
     global OUT
-    p=argparse.ArgumentParser();p.add_argument('phase',choices=['original','runtime','ui','dex','map','map14','legacy-write','legacy-read','scenarios']);p.add_argument('--timeout',type=int,default=1200)
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=['original','runtime','launcher','input','ui','dex','map','map14','legacy-write','legacy-read','scenarios','textures']);p.add_argument('--timeout',type=int,default=1200)
     p.add_argument('--apk',type=Path,help='Test this rebuilt APK instead of the historical Android.15 fixture')
     p.add_argument('--output-dir',type=Path,help='Keep evidence in the current release directory')
     a=p.parse_args()
     if a.output_dir:OUT=a.output_dir.resolve()
     uid=datetime.datetime.now().strftime('%H%M%S')+'-'+uuid.uuid4().hex[:6];stage=OUT/(a.phase+'-'+uid);work=QA/('work-'+uid)
     stage.mkdir(parents=True);work.mkdir(parents=True);(QA/'tmp').mkdir(exist_ok=True)
-    result={'phase':a.phase,'normal_avds_unchanged':True,'physical_phone':False};process=None;originals={};private=None;content=None;backup=None
+    result={'phase':a.phase,'normal_avds_unchanged':True,'physical_phone':False};process=None;originals={};private=None;content=None;backup=None;adb_owned=False
     apk=a.apk.resolve() if a.apk else ROOT/('temp/artifacts/InfiniteFusionHD-0.20.8-android.15-arm64-'+('network-test.apk' if a.phase=='original' else 'emulator-network-test.apk'))
     try:
         if not free(PORT) or not free(5588):raise RuntimeError('Private QA ports are occupied')
         command([SDK/'platform-tools/adb.exe','-P',PORT,'start-server'])
+        adb_owned=True
         process=subprocess.Popen([str(SDK/'emulator/emulator.exe'),'-avd','kif_zh15','-port','5588','-no-window','-no-audio','-no-snapshot','-no-boot-anim','-no-metrics','-gpu','swiftshader_indirect','-debug','-all','-logcat','*:s'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,env=ENV,creationflags=HIDDEN)
         write(QA/'active-run.json',{'pid':process.pid,'phase':a.phase,'serial':SERIAL,'avd':'kif_zh15','started':time.time()})
         deadline=time.monotonic()+240
@@ -102,6 +103,26 @@ def main():
             if re.fullmatch('[0-9a-f]{24}',content):break
             time.sleep(2)
         else:raise TimeoutError('Content installation timeout')
+        if a.phase=='launcher':
+            adb('shell','am','force-stop',APP);adb('logcat','-c')
+            started=time.monotonic();adb('shell','am','start','-W','-n',APP+'/.LauncherActivity',timeout=40)
+            for seconds in range(210):
+                time.sleep(1)
+                if seconds in (9,29,89,119,149,179,209):
+                    (stage/f'launcher-{seconds+1}.png').write_bytes(adb('exec-out','screencap','-p',binary=True))
+                if seconds==160:
+                    # shortcut: fixed 1280x720 QA AVD; recalibrate for another resolution.
+                    adb('shell','input','swipe','1200','510','1200','510','150')
+                    result['physical_touch_sequence']=['confirm']
+                if seconds in (29,59,89,119,149,179):print('QA_RUNNING launcher seconds='+str(seconds+1),flush=True)
+            result['game_process']=adb('shell','pidof',APP+':game',check=False)
+            result['activity']=adb('shell','dumpsys','activity','activities')[-16000:]
+            logs=adb('logcat','-d','-t','1000','-v','brief','*:W')
+            result['fatal_events']=[line for line in logs.splitlines() if re.search('Fatal signal|FATAL EXCEPTION|SIGILL|SIGSEGV',line)][-20:]
+            result['elapsed_ms']=(time.monotonic()-started)*1000
+            result['installed_probe_files_modified']=False
+            result['passed']=bool(result['game_process']) and '.GameActivity' in result['activity'] and not result['fatal_events']
+            return 0 if result['passed'] else 1
         if a.phase=='legacy-read':
             control=adb('exec-out','run-as',APP,'cat','files/diagnostics/android15-fixtures/expected.json',binary=True)
             (stage/'legacy-expected.json').write_bytes(control)
@@ -125,12 +146,17 @@ def main():
                     target.addfile(entry,baseline.extractfile(entry))
         transfer='/data/local/tmp/kif-qa-'+uid+'.tar';adb('push',str(archive),transfer);app('tar','-xf',transfer,'-C',private+'/support');adb('shell','rm','-f',transfer)
         if a.phase in ['original','runtime']:body='Graphics.resize_screen(512,384)\nFile.write($qa_stage,"sprite-new")\nsprite=Sprite.new\nFile.write($qa_stage,"sprite-x")\nsprite.x=1\nFile.write($qa_stage,"sprite-y")\nsprite.y=1\nFile.write($qa_stage,"render-120")\n120.times { Graphics.update; Input.update }\nsprite.dispose\nexit!(0)'
-        else:body='load File.join(ENV.fetch("KIF_QA_SUPPORT"),'+json.dumps({'ui':'tests/localization/game_smoke.rb','dex':'tests/localization/custom_dex_game.rb','map':'tests/localization/android_map_transfer_game.rb','map14':'tests/localization/android_map_transfer_game.rb','legacy-write':'tests/localization/android_legacy_write.rb','legacy-read':'tests/localization/android_legacy_read.rb','scenarios':'tests/localization/android_scenarios.rb'}[a.phase])+')'
+        else:body='load File.join(ENV.fetch("KIF_QA_SUPPORT"),'+json.dumps({'ui':'tests/localization/game_smoke.rb','dex':'tests/localization/custom_dex_game.rb','map':'tests/localization/android_map_transfer_game.rb','map14':'tests/localization/android_map_transfer_game.rb','legacy-write':'tests/localization/android_legacy_write.rb','legacy-read':'tests/localization/android_legacy_read.rb','scenarios':'tests/localization/android_scenarios.rb','textures':'tests/gameplay/android_texture_release.rb','input':'tests/gameplay/android_touch_bridge.rb'}[a.phase])+')'
         script=WRAPPER.replace('__PRIVATE__',json.dumps(private)).replace('__PHASE__',a.phase).replace('__BODY__',body)
         (work/'probe.rb').write_bytes(script.encode());result['probe_sha256']=hashlib.sha256(script.encode()).hexdigest();transfer='/data/local/tmp/kif-qa-'+uid+'.rb';adb('push',str(work/'probe.rb'),transfer);app('cp',transfer,content+'/android-game-smoke.rb');adb('shell','rm','-f',transfer)
         adb('logcat','-c');started=time.monotonic();adb('shell','am','start','-W','-n',APP+'/.LauncherActivity','--ez','gameSmoke','true',timeout=40)
-        deadline=time.monotonic()+a.timeout;notice=0
+        deadline=time.monotonic()+a.timeout;notice=0;sent_inputs=set()
         while time.monotonic()<deadline:
+            if a.phase=='input':
+                requested=app('cat',private+'/stage.txt',check=False)
+                positions={'input-ready-2':('132','660'),'input-ready-13':('1200','510'),'input-ready-12':('1076','648')}
+                if requested in positions and requested not in sent_inputs:
+                    x,y=positions[requested];adb('shell','input','swipe',x,y,x,y,'150');sent_inputs.add(requested)
             text=adb('exec-out','run-as',APP,'cat',private+'/result.json',check=False);native=json.loads(text) if text.startswith('{') else {}
             if native.get('complete'):result['native']=native;result['passed']=native.get('passed');break
             if not adb('shell','pidof',APP+':game',check=False) and time.monotonic()-started>15:
@@ -146,25 +172,27 @@ def main():
     except Exception as e:result['passed']=False;result['error']=str(e)[-4000:]
     finally:
         try:
-            adb('shell','am','force-stop',APP,check=False)
-            if backup:
-                for name,digest in originals.items():
-                    if digest:app('cp',backup+'/'+name,content+'/'+name);assert app('sha256sum',content+'/'+name).split()[0]==digest
-                    else:app('rm','-f',content+'/'+name,check=False)
-                result['installed_probe_files_restored']=True
-            if private:
-                for name in app('find',private,'-type','f',check=False).splitlines():
-                    if name.endswith(('.log','.png')):app('rm','-f',name,check=False)
-            adb('shell','sync',timeout=45,check=False)
-            adb('emu','kill',check=False)
+            if adb_owned:
+                adb('shell','am','force-stop',APP,check=False)
+                if backup:
+                    for name,digest in originals.items():
+                        if digest:app('cp',backup+'/'+name,content+'/'+name);assert app('sha256sum',content+'/'+name).split()[0]==digest
+                        else:app('rm','-f',content+'/'+name,check=False)
+                    result['installed_probe_files_restored']=True
+                if private:
+                    for name in app('find',private,'-type','f',check=False).splitlines():
+                        if name.endswith(('.log','.png')):app('rm','-f',name,check=False)
+                adb('shell','sync',timeout=45,check=False)
+                adb('emu','kill',check=False)
         except Exception as e:result['cleanup_note']=str(e)[-1000:]
         if process:
             try:process.wait(timeout=30)
             except subprocess.TimeoutExpired:command(['taskkill','/PID',process.pid,'/T','/F'],check=False);process.wait(timeout=20)
-        try:command([SDK/'platform-tools/adb.exe','-P',PORT,'kill-server'],check=False)
+        try:
+            if adb_owned:command([SDK/'platform-tools/adb.exe','-P',PORT,'kill-server'],check=False)
         except Exception as e:result['adb_cleanup_note']=str(e)[-1000:]
         logs=[]
-        for path in (QA/'tmp').rglob('*.log'):
+        for path in ((QA/'tmp').rglob('*.log') if adb_owned else []):
             assert path.resolve().is_relative_to(QA.resolve());logs.append({'name':path.name,'bytes':path.stat().st_size});path.unlink()
         result['cleanup']={'emulator_exited':not process or process.poll() is not None,'console_port_free':free(5588),'adb_port_free':free(PORT),'temporary_logs_removed':logs,'stdout_stderr':'discarded; not redirected to files'}
         for path in sorted(work.rglob('*'),key=lambda x:len(x.parts),reverse=True):
@@ -172,5 +200,6 @@ def main():
             if path.is_file():path.unlink()
             elif path.is_dir():path.rmdir()
         work.rmdir();write(stage/'result.json',result);print(json.dumps({'phase':a.phase,'passed':result.get('passed'),'error':result.get('error') or result.get('native',{}).get('error'),'elapsed_ms':result.get('elapsed_ms'),'last_stage':result.get('last_stage'),'evidence':str(stage),'cleanup':result['cleanup']},ensure_ascii=False),flush=True)
+        if adb_owned:(QA/'active-run.json').unlink(missing_ok=True)
     return 0 if result.get('passed') or result.get('expected_translator_limitation') else 1
 if __name__=='__main__':raise SystemExit(main())
