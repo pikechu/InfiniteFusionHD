@@ -1,12 +1,16 @@
-directory=File.expand_path('output/texture-hd/p5-evidence/batch-817');log=File.join(directory,'native-result.txt');passed=false
+number=(ENV.fetch('KIF_MULTIPLAYER_PROFILE')[/p5-(\d+)/,1] || '817').to_i
+raise 'Invalid archive batch' unless (817..824).include?(number)
+batch_name="batch-#{number}"
+directory=File.expand_path("output/texture-hd/p5-evidence/#{batch_name}");log=File.join(directory,'native-result.txt');passed=false
 begin
- File.write(log,"P5_817_BEGIN\n");load 'scripts/multiplayer/test-bootstrap.rb';Graphics.resize_screen(512,384)
- scope=KIFMultiplayer::WireJSON.parse(File.binread('output/texture-hd/p5-work/batch-817-scope.json'),49*1024*1024,3000000)
+ File.write(log,"P5_#{number}_BEGIN\n");load 'scripts/multiplayer/test-bootstrap.rb';Graphics.resize_screen(512,384)
+ scope=KIFMultiplayer::WireJSON.parse(File.binread("output/texture-hd/p5-work/#{batch_name}-scope.json"),49*1024*1024,3000000)
  rows=scope['entries'];inputs={};decoded=[];hits=[];ambiguous=[];data_sha={};loaded=[];skipped=[];specialized=[]
  tokens=rows.to_h do |r|
   source=r['source'];stem=source.sub(/\.png$/i,'').downcase
   values=[stem,stem.delete_prefix('graphics/')]
-  values << File.basename(stem) unless source.include?('/backup/')
+  archive=%w[backup playerbase_orig].find { |part| source.include?("/#{part}/") }
+  values << (archive ? archive+'/'+File.basename(stem) : File.basename(stem))
   [source,values]
  end
  # Recursively inspect serialized strings without executing map event commands.
@@ -36,7 +40,7 @@ begin
      next unless patterns.any? { |p| text.include?(p.b) }
      hits << {'source'=>source,'data'=>path,'location'=>trail,'value'=>value.encode('UTF-8',invalid: :replace,undef: :replace)[0,350]} if hits.length<1000
     end
-    if text.include?('backup/') || text.include?('/backup')
+    if text.include?('backup/') || text.include?('/backup') || text.include?('playerbase_orig/')
      ambiguous << {'data'=>path,'location'=>trail,'value'=>value.encode('UTF-8',invalid: :replace,undef: :replace)[0,350]} if ambiguous.length<100
     end
    elsif value.is_a?(Array)
@@ -69,14 +73,22 @@ begin
   source=row['source'];inputs[source]=Digest::SHA256.hexdigest(File.binread(source));bitmap=Bitmap.new(source)
   raise "Dimensions #{source}" unless [bitmap.width,bitmap.height]==row['size']
   decoded << [source,bitmap.width,bitmap.height];bitmap.dispose
-  next unless source.include?('/battlebg/backup/')
+  is_background=source.include?('/battlebg/backup/');is_player=source.include?('/playerbase_orig/')
+  next unless is_background || is_player
   scene=PokeBattle_Scene.allocate;scene.instance_variable_set(:@sprites,{});scene.instance_variable_set(:@viewport,viewport)
-  scene.apply_backdrop_graphics(source,'Graphics/Battlebacks/playerbase/field','Graphics/Battlebacks/enemybase/field','Graphics/Battlebacks/default_message')
+  scene.apply_backdrop_graphics(is_background ? source : 'Graphics/Battlebacks/battlebg/field',
+   is_player ? source : 'Graphics/Battlebacks/playerbase/field','Graphics/Battlebacks/enemybase/field','Graphics/Battlebacks/default_message')
   Graphics.update
   if index%6==1
    shot=Graphics.snap_to_bitmap;shot.to_file(File.join(directory,"compatibility-background-#{index}.png"));shot.dispose
   end
-  rendered << {'source'=>source,'fixture'=>'Actual backdrop composition with explicit archived image, field bases and default message; not evidence of ordinary map selection'}
+  sprites=scene.instance_variable_get(:@sprites)
+  if is_player
+   base=sprites['base_0'];raise 'Legacy base dimensions' unless [base.bitmap.width,base.bitmap.height]==row['size']
+   raise 'Legacy base anchor' unless base.ox==base.bitmap.width/2 && base.oy==base.bitmap.height
+  end
+  rendered << {'source'=>source,'kind'=>is_player ? 'legacy_player_base' : 'backup_background',
+   'fixture'=>'Actual backdrop composition with explicit archived image, current field counterpart and default message; not evidence of ordinary map selection or correct substitution of cropped current bases'}
   pbDisposeSpriteHash(scene.instance_variable_get(:@sprites))
  end
  viewport.dispose
@@ -85,10 +97,10 @@ begin
  doc={'status'=>'passed','inputs'=>inputs,'decoded'=>decoded,'serialized_files_inspected'=>loaded,'serialized_files_skipped'=>skipped,
   'serialized_string_hits'=>hits,'serialized_files_specialized'=>specialized,'backup_path_mentions'=>ambiguous,'battle_animation_references'=>animations,'autotile_declarations'=>autotiles,
   'compatibility_backgrounds'=>rendered,'data_sha256'=>data_sha,'script_sha256'=>scripts.to_h { |p| [p,Digest::SHA256.hexdigest(File.binread(p))] },
-  'scope'=>'All 48 images decode at fixed dimensions; archived backgrounds render through actual backdrop compositor using explicit overrides. Serialized data strings, actual animation graph names and autotile declarations are audited; no map event command is executed. Static/raw-byte code scan and decoded-pixel duplicate audit are separate evidence. Explicit archive rendering is not ordinary map selection, complete gameplay, move playback or autotile-seam certification.'}
- File.write(File.join(directory,'native-review.json'),KIFMultiplayer::WireJSON.encode(doc,0));File.open(log,'a'){ |f| f.puts("P5_817_PASS images=#{decoded.length} serialized=#{loaded.length} hits=#{hits.length} animation_refs=#{animations.length} autotile_refs=#{autotiles.length} backgrounds=#{rendered.length}") };passed=true
+  'scope'=>'All 48 images decode at fixed dimensions; archived backgrounds and applicable old player-base canvases render through the actual backdrop compositor using explicit overrides. Old base dimensions and bottom/center anchors are checked without removing original transparent margins. Serialized data strings, actual animation graph names and autotile declarations are audited; no map event command is executed. Static/raw-byte code scan and decoded-pixel duplicate audit are separate evidence. Explicit archive rendering is not ordinary map selection, correct substitution of cropped current bases, complete gameplay, move playback or autotile-seam certification.'}
+ File.write(File.join(directory,'native-review.json'),KIFMultiplayer::WireJSON.encode(doc,0));File.open(log,'a'){ |f| f.puts("P5_#{number}_PASS images=#{decoded.length} serialized=#{loaded.length} hits=#{hits.length} animation_refs=#{animations.length} autotile_refs=#{autotiles.length} compositions=#{rendered.length}") };passed=true
 rescue Exception => error
- File.open(log,'a'){ |f| f.puts("P5_817_FAIL #{error.class}: #{error.message.to_s[0,1600]}\n#{error.backtrace.first(8).join("\n")}") }
+ File.open(log,'a'){ |f| f.puts("P5_#{number}_FAIL #{error.class}: #{error.message.to_s[0,1600]}\n#{error.backtrace.first(8).join("\n")}") }
 ensure
  exit!(passed ? 0 : 1)
 end

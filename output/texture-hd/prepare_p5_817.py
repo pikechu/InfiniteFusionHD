@@ -2,6 +2,7 @@
 from collections import defaultdict
 import hashlib
 import shutil
+import sys
 from PIL import Image, ImageDraw
 from resume_p2_menu import ROOT, OUT, read, write, digest
 
@@ -11,16 +12,19 @@ def pixels(path):
         return (im.size, hashlib.sha256(im.convert('RGBA').tobytes()).hexdigest())
 
 
-def main():
-    batch = OUT / 'batch-817'
-    fixed = read(OUT / 'execution-plan/batches/batch-817.json')
+def main(number=817):
+    assert 817 <= number <= 824
+    name = f'batch-{number:03}'
+    batch = OUT / name
+    fixed = read(OUT / f'execution-plan/batches/{name}.json')
     assert fixed['status'] == 'needs_usage_audit' and len(fixed['entries']) == 48
-    work = OUT / 'p5-work';evidence = OUT / 'p5-evidence/batch-817'
+    work = OUT / 'p5-work';evidence = OUT / 'p5-evidence' / name
     work.mkdir(exist_ok=True);evidence.mkdir(parents=True, exist_ok=True)
     protected = {p.relative_to(ROOT).as_posix(): digest(p) for directory in ('Data/Scripts', 'Mods', 'Data/localization')
                  for p in (ROOT / directory).rglob('*') if p.is_file()}
     protected.update({f'output/texture-hd/p{n}-progress.json': digest(OUT / f'p{n}-progress.json') for n in (1, 2, 3, 4)})
     if not (work / 'session-protected.json').exists():write(work / 'session-protected.json', {'files': protected})
+    write(work / f'{name}-protected.json', {'files': protected})
     rows = []
     for entry in fixed['entries']:
         source = ROOT / entry['source'];original = batch / 'originals' / entry['source']
@@ -42,11 +46,11 @@ def main():
         if tuple(entry['size']) not in sizes or entry['path'] in targets:continue
         source = ROOT / entry['path'];signature = pixels(source)
         if signature in wanted:matches[signature].append({'kind': 'current_asset', 'source': entry['path'], 'status': entry['status'], 'sha256': digest(source)})
-    for number in range(1, 817):
-        path = OUT / f'batch-{number:03}/manifest.json'
+    for prior in range(1, number):
+        path = OUT / f'batch-{prior:03}/manifest.json'
         if not path.exists():continue
         for entry in read(path)['entries']:
-            original = OUT / f'batch-{number:03}/originals' / entry['source']
+            original = OUT / f'batch-{prior:03}/originals' / entry['source']
             if not original.exists():continue
             signature = pixels(original)
             if signature in wanted:matches[signature].append({'kind': 'historical_original', 'source': entry['source'], 'archive': original.relative_to(ROOT).as_posix(), 'sha256': digest(original)})
@@ -67,10 +71,10 @@ def main():
             with Image.open(ROOT/row['source']) as im:
                 rgba=im.convert('RGBA');rgba.thumbnail((312,264))
                 sheet.paste(rgba,(x+(320-rgba.width)//2,y+34),rgba)
-        name=f'review-{start//8+1:02}.png';sheet.save(evidence/name);pages.append((evidence/name).relative_to(ROOT).as_posix())
-    write(work/'batch-817-scope.json', {'batch':'batch-817','entries':rows,'review_pages':pages,
+        page_name=f'review-{start//8+1:02}.png';sheet.save(evidence/page_name);pages.append((evidence/page_name).relative_to(ROOT).as_posix())
+    write(work/f'{name}-scope.json', {'batch':name,'entries':rows,'review_pages':pages,
           'duplicate_rule':'Exact decoded RGBA and dimensions; current assets and historical originals are distinguished. Same name alone is not duplicate evidence.'})
     print({'sources':len(rows),'pixel_match_sources':sum(bool(r['pixel_matches']) for r in rows),'plan_byte_size_changes':sum(r['raw_bytes_changed_since_plan'] for r in rows),'pages':pages})
 
 
-if __name__ == '__main__':main()
+if __name__ == '__main__':main(int(sys.argv[1]) if len(sys.argv)>1 else 817)

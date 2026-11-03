@@ -51,8 +51,13 @@ async function main() {
   assert.equal(progress.next_batch, null);
   assert.equal(progress.completed_files, 5065);
   const p5 = read('p5-progress.json');
-  assert.equal(p5.completed_files, 48);
-  assert.equal(p5.next_batch, 'batch-818');
+  const lastBatch = p5.completed_batches.at(-1);
+  assert(/^batch-\d{3}$/.test(lastBatch));
+  const lastNumber = Number(lastBatch.slice(6));
+  assert(lastNumber >= 817 && lastNumber <= 857);
+  const checkpoint = read(`p5-evidence/${lastBatch}/checkpoint-verification.json`);
+  assert.equal(checkpoint.status, 'passed');
+  assert.equal(checkpoint.next_batch, p5.next_batch);
   const base = git(['rev-parse', `refs/heads/${branch}`]);
   const sharedBranch = git(['branch', '--show-current']);
   assert.notEqual(sharedBranch, branch, 'Use the normal checkout workflow when already on the feature branch.');
@@ -60,7 +65,7 @@ async function main() {
   const initialIndex = hash(fs.readFileSync(indexPath));
   const initialHead = git(['rev-parse', 'HEAD']);
   const applied = [];
-  for (let number = 1; number <= 817; number++) {
+  for (let number = 1; number <= lastNumber; number++) {
     const name = `batch-${String(number).padStart(3, '0')}/manifest.json`;
     if (fs.existsSync(path.join(out, name))) applied.push(...read(name).entries);
   }
@@ -105,7 +110,7 @@ async function main() {
     const known = new Set(parent.values());
     const author = git(['var', 'GIT_AUTHOR_IDENT']);
     const committer = git(['var', 'GIT_COMMITTER_IDENT']);
-    const message = Buffer.from('feat(graphics): audit and preserve P5 texture batch 817\n\nReview 48 archive/test images; preserve exact source bytes, dimensions and alpha. Save 35 decoded-pixel duplicate relationships, source/data reference audits, 41 native backdrop compositions and four complete Heat Wave animation cases.\nDistinguish declared fly-copy atlas references from actual visible cel use. Next batch is 818; 1802 P5 files remain.\nScope excludes concurrent source, localization, build and multiplayer edits.\n');
+    const message = Buffer.from(`feat(graphics): audit and preserve P5 texture batch ${lastNumber}\n\nReview ${checkpoint.files} archive images: ${checkpoint.applied} applied, ${checkpoint.preserved} preserved with exact source bytes, dimensions and alpha. Save ${checkpoint.pixel_match_sources} decoded-pixel duplicate relationships, source/data reference audits and native compatibility evidence.\nExplicit archive rendering does not certify ordinary map selection or substitution for current cropped assets. Next batch is ${p5.next_batch}; ${p5.remaining_files} P5 files remain.\nScope excludes concurrent source, localization, build and multiplayer edits.\n`);
     child = cp.spawn(gitExe, ['-c', 'core.multiPackIndex=false', 'fast-import', '--quiet', '--done', '--export-marks=' + path.join(temporary, 'marks')], {
       cwd: root, windowsHide: true, stdio: ['pipe', 'ignore', 'pipe'], env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
     });
@@ -157,7 +162,7 @@ async function main() {
       files_byte_verified: paths.length, shared_worktree_branch_before: sharedBranch,
       shared_worktree_branch_after: sharedBranch, shared_index_unchanged: true, shared_index_used: false,
       pushed: false, p4_completed_through: 'batch-816', p4_next_batch: null,
-      p5_completed_through: 'batch-817', p5_next_batch: 'batch-818', next_global_batch: 'batch-818',
+      p5_completed_through: lastBatch, p5_next_batch: p5.next_batch, next_global_batch: p5.next_batch,
       method: 'Git packed import with manifest validation, exact committed-byte verification and shared HEAD/index checks'
     };
     write('commit-receipt.json', receipt);
