@@ -61,11 +61,16 @@ def make_support(folder):
             text=text.replace('    file.puts("#{Time.now.utc} #{message}")','    raise "QA log bound" if message.bytesize>65536 || file.size+message.bytesize>4*1024*1024\n    file.puts("#{Time.now.utc} #{message}")')
         target=folder/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(text.encode())
 def main():
-    p=argparse.ArgumentParser();p.add_argument('phase',choices=['original','runtime','ui','dex','map','map14','legacy-write','legacy-read','scenarios']);p.add_argument('--timeout',type=int,default=1200);a=p.parse_args()
+    global OUT
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=['original','runtime','ui','dex','map','map14','legacy-write','legacy-read','scenarios']);p.add_argument('--timeout',type=int,default=1200)
+    p.add_argument('--apk',type=Path,help='Test this rebuilt APK instead of the historical Android.15 fixture')
+    p.add_argument('--output-dir',type=Path,help='Keep evidence in the current release directory')
+    a=p.parse_args()
+    if a.output_dir:OUT=a.output_dir.resolve()
     uid=datetime.datetime.now().strftime('%H%M%S')+'-'+uuid.uuid4().hex[:6];stage=OUT/(a.phase+'-'+uid);work=QA/('work-'+uid)
     stage.mkdir(parents=True);work.mkdir(parents=True);(QA/'tmp').mkdir(exist_ok=True)
     result={'phase':a.phase,'normal_avds_unchanged':True,'physical_phone':False};process=None;originals={};private=None;content=None;backup=None
-    apk=ROOT/('temp/artifacts/InfiniteFusionHD-0.20.8-android.15-arm64-'+('network-test.apk' if a.phase=='original' else 'emulator-network-test.apk'))
+    apk=a.apk.resolve() if a.apk else ROOT/('temp/artifacts/InfiniteFusionHD-0.20.8-android.15-arm64-'+('network-test.apk' if a.phase=='original' else 'emulator-network-test.apk'))
     try:
         if not free(PORT) or not free(5588):raise RuntimeError('Private QA ports are occupied')
         command([SDK/'platform-tools/adb.exe','-P',PORT,'start-server'])
