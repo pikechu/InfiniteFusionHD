@@ -82,6 +82,7 @@ begin
     Graphics.screenshot(File.join(directory, name + "-dialogue-zh.png"))
   end
   pbDisposeMessageWindow(dialogue_window)
+  load "tests/localization/quest_dialogue_game.rb"
   GameLanguage.load(1)
   check.call(pbGetMessage(MessageTypes::Species, 1) == "Bulbizarre", "native French language data")
   scene = PokemonOption_Scene.new

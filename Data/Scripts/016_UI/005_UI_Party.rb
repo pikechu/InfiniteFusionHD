@@ -1195,7 +1195,7 @@ class PokemonPartyScreen
 
   def pbPokemonHat(pokemon)
     cmd = 0
-    msg = "What should you do?"
+    msg = _INTL("What should you do?")
     loop do
       cmd = @scene.pbShowCommands(msg, [
         _INTL("Put on hat"),

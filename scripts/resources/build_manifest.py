@@ -7,6 +7,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import os
 import urllib.parse
 import urllib.request
 
@@ -15,26 +16,39 @@ UPSTREAM = "infinitefusion/infinitefusion-e18"
 REPOSITORY = "pikechu/InfiniteFusionHD"
 DATA = ("Data/sprites/CUSTOM_SPRITES", "Data/sprites/BASE_SPRITES",
         "Data/sprites/Sprite Credits.csv", "Data/pokedex/dex.json",
-        "Data/pokedex/all_entries.json", "Data/pokedex/dex_zh.json")
+        "Data/pokedex/all_entries.json", "Data/pokedex/dex_zh.json", "Data/pokedex/dex.json.gz")
 
 
-def api(path):
-    request = urllib.request.Request("https://api.github.com/repos/" + UPSTREAM + "/" + path,
-                                     headers={"User-Agent": "InfiniteFusionHD-resources"})
+def api(path, repository=UPSTREAM):
+    headers = {"User-Agent": "InfiniteFusionHD-resources"}
+    if os.environ.get("GH_TOKEN"):
+        headers["Authorization"] = "Bearer " + os.environ["GH_TOKEN"]
+    request = urllib.request.Request("https://api.github.com/repos/" + repository + "/" + path, headers=headers)
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.load(response)
 
 
-def bundled_data(root=ROOT):
+def bundled_data(overrides=None, root=None):
+    root = ROOT if root is None else Path(root)
+    overrides = overrides or {}
     files = []
     for name in DATA:
-        path = Path(root) / name
-        if not path.is_file():
-            if name.endswith("dex_zh.json"):
-                continue
+        path = root / name
+        if name == "Data/pokedex/dex.json" and ("Data/pokedex/dex.json.gz" in overrides or (root / "Data/pokedex/dex.json.gz").is_file()):
+            continue
+        if name in overrides:
+            raw = overrides[name]
+        elif path.is_file():
+            raw = path.read_bytes()
+        elif name.endswith(("dex_zh.json", "dex.json.gz")):
+            continue
+        else:
             raise FileNotFoundError(path)
-        raw = path.read_bytes()
-        if not 0 < len(raw) <= 8 * 1024 * 1024:
+        # Git/raw URLs and release archives use LF even on a CRLF checkout.
+        if not name.endswith(".gz"):
+            raw = raw.replace(b"\r\n", b"\n")
+        limit = (32 if name in ("Data/pokedex/dex.json", "Data/pokedex/dex_zh.json") else 8) * 1024 * 1024
+        if not 0 < len(raw) <= limit:
             raise ValueError("Data exceeds the mobile download limit: " + name)
         files.append({"path": name, "url": "https://raw.githubusercontent.com/" + REPOSITORY +
                       "/main/" + urllib.parse.quote(name), "size": len(raw),
@@ -42,8 +56,8 @@ def bundled_data(root=ROOT):
     return files
 
 
-def check_bundled_data(manifest, root=ROOT):
-    current = {row["path"]: row for row in bundled_data(root)}
+def check_bundled_data(manifest, root=None):
+    current = {row["path"]: row for row in bundled_data(root=root)}
     recorded = {row["path"]: row for row in manifest["files"] if row["kind"] == "data"}
     changed = sorted(name for name in current.keys() | recorded.keys() if current.get(name) != recorded.get(name))
     if changed:
@@ -60,8 +74,9 @@ def seal(commit, files):
     return {"format": 1, "revision": revision, "upstream_commit": commit, "files": files}
 
 
-def build(ref="main"):
+def build(ref="main", previous=None, data_overrides=None):
     commit = api("commits/" + urllib.parse.quote(ref, safe=""))["sha"]
+    known = {row["path"]: row for row in (previous or {}).get("files", [])}
     files = []
     # Include eggs, special forms and substitutes as well as all three sheet types.
     for folder in ("Graphics/Battlers", "Graphics/CustomBattlers/spritesheets"):
@@ -83,10 +98,14 @@ def build(ref="main"):
                     raise ValueError("Asset exceeds the mobile download limit: " + path)
                 # The game's existing special sprite directory uses capital S.
                 target = path.replace("Graphics/Battlers/special/", "Graphics/Battlers/Special/")
-                files.append({"path": target, "url": "https://raw.githubusercontent.com/" + UPSTREAM +
+                entry = {"path": target, "url": "https://raw.githubusercontent.com/" + UPSTREAM +
                               "/" + commit + "/" + urllib.parse.quote(path), "size": row["size"],
-                              "sha1": row["sha"], "kind": "image"})
-    return seal(commit, files + bundled_data())
+                              "sha1": row["sha"], "kind": "image"}
+                old = known.get(target)
+                if old and old.get("sha1") == entry["sha1"] and old["size"] == entry["size"]:
+                    entry = old
+                files.append(entry)
+    return seal(commit, files + bundled_data(data_overrides))
 
 
 if __name__ == "__main__":
@@ -95,7 +114,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, default=ROOT / "Data/offline-resources.json")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--refresh-data", action="store_true", help="Rehash local data without accessing the network")
-    mode.add_argument("--check-data", action="store_true", help="Check all bundled data without changing files or accessing the network")
+    mode.add_argument("--check-data", action="store_true", help="Check bundled data without changing files or accessing the network")
     args = parser.parse_args()
     if args.check_data:
         manifest = json.loads(args.output.read_text(encoding="utf-8"))

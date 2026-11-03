@@ -174,8 +174,10 @@ module KIF
         end
         pending = nil
         begin
-          raise ArgumentError, "Invalid download body" unless body.is_a?(String) && body.bytesize <= 8 * 1024 * 1024
           destination = android_download_target(path)
+          dex_file = destination.tr("\\", "/").downcase.end_with?("/data/pokedex/dex.json", "/data/pokedex/dex_zh.json", "/data/offline-resources/dex-source.json")
+          limit = (dex_file ? 32 : 8) * 1024 * 1024
+          raise ArgumentError, "Invalid download body" unless body.is_a?(String) && body.bytesize <= limit
           case File.extname(destination).downcase
           when ".png"
             raise ArgumentError, "Expected PNG" unless body.b.start_with?("\x89PNG\r\n\x1a\n".b)

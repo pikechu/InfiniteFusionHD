@@ -9,14 +9,19 @@ begin
   source_hash = Digest::SHA256.hexdigest(File.binread(source_path))
   original = KIF::PokedexEntries.parse(File.binread(source_path))
   chinese = KIF::PokedexEntries.parse(File.binread(KIF::PokedexEntries::CHINESE_PATH))
-  check.call(original.length == 15_005 && chinese.length == original.length, "all 15005 community records have translations")
-  original.zip(chinese).each_with_index do |(en,zh), index|
+  translated_sources = chinese.to_h { |row| [row["source"],true] }
+  expected = original.select { |row| translated_sources.key?(row["entry"]) }
+  check.call(original.length >= 15_005 && chinese.length == expected.length, "reviewed corpus maps to every matching upstream record")
+  expected.zip(chinese).each_with_index do |(en,zh), index|
     raise "Record identity changed #{index}" unless en["sprite"] == zh["sprite"] && en["author"] == zh["author"] && en["entry"] == zh["source"]
     raise "Missing Chinese #{index}" unless zh["entry"].match?(/[\u3400-\u9fff]/)
-    raise "English remains #{index}" if zh["entry"].gsub("POKENAME", "").gsub("DNA", "").match?(/[A-Za-z]{3}/)
+    prose = zh["entry"].gsub("POKENAME", "").gsub("DNA", "")
+    prose = prose.gsub("jeb_", "") if en["entry"].include?("jeb_")
+    raise "English remains #{index}" if prose.match?(/[A-Za-z]{3}/)
   end
   english_index = original.group_by { |row| row["sprite"] }.transform_values { |rows| rows.map { |row| row["entry"] } }
-  chinese_index = chinese.group_by { |row| row["sprite"] }.transform_values { |rows| rows.map { |row| row["entry"] } }
+  translations = chinese.to_h { |row| [[row["sprite"],row["source"],row["author"]],row["entry"]] }
+  chinese_index = original.group_by { |row| row["sprite"] }.transform_values { |rows| rows.map { |row| translations[[row["sprite"],row["entry"],row["author"]]] || row["entry"] } }
   [0,2,0].each do |language|
     GameLanguage.load(language)
     index = language == 2 ? chinese_index : english_index
@@ -66,7 +71,7 @@ begin
   check.call(scene.instance_variable_get(:@entry_page) == 0, "page navigation cycles all pages")
   scene.pbEndScene
   check.call(Digest::SHA256.hexdigest(File.binread(source_path)) == source_hash,"source descriptions and author credits stay unchanged")
-  KIFMultiplayerFeatureTest.log("CUSTOM_DEX_NATIVE_PASS entries=#{original.length} sprites=#{chinese_index.length} pages=#{total_pages} language_rounds=3 normal_player_saves=false")
+  KIFMultiplayerFeatureTest.log("CUSTOM_DEX_NATIVE_PASS entries=#{original.length} translated=#{chinese.length} sprites=#{chinese_index.length} pages=#{total_pages} language_rounds=3 normal_player_saves=false")
   passed = true
 rescue Exception => error
   $kif_test_log.call("CUSTOM_DEX_NATIVE_FAIL #{error.class}: #{error.message}\n#{error.backtrace.join("\n")}") if $kif_test_log

@@ -816,6 +816,7 @@ end
 #
 #===============================================================================
 def pbEnterText(helptext,minlength,maxlength,initialText="",mode=0,pokemon=nil,nofadeout=false)
+  helptext = _INTL(helptext) if helptext.is_a?(String)
   ret=""
   if ($PokemonSystem.textinput==1 rescue false)   # Keyboard
     pbFadeOutIn(99999,nofadeout) {

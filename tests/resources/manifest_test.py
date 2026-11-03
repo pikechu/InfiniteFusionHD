@@ -12,6 +12,7 @@ import uuid
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts/resources"))
 from build_manifest import DATA, bundled_data, check_bundled_data, seal
+DATA = tuple(name for name in DATA if not name.endswith(".gz"))
 
 
 class ManifestTest(unittest.TestCase):
@@ -34,7 +35,7 @@ class ManifestTest(unittest.TestCase):
             path = root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(b"original data")
-        manifest = seal("a" * 40, bundled_data(root))
+        manifest = seal("a" * 40, bundled_data(root=root))
         self.assertEqual(set(check_bundled_data(manifest, root)), set(DATA))
         for name in DATA:
             with self.subTest(path=name):
@@ -57,9 +58,9 @@ class ManifestTest(unittest.TestCase):
             path.write_bytes(b"data")
         image = {"path": "Graphics/Battlers/Special/000.png", "kind": "image", "size": 10,
                  "sha1": "b" * 40, "url": "https://fixture.invalid/pinned.png"}
-        before = seal("a" * 40, [image] + bundled_data(root))
+        before = seal("a" * 40, [image] + bundled_data(root=root))
         (root / "Data/pokedex/dex_zh.json").write_bytes("更新后的图鉴".encode())
-        after = seal(before["upstream_commit"], [row for row in before["files"] if row["kind"] == "image"] + bundled_data(root))
+        after = seal(before["upstream_commit"], [row for row in before["files"] if row["kind"] == "image"] + bundled_data(root=root))
         self.assertNotEqual(before["revision"], after["revision"])
         self.assertEqual([row for row in after["files"] if row["kind"] == "image"], [image])
         self.assertEqual(after["upstream_commit"], before["upstream_commit"])
@@ -74,7 +75,7 @@ class ManifestTest(unittest.TestCase):
             path = root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(raw)
-        manifest = seal("a" * 40, bundled_data(root))
+        manifest = seal("a" * 40, bundled_data(root=root))
         def git(*args):
             return subprocess.check_output(["git", "-C", str(root), *args], stderr=subprocess.PIPE)
         git("init", "-q")

@@ -24,7 +24,7 @@ CACHE = WORK / "google-dex.jsonl"
 ENDPOINT = "https://translate.googleapis.com/translate_a/single"
 TAG = re.compile(r"<\s*x\s*(\d+)\s*>", re.I)
 CJK = re.compile(r"[\u3040-\u30ff\u3400-\u9fff]+")
-PLACEHOLDER = re.compile(r"POKENAME|PKOENAME|POKEMAME|POEKNAME|POKNEAME|POKÉNAME", re.I)
+PLACEHOLDER = re.compile(r"POKENAME|PKOENAME|POKEMAME|POEKNAME|POKNEAME|POKÉNAME|POKNAME|POKENSME", re.I)
 
 
 def read_json(path):
@@ -234,7 +234,9 @@ def build_candidate(records, prepared, publish=False):
         row={**record,"source":source,"entry":text};rows.append(row)
         reason=[]
         if not CJK.search(text):reason.append("no Chinese")
-        if re.search(r"[A-Za-z]{3}",text.replace("POKENAME","").replace("DNA","")):reason.append("Latin text")
+        latin_text=text.replace("POKENAME","").replace("DNA","")
+        if "jeb_" in source:latin_text=latin_text.replace("jeb_","")
+        if re.search(r"[A-Za-z]{3}",latin_text):reason.append("Latin text")
         if any(token in text for token in ("⁇","�","<x","<p")):reason.append("unknown tokens")
         if re.search(r"([\u3400-\u9fff]{2,12})\1\1",text):reason.append("repetition")
         has_name=bool(PLACEHOLDER.search(source) or re.search(r"\bNAME\b",source))

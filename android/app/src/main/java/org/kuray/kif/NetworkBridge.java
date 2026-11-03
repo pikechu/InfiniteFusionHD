@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /** Uses Android's maintained TLS provider, certificate store and default hostname verifier. */
 public final class NetworkBridge {
-    private static final int MAX_BODY = 8 * 1024 * 1024;
+    private static final int MAX_BODY = 32 * 1024 * 1024;
     private static final int MAX_REQUEST = 65536;
     private static final ExecutorService WORKERS = new ThreadPoolExecutor(0, 2, 30, TimeUnit.SECONDS,
         new SynchronousQueue<>(), runnable -> { Thread thread = new Thread(runnable, "KIF-HTTPS"); thread.setDaemon(true); return thread; },

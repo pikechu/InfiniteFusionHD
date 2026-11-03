@@ -35,6 +35,17 @@ begin
   check.call(failures.empty?, "native SHA1 checksum and integrity progress window pass")
   check.call(File.file?(File.join(resource_cache, "state.json")), "native resource receipt stays inside isolated test storage")
   check.call(resources.installed?, "native completed pack enables local-first loading")
+  latest_dex = ENV["KIF_LATEST_DEX_FIXTURE"]
+  if latest_dex && File.file?(latest_dex)
+    previous_dex = Settings::CUSTOM_DEX_ENTRIES_PATH
+    Settings.send(:remove_const, :CUSTOM_DEX_ENTRIES_PATH)
+    Settings.const_set(:CUSTOM_DEX_ENTRIES_PATH, latest_dex)
+    descriptions = KIF::PokedexEntries.entries_for("1.1.png")
+    check.call(descriptions && !descriptions.empty?, "native runtime reads and indexes the current expanded upstream dex")
+    20.times { check.call(KIF::PokedexEntries.entries_for("1.1.png").equal?(descriptions), "repeated native dex lookups reuse the index") }
+    Settings.send(:remove_const, :CUSTOM_DEX_ENTRIES_PATH)
+    Settings.const_set(:CUSTOM_DEX_ENTRIES_PATH, previous_dex)
+  end
 
   KIFMultiplayer::OnlineMode.instance_variable_set(:@mode, :offline)
   KIFMultiplayer::OnlineMode.instance_variable_set(:@selection_needed, false)

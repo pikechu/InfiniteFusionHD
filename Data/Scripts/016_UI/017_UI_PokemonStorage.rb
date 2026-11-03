@@ -2184,10 +2184,10 @@ class PokemonStorageScene
           pbDisplay(_INTL("Pokemon already Shiny!"))
           break
         end
-        gambletext="Gamble for Shiny (P" + pricenow.to_s + ")" if !pokemon.shiny?
-        gambletext="Gamble for new Color (P" + pricenow.to_s + ")" if pokemon.shiny?
+        gambletext=_INTL("Gamble for Shiny (P{1})", pricenow) if !pokemon.shiny?
+        gambletext=_INTL("Gamble for new Color (P{1})", pricenow) if pokemon.shiny?
         kuraychoices = [
-          _INTL(gambletext),
+          gambletext,
           _INTL("Nevermind"),
         ]
         kuraychoice = pbShowCommands(
@@ -4034,12 +4034,12 @@ class PokemonStorageScreen
       # puts havingjsons
       dir_cmd = 0
       director_actions = directory_names.clone
-      director_actions.unshift("<Random Sub-Folder>")#2 or 3 // (was 1 or 2)
-      director_actions.unshift("<This Folder+Sub-Folders>")#1 or 2
-      director_actions.unshift("<This Folder>")#0 or 1
+      director_actions.unshift(_INTL("<Random Sub-Folder>"))#2 or 3 // (was 1 or 2)
+      director_actions.unshift(_INTL("<This Folder+Sub-Folders>"))#1 or 2
+      director_actions.unshift(_INTL("<This Folder>"))#0 or 1
       director_actions.unshift("<...>") if directory_name != base_name#0
       cancelcmd = director_actions.length
-      director_actions.push("<Cancel>") # always last
+      director_actions.push(_INTL("<Cancel>")) # always last
       #prompt to choose a directory
       # pbDisplay(_INTL(directory_name))
       dir_cmd = pbShowCommands(_INTL(messagechoice), director_actions, dir_cmd)
@@ -5672,7 +5672,7 @@ class PokemonStorageScreen
     pokemon = @storage[selected[0], selected[1]]
 
     if !pokemon
-      command = pbShowCommands("Select an action", ["Stop fusing", "Cancel"])
+      command = pbShowCommands(_INTL("Select an action"), [_INTL("Stop fusing"), _INTL("Cancel")])
       case command
       when 0 #stop
         pbPlace(selected)
@@ -5692,7 +5692,7 @@ class PokemonStorageScreen
         @scene.setFusing(false)
         return
       end
-      command = pbShowCommands("Select an action", commands)
+      command = pbShowCommands(_INTL("Select an action"), commands)
       case command
       when 0 #Fuse
         pbStartFusion(selected)
@@ -5809,9 +5809,9 @@ class PokemonStorageScreen
   end
 
   def selectSplicer()
-    dna_splicers_const = "DNA Splicers"
-    super_splicers_const = "Super Splicers"
-    infinite_splicers_const = "Infinite Splicers"
+    dna_splicers_const = _INTL("DNA Splicers")
+    super_splicers_const = _INTL("Super Splicers")
+    infinite_splicers_const = _INTL("Infinite Splicers")
 
     dnaSplicersQt = $PokemonBag.pbQuantity(:DNASPLICERS)
     superSplicersQt = $PokemonBag.pbQuantity(:SUPERSPLICERS)
@@ -5828,7 +5828,7 @@ class PokemonStorageScreen
       return nil
     end
 
-    cmd = pbShowCommands("Use which splicers?", options)
+    cmd = pbShowCommands(_INTL("Use which splicers?"), options)
     if cmd == -1
       return nil
     end

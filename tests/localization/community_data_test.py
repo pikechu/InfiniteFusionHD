@@ -6,18 +6,26 @@ import re
 ROOT = Path(__file__).resolve().parents[2]
 original = json.loads((ROOT / "Data/pokedex/dex.json").read_text(encoding="utf-8"))
 translated = json.loads((ROOT / "Data/pokedex/dex_zh.json").read_text(encoding="utf-8"))
-assert len(original) == len(translated) == 15_005
-assert (ROOT / "Data/pokedex/dex_zh.json").stat().st_size <= 8 * 1024 * 1024
-for index, (source, target) in enumerate(zip(original, translated)):
+review_source = json.loads((ROOT / "Data/localization/zh-CN-dex-source.json").read_text(encoding="utf-8"))
+assert len(review_source) == 82_207
+assert 0 < len(original) <= 100_000  # Live upstream entries can grow beyond the pinned review snapshot.
+reviewed = {row["entry"] for row in review_source}
+expected = [row for row in original if row["entry"] in reviewed]
+assert len(translated) == len(expected)
+assert (ROOT / "Data/pokedex/dex_zh.json").stat().st_size <= 32 * 1024 * 1024
+for index, (source, target) in enumerate(zip(expected, translated)):
     assert target["sprite"] == source["sprite"] and target["author"] == source["author"], index
     assert target["source"] == source["entry"], index
     text = target["entry"]
     assert re.search(r"[\u3400-\u9fff]", text), index
-    assert not re.search("[A-Za-z]{3,}", text.replace("POKENAME", "").replace("DNA", "")), index
+    latin_text = text.replace("POKENAME", "").replace("DNA", "")
+    if "jeb_" in source["entry"]:
+        latin_text = latin_text.replace("jeb_", "")
+    assert not re.search("[A-Za-z]{3,}", latin_text), index
     assert not any(token in text for token in ("⁇", "�", "<x", "< x")), index
     assert not re.search(r"([\u3400-\u9fff]{2,12})\1\1", text), index
     # Author typos NAME/PKOENAME/POKÉNAME are repaired to the game's placeholder.
-    expected = len(re.findall(r"POKENAME|PKOENAME|POKEMAME|POEKNAME|POKNEAME|POKÉNAME", source["entry"], re.I))
+    expected = len(re.findall(r"POKENAME|PKOENAME|POKEMAME|POEKNAME|POKNEAME|POKÉNAME|POKNAME|POKENSME", source["entry"], re.I))
     expected += len(re.findall(r"\bNAME\b", source["entry"]))
     assert bool(text.count("POKENAME")) == bool(expected), (index, text)
 
@@ -41,4 +49,4 @@ for source, wanted, forbidden in semantic_cases:
 strength = by_source["The physical prowess of POKENAME is unmatched. However, its strength has made it sedentary and arrogant."]
 bond = by_source["If two POKENAME meet, they'll battle until either one or both of them collapse from exhaustion. This is how they form bonds."]
 assert strength != bond and "情谊" in bond
-print("COMMUNITY_DATA_PASS records=15005 source_and_credits=unchanged name_placeholders=preserved unknown_tokens=0")
+print(f"COMMUNITY_DATA_PASS reviewed_corpus={len(review_source)} translated_records={len(translated)} game_records={len(original)} source_and_credits=unchanged name_placeholders=preserved unknown_tokens=0")

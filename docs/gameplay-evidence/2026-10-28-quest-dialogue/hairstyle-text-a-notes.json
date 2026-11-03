@@ -1,0 +1,994 @@
+{
+  "catalog": "Data\\outfits\\hairstyles_data.json",
+  "source_sha256": "8dbde4d02040e9efb2c245f199606846350ffca77d1751e3395df9fc070034a4",
+  "records": 65,
+  "text_fields": 110,
+  "unique_sources": 109,
+  "reviewed_unique_sources": 109,
+  "complete_existing_fields": true,
+  "method": "All65 catalog records read. Every existing name/description manually translated and self-reviewed; no automatic fill for null/missing fields.",
+  "contexts": [
+    {
+      "index": 0,
+      "id": "afro",
+      "field": "name",
+      "source": "Afro",
+      "translation": "爆炸头",
+      "json_pointer": "/0/name"
+    },
+    {
+      "index": 0,
+      "id": "afro",
+      "field": "description",
+      "source": "A full, fluffy afro that’s big, bold, and impossible to ignore, perfect for making a statement!",
+      "translation": "饱满蓬松的爆炸头，夸张大胆，让人想忽视都难，最适合彰显个性！",
+      "json_pointer": "/0/description"
+    },
+    {
+      "index": 1,
+      "id": "bald",
+      "field": "name",
+      "source": "Bald",
+      "translation": "光头",
+      "json_pointer": "/1/name"
+    },
+    {
+      "index": 1,
+      "id": "bald",
+      "field": "description",
+      "source": "A completely bald look - no hair, no fuss, just pure, unadulterated scalp!",
+      "translation": "彻底的光头造型：没有头发，也没有打理的烦恼，露出干干净净的头皮！",
+      "json_pointer": "/1/description"
+    },
+    {
+      "index": 2,
+      "id": "bfro",
+      "field": "name",
+      "source": "Messy Afro",
+      "translation": "凌乱爆炸头",
+      "json_pointer": "/2/name"
+    },
+    {
+      "index": 2,
+      "id": "bfro",
+      "field": "description",
+      "source": "A flattened afro with an unkempt, rounded shape, offering a low-maintenance yet distinctive look.",
+      "translation": "略显扁平的圆形爆炸头，蓬乱随性，容易打理又独具特色。",
+      "json_pointer": "/2/description"
+    },
+    {
+      "index": 3,
+      "id": "bob",
+      "field": "name",
+      "source": "Bob Cut",
+      "translation": "波波头",
+      "json_pointer": "/3/name"
+    },
+    {
+      "index": 3,
+      "id": "bob",
+      "field": "description",
+      "source": "A sleek bob cut with chin-length hair that frames the face with a sharp, modern edge.",
+      "translation": "顺滑的齐下巴波波头勾勒脸部轮廓，利落又时髦。",
+      "json_pointer": "/3/description"
+    },
+    {
+      "index": 4,
+      "id": "bowlcut",
+      "field": "name",
+      "source": "Bowl Cut",
+      "translation": "锅盖头",
+      "json_pointer": "/4/name"
+    },
+    {
+      "index": 4,
+      "id": "bowlcut",
+      "field": "description",
+      "source": "A classic bowl cut with evenly trimmed hair all around, offering a neat and straightforward look.",
+      "translation": "经典的锅盖头，四周修剪齐整，干净又简洁。",
+      "json_pointer": "/4/description"
+    },
+    {
+      "index": 5,
+      "id": "brock",
+      "field": "name",
+      "source": "Short, Neat Spikes",
+      "translation": "整齐短刺发",
+      "json_pointer": "/5/name"
+    },
+    {
+      "index": 5,
+      "id": "brock",
+      "field": "description",
+      "source": "Neatly arranged spikes that look intimidating and disciplined. The style was popularized by Gym Leader Brock.",
+      "translation": "整齐排布的刺发，凌厉中透着严整。这种发型因道馆馆主小刚而流行。",
+      "json_pointer": "/5/description"
+    },
+    {
+      "index": 6,
+      "id": "bugsy",
+      "field": "name",
+      "source": "Square-Cut Bangs",
+      "translation": "齐刘海",
+      "json_pointer": "/6/name"
+    },
+    {
+      "index": 6,
+      "id": "bugsy",
+      "field": "description",
+      "source": "Medium-length hair with messy square-cut bangs. This cut is usually seen on young Bug Catchers.",
+      "translation": "略显凌乱的齐刘海搭配中长发，常见于年轻的捕虫训练家。",
+      "json_pointer": "/6/description"
+    },
+    {
+      "index": 7,
+      "id": "buzzcut",
+      "field": "name",
+      "source": "Buzz Cut",
+      "translation": "寸头",
+      "json_pointer": "/7/name"
+    },
+    {
+      "index": 7,
+      "id": "buzzcut",
+      "field": "description",
+      "source": "A clean, close-cropped buzz cut for a sharp and low-maintenance appearance.",
+      "translation": "清爽贴头的寸头，利落又好打理。",
+      "json_pointer": "/7/description"
+    },
+    {
+      "index": 8,
+      "id": "clair",
+      "field": "name",
+      "source": "Ponytail Spiky Bangs",
+      "translation": "刺刘海马尾",
+      "json_pointer": "/8/name"
+    },
+    {
+      "index": 8,
+      "id": "clair",
+      "field": "description",
+      "source": "Long, beautiful bushy hair tied in a thick ponytail. The style was popularized by Gym Leader Clair.",
+      "translation": "美丽蓬松的长发扎成一束粗马尾。这种发型因道馆馆主小椿而流行。",
+      "json_pointer": "/8/description"
+    },
+    {
+      "index": 9,
+      "id": "cornrows",
+      "field": "name",
+      "source": "Cornrows",
+      "translation": "玉米辫",
+      "json_pointer": "/9/name"
+    },
+    {
+      "index": 9,
+      "id": "cornrows",
+      "field": "description",
+      "source": "Neatly braided cornrows that run close to the scalp that create a sleek and intricate pattern.",
+      "translation": "整齐的辫子紧贴头皮，交织出精致流畅的纹路。",
+      "json_pointer": "/9/description"
+    },
+    {
+      "index": 11,
+      "id": "elm",
+      "field": "name",
+      "source": "Neat Backwave",
+      "translation": "整齐背头",
+      "json_pointer": "/11/name"
+    },
+    {
+      "index": 11,
+      "id": "elm",
+      "field": "description",
+      "source": "Short, combed back to hair that give a tidy and professional appearance. This style was popularized by Professor Elm.",
+      "translation": "向后梳整齐的短发，干练又专业。这种发型因空木博士而流行。",
+      "json_pointer": "/11/description"
+    },
+    {
+      "index": 12,
+      "id": "emo",
+      "field": "name",
+      "source": "Emo Bangs",
+      "translation": "斜长刘海",
+      "json_pointer": "/12/name"
+    },
+    {
+      "index": 12,
+      "id": "emo",
+      "field": "description",
+      "source": "A styled haircut with long, angled layers and sweeping bangs for a dramatic and edgy look.",
+      "translation": "长发剪出斜向层次，配上侧扫刘海，夸张而前卫。",
+      "json_pointer": "/12/description"
+    },
+    {
+      "index": 13,
+      "id": "erika",
+      "field": "name",
+      "source": "Bandana Straight Hair",
+      "translation": "头巾直发",
+      "json_pointer": "/13/name"
+    },
+    {
+      "index": 13,
+      "id": "erika",
+      "field": "description",
+      "source": "Medium-length hair that falls straight down around a gray bandana. The style was popularized by Gym Leader Erika.",
+      "translation": "中长直发自然垂落，配着灰色头巾。这种发型因道馆馆主莉佳而流行。",
+      "json_pointer": "/13/description"
+    },
+    {
+      "index": 14,
+      "id": "fade",
+      "field": "name",
+      "source": "Fade Haircut",
+      "translation": "渐变短发",
+      "json_pointer": "/14/name"
+    },
+    {
+      "index": 14,
+      "id": "fade",
+      "field": "description",
+      "source": "A fade haircut with gradually shorted sides and back, blending seamlessly into longer hair on top.",
+      "translation": "两侧和后方逐渐剪短，与头顶的较长头发自然衔接。",
+      "json_pointer": "/14/description"
+    },
+    {
+      "index": 15,
+      "id": "falkner",
+      "field": "name",
+      "source": "Droopy Bangs",
+      "translation": "垂落刘海",
+      "json_pointer": "/15/name"
+    },
+    {
+      "index": 15,
+      "id": "falkner",
+      "field": "description",
+      "source": "Medium-length bangs that flow beautifully in the wind. This style was popularized by Gym Leader Falkner.",
+      "translation": "中长刘海随风轻扬，十分好看。这种发型因道馆馆主阿速而流行。",
+      "json_pointer": "/15/description"
+    },
+    {
+      "index": 17,
+      "id": "gary",
+      "field": "name",
+      "source": "Front Spikes",
+      "translation": "前翘刺发",
+      "json_pointer": "/17/name"
+    },
+    {
+      "index": 17,
+      "id": "gary",
+      "field": "description",
+      "source": "Spikes that give an air of smugness and youthful rebellion. The style is popular with fledgling trainers in Kanto.",
+      "translation": "翘起的刺发透着年少的叛逆与几分得意，在关都地区的新手训练家中很流行。",
+      "json_pointer": "/17/description"
+    },
+    {
+      "index": 18,
+      "id": "happinysuit",
+      "field": "name",
+      "source": "Curled Happiny Ponytail",
+      "translation": "小福蛋卷马尾",
+      "json_pointer": "/18/name"
+    },
+    {
+      "index": 18,
+      "id": "happinysuit",
+      "field": "description",
+      "source": "A cute curly ponytail styled just like a Happiny. A wonderfully charming style for any fans of Baby Pokémon.",
+      "translation": "仿照小福蛋造型扎出的可爱卷马尾，很适合喜欢幼年宝可梦的人。",
+      "json_pointer": "/18/description"
+    },
+    {
+      "index": 19,
+      "id": "HexManiac",
+      "field": "name",
+      "source": "Wild Locks",
+      "translation": "狂野披发",
+      "json_pointer": "/19/name"
+    },
+    {
+      "index": 19,
+      "id": "HexManiac",
+      "field": "description",
+      "source": "This wild mane of flowing locks is untamable, as if it was haunted. This style is popular with Hex Maniacs.",
+      "translation": "一头怎么也梳不服帖的蓬乱长发，仿佛闹了鬼，在灵异迷中很流行。",
+      "json_pointer": "/19/description"
+    },
+    {
+      "index": 21,
+      "id": "highpony",
+      "field": "name",
+      "source": "High-pony",
+      "translation": "高马尾",
+      "json_pointer": "/21/name"
+    },
+    {
+      "index": 21,
+      "id": "highpony",
+      "field": "description",
+      "source": "A high ponytail reminiscent of Lopunny's fur",
+      "translation": "让人联想到长耳兔毛发的高马尾。",
+      "json_pointer": "/21/description"
+    },
+    {
+      "index": 22,
+      "id": "hime",
+      "field": "name",
+      "source": "Hime",
+      "translation": "公主切",
+      "json_pointer": "/22/name"
+    },
+    {
+      "index": 22,
+      "id": "hime",
+      "field": "description",
+      "source": "Straight, shoulder-length hair with blunt bangs and long side strands.",
+      "translation": "齐肩直发搭配平直刘海，两侧留着长发束。",
+      "json_pointer": "/22/description"
+    },
+    {
+      "index": 24,
+      "id": "janine",
+      "field": "name",
+      "source": "Spiky Ponytail",
+      "translation": "尖翘马尾",
+      "json_pointer": "/24/name"
+    },
+    {
+      "index": 24,
+      "id": "janine",
+      "field": "description",
+      "source": "Slicked back hair tied in a tight spiky ponytail. The style was popularized by Gym Leader Koga's daughter, Janine.",
+      "translation": "头发向后梳拢，紧紧扎成尖翘的马尾。这种发型因道馆馆主阿桔的女儿阿杏而流行。",
+      "json_pointer": "/24/description"
+    },
+    {
+      "index": 26,
+      "id": "kurt",
+      "field": "name",
+      "source": "Slicked-Back Straight",
+      "translation": "后梳直发",
+      "json_pointer": "/26/name"
+    },
+    {
+      "index": 26,
+      "id": "kurt",
+      "field": "description",
+      "source": "Slicked-back medium-length straight hair, in a very traditional cut. The style was popularized by Gym Leader Kurt.",
+      "translation": "向后梳整齐的中长直发，款式十分传统。这种发型因道馆馆主库尔特而流行。",
+      "json_pointer": "/26/description"
+    },
+    {
+      "index": 27,
+      "id": "lady",
+      "field": "name",
+      "source": "Elegant Waves",
+      "translation": "优雅波浪发",
+      "json_pointer": "/27/name"
+    },
+    {
+      "index": 27,
+      "id": "lady",
+      "field": "description",
+      "source": "A sophisticated hairstyle with medium-length hair styled into elegant waves.",
+      "translation": "中长发梳成优雅的波浪，精致得体。",
+      "json_pointer": "/27/description"
+    },
+    {
+      "index": 28,
+      "id": "lance",
+      "field": "name",
+      "source": "Wild Upwards Spikes",
+      "translation": "狂野冲天刺发",
+      "json_pointer": "/28/name"
+    },
+    {
+      "index": 28,
+      "id": "lance",
+      "field": "description",
+      "source": "Upwards-facing wild spikes. Very bold! The style was popularized by Elite Four Lance.",
+      "translation": "向上翘起的狂野刺发，大胆抢眼！这种发型因四天王阿渡而流行。",
+      "json_pointer": "/28/description"
+    },
+    {
+      "index": 29,
+      "id": "lass",
+      "field": "name",
+      "source": "Puffy Pigtails",
+      "translation": "蓬松双马尾",
+      "json_pointer": "/29/name"
+    },
+    {
+      "index": 29,
+      "id": "lass",
+      "field": "description",
+      "source": "Medium-length hair styled into two puffy pigtails, giving a cheerful and youthful look.",
+      "translation": "中长发扎成两束蓬松的马尾，活泼又有朝气。",
+      "json_pointer": "/29/description"
+    },
+    {
+      "index": 30,
+      "id": "leaf",
+      "field": "name",
+      "source": "Shaggy Hair Bangs",
+      "translation": "蓬乱刘海长发",
+      "json_pointer": "/30/name"
+    },
+    {
+      "index": 30,
+      "id": "leaf",
+      "field": "description",
+      "source": "Shoulder length shaggy hair that's been kept in check by constantly wearing a hat.",
+      "translation": "齐肩的蓬乱头发，靠常年戴帽子才压得服帖。",
+      "json_pointer": "/30/description"
+    },
+    {
+      "index": 31,
+      "id": "lenora",
+      "field": "name",
+      "source": "Side-Swept Bob",
+      "translation": "侧分波波头",
+      "json_pointer": "/31/name"
+    },
+    {
+      "index": 31,
+      "id": "lenora",
+      "field": "description",
+      "source": "A smooth bob with side-swept bangs. The style was popularized by the Unovan Gym Leader Lenora.",
+      "translation": "顺滑的波波头搭配侧分刘海。这种发型因合众地区的道馆馆主芦荟而流行。",
+      "json_pointer": "/31/description"
+    },
+    {
+      "index": 32,
+      "id": "lowbraids",
+      "field": "name",
+      "source": "Low Braids w/ Bangs",
+      "translation": "刘海低双辫",
+      "json_pointer": "/32/name"
+    },
+    {
+      "index": 32,
+      "id": "lowbraids",
+      "field": "description",
+      "source": "Long flowing hair tied in low braids, laid over the shoulders. It's a cute, easy style for traveling trainers.",
+      "translation": "飘逸长发在低处编成辫子，搭在肩头，可爱又方便，很适合旅途中的训练家。",
+      "json_pointer": "/32/description"
+    },
+    {
+      "index": 33,
+      "id": "lowpony",
+      "field": "name",
+      "source": "Low-pony",
+      "translation": "低马尾",
+      "json_pointer": "/33/name"
+    },
+    {
+      "index": 33,
+      "id": "lowpony",
+      "field": "description",
+      "source": "A low ponytail reminiscent of Lopunny's fur",
+      "translation": "让人联想到长耳兔毛发的低马尾。",
+      "json_pointer": "/33/description"
+    },
+    {
+      "index": 34,
+      "id": "lucy",
+      "field": "name",
+      "source": "Voluminous Curls",
+      "translation": "蓬松大卷发",
+      "json_pointer": "/34/name"
+    },
+    {
+      "index": 34,
+      "id": "lucy",
+      "field": "description",
+      "source": "Long, wavy hair with a distinctive side part, featuring large curls that frame the face and flow down the shoulders.",
+      "translation": "侧分的长波浪发，蓬松的大卷勾勒脸庞，自然垂落肩头。",
+      "json_pointer": "/34/description"
+    },
+    {
+      "index": 35,
+      "id": "lunarbob",
+      "field": "name",
+      "source": "Lunar Cut",
+      "translation": "新月波波头",
+      "json_pointer": "/35/name"
+    },
+    {
+      "index": 35,
+      "id": "lunarbob",
+      "field": "description",
+      "source": "A bob cut shaped like a crescent moon, with a sleek, curved silhouette.",
+      "translation": "新月形的波波头，轮廓流畅，弧线优美。",
+      "json_pointer": "/35/description"
+    },
+    {
+      "index": 37,
+      "id": "mawile",
+      "field": "name",
+      "source": "Long Teethed Ponytail",
+      "translation": "利齿长马尾",
+      "json_pointer": "/37/name"
+    },
+    {
+      "index": 37,
+      "id": "mawile",
+      "field": "description",
+      "source": "A unique style of ponytail adorned with acessories that look just like the teethed antenna of a Mawile.",
+      "translation": "别致的马尾配上发饰，仿照大嘴娃头后长着利齿的造型。",
+      "json_pointer": "/37/description"
+    },
+    {
+      "index": 38,
+      "id": "may",
+      "field": "name",
+      "source": "Layered Side Fringe",
+      "translation": "层次侧刘海",
+      "json_pointer": "/38/name"
+    },
+    {
+      "index": 38,
+      "id": "may",
+      "field": "description",
+      "source": "Medium-length brown hair with a fringe and side-swept bangs. This style is popular with fledgling trainers in Hoenn.",
+      "translation": "棕色中长发剪出层次，配上侧扫刘海，在丰缘地区的新手训练家中很流行。",
+      "json_pointer": "/38/description"
+    },
+    {
+      "index": 39,
+      "id": "mikufairy",
+      "field": "name",
+      "source": "Flowing Twin Tails",
+      "translation": "飘逸双马尾",
+      "json_pointer": "/39/name"
+    },
+    {
+      "index": 39,
+      "id": "mikufairy",
+      "field": "description",
+      "source": "Long hair styled into voluminous twin tails with delicate, flowing strands that give off a magical and ethereal appearance.",
+      "translation": "长发扎成蓬松的双马尾，纤细发丝轻盈飘动，带着梦幻空灵的气质。",
+      "json_pointer": "/39/description"
+    },
+    {
+      "index": 40,
+      "id": "mikutwintails",
+      "field": "name",
+      "source": "High Twin Tails",
+      "translation": "高双马尾",
+      "json_pointer": "/40/name"
+    },
+    {
+      "index": 40,
+      "id": "mikutwintails",
+      "field": "description",
+      "source": "Long hair styled into high, puffy twin tails with straight, side-swept bangs that give off a vibrant and playful look.",
+      "translation": "长发扎成高高的蓬松双马尾，搭配平直的侧扫刘海，活泼俏皮。",
+      "json_pointer": "/40/description"
+    },
+    {
+      "index": 41,
+      "id": "miror",
+      "field": "name",
+      "source": "Two-Toned Afro",
+      "translation": "双色爆炸头",
+      "json_pointer": "/41/name"
+    },
+    {
+      "index": 41,
+      "id": "miror",
+      "field": "description",
+      "source": "An large two-toned afro with a zigzag pattern. A very bold choice, only for the most disco of trainers.",
+      "translation": "巨大的双色爆炸头带有锯齿纹样，造型大胆，只适合最热爱迪斯科的训练家。",
+      "json_pointer": "/41/description"
+    },
+    {
+      "index": 42,
+      "id": "mistyGSC",
+      "field": "name",
+      "source": "Spiky Medium Hair",
+      "translation": "尖翘中长发",
+      "json_pointer": "/42/name"
+    },
+    {
+      "index": 42,
+      "id": "mistyGSC",
+      "field": "description",
+      "source": "Medium-length hair that looks beautiful and youthful. The style was popularized by Gym Leader Misty.",
+      "translation": "美丽的中长发，洋溢青春气息。这种发型因道馆馆主小霞而流行。",
+      "json_pointer": "/42/description"
+    },
+    {
+      "index": 43,
+      "id": "mistyRBY",
+      "field": "name",
+      "source": "Spiky Side Pigtail",
+      "translation": "尖翘侧马尾",
+      "json_pointer": "/43/name"
+    },
+    {
+      "index": 43,
+      "id": "mistyRBY",
+      "field": "description",
+      "source": "Short, spiky hair with a spiky side ponytail. The style was popularized by Gym Leader Misty.",
+      "translation": "短而尖翘的头发配着翘起的侧马尾。这种发型因道馆馆主小霞而流行。",
+      "json_pointer": "/43/description"
+    },
+    {
+      "index": 44,
+      "id": "mohawk",
+      "field": "name",
+      "source": "Short Mohawk",
+      "translation": "短莫霍克头",
+      "json_pointer": "/44/name"
+    },
+    {
+      "index": 44,
+      "id": "mohawk",
+      "field": "description",
+      "source": "A short mohawk with the rest of the head shaved to a buzz cut. It's a style popular with punks and bikers.",
+      "translation": "中间留着短短的莫霍克发束，其余部位剃成寸头，深受朋克爱好者和暴走族喜爱。",
+      "json_pointer": "/44/description"
+    },
+    {
+      "index": 45,
+      "id": "nate",
+      "field": "name",
+      "source": "Short, Shaggy spikes",
+      "translation": "蓬乱短刺发",
+      "json_pointer": "/45/name"
+    },
+    {
+      "index": 45,
+      "id": "nate",
+      "field": "description",
+      "source": "Short, shaggy spikes that go well with visor-type hats. The style is popular with fledgling trainers in Unova.",
+      "translation": "短而蓬乱的刺发很适合搭配空顶帽，在合众地区的新手训练家中很流行。",
+      "json_pointer": "/45/description"
+    },
+    {
+      "index": 46,
+      "id": "nhair",
+      "field": "name",
+      "source": "Shaggy Ponytail",
+      "translation": "蓬乱马尾",
+      "json_pointer": "/46/name"
+    },
+    {
+      "index": 46,
+      "id": "nhair",
+      "field": "description",
+      "source": "A long, low ponytail that gives off a mysterious air. The style is popular with trainers in Unova.",
+      "translation": "低低扎起的长马尾透着神秘气息，在合众地区的训练家中很流行。",
+      "json_pointer": "/46/description"
+    },
+    {
+      "index": 47,
+      "id": "officeworkerF",
+      "field": "name",
+      "source": "Waist-Length Hair",
+      "translation": "齐腰长发",
+      "json_pointer": "/47/name"
+    },
+    {
+      "index": 47,
+      "id": "officeworkerF",
+      "field": "description",
+      "source": "Long, flowing waist-length hair with short, chunky bangs. It's popular with a lot of trainers with corporate jobs.",
+      "translation": "飘逸的齐腰长发配上短而厚重的刘海，深受从事公司工作的训练家喜爱。",
+      "json_pointer": "/47/description"
+    },
+    {
+      "index": 48,
+      "id": "painter",
+      "field": "name",
+      "source": "Soft Side Bangs",
+      "translation": "蓬松侧刘海",
+      "json_pointer": "/48/name"
+    },
+    {
+      "index": 48,
+      "id": "painter",
+      "field": "description",
+      "source": "Short hair with soft, fluffy bangs parted to the sides, often worn by sensitive souls such as artists.",
+      "translation": "短发搭配向两侧分开的柔软蓬松刘海，常见于艺术家等心思细腻的人。",
+      "json_pointer": "/48/description"
+    },
+    {
+      "index": 49,
+      "id": "pigtails",
+      "field": "name",
+      "source": "Pigtails",
+      "translation": "双马尾",
+      "json_pointer": "/49/name"
+    },
+    {
+      "index": 49,
+      "id": "pigtails",
+      "field": "description",
+      "source": "High, bouncy pigtails tied with ribbons, adding a fun and youthful touch to your look.",
+      "translation": "高高扎起的双马尾用丝带系住，轻盈有弹性，让造型更俏皮年轻。",
+      "json_pointer": "/49/description"
+    },
+    {
+      "index": 50,
+      "id": "pixie",
+      "field": "name",
+      "source": "Pixie Cut",
+      "translation": "精灵短发",
+      "json_pointer": "/50/name"
+    },
+    {
+      "index": 50,
+      "id": "pixie",
+      "field": "description",
+      "source": "A short, playful pixie cut with closely cropped sides and a bit of length on top for a modern, airy look.",
+      "translation": "两侧剪短、头顶略留长度的俏皮短发，清爽时髦。",
+      "json_pointer": "/50/description"
+    },
+    {
+      "index": 51,
+      "id": "pompadourdelinquentoutfit",
+      "field": "name",
+      "source": "Pompadour",
+      "translation": "飞机头",
+      "json_pointer": "/51/name"
+    },
+    {
+      "index": 52,
+      "id": "red",
+      "field": "name",
+      "source": "Short Hat Hair",
+      "translation": "帽压短发",
+      "json_pointer": "/52/name"
+    },
+    {
+      "index": 52,
+      "id": "red",
+      "field": "description",
+      "source": "Short spiky hair that's been flattened by constantly wearing a hat.",
+      "translation": "短而尖翘的头发，因常年戴帽子被压得服帖。",
+      "json_pointer": "/52/description"
+    },
+    {
+      "index": 53,
+      "id": "richboy",
+      "field": "name",
+      "source": "Combover",
+      "translation": "侧梳发",
+      "json_pointer": "/53/name"
+    },
+    {
+      "index": 53,
+      "id": "richboy",
+      "field": "description",
+      "source": "A sleek, neatly styled combover with a side part that creates a polished and refined appearance.",
+      "translation": "侧分梳拢的头发光滑整齐，显得精致干练。",
+      "json_pointer": "/53/description"
+    },
+    {
+      "index": 54,
+      "id": "rosa",
+      "field": "name",
+      "source": "Long Pigtails Buns",
+      "translation": "双丸子长辫",
+      "json_pointer": "/54/name"
+    },
+    {
+      "index": 54,
+      "id": "rosa",
+      "field": "description",
+      "source": "An eye-catching hairdo with two large side buns that continue into long pigtails. It's popular with fledgling trainers in Unova",
+      "translation": "两侧扎着醒目的大丸子头，再垂下长长的双辫，在合众地区的新手训练家中很流行。",
+      "json_pointer": "/54/description"
+    },
+    {
+      "index": 55,
+      "id": "roseradeF",
+      "field": "name",
+      "source": "Roserade (Medium)",
+      "translation": "罗丝雷朵发型（中长）",
+      "json_pointer": "/55/name"
+    },
+    {
+      "index": 55,
+      "id": "roseradeF",
+      "field": "description",
+      "source": "Medium-length spiky hair that's styled to resemble a Roserade's head flower.",
+      "translation": "尖翘的中长发，仿照罗丝雷朵头顶花朵的造型设计。",
+      "json_pointer": "/55/description"
+    },
+    {
+      "index": 56,
+      "id": "roseradeM",
+      "field": "name",
+      "source": "Roserade (Short)",
+      "translation": "罗丝雷朵发型（短）",
+      "json_pointer": "/56/name"
+    },
+    {
+      "index": 56,
+      "id": "roseradeM",
+      "field": "description",
+      "source": "Short, spiky hair that's styled to resemble a Roserade's head flower.",
+      "translation": "尖翘的短发，仿照罗丝雷朵头顶花朵的造型设计。",
+      "json_pointer": "/56/description"
+    },
+    {
+      "index": 58,
+      "id": "short1",
+      "field": "name",
+      "source": "Straight Side Bangs",
+      "translation": "直顺侧刘海",
+      "json_pointer": "/58/name"
+    },
+    {
+      "index": 58,
+      "id": "short1",
+      "field": "description",
+      "source": "Short, smooth hair that frames the face nicely and gives a trainer a youthful appearance.",
+      "translation": "顺滑的短发恰好勾勒脸部轮廓，让训练家显得年轻有活力。",
+      "json_pointer": "/58/description"
+    },
+    {
+      "index": 59,
+      "id": "shortcut",
+      "field": "name",
+      "source": "Square-Cut Bangs",
+      "translation": "齐刘海",
+      "json_pointer": "/59/name"
+    },
+    {
+      "index": 59,
+      "id": "shortcut",
+      "field": "description",
+      "source": "Very short hair with square-cut bangs framing the face, giving a trainer a youthful, charming appearance.",
+      "translation": "很短的头发搭配平齐的刘海，勾勒脸部轮廓，年轻又讨人喜欢。",
+      "json_pointer": "/59/description"
+    },
+    {
+      "index": 62,
+      "id": "vetf",
+      "field": "name",
+      "source": "Veteran Bob",
+      "translation": "资深训练家波波头",
+      "json_pointer": "/62/name"
+    },
+    {
+      "index": 62,
+      "id": "vetf",
+      "field": "description",
+      "source": "Short, practical hair styled into a neat bob with subtle layers, giving a no-nonsense look.",
+      "translation": "实用的短发梳成整齐的波波头，层次细微，显得干脆利落。",
+      "json_pointer": "/62/description"
+    },
+    {
+      "index": 63,
+      "id": "wavy",
+      "field": "name",
+      "source": "Wavy Hair",
+      "translation": "波浪发",
+      "json_pointer": "/63/name"
+    },
+    {
+      "index": 64,
+      "id": "whitney",
+      "field": "name",
+      "source": "Spiky Low Pigtails",
+      "translation": "尖翘低双马尾",
+      "json_pointer": "/64/name"
+    },
+    {
+      "index": 64,
+      "id": "whitney",
+      "field": "description",
+      "source": "Low pigtails that give a youthful look to the wearer. The style was popularized by Gym Leader Whitney.",
+      "translation": "低低扎起的双马尾，让人显得青春活泼。这种发型因道馆馆主小茜而流行。",
+      "json_pointer": "/64/description"
+    }
+  ],
+  "missing_text_records": [
+    {
+      "index": 10,
+      "id": "dancer"
+    },
+    {
+      "index": 16,
+      "id": "fusionnerd"
+    },
+    {
+      "index": 20,
+      "id": "highbun"
+    },
+    {
+      "index": 23,
+      "id": "ho-oh"
+    },
+    {
+      "index": 25,
+      "id": "jessie"
+    },
+    {
+      "index": 36,
+      "id": "lycanrocshorthair"
+    },
+    {
+      "index": 57,
+      "id": "samurai"
+    },
+    {
+      "index": 60,
+      "id": "shortspike"
+    },
+    {
+      "index": 61,
+      "id": "SpecialLatias"
+    }
+  ],
+  "interpretations": [
+    {
+      "indices": [
+        26
+      ],
+      "source": "Slicked-back medium-length straight hair, in a very traditional cut. The style was popularized by Gym Leader Kurt.",
+      "chosen": "道馆馆主库尔特",
+      "status": "identity_unconfirmed_conservative_transliteration",
+      "basis": "Parent instruction after examining neighboring IDs janine,jessie,kurt,lady,lance and howToGet azaleacity salon. Those do not prove this is Kurt the PokéBall maker. Preserve Gym Leader role and do not silently replace with 钢铁先生 or another known leader. Nonofficial phonetic name."
+    },
+    {
+      "indices": [
+        12
+      ],
+      "basis": "Emo Bangs rendered descriptive斜长刘海 using long angled layers/swept bangs; not a psychiatric mood label."
+    },
+    {
+      "indices": [
+        37
+      ],
+      "basis": "Source calls Mawile appendage teethed antenna. Preserve costume visual teeth+back-of-head resemblance without assigning it a new biological antenna classification or adding an ability."
+    },
+    {
+      "indices": [
+        6,
+        59
+      ],
+      "basis": "Identical Square-Cut Bangs source has two contexts; both use齐刘海, while distinct descriptions preserve medium/very-short distinctions."
+    }
+  ],
+  "references": [
+    {
+      "term": "Hex Maniac",
+      "chinese": "灵异迷",
+      "url": "https://wiki.52poke.com/wiki/灵异迷"
+    },
+    {
+      "term": "Kurt identity warning",
+      "url": "https://wiki.52poke.com/wiki/钢铁",
+      "boundary": "Only establishes known canonical Kurt is a PokéBall craftsman; not proof this custom display text references him."
+    }
+  ],
+  "project_names": {
+    "Brock": "小刚",
+    "Clair": "小椿",
+    "Professor Elm": "空木博士",
+    "Erika": "莉佳",
+    "Falkner": "阿速",
+    "Koga": "阿桔",
+    "Janine": "阿杏",
+    "Lance": "阿渡",
+    "Lenora": "芦荟",
+    "Misty": "小霞",
+    "Whitney": "小茜",
+    "Lopunny": "长耳兔",
+    "Mawile": "大嘴娃",
+    "Happiny": "小福蛋",
+    "Roserade": "罗丝雷朵"
+  },
+  "boundaries": [
+    "No changes to original catalog/IDs/prices/tags/howToGet/images/player custom names.",
+    "This is exact existing source text display overlay only.",
+    "Source-only missing fields are not invented or auto-filled."
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "tail": [
+      "  0x000000000000001c (FINI_ARRAYSZ) 16 (bytes)",
+      "  0x000000006ffffff0 (VERSYM)       0x5d0",
+      "  0x000000006ffffffe (VERNEED)      0x608",
+      "  0x000000006fffffff (VERNEEDNUM)   1",
+      "  0x0000000000000000 (NULL)         0x0"
+    ],
+    "name": "bridge-elf.log",
+    "bytes": 3874
+  },
+  {
+    "tail": [
+      "0000000000005ae0 T Java_org_kuray_kif_NetworkBridge_configure",
+      "0000000000005890 T Java_org_kuray_kif_NetworkBridge_requestTextInput",
+      "0000000000005a1c T Java_org_kuray_kif_NetworkBridge_setDisplayStretch",
+      "0000000000005704 T Java_org_kuray_kif_NetworkBridge_setVirtualKey",
+      "0000000000005eb0 T kif_android_http_async_version"
+    ],
+    "name": "bridge-exports.log",
+    "bytes": 476
+  },
+  {
+    "tail": [
+      "000000000057bdb0 T ruby_xrealloc2",
+      "000000000079f894 T setproctitle",
+      "0000000000849888 T socket_s_tcp_fast_fallback",
+      "00000000008498a4 T socket_s_tcp_fast_fallback_set",
+      "00000000008be5d0 B tcp_fast_fallback"
+    ],
+    "name": "ruby-exports.log",
+    "bytes": 84706
+  }
+]

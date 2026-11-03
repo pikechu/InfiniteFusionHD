@@ -1,0 +1,70 @@
+{
+  "completed_utc": "2026-10-28T12:10:55.798812+00:00",
+  "target_phone_apk": "InfiniteFusionHD-0.20.8-android.15-arm64-network-test.apk",
+  "target_phone_sha256": "0d32551b45245f09e019f9629133c961ae0bd456e5a915021f10ebee72909587",
+  "target_source_commit": "9790431fb21d3aac71e234a28f61dae71d7d21e0",
+  "emulator_apk_sha256": "0e43d0327d61e52c1636b920f9fa8370681cf747acf27785736ee3ce62d61bc2",
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "passed_emulator_cases": [
+    "runtime",
+    "ui",
+    "scenarios",
+    "legacy-write",
+    "legacy-read",
+    "map14",
+    "map",
+    "dex"
+  ],
+  "latest_case_directories": {
+    "runtime": "runtime-183706-c9d426",
+    "ui": "ui-184601-13bcba",
+    "scenarios": "scenarios-200124-771819",
+    "legacy-write": "legacy-write-192716-dd0736",
+    "legacy-read": "legacy-read-192941-bb6188",
+    "map14": "map14-193443-80f7dd",
+    "map": "map-193733-b866c1",
+    "dex": "dex-194334-29e2a6"
+  },
+  "dex": {
+    "records": 82207,
+    "translated": 82207,
+    "sprites": 74198,
+    "actual_font_pages": 82207,
+    "language_rounds": 3,
+    "long_stress_pages": 3
+  },
+  "ui": {
+    "quests": 77,
+    "outfit_fields": 510,
+    "opening_texts": 576,
+    "script_additions": 992,
+    "map_additions": 49,
+    "item_fields": 26
+  },
+  "legacy_save": {
+    "generated_by": "Published Android14 Ruby game code with matching15 assets under isolated emulator-compatible runtime",
+    "quests": 12,
+    "full_schema_and_actual_slot_save": true,
+    "load_and_resave_15": true,
+    "original_fixture_unchanged": true,
+    "real_player_saves_used": false
+  },
+  "ordinary_phone_runtime_on_old_x86_translation": {
+    "outcome": "native exit at Sprite.x; same probe passes under known16-byte scalar-conversion workaround",
+    "native_log_signal": "2570 (?) as reported by this translator; not labelled literal SIGILL4",
+    "phone_failure_on_real_arm_device_established": false
+  },
+  "limitations": [
+    "Graphics cases used the explicitly marked emulator-only core90bee3; ordinary phone core6f90 unchanged.",
+    "No physical ARM phone acceptance or real-phone performance measurement.",
+    "All opening event pages and reviewed additions plus representative real quest accept/complete/reward paths; not an exhaustive whole-game late-story playthrough.",
+    "Map timings use the fully opaque portion of standard pbFadeOutIn around actual transfer; fixed fade time is separately reported; two revisit samples per map/version, no statistical significance claim."
+  ],
+  "all_rounds_cleaned": true,
+  "production_game_code_changed": false
+}

@@ -1,0 +1,58 @@
+PASS: 62 platform contract assertions (mocked native host; no game/player saves loaded)
+PASS: 11 Bitmap constructor/path assertions (mock native constructor; no rendering claim)
+PASS: 52 HTTP adapter assertions (mock native bridge/JSON; no TLS acceptance claim)
+PASS: 38 atomic download/file-entry assertions (real local files; no TLS/rendering claim)
+PASS: 69 Android input bridge assertions (mocked native host; no SDL/JNI/device test)
+PASS: 10 display mode assertions (mocked native host; no device rendering)
+PASS: 188 Android text-input bridge assertions (real text dialog/helper/edits; native-mode loss, final commits, Windows passthrough)
+PASS: 9 desktop keybinding bootstrap assertions (actual game method; mocked scene/native host)
+PASS: 18 intro notice assertions (real command dispatch; no game/saves executed)
+PASS: 24 title input assertions (actual title, animation and wait methods; mocked native frames)
+PASS: font diagnostic loads class reopenings in the game's top-level scope (real eval/loader)
+PASS: 35 loaded-slot assertions (real Marshal/files; no game/player saves loaded)
+WEARABLE_MOVEMENT_DOOR_VISIBILITY_AND_FADE_PASS assertions=49
+HOME_DOOR_SOUND_PASS assertions=43 repaired_entrances=9 maps=1,42,79,710,711
+OUTFIT_ACTION_CACHE_INVALIDATION_AND_OWNERSHIP_PASS assertions=15
+PASS startup credits URL encodes its space
+PASS strict URL validation accepts configured credits URL
+PASS startup credits pass through Android adapter and safe file writer
+PASS bridge receives the encoded URL unchanged
+PASS sprite downloads still succeed
+PASS startup continues and retains credits after KIFMultiplayer::Error: invalid endpoint
+PASS sprite failure retains existing file after KIFMultiplayer::Error: invalid endpoint
+PASS startup continues and retains credits after KIFMultiplayer::Error: deadline exceeded
+PASS sprite failure retains existing file after KIFMultiplayer::Error: deadline exceeded
+PASS startup continues and retains credits after KIFMultiplayer::Error: old APK
+PASS sprite failure retains existing file after KIFMultiplayer::Error: old APK
+PASS startup continues and retains credits after Errno::ETIMEDOUT: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+PASS sprite failure retains existing file after Errno::ETIMEDOUT: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+PASS startup continues and retains credits after MKXPError: native network failure
+PASS sprite failure retains existing file after MKXPError: native network failure
+PASS malformed optional download is skipped
+PASS invalid URLs remain blocked before bridge access
+PASS HTTP failure retains existing credits
+PASS download preserves runtime interruption
+PASS download preserves runtime interruption
+STARTUP_DOWNLOADS_TEST_PASS checks=20; host Android adapter fixture, no external HTTP or player saves
+Data/Scripts/005_Sprites/003_Sprite_Character.rb:214: warning: found `= literal' in conditional, should be ==
+Data/Scripts/011_Battle/002_Move/003_Move_Usage_Calculations.rb:403: warning: found `= literal' in conditional, should be ==
+PASS: 470 Ruby files compile (no game execution)
+Exported 3 save, backup and keybinding files.
+Imported 2 files. Existing saves were preserved.
+PASS 33 assertions (host ZIP/filesystem tests; Android SAF not exercised)
+PASS: Android analytics HTTPS validation, Matomo event encoding, identifier and data allowlist
+ASYNC_HTTP_QUEUE_HOST_PASS checks=218
+PAYLOAD_SOURCE_READS=9
+PASS 38 assertions (production PayloadArchive restore; host filesystem)
+Fixture evidence retained: D:\others\kurayshinyrevamp\temp\localization-release\temp\host-checks\payload-7748371782874777251
+warning: in the working copy of 'Data/Scripts/003_Game processing/002_Scene_Map.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/006_Map renderer/001_TilemapRenderer.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/007_Objects and windows/001_RPG_Cache.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/007_Objects and windows/010_DrawText.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/010_Data/002_PBS data/006_Item.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/016_UI/004_UI_Pokedex_Entry.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/016_UI/023_UI_MysteryGift.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/050_Outfits/UI/CharacterSelectMenu.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/050_Outfits/UI/LayeredClothes_Menus.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'Data/Scripts/052_AddOns/Quicksave.rb', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'scripts/android/run_host_checks.ps1', LF will be replaced by CRLF the next time Git touches it

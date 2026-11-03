@@ -1,0 +1,97 @@
+{
+  "phase": "ui",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2126592   9949656  18% /data/user/0",
+  "apk_sha256": "0e43d0327d61e52c1636b920f9fa8370681cf747acf27785736ee3ce62d61bc2",
+  "exact_installed_apk_reused": false,
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "native": {
+    "complete": true,
+    "passed": true,
+    "phase": "ui",
+    "rss_kib": 956468,
+    "ruby": "3.4.10",
+    "assertions": [
+      "production Chinese pack is installed",
+      "bundled Chinese font is registered by Game.exe",
+      "live settings switch to Chinese and refresh labels",
+      "rebuilt options remain interactive",
+      "base and fusion names use Chinese without replacing species data",
+      "player nicknames are preserved",
+      "moves use the production Chinese table",
+      "items use the production Chinese table",
+      "species entries use the production Chinese table",
+      "battle prompt retains its argument",
+      "language switches leave Pokemon, stats and cached species data unchanged",
+      "saved language and Chinese font restore together",
+      "KIF settings use supplementary translations",
+      "preset names remain untouched in translated prompts",
+      "native mom dialogue uses Chinese",
+      "formatted Chinese dialogue wraps within its window",
+      "native oak dialogue uses Chinese",
+      "native rival dialogue uses Chinese",
+      "all77 native quest fields translated without changing saved definitions",
+      "old saved expert progress is preserved",
+      "actual quest UI leaves legacy saved English fields and progress unchanged",
+      "weather tracker description matches its source",
+      "six-stage item shows the correct rank",
+      "standard HM code is preserved",
+      "raw event pbMessage reaches the Chinese table",
+      "translated shared commands retain their selected branch",
+      "direct help array uses translated text with the same branch",
+      "shared menus preserve frozen source arrays",
+      "saved Hall of Fame mode is localized only for display",
+      "single-species history uses the localized species name",
+      "translated splicer label still returns INFINITESPLICERS2",
+      "translated splicer label still returns SUPERSPLICERS",
+      "translated splicer label still returns DNASPLICERS",
+      "original infinite splicer fallback is preserved",
+      "credits preserve original static author list",
+      "native English quest labels restore immediately",
+      "credits restore original English without cached Chinese",
+      "native language switches preserve all quest definitions",
+      "native French language data",
+      "KIF settings restore original English labels",
+      "English species and fusion names restore immediately",
+      "native English language data restored"
+    ],
+    "phase_markers": [
+      "2026-10-28 10:49:05 UTC QUEST_PACK sha256=e32567edb40d57d450d28f201b059c005576211149534cd9c1dbcb39b592ed9b",
+      "2026-10-28 10:49:34 UTC CREDITS_LAYOUT_PASS min_font_size=27",
+      "2026-10-28 10:50:07 UTC QUEST_DIALOGUE_NATIVE_PASS quests=77 outfit_fields=510 normal_player_saves=false",
+      "2026-10-28 10:50:41 UTC LANGUAGE_NATIVE_PASS normal_player_saves=false production_chinese_pack=true"
+    ],
+    "source_files_loaded": 462
+  },
+  "passed": true,
+  "elapsed_ms": 177079.000000027,
+  "last_stage": "ruby-started",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 34
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 214
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

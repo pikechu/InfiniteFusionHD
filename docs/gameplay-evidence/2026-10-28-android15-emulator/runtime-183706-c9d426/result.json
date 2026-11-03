@@ -1,0 +1,47 @@
+{
+  "phase": "runtime",
+  "normal_avds_unchanged": true,
+  "physical_phone": false,
+  "device": {
+    "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.release": "11",
+    "ro.build.version.sdk": "30",
+    "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+  },
+  "storage": "Filesystem      1K-blocks    Used Available Use% Mounted on\r\n/dev/block/dm-5  12223704 2127880   9948368  18% /data/user/0",
+  "content_id": "a7f36fc8b5812ee9d9a5cc2a",
+  "native": {
+    "complete": true,
+    "passed": true,
+    "phase": "runtime",
+    "rss_kib": 255248,
+    "ruby": "3.4.10",
+    "assertions": [],
+    "phase_markers": [],
+    "source_files_loaded": null
+  },
+  "passed": true,
+  "elapsed_ms": 9375.0,
+  "last_stage": "render-120",
+  "installed_probe_files_restored": true,
+  "cleanup": {
+    "emulator_exited": true,
+    "console_port_free": true,
+    "adb_port_free": true,
+    "temporary_logs_removed": [
+      {
+        "name": "adb.log",
+        "bytes": 34
+      },
+      {
+        "name": "netsim_stderr.log",
+        "bytes": 88
+      },
+      {
+        "name": "netsim_stdout.log",
+        "bytes": 52
+      }
+    ],
+    "stdout_stderr": "discarded; not redirected to files"
+  }
+}

@@ -7,6 +7,7 @@ import tempfile
 ROOT=Path(__file__).resolve().parents[2]
 spec=importlib.util.spec_from_file_location("audit",ROOT/"scripts/localization/audit_dex_proofread.py")
 audit=importlib.util.module_from_spec(spec);spec.loader.exec_module(audit)
+(ROOT/"temp/localization").mkdir(parents=True,exist_ok=True)
 with tempfile.TemporaryDirectory(dir=ROOT/"temp/localization") as temporary:
     assert Path(temporary).resolve().is_relative_to((ROOT/"temp/localization").resolve())
     base=Path(temporary);audit.ROOT=base

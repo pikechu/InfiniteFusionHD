@@ -1,18 +1,31 @@
 # Preserve source/catalog hashes and archived evidence on every checkout.
 /Data/Scripts/**/*.rb text eol=lf
+/Data/pokedex/*.json text eol=lf
+/Data/pokedex/*.gz -text
+/Data/upstream-resource-state.json text eol=lf
+/Data/sprites/BASE_SPRITES text eol=lf
+/Data/sprites/CUSTOM_SPRITES text eol=lf
+"/Data/sprites/Sprite Credits.csv" text eol=lf
+/Data/offline-resources.json text eol=lf
 /Mods/*.rb text eol=lf
 /Data/*.dat -text
 /Data/*.rxdata -text
-# Pinned resource bytes and compatibility inputs must survive Windows checkout.
-/Data/pokedex/*.json text eol=lf
-/Data/sprites/BASE_SPRITES text eol=lf
-/Data/sprites/CUSTOM_SPRITES text eol=lf
-/Data/sprites/*.csv text eol=lf
-/Data/shop/*.json text eol=lf
-/Data/offline-resources.json text eol=lf
+/Data/localization/**/*.json text eol=lf
+/Data/localization/*.txt text eol=lf
 /Data/multiplayer-build.json text eol=lf
+/scripts/**/*.py text eol=lf
+/scripts/android/*.ps1 text eol=lf
+/android/app/src/main/**/*.java text eol=lf
+/android/app/src/main/AndroidManifest.xml text eol=lf
+/android/ruby/*.rb text eol=lf
+/Game.ini text eol=lf
+/docs/gameplay-evidence/** -text whitespace=cr-at-eol
 /server/multiplayer/*.json text eol=lf
 /Fonts/*.otf -text
 /docs/multiplayer-functional-spec.zh-CN.md whitespace=-blank-at-eol,-blank-at-eof
 # Preserve whitespace in the pinned upstream patch's context lines.
 /android/native/emulator-coordinate-source.patch whitespace=-blank-at-eol
+
+# Shop catalogs are also client compatibility inputs.
+/Data/shop/*.json text eol=lf
+/Data/sprites/*.csv text eol=lf

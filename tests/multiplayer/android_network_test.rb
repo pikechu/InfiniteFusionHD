@@ -141,6 +141,21 @@ rescue KIFMultiplayer::Error => error
   verify.call(error.code == "network_unavailable", "old APK cannot silently fall back to blocking HTTPS")
 end
 KIFAndroidBridge.async_version = 1
+large_bytes = "a" * (9 * 1024 * 1024)
+large_adapter = KIFMultiplayer::AndroidNetworkAdapter.new
+large_adapter.define_singleton_method(:await_https) do |*|
+  '{"status":200,"headers":{},"body":"' + [large_bytes].pack("m0") + '"}'
+end
+verify.call(large_adapter.get("https://fixture.invalid/dex.json")[:body] == large_bytes, "bounded HTTPS handles dex responses larger than8MiB")
+large_adapter.define_singleton_method(:await_https) do |*|
+  '{"status":200,"headers":{},"body":"' + ["a" * (KIFMultiplayer::AndroidNetworkAdapter::MAX_RESPONSE_BODY + 1)].pack("m0") + '"}'
+end
+begin
+  large_adapter.get("https://fixture.invalid/dex.json")
+  raise "oversized dex response was accepted"
+rescue KIFMultiplayer::Error
+  verify.call(true, "HTTPS still rejects bodies above32MiB")
+end
 
 delayed = TCPServer.new("127.0.0.1", 0)
 delayed_port = delayed.addr[1]

@@ -25,3 +25,5 @@ Pokecommunity社区			https://www.pokecommunity.com/showthread.php?t=347883
 转换版：https://huggingface.co/gaudi/opus-mt-en-zh-ctranslate2
 Google 对照仅发送图鉴英文描述与临时术语标记，不发送作者、精灵图路径、存档、账号或其他文件。游戏直接读取本地中文资料，模型与制作工具依赖不打入游戏。
 详情与验收范围见 docs/localization-community-and-images.zh-CN.md。
+
+Android.14 合入最新 main 时保留全部 82,207 条英文图鉴。已审段落按完全相同原文复用后，中文覆盖 20,022 条；其余新增内容暂保留英文。固定审校范围与未审数量见 zh-CN-dex-proofread-progress.json。

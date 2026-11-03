@@ -1,0 +1,353 @@
+{
+  "generated_utc": "2026-10-28T06:40:38.913297+00:00",
+  "scope": "Static read-only settings and other non-dex player UI audit; no game/events/save execution.30 UI/randomizer scripts parsed, candidates manually followed to display paths. Not a claim every UI sentence was retranslated.",
+  "complete_confirmed_batch": true,
+  "groups": [
+    {
+      "id": "A-settings-random-items",
+      "file": "Data/Scripts/025-Randomizer/RandomizerSettings.rb",
+      "lines": [
+        418,
+        425,
+        432,
+        439,
+        446,
+        453,
+        495,
+        502,
+        509,
+        516,
+        523,
+        530
+      ],
+      "kind": "missing_shared_keys",
+      "source_to_chinese": {
+        "Randomize the items picked up on the ground": "随机替换地上拾取的道具。",
+        "Randomize the TMs picked up on the ground": "随机替换地上拾取的招式学习器。",
+        "Randomize the items given by NPCs (may make some quests impossible to complete)": "随机替换角色赠送的道具（可能导致部分任务无法完成）。",
+        "Randomize the TMs given by NPCs": "随机替换角色赠送的招式学习器。",
+        "Randomizes the items available in shops (always mapped)": "随机替换商店出售的道具（同一种道具始终替换为同一种）。",
+        "Give random held items to all trainers": "让所有训练家的宝可梦随机携带道具。"
+      },
+      "existing_pack_translations": {},
+      "evidence": "All6 exact strings absent from current script24 and existing non-dex text overlays. EnumOption descriptions are displayed by UI_Options.updateDescription1299 through _INTL(new_description). Class appears twice; later lines495–530 are active redefinition.",
+      "repair": "Add the6 shared keys. Existing description display already localizes; no need to rewrite option setters or flags.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-party-hat-prompt",
+      "file": "Data/Scripts/016_UI/005_UI_Party.rb",
+      "lines": [
+        1198,
+        1200,
+        598,
+        607
+      ],
+      "kind": "direct_untranslated_prompt",
+      "source_to_chinese": {
+        "What should you do?": "要做什么？"
+      },
+      "existing_pack_translations": {},
+      "evidence": "PokemonHat passes raw msg to scene.pbShowCommands; helpwindow.text=helptext at607 performs no translation. Summary1416 is unused msg and deliberately excluded.",
+      "repair": "Wrap the literal at1198 in _INTL; do not touch hat IDs/custom names.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-trainer-card-background-title",
+      "file": "Data/Scripts/016_UI/012_UI_TrainerCard.rb",
+      "lines": [
+        46,
+        49,
+        50
+      ],
+      "kind": "direct_untranslated_title",
+      "source_to_chinese": {
+        "Trainer card": "训练家卡片"
+      },
+      "existing_pack_translations": {},
+      "evidence": "Normal unlocked-card background chooser calls pbListScreen with raw title. Its implementation020_Debug/003_Editor_Listers.rb20 passes title directly to a text window despite residing in a Debug folder.",
+      "repair": "Wrap title at50 in _INTL and add exact lower-case key; this is a real player path, not an editor-only report.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-storage-pc-name",
+      "file": "Data/Scripts/016_UI/019_UI_PC.rb",
+      "lines": [
+        27,
+        28,
+        88,
+        91
+      ],
+      "kind": "existing_translation_bypassed",
+      "source_to_chinese": {
+        "Pokemon Storage": "宝可梦存储系统"
+      },
+      "existing_pack_translations": {
+        "Pokemon Storage": "宝可梦存储系统"
+      },
+      "evidence": "StorageSystemPC.name returns English; PokemonPCList pushes pc.name directly to displayed commands.",
+      "repair": "Return _INTL(\"Pokemon Storage\") from this display getter. Keep PC registry/order unchanged.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-storage-fusion-commands",
+      "file": "Data/Scripts/016_UI/017_UI_PokemonStorage.rb",
+      "lines": [
+        5675,
+        5695,
+        1133,
+        1139,
+        1142
+      ],
+      "kind": "existing_translation_bypassed",
+      "source_to_chinese": {
+        "Select an action": "选择操作",
+        "Stop fusing": "取消融合",
+        "Cancel": "取消"
+      },
+      "existing_pack_translations": {
+        "Select an action": "选择操作",
+        "Stop fusing": "取消融合",
+        "Cancel": "取消"
+      },
+      "evidence": "Both fusion branches pass raw help title; empty-slot branch also has2 raw choices. Storage scene assigns message and commands directly; no late lookup.",
+      "repair": "Wrap title in both branches and each raw label in empty-slot branch. Existing translations already present.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-storage-splicer-labels",
+      "file": "Data/Scripts/016_UI/017_UI_PokemonStorage.rb",
+      "lines": [
+        5812,
+        5813,
+        5814,
+        5822,
+        5823,
+        5824,
+        5831,
+        5835,
+        5836,
+        5838,
+        5840
+      ],
+      "kind": "untranslated_format_arguments",
+      "source_to_chinese": {
+        "DNA Splicers": "基因之楔",
+        "Super Splicers": "超级基因之楔",
+        "Infinite Splicers": "无限之楔",
+        "Use which splicers?": "使用哪种融合道具？"
+      },
+      "existing_pack_translations": {
+        "DNA Splicers": "基因之楔",
+        "Super Splicers": "超级基因之楔",
+        "Infinite Splicers": "无限之楔",
+        "Use which splicers?": "使用哪种融合道具？"
+      },
+      "evidence": "Raw English item constants are inserted into _INTL(\"{1}\")/\"{1} ({2})\", so format localization does not translate their contents. Title is also raw.",
+      "repair": "Resolve display constants with _INTL or localized GameData item names, and localize title. IMPORTANT: return dispatch currently checks ret.start_with?(the same constants); keep display constants and comparisons consistent or store item IDs separately. Never translate symbols or quantities.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-storage-gamble-price",
+      "file": "Data/Scripts/016_UI/017_UI_PokemonStorage.rb",
+      "lines": [
+        2187,
+        2188,
+        2190,
+        2193
+      ],
+      "kind": "dynamic_key_before_translation",
+      "source_to_chinese": {
+        "Gamble for Shiny (P{1})": "抽取异色（{1}宝可元）",
+        "Gamble for new Color (P{1})": "抽取新颜色（{1}宝可元）"
+      },
+      "existing_pack_translations": {},
+      "evidence": "Only base Gamble for Shiny / Gamble for new Color keys exist. Current code concatenates arbitrary price before _INTL(gambletext); representative P1000 keys are absent.",
+      "repair": "Choose the fixed placeholder template first, call _INTL(template, pricenow), and remove the later lookup of the already-formatted price string. Preserve price calculation and shiny branch behavior.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-storage-directory-actions",
+      "file": "Data/Scripts/016_UI/017_UI_PokemonStorage.rb",
+      "lines": [
+        4037,
+        4038,
+        4039,
+        4042,
+        4045,
+        4129,
+        4999,
+        5073,
+        5291,
+        5419
+      ],
+      "kind": "raw_choices_and_missing_prompt_keys",
+      "source_to_chinese": {
+        "<Random Sub-Folder>": "<随机子文件夹>",
+        "<This Folder+Sub-Folders>": "<当前文件夹及子文件夹>",
+        "<This Folder>": "<当前文件夹>",
+        "<Cancel>": "<取消>",
+        "Choose Player Sub-Directory.": "请选择玩家队伍子文件夹。",
+        "Choose Battler Sub-Directory.": "请选择对手队伍子文件夹。",
+        "Choose Import Sub-Directory.": "请选择导入子文件夹。"
+      },
+      "existing_pack_translations": {},
+      "evidence": "Fixed director_actions strings are passed directly to command window; dynamic prompt does _INTL(messagechoice) but3 exact keys absent. These paths are reachable from self-battle and from import when canExportImport (default true); not all require $DEBUG.",
+      "repair": "Localize only the4 fixed action labels, add3 prompt keys. Keep directory_names from disk, paths, index ordering and technical sentinels such as [Every .jsons] unchanged; do not translate user folder names.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-hall-mode-values",
+      "file": "Data/Scripts/016_UI/001_Non-interactive UI/006_UI_HallOfFame.rb",
+      "lines": [
+        373,
+        375,
+        378,
+        384,
+        390,
+        400
+      ],
+      "kind": "untranslated_format_arguments",
+      "source_to_chinese": {
+        "Classic mode": "经典模式",
+        "Modern mode": "现代模式",
+        "Expert mode": "专家模式",
+        "Randomized mode": "随机模式",
+        "{1} mode": "{1}模式"
+      },
+      "existing_pack_translations": {},
+      "evidence": "getCurrentGameMode returns English mode strings and pokemon.real_name+\" mode\". writeGameMode puts these into _INTL(\"{1} ({2})\") without localizing argument. Difficulty already uses getDisplayDifficulty at300 and is not reported.",
+      "repair": "Localize mode at the display boundary; for single-species mode use the localized species.name with a fixed {1} mode template. Preserve saved HallOfFame metadata/internal mode labels and existing history. Debug mode omitted per scope.",
+      "status": "confirmed_static_player_facing"
+    },
+    {
+      "id": "A-purify-confirm-prompts",
+      "file": "Data/Scripts/016_UI/022_UI_PurifyChamber.rb",
+      "lines": [
+        563,
+        619,
+        640,
+        584,
+        585,
+        1207,
+        1208
+      ],
+      "kind": "direct_untranslated_confirm",
+      "source_to_chinese": {
+        "Continue editing sets?": "继续操作吗？",
+        "Would you like to switch sets?": "要切换到其他净化组合吗？",
+        "Continue viewing holograms?": "继续查看全息影像吗？"
+      },
+      "existing_pack_translations": {
+        "Continue editing sets?": "继续操作吗？"
+      },
+      "evidence": "Scene/screen pbConfirm forwards msg unchanged to UIHelper.pbConfirm. ItemStorage.rb242–246 assigns msg directly to window; only Yes/No are translated. First prompt key exists but is bypassed; other2 keys absent.",
+      "repair": "Wrap the3 caller literals in _INTL and add missing2 keys, keeping Yes/No return behavior and chamber state unchanged.",
+      "status": "confirmed_static_player_facing"
+    }
+  ],
+  "source_to_chinese": {
+    "Randomize the items picked up on the ground": "随机替换地上拾取的道具。",
+    "Randomize the TMs picked up on the ground": "随机替换地上拾取的招式学习器。",
+    "Randomize the items given by NPCs (may make some quests impossible to complete)": "随机替换角色赠送的道具（可能导致部分任务无法完成）。",
+    "Randomize the TMs given by NPCs": "随机替换角色赠送的招式学习器。",
+    "Randomizes the items available in shops (always mapped)": "随机替换商店出售的道具（同一种道具始终替换为同一种）。",
+    "Give random held items to all trainers": "让所有训练家的宝可梦随机携带道具。",
+    "What should you do?": "要做什么？",
+    "Trainer card": "训练家卡片",
+    "Pokemon Storage": "宝可梦存储系统",
+    "Select an action": "选择操作",
+    "Stop fusing": "取消融合",
+    "Cancel": "取消",
+    "DNA Splicers": "基因之楔",
+    "Super Splicers": "超级基因之楔",
+    "Infinite Splicers": "无限之楔",
+    "Use which splicers?": "使用哪种融合道具？",
+    "Gamble for Shiny (P{1})": "抽取异色（{1}宝可元）",
+    "Gamble for new Color (P{1})": "抽取新颜色（{1}宝可元）",
+    "<Random Sub-Folder>": "<随机子文件夹>",
+    "<This Folder+Sub-Folders>": "<当前文件夹及子文件夹>",
+    "<This Folder>": "<当前文件夹>",
+    "<Cancel>": "<取消>",
+    "Choose Player Sub-Directory.": "请选择玩家队伍子文件夹。",
+    "Choose Battler Sub-Directory.": "请选择对手队伍子文件夹。",
+    "Choose Import Sub-Directory.": "请选择导入子文件夹。",
+    "Classic mode": "经典模式",
+    "Modern mode": "现代模式",
+    "Expert mode": "专家模式",
+    "Randomized mode": "随机模式",
+    "{1} mode": "{1}模式",
+    "Continue editing sets?": "继续操作吗？",
+    "Would you like to switch sets?": "要切换到其他净化组合吗？",
+    "Continue viewing holograms?": "继续查看全息影像吗？"
+  },
+  "counts": {
+    "confirmed_groups": 10,
+    "independent_display_strings": 33,
+    "settings_missing_keys": 6,
+    "hair_catalog_records": 65,
+    "hair_existing_fields": 110,
+    "hair_independent_reviewed_strings": 109
+  },
+  "hairstyle_overlay": "temp/localization/quest-dialogue/hairstyle-text-a-reviewed.json",
+  "hairstyle_notes": "temp/localization/quest-dialogue/hairstyle-text-a-notes.json",
+  "outfit_overlay": "temp/localization/quest-dialogue/outfit-text-a-reviewed.json",
+  "file_sha256_at_review": {
+    "Data/Scripts/016_UI/001_Non-interactive UI/006_UI_HallOfFame.rb": "88b129b46e46dd93389be71eb6e29dd1986dffa639670ccd8e2ffa9ac3da8ab8",
+    "Data/Scripts/016_UI/005_UI_Party.rb": "54f337af24cce5ce20f59b7a6ae7204f7ebdaf09e86b121c69990a30a1faafd2",
+    "Data/Scripts/016_UI/012_UI_TrainerCard.rb": "363b5752a245628ae7e5764ce492010575135d44659d09603544551236389df9",
+    "Data/Scripts/016_UI/017_UI_PokemonStorage.rb": "ddba255a684ced6e756a12464de8e57b3c406c58688abd1f11567eb082ed2d0b",
+    "Data/Scripts/016_UI/019_UI_PC.rb": "a295ee9dff2da80d6230caa36908d1ae050279489c3acaffe59694f4c4108d09",
+    "Data/Scripts/016_UI/022_UI_PurifyChamber.rb": "5f62bb671b7046d9821e7f5236b1851a4bfd04f3c881b5db594e4bb3e3bf42cf",
+    "Data/Scripts/025-Randomizer/RandomizerSettings.rb": "3e4fb4ab6465befd97625101f123074b9329b6140a1f114bfdf4ed0b0d30679b"
+  },
+  "excluded_candidates": [
+    {
+      "case": "Graphics/Audio paths, sound cue names, standard DNA/TCG/FGM and font/tool names",
+      "reason": "Not untranslated dialogue; do not rename filenames, IDs or proper names."
+    },
+    {
+      "case": "UI_Bag574 Choose new quantity of {1} (max. #{...})",
+      "reason": "Inside Debug quantity-edit branch; excluded by explicit scope."
+    },
+    {
+      "case": "UI_Summary1416 What should you do?",
+      "reason": "Assigned variable is unused, not a visible omission in that branch."
+    },
+    {
+      "case": "MoveRelearner72 Teach which move? / Moves list",
+      "reason": "Actually localized at74 through _INTL(text). No repair needed."
+    },
+    {
+      "case": "Storage4794/4796/4799/4801 sort/export lock text",
+      "reason": "Actually localized via _INTL(tmp_txt) at4803/4804; not reported."
+    },
+    {
+      "case": "Options literal descriptions already in shared pack or overlays",
+      "reason": "updateDescription1299 already localizes them; literal source alone is not an omission."
+    },
+    {
+      "case": "Chinese override values with ME/SE names and Shiny Finder.exe",
+      "reason": "Control payloads/tool executable proper names are not visible untranslated prose."
+    }
+  ],
+  "lower_priority_confirmed_not_in_patch_batch": [
+    {
+      "file": "Data/Scripts/016_UI/001_Non-interactive UI/007_UI_Credits.rb",
+      "lines": [
+        58,
+        59,
+        238,
+        257,
+        270
+      ],
+      "reason": "Static descriptive credits prose is drawn raw. Names/handles/project names must remain intact. Not included in priority settings/hair fix batch; if addressed, use an exact whitelist of descriptive lines rather than translating all credit lines, which could rename authors whose handles collide with dictionary words.",
+      "sample_proposals": {
+        "HD visual enhancements and online play": "高清画面增强与在线联机",
+        "Windows / Android and Simplified Chinese support": "支持Windows、Android和简体中文"
+      }
+    }
+  ],
+  "unconfirmed_dynamic_items": [],
+  "validation": "Exact source keys/placeholder sets checked for proposed text. Renderer paths read, no native execution. Parent owns changes and integrated native verification."
+}

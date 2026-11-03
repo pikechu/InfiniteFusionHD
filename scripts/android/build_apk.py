@@ -33,7 +33,7 @@ def source_snapshot():
     resources = {}
     add_offline_resources(resources, ROOT)
     paths.update(resources.values())
-    for name in ("Game.ini", "Data/multiplayer-build.json", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
+    for name in ("Game.ini", "Data/multiplayer-build.json", "Data/resource-download.ps1", "android/app/src/main/AndroidManifest.xml", "android/runtime.lock.json",
                  "android/native/kif_android_bridge.c", "scripts/android/build_bridge.ps1",
                  "scripts/android/build_apk.py", "scripts/android/package_game.py", "scripts/android/payload_format.py",
                  "scripts/resources/build_manifest.py"):
@@ -56,7 +56,7 @@ def validate_staged_scripts(manifest):
         if expected is None or hashlib.sha256(path.read_bytes()).hexdigest() != expected["sha256"]:
             raise SystemExit("Staged offline resource differs from current source; use --refresh-ruby: " + name)
     for name, expected in manifest["files"].items():
-        if name == "Game.ini" or name == "Data/multiplayer-build.json" or name.startswith("Data/Scripts/"):
+        if name == "Game.ini" or name in ("Data/multiplayer-build.json", "Data/resource-download.ps1") or name.startswith("Data/Scripts/"):
             path = ROOT / name
         elif "/" not in name and name.endswith(".rb"):
             path = ROOT / "android/ruby" / name
@@ -134,7 +134,7 @@ def output_name(runtime_only, with_network, emulator_compatible):
     if runtime_only:
         stem = "InfiniteFusionHD-network-probe-arm64" if with_network else "InfiniteFusionHD-runtime-probe-arm64"
         return stem + ("-emulator" if emulator_compatible else "") + "-test.apk"
-    stem = "InfiniteFusionHD-0.20.7-android.13-arm64"
+    stem = "InfiniteFusionHD-0.20.8-android.15-arm64"
     if emulator_compatible:
         stem += "-emulator"
     if with_network:

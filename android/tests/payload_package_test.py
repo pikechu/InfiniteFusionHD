@@ -92,7 +92,7 @@ class PayloadPackageTest(unittest.TestCase):
             path = root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(("current " + name).encode())
-        manifest = build_manifest.seal("a" * 40, build_manifest.bundled_data(root))
+        manifest = build_manifest.seal("a" * 40, build_manifest.bundled_data(root=root))
         (root / "Data/offline-resources.json").write_text(json.dumps(manifest), encoding="utf-8")
         return {name: root / name for name in (*build_manifest.DATA, "Data/offline-resources.json")}
 
@@ -155,6 +155,8 @@ class PayloadPackageTest(unittest.TestCase):
                 (scripts / "000_Platform.rb").write_bytes(b"new platform\n")
                 (scripts / "001_Example.rb").write_bytes(b"new script\n")
                 (fixture / "Data/messages_zh.dat").write_bytes(b"Chinese language pack")
+                (fixture / "Data/resource-download.ps1").write_bytes(b"new download helper\n")
+                (fixture / "Data/resource-download.ps1").write_bytes(b"new download helper\n")
                 helpers = fixture / "android/ruby"
                 helpers.mkdir(parents=True)
                 for name in ("kif_android_preload.rb", "android-runtime-smoke.rb", "android-game-smoke.rb",
@@ -163,7 +165,7 @@ class PayloadPackageTest(unittest.TestCase):
                 logical = {"Graphics/canonical.png": b"image bytes" * 100,
                            "Graphics/other.png": b"image bytes" * 100,
                            "Data/Scripts/000_Platform.rb": b"old platform\n",
-                           "Data/Scripts/001_Example.rb": b"old script\n"}
+                           "Data/Scripts/001_Example.rb": b"old script\n", "Data/resource-download.ps1": b"old download helper\n"}
                 resources = self.offline_resources(fixture)
                 logical.update({name: b"stale resource" for name in resources})
                 path = output / "payload.zip"
@@ -181,6 +183,7 @@ class PayloadPackageTest(unittest.TestCase):
                 with zipfile.ZipFile(path) as archive:
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/Scripts/001_Example.rb"), b"new script\n")
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/messages_zh.dat"), b"Chinese language pack")
+                    self.assertEqual(package_game.read_payload_file(archive, refreshed, "Data/resource-download.ps1"), b"new download helper\n")
                     for name, file in resources.items():
                         self.assertEqual(package_game.read_payload_file(archive, refreshed, name), file.read_bytes(), name)
                     self.assertEqual(package_game.read_payload_file(archive, refreshed, "Graphics/other.png"), logical["Graphics/other.png"])
@@ -228,7 +231,7 @@ class PayloadPackageTest(unittest.TestCase):
         with mock.patch.object(build_apk, "ROOT", fixture):
             snapshot = build_apk.source_snapshot()
             resources["Data/pokedex/dex_zh.json"].write_bytes(b"new reviewed translation")
-            manifest = build_manifest.seal("a" * 40, build_manifest.bundled_data(fixture))
+            manifest = build_manifest.seal("a" * 40, build_manifest.bundled_data(root=fixture))
             resources["Data/offline-resources.json"].write_text(json.dumps(manifest), encoding="utf-8")
             with self.assertRaisesRegex(SystemExit, "dex_zh.json|offline-resources.json"):
                 build_apk.assert_sources_unchanged(snapshot)
@@ -248,6 +251,15 @@ class PayloadPackageTest(unittest.TestCase):
         with mock.patch.object(build_apk, "ROOT", fixture):
             snapshot = build_apk.source_snapshot()
             build_apk.assert_sources_unchanged(snapshot)
+            downloader = fixture / "Data/resource-download.ps1"
+            downloader.parent.mkdir(parents=True)
+            downloader.write_bytes(b"first downloader\n")
+            snapshot = build_apk.source_snapshot()
+            self.assertIn("Data/resource-download.ps1", snapshot)
+            downloader.write_bytes(b"edited downloader\n")
+            with self.assertRaisesRegex(SystemExit, "resource-download.ps1"):
+                build_apk.assert_sources_unchanged(snapshot)
+            downloader.write_bytes(b"first downloader\n")
             script.write_bytes(b"edited during compilation\n")
             with self.assertRaisesRegex(SystemExit, "probe.rb"):
                 build_apk.assert_sources_unchanged(snapshot)

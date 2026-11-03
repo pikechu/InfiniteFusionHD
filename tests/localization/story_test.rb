@@ -33,21 +33,22 @@ opening_texts = 0
       page.list.each_with_index do |command, index|
         texts = []
         if command.code == 101
-          text = command.parameters[0].dup.force_encoding("UTF-8")
+          text = command.parameters[0].dup
           while page.list[index + 1]&.code == 401
             index += 1
-            line = page.list[index].parameters[0].dup.force_encoding("UTF-8")
+            line = page.list[index].parameters[0].dup
             text += " " if !line.empty? && text[-1] != " "
             text += line
           end
           texts << text
         elsif command.code == 102
-          texts.concat(command.parameters[0].map { |text| text.dup.force_encoding("UTF-8") })
+          texts.concat(command.parameters[0].map(&:dup))
         end
         texts.each do |text|
           next unless text.match?(/[A-Za-z]{3}/)
           next if ["Mooooooooo!", "Sluuuuuurp!", "Graah!"].include?(text)
-          check.call(_MAPINTL(map_id, text).match?(/[\u3400-\u9fff]/), "opening dialogue #{map_id}:#{event.id}: #{text}")
+          expected_text = _MAPINTL(map_id, text.dup.force_encoding(Encoding::UTF_8))
+          check.call(_MAPINTL(map_id, text) == expected_text && expected_text.match?(/[\u3400-\u9fff]/), "opening dialogue #{map_id}:#{event.id}: #{text}")
           opening_texts += 1
         end
       end
@@ -57,6 +58,13 @@ end
 check.call(_MAPINTL(2, "\\bHello. You must be \\PN.") == "\\b你好啊，你一定是\\PN了。", "story text immediately following a color control is translated")
 letter = "Dear \\PN, \\|\\nWe are pleased to announce that your Pokémon League application has been accepted."
 check.call(_MAPINTL(43, letter).match?(/[\u3400-\u9fff]/), "opening letter translates after its line and wait controls")
+legacy_letter = letter.b.freeze
+legacy_bytes = legacy_letter.bytes
+check.call(_MAPINTL(43, legacy_letter) == _MAPINTL(43, letter), "legacy binary letter reaches the same translation")
+check.call(legacy_letter.encoding == Encoding::ASCII_8BIT && legacy_letter.bytes == legacy_bytes, "lookup does not rewrite stored map strings")
+check.call(_INTL("Pokédex".b.freeze) == _INTL("Pokédex") && _INTL("Pokédex") != "Pokédex", "legacy binary script labels use the shared lookup")
+invalid_text = "\xFF".b.freeze
+check.call(Messages.stringToKey(invalid_text) == invalid_text && Messages.stringToKey(invalid_text).encoding == Encoding::ASCII_8BIT, "invalid UTF-8 bytes retain the original fallback")
 check.call(_MAPINTL(12, "\\bYour \\v[3] and \\v[4] are doing just fine.").include?("\\v[4]"), "daycare dialogue preserves both Pokemon references")
 check.call(_MAPINTL(0, "\\ch[1,0,Kanto,Johto,Hoenn,Sinnoh,Kalos,Custom]").include?("关东"), "embedded story choice labels are translated")
 StoryCommand = Struct.new(:code, :indent, :parameters)

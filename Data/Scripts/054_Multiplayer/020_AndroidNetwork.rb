@@ -2,6 +2,8 @@
 # verified Android Java TLS bridge for HTTPS. Native HTTPLite is never used.
 module KIFMultiplayer
   class AndroidNetworkAdapter
+    MAX_RESPONSE_BODY = 32 * 1024 * 1024
+    MAX_RESPONSE_JSON = ((MAX_RESPONSE_BODY + 2) / 3) * 4 + 512 * 1024
     def initialize
       @http = SocketHTTP.new
     end
@@ -63,12 +65,12 @@ module KIFMultiplayer
       encoded = WireJSON.dump(envelope)
       raise Error.new("Android HTTPS envelope is too large", "request_too_large") if encoded.bytesize > 65536
       raw = await_https(encoded, deadline || KIFMultiplayer.monotonic + 20.0)
-      decoded = WireJSON.parse(raw, 12 * 1024 * 1024)
-      unless decoded.is_a?(Hash) && decoded["status"].is_a?(Integer) && (decoded["status"] == 0 || decoded["status"].between?(100, 599)) && decoded["body"].is_a?(String) && decoded["body"].bytesize <= 12 * 1024 * 1024 && decoded["headers"].is_a?(Hash)
+      decoded = WireJSON.parse(raw, MAX_RESPONSE_JSON)
+      unless decoded.is_a?(Hash) && decoded["status"].is_a?(Integer) && (decoded["status"] == 0 || decoded["status"].between?(100, 599)) && decoded["body"].is_a?(String) && decoded["body"].bytesize <= MAX_RESPONSE_JSON && decoded["headers"].is_a?(Hash)
         raise Error.new("Invalid Android HTTPS response", "invalid_http_response")
       end
       bytes = decoded["body"].unpack1("m0")
-      raise Error.new("Invalid Android HTTPS body", "invalid_http_response") unless bytes.bytesize <= 8 * 1024 * 1024 && [bytes].pack("m0") == decoded["body"]
+      raise Error.new("Invalid Android HTTPS body", "invalid_http_response") unless bytes.bytesize <= MAX_RESPONSE_BODY && [bytes].pack("m0") == decoded["body"]
       if decoded["status"] == 0 && %w[SocketTimeoutException TimeoutException InterruptedIOException].include?(decoded["error"])
         raise Error.new("Android HTTPS deadline exceeded", "network_timeout")
       end

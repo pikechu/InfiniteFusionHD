@@ -1,0 +1,4007 @@
+{
+  "schema": "type-and-reward-text-review-v2",
+  "created_at_utc": "2026-10-28T06:23:03.462525+00:00",
+  "complete": true,
+  "scope": "Entire153-line type_expert; actual quest reward definitions and display call chain; statistics/pending catalogs for every preset clothes/hats name/description and Item player-facing fields. Full393-text outfit translation is split into a separate in-progress task.",
+  "translations": {
+    "What a shocking turn of events!": "真是令人震惊的逆转！",
+    "I’m bugging out of here!": "我先开溜了！",
+    "You outshined me!": "你的光彩盖过我了！",
+    "I shall scale back my plans.": "我得缩减计划了。",
+    "I have to throw in the towel.": "我只好认输了。",
+    "I’m buried under this loss.": "这场败仗，可把我压得抬不起头了。",
+    "I guess I got burned out.": "看来我已经燃尽了。",
+    "ou really cut me down to size!": "你真把我修理得服服帖帖！",
+    "I’m skating on thin ice!": "我这下可如履薄冰了！",
+    "Looks like I’ve hit rock bottom...": "看来我已经跌到谷底了……",
+    "You really made a splash!": "你可真是掀起了波澜！",
+    "I guess I’m grounded for now.": "看来我得暂时落地了。",
+    "I’ll slip back into the shadows": "我就悄悄退回阴影里……",
+    "I guess I was a bit rusty...": "看来我有点生锈了……",
+    "I could not foresee this defeat.": "我没能预见这次败北。",
+    "I can feel myself disappearing into thin air!": "我感觉自己都快凭空消失了！",
+    "I got a taste of my own medicine!": "这回可真是自食苦果！",
+    "This was anything but normal!": "这场对战可一点都不一般！",
+    "Do you think you can handle that?": "你觉得自己应付得来吗？",
+    "Woah! You beat me at my own specialty! ": "哇！你在我最擅长的领域击败了我！ ",
+    "It's a true testament to your mastery of Pokémon typings!": "这足以证明，你对宝可梦属性已经十分精通！",
+    "Well then, I'll keep my word. You can have this very special outfit!": "那么，我会遵守约定。这套特别的服装就送给你了！",
+    "This HM will allow you to illuminate dark caves and should help you to progress in your journey!": "这份秘传学习器能照亮黑暗洞穴，应该能助你继续旅程！",
+    "This item will allows you to get twice the money in a battle if the Pokémon holding it took part in it!": "让宝可梦携带它并在对战中出场，获得的奖金就会翻倍！",
+    "This will allow you to illuminate caves without having to use a HM! Practical, isn't it?": "不用秘传学习器，也能照亮洞穴了！很方便吧？",
+    "This strange cable triggers the evolution of Pokémon that typically evolve via trade. I know you'll put it to good use!": "这根奇特的绳子，能让通常需要连接交换才会进化的宝可梦进化。我知道你会好好利用它！",
+    "This handy item will allow you to sleep anywhere you want. You won't even need hotels anymore!": "这件方便的道具，让你想在哪里睡就在哪里睡，连酒店都不用住了！",
+    "This rare stone can evolve any Pokémon, regardless of their level or evolution method. Use it wisely!": "这种稀有石头能让任何宝可梦进化，不受等级或进化方式限制。要慎用！",
+    "This rare ball can catch any Pokémon. Don't waste it!": "这种稀有的球能捕捉任何宝可梦，别浪费了！",
+    "This mysterious ball is rumored to be the key to call upon the protector of Ilex Forest.  It's a precious relic.": "据说，这颗神秘的球是唤来栎树林守护者的关键。它可是件珍贵的遗物。",
+    "Also, there's one more thing...": "另外，还有一件事……",
+    "As a gift for having helped so many people, I want to give you this.": "为了感谢你帮助了这么多人，我想把这个送给你。",
+    "I have no more rewards to give you! Thanks for helping all these people!": "我已经没有更多奖励了！谢谢你帮助了这么多人！",
+    "Would you like to put it on right now?": "要现在就穿上吗？",
+    "\\me[{1}]You obtained a \\c[1]{2}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+    "You put on the \\c[1]{1}\\c[0]!\\wtnp[30]": "你换上了\\c[1]{1}\\c[0]！\\wtnp[30]",
+    "\\me[{1}]You obtained some \\c[1]{2}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了一些\\c[1]{2}\\c[0]！\\wtnp[30]",
+    "\\me[{1}]You obtained \\c[1]{2} {3}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了\\c[1]{2} {3}\\c[0]！\\wtnp[30]",
+    "You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].": "你把{1}收进了\\n<icon=bagPocket{2}>\\c[1]{3}口袋\\c[0]。",
+    "Would you like to register the \\c[3]{1}\\c[0] in the quick actions menu?": "要把\\c[3]{1}\\c[0]登记到快捷操作菜单吗？",
+    "\\se[{1}]The \\c[3]{2}\\c[0] was registered!": "\\se[{1}]\\c[3]{2}\\c[0]已登记！",
+    "\\me[{1}]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了\\c[1]{3}\\c[0] ×{2}！\\wtnp[30]",
+    "\\me[{1}]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+    "Electric Outfit": "电属性套装",
+    "Bug Hakama Dress": "虫属性袴裙",
+    "Bug Hakama Pants": "虫属性袴裤",
+    "Fairy Outfit (F)": "妖精属性套装（女款）",
+    "Fairy Outfit (M)": "妖精属性套装（男款）",
+    "Dragon Outfit": "龙属性套装",
+    "Fighting Outfit": "格斗属性套装",
+    "Ground Outfit": "地面属性套装",
+    "Fire Outfit": "火属性套装",
+    "Ice Outfit": "冰属性套装",
+    "Water Dress": "水属性连衣裙",
+    "Steel Outfit (F)": "钢属性套装（女款）",
+    "Steel Outfit (M)": "钢属性套装（男款）",
+    "Poison Outfit": "毒属性套装",
+    "Normal Outfit": "一般属性套装",
+    "A traditionnal looking hakama dress, that captures the essence of bug-type Pokémon, complete with a bug-catching net!": "传统风格的袴裙，展现虫属性宝可梦的特色，还配着捕虫网！",
+    "A traditionnal looking pair of hakama pants that capture the essence of bug-type Pokémon, complete with a bug-catching net!": "传统风格的袴裤，展现虫属性宝可梦的特色，还配着捕虫网！",
+    "A whimsical pastel sweater and skirt that capture the essence of the Fairy type.": "梦幻的淡彩毛衣配短裙，展现妖精属性的特色。",
+    "A light pastel sweater and tailored pants that capture the essence of the Fairy type.": "轻薄的淡彩毛衣，搭配剪裁讲究的长裤，展现妖精属性的特色。",
+    "The extravagant outfit of a conquerer. It captures the essence of Dragon-type Pokémon.": "征服者的华丽装束，展现龙属性宝可梦的特色。",
+    "A sportsy outfit that is liked by those who practice martial arts. It captures the essence of Fighting-type Pokémon.": "深受习武者喜爱的运动装，展现格斗属性宝可梦的特色。",
+    "A rugged cowboy outfit with earthy tones that captures the essence of the Ground type.": "粗犷的大地色牛仔装，展现地面属性的特色。",
+    "A fire-proof outfit that captures the essence of fire-type Pokémon.": "防火装束，展现火属性宝可梦的特色。",
+    "A stylish dress that captures the essence of Water-type Pokémon.": "时尚连衣裙，展现水属性宝可梦的特色。",
+    "A sturdy jumpsuit giving off a strong, industrial vibe that captures the essence of the Steel type.": "结实的连身工作服，工业风浓厚，展现钢属性的特色。",
+    "A rugged jumpsuit giving off a strong, industrial vibe that captures the essence of the Steel type.": "粗犷的连身工作服，工业风浓厚，展现钢属性的特色。",
+    "A noxious-looking outfit for those who handle deadly poisons. It captures the essence of Poison-type Pokémon.": "外观透着危险气息的装束，适合处理剧毒的人，展现毒属性宝可梦的特色。",
+    "A brown jacket with a scarf that capture the essence of the Normal-type.": "棕色外套搭配围巾，展现一般属性的特色。"
+  },
+  "templates": {
+    "Ah! Can you feel the energy in here? This place is great for #{type.real_name}-Pokémon!": "啊！你能感受到这里的能量吗？这个地方特别适合#{type.real_name}属性的宝可梦！",
+    "I'm what you could call an expert on #{type.real_name}-Pokémon. I've grown with them for all of my life.": "我可以算是#{type.real_name}属性宝可梦的专家，从小就和它们一起长大。",
+    "I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only #{type.real_name}-type Pokémon. ": "如果你只用#{type.real_name}属性的宝可梦击败我的队伍，我就把\\C[5]特别的服装\\C[0]送给你。 ",
+    "Select your team! Remember, only #{type.real_name}-type Pokémon are allowed!": "选择你的队伍！记住，只能用#{type.real_name}属性的宝可梦！",
+    "When you wear it, you can sometimes find #{type.real_name}-type related items after battles!": "穿上它，对战结束后有时能找到#{type.real_name}属性相关的道具！",
+    "Remember, you're only allowed to use #{type.real_name}-type Pokémon!": "记住，你只能使用#{type.real_name}属性的宝可梦！",
+    "Type experts defeated: #{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}": "已击败的属性专家：#{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}",
+    "Help #{nb_to_next_reward} more person and I'll give you something good!": "再帮助#{nb_to_next_reward}个人，我就送你好东西！",
+    "Help #{nb_to_next_reward} more people and I'll give you something good!": "再帮助#{nb_to_next_reward}个人，我就送你好东西！",
+    "The clothes #{outfit_id} are invalid.": "服装#{outfit_id}无效。",
+    "\\me[{1}]You obtained {2} #{text_color}{3}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了#{text_color}{3}\\c[0] ×{2}！\\wtnp[30]",
+    "\\me[{1}]You obtained an #{text_color}{2}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了#{text_color}{2}\\c[0]！\\wtnp[30]",
+    "\\me[{1}]You obtained a #{text_color}{2}\\c[0]!\\wtnp[30]": "\\me[{1}]你获得了#{text_color}{2}\\c[0]！\\wtnp[30]"
+  },
+  "recommended_format_translations": {
+    "Ah! Can you feel the energy in here? This place is great for {1}-Pokémon!": "啊！你能感受到这里的能量吗？这个地方特别适合{1}属性的宝可梦！",
+    "I'm what you could call an expert on {1}-Pokémon. I've grown with them for all of my life.": "我可以算是{1}属性宝可梦的专家，从小就和它们一起长大。",
+    "I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only {1}-type Pokémon. ": "如果你只用{1}属性的宝可梦击败我的队伍，我就把\\C[5]特别的服装\\C[0]送给你。 ",
+    "Select your team! Remember, only {1}-type Pokémon are allowed!": "选择你的队伍！记住，只能用{1}属性的宝可梦！",
+    "When you wear it, you can sometimes find {1}-type related items after battles!": "穿上它，对战结束后有时能找到{1}属性相关的道具！",
+    "Remember, you're only allowed to use {1}-type Pokémon!": "记住，你只能使用{1}属性的宝可梦！",
+    "Type experts defeated: {1}/{2}": "已击败的属性专家：{1}/{2}",
+    "Help {1} more person and I'll give you something good!": "再帮助{1}个人，我就送你好东西！",
+    "Help {1} more people and I'll give you something good!": "再帮助{1}个人，我就送你好东西！",
+    "The clothes {1} are invalid.": "服装{1}无效。"
+  },
+  "entries": [
+    {
+      "source": "What a shocking turn of events!",
+      "source_raw_literals": [
+        "\"What a shocking turn of events!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 49,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "What a shocking turn of events!",
+      "catalog_index": 0,
+      "reviewed_chinese": "真是令人震惊的逆转！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I’m bugging out of here!",
+      "source_raw_literals": [
+        "\"I’m bugging out of here!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 50,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I’m bugging out of here!",
+      "catalog_index": 1,
+      "reviewed_chinese": "我先开溜了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "You outshined me!",
+      "source_raw_literals": [
+        "\"You outshined me!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 51,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "You outshined me!",
+      "catalog_index": 2,
+      "reviewed_chinese": "你的光彩盖过我了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I shall scale back my plans.",
+      "source_raw_literals": [
+        "\"I shall scale back my plans.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 52,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I shall scale back my plans.",
+      "catalog_index": 3,
+      "reviewed_chinese": "我得缩减计划了。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I have to throw in the towel.",
+      "source_raw_literals": [
+        "\"I have to throw in the towel.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 53,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I have to throw in the towel.",
+      "catalog_index": 4,
+      "reviewed_chinese": "我只好认输了。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I’m buried under this loss.",
+      "source_raw_literals": [
+        "\"I’m buried under this loss.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 54,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I’m buried under this loss.",
+      "catalog_index": 5,
+      "reviewed_chinese": "这场败仗，可把我压得抬不起头了。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I guess I got burned out.",
+      "source_raw_literals": [
+        "\"I guess I got burned out.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 55,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I guess I got burned out.",
+      "catalog_index": 6,
+      "reviewed_chinese": "看来我已经燃尽了。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "ou really cut me down to size!",
+      "source_raw_literals": [
+        "\"ou really cut me down to size!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 56,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "ou really cut me down to size!",
+      "catalog_index": 7,
+      "reviewed_chinese": "你真把我修理得服服帖帖！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw.",
+      "note": "ou疑缺Y；按You really cut me down to size的显然句意译出，英文key原样不修。"
+    },
+    {
+      "source": "I’m skating on thin ice!",
+      "source_raw_literals": [
+        "\"I’m skating on thin ice!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 57,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I’m skating on thin ice!",
+      "catalog_index": 8,
+      "reviewed_chinese": "我这下可如履薄冰了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "Looks like I’ve hit rock bottom...",
+      "source_raw_literals": [
+        "\"Looks like I’ve hit rock bottom...\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 58,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Looks like I’ve hit rock bottom...",
+      "catalog_index": 9,
+      "reviewed_chinese": "看来我已经跌到谷底了……",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "You really made a splash!",
+      "source_raw_literals": [
+        "\"You really made a splash!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 59,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "You really made a splash!",
+      "catalog_index": 10,
+      "reviewed_chinese": "你可真是掀起了波澜！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I guess I’m grounded for now.",
+      "source_raw_literals": [
+        "\"I guess I’m grounded for now.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 60,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I guess I’m grounded for now.",
+      "catalog_index": 11,
+      "reviewed_chinese": "看来我得暂时落地了。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I’ll slip back into the shadows",
+      "source_raw_literals": [
+        "\"I’ll slip back into the shadows\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 61,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I’ll slip back into the shadows",
+      "catalog_index": 12,
+      "reviewed_chinese": "我就悄悄退回阴影里……",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I guess I was a bit rusty...",
+      "source_raw_literals": [
+        "\"I guess I was a bit rusty...\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 62,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I guess I was a bit rusty...",
+      "catalog_index": 13,
+      "reviewed_chinese": "看来我有点生锈了……",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I could not foresee this defeat.",
+      "source_raw_literals": [
+        "\"I could not foresee this defeat.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 63,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I could not foresee this defeat.",
+      "catalog_index": 14,
+      "reviewed_chinese": "我没能预见这次败北。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I can feel myself disappearing into thin air!",
+      "source_raw_literals": [
+        "\"I can feel myself disappearing into thin air!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 64,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I can feel myself disappearing into thin air!",
+      "catalog_index": 15,
+      "reviewed_chinese": "我感觉自己都快凭空消失了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "I got a taste of my own medicine!",
+      "source_raw_literals": [
+        "\"I got a taste of my own medicine!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 65,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I got a taste of my own medicine!",
+      "catalog_index": 16,
+      "reviewed_chinese": "这回可真是自食苦果！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "This was anything but normal!",
+      "source_raw_literals": [
+        "\"This was anything but normal!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 66,
+          "role": "type_expert_lose_text",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This was anything but normal!",
+      "catalog_index": 17,
+      "reviewed_chinese": "这场对战可一点都不一般！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "actual_text_route": "TYPE_EXPERT_TRAINERS[type_id][1] overrides trainer.lose_text, goes raw to endSpeeches and message window; not a TrainerLoseText(23) lookup.",
+      "preferred_integration": "Local _INTL(TYPE_EXPERT_TRAINERS[type_id][1]) at type_expert.rb:116, plus this exact English key in Shared24. Keep trainer_name at line115 raw."
+    },
+    {
+      "source": "Ah! Can you feel the energy in here? This place is great for #{type.real_name}-Pokémon!",
+      "source_raw_literals": [
+        "\"Ah! Can you feel the energy in here? This place is great for #{type.real_name}-Pokémon!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 95,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Ah! Can you feel the energy in here? This place is great for #{type.real_name}-Pokémon!",
+      "catalog_index": 18,
+      "reviewed_chinese": "啊！你能感受到这里的能量吗？这个地方特别适合#{type.real_name}属性的宝可梦！",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{type.real_name}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{type.real_name}",
+          "meaning": "canonical English type name; display only",
+          "recommended_local_expression": "type.name",
+          "localized_getter_source": "Data/Scripts/010_Data/002_PBS data/003_Type.rb:43-44",
+          "preserve_identity": "type_id, hasType?(type_id), trainer_class and reward map keys unchanged"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "Ah! Can you feel the energy in here? This place is great for {1}-Pokémon!",
+      "recommended_intl_chinese": "啊！你能感受到这里的能量吗？这个地方特别适合{1}属性的宝可梦！",
+      "recommended_format_arguments": [
+        "type.name"
+      ],
+      "finite_literal_variant_coverage": {
+        "construction": "Literal string replacement only; no game variable or Ruby interpolation executed",
+        "checked": 18,
+        "covered": 0,
+        "variants": [
+          {
+            "type_id": "ELECTRIC",
+            "english_type": "Electric",
+            "localized_type": "电",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "BUG",
+            "english_type": "Bug",
+            "localized_type": "虫",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FAIRY",
+            "english_type": "Fairy",
+            "localized_type": "妖精",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DRAGON",
+            "english_type": "Dragon",
+            "localized_type": "龙",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIGHTING",
+            "english_type": "Fighting",
+            "localized_type": "格斗",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GROUND",
+            "english_type": "Ground",
+            "localized_type": "地面",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIRE",
+            "english_type": "Fire",
+            "localized_type": "火",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GRASS",
+            "english_type": "Grass",
+            "localized_type": "草",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ICE",
+            "english_type": "Ice",
+            "localized_type": "冰",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ROCK",
+            "english_type": "Rock",
+            "localized_type": "岩石",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "WATER",
+            "english_type": "Water",
+            "localized_type": "水",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FLYING",
+            "english_type": "Flying",
+            "localized_type": "飞行",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DARK",
+            "english_type": "Dark",
+            "localized_type": "恶",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "STEEL",
+            "english_type": "Steel",
+            "localized_type": "钢",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "PSYCHIC",
+            "english_type": "Psychic",
+            "localized_type": "超能力",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GHOST",
+            "english_type": "Ghost",
+            "localized_type": "幽灵",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "POISON",
+            "english_type": "Poison",
+            "localized_type": "毒",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "NORMAL",
+            "english_type": "Normal",
+            "localized_type": "一般",
+            "shared_english_rendered_variant": null
+          }
+        ]
+      },
+      "note": "仅把real_name换name不会翻掉英语句子主体，仍需稳定{1}格式的_INTL。只用某属性表示hasType?包含该属性，不要求纯单属性。",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "I'm what you could call an expert on #{type.real_name}-Pokémon. I've grown with them for all of my life.",
+      "source_raw_literals": [
+        "\"I'm what you could call an expert on #{type.real_name}-Pokémon. I've grown with them for all of my life.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 97,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I'm what you could call an expert on #{type.real_name}-Pokémon. I've grown with them for all of my life.",
+      "catalog_index": 19,
+      "reviewed_chinese": "我可以算是#{type.real_name}属性宝可梦的专家，从小就和它们一起长大。",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{type.real_name}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{type.real_name}",
+          "meaning": "canonical English type name; display only",
+          "recommended_local_expression": "type.name",
+          "localized_getter_source": "Data/Scripts/010_Data/002_PBS data/003_Type.rb:43-44",
+          "preserve_identity": "type_id, hasType?(type_id), trainer_class and reward map keys unchanged"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "I'm what you could call an expert on {1}-Pokémon. I've grown with them for all of my life.",
+      "recommended_intl_chinese": "我可以算是{1}属性宝可梦的专家，从小就和它们一起长大。",
+      "recommended_format_arguments": [
+        "type.name"
+      ],
+      "finite_literal_variant_coverage": {
+        "construction": "Literal string replacement only; no game variable or Ruby interpolation executed",
+        "checked": 18,
+        "covered": 0,
+        "variants": [
+          {
+            "type_id": "ELECTRIC",
+            "english_type": "Electric",
+            "localized_type": "电",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "BUG",
+            "english_type": "Bug",
+            "localized_type": "虫",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FAIRY",
+            "english_type": "Fairy",
+            "localized_type": "妖精",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DRAGON",
+            "english_type": "Dragon",
+            "localized_type": "龙",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIGHTING",
+            "english_type": "Fighting",
+            "localized_type": "格斗",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GROUND",
+            "english_type": "Ground",
+            "localized_type": "地面",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIRE",
+            "english_type": "Fire",
+            "localized_type": "火",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GRASS",
+            "english_type": "Grass",
+            "localized_type": "草",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ICE",
+            "english_type": "Ice",
+            "localized_type": "冰",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ROCK",
+            "english_type": "Rock",
+            "localized_type": "岩石",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "WATER",
+            "english_type": "Water",
+            "localized_type": "水",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FLYING",
+            "english_type": "Flying",
+            "localized_type": "飞行",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DARK",
+            "english_type": "Dark",
+            "localized_type": "恶",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "STEEL",
+            "english_type": "Steel",
+            "localized_type": "钢",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "PSYCHIC",
+            "english_type": "Psychic",
+            "localized_type": "超能力",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GHOST",
+            "english_type": "Ghost",
+            "localized_type": "幽灵",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "POISON",
+            "english_type": "Poison",
+            "localized_type": "毒",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "NORMAL",
+            "english_type": "Normal",
+            "localized_type": "一般",
+            "shared_english_rendered_variant": null
+          }
+        ]
+      },
+      "note": "仅把real_name换name不会翻掉英语句子主体，仍需稳定{1}格式的_INTL。只用某属性表示hasType?包含该属性，不要求纯单属性。",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only #{type.real_name}-type Pokémon. ",
+      "source_raw_literals": [
+        "\"I'll give you my \\\\C[5]special outfit\\\\C[0] if you can defeat my team using only #{type.real_name}-type Pokémon. \""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 99,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only #{type.real_name}-type Pokémon.",
+      "catalog_index": 20,
+      "reviewed_chinese": "如果你只用#{type.real_name}属性的宝可梦击败我的队伍，我就把\\C[5]特别的服装\\C[0]送给你。 ",
+      "source_trailing_whitespace": " ",
+      "interpolations": [
+        "#{type.real_name}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{type.real_name}",
+          "meaning": "canonical English type name; display only",
+          "recommended_local_expression": "type.name",
+          "localized_getter_source": "Data/Scripts/010_Data/002_PBS data/003_Type.rb:43-44",
+          "preserve_identity": "type_id, hasType?(type_id), trainer_class and reward map keys unchanged"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only {1}-type Pokémon. ",
+      "recommended_intl_chinese": "如果你只用{1}属性的宝可梦击败我的队伍，我就把\\C[5]特别的服装\\C[0]送给你。 ",
+      "recommended_format_arguments": [
+        "type.name"
+      ],
+      "finite_literal_variant_coverage": {
+        "construction": "Literal string replacement only; no game variable or Ruby interpolation executed",
+        "checked": 18,
+        "covered": 0,
+        "variants": [
+          {
+            "type_id": "ELECTRIC",
+            "english_type": "Electric",
+            "localized_type": "电",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "BUG",
+            "english_type": "Bug",
+            "localized_type": "虫",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FAIRY",
+            "english_type": "Fairy",
+            "localized_type": "妖精",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DRAGON",
+            "english_type": "Dragon",
+            "localized_type": "龙",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIGHTING",
+            "english_type": "Fighting",
+            "localized_type": "格斗",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GROUND",
+            "english_type": "Ground",
+            "localized_type": "地面",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIRE",
+            "english_type": "Fire",
+            "localized_type": "火",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GRASS",
+            "english_type": "Grass",
+            "localized_type": "草",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ICE",
+            "english_type": "Ice",
+            "localized_type": "冰",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ROCK",
+            "english_type": "Rock",
+            "localized_type": "岩石",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "WATER",
+            "english_type": "Water",
+            "localized_type": "水",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FLYING",
+            "english_type": "Flying",
+            "localized_type": "飞行",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DARK",
+            "english_type": "Dark",
+            "localized_type": "恶",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "STEEL",
+            "english_type": "Steel",
+            "localized_type": "钢",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "PSYCHIC",
+            "english_type": "Psychic",
+            "localized_type": "超能力",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GHOST",
+            "english_type": "Ghost",
+            "localized_type": "幽灵",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "POISON",
+            "english_type": "Poison",
+            "localized_type": "毒",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "NORMAL",
+            "english_type": "Normal",
+            "localized_type": "一般",
+            "shared_english_rendered_variant": null
+          }
+        ]
+      },
+      "note": "仅把real_name换name不会翻掉英语句子主体，仍需稳定{1}格式的_INTL。只用某属性表示hasType?包含该属性，不要求纯单属性。",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "Do you think you can handle that?",
+      "source_raw_literals": [
+        "\"Do you think you can handle that?\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 101,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "你觉得自己应付得来吗？",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Do you think you can handle that?",
+      "catalog_index": 21,
+      "reviewed_chinese": "你觉得自己应付得来吗？",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "Select your team! Remember, only #{type.real_name}-type Pokémon are allowed!",
+      "source_raw_literals": [
+        "\"Select your team! Remember, only #{type.real_name}-type Pokémon are allowed!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 103,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Select your team! Remember, only #{type.real_name}-type Pokémon are allowed!",
+      "catalog_index": 22,
+      "reviewed_chinese": "选择你的队伍！记住，只能用#{type.real_name}属性的宝可梦！",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{type.real_name}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{type.real_name}",
+          "meaning": "canonical English type name; display only",
+          "recommended_local_expression": "type.name",
+          "localized_getter_source": "Data/Scripts/010_Data/002_PBS data/003_Type.rb:43-44",
+          "preserve_identity": "type_id, hasType?(type_id), trainer_class and reward map keys unchanged"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "Select your team! Remember, only {1}-type Pokémon are allowed!",
+      "recommended_intl_chinese": "选择你的队伍！记住，只能用{1}属性的宝可梦！",
+      "recommended_format_arguments": [
+        "type.name"
+      ],
+      "finite_literal_variant_coverage": {
+        "construction": "Literal string replacement only; no game variable or Ruby interpolation executed",
+        "checked": 18,
+        "covered": 0,
+        "variants": [
+          {
+            "type_id": "ELECTRIC",
+            "english_type": "Electric",
+            "localized_type": "电",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "BUG",
+            "english_type": "Bug",
+            "localized_type": "虫",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FAIRY",
+            "english_type": "Fairy",
+            "localized_type": "妖精",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DRAGON",
+            "english_type": "Dragon",
+            "localized_type": "龙",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIGHTING",
+            "english_type": "Fighting",
+            "localized_type": "格斗",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GROUND",
+            "english_type": "Ground",
+            "localized_type": "地面",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIRE",
+            "english_type": "Fire",
+            "localized_type": "火",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GRASS",
+            "english_type": "Grass",
+            "localized_type": "草",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ICE",
+            "english_type": "Ice",
+            "localized_type": "冰",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ROCK",
+            "english_type": "Rock",
+            "localized_type": "岩石",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "WATER",
+            "english_type": "Water",
+            "localized_type": "水",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FLYING",
+            "english_type": "Flying",
+            "localized_type": "飞行",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DARK",
+            "english_type": "Dark",
+            "localized_type": "恶",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "STEEL",
+            "english_type": "Steel",
+            "localized_type": "钢",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "PSYCHIC",
+            "english_type": "Psychic",
+            "localized_type": "超能力",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GHOST",
+            "english_type": "Ghost",
+            "localized_type": "幽灵",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "POISON",
+            "english_type": "Poison",
+            "localized_type": "毒",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "NORMAL",
+            "english_type": "Normal",
+            "localized_type": "一般",
+            "shared_english_rendered_variant": null
+          }
+        ]
+      },
+      "note": "仅把real_name换name不会翻掉英语句子主体，仍需稳定{1}格式的_INTL。只用某属性表示hasType?包含该属性，不要求纯单属性。",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "Woah! You beat me at my own specialty! ",
+      "source_raw_literals": [
+        "\"Woah! You beat me at my own specialty! \""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 120,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "哇！你在我最擅长的领域击败了我！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Woah! You beat me at my own specialty!",
+      "catalog_index": 23,
+      "reviewed_chinese": "哇！你在我最擅长的领域击败了我！ ",
+      "source_trailing_whitespace": " ",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "It's a true testament to your mastery of Pokémon typings!",
+      "source_raw_literals": [
+        "\"It's a true testament to your mastery of Pokémon typings!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 122,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这充分证明了你对宝可梦属性的精通！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "It's a true testament to your mastery of Pokémon typings!",
+      "catalog_index": 24,
+      "reviewed_chinese": "这足以证明，你对宝可梦属性已经十分精通！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "Well then, I'll keep my word. You can have this very special outfit!",
+      "source_raw_literals": [
+        "\"Well then, I'll keep my word. You can have this very special outfit!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 124,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "那么，我会遵守约定。这套特别的服装就送给你了！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Well then, I'll keep my word. You can have this very special outfit!",
+      "catalog_index": 25,
+      "reviewed_chinese": "那么，我会遵守约定。这套特别的服装就送给你了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "When you wear it, you can sometimes find #{type.real_name}-type related items after battles!",
+      "source_raw_literals": [
+        "\"When you wear it, you can sometimes find #{type.real_name}-type related items after battles!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 129,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "When you wear it, you can sometimes find #{type.real_name}-type related items after battles!",
+      "catalog_index": 26,
+      "reviewed_chinese": "穿上它，对战结束后有时能找到#{type.real_name}属性相关的道具！",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{type.real_name}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{type.real_name}",
+          "meaning": "canonical English type name; display only",
+          "recommended_local_expression": "type.name",
+          "localized_getter_source": "Data/Scripts/010_Data/002_PBS data/003_Type.rb:43-44",
+          "preserve_identity": "type_id, hasType?(type_id), trainer_class and reward map keys unchanged"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "When you wear it, you can sometimes find {1}-type related items after battles!",
+      "recommended_intl_chinese": "穿上它，对战结束后有时能找到{1}属性相关的道具！",
+      "recommended_format_arguments": [
+        "type.name"
+      ],
+      "finite_literal_variant_coverage": {
+        "construction": "Literal string replacement only; no game variable or Ruby interpolation executed",
+        "checked": 18,
+        "covered": 0,
+        "variants": [
+          {
+            "type_id": "ELECTRIC",
+            "english_type": "Electric",
+            "localized_type": "电",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "BUG",
+            "english_type": "Bug",
+            "localized_type": "虫",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FAIRY",
+            "english_type": "Fairy",
+            "localized_type": "妖精",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DRAGON",
+            "english_type": "Dragon",
+            "localized_type": "龙",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIGHTING",
+            "english_type": "Fighting",
+            "localized_type": "格斗",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GROUND",
+            "english_type": "Ground",
+            "localized_type": "地面",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIRE",
+            "english_type": "Fire",
+            "localized_type": "火",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GRASS",
+            "english_type": "Grass",
+            "localized_type": "草",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ICE",
+            "english_type": "Ice",
+            "localized_type": "冰",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ROCK",
+            "english_type": "Rock",
+            "localized_type": "岩石",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "WATER",
+            "english_type": "Water",
+            "localized_type": "水",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FLYING",
+            "english_type": "Flying",
+            "localized_type": "飞行",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DARK",
+            "english_type": "Dark",
+            "localized_type": "恶",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "STEEL",
+            "english_type": "Steel",
+            "localized_type": "钢",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "PSYCHIC",
+            "english_type": "Psychic",
+            "localized_type": "超能力",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GHOST",
+            "english_type": "Ghost",
+            "localized_type": "幽灵",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "POISON",
+            "english_type": "Poison",
+            "localized_type": "毒",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "NORMAL",
+            "english_type": "Normal",
+            "localized_type": "一般",
+            "shared_english_rendered_variant": null
+          }
+        ]
+      },
+      "note": "仅把real_name换name不会翻掉英语句子主体，仍需稳定{1}格式的_INTL。只用某属性表示hasType?包含该属性，不要求纯单属性。",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "Remember, you're only allowed to use #{type.real_name}-type Pokémon!",
+      "source_raw_literals": [
+        "\"Remember, you're only allowed to use #{type.real_name}-type Pokémon!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 139,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Remember, you're only allowed to use #{type.real_name}-type Pokémon!",
+      "catalog_index": 27,
+      "reviewed_chinese": "记住，你只能使用#{type.real_name}属性的宝可梦！",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{type.real_name}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{type.real_name}",
+          "meaning": "canonical English type name; display only",
+          "recommended_local_expression": "type.name",
+          "localized_getter_source": "Data/Scripts/010_Data/002_PBS data/003_Type.rb:43-44",
+          "preserve_identity": "type_id, hasType?(type_id), trainer_class and reward map keys unchanged"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "Remember, you're only allowed to use {1}-type Pokémon!",
+      "recommended_intl_chinese": "记住，你只能使用{1}属性的宝可梦！",
+      "recommended_format_arguments": [
+        "type.name"
+      ],
+      "finite_literal_variant_coverage": {
+        "construction": "Literal string replacement only; no game variable or Ruby interpolation executed",
+        "checked": 18,
+        "covered": 0,
+        "variants": [
+          {
+            "type_id": "ELECTRIC",
+            "english_type": "Electric",
+            "localized_type": "电",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "BUG",
+            "english_type": "Bug",
+            "localized_type": "虫",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FAIRY",
+            "english_type": "Fairy",
+            "localized_type": "妖精",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DRAGON",
+            "english_type": "Dragon",
+            "localized_type": "龙",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIGHTING",
+            "english_type": "Fighting",
+            "localized_type": "格斗",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GROUND",
+            "english_type": "Ground",
+            "localized_type": "地面",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FIRE",
+            "english_type": "Fire",
+            "localized_type": "火",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GRASS",
+            "english_type": "Grass",
+            "localized_type": "草",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ICE",
+            "english_type": "Ice",
+            "localized_type": "冰",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "ROCK",
+            "english_type": "Rock",
+            "localized_type": "岩石",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "WATER",
+            "english_type": "Water",
+            "localized_type": "水",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "FLYING",
+            "english_type": "Flying",
+            "localized_type": "飞行",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "DARK",
+            "english_type": "Dark",
+            "localized_type": "恶",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "STEEL",
+            "english_type": "Steel",
+            "localized_type": "钢",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "PSYCHIC",
+            "english_type": "Psychic",
+            "localized_type": "超能力",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "GHOST",
+            "english_type": "Ghost",
+            "localized_type": "幽灵",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "POISON",
+            "english_type": "Poison",
+            "localized_type": "毒",
+            "shared_english_rendered_variant": null
+          },
+          {
+            "type_id": "NORMAL",
+            "english_type": "Normal",
+            "localized_type": "一般",
+            "shared_english_rendered_variant": null
+          }
+        ]
+      },
+      "note": "仅把real_name换name不会翻掉英语句子主体，仍需稳定{1}格式的_INTL。只用某属性表示hasType?包含该属性，不要求纯单属性。",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "Type experts defeated: #{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}",
+      "source_raw_literals": [
+        "\"Type experts defeated: #{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+          "line": 152,
+          "role": "type_expert_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Type experts defeated: #{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}",
+      "catalog_index": 28,
+      "reviewed_chinese": "已击败的属性专家：#{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{pbGet(VAR_TYPE_EXPERTS_BEATEN)}",
+        "#{TOTAL_NB_TYPE_EXPERTS}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{pbGet(VAR_TYPE_EXPERTS_BEATEN)}",
+          "meaning": "existing beaten-expert counter, read for display only"
+        },
+        {
+          "source_expression": "#{TOTAL_NB_TYPE_EXPERTS}",
+          "meaning": "existing total constant12, not18; do not change"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "Type experts defeated: {1}/{2}",
+      "recommended_intl_chinese": "已击败的属性专家：{1}/{2}",
+      "recommended_format_arguments": [
+        "pbGet(VAR_TYPE_EXPERTS_BEATEN)",
+        "TOTAL_NB_TYPE_EXPERTS"
+      ],
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "This HM will allow you to illuminate dark caves and should help you to progress in your journey!",
+      "source_raw_literals": [
+        "\"This HM will allow you to illuminate dark caves and should help you to progress in your journey!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1554,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这个HM可以让你照亮黑暗的洞穴，\n应该可以帮助你在旅途中取得进展！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This HM will allow you to illuminate dark caves and should help you to progress in your journey!",
+      "catalog_index": 29,
+      "reviewed_chinese": "这份秘传学习器能照亮黑暗洞穴，应该能助你继续旅程！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "This item will allows you to get twice the money in a battle if the Pokémon holding it took part in it!",
+      "source_raw_literals": [
+        "\"This item will allows you to get twice the money in a battle if the Pokémon holding it took part in it!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1555,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这个道具让你在战斗中获得两倍金钱，\n只要宝可梦持有它参与战斗！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This item will allows you to get twice the money in a battle if the Pokémon holding it took part in it!",
+      "catalog_index": 30,
+      "reviewed_chinese": "让宝可梦携带它并在对战中出场，获得的奖金就会翻倍！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "This will allow you to illuminate caves without having to use a HM! Practical, isn't it?",
+      "source_raw_literals": [
+        "\"This will allow you to illuminate caves without having to use a HM! Practical, isn't it?\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1556,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这可以让你在不使用HM的情况下\n照亮洞穴！很实用，不是吗？",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This will allow you to illuminate caves without having to use a HM! Practical, isn't it?",
+      "catalog_index": 31,
+      "reviewed_chinese": "不用秘传学习器，也能照亮洞穴了！很方便吧？",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "This strange cable triggers the evolution of Pokémon that typically evolve via trade. I know you'll put it to good use!",
+      "source_raw_literals": [
+        "\"This strange cable triggers the evolution of Pokémon that typically evolve via trade. I know you'll put it to good use!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1557,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这条奇怪的电缆引发了宝可梦的进化，\n这种进化通常是通过交换进行的。\n我知道你会好好利用它的！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This strange cable triggers the evolution of Pokémon that typically evolve via trade. I know you'll put it to good use!",
+      "catalog_index": 32,
+      "reviewed_chinese": "这根奇特的绳子，能让通常需要连接交换才会进化的宝可梦进化。我知道你会好好利用它！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "This handy item will allow you to sleep anywhere you want. You won't even need hotels anymore!",
+      "source_raw_literals": [
+        "\"This handy item will allow you to sleep anywhere you want. You won't even need hotels anymore!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1558,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这个方便的物品可以让你睡在任何你\n想睡的地方。你甚至不再需要酒店了！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This handy item will allow you to sleep anywhere you want. You won't even need hotels anymore!",
+      "catalog_index": 33,
+      "reviewed_chinese": "这件方便的道具，让你想在哪里睡就在哪里睡，连酒店都不用住了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "This rare stone can evolve any Pokémon, regardless of their level or evolution method. Use it wisely!",
+      "source_raw_literals": [
+        "\"This rare stone can evolve any Pokémon, regardless of their level or evolution method. Use it wisely!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1559,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "这种罕见的石头可以进化任何宝可梦，\n无论他们的等级或进化方法。\n明智地使用它！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This rare stone can evolve any Pokémon, regardless of their level or evolution method. Use it wisely!",
+      "catalog_index": 34,
+      "reviewed_chinese": "这种稀有石头能让任何宝可梦进化，不受等级或进化方式限制。要慎用！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "This rare ball can catch any Pokémon. Don't waste it!",
+      "source_raw_literals": [
+        "\"This rare ball can catch any Pokémon. Don't waste it!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1560,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This rare ball can catch any Pokémon. Don't waste it!",
+      "catalog_index": 35,
+      "reviewed_chinese": "这种稀有的球能捕捉任何宝可梦，别浪费了！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing"
+    },
+    {
+      "source": "This mysterious ball is rumored to be the key to call upon the protector of Ilex Forest.  It's a precious relic.",
+      "source_raw_literals": [
+        "\"This mysterious ball is rumored to be the key to call upon the protector of Ilex Forest.  It's a precious relic.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+          "line": 1561,
+          "role": "quest_reward_description",
+          "usage": "stored_not_read_by_current_getQuestReward"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "This mysterious ball is rumored to be the key to call upon the protector of Ilex Forest. It's a precious relic.",
+      "catalog_index": 36,
+      "reviewed_chinese": "据说，这颗神秘的球是唤来栎树林守护者的关键。它可是件珍贵的遗物。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing"
+    },
+    {
+      "source": "Also, there's one more thing...",
+      "source_raw_literals": [
+        "\"Also, there's one more thing...\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/QuestLogScript.rb",
+          "line": 1067,
+          "role": "quest_reward_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "另外，还有一件事……",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Also, there's one more thing...",
+      "catalog_index": 37,
+      "reviewed_chinese": "另外，还有一件事……",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "As a gift for having helped so many people, I want to give you this.",
+      "source_raw_literals": [
+        "\"As a gift for having helped so many people, I want to give you this.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/QuestLogScript.rb",
+          "line": 1069,
+          "role": "quest_reward_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "为了感谢你帮助了这么多人，我想把这个送给你。",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "As a gift for having helped so many people, I want to give you this.",
+      "catalog_index": 38,
+      "reviewed_chinese": "为了感谢你帮助了这么多人，我想把这个送给你。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "I have no more rewards to give you! Thanks for helping all these people!",
+      "source_raw_literals": [
+        "\"I have no more rewards to give you! Thanks for helping all these people!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/QuestLogScript.rb",
+          "line": 1081,
+          "role": "quest_reward_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "我已经没有更多奖励了！谢谢你帮助了这些人！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "I have no more rewards to give you! Thanks for helping all these people!",
+      "catalog_index": 39,
+      "reviewed_chinese": "我已经没有更多奖励了！谢谢你帮助了这么多人！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "Help #{nb_to_next_reward} more person and I'll give you something good!",
+      "source_raw_literals": [
+        "\"Help #{nb_to_next_reward} more person and I'll give you something good!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/QuestLogScript.rb",
+          "line": 1083,
+          "role": "quest_reward_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Help #{nb_to_next_reward} more person and I'll give you something good!",
+      "catalog_index": 40,
+      "reviewed_chinese": "再帮助#{nb_to_next_reward}个人，我就送你好东西！",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{nb_to_next_reward}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{nb_to_next_reward}",
+          "meaning": "next reward completed-non-Rocket-quest threshold minus completed count, not a new distinct-person counter"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "Help {1} more person and I'll give you something good!",
+      "recommended_intl_chinese": "再帮助{1}个人，我就送你好东西！",
+      "recommended_format_arguments": [
+        "nb_to_next_reward"
+      ],
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "Help #{nb_to_next_reward} more people and I'll give you something good!",
+      "source_raw_literals": [
+        "\"Help #{nb_to_next_reward} more people and I'll give you something good!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/052_AddOns/QuestLogScript.rb",
+          "line": 1085,
+          "role": "quest_reward_dialogue",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Help #{nb_to_next_reward} more people and I'll give you something good!",
+      "catalog_index": 41,
+      "reviewed_chinese": "再帮助#{nb_to_next_reward}个人，我就送你好东西！",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{nb_to_next_reward}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{nb_to_next_reward}",
+          "meaning": "next reward completed-non-Rocket-quest threshold minus completed count, not a new distinct-person counter"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "Help {1} more people and I'll give you something good!",
+      "recommended_intl_chinese": "再帮助{1}个人，我就送你好东西！",
+      "recommended_format_arguments": [
+        "nb_to_next_reward"
+      ],
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "The clothes #{outfit_id} are invalid.",
+      "source_raw_literals": [
+        "\"The clothes #{outfit_id} are invalid.\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb",
+          "line": 29,
+          "role": "clothing_reward",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "The clothes #{outfit_id} are invalid.",
+      "catalog_index": 42,
+      "reviewed_chinese": "服装#{outfit_id}无效。",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{outfit_id}"
+      ],
+      "format_placeholders": [],
+      "variables": [
+        {
+          "source_expression": "#{outfit_id}",
+          "meaning": "raw catalog identifier, preserve exactly; never translate ID"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "recommended_intl_source": "The clothes {1} are invalid.",
+      "recommended_intl_chinese": "服装{1}无效。",
+      "recommended_format_arguments": [
+        "outfit_id"
+      ],
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "Would you like to put it on right now?",
+      "source_raw_literals": [
+        "\"Would you like to put it on right now?\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb",
+          "line": 35,
+          "role": "clothing_reward",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": "要现在就穿上吗？",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Would you like to put it on right now?",
+      "catalog_index": 43,
+      "reviewed_chinese": "要现在就穿上吗？",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "\\me[{1}]You obtained a \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained a \\\\c[1]{2}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb",
+          "line": 139,
+          "role": "clothing_receipt",
+          "usage": "active_or_reachable"
+        },
+        {
+          "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+          "line": 1156,
+          "role": "item_receipt_override",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "\\me[{1}]你获得了\\c[1]{2}\\c[0]!\\wtnp[30]",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained a \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "catalog_index": 44,
+      "reviewed_chinese": "\\me[{1}]你获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}"
+      ],
+      "variables": [
+        {
+          "format_slot": "{2}",
+          "meaning": "preset outfit.name, raw attr from catalog; local display only",
+          "recommended_local_expression": "_INTL(outfit.name) for this preset reward label",
+          "guard": "do not translate outfit.id, player-entered text, or the empty-name ID fallback"
+        }
+      ],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "You put on the \\c[1]{1}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"You put on the \\\\c[1]{1}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb",
+          "line": 146,
+          "role": "clothing_receipt",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "你装备了\\c[1]{1}\\c[0]!\\wtnp[30]",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "You put on the \\c[1]{1}\\c[0]!\\wtnp[30]",
+      "catalog_index": 45,
+      "reviewed_chinese": "你换上了\\c[1]{1}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}"
+      ],
+      "variables": [
+        {
+          "format_slot": "{1}",
+          "meaning": "preset outfit.name, raw attr from catalog; local display only",
+          "recommended_local_expression": "_INTL(outfit.name) for this preset reward label",
+          "guard": "do not translate outfit.id, player-entered text, or the empty-name ID fallback"
+        }
+      ],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "\\me[{1}]You obtained some \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained some \\\\c[1]{2}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 910,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        },
+        {
+          "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+          "line": 1144,
+          "role": "item_receipt_override",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "\\me[{1}]你获得了一些\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained some \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "catalog_index": 46,
+      "reviewed_chinese": "\\me[{1}]你获得了一些\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "\\me[{1}]You obtained \\c[1]{2} {3}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained \\\\c[1]{2} {3}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 915,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        },
+        {
+          "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+          "line": 1149,
+          "role": "item_receipt_override",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "\\me[{1}]你获得了\\c[1]{2} {3}\\c[0]！\\wtnp[30]",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained \\c[1]{2} {3}\\c[0]!\\wtnp[30]",
+      "catalog_index": 47,
+      "reviewed_chinese": "\\me[{1}]你获得了\\c[1]{2} {3}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}",
+        "{3}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present",
+      "note": " Item labels already come from item.name/name_plural and move.name. Pocket labels already use Settings.bag_pocket_names with_INTL; audio filenames, numeric pocket ID and player names stay unchanged."
+    },
+    {
+      "source": "\\me[{1}]You obtained {2} #{text_color}{3}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained {2} #{text_color}{3}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 917,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained {2} #{text_color}{3}\\c[0]!\\wtnp[30]",
+      "catalog_index": 48,
+      "reviewed_chinese": "\\me[{1}]你获得了#{text_color}{3}\\c[0] ×{2}！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{text_color}"
+      ],
+      "format_placeholders": [
+        "{1}",
+        "{2}",
+        "{3}"
+      ],
+      "variables": [
+        {
+          "source_expression": "#{text_color}",
+          "meaning": "existing item/key-item color control string, not natural-language text"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "finite_color_variant_coverage": [
+        {
+          "text_color": "\\c[1]",
+          "source": "\\me[{1}]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]",
+          "existing_shared_translation": "\\me[{1}]获得了{2}个\\c[1]{3}\\c[0]！\\wtnp[30]"
+        },
+        {
+          "text_color": "\\c[3]",
+          "source": "\\me[{1}]You obtained {2} \\c[3]{3}\\c[0]!\\wtnp[30]",
+          "existing_shared_translation": null
+        }
+      ],
+      "note": "This base pbReceiveItem definition is shadowed by the later Tutor.net definition under the current sorted loader. No new generic color parser is needed for the active path.",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "\\me[{1}]You obtained an #{text_color}{2}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained an #{text_color}{2}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 919,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained an #{text_color}{2}\\c[0]!\\wtnp[30]",
+      "catalog_index": 49,
+      "reviewed_chinese": "\\me[{1}]你获得了#{text_color}{2}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{text_color}"
+      ],
+      "format_placeholders": [
+        "{1}",
+        "{2}"
+      ],
+      "variables": [
+        {
+          "source_expression": "#{text_color}",
+          "meaning": "existing item/key-item color control string, not natural-language text"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "finite_color_variant_coverage": [
+        {
+          "text_color": "\\c[1]",
+          "source": "\\me[{1}]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]",
+          "existing_shared_translation": "\\me[{1}]获得了\\c[1]{2}\\c[0]！\\wtnp[30]"
+        },
+        {
+          "text_color": "\\c[3]",
+          "source": "\\me[{1}]You obtained an \\c[3]{2}\\c[0]!\\wtnp[30]",
+          "existing_shared_translation": null
+        }
+      ],
+      "note": "This base pbReceiveItem definition is shadowed by the later Tutor.net definition under the current sorted loader. No new generic color parser is needed for the active path.",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "\\me[{1}]You obtained a #{text_color}{2}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained a #{text_color}{2}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 921,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "dynamic_template",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained a #{text_color}{2}\\c[0]!\\wtnp[30]",
+      "catalog_index": 50,
+      "reviewed_chinese": "\\me[{1}]你获得了#{text_color}{2}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [
+        "#{text_color}"
+      ],
+      "format_placeholders": [
+        "{1}",
+        "{2}"
+      ],
+      "variables": [
+        {
+          "source_expression": "#{text_color}",
+          "meaning": "existing item/key-item color control string, not natural-language text"
+        }
+      ],
+      "existing_shared_status": "missing",
+      "finite_color_variant_coverage": [
+        {
+          "text_color": "\\c[1]",
+          "source": "\\me[{1}]You obtained a \\c[1]{2}\\c[0]!\\wtnp[30]",
+          "existing_shared_translation": "\\me[{1}]你获得了\\c[1]{2}\\c[0]!\\wtnp[30]"
+        },
+        {
+          "text_color": "\\c[3]",
+          "source": "\\me[{1}]You obtained a \\c[3]{2}\\c[0]!\\wtnp[30]",
+          "existing_shared_translation": null
+        }
+      ],
+      "note": "This base pbReceiveItem definition is shadowed by the later Tutor.net definition under the current sorted loader. No new generic color parser is needed for the active path.",
+      "apply_as_raw_shared_key": false
+    },
+    {
+      "source": "You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+      "source_raw_literals": [
+        "\"You put the {1} away\\\\nin the <icon=bagPocket{2}>\\\\c[1]{3} Pocket\\\\c[0].\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 925,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        },
+        {
+          "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+          "line": 1159,
+          "role": "item_receipt_override",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "将{1}收进了\\n<icon=bagPocket{2}>\\c[1]{3}口袋\\c[0]。",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+      "catalog_index": 51,
+      "reviewed_chinese": "你把{1}收进了\\n<icon=bagPocket{2}>\\c[1]{3}口袋\\c[0]。",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}",
+        "{3}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present",
+      "note": " Item labels already come from item.name/name_plural and move.name. Pocket labels already use Settings.bag_pocket_names with_INTL; audio filenames, numeric pocket ID and player names stay unchanged."
+    },
+    {
+      "source": "Would you like to register the \\c[3]{1}\\c[0] in the quick actions menu?",
+      "source_raw_literals": [
+        "\"Would you like to register the \\\\c[3]{1}\\\\c[0] in the quick actions menu?\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 935,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "是否在快捷操作菜单中\n登记\\c[3]{1}\\c[0]？",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "Would you like to register the \\c[3]{1}\\c[0] in the quick actions menu?",
+      "catalog_index": 52,
+      "reviewed_chinese": "要把\\c[3]{1}\\c[0]登记到快捷操作菜单吗？",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "\\se[{1}]The \\c[3]{2}\\c[0] was registered!",
+      "source_raw_literals": [
+        "\"\\\\se[{1}]The \\\\c[3]{2}\\\\c[0] was registered!\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/012_Overworld/001_Overworld.rb",
+          "line": 937,
+          "role": "item_receipt_base",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "\\se[{1}]\\c[3]{2}\\c[0]已经登记了！",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\se[{1}]The \\c[3]{2}\\c[0] was registered!",
+      "catalog_index": 53,
+      "reviewed_chinese": "\\se[{1}]\\c[3]{2}\\c[0]已登记！",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present"
+    },
+    {
+      "source": "\\me[{1}]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained {2} \\\\c[1]{3}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+          "line": 1152,
+          "role": "item_receipt_override",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "\\me[{1}]获得了{2}个\\c[1]{3}\\c[0]！\\wtnp[30]",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]",
+      "catalog_index": 54,
+      "reviewed_chinese": "\\me[{1}]你获得了\\c[1]{3}\\c[0] ×{2}！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}",
+        "{3}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present",
+      "note": " Item labels already come from item.name/name_plural and move.name. Pocket labels already use Settings.bag_pocket_names with_INTL; audio filenames, numeric pocket ID and player names stay unchanged."
+    },
+    {
+      "source": "\\me[{1}]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "source_raw_literals": [
+        "\"\\\\me[{1}]You obtained an \\\\c[1]{2}\\\\c[0]!\\\\wtnp[30]\""
+      ],
+      "origins": [
+        {
+          "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+          "line": 1154,
+          "role": "item_receipt_override",
+          "usage": "active_or_reachable"
+        }
+      ],
+      "kind": "intl_format_template",
+      "existing_shared_translation": "\\me[{1}]获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "\\me[{1}]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]",
+      "catalog_index": 55,
+      "reviewed_chinese": "\\me[{1}]你获得了\\c[1]{2}\\c[0]！\\wtnp[30]",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [
+        "{1}",
+        "{2}"
+      ],
+      "variables": [],
+      "existing_shared_status": "present",
+      "note": " Item labels already come from item.name/name_plural and move.name. Pocket labels already use Settings.bag_pocket_names with_INTL; audio filenames, numeric pocket ID and player names stay unchanged."
+    },
+    {
+      "source": "HM08",
+      "source_raw_literals": [
+        "\"HM08\""
+      ],
+      "origins": [
+        {
+          "file": "Data/items.dat",
+          "item_id": "HM08",
+          "id_number": 531,
+          "field": "@real_name / MessageTypes::Items[531]",
+          "role": "standard_machine_code_reference"
+        }
+      ],
+      "kind": "static",
+      "existing_shared_translation": null,
+      "existing_trainer_loss_translation": null,
+      "lookup_key": "HM08",
+      "catalog_index": 56,
+      "reviewed_chinese": "HM08",
+      "source_trailing_whitespace": "",
+      "interpolations": [],
+      "format_placeholders": [],
+      "variables": [],
+      "existing_shared_status": "missing",
+      "apply_as_translation": false,
+      "note": "Confirmed whole-family UI convention:122 TM and10 HM names all keep codes. Keep HM08, with localized move name闪光 appended by machine toast. Do not add only HM08→秘传学习器08. Optional family-wide alternative only if a later unified UI policy covers all codes."
+    }
+  ],
+  "expert_reward_outfit_suggestions": [
+    {
+      "type_id": "ELECTRIC",
+      "constant": "CLOTHES_ELECTRIC",
+      "outfit_id": "urbanelectric",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Electric Outfit",
+      "description": null,
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 71,
+      "reviewed_name": "电属性套装",
+      "reviewed_description": null,
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "BUG",
+      "constant": "CLOTHES_BUG_1",
+      "outfit_id": "bughakama",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Bug Hakama Dress",
+      "description": "A traditionnal looking hakama dress, that captures the essence of bug-type Pokémon, complete with a bug-catching net!",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 72,
+      "reviewed_name": "虫属性袴裙",
+      "reviewed_description": "传统风格的袴裙，展现虫属性宝可梦的特色，还配着捕虫网！",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "BUG",
+      "constant": "CLOTHES_BUG_2",
+      "outfit_id": "bughakamapants",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Bug Hakama Pants",
+      "description": "A traditionnal looking pair of hakama pants that capture the essence of bug-type Pokémon, complete with a bug-catching net!",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 72,
+      "reviewed_name": "虫属性袴裤",
+      "reviewed_description": "传统风格的袴裤，展现虫属性宝可梦的特色，还配着捕虫网！",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "FAIRY",
+      "constant": "CLOTHES_FAIRY_F",
+      "outfit_id": "mikufairyf",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Fairy Outfit (F)",
+      "description": "A whimsical pastel sweater and skirt that capture the essence of the Fairy type.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 73,
+      "reviewed_name": "妖精属性套装（女款）",
+      "reviewed_description": "梦幻的淡彩毛衣配短裙，展现妖精属性的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "FAIRY",
+      "constant": "CLOTHES_FAIRY_M",
+      "outfit_id": "mikufairym",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Fairy Outfit (M)",
+      "description": "A light pastel sweater and tailored pants that capture the essence of the Fairy type.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 73,
+      "reviewed_name": "妖精属性套装（男款）",
+      "reviewed_description": "轻薄的淡彩毛衣，搭配剪裁讲究的长裤，展现妖精属性的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "DRAGON",
+      "constant": "CLOTHES_DRAGON",
+      "outfit_id": "dragonconqueror",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Dragon Outfit",
+      "description": "The extravagant outfit of a conquerer. It captures the essence of Dragon-type Pokémon.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 74,
+      "reviewed_name": "龙属性套装",
+      "reviewed_description": "征服者的华丽装束，展现龙属性宝可梦的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "FIGHTING",
+      "constant": "CLOTHES_FIGHTING",
+      "outfit_id": "fighting",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Fighting Outfit",
+      "description": "A sportsy outfit that is liked by those who practice martial arts. It captures the essence of Fighting-type Pokémon.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 75,
+      "reviewed_name": "格斗属性套装",
+      "reviewed_description": "深受习武者喜爱的运动装，展现格斗属性宝可梦的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "GROUND",
+      "constant": "CLOTHES_GROUND",
+      "outfit_id": "groundcowboy",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Ground Outfit",
+      "description": "A rugged cowboy outfit with earthy tones that captures the essence of the Ground type.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 76,
+      "reviewed_name": "地面属性套装",
+      "reviewed_description": "粗犷的大地色牛仔装，展现地面属性的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "FIRE",
+      "constant": "CLOTHES_FIRE",
+      "outfit_id": "fire",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Fire Outfit",
+      "description": "A fire-proof outfit that captures the essence of fire-type Pokémon.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 77,
+      "reviewed_name": "火属性套装",
+      "reviewed_description": "防火装束，展现火属性宝可梦的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "ICE",
+      "constant": "CLOTHES_ICE",
+      "outfit_id": "iceoutfit",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Ice Outfit",
+      "description": null,
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 79,
+      "reviewed_name": "冰属性套装",
+      "reviewed_description": null,
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "WATER",
+      "constant": "CLOTHES_WATER",
+      "outfit_id": "waterdress",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Water Dress",
+      "description": "A stylish dress that captures the essence of Water-type Pokémon.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 81,
+      "reviewed_name": "水属性连衣裙",
+      "reviewed_description": "时尚连衣裙，展现水属性宝可梦的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "STEEL",
+      "constant": "CLOTHES_STEEL_F",
+      "outfit_id": "steelworkerF",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Steel Outfit (F)",
+      "description": "A sturdy jumpsuit giving off a strong, industrial vibe that captures the essence of the Steel type.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 84,
+      "reviewed_name": "钢属性套装（女款）",
+      "reviewed_description": "结实的连身工作服，工业风浓厚，展现钢属性的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "STEEL",
+      "constant": "CLOTHES_STEEL_M",
+      "outfit_id": "steelworkerM",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Steel Outfit (M)",
+      "description": "A rugged jumpsuit giving off a strong, industrial vibe that captures the essence of the Steel type.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 84,
+      "reviewed_name": "钢属性套装（男款）",
+      "reviewed_description": "粗犷的连身工作服，工业风浓厚，展现钢属性的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "POISON",
+      "constant": "CLOTHES_POISON",
+      "outfit_id": "deadlypoisondanger",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Poison Outfit",
+      "description": "A noxious-looking outfit for those who handle deadly poisons. It captures the essence of Poison-type Pokémon.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 87,
+      "reviewed_name": "毒属性套装",
+      "reviewed_description": "外观透着危险气息的装束，适合处理剧毒的人，展现毒属性宝可梦的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    },
+    {
+      "type_id": "NORMAL",
+      "constant": "CLOTHES_NORMAL",
+      "outfit_id": "normal",
+      "active_appearance_declared": true,
+      "catalog_entry_present": true,
+      "name": "Normal Outfit",
+      "description": "A brown jacket with a scarf that capture the essence of the Normal-type.",
+      "existing_shared_name": null,
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 88,
+      "reviewed_name": "一般属性套装",
+      "reviewed_description": "棕色外套搭配围巾，展现一般属性的特色。",
+      "display_only": true,
+      "id_unchanged": true,
+      "current_name_shared_coverage": "missing"
+    }
+  ],
+  "quest_reward_definitions": [
+    {
+      "threshold_non_rocket_completed_quests": 1,
+      "item_id": "HM08",
+      "quantity": 1,
+      "can_have_multiple": false,
+      "description_source": "This HM will allow you to illuminate dark caves and should help you to progress in your journey!",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1554
+    },
+    {
+      "threshold_non_rocket_completed_quests": 5,
+      "item_id": "AMULETCOIN",
+      "quantity": 1,
+      "can_have_multiple": false,
+      "description_source": "This item will allows you to get twice the money in a battle if the Pokémon holding it took part in it!",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1555
+    },
+    {
+      "threshold_non_rocket_completed_quests": 10,
+      "item_id": "LANTERN",
+      "quantity": 1,
+      "can_have_multiple": false,
+      "description_source": "This will allow you to illuminate caves without having to use a HM! Practical, isn't it?",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1556
+    },
+    {
+      "threshold_non_rocket_completed_quests": 15,
+      "item_id": "LINKINGCORD",
+      "quantity": 3,
+      "can_have_multiple": false,
+      "description_source": "This strange cable triggers the evolution of Pokémon that typically evolve via trade. I know you'll put it to good use!",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1557
+    },
+    {
+      "threshold_non_rocket_completed_quests": 20,
+      "item_id": "SLEEPINGBAG",
+      "quantity": 1,
+      "can_have_multiple": false,
+      "description_source": "This handy item will allow you to sleep anywhere you want. You won't even need hotels anymore!",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1558
+    },
+    {
+      "threshold_non_rocket_completed_quests": 30,
+      "item_id": "MISTSTONE",
+      "quantity": 1,
+      "can_have_multiple": true,
+      "description_source": "This rare stone can evolve any Pokémon, regardless of their level or evolution method. Use it wisely!",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1559
+    },
+    {
+      "threshold_non_rocket_completed_quests": 45,
+      "item_id": "MASTERBALL",
+      "quantity": 1,
+      "can_have_multiple": true,
+      "description_source": "This rare ball can catch any Pokémon. Don't waste it!",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1560
+    },
+    {
+      "threshold_non_rocket_completed_quests": 60,
+      "item_id": "GSBALL",
+      "quantity": 1,
+      "can_have_multiple": false,
+      "description_source": "This mysterious ball is rumored to be the key to call upon the protector of Ilex Forest.  It's a precious relic.",
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1561
+    }
+  ],
+  "trainer_identity_references": [
+    {
+      "type_id": "ELECTRIC",
+      "lookup_name_raw": "Ray",
+      "existing_trainer_name_display": "雷",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 49,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "BUG",
+      "lookup_name_raw": "Bea",
+      "existing_trainer_name_display": "比阿",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 50,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "FAIRY",
+      "lookup_name_raw": "Luna",
+      "existing_trainer_name_display": "露娜",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 51,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "DRAGON",
+      "lookup_name_raw": "Draco",
+      "existing_trainer_name_display": "德拉科",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 52,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "FIGHTING",
+      "lookup_name_raw": "Floyd",
+      "existing_trainer_name_display": "弗洛伊德",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 53,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "GROUND",
+      "lookup_name_raw": "Pedro",
+      "existing_trainer_name_display": "佩德罗",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 54,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "FIRE",
+      "lookup_name_raw": "Blaze",
+      "existing_trainer_name_display": "布雷兹",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 55,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "GRASS",
+      "lookup_name_raw": "Ivy",
+      "existing_trainer_name_display": "艾薇",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 56,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "ICE",
+      "lookup_name_raw": "Crystal",
+      "existing_trainer_name_display": "克丽丝塔儿",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 57,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "ROCK",
+      "lookup_name_raw": "Slate",
+      "existing_trainer_name_display": "斯莱特",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 58,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "WATER",
+      "lookup_name_raw": "Marina",
+      "existing_trainer_name_display": "玛丽娜",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 59,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "FLYING",
+      "lookup_name_raw": "Gale",
+      "existing_trainer_name_display": "盖尔",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 60,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "DARK",
+      "lookup_name_raw": "Raven",
+      "existing_trainer_name_display": "雷文",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 61,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "STEEL",
+      "lookup_name_raw": "Silvia",
+      "existing_trainer_name_display": "西尔维娅",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 62,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "PSYCHIC",
+      "lookup_name_raw": "Carl",
+      "existing_trainer_name_display": "卡尔",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 63,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "GHOST",
+      "lookup_name_raw": "Evangeline",
+      "existing_trainer_name_display": "埃瓦琳",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 64,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "POISON",
+      "lookup_name_raw": "Marie",
+      "existing_trainer_name_display": "玛丽",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 65,
+      "must_not_translate_lookup_name": true
+    },
+    {
+      "type_id": "NORMAL",
+      "lookup_name_raw": "Tim",
+      "existing_trainer_name_display": "蒂姆",
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 66,
+      "must_not_translate_lookup_name": true
+    }
+  ],
+  "source_file_snapshots": {
+    "Data/Scripts/012_Overworld/001_Overworld.rb": {
+      "sha256_at_read": "f3af2109b482ced085039282636a49a323f510baf6a75ddb21db358a7f6db958",
+      "sha256_now": "f3af2109b482ced085039282636a49a323f510baf6a75ddb21db358a7f6db958",
+      "changed_since_read": false
+    },
+    "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb": {
+      "sha256_at_read": "507219f937487b3bb7273873ea28284990065647a6b7eaaac0ee3c64792d8697",
+      "sha256_now": "507219f937487b3bb7273873ea28284990065647a6b7eaaac0ee3c64792d8697",
+      "changed_since_read": false
+    },
+    "Data/Scripts/051_Wrappers/type_expert.rb": {
+      "sha256_at_read": "ac83f856d253207ac959dba343a6193b2afc001e8fdf63a4991112a69b5a7e46",
+      "sha256_now": "ac83f856d253207ac959dba343a6193b2afc001e8fdf63a4991112a69b5a7e46",
+      "changed_since_read": false
+    },
+    "Data/Scripts/052_AddOns/GameplayUtils.rb": {
+      "sha256_at_read": "3b7f4f7882dd8772e0f3584c70aa8cdf7801f8a6daa6fe065ee9ca043b2a4269",
+      "sha256_now": "3b7f4f7882dd8772e0f3584c70aa8cdf7801f8a6daa6fe065ee9ca043b2a4269",
+      "changed_since_read": false
+    },
+    "Data/Scripts/052_AddOns/QuestLogScript.rb": {
+      "sha256_at_read": "c253cb80039c8a4aac65ff97251db5b0af8c398898038c1240ec62f7bae061a5",
+      "sha256_now": "759254c7a1c758eb24ba331ba468d841044c28f11a35112a77dbb4643b7234ca",
+      "changed_since_read": true
+    },
+    "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb": {
+      "sha256_at_read": "719574876b6ed7d0fb4577600868f464c70d4a7b69052520744ca896d3a7c1af",
+      "sha256_now": "719574876b6ed7d0fb4577600868f464c70d4a7b69052520744ca896d3a7c1af",
+      "changed_since_read": false
+    }
+  },
+  "shared_data_snapshot": {
+    "file": "temp/localization/quest-dialogue/messages-type-rewards-b.json",
+    "pack_sha256_at_read": "5eb028f2208006eab0df54cd4f96b9e2950dc1da816b0ce46406ed3dece31ee7",
+    "original_encoding_counts": {
+      "UTF-8": 13322,
+      "ASCII-8BIT": 16
+    },
+    "TrainerNames14": "18/18 preset expert names already localized; raw lookup names unchanged",
+    "TrainerLoseText23": "absent in inspected pack",
+    "Shared24": "5826 pairs"
+  },
+  "counts": {
+    "reviewed_script_and_machine_reference_texts": 57,
+    "confirmed_expert_outfit_name_texts": 15,
+    "confirmed_expert_outfit_description_texts": 13,
+    "all_reviewed_source_texts": 85,
+    "static_translation_entries_excluding_machine_code": 71,
+    "raw_dynamic_templates": 13,
+    "recommended_stable_format_keys": 10,
+    "expert_lose_texts_missing_shared24": 18,
+    "type_name_dynamic_dialogues": 6,
+    "expert_counter_template": 1,
+    "quest_reward_tiers": 8,
+    "outfit_name_description_fields_total": 400,
+    "outfit_unique_texts_total": 393,
+    "confirmed_expert_unique_texts": 28,
+    "confirmed_expert_text_field_coverage": 30,
+    "remaining_outfit_unique_texts_for_separate_translation": 365,
+    "item_localized_field_proposals": 26
+  },
+  "variable_meanings": {
+    "type_id": "canonical symbol for logic, team filter, trainer class and reward mapping; never translate",
+    "type.real_name": "canonical English type label, currently concatenated into6 dialogues",
+    "type.name": "existing local display getter from Types12; preferred local formatting argument",
+    "trainer_name": "raw TYPE_EXPERT_TRAINERS lookup name passed to pbLoadTrainer; preserve even though TrainerNames14 displays Chinese",
+    "lose_text": "preset defeat phrase, display content; actual override currently raw",
+    "outfit_id": "raw catalog/image identity, do not translate",
+    "outfit.name": "raw JSON preset display name attribute, localize only at reward/preset UI display",
+    "item.name/name_plural": "existing localized Items7/ItemPlurals8 then Shared24 fallback; use getters rather than raw names",
+    "item_name audio/pocket params": "sound filenames and numeric pocket IDs stay raw; pockets already localized in Settings.bag_pocket_names",
+    "nb_to_next_reward": "next completed-non-Rocket-quest threshold minus completed count; do not introduce distinct-person tracking"
+  },
+  "defeat_text_actual_chain": [
+    {
+      "file": "Data/Scripts/051_Wrappers/type_expert.rb",
+      "line": 116,
+      "detail": "takes raw preset loss phrase and passes it as explicit endSpeech at117"
+    },
+    {
+      "file": "Data/Scripts/012_Overworld/002_Battle triggering/001_Overworld_BattleStarting.rb",
+      "line": 538,
+      "detail": "arg[3] overrides trainer.lose_text, bypassing normal GameData TrainerLoseText23 getter"
+    },
+    {
+      "file": "Data/Scripts/011_Battle/003_Battle/003_Battle_StartAndEnd.rb",
+      "line": 470,
+      "detail": "takes raw endSpeeches;472/474 substitute player name only, without translating that name"
+    },
+    {
+      "file": "Data/Scripts/011_Battle/003_Battle/002_PokeBattle_Battle.rb",
+      "line": 774,
+      "detail": "forwards to scene.pbDisplayPausedMessage"
+    },
+    {
+      "file": "Data/Scripts/011_Battle/005_Battle scene/006_PokeBattle_Scene.rb",
+      "line": 222,
+      "detail": "_INTL(\"{1}\\1\",msg) translates only the fixed format key, not msg argument"
+    },
+    {
+      "file": "Data/Scripts/001_Technical/003_Intl_Messages.rb",
+      "line": 756,
+      "detail": "_INTL queries Shared24 only for first argument, then substitutes args; no recursive name/protocol translation"
+    }
+  ],
+  "preferred_defeat_fix": {
+    "scope": "type_expert.rb:116 only",
+    "suggested_expression": "lose_text = _INTL(TYPE_EXPERT_TRAINERS[type_id][1])",
+    "translation_table": "Shared24, these exact18 source phrases",
+    "alternative": "If choosing pbGetMessageFromHash(MessageTypes::TrainerLoseText,key) locally, put same18 in23 instead. Filling23 alone does not change current raw-override path.",
+    "identity_guard": "Keep trainer_name raw at115 and all pbLoadTrainer identity keys; never blanket translate player.name or nicknames."
+  },
+  "reward_call_chain": [
+    {
+      "file": "Data/Scripts/052_AddOns/GameplayUtils.rb",
+      "line": 1553,
+      "detail": "8 tiers with original thresholds/IDs/quantities unchanged; description stored but not read in current granting loop"
+    },
+    {
+      "file": "Data/Scripts/052_AddOns/QuestLogScript.rb",
+      "line": 1045,
+      "detail": "completed non-Rocket quests counted;1049 threshold>= and not previously recorded item;1062 skips unique reward already owned;1067/1069 gift talk;1070 pbReceiveItem"
+    },
+    {
+      "file": "Data/Scripts/102_DemICE's Tutor.net/Tutor.net.rb",
+      "line": 1120,
+      "detail": "current sorted recursive Scripts loader loads102 after012, so this pbReceiveItem overrides base;1139 localized itemname,1149 machine+localized move,1152 quantity,1159 localized pocket message"
+    },
+    {
+      "file": "Data/Scripts/050_Outfits/utils/OutfitsGameplayUtils.rb",
+      "line": 25,
+      "detail": "expert reward path obtains catalog by unchanged ID,34 calls obtainOutfitMessage;139 shows raw outfit.name inside localized format;145/146 put-on name raw or ID fallback"
+    }
+  ],
+  "fixed_conditions_preserved": {
+    "TOTAL_NB_TYPE_EXPERTS": 12,
+    "team_selection_count": "1..4 unchanged",
+    "type_filter": "poke.hasType?(type_id); dual type containing it allowed, not pure single type",
+    "quest_thresholds": [
+      1,
+      5,
+      10,
+      15,
+      20,
+      30,
+      45,
+      60
+    ],
+    "quest_quantities": [
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "can_have_multiple_note": "existing flag permits giving the tier item even if already held; does not mean repeatable unlimited reward; no logic change proposed"
+  },
+  "display_only_integration": [
+    {
+      "scope": "six type-expert dialogues",
+      "suggestion": "Use existing type.name as local argument and stable_INTL {1} source keys supplied in recommended_format_translations. Only swapping .real_name to.name would still leave English sentence bodies."
+    },
+    {
+      "scope": "preset reward clothing name",
+      "suggestion": "At obtainOutfitMessage/putOnOutfitMessage, localize the known preset outfit.name with_INTL; preserve outfit.id and empty-name ID fallback. Do not alter global identity or player-entered names."
+    },
+    {
+      "scope": "preset descriptions",
+      "suggestion": "Use localized preset.description only at catalogue/shop display; no need to mutate original JSON or add a new reward popup."
+    }
+  ],
+  "preset_catalogue_statistics": {
+    "clothes": {
+      "preset_records_total": 78,
+      "eligible_preset_records": 78,
+      "excluded_temp_or_empty_name_records": 0,
+      "nonempty_name_fields": 78,
+      "nonempty_description_fields": 66,
+      "nonempty_fields_total": 144,
+      "unique_source_texts": 141,
+      "raw_display_fields_without_chinese": 144,
+      "fields_missing_chinese_shared_lookup": 144,
+      "fields_needing_lookup_only": 0
+    },
+    "hats": {
+      "preset_records_total": 128,
+      "eligible_preset_records": 128,
+      "excluded_temp_or_empty_name_records": 0,
+      "nonempty_name_fields": 128,
+      "nonempty_description_fields": 128,
+      "nonempty_fields_total": 256,
+      "unique_source_texts": 252,
+      "raw_display_fields_without_chinese": 256,
+      "fields_missing_chinese_shared_lookup": 256,
+      "fields_needing_lookup_only": 0
+    }
+  },
+  "preset_pending_catalogue": "temp/localization/quest-dialogue/preset-outfit-display-catalog-b.json",
+  "outfit_translation_split": {
+    "input": "temp/localization/quest-dialogue/outfit-text-input.json",
+    "total": 393,
+    "a": "0:197",
+    "b": "197:393",
+    "expert_reviewed": "temp/localization/quest-dialogue/outfit-expert-reviewed-b.json",
+    "status": "separate manual translation in progress"
+  },
+  "bag_shop_catalogue_statistics": {
+    "item_entities_total": 692,
+    "excluded_placeholder_or_empty_name_items": 0,
+    "nonempty_display_fields": 2076,
+    "missing_chinese_fields": 0,
+    "mixed_language_review_fields": 21,
+    "standard_machine_code_fields": 264,
+    "unique_pending_source_texts": 20
+  },
+  "bag_shop_pending_catalogue": "temp/localization/quest-dialogue/item-display-pending-catalog-b.json",
+  "item_localized_field_proposals": [
+    {
+      "file": "Data/items.dat",
+      "item_id": "REVEALGLASS",
+      "id_number": 523,
+      "field": "description",
+      "source": "It's a device that can track unusual weather patterns.",
+      "message_section": 9,
+      "existing_table_value": "可以用GPS芯片追踪宝可梦位置 的设备。",
+      "existing_shared_value": null,
+      "current_display": "可以用GPS芯片追踪宝可梦位置 的设备。",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "GPS"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "可以追踪异常天气变化的装置。",
+      "reason": "原英文是追踪异常天气，现译错加GPS芯片、追踪宝可梦位置。",
+      "evidence": [
+        {
+          "source": "Data/items.dat :REVEALGLASS @real_name=Weather Tracker, @real_description exact source"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "REVEALGLASS",
+      "id_number": 523,
+      "field": "name_plural",
+      "source": "Weather Trackers",
+      "message_section": 8,
+      "existing_table_value": "追踪器",
+      "existing_shared_value": null,
+      "current_display": "追踪器",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "天气追踪器",
+      "reason": "复数译名追踪器省去天气，宜与同ID单数一致。",
+      "evidence": [],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "DEBUGGER",
+      "id_number": 543,
+      "field": "name",
+      "source": "Debugger",
+      "message_section": 7,
+      "existing_table_value": "Debug器",
+      "existing_shared_value": null,
+      "current_display": "Debug器",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "Debug"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "调试器",
+      "reason": "Debug器仍为中英拼接，显示名完整译出；不翻写内部DEBUGGER ID。",
+      "evidence": [],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "DEBUGGER",
+      "id_number": 543,
+      "field": "name_plural",
+      "source": "Debuggers",
+      "message_section": 8,
+      "existing_table_value": "Debug器",
+      "existing_shared_value": null,
+      "current_display": "Debug器",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "Debug"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "调试器",
+      "reason": "Debug器仍为中英拼接，显示名完整译出；不翻写内部DEBUGGER ID。",
+      "evidence": [],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "BANDLOGO",
+      "id_number": 683,
+      "field": "name",
+      "source": "MMMMemorabilia",
+      "message_section": 7,
+      "existing_table_value": "MMM大事记",
+      "existing_shared_value": null,
+      "current_display": "MMM大事记",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "MMM"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "MMM纪念品",
+      "reason": "Memorabilia为纪念品/收藏纪念物，不是大事记；保MMM乐队缩写。",
+      "evidence": [
+        {
+          "source": "same item description: A collection of nostalgic merchandise with the logo of a legendary Pokéband."
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "BANDLOGO",
+      "id_number": 683,
+      "field": "name_plural",
+      "source": "MMMMemorabilia",
+      "message_section": 8,
+      "existing_table_value": "MMM大事记",
+      "existing_shared_value": null,
+      "current_display": "MMM大事记",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "MMM"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "MMM纪念品",
+      "reason": "Memorabilia为纪念品/收藏纪念物，不是大事记；保MMM乐队缩写。",
+      "evidence": [
+        {
+          "source": "same item description: A collection of nostalgic merchandise with the logo of a legendary Pokéband."
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XATTACK3",
+      "id_number": 467,
+      "field": "name_plural",
+      "source": "XXX Attacks",
+      "message_section": 8,
+      "existing_table_value": "力量强化XXX",
+      "existing_shared_value": null,
+      "current_display": "力量强化XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "力量强化3",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 564
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XATTACK6",
+      "id_number": 468,
+      "field": "name",
+      "source": "XXXX Attack",
+      "message_section": 7,
+      "existing_table_value": "力量强化4",
+      "existing_shared_value": null,
+      "current_display": "力量强化4",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "力量强化6",
+      "reason": "现单数中文标4，但本项目对应handler实际提升6级；结合该物品通行中文名校准显示等级6，绝不改效果参数。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 569,
+          "expression": "pbRaiseStatStage(...,6,battler)"
+        },
+        {
+          "url": "https://wiki.52poke.com/wiki/道具列表（在其他语言中）"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XATTACK6",
+      "id_number": 468,
+      "field": "name_plural",
+      "source": "XXXX Attacks",
+      "message_section": 8,
+      "existing_table_value": "力量强化XXXX",
+      "existing_shared_value": null,
+      "current_display": "力量强化XXXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "力量强化6",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 569
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XDEFENSE3",
+      "id_number": 471,
+      "field": "name_plural",
+      "source": "XXX Defenses",
+      "message_section": 8,
+      "existing_table_value": "防御强化XXX",
+      "existing_shared_value": null,
+      "current_display": "防御强化XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "防御强化3",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 590
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XDEFENSE6",
+      "id_number": 472,
+      "field": "name",
+      "source": "XXXX Defense",
+      "message_section": 7,
+      "existing_table_value": "防御强化4",
+      "existing_shared_value": null,
+      "current_display": "防御强化4",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "防御强化6",
+      "reason": "现单数中文标4，但本项目对应handler实际提升6级；结合该物品通行中文名校准显示等级6，绝不改效果参数。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 595,
+          "expression": "pbRaiseStatStage(...,6,battler)"
+        },
+        {
+          "url": "https://wiki.52poke.com/wiki/道具列表（在其他语言中）"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XDEFENSE6",
+      "id_number": 472,
+      "field": "name_plural",
+      "source": "XXXX Defenses",
+      "message_section": 8,
+      "existing_table_value": "防御强化XXXX",
+      "existing_shared_value": null,
+      "current_display": "防御强化XXXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "防御强化6",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 595
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPATK3",
+      "id_number": 475,
+      "field": "name_plural",
+      "source": "XXX Sp. Atks",
+      "message_section": 8,
+      "existing_table_value": "特攻强化XXX",
+      "existing_shared_value": null,
+      "current_display": "特攻强化XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "特攻强化3",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 618
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPATK6",
+      "id_number": 476,
+      "field": "name",
+      "source": "XXXX Sp. Atk",
+      "message_section": 7,
+      "existing_table_value": "特攻强化4",
+      "existing_shared_value": null,
+      "current_display": "特攻强化4",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "特攻强化6",
+      "reason": "现单数中文标4，但本项目对应handler实际提升6级；结合该物品通行中文名校准显示等级6，绝不改效果参数。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 623,
+          "expression": "pbRaiseStatStage(...,6,battler)"
+        },
+        {
+          "url": "https://wiki.52poke.com/wiki/道具列表（在其他语言中）"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPATK6",
+      "id_number": 476,
+      "field": "name_plural",
+      "source": "XXXX Sp. Atks",
+      "message_section": 8,
+      "existing_table_value": "特攻强化XXXX",
+      "existing_shared_value": null,
+      "current_display": "特攻强化XXXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "特攻强化6",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 623
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPDEF3",
+      "id_number": 479,
+      "field": "name_plural",
+      "source": "XXX Sp. Defs",
+      "message_section": 8,
+      "existing_table_value": "特防强化XXX",
+      "existing_shared_value": null,
+      "current_display": "特防强化XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "特防强化3",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 640
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPDEF6",
+      "id_number": 480,
+      "field": "name",
+      "source": "XXXX Sp. Def",
+      "message_section": 7,
+      "existing_table_value": "特防强化4",
+      "existing_shared_value": null,
+      "current_display": "特防强化4",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "特防强化6",
+      "reason": "现单数中文标4，但本项目对应handler实际提升6级；结合该物品通行中文名校准显示等级6，绝不改效果参数。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 645,
+          "expression": "pbRaiseStatStage(...,6,battler)"
+        },
+        {
+          "url": "https://wiki.52poke.com/wiki/道具列表（在其他语言中）"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPDEF6",
+      "id_number": 480,
+      "field": "name_plural",
+      "source": "XXXX Sp. Defs",
+      "message_section": 8,
+      "existing_table_value": "特防强化XXXX",
+      "existing_shared_value": null,
+      "current_display": "特防强化XXXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "特防强化6",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 645
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPEED3",
+      "id_number": 483,
+      "field": "name_plural",
+      "source": "XXX Speeds",
+      "message_section": 8,
+      "existing_table_value": "速度强化XXX",
+      "existing_shared_value": null,
+      "current_display": "速度强化XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "速度强化3",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 660
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPEED6",
+      "id_number": 484,
+      "field": "name",
+      "source": "XXXX Speed",
+      "message_section": 7,
+      "existing_table_value": "速度强化4",
+      "existing_shared_value": null,
+      "current_display": "速度强化4",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "速度强化6",
+      "reason": "现单数中文标4，但本项目对应handler实际提升6级；结合该物品通行中文名校准显示等级6，绝不改效果参数。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 665,
+          "expression": "pbRaiseStatStage(...,6,battler)"
+        },
+        {
+          "url": "https://wiki.52poke.com/wiki/道具列表（在其他语言中）"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XSPEED6",
+      "id_number": 484,
+      "field": "name_plural",
+      "source": "XXXX Speeds",
+      "message_section": 8,
+      "existing_table_value": "速度强化XXXX",
+      "existing_shared_value": null,
+      "current_display": "速度强化XXXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "速度强化6",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 665
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XACCURACY3",
+      "id_number": 487,
+      "field": "name_plural",
+      "source": "XXX Accuracies",
+      "message_section": 8,
+      "existing_table_value": "命中强化XXX",
+      "existing_shared_value": null,
+      "current_display": "命中强化XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "命中强化3",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 680
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XACCURACY6",
+      "id_number": 488,
+      "field": "name",
+      "source": "XXXX Accuracy",
+      "message_section": 7,
+      "existing_table_value": "命中强化4",
+      "existing_shared_value": null,
+      "current_display": "命中强化4",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "命中强化6",
+      "reason": "现单数中文标4，但本项目对应handler实际提升6级；结合该物品通行中文名校准显示等级6，绝不改效果参数。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 685,
+          "expression": "pbRaiseStatStage(...,6,battler)"
+        },
+        {
+          "url": "https://wiki.52poke.com/wiki/道具列表（在其他语言中）"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "XACCURACY6",
+      "id_number": 488,
+      "field": "name_plural",
+      "source": "XXXX Accuracies",
+      "message_section": 8,
+      "existing_table_value": "命中强化XXXX",
+      "existing_shared_value": null,
+      "current_display": "命中强化XXXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "命中强化6",
+      "reason": "XXX/XXXX是源名等级标签，不是待删的英文词；复数中文应保等级、与校准后的单数一致，不改变物品ID。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 685
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "DIREHIT3",
+      "id_number": 491,
+      "field": "name_plural",
+      "source": "Hyper Dire Hits",
+      "message_section": 8,
+      "existing_table_value": "要害攻击XXX",
+      "existing_shared_value": null,
+      "current_display": "要害攻击XXX",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": true,
+      "non_code_latin_tokens": [
+        "XXX"
+      ],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "要害攻击3",
+      "reason": "复数显示XXX与已有单数要害攻击3不一致，统一本地化显示名，不动等级机制。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 702,
+          "expression": "FocusEnergy =3"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    },
+    {
+      "file": "Data/items.dat",
+      "item_id": "DIREHIT3",
+      "id_number": 491,
+      "field": "description",
+      "source": "It greatly raises the critical-hit ratio. It wears off if the Pokémon is withdrawn.",
+      "message_section": 9,
+      "existing_table_value": "击中要害的几率会大幅提高。每 次使用效果都会提升。离场后， 效果便会消失。",
+      "existing_shared_value": null,
+      "current_display": "击中要害的几率会大幅提高。每 次使用效果都会提升。离场后， 效果便会消失。",
+      "standard_machine_code": false,
+      "missing_chinese": false,
+      "mixed_language_review": false,
+      "non_code_latin_tokens": [],
+      "visibility": "GameData::Item getter used by Bag/shop; not proof of per-map acquisition",
+      "reviewed_chinese": "能大幅提高击中要害的几率。宝可梦离场后，效果消失。",
+      "reason": "现译额外声称每次使用效果都会提升，原英文未给此叠加机制，本项目handler也直接设FocusEnergy=3；建议去除扩写。",
+      "evidence": [
+        {
+          "file": "Data/Scripts/013_Items/003_Item_BattleEffects.rb",
+          "line": 702,
+          "expression": "battler.effects[PBEffects::FocusEnergy] =3"
+        }
+      ],
+      "target": "localized MessageTypes table field only; source item ID/raw English unchanged",
+      "shared_english_only_fix_is_sufficient": false
+    }
+  ],
+  "machine_numbering_policy": {
+    "TM_count": 122,
+    "HM_count": 10,
+    "name_and_plural_code_fields": 264,
+    "observed_style": "All122 TM and10 HM display standard code labels, e.g.TM00..TM121 andHM01..HM10; messages7/8 absent for these names is a family convention, not a single HM08 prose omission.",
+    "recommended": "Keep machine labels and IDs as TMxx/HMxx uniformly, including HM08. Translate explanatory HM prose to秘传学习器; active machine toast adds localized move name闪光 forHM08.",
+    "do_not_apply": "Do not only rename HM08 to秘传学习器08 while other labels stay HMxx. Any alternative prefix must be a separately unified display-family policy, never an ID rewrite."
+  },
+  "item_review_scope_note": "CJK/mixed-language statistics are a screening catalogue, not a claim that all692 item descriptions were semantically proofread. The21 mixed candidates plus related rank/description fields were explicitly reviewed here, producing26 localized-table suggestions; CTRL,Dem,MMM and machine codes are not blindly deleted. Per-map acquisition was not executed.",
+  "validation": {
+    "no_tracked_file_or_save_written_by_this_review": true,
+    "no_game_logic_or_interpolation_executed": true,
+    "all_original_source_keys_preserved": true,
+    "control_and_format_tokens_preserved_in_primary_proposals": true,
+    "source_key_trailing_whitespace_preserved": true,
+    "expert_original_names_and_protocol_ids_not_translated": true,
+    "Google_translation_used": false
+  },
+  "limitations": [
+    "Static source/data review only; no in-game battle/reward playtest.",
+    "400 preset fields/393 strings are catalogued, but only expert28 strings are linguistically translated in this report; full393 is a separately assigned review."
+  ]
+}

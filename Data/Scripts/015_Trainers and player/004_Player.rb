@@ -145,8 +145,7 @@ class Player < Trainer
 
 
   def unlock_clothes(outfitID,silent=false)
-    update_global_clothes_list()
-    outfit = $PokemonGlobal.clothes_data[outfitID]
+    outfit = get_clothes_by_id(outfitID)
     @unlocked_clothes = [] if !@unlocked_clothes
     @unlocked_clothes << outfitID if !@unlocked_clothes.include?(outfitID)
 
@@ -158,9 +157,7 @@ class Player < Trainer
   end
 
   def unlock_hat(hatID,silent=false)
-    update_global_hats_list()
-
-    hat = $PokemonGlobal.hats_data[hatID]
+    hat = get_hat_by_id(hatID)
     @unlocked_hats = [] if !@unlocked_hats
     @unlocked_hats << hatID if !@unlocked_hats.include?(hatID)
 
@@ -173,9 +170,7 @@ class Player < Trainer
   end
 
   def unlock_hair(hairID,silent=false)
-    update_global_hairstyles_list()
-
-    hairstyle = $PokemonGlobal.hairstyles_data[hairID]
+    hairstyle = get_hair_by_id(hairID)
     if hairID.is_a?(Symbol)
       hairID = HAIRSTYLES[hairID].id
     end

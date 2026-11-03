@@ -16,9 +16,11 @@ def build(root=ROOT):
         reviewed.update(read(path))
     source=root/"Data/pokedex/dex.json"
     records=read(source)
-    rows=[{**row,"source":row["entry"],"entry":reviewed[row["entry"]].strip()} for row in records]
+    # Upstream can add text outside the pinned review scope. Reuse only exact
+    # reviewed prose, retaining every sprite/author identity in the current dex.
+    rows=[{**row,"source":row["entry"],"entry":reviewed[row["entry"]].strip()} for row in records if row["entry"] in reviewed]
     body=json.dumps(rows,ensure_ascii=False,separators=(",",":"))
-    if len(body.encode("utf-8"))>8*1024*1024:
+    if len(body.encode("utf-8"))>32*1024*1024:
         raise ValueError("Reviewed dex exceeds native parser size limit")
     target=root/"Data/pokedex/dex_zh.json"
     pending=target.with_suffix(".json.pending")

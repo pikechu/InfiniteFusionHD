@@ -92,15 +92,15 @@ TOTAL_NB_TYPE_EXPERTS = 12
 def type_expert_battle(type_id)
   type = GameData::Type.get(type_id)
   pbCallBub(2, @event_id)
-  pbMessage("Ah! Can you feel the energy in here? This place is great for #{type.real_name}-Pokémon!")
+  pbMessage(_INTL("Ah! Can you feel the energy in here? This place is great for {1}-Pokémon!", type.name))
   pbCallBub(2, @event_id)
-  pbMessage("I'm what you could call an expert on #{type.real_name}-Pokémon. I've grown with them for all of my life.")
+  pbMessage(_INTL("I'm what you could call an expert on {1}-Pokémon. I've grown with them for all of my life.", type.name))
   pbCallBub(2, @event_id)
-  pbMessage("I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only #{type.real_name}-type Pokémon. ")
+  pbMessage(_INTL("I'll give you my \\C[5]special outfit\\C[0] if you can defeat my team using only {1}-type Pokémon. ", type.name))
   pbCallBub(2, @event_id)
   if pbConfirmMessage(_INTL("Do you think you can handle that?"))
     pbCallBub(2, @event_id)
-    pbMessage("Select your team! Remember, only #{type.real_name}-type Pokémon are allowed!")
+    pbMessage(_INTL("Select your team! Remember, only {1}-type Pokémon are allowed!", type.name))
 
     gym_randomizer_index = GYM_TYPES_CLASSIC.index(type_id)
     echoln gym_randomizer_index
@@ -113,7 +113,7 @@ def type_expert_battle(type_id)
       pbSet(Settings::OVERRIDE_BATTLE_LEVEL_VALUE_VAR, $Trainer.highest_level_pokemon_in_party)
       trainer_class = "TYPE_EXPERT_#{type_id.to_s}".to_sym
       trainer_name = TYPE_EXPERT_TRAINERS[type_id][0]
-      lose_text = TYPE_EXPERT_TRAINERS[type_id][1]
+      lose_text = _INTL(TYPE_EXPERT_TRAINERS[type_id][1])
       if pbTrainerBattle(trainer_class, trainer_name, lose_text, false, 0, false)
         pbSet(VAR_TYPE_EXPERTS_BEATEN,pbGet(VAR_TYPE_EXPERTS_BEATEN)+1)
         pbCallBub(2, @event_id)
@@ -126,7 +126,7 @@ def type_expert_battle(type_id)
           obtainClothes(clothes)
         end
         pbCallBub(2, @event_id)
-        pbMessage("When you wear it, you can sometimes find #{type.real_name}-type related items after battles!")
+        pbMessage(_INTL("When you wear it, you can sometimes find {1}-type related items after battles!", type.name))
         show_nb_type_experts_defeated()
         PokemonSelection.restore
         $game_switches[Settings::OVERRIDE_BATTLE_LEVEL_SWITCH]=false
@@ -136,7 +136,7 @@ def type_expert_battle(type_id)
       end
     else
       pbCallBub(2, @event_id)
-      pbMessage("Remember, you're only allowed to use #{type.real_name}-type Pokémon!")
+      pbMessage(_INTL("Remember, you're only allowed to use {1}-type Pokémon!", type.name))
     end
   end
   PokemonSelection.restore
@@ -149,5 +149,5 @@ end
 def show_nb_type_experts_defeated()
   pbMEPlay("Register phone")
   pbCallBub(3)
-  Kernel.pbMessage("Type experts defeated: #{pbGet(VAR_TYPE_EXPERTS_BEATEN)}/#{TOTAL_NB_TYPE_EXPERTS}")
+  Kernel.pbMessage(_INTL("Type experts defeated: {1}/{2}", pbGet(VAR_TYPE_EXPERTS_BEATEN), TOTAL_NB_TYPE_EXPERTS))
 end

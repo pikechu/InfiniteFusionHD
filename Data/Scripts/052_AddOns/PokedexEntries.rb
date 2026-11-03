@@ -2,7 +2,7 @@
 # KIF's records in their original order and append only distinct valid text.
 module KIF
   module PokedexEntries
-    MAX_BYTES = 8 * 1024 * 1024
+    MAX_BYTES = 32 * 1024 * 1024 # The upstream 82k-entry corpus exceeds 8 MiB.
     MAX_ENTRIES = 100_000
     CHINESE_PATH = "Data/pokedex/dex_zh.json"
 

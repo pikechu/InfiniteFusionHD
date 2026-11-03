@@ -1,0 +1,32 @@
+{
+  "avd": "D:\\others\\kurayshinyrevamp\\temp\\localization-release\\temp\\android15-emulator-validation\\avd-home\\kif_zh15.avd",
+  "existing_avds_modified": false,
+  "sdk_registry_issue": "avdmanager did not recognize portable emulator package; reused existing verified config schema with new blank disk",
+  "config": {
+    "AvdId": "kif_zh15",
+    "avd.ini.encoding": "UTF-8",
+    "avd.ini.displayname": "KIF Android15 isolated localization QA",
+    "abi.type": "x86_64",
+    "hw.cpu.arch": "x86_64",
+    "image.sysdir.1": "D:/others/kurayshinyrevamp/temp/tools/android-sdk/system-images/android-30/google_apis/x86_64/",
+    "disk.dataPartition.size": "12G",
+    "hw.ramSize": "3072",
+    "hw.cpu.ncore": "4",
+    "hw.gpu.enabled": "yes",
+    "hw.gpu.mode": "swiftshader_indirect",
+    "hw.keyboard": "yes",
+    "hw.mainKeys": "yes",
+    "hw.audioInput": "no",
+    "hw.lcd.width": "720",
+    "hw.lcd.height": "1280",
+    "hw.lcd.density": "240",
+    "hw.battery": "yes",
+    "hw.sdCard": "no",
+    "PlayStore.enabled": "false",
+    "fastboot.forceColdBoot": "yes",
+    "showDeviceFrame": "no",
+    "tag.id": "google_apis",
+    "tag.display": "Google APIs",
+    "target": "android-30"
+  }
+}

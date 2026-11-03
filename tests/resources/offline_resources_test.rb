@@ -3,6 +3,7 @@ require "json"
 require "fileutils"
 require "tmpdir"
 require "zlib"
+require "stringio"
 require "digest/sha2"
 require "digest/sha1"
 ROOT = File.expand_path("../..", __dir__)
@@ -44,7 +45,7 @@ class Window_UnformattedTextPokemon
   def dispose; @disposed = true; end
   def disposed?; !!@disposed; end
 end
-$PokemonSystem = Struct.new(:sprite_sheet_mode, :download_sprites).new(1, 0)
+$PokemonSystem = Struct.new(:sprite_sheet_mode, :download_sprites, :language).new(1, 0, 0)
 def pbMessage(*); end
 def _INTL(text, *); text; end
 checks = 0
@@ -58,6 +59,14 @@ check.call(real["files"].length > 3800, "published pack includes the full three 
 real["files"].select { |e| e["kind"] == "data" }.each do |entry|
   check.call(resources.valid_bytes?(entry, File.binread(File.join(ROOT, entry["path"]))), "bundled data matches manifest: #{entry['path']}")
 end
+large_dex = real["files"].find { |entry| entry["path"] == "Data/pokedex/dex_zh.json" }
+check.call(large_dex && large_dex["size"] > resources::LIMIT && large_dex["size"] <= KIF::PokedexEntries::MAX_BYTES, "full Chinese dex uses its32MiB resource limit")
+oversized_dex = Marshal.load(Marshal.dump(real))
+oversized_dex["files"].find { |entry| entry["path"] == "Data/pokedex/dex_zh.json" }["size"] = KIF::PokedexEntries::MAX_BYTES + 1
+reject.call("dex resource above32MiB is rejected") { resources.parse(JSON.generate(oversized_dex)) }
+oversized_image = Marshal.load(Marshal.dump(real))
+oversized_image["files"].find { |entry| entry["kind"] == "image" }["size"] = resources::LIMIT + 1
+reject.call("image download limit stays8MiB") { resources.parse(JSON.generate(oversized_image)) }
 bad = Marshal.load(Marshal.dump(real))
 bad["files"][0]["path"] = "Data/Scripts/evil.rb"
 reject.call("rejects executable destinations") { resources.parse(JSON.generate(bad)) }
@@ -76,6 +85,7 @@ entry = {"path" => "Graphics/Battlers/Special/fixture.png", "kind" => "image", "
          "sha1" => Digest::SHA1.hexdigest("blob #{png.bytesize}\0".b + png),
          "url" => "https://raw.githubusercontent.com/infinitefusion/infinitefusion-e18/#{'a'*40}/Graphics/Battlers/Special/fixture.png"}
 catalog = {"format" => 1, "revision" => "a" * 64, "files" => [entry]}
+FileUtils.mkdir_p(File.join(ROOT, "temp"))
 Dir.mktmpdir("offline-resources-", File.join(ROOT, "temp")) do |directory|
   Dir.chdir(directory) do
     FileUtils.mkdir_p("Data")
@@ -145,6 +155,33 @@ Dir.mktmpdir("offline-resources-", File.join(ROOT, "temp")) do |directory|
     check.call(resources.valid_file?(dex_entry, true), "merged dex keeps an independently verifiable source copy")
     File.write(dex_entry["path"], JSON.generate([local_entry]))
     check.call(!resources.valid_file?(dex_entry, true), "full integrity check also detects published entries missing from the active merged dex")
+    packed_stream = StringIO.new
+    writer = Zlib::GzipWriter.new(packed_stream)
+    writer.write(dex_bytes); writer.close
+    packed = packed_stream.string
+    packed_entry = {"path"=>"Data/pokedex/dex.json.gz", "kind"=>"data", "size"=>packed.bytesize,
+                    "sha256"=>Digest::SHA256.hexdigest(packed)}
+    resources.install(packed_entry, packed)
+    check.call(resources.valid_file?(packed_entry, true), "compressed dex downloads install and verify the merged local dex")
+    check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], dex[0]['entry']], "cached dex lookup preserves local and upstream descriptions")
+    translated = dex[0].merge('source' => dex[0]['entry'], 'entry' => "\u4e2d\u6587\u8bf4\u660e")
+    File.write(KIF::PokedexEntries::CHINESE_PATH, JSON.generate([translated]))
+    $PokemonSystem.language = 2
+    check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], translated['entry']], "resource contract supports the Chinese dex and untranslated local entries")
+    $PokemonSystem.language = 0
+    check.call(KIF::PokedexEntries.entries_for('1.1.png') == [local_entry['entry'], dex[0]['entry']], "switching back to English refreshes the resource lookup cache")
+    reject.call("corrupt compressed dex preserves the active descriptions") { resources.install(packed_entry, packed[0...-1]) }
+    original_limit = KIF::PokedexEntries::MAX_BYTES
+    KIF::PokedexEntries.send(:remove_const, :MAX_BYTES)
+    KIF::PokedexEntries.const_set(:MAX_BYTES, 8)
+    reject.call("compressed dex expansion is bounded") { resources.dex_body(packed_entry, packed) }
+    KIF::PokedexEntries.send(:remove_const, :MAX_BYTES)
+    KIF::PokedexEntries.const_set(:MAX_BYTES, original_limit)
+    cdn_catalog = Marshal.load(Marshal.dump(catalog))
+    cdn_catalog['files'][0]['url'] = 'https://infinitefusion.net/customsprites/spritesheets/spritesheets_base/1.png'
+    check.call(resources.parse(JSON.generate(cdn_catalog)).is_a?(Hash), "manifest accepts only the official CDN sheet prefix")
+    cdn_catalog['files'][0]['url'] = 'https://infinitefusion.net/elsewhere/1.png'
+    reject.call("manifest rejects unrelated CDN paths") { resources.parse(JSON.generate(cdn_catalog)) }
     resources.instance_variable_set(:@manifest, nil)
     resources.atomic(resources::CACHE + '/manifest.json', 'corrupt cache')
     check.call(resources.manifest['revision'] == ('a' * 64), "corrupt manifest cache falls back to the bundled manifest")
