@@ -1,0 +1,92 @@
+{
+  "format": "infinitefusionhd-texture-archive-migration-v1",
+  "date": "2026-11-05",
+  "source_directory": "output/texture-hd",
+  "source_commit": "c7aeb09cd1a26e6f18e2eece06e2814d616caadf",
+  "archive": {
+    "archive": "F:\\claude projects\\InfiniteFusionHD-archives\\texture-hd-20261105-c7aeb09c.zip",
+    "sha256": "b811bd26af7ef4c87fd8b5a5953bddd065bda45811c6a9ecccec9ea1d69eda00",
+    "archive_bytes": 849779661,
+    "format": "infinitefusionhd-texture-archive-v1",
+    "source_commit": "c7aeb09cd1a26e6f18e2eece06e2814d616caadf",
+    "file_count": 48129,
+    "object_count": 25611,
+    "logical_bytes": 1552182744,
+    "unique_bytes": 1034305509
+  },
+  "preservation": {
+    "complete_roundtrip_verified": true,
+    "source_hashes_rechecked": true,
+    "files_verified": 48129,
+    "directories_verified": 9238,
+    "objects_verified": 25611,
+    "original_files_preserved": 18638,
+    "evidence_files_preserved": 7330,
+    "seconds": 486.78,
+    "temporary_restore_removed": true
+  },
+  "git": {
+    "tracked_paths_removed": 48129,
+    "history_rewritten": false,
+    "head_after": "c7aeb09cd1a26e6f18e2eece06e2814d616caadf",
+    "commit_count_after": 782
+  },
+  "client_inputs": {
+    "files": 23410,
+    "index_sha256": "f4728da6858344d2b60caf9da07570647ea13c208c654646382ba402c05d3141",
+    "index_and_runtime_worktree_unchanged": true,
+    "packaging_scripts_sha256": {
+      "scripts/windows/build_release.py": "9435205108b14cddd20ce747fffd89c17cdd6ccad6beea066612f50efca82922",
+      "scripts/android/package_game.py": "a9dff35b56fcbd3a89a8b3a57212989745f67a4397dc4a5c6c34dfe0ba0ae2a3",
+      "scripts/android/build_apk.py": "4085647f8e2e427ae3788d2641773a56f3fee83e730494eb5911b1f842346f4f",
+      "scripts/android/payload_format.py": "63944c8cb1056ab3918d3099507bb038ead4bb55a4de3684a5abf775c3f747fe"
+    },
+    "packaging_scripts_unchanged": true
+  },
+  "validation": {
+    "archive_unit_tests_passed": 5,
+    "windows": {
+      "format": "kif-windows-client-v1",
+      "source_commit": "c7aeb09cd1a26e6f18e2eece06e2814d616caadf",
+      "version": "0.20.8",
+      "data_hash": "03f7b59bedcdad051057f009bc0899a699ffbbf7ccf92d0ca16aded541fafa65",
+      "mods_hash": "76555b5b8dd130f83b6cd8099cb1f31c1e7960b994df771e6c5d11c9930473c6",
+      "excluded_caches": [
+        "Data/pokedex/rate_limit.log",
+        "Data/sprites/sprites_rate_limit.log",
+        "Graphics/Battlers/Eggs/desktop.ini",
+        "Graphics/Eggs/desktop.ini",
+        "Graphics/Pictures/Slot Machine/Thumbs.db",
+        "Graphics/Pictures/Voltorb Flip/Thumbs.db",
+        "Graphics/Pictures/desktop.ini"
+      ],
+      "native_runtime_rebuilt": false,
+      "archive": "InfiniteFusionHD-0.20.8-windows-main-c7aeb09c.zip",
+      "sha256": "933ab744f545f12f02c205ccbd43e246b5a25015a8046a7c8328c8f076a4ea97",
+      "bytes": 898784556,
+      "file_count": 23403,
+      "zip_integrity_verified": true,
+      "seconds": 148.16,
+      "verification_artifact_retained": false
+    },
+    "android": {
+      "payload_id": "dcaae3580c5dd12220686fd1",
+      "file_count": 23385,
+      "logical_bytes": 1124374133,
+      "archive_files": 21142,
+      "archive_bytes": 791913559,
+      "all_payload_hashes_verified": true,
+      "seconds": 71.98,
+      "kind": "complete-production-payload",
+      "apk_rebuilt": false,
+      "verification_artifact_retained": false
+    },
+    "temporary_build_outputs_removed": true,
+    "game_or_emulator_started": false
+  },
+  "post_migration_size_excluding_archive_staging": {
+    "working_tree_bytes": 1332696803,
+    "git_bytes": 1621525542,
+    "working_tree_files": 26239
+  }
+}

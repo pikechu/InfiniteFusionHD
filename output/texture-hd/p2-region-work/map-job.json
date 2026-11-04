@@ -1,8 +1,0 @@
-{
-  "source": "Graphics/Pictures/map/map.png",
-  "generated": "output/texture-hd/p2-region-work/map-generated.png",
-  "prompt": "Use case: precise-object-edit. Asset type: 820x628 technical pixel-art RPG region map. The supplied image is the complete edit target. Refine only extremely restrained, low-contrast ocean/water surface detail inside existing open turquoise-blue water regions. Preserve the exact cartographic layout: every island, coastline, river, road, bridge, route, town rectangle, tree, mountain, symbol and landmark stays at its exact coordinate. Keep the original flat turquoise/blue palette and the pixel-art identity. Preserve all land pixels and all hard boundaries. Never add, remove, move or rename any geographic feature, route line, node, building, icon or label. No new islands, waves crossing coasts, boats, foam, surf lines, text or symbols. No crop, zoom, changed margins or rearrangement. Keep the complete original canvas and aspect ratio. Water detail must remain calm and subordinate to moving game cursors; coordinate fidelity and route readability take priority.",
-  "method": "built-in image_gen",
-  "status": "applied_verified",
-  "native_validation": "output/texture-hd/p2-evidence/region/native-validation.json"
-}

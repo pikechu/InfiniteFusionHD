@@ -1,9 +1,0 @@
-{
-  "source": "Graphics/Alternate Trainers/Chase/Characters/trchar000.png",
-  "method": "built-in image_gen",
-  "prompt": "Use case: precise-object-edit. Asset type: transparent pixel-art RPG walking sprite sheet, original 256x256 canvas, four columns and four rows, sixteen 64x64 cells. Edit target: the complete supplied sheet of the same fully clothed character wearing a red and white cap, a dark red/black jacket, blue shorts and shoes. Refine only very subtle existing fabric/cap shading inside the current pixels. Preserve the exact same character, face, outfit colors, poses, silhouettes, cell locations, transparent boundaries, and head/foot anchors in every frame. Preserve all four directional rows in the original order and all four motion columns in the original order; no new movement or feature. Keep the character the same original size with the same blank margins in every cell. No added frames, objects, logos, particles, text, background, changed facial features or lighting direction. Maintain the original clean limited-palette pixel-art look and consistent details across the entire animation. Background must remain transparent.",
-  "generated": "output/texture-hd/batch-152/generated/Graphics/Alternate Trainers/Chase/Characters/trchar000.png",
-  "status": "rejected_geometry_and_pose",
-  "reason": "缩回固定 4×4 网格后仍改变多格头脚边界、手部姿态和帽子标记；回填透明通道不能恢复内部姿态，未形成可应用候选。",
-  "validation": "output/texture-hd/p3-evidence/batch-152/pilot-validation.json"
-}

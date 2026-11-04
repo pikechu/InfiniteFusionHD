@@ -1,9 +1,0 @@
-{
-  "source": "Graphics/Pictures/box0.png",
-  "generated": "output/texture-hd/p2-dex-work/box0-generated.png",
-  "prompt": "Use case: precise-object-edit. Asset type: existing 324x296 pixel-art game storage wallpaper. Input image is the edit target. Refine restrained natural surface detail on the existing pale green grass field and the tiny forest panorama only. Preserve every grass mark, all trees, sky and cloud placement, the original pale green/blue palette, quiet brightness, pixel-art character, and composition. Preserve the exact outer border, header panel, both white arrow buttons and black arrow symbols without modification, original spacing and transparent pixels. Do not add/remove/move motifs, objects, grass clumps, trees, lines or text. Keep the lower field calm so creature icons remain readable. Output a larger version aligned with the complete rectangular original canvas; no crop, no zoom, no changed aspect ratio. Add only fine, low-contrast grass and leaf material detail inside existing shapes.",
-  "tool": "built-in image_gen",
-  "status": "preserved",
-  "reason": "Fine grass pattern is already clear; the candidate mostly changes brightness without adding useful clarity.",
-  "validation": "output/texture-hd/p2-evidence/dex/storage-native-validation.json"
-}
